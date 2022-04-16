@@ -6,7 +6,37 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/test/test/</loc>
+         <loc>https://example.com/HTML_CSS/0_html_css_index/</loc>
+         <lastmod>2022-04-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/Linux/0_Linux_index/</loc>
+         <lastmod>2022-04-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/Network/0_Network_index/</loc>
+         <lastmod>2022-04-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/Powershell/0_powershell_index/</loc>
+         <lastmod>2022-04-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/Powershell/useful/</loc>
+         <lastmod>2022-04-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/Python/0_python_index/</loc>
+         <lastmod>2022-04-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/mkdocs/0_mkdocs_index/</loc>
          <lastmod>2022-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
