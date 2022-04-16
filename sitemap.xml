@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://example.com/</loc>
+         <loc>https://omomuroni.github.io/</loc>
          <lastmod>2022-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/HTML_CSS/0_html_css_index/</loc>
+         <loc>https://omomuroni.github.io/HTML_CSS/0_html_css_index/</loc>
          <lastmod>2022-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/Linux/0_Linux_index/</loc>
+         <loc>https://omomuroni.github.io/Linux/0_Linux_index/</loc>
          <lastmod>2022-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/Network/0_Network_index/</loc>
+         <loc>https://omomuroni.github.io/Network/0_Network_index/</loc>
          <lastmod>2022-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/Powershell/0_powershell_index/</loc>
+         <loc>https://omomuroni.github.io/Powershell/0_powershell_index/</loc>
          <lastmod>2022-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/Powershell/useful/</loc>
+         <loc>https://omomuroni.github.io/Powershell/useful/</loc>
          <lastmod>2022-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/Python/0_python_index/</loc>
+         <loc>https://omomuroni.github.io/Python/0_python_index/</loc>
          <lastmod>2022-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/mkdocs/0_mkdocs_index/</loc>
+         <loc>https://omomuroni.github.io/mkdocs/0_mkdocs_index/</loc>
          <lastmod>2022-04-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
