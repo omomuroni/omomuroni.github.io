@@ -2,72 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://omomuroni.github.io/</loc>
-         <lastmod>2022-04-27</lastmod>
+         <lastmod>2022-04-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Effective/</loc>
-         <lastmod>2022-04-27</lastmod>
+         <lastmod>2022-04-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Effective/draw.io/</loc>
-         <lastmod>2022-04-27</lastmod>
+         <lastmod>2022-04-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Effective/draw.io_template/</loc>
-         <lastmod>2022-04-27</lastmod>
+         <lastmod>2022-04-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Effective/marp/</loc>
+         <lastmod>2022-04-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Effective/sakura_editer/</loc>
+         <lastmod>2022-04-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Effective/slide_sample/</loc>
+         <lastmod>2022-04-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Mkdocs/</loc>
-         <lastmod>2022-04-27</lastmod>
+         <lastmod>2022-04-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Mkdocs/extended_markdown/</loc>
-         <lastmod>2022-04-27</lastmod>
+         <lastmod>2022-04-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Mkdocs/markdown/</loc>
-         <lastmod>2022-04-27</lastmod>
+         <lastmod>2022-04-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Mkdocs/memo/</loc>
-         <lastmod>2022-04-27</lastmod>
+         <lastmod>2022-04-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Mkdocs/mkdocs_sample/</loc>
-         <lastmod>2022-04-27</lastmod>
+         <lastmod>2022-04-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Network/</loc>
-         <lastmod>2022-04-27</lastmod>
+         <lastmod>2022-04-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Network/Setup/</loc>
+         <lastmod>2022-04-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Network/Setup/gns3setup_for_mac/</loc>
+         <lastmod>2022-04-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/</loc>
-         <lastmod>2022-04-27</lastmod>
+         <lastmod>2022-04-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/jinja/</loc>
-         <lastmod>2022-04-27</lastmod>
+         <lastmod>2022-04-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://omomuroni.github.io/Setup/</loc>
-         <lastmod>2022-04-27</lastmod>
+         <loc>https://omomuroni.github.io/Python/Setup/xpresso/</loc>
+         <lastmod>2022-04-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://omomuroni.github.io/Setup/gns3setup_for_mac/</loc>
-         <lastmod>2022-04-27</lastmod>
+         <loc>https://omomuroni.github.io/Python/pyATS/pyats_Blitz_effective/</loc>
+         <lastmod>2022-04-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Python/pyATS/pyats_Blitz_getting_started/</loc>
+         <lastmod>2022-04-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
