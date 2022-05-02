@@ -1,0 +1,50 @@
+/* 基本的なテーブル */
+table.basic_table{
+    table-layout: auto;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px;
+    border-color: lightgray;
+    text-align: left;
+}
+table.basic_table th {
+    border:none;
+    background-color: #FCBF4C;
+    text-align: left;
+    padding: 3px 8px;
+    margin: 3px 8px;
+    font-weight: bold;
+  }
+table.basic_table td {
+  border:none;
+  text-align: left;
+  padding: 3px 8px;
+  margin: 3px 8px;
+}
+
+table.basic_table caption{
+    padding: 3px 8px;
+    margin: 3px 8px;
+}
+
+
+/** 罫線なし・list用 table */
+table.list {
+  table-layout: auto;
+  width: 100%;
+  border: none;
+}
+table.list th {
+  border:none;
+  text-align: left;
+  padding: 3px 8px;
+  margin: 3px 8px;
+  font-weight: bold;
+}
+table.list td {
+  border:none;
+  text-align: left;
+  padding: 3px 8px;
+  margin: 3px 8px;
+}
+
