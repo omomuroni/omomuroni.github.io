@@ -1,8 +1,24 @@
+/* mkdocs 基本的な装飾 */
 
 /* 見出し */
 h2 {
   border-bottom: 2px solid teal;
 }
+
+/* 見出しに改行を追加して間隔を調整 */
+h2::before {
+	content: "\A" ;
+	white-space: pre ;
+}
+h3::before {
+	content: "\A" ;
+	white-space: pre ;
+}
+h4::before {
+	content: "\A" ;
+	white-space: pre ;
+}
+
 
 /* 段組 */
 #columns {
