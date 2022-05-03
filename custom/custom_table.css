@@ -3,20 +3,19 @@ table.basic_table{
     table-layout: auto;
     width: 100%;
     border-collapse: collapse;
-    border: 1px;
-    border-color: lightgray;
+    border: 1px solid #b7b7b7;
     text-align: left;
 }
 table.basic_table th {
-    border:none;
-    background-color: #FCBF4C;
+    border: 1px solid #b7b7b7;
+    background-color: DarkTurquoise;
     text-align: left;
     padding: 3px 8px;
     margin: 3px 8px;
     font-weight: bold;
   }
 table.basic_table td {
-  border:none;
+  border: 1px solid #b7b7b7;
   text-align: left;
   padding: 3px 8px;
   margin: 3px 8px;

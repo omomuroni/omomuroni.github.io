@@ -1,4 +1,10 @@
 
+/* 見出し */
 h2 {
   border-bottom: 2px solid teal;
+}
+
+/* 段組 */
+#columns {
+  column-count: 2;
 }
