@@ -47,3 +47,13 @@ table.list td {
   margin: 3px 8px;
 }
 
+table.list caption {
+  font-weight: bold;
+  text-align: left;
+}
+
+/* caption tag の前に改行をいれて間隔調整 */
+table.list caption::before{
+    content: "\A" ;
+    white-space: pre ;
+}
