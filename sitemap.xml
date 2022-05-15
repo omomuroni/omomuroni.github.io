@@ -6,7 +6,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://omomuroni.github.io/Effective/</loc>
+         <loc>https://omomuroni.github.io/Effective/00_index/</loc>
          <lastmod>2022-05-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -41,12 +41,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://omomuroni.github.io/Git/00_index/</loc>
+         <lastmod>2022-05-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://omomuroni.github.io/Git/git_cheat_sheet/</loc>
          <lastmod>2022-05-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://omomuroni.github.io/Mkdocs/</loc>
+         <loc>https://omomuroni.github.io/Mkdocs/00_index/</loc>
          <lastmod>2022-05-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
