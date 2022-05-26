@@ -15,7 +15,7 @@
     
     
       
-        <title>OS モジュール - おもむろにメモ書き</title>
+        <title>os モジュール - おもむろにメモ書き</title>
       
     
     
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              OS モジュール
+              os モジュール
             
           </span>
         </div>
@@ -416,6 +416,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../Effective/Linux/" class="md-nav__link">
+        Linux コマンド
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../Effective/draw.io/" class="md-nav__link">
         Draw.io をvscode で使う
       </a>
@@ -474,6 +488,20 @@
     <li class="md-nav__item">
       <a href="../../../Effective/slide_sample/" class="md-nav__link">
         Marp で作成した slide サンプル
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Effective/tool/" class="md-nav__link">
+        便利なツール
       </a>
     </li>
   
@@ -998,6 +1026,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../collections/" class="md-nav__link">
+        collections モジュール
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../jinja/" class="md-nav__link">
         jinja
       </a>
@@ -1036,12 +1078,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          OS モジュール
+          os モジュール
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        OS モジュール
+        os モジュール
       </a>
       
         
@@ -1130,6 +1172,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../sys/" class="md-nav__link">
+        sys
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../yaml/" class="md-nav__link">
         YAML ファイルの取り扱い
       </a>
@@ -1147,18 +1203,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3_8" type="checkbox" id="__nav_6_3_8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3_10" type="checkbox" id="__nav_6_3_10" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_6_3_8">
+        <label class="md-nav__link" for="__nav_6_3_10">
           Openpyxl
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Openpyxl" data-md-level="3">
-        <label class="md-nav__title" for="__nav_6_3_8">
+        <label class="md-nav__title" for="__nav_6_3_10">
           <span class="md-nav__icon md-icon"></span>
           Openpyxl
         </label>
@@ -1250,18 +1306,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3_9" type="checkbox" id="__nav_6_3_9" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3_11" type="checkbox" id="__nav_6_3_11" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_6_3_9">
+        <label class="md-nav__link" for="__nav_6_3_11">
           Pytest
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Pytest" data-md-level="3">
-        <label class="md-nav__title" for="__nav_6_3_9">
+        <label class="md-nav__title" for="__nav_6_3_11">
           <span class="md-nav__icon md-icon"></span>
           Pytest
         </label>
@@ -1273,8 +1329,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../pytest/01_/" class="md-nav__link">
-        pytest
+      <a href="../pytest/01_pytest_execute/" class="md-nav__link">
+        pytest の実行
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pytest/02_pytest_test_function/" class="md-nav__link">
+        pytest - テスト関数の作成
       </a>
     </li>
   
@@ -1542,81 +1612,148 @@
 
 
 
-<h1 id="os">OS モジュール</h1>
+<h1 id="os">os モジュール</h1>
 <ul>
 <li><a href="https://docs.python.org/ja/3/library/os.html">os --- 雑多なオペレーティングシステムインターフェース</a></li>
 </ul>
 <h2 id="path">path 関連</h2>
-<table>
-<thead>
-<tr>
-<th align="left">メソッド</th>
-<th align="left">説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>os.sep</code></td>
-<td align="left">パス区切り文字の取得</td>
-</tr>
-<tr>
-<td align="left"><code>os.getcwd()</code></td>
-<td align="left">カレントディレクトリを取得</td>
-</tr>
-<tr>
-<td align="left"><code>os.chdir(パス)</code></td>
-<td align="left">指定したカレントディレクトリへ移動</td>
-</tr>
-<tr>
-<td align="left"><code>os.listdir(パス)</code></td>
-<td align="left">指定したパス配下のファイル・ディレクトリのリストを取得</td>
-</tr>
-<tr>
-<td align="left"><code>os.path.join(パス1,パス2)</code></td>
-<td align="left">パスの結合</td>
-</tr>
-<tr>
-<td align="left"><code>os.path.split(パス)</code></td>
-<td align="left">パスの末尾を取得</td>
-</tr>
-<tr>
-<td align="left"><code>os.path.abspath(相対パス)</code></td>
-<td align="left">指定した相対パスの絶対パスを取得</td>
-</tr>
-<tr>
-<td align="left"><code>os.path.relpath(パス,起点のパス)</code></td>
-<td align="left">起点パスからみたパスの相対パスを取得</td>
-</tr>
-<tr>
-<td align="left"><code>os.path.exists(パス)</code></td>
-<td align="left">パスの存在を判定(返り値はbool型)</td>
-</tr>
-<tr>
-<td align="left"><code>os.path.isdir(パス)</code></td>
-<td align="left">指定したパスがパスか否かを判定(返り値はbool型)</td>
-</tr>
-<tr>
-<td align="left"><code>os.path.isfile(パス)</code></td>
-<td align="left">指定したパスがファイルか否かを判定(返り値はbool型)</td>
-</tr>
-<tr>
-<td align="left"><code>os.path.splitext(パス)</code></td>
-<td align="left">指定したパスの拡張子とその手前までの文字列を取得</td>
-</tr>
-</tbody>
+<table class="basic_table">
+    <thead>
+        <tr>
+            <th align="left">メソッド</th>
+            <th align="left">説明</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="left"><code>os.sep</code></td>
+            <td align="left">パス区切り文字の取得</td>
+        </tr>
+        <tr>
+            <td align="left"><code>os.getcwd()</code></td>
+            <td align="left">カレントディレクトリを取得</td>
+        </tr>
+        <tr>
+            <td align="left"><code>os.chdir(path)</code></td>
+            <td align="left">指定したカレントディレクトリへ移動</td>
+        </tr>
+        <tr>
+            <td align="left"><code>os.listdir(path)</code></td>
+            <td align="left">パス配下のファイル・ディレクトリのリストを取得</td>
+        </tr>
+        <tr>
+            <td align="left"><code>os.path.join(path1,path2)</code></td>
+            <td align="left">パスの結合</td>
+        </tr>
+        <tr>
+            <td align="left"><code>os.path.split(path)</code></td>
+            <td align="left">パスの末尾を取得</td>
+        </tr>
+        <tr>
+            <td align="left"><code>os.path.abspath(相対path)</code></td>
+            <td align="left">指定した相対パスの絶対パスを取得</td>
+        </tr>
+        <tr>
+            <td align="left"><code>os.path.relpath(path,起点のpath)</code></td>
+            <td align="left">起点パスからみたパスの相対パスを取得</td>
+        </tr>
+        <tr>
+            <td align="left"><code>os.path.exists(path)</code></td>
+            <td align="left">パスの存在を判定</td>
+        </tr>
+        <tr>
+            <td align="left"><code>os.path.isdir(path)</code></td>
+            <td align="left">指定したパスがパスか否かを判定</td>
+        </tr>
+        <tr>
+            <td align="left"><code>os.path.isfile(path)</code></td>
+            <td align="left">指定したパスがファイルか否かを判定</td>
+        </tr>
+        <tr>
+            <td align="left"><code>os.path.splitext(path)</code></td>
+            <td align="left">指定したパスの拡張子とその手前までの文字列を取得</td>
+        </tr>
+        <tr>
+            <td align="left"><code>os.walk(path)</code></td>
+            <td align="left">パス配下を走査、"topdown=False"の引数で逆向きに</td>
+        </tr>
+        <tr>
+            <td align="left"><code>os.scandir(path)</code></td>
+            <td align="left">ディレクトリやファイルの情報をイテレータで生成</td>
+        </tr>
+        <tr>
+            <td align="left"><code>os.path.basename(path)</code></td>
+            <td align="left">末尾のファイル名部分を取得する</td>
+        </tr>
+        <tr>
+            <td align="left"><code>os.path.dirname(path)</code></td>
+            <td align="left">ディレクトリ名部分を取得する</td>
+        </tr>
+        <tr>
+            <td align="left"><code>os.path.getsize(path)</code></td>
+            <td align="left">ファイルサイズを取得する</td>
+        </tr>
+    </tbody>
 </table>
+
 <h2 id="_1">操作</h2>
-<ul>
-<li><code>os.remove(削除対象パス)</code>: 指定したファイルまたはディレクトリを削除</li>
-<li><code>os.makedirs(新規ディレクトリパス)</code>: 指定したパスのディレクトリを新規作成</li>
-</ul>
+<table class="basic_table">
+    <thead>
+        <tr>
+            <th align="left">メソッド</th>
+            <th align="left">説明</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="left"><code>os.rename(path)</code></td>
+            <td align="left">ファイルの名前変更</td>
+        </tr>
+        <tr>
+            <td align="left"><code>os.replace(src, dst)</code></td>
+            <td align="left">ファイルまたはディレクトリ src の名前を dst へ変更。dst がディレクトリの場合 OSError。</td>
+        </tr>
+        <tr>
+            <td align="left"><code>os.rmdir(path)</code></td>
+            <td align="left">ディレクトリパスを削除（削除）。ディレクトリが存在しないか空でない場合、それぞれFileNotFoundErrorまたはOSError</td>
+        </tr>
+        <tr>
+            <td align="left"><code>os.renames(old, new)</code></td>
+            <td align="left">再帰的にディレクトリやファイル名を変更`</td>
+        </tr>
+        <tr>
+            <td align="left"><code>os.mkdir(path)</code></td>
+            <td align="left">指定したパスのディレクトリを新規作成</td>
+        </tr>
+        <tr>
+            <td align="left"><code>os.makedirs(path)</code></td>
+            <td align="left">指定したパスのディレクトリを再帰的に新規作成</td>
+        </tr>
+        <tr>
+            <td align="left"><code>os.remove(path)</code></td>
+            <td align="left">指定したファイルまたはディレクトリを削除</td>
+        </tr>
+        <tr>
+            <td align="left"><code>os.removedirs(path)</code></td>
+            <td align="left">再帰的にディレクトリを削除する</td>
+        </tr>
+        <tr>
+            <td align="left"><code>os.chmod(path, mode)</code></td>
+            <td align="left">パーミッション変更</td>
+        </tr>
+        <tr>
+            <td align="left"><code>os.chown(path, uid, gid)</code></td>
+            <td align="left">所有者変更</td>
+        </tr>
+    </tbody>
+</table>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/05/24 14:06</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/05/26 15:05</span>
       
     
   </small>
