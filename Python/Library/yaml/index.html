@@ -1215,6 +1215,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#parse-nest-yaml" class="md-nav__link">
+    parse nest yaml
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1756,6 +1763,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#parse-nest-yaml" class="md-nav__link">
+    parse nest yaml
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1798,13 +1812,65 @@
 <a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;mkdocs.yml&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
 <a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="n">yaml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
 </code></pre></div>
+<h2 id="parse-nest-yaml">parse nest yaml</h2>
+<ul>
+<li><a href="https://jumpyoshim.hatenablog.com/entry/four-steps-to-get-specific-data-from-complex-json">参考:複雑なJSONから特定のデータを再帰で取り出せるようになるための4ステップ</a></li>
+</ul>
+<p>```py
+import re,yaml
+from pprint import pprint</p>
+<p>datafile = './trigger_datafile.yaml'
+with open(datafile, 'r',encoding="utf-8") as f:
+    datafile = yaml.safe_load(f)</p>
+<p>def get_procedure(datafile):
+    result =[]
+    # 以下の処理を再帰的に実施
+    if isinstance(datafile, str):
+        datafile = select_item(datafile)
+        if datafile != None:
+            result.append(datafile)
+    elif isinstance(datafile, int):
+        result.append(f"sleep time : {datafile}")
+    elif isinstance(datafile, list):
+        for item in datafile:
+            result += get_procedure(item)
+    elif isinstance(datafile, dict):
+        for value in datafile.values():
+            result += get_procedure(value)
+    return result</p>
+<p>def select_item(arg):
+    if arg == 'failed':
+        return None
+    elif arg == 'device':
+        return None
+    elif arg == '%VARIABLES{device}':
+        return None
+    elif re.search(r'!= passed',arg):
+        return None
+    else:
+        return arg</p>
+<h1 id="_3">不要なセクション・文字列を削除</h1>
+<p>def del_nouses(arg):
+    for i in arg:
+        if re.search(r'!!! 0',str(i)):
+            del arg[:arg.index(i)]
+            break
+    def del_section(arg):
+        for i in arg:
+            if re.search(r'!!! \d+',str(i)):
+                if arg[arg.index(i)-1] ==  '%VARIABLES{device_list}':
+                    del arg[arg.index(i)-1]
+        return arg
+    return del_section(arg)</p>
+<p>result = del_nouses(get_procedure(datafile))</p>
+<p>pprint(result)</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/05/31 00:34</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/06/02 14:04</span>
       
     
   </small>
