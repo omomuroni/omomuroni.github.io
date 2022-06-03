@@ -8,19 +8,21 @@
       
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="canonical" href="https://omomuroni.github.io/Python/Library/py_decimal/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
     
     
       
-        <title>おもむろにメモ書き</title>
+        <title>decimal - おもむろにメモ書き</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.e411adfe.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e411adfe.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.cc9b2e1e.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cc9b2e1e.min.css">
         
       
     
@@ -37,11 +39,11 @@
     
       <link rel="stylesheet" href="https://unpkg.com/mermaid@9.0.0/dist/mermaid.css">
     
-      <link rel="stylesheet" href="/custom/custom_table.css">
+      <link rel="stylesheet" href="../../../custom/custom_table.css">
     
-      <link rel="stylesheet" href="/custom/layout.css">
+      <link rel="stylesheet" href="../../../custom/layout.css">
     
-    <script>__md_scope=new URL("/",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -68,6 +70,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#decimal" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -78,7 +85,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="おもむろにメモ書き" class="md-header__button md-logo" aria-label="おもむろにメモ書き" data-md-component="logo">
+    <a href="../../.." title="おもむろにメモ書き" class="md-header__button md-logo" aria-label="おもむろにメモ書き" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -97,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              decimal
             
           </span>
         </div>
@@ -200,7 +207,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/." class="md-tabs__link">
+    <a href="../../.." class="md-tabs__link">
       index
     </a>
   </li>
@@ -215,7 +222,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/Effective/00_index/" class="md-tabs__link">
+      <a href="../../../Effective/00_index/" class="md-tabs__link">
         Effective
       </a>
     </li>
@@ -231,7 +238,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/Git/00_index/" class="md-tabs__link">
+      <a href="../../../Git/00_index/" class="md-tabs__link">
         Git
       </a>
     </li>
@@ -247,7 +254,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/Mkdocs/00_index/" class="md-tabs__link">
+      <a href="../../../Mkdocs/00_index/" class="md-tabs__link">
         Mkdocs
       </a>
     </li>
@@ -263,7 +270,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/Network/00_index/" class="md-tabs__link">
+      <a href="../../../Network/00_index/" class="md-tabs__link">
         Network
       </a>
     </li>
@@ -273,13 +280,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="/Python/" class="md-tabs__link">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
         Python
       </a>
     </li>
@@ -295,7 +304,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/docker/memo/" class="md-tabs__link">
+      <a href="../../../docker/memo/" class="md-tabs__link">
         Docker
       </a>
     </li>
@@ -323,7 +332,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="おもむろにメモ書き" class="md-nav__button md-logo" aria-label="おもむろにメモ書き" data-md-component="logo">
+    <a href="../../.." title="おもむろにメモ書き" class="md-nav__button md-logo" aria-label="おもむろにメモ書き" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -354,7 +363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         index
       </a>
     </li>
@@ -395,7 +404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Effective/00_index/" class="md-nav__link">
+      <a href="../../../Effective/00_index/" class="md-nav__link">
         効率化 - 目次
       </a>
     </li>
@@ -409,7 +418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Effective/Anki/" class="md-nav__link">
+      <a href="../../../Effective/Anki/" class="md-nav__link">
         Anki
       </a>
     </li>
@@ -423,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Effective/Linux/" class="md-nav__link">
+      <a href="../../../Effective/Linux/" class="md-nav__link">
         Linux コマンド
       </a>
     </li>
@@ -437,7 +446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Effective/draw.io/" class="md-nav__link">
+      <a href="../../../Effective/draw.io/" class="md-nav__link">
         Draw.io をvscode で使う
       </a>
     </li>
@@ -451,7 +460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Effective/marp/" class="md-nav__link">
+      <a href="../../../Effective/marp/" class="md-nav__link">
         Marp
       </a>
     </li>
@@ -465,7 +474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Effective/powershell_useful/" class="md-nav__link">
+      <a href="../../../Effective/powershell_useful/" class="md-nav__link">
         Powershell 便利技
       </a>
     </li>
@@ -479,7 +488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Effective/sakura_editer/" class="md-nav__link">
+      <a href="../../../Effective/sakura_editer/" class="md-nav__link">
         サクラエディタ設定
       </a>
     </li>
@@ -493,7 +502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Effective/slide_sample/" class="md-nav__link">
+      <a href="../../../Effective/slide_sample/" class="md-nav__link">
         Marp で作成した slide サンプル
       </a>
     </li>
@@ -507,7 +516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Effective/tool/" class="md-nav__link">
+      <a href="../../../Effective/tool/" class="md-nav__link">
         便利なツール
       </a>
     </li>
@@ -555,7 +564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Git/00_index/" class="md-nav__link">
+      <a href="../../../Git/00_index/" class="md-nav__link">
         Git - 目次
       </a>
     </li>
@@ -569,7 +578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Git/git_cheat_sheet/" class="md-nav__link">
+      <a href="../../../Git/git_cheat_sheet/" class="md-nav__link">
         Git Cheat Sheet
       </a>
     </li>
@@ -583,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Git/git_knowledge/" class="md-nav__link">
+      <a href="../../../Git/git_knowledge/" class="md-nav__link">
         git 操作
       </a>
     </li>
@@ -631,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Mkdocs/00_index/" class="md-nav__link">
+      <a href="../../../Mkdocs/00_index/" class="md-nav__link">
         Mkdocs - 目次
       </a>
     </li>
@@ -645,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Mkdocs/extended_markdown/" class="md-nav__link">
+      <a href="../../../Mkdocs/extended_markdown/" class="md-nav__link">
         HTML & CSS による拡張
       </a>
     </li>
@@ -659,7 +668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Mkdocs/markdown/" class="md-nav__link">
+      <a href="../../../Mkdocs/markdown/" class="md-nav__link">
         Markdown 記法まとめ
       </a>
     </li>
@@ -673,7 +682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Mkdocs/memo/" class="md-nav__link">
+      <a href="../../../Mkdocs/memo/" class="md-nav__link">
         Mkdocs memo
       </a>
     </li>
@@ -687,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Mkdocs/mkdocs_sample/" class="md-nav__link">
+      <a href="../../../Mkdocs/mkdocs_sample/" class="md-nav__link">
         Material 表現 sample
       </a>
     </li>
@@ -735,7 +744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Network/00_index/" class="md-nav__link">
+      <a href="../../../Network/00_index/" class="md-nav__link">
         Network - 目次
       </a>
     </li>
@@ -749,7 +758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Network/ipaddress/" class="md-nav__link">
+      <a href="../../../Network/ipaddress/" class="md-nav__link">
         Python で ipaddress 生成
       </a>
     </li>
@@ -789,7 +798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Network/Setup/" class="md-nav__link">
+      <a href="../../../Network/Setup/" class="md-nav__link">
         index
       </a>
     </li>
@@ -803,7 +812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Network/Setup/gns3setup_for_mac/" class="md-nav__link">
+      <a href="../../../Network/Setup/gns3setup_for_mac/" class="md-nav__link">
         Mac で GNS3 を使う
       </a>
     </li>
@@ -830,12 +839,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -858,7 +869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         Python
       </a>
     </li>
@@ -898,7 +909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Basics/about_python/" class="md-nav__link">
+      <a href="../../Basics/about_python/" class="md-nav__link">
         python 入門
       </a>
     </li>
@@ -912,7 +923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Basics/py_control_syntax/" class="md-nav__link">
+      <a href="../../Basics/py_control_syntax/" class="md-nav__link">
         制御構文
       </a>
     </li>
@@ -926,7 +937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Basics/py_data_stracture/" class="md-nav__link">
+      <a href="../../Basics/py_data_stracture/" class="md-nav__link">
         データ構造
       </a>
     </li>
@@ -940,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Basics/py_function_adbanced/" class="md-nav__link">
+      <a href="../../Basics/py_function_adbanced/" class="md-nav__link">
         関数 応用
       </a>
     </li>
@@ -954,7 +965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Basics/py_function_basic/" class="md-nav__link">
+      <a href="../../Basics/py_function_basic/" class="md-nav__link">
         関数 基礎
       </a>
     </li>
@@ -968,7 +979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Basics/py_operator/" class="md-nav__link">
+      <a href="../../Basics/py_operator/" class="md-nav__link">
         Python 演算子
       </a>
     </li>
@@ -982,7 +993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Basics/py_variable/" class="md-nav__link">
+      <a href="../../Basics/py_variable/" class="md-nav__link">
         Python 変数
       </a>
     </li>
@@ -1001,12 +1012,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" checked>
       
       
       
@@ -1029,7 +1042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Library/codecs/" class="md-nav__link">
+      <a href="../codecs/" class="md-nav__link">
         codecs
       </a>
     </li>
@@ -1043,7 +1056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Library/collections/" class="md-nav__link">
+      <a href="../collections/" class="md-nav__link">
         collections モジュール
       </a>
     </li>
@@ -1057,7 +1070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Library/csv/" class="md-nav__link">
+      <a href="../csv/" class="md-nav__link">
         CSV モジュール
       </a>
     </li>
@@ -1071,7 +1084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Library/jinja/" class="md-nav__link">
+      <a href="../jinja/" class="md-nav__link">
         jinja
       </a>
     </li>
@@ -1085,7 +1098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Library/json/" class="md-nav__link">
+      <a href="../json/" class="md-nav__link">
         JSON ファイルの取り扱い
       </a>
     </li>
@@ -1099,7 +1112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Library/os/" class="md-nav__link">
+      <a href="../os/" class="md-nav__link">
         os モジュール
       </a>
     </li>
@@ -1111,11 +1124,59 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/Python/Library/py_decimal/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          decimal
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         decimal
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#f-string" class="md-nav__link">
+    補足:f-string
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#round" class="md-nav__link">
+    補足: round
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1127,7 +1188,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Library/re_module/" class="md-nav__link">
+      <a href="../re_module/" class="md-nav__link">
         re モジュール
       </a>
     </li>
@@ -1141,7 +1202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Library/regex/" class="md-nav__link">
+      <a href="../regex/" class="md-nav__link">
         Python 正規表現
       </a>
     </li>
@@ -1155,7 +1216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Library/shutil/" class="md-nav__link">
+      <a href="../shutil/" class="md-nav__link">
         shutil モジュール
       </a>
     </li>
@@ -1169,7 +1230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Library/sys/" class="md-nav__link">
+      <a href="../sys/" class="md-nav__link">
         sys
       </a>
     </li>
@@ -1183,7 +1244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Library/yaml/" class="md-nav__link">
+      <a href="../yaml/" class="md-nav__link">
         YAML ファイルの取り扱い
       </a>
     </li>
@@ -1223,7 +1284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Library/openpyxl/0_index/" class="md-nav__link">
+      <a href="../openpyxl/0_index/" class="md-nav__link">
         openpyxl 目次
       </a>
     </li>
@@ -1237,7 +1298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Library/openpyxl/1_oepnpyxl_book/" class="md-nav__link">
+      <a href="../openpyxl/1_oepnpyxl_book/" class="md-nav__link">
         Book の操作
       </a>
     </li>
@@ -1251,7 +1312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Library/openpyxl/2_oepnpyxl_sheet/" class="md-nav__link">
+      <a href="../openpyxl/2_oepnpyxl_sheet/" class="md-nav__link">
         sheet の操作
       </a>
     </li>
@@ -1265,7 +1326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Library/openpyxl/3_oepnpyxl_cell/" class="md-nav__link">
+      <a href="../openpyxl/3_oepnpyxl_cell/" class="md-nav__link">
         セル の操作
       </a>
     </li>
@@ -1279,7 +1340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Library/openpyxl/4_oepnpyxl_/" class="md-nav__link">
+      <a href="../openpyxl/4_oepnpyxl_/" class="md-nav__link">
         4 oepnpyxl 
       </a>
     </li>
@@ -1326,7 +1387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Library/pytest/01_pytest_execute/" class="md-nav__link">
+      <a href="../pytest/01_pytest_execute/" class="md-nav__link">
         pytest の実行
       </a>
     </li>
@@ -1340,7 +1401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Library/pytest/02_pytest_test_function/" class="md-nav__link">
+      <a href="../pytest/02_pytest_test_function/" class="md-nav__link">
         pytest - テスト関数の作成
       </a>
     </li>
@@ -1394,7 +1455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Setup/pip/" class="md-nav__link">
+      <a href="../../Setup/pip/" class="md-nav__link">
         pip 関連
       </a>
     </li>
@@ -1408,7 +1469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Setup/windows_dev_env/" class="md-nav__link">
+      <a href="../../Setup/windows_dev_env/" class="md-nav__link">
         windows 開発環境
       </a>
     </li>
@@ -1422,7 +1483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/Setup/xpresso/" class="md-nav__link">
+      <a href="../../Setup/xpresso/" class="md-nav__link">
         xpresso setup
       </a>
     </li>
@@ -1469,7 +1530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/other/useful/" class="md-nav__link">
+      <a href="../../other/useful/" class="md-nav__link">
         Useful
       </a>
     </li>
@@ -1483,7 +1544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/other/useful_word/" class="md-nav__link">
+      <a href="../../other/useful_word/" class="md-nav__link">
         変数でよく使う英単語
       </a>
     </li>
@@ -1530,7 +1591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/pyATS/api/" class="md-nav__link">
+      <a href="../../pyATS/api/" class="md-nav__link">
         API reference
       </a>
     </li>
@@ -1544,7 +1605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/pyATS/pyats_Blitz_effective/" class="md-nav__link">
+      <a href="../../pyATS/pyats_Blitz_effective/" class="md-nav__link">
         Blitz 便利技
       </a>
     </li>
@@ -1558,7 +1619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/pyATS/pyats_Blitz_getting_started/" class="md-nav__link">
+      <a href="../../pyATS/pyats_Blitz_getting_started/" class="md-nav__link">
         Blitz 入門
       </a>
     </li>
@@ -1572,7 +1633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/pyATS/pyats_basic1/" class="md-nav__link">
+      <a href="../../pyATS/pyats_basic1/" class="md-nav__link">
         入門1
       </a>
     </li>
@@ -1586,7 +1647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/pyATS/pyats_basic2/" class="md-nav__link">
+      <a href="../../pyATS/pyats_basic2/" class="md-nav__link">
         入門2
       </a>
     </li>
@@ -1600,7 +1661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/pyATS/pyats_genie/" class="md-nav__link">
+      <a href="../../pyATS/pyats_genie/" class="md-nav__link">
         Genie
       </a>
     </li>
@@ -1614,7 +1675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python/pyATS/pyats_unicorn/" class="md-nav__link">
+      <a href="../../pyATS/pyats_unicorn/" class="md-nav__link">
         Unicon
       </a>
     </li>
@@ -1669,7 +1730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docker/memo/" class="md-nav__link">
+      <a href="../../../docker/memo/" class="md-nav__link">
         memo
       </a>
     </li>
@@ -1700,6 +1761,30 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#f-string" class="md-nav__link">
+    補足:f-string
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#round" class="md-nav__link">
+    補足: round
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1710,8 +1795,101 @@
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
+  <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/Python/Library/py_decimal.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
 
+
+
+<h1 id="decimal">decimal</h1>
+<ul>
+<li><a href="https://docs.python.org/ja/3/library/decimal.html">decimal --- 十進固定及び浮動小数点数の算術演算</a></li>
+</ul>
+<p>quantize()　メソッドで任意の桁で小数点を丸めることができます。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">decimal</span> <span class="kn">import</span> <span class="n">Decimal</span><span class="p">,</span><span class="n">ROUND_DOWN</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">workingtime</span> <span class="o">=</span> <span class="mf">7.5234</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">time</span> <span class="o">=</span> <span class="n">Decimal</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">workingtime</span><span class="p">))</span><span class="o">.</span><span class="n">quantize</span><span class="p">(</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;.01&#39;</span><span class="p">),</span> <span class="n">rounding</span><span class="o">=</span><span class="n">ROUND_DOWN</span><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># 7.52</span>
+</code></pre></div>
+<p>rouding 引数で指定できる丸めモードは以下の通りです。</p>
+<p><table　class="basic_table"></p>
+<thead>
+<tr>
+  <th align="left">丸めモード</th>
+  <th align="left">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="left">ROUND_CEILING</td>
+  <td align="left">Infinity 方向に丸めます。</td>
+</tr>
+<tr>
+  <td align="left">ROUND_DOWN</td>
+  <td align="left">ゼロ方向に丸めます。</td>
+</tr>
+<tr>
+  <td align="left">ROUND_FLOOR</td>
+  <td align="left">-Infinity 方向に丸めます。</td>
+</tr>
+<tr>
+  <td align="left">ROUND_HALF_DOWN</td>
+  <td align="left">近い方に、引き分けはゼロ方向に向けて丸めます。</td>
+</tr>
+<tr>
+  <td align="left">ROUND_HALF_EVEN</td>
+  <td align="left">近い方に、引き分けは偶数整数方向に向けて丸めます。</td>
+</tr>
+<tr>
+  <td align="left">ROUND_HALF_UP</td>
+  <td align="left">近い方に、引き分けはゼロから遠い方向に向けて丸めます。</td>
+</tr>
+<tr>
+  <td align="left">ROUND_UP</td>
+  <td align="left">ゼロから遠い方向に丸めます。</td>
+</tr>
+<tr>
+  <td align="left">ROUND_05UP</td>
+  <td align="left">ゼロ方向に丸めた後の最後の桁が 0 または 5 ならばゼロから遠い方向に、そうでなければゼロ方向に丸めます。</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition worning">
+<p class="admonition-title">Worning</p>
+<p>Decimal 関数には文字列型を渡します。</p>
+</div>
+<h2 id="f-string">補足:f-string</h2>
+<p>f-strings での表示は小数点切り上げです</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">workingtime</span> <span class="o">=</span> <span class="mf">7.555555</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">workingtime</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="mf">7.56</span>
+</code></pre></div>
+<h2 id="round">補足: round</h2>
+<ul>
+<li><a href="https://docs.python.org/ja/3/library/functions.html#round">round</a></li>
+<li><a href="https://docs.python.org/ja/3/tutorial/floatingpoint.html#tut-fp-issues">浮動小数点演算、その問題と制限</a></li>
+</ul>
+<blockquote>
+<p>浮動小数点数に対する round() の振る舞いは意外なものかもしれません: 
+例えば、 round(2.675, 2) は予想通りの 2.68 ではなく 2.67 を与えます。
+これはバグではありません: これはほとんどの小数が浮動小数点数で正確に表せないことの結果です。</p>
+</blockquote>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/06/03 15:03</span>
+      
+    
+  </small>
+</div>
+
+              
             </article>
           </div>
         </div>
@@ -1724,6 +1902,41 @@
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../os/" class="md-footer__link md-footer__link--prev" aria-label="Previous: os モジュール" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              os モジュール
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../re_module/" class="md-footer__link md-footer__link--next" aria-label="Next: re モジュール" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              re モジュール
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1749,10 +1962,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "/", "features": ["content.code.annotate", "content.tabs.link", "navigation.tabs", "navigation.top", "search.highlight", "search.suggest", "search.share"], "search": "/assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "navigation.tabs", "navigation.top", "search.highlight", "search.suggest", "search.share"], "search": "../../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.ed9748b7.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.ed9748b7.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@9.0.0/dist/mermaid.min.js"></script>
       
