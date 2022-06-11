@@ -331,6 +331,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://omomuroni.github.io/Python/pyATS/setup/</loc>
+         <lastmod>2022-06-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://omomuroni.github.io/docker/memo/</loc>
          <lastmod>2022-06-11</lastmod>
          <changefreq>daily</changefreq>
