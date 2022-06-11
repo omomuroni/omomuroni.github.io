@@ -733,6 +733,47 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    設定関連
+  </a>
+  
+    <nav class="md-nav" aria-label="設定関連">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    出力をみやすく設定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#font" class="md-nav__link">
+    font
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vmware" class="md-nav__link">
+    VMware との共存
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    ファイルシステムへのアクセス
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1930,6 +1971,47 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    設定関連
+  </a>
+  
+    <nav class="md-nav" aria-label="設定関連">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    出力をみやすく設定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#font" class="md-nav__link">
+    font
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vmware" class="md-nav__link">
+    VMware との共存
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    ファイルシステムへのアクセス
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1990,15 +2072,14 @@
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>sudo apt -y install manpages-ja manpages-ja-dev <span class="c1"># 日本語マニュアルのインストール</span>
 </code></pre></div>
 <h2 id="_1">ビープ音を消す</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>vim /etc/inputrc    omuko
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>omuko
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># コメントアウトを外す</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">set</span> bell-style none
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>vim /etc/inputrc
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1"># コメントアウトを外す</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">set</span> bell-style none
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>sudo vim /etc/vim/vimrc
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1"># ファイル最下部に書き込み</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="nb">set</span> visualbell <span class="nv">t_vb</span><span class="o">=</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>sudo vim /etc/vim/vimrc
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># ファイル最下部に書き込み</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="nb">set</span> visualbell <span class="nv">t_vb</span><span class="o">=</span>
 </code></pre></div>
 <h2 id="_2">初期設定</h2>
 <ul>
@@ -2064,13 +2145,84 @@
 <a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>sudo apt -y update
 <a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>sudo apt -y install build-essential python3-dev python3-pip
 </code></pre></div>
+<h2 id="_3">設定関連</h2>
+<h3 id="_4">出力をみやすく設定</h3>
+<ul>
+<li>LS_COLORS設定を出力</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>dircolors -p &gt; ~/.dircolors
+</code></pre></div>
+<ul>
+<li>設定変更</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>cat ~/.dircolors
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>vi ~/.dircolors
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a># 以下の行を01;34 へ変更
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>OTHER_WRITABLE 01;34 # dir that is other-writable (o+w) and not sticky
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>eval $(dircolors -b ~/.dircolors)
+</code></pre></div>
+<h3 id="font">font</h3>
+<ul>
+<li><a href="https://github.com/yuru7/HackGen/releases/tag/v2.6.3">HackGen</a></li>
+<li><code>HackGenNerd_v2.6.3.zip</code> をダウンロードし解凍、以下をインストール<ul>
+<li>HackGenNerdConsole-Regular.ttf</li>
+<li>HackGenNerdConsole-Bold.ttf</li>
+</ul>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>フォントのディレクトリは以下の場所です</p>
+<ul>
+<li><code>C:\Windows\Fonts</code></li>
+</ul>
+</div>
+<h3 id="vmware">VMware との共存</h3>
+<p>Windows ハイパーバイザー プラットフォーム を有効にすること</p>
+<ul>
+<li><a href="https://qiita.com/matarillo/items/ca1eecf8f9a3cd76f9ce">参考：WSL2とHyper-Vの関係</a></li>
+<li>GNS3との共存では以下の設定を行うこと（事前にIntel VT-Xはvm の設定でoff にしておくこと） </li>
+<li><a href="https://www.google.com/search?q=enable_hardware_acceleration+%3D+False&amp;rlz=1C1CHZN_jaJP974JP974&amp;oq=enable_hardware_acceleration+%3D+False&amp;aqs=chrome..69i57.447j0j4&amp;sourceid=chrome&amp;ie=UTF-8">参考：GNS3＋Virtual Box＋FortiGateでFortiGate検証環境を作成</a></li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ssh gns3@xxx.xxx.xxx.xxx
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a># address は起動時のGUI表示で確認すること
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a># passwd は gns
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>cd /home/gns3/.config/GNS3/2.2/
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>cat gns3_server.conf
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>cp gns3_server.conf gns3_server_bkp.conf
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>echo [Qemu] &gt;&gt;  gns3_server.conf
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>echo &quot;enable_hardware_acceleration = False&quot; &gt;&gt;  gns3_server.conf
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>echo &quot;require_hardware_acceleration = False&quot;  &gt;&gt;  gns3_server.conf
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>cat gns3_server.conf
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>VM で　VT-x/EPT を有効化していると起動に失敗...</p>
+</div>
+<h2 id="_5">ファイルシステムへのアクセス</h2>
+<ul>
+<li>windows ---&gt; wsl<ul>
+<li><code>\\wsl$</code></li>
+</ul>
+</li>
+<li>wsl ---&gt; windows<ul>
+<li><code>/mnt/c/Users</code></li>
+</ul>
+</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/06/08 23:52</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/06/11 12:47</span>
       
     
   </small>

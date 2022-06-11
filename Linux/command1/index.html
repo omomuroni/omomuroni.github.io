@@ -712,6 +712,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sed" class="md-nav__link">
+    sed
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1916,6 +1923,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sed" class="md-nav__link">
+    sed
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1960,6 +1974,9 @@
 </ul>
 </div>
 <h2 id="grep">grep</h2>
+<ul>
+<li><code>grep [検索したい文字列] -rl [検索対象フォルダのパス]</code></li>
+</ul>
 <table class="basic_table">
 <thead>
 <tr>
@@ -1969,35 +1986,35 @@
 </thead>
 <tbody>
 <tr>
-  <td align="left"><code>-i</code></td>
+  <td align="left"><code>`-i`</code></td>
   <td align="left">大文字と小文字を区別せず検索する</td>
 </tr>
 <tr>
-  <td align="left"><code>-E</code></td>
+  <td align="left"><code>`-E`</code></td>
   <td align="left">拡張正規表現で検索を行う</td>
 </tr>
 <tr>
-  <td align="left"><code>-e</code></td>
+  <td align="left"><code>`-e`</code></td>
   <td align="left">一致処理に指定した正規表現を使う</td>
 </tr>
 <tr>
-  <td align="left"><code>-v</code></td>
+  <td align="left"><code>`-v`</code></td>
   <td align="left">一致しないものを検索する</td>
 </tr>
 <tr>
-  <td align="left"><code>-n</code></td>
+  <td align="left"><code>`-n`</code></td>
   <td align="left">検索結果に行番号を表示する</td>
 </tr>
 <tr>
-  <td align="left"><code>-l</code></td>
+  <td align="left"><code>`-l`</code></td>
   <td align="left">検索結果にファイル名のみ表示する</td>
 </tr>
 <tr>
-  <td align="left"><code>-h</code></td>
+  <td align="left"><code>`-h`</code></td>
   <td align="left">検索結果にファイル名を表示しない</td>
 </tr>
 <tr>
-  <td align="left"><code>-o</code></td>
+  <td align="left"><code>`-o`</code></td>
   <td align="left">検索結果に一致した文字を表示する</td>
 </tr>
 <tr>
@@ -2005,12 +2022,55 @@
   <td align="left">検索結果に一致した箇所から前後に指定した行数表示する</td>
 </tr>
 <tr>
-  <td align="left"><code>-r</code></td>
+  <td align="left"><code>`-r`</code></td>
   <td align="left">ディレクトリ内も検索対象とする</td>
 </tr>
 <tr>
-  <td align="left"><code>-L</code></td>
+  <td align="left"><code>`-L`</code></td>
   <td align="left">検索した結果、該当しなったファイルを表示する</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="sed">sed</h2>
+<p>基本書式：<code>sed ［オプション] [スクリプトコマンド] [ファイル]</code></p>
+<table>
+<thead>
+<tr>
+<th align="left">オプション</th>
+<th align="left">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>-i</code></td>
+<td align="left">結果を出力せずに直接ファイルを編集</td>
+</tr>
+<tr>
+<td align="left"><code>-E</code></td>
+<td align="left">拡張正規表現を使用</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left">処理</th>
+<th align="left">例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">置換</td>
+<td align="left">sed  "s/[pattern1]/[pattern2]/g" [ファイル]</td>
+</tr>
+<tr>
+<td align="left">削除</td>
+<td align="left">sed  "/[pattern]/d" [ファイル]</td>
+</tr>
+<tr>
+<td align="left">空白を削除</td>
+<td align="left">sed 's/　//g' [ファイル]</td>
 </tr>
 </tbody>
 </table>
@@ -2020,7 +2080,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/06/08 23:52</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/06/11 12:47</span>
       
     
   </small>
