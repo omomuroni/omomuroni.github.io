@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://omomuroni.github.io/Python/Library/os/">
+        <link rel="canonical" href="https://omomuroni.github.io/Python/Library/loggging/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
     
     
       
-        <title>os - おもむろにメモ書き</title>
+        <title>logging - おもむろにメモ書き</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#os" class="md-skip">
+        <a href="#logging" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              os
+              logging
             
           </span>
         </div>
@@ -1216,11 +1216,52 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../loggging/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          logging
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         logging
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#logrecord" class="md-nav__link">
+    LogRecord 属性
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1258,59 +1299,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          os
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../os/" class="md-nav__link">
         os
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#path" class="md-nav__link">
-    path・情報取得
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    操作
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2008,15 +2001,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#path" class="md-nav__link">
-    path・情報取得
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    操作
+  <a href="#logrecord" class="md-nav__link">
+    LogRecord 属性
   </a>
   
 </li>
@@ -2033,158 +2019,46 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/Python/Library/os.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/Python/Library/loggging.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="os">os</h1>
+<h1 id="logging">logging</h1>
 <ul>
-<li><a href="https://docs.python.org/ja/3/library/os.html">os --- 雑多なオペレーティングシステムインターフェース</a></li>
+<li><a href="https://docs.python.org/ja/3/howto/logging.html">Logging HOWTO</a></li>
+<li><a href="https://docs.python.org/ja/3/howto/logging-cookbook.html#logging-cookbook">Logging クックブック</a></li>
+<li><a href="https://python-guideja.readthedocs.io/ja/latest/writing/logging.html">Python ヒッチハイク・ガイド --- ロギング</a></li>
+<li><a href="https://fangpenlin.com/posts/2012/08/26/good-logging-practice-in-python/">Good logging practice in Python</a></li>
 </ul>
-<h2 id="path">path・情報取得</h2>
-<table class="basic_table">
-    <thead>
-        <tr>
-            <th align="left">メソッド</th>
-            <th align="left">説明</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td align="left"><code>os.sep</code></td>
-            <td align="left">パス区切り文字の取得</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.getcwd()</code></td>
-            <td align="left">カレントディレクトリを取得</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.chdir(path)</code></td>
-            <td align="left">指定したカレントディレクトリへ移動</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.listdir(path)</code></td>
-            <td align="left">パス配下のファイル・ディレクトリのリストを取得</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.join(path1,path2)</code></td>
-            <td align="left">パスの結合</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.split(path)</code></td>
-            <td align="left">パスの末尾を取得</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.abspath(相対path)</code></td>
-            <td align="left">指定した相対パスの絶対パスを取得</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.relpath(path,起点のpath)</code></td>
-            <td align="left">起点パスからみたパスの相対パスを取得</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.exists(path)</code></td>
-            <td align="left">パスの存在を判定</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.isdir(path)</code></td>
-            <td align="left">指定したパスがパスか否かを判定</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.isfile(path)</code></td>
-            <td align="left">指定したパスがファイルか否かを判定</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.splitext(path)</code></td>
-            <td align="left">指定したパスの拡張子とその手前までの文字列を取得</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.walk(path)</code></td>
-            <td align="left">パス配下を走査、"topdown=False"の引数で逆向きに</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.scandir(path)</code></td>
-            <td align="left">ディレクトリやファイルの情報をイテレータで生成</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.basename(path)</code></td>
-            <td align="left">末尾のファイル名部分を取得する</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.dirname(path)</code></td>
-            <td align="left">ディレクトリ名部分を取得する</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.getsize(path)</code></td>
-            <td align="left">ファイルサイズを取得する</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.getmtime(path)</code></td>
-            <td align="left">更新日時を取得する</td>
-        </tr>
-    </tbody>
-</table>
-
-<h2 id="_1">操作</h2>
-<table class="basic_table">
-    <thead>
-        <tr>
-            <th align="left">メソッド</th>
-            <th align="left">説明</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td align="left"><code>os.rename(path)</code></td>
-            <td align="left">ファイルの名前変更</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.replace(src, dst)</code></td>
-            <td align="left">ファイルまたはディレクトリ src の名前を dst へ変更。dst がディレクトリの場合 OSError。</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.rmdir(path)</code></td>
-            <td align="left">ディレクトリパスを削除（削除）。ディレクトリが存在しないか空でない場合、それぞれFileNotFoundErrorまたはOSError</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.renames(old, new)</code></td>
-            <td align="left">再帰的にディレクトリやファイル名を変更`</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.mkdir(path)</code></td>
-            <td align="left">指定したパスのディレクトリを新規作成</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.makedirs(path)</code></td>
-            <td align="left">指定したパスのディレクトリを再帰的に新規作成</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.remove(path)</code></td>
-            <td align="left">指定したファイルまたはディレクトリを削除</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.removedirs(path)</code></td>
-            <td align="left">再帰的にディレクトリを削除する</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.chmod(path, mode)</code></td>
-            <td align="left">パーミッション変更</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.chown(path, uid, gid)</code></td>
-            <td align="left">所有者変更</td>
-        </tr>
-    </tbody>
-</table>
+<div class="highlight"><span class="filename">基本的な使い方</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">logging</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;ERROR!&quot;</span><span class="p">)</span> 
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># logging.basicConfig でログレベル・フォーマットを変更。</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%(asctime)s</span><span class="se">\t</span><span class="si">%(name)s</span><span class="se">\t</span><span class="si">%(levelname)s</span><span class="se">\t</span><span class="si">%(message)s</span><span class="s2">&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">)</span>
+</code></pre></div>
+<h2 id="logrecord">LogRecord 属性</h2>
+<ul>
+<li><a href="https://docs.python.org/ja/3/library/logging.html#logrecord-attributes">LogRecord 属性</a></li>
+</ul>
+<p>LogRecord 属性 はレコードからのデータをフォーマット文字列に統合するのに使える。</p>
+<ul>
+<li>属性名: asctime, フォーマット: <code>%(asctime)s</code></li>
+<li>人間が読める書式で表したもの。デフォルトでは "20022-07-08 16:49:45,896" 形式</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/06/19 23:22</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/06/19 23:21</span>
       
     
   </small>
@@ -2207,7 +2081,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../netmiko/" class="md-footer__link md-footer__link--prev" aria-label="Previous: netmiko" rel="prev">
+        <a href="../json/" class="md-footer__link md-footer__link--prev" aria-label="Previous: json" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -2216,20 +2090,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              netmiko
+              json
             </div>
           </div>
         </a>
       
       
         
-        <a href="../pathlib/" class="md-footer__link md-footer__link--next" aria-label="Next: pathlib" rel="next">
+        <a href="../multiprocessing/" class="md-footer__link md-footer__link--next" aria-label="Next: multiprocessing" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              pathlib
+              multiprocessing
             </div>
           </div>
           <div class="md-footer__button md-icon">

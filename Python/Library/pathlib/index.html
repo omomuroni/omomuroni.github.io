@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://omomuroni.github.io/Python/Library/os/">
+        <link rel="canonical" href="https://omomuroni.github.io/Python/Library/pathlib/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
     
     
       
-        <title>os - おもむろにメモ書き</title>
+        <title>pathlib - おもむろにメモ書き</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#os" class="md-skip">
+        <a href="#pathlib" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              os
+              pathlib
             
           </span>
         </div>
@@ -1258,6 +1258,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../os/" class="md-nav__link">
+        os
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -1270,12 +1284,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          os
+          pathlib
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        os
+        pathlib
       </a>
       
         
@@ -1294,15 +1308,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#path" class="md-nav__link">
-    path・情報取得
+  <a href="#_1" class="md-nav__link">
+    基本操作
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    操作
+  <a href="#_2" class="md-nav__link">
+    ファイルの日時取得
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    フォルダ操作
   </a>
   
 </li>
@@ -1311,20 +1332,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../pathlib/" class="md-nav__link">
-        pathlib
-      </a>
     </li>
   
 
@@ -2008,15 +2015,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#path" class="md-nav__link">
-    path・情報取得
+  <a href="#_1" class="md-nav__link">
+    基本操作
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    操作
+  <a href="#_2" class="md-nav__link">
+    ファイルの日時取得
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    フォルダ操作
   </a>
   
 </li>
@@ -2033,151 +2047,94 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/Python/Library/os.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/Python/Library/pathlib.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="os">os</h1>
+<h1 id="pathlib">pathlib</h1>
 <ul>
-<li><a href="https://docs.python.org/ja/3/library/os.html">os --- 雑多なオペレーティングシステムインターフェース</a></li>
+<li><a href="https://docs.python.org/ja/3/library/pathlib.html">pathlib --- オブジェクト指向のファイルシステムパス</a></li>
 </ul>
-<h2 id="path">path・情報取得</h2>
-<table class="basic_table">
-    <thead>
-        <tr>
-            <th align="left">メソッド</th>
-            <th align="left">説明</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td align="left"><code>os.sep</code></td>
-            <td align="left">パス区切り文字の取得</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.getcwd()</code></td>
-            <td align="left">カレントディレクトリを取得</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.chdir(path)</code></td>
-            <td align="left">指定したカレントディレクトリへ移動</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.listdir(path)</code></td>
-            <td align="left">パス配下のファイル・ディレクトリのリストを取得</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.join(path1,path2)</code></td>
-            <td align="left">パスの結合</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.split(path)</code></td>
-            <td align="left">パスの末尾を取得</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.abspath(相対path)</code></td>
-            <td align="left">指定した相対パスの絶対パスを取得</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.relpath(path,起点のpath)</code></td>
-            <td align="left">起点パスからみたパスの相対パスを取得</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.exists(path)</code></td>
-            <td align="left">パスの存在を判定</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.isdir(path)</code></td>
-            <td align="left">指定したパスがパスか否かを判定</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.isfile(path)</code></td>
-            <td align="left">指定したパスがファイルか否かを判定</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.splitext(path)</code></td>
-            <td align="left">指定したパスの拡張子とその手前までの文字列を取得</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.walk(path)</code></td>
-            <td align="left">パス配下を走査、"topdown=False"の引数で逆向きに</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.scandir(path)</code></td>
-            <td align="left">ディレクトリやファイルの情報をイテレータで生成</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.basename(path)</code></td>
-            <td align="left">末尾のファイル名部分を取得する</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.dirname(path)</code></td>
-            <td align="left">ディレクトリ名部分を取得する</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.getsize(path)</code></td>
-            <td align="left">ファイルサイズを取得する</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.getmtime(path)</code></td>
-            <td align="left">更新日時を取得する</td>
-        </tr>
-    </tbody>
-</table>
-
-<h2 id="_1">操作</h2>
-<table class="basic_table">
-    <thead>
-        <tr>
-            <th align="left">メソッド</th>
-            <th align="left">説明</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td align="left"><code>os.rename(path)</code></td>
-            <td align="left">ファイルの名前変更</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.replace(src, dst)</code></td>
-            <td align="left">ファイルまたはディレクトリ src の名前を dst へ変更。dst がディレクトリの場合 OSError。</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.rmdir(path)</code></td>
-            <td align="left">ディレクトリパスを削除（削除）。ディレクトリが存在しないか空でない場合、それぞれFileNotFoundErrorまたはOSError</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.renames(old, new)</code></td>
-            <td align="left">再帰的にディレクトリやファイル名を変更`</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.mkdir(path)</code></td>
-            <td align="left">指定したパスのディレクトリを新規作成</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.makedirs(path)</code></td>
-            <td align="left">指定したパスのディレクトリを再帰的に新規作成</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.remove(path)</code></td>
-            <td align="left">指定したファイルまたはディレクトリを削除</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.removedirs(path)</code></td>
-            <td align="left">再帰的にディレクトリを削除する</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.chmod(path, mode)</code></td>
-            <td align="left">パーミッション変更</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.chown(path, uid, gid)</code></td>
-            <td align="left">所有者変更</td>
-        </tr>
-    </tbody>
-</table>
+<h2 id="_1">基本操作</h2>
+<div class="highlight"><span class="filename">基本操作</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># home ディレクトリ取得</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">home</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()))</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># path の結合   </span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">Downloads</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">home</span> <span class="o">+</span> <span class="sa">r</span><span class="s2">&quot;\Downloads&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1"># 文字列からpath オブジェクト生成</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">documents</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Users\omron\Documents&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">documents</span><span class="p">))</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1"># &lt;class &#39;pathlib.WindowsPath&#39;&gt;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="c1"># path オブジェクトで用意されたメソッド</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="n">documents</span><span class="o">.</span><span class="n">is_file</span><span class="p">()</span> 
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="n">documents</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> 
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="n">Path</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Users\omron\Documents\test.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">touch</span><span class="p">()</span> <span class="c1"># 空のファイルを作成</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c1"># ディレクトリ直下のパス一覧のイテレータを取得</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="n">Path</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Users\omron\Documents&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">iterdir</span><span class="p">()</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="c1"># generator object Path.iterdir at 0x000002CE211B29E0&gt;</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="c1"># list で取得</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="nb">list</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Users\omron\Documents&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">iterdir</span><span class="p">())</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="c1"># Pathlib の glob メソッド</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Users\omron\Documents&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;**/*.txt&#39;</span><span class="p">)))</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="c1"># path モジュールのopen メソッドでファイルを開く</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="k">with</span> <span class="n">Path</span><span class="p">(</span><span class="n">home</span> <span class="o">+</span> <span class="sa">r</span><span class="s2">&quot;\Documents\test.txt&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="c1"># Python3.5 以降サポート</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="c1"># テキストファイルの読み込み</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="c1"># 存在しないファイルの場合はエラー</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="n">Path</span><span class="p">(</span><span class="n">home</span> <span class="o">+</span> <span class="sa">r</span><span class="s2">&quot;\Documents\test.txt&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="c1"># テキストファイルの書き込み（上書きのため元の内容は削除される）</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="n">Path</span><span class="p">(</span><span class="n">home</span> <span class="o">+</span> <span class="sa">r</span><span class="s2">&quot;\Documents\test.txt&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="_2">ファイルの日時取得</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># home ディレクトリ取得</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">f</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;test.txt&quot;</span><span class="p">))</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">f</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span><span class="o">.</span><span class="n">st_ctime</span> <span class="c1"># 作成日時</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">f</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span><span class="o">.</span><span class="n">st_mtime</span> <span class="c1"># 更新日時</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">f</span><span class="o">.</span><span class="n">stat</span><span class="p">()</span><span class="o">.</span><span class="n">st_atime</span> <span class="c1"># アクセス日時</span>
+</code></pre></div>
+<h2 id="_3">フォルダ操作</h2>
+<div class="highlight"><span class="filename">フォルダ操作</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">p</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">())</span> <span class="o">+</span> <span class="sa">r</span><span class="s1">&#39;\test&#39;</span><span class="p">)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># ディレクトリを作成: mkdir()</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">p</span><span class="o">.</span><span class="n">mkdir</span><span class="p">()</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1"># 中間ディレクトリもまとめて作成: 引数parents</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">p</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="c1"># ディレクトリがすでに存在していてもエラーにしない: 引数exist_ok</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="n">p</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="c1"># ディレクトリを削除: rmdir()</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="c1"># rmdir()が削除できるのは中身が空のディレクトリのみ</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="n">p</span><span class="o">.</span><span class="n">rmdir</span><span class="p">()</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="c1"># 中身ごと削除するには: shutil.rmtree()</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="c1"># ※pathlib モジュールだけでは中身ごと削除は不可</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="kn">import</span> <span class="nn">shutil</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
@@ -2207,7 +2164,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../netmiko/" class="md-footer__link md-footer__link--prev" aria-label="Previous: netmiko" rel="prev">
+        <a href="../os/" class="md-footer__link md-footer__link--prev" aria-label="Previous: os" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -2216,20 +2173,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              netmiko
+              os
             </div>
           </div>
         </a>
       
       
         
-        <a href="../pathlib/" class="md-footer__link md-footer__link--next" aria-label="Next: pathlib" rel="next">
+        <a href="../py_decimal/" class="md-footer__link md-footer__link--next" aria-label="Next: decimal" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              pathlib
+              decimal
             </div>
           </div>
           <div class="md-footer__button md-icon">

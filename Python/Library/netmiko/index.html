@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://omomuroni.github.io/Python/Library/os/">
+        <link rel="canonical" href="https://omomuroni.github.io/Python/Library/netmiko/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
     
     
       
-        <title>os - おもむろにメモ書き</title>
+        <title>netmiko - おもむろにメモ書き</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#os" class="md-skip">
+        <a href="#netmiko" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              os
+              netmiko
             
           </span>
         </div>
@@ -1244,20 +1244,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../netmiko/" class="md-nav__link">
-        netmiko
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -1270,12 +1256,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          os
+          netmiko
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        os
+        netmiko
       </a>
       
         
@@ -1294,16 +1280,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#path" class="md-nav__link">
-    path・情報取得
+  <a href="#_1" class="md-nav__link">
+    テンプレートフォルダの配置
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    操作
+  <a href="#_2" class="md-nav__link">
+    コマンド出力結果のパース
   </a>
+  
+    <nav class="md-nav" aria-label="コマンド出力結果のパース">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#telnet" class="md-nav__link">
+    telnet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiprocess" class="md-nav__link">
+    multiprocess
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1311,6 +1317,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../os/" class="md-nav__link">
+        os
+      </a>
     </li>
   
 
@@ -2008,16 +2028,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#path" class="md-nav__link">
-    path・情報取得
+  <a href="#_1" class="md-nav__link">
+    テンプレートフォルダの配置
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    操作
+  <a href="#_2" class="md-nav__link">
+    コマンド出力結果のパース
   </a>
+  
+    <nav class="md-nav" aria-label="コマンド出力結果のパース">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#telnet" class="md-nav__link">
+    telnet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiprocess" class="md-nav__link">
+    multiprocess
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2033,158 +2073,189 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/Python/Library/os.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/Python/Library/netmiko.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="os">os</h1>
+<h1 id="netmiko">netmiko</h1>
 <ul>
-<li><a href="https://docs.python.org/ja/3/library/os.html">os --- 雑多なオペレーティングシステムインターフェース</a></li>
+<li><a href="https://github.com/ktbyers/netmiko#getting-started-1">Netmiko --- github</a></li>
+<li><a href="https://pyneng.readthedocs.io/en/latest/book/18_ssh_telnet/netmiko.html">Python for Network Engineers</a></li>
+<li><a href="https://ktbyers.github.io/netmiko/docs/netmiko/base_connection.html">API Documentation</a></li>
 </ul>
-<h2 id="path">path・情報取得</h2>
-<table class="basic_table">
-    <thead>
-        <tr>
-            <th align="left">メソッド</th>
-            <th align="left">説明</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td align="left"><code>os.sep</code></td>
-            <td align="left">パス区切り文字の取得</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.getcwd()</code></td>
-            <td align="left">カレントディレクトリを取得</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.chdir(path)</code></td>
-            <td align="left">指定したカレントディレクトリへ移動</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.listdir(path)</code></td>
-            <td align="left">パス配下のファイル・ディレクトリのリストを取得</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.join(path1,path2)</code></td>
-            <td align="left">パスの結合</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.split(path)</code></td>
-            <td align="left">パスの末尾を取得</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.abspath(相対path)</code></td>
-            <td align="left">指定した相対パスの絶対パスを取得</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.relpath(path,起点のpath)</code></td>
-            <td align="left">起点パスからみたパスの相対パスを取得</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.exists(path)</code></td>
-            <td align="left">パスの存在を判定</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.isdir(path)</code></td>
-            <td align="left">指定したパスがパスか否かを判定</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.isfile(path)</code></td>
-            <td align="left">指定したパスがファイルか否かを判定</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.splitext(path)</code></td>
-            <td align="left">指定したパスの拡張子とその手前までの文字列を取得</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.walk(path)</code></td>
-            <td align="left">パス配下を走査、"topdown=False"の引数で逆向きに</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.scandir(path)</code></td>
-            <td align="left">ディレクトリやファイルの情報をイテレータで生成</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.basename(path)</code></td>
-            <td align="left">末尾のファイル名部分を取得する</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.dirname(path)</code></td>
-            <td align="left">ディレクトリ名部分を取得する</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.getsize(path)</code></td>
-            <td align="left">ファイルサイズを取得する</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.path.getmtime(path)</code></td>
-            <td align="left">更新日時を取得する</td>
-        </tr>
-    </tbody>
-</table>
-
-<h2 id="_1">操作</h2>
-<table class="basic_table">
-    <thead>
-        <tr>
-            <th align="left">メソッド</th>
-            <th align="left">説明</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td align="left"><code>os.rename(path)</code></td>
-            <td align="left">ファイルの名前変更</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.replace(src, dst)</code></td>
-            <td align="left">ファイルまたはディレクトリ src の名前を dst へ変更。dst がディレクトリの場合 OSError。</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.rmdir(path)</code></td>
-            <td align="left">ディレクトリパスを削除（削除）。ディレクトリが存在しないか空でない場合、それぞれFileNotFoundErrorまたはOSError</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.renames(old, new)</code></td>
-            <td align="left">再帰的にディレクトリやファイル名を変更`</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.mkdir(path)</code></td>
-            <td align="left">指定したパスのディレクトリを新規作成</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.makedirs(path)</code></td>
-            <td align="left">指定したパスのディレクトリを再帰的に新規作成</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.remove(path)</code></td>
-            <td align="left">指定したファイルまたはディレクトリを削除</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.removedirs(path)</code></td>
-            <td align="left">再帰的にディレクトリを削除する</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.chmod(path, mode)</code></td>
-            <td align="left">パーミッション変更</td>
-        </tr>
-        <tr>
-            <td align="left"><code>os.chown(path, uid, gid)</code></td>
-            <td align="left">所有者変更</td>
-        </tr>
-    </tbody>
-</table>
+<h2 id="_1">テンプレートフォルダの配置</h2>
+<ul>
+<li><a href="https://github.com/networktocode/ntc-templates">補足:テンプレートのダウンロード</a>  </li>
+<li><code>git clone git@github.com:networktocode/ntc-templates.git</code></li>
+</ul>
+<p>Templatesフォルダの配置は、環境変数を設定する方法と、ホームディレクトリにフォルダを配置する方法があります。
+環境変数を利用する場合は、環境変数<code>NET_TEXTFSM</code>を作成し、任意の場所に置いた<code>templates</code>フォルダのパスを指定します。以下例はCドライブ直下に配置する例。</p>
+<ul>
+<li>システム変数の編集<ul>
+<li>変数名： NET_TEXTFSM</li>
+<li>変数値： C:\templates</li>
+</ul>
+</li>
+</ul>
+<h2 id="_2">コマンド出力結果のパース</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">netmiko</span> <span class="kn">import</span> <span class="n">ConnectHandler</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">device</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="s1">&#39;device_type&#39;</span><span class="p">:</span><span class="s1">&#39;cisco_ios&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="s1">&#39;ip&#39;</span><span class="p">:</span><span class="s1">&#39;IPアドレス&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="s1">&#39;username&#39;</span><span class="p">:</span><span class="s1">&#39;USER 名&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="s1">&#39;password&#39;</span><span class="p">:</span><span class="s1">&#39;ログインパスワード&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="c1"># &#39;secret&#39;:&#39;enableパスワード&#39;,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">}</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="k">with</span> <span class="n">netmiko</span><span class="o">.</span><span class="n">ConnectHandler</span><span class="p">(</span><span class="o">**</span><span class="n">device</span><span class="p">)</span> <span class="k">as</span> <span class="n">con</span><span class="p">:</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">con</span><span class="o">.</span><span class="n">enable</span><span class="p">()</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="n">output</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">send_command</span><span class="p">(</span><span class="s1">&#39;sh ip route&#39;</span><span class="p">,</span> <span class="n">use_textfsm</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>textFSMを利用するには、send_command()の引数としてuse_textfsmをTrueに設定するだけで
+最適なテンプレートが自動で選択される。</p>
+</div>
+<div class="highlight"><span class="filename">任意のテンプレート指定</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">netmiko</span> <span class="kn">import</span> <span class="n">ConnectHandler</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># TextFSM テンプレート読み込み</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;cisco_xr_show_inventory.textfsm&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">fsm</span> <span class="o">=</span> <span class="n">textfsm</span><span class="o">.</span><span class="n">TextFSM</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Users\omron\info\hosts.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="n">r</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="n">hosts</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="k">for</span> <span class="n">host</span> <span class="ow">in</span> <span class="n">hosts</span><span class="p">:</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;collecting: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">host</span><span class="p">[</span><span class="s1">&#39;hostname&#39;</span><span class="p">])</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>        <span class="s1">&#39;device_type&#39;</span><span class="p">:</span> <span class="n">host</span><span class="p">[</span><span class="s1">&#39;device_type&#39;</span><span class="p">],</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>        <span class="s1">&#39;ip&#39;</span><span class="p">:</span>          <span class="n">host</span><span class="p">[</span><span class="s1">&#39;ip&#39;</span><span class="p">],</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>        <span class="s1">&#39;username&#39;</span><span class="p">:</span>    <span class="n">host</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">],</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>        <span class="s1">&#39;password&#39;</span><span class="p">:</span>    <span class="n">host</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">],</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>        <span class="c1"># &#39;secret&#39;:&#39;enableパスワード&#39;,</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>    <span class="p">}</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>    <span class="c1"># Login Router</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    <span class="n">conn</span> <span class="o">=</span> <span class="n">netmiko</span><span class="o">.</span><span class="n">ConnectHandler</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    <span class="n">conn</span><span class="o">.</span><span class="n">enable</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>    <span class="n">fsm</span><span class="o">.</span><span class="n">Reset</span><span class="p">()</span> <span class="c1"># キャッシュを削除し常に取得結果が更新されるように</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">fsm</span><span class="o">.</span><span class="n">ParseText</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>    <span class="n">pprint</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="telnet">telnet</h3>
+<p><code>"device_type"</code>に<code>_telnet</code>を指定します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">device</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="s2">&quot;device_type&quot;</span><span class="p">:</span> <span class="s2">&quot;cisco_ios_telnet&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;192.168.1.1&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;cisco&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;cisco&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="s2">&quot;secret&quot;</span><span class="p">:</span> <span class="s2">&quot;cisco&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="multiprocess">multiprocess</h3>
+<p>予め<code>devices.csv</code>ファイルを用意しておく。</p>
+<div class="highlight"><span class="filename">devices.csv</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>hostname,ip,device_type,username,password
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>R1,192.168.11.28,cisco_xr,cisco,cisco
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>R2,192.168.11.12,cisco_xr,cisco,cisco
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>R3,192.168.11.13,cisco_xr,cisco,cisco
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>修正予定</p>
+</div>
+<div class="highlight"><span class="filename">inventory を取得</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span> <span class="nn">netmiko</span> <span class="kn">import</span> <span class="n">ConnectHandler</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kn">import</span> <span class="nn">multiprocessing</span> <span class="k">as</span> <span class="nn">mp</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kn">import</span> <span class="nn">textfsm</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="kn">import</span> <span class="nn">time</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="kn">import</span> <span class="nn">logging</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="kn">import</span> <span class="nn">csv</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    <span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">,</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%(asctime)s</span><span class="s2"> </span><span class="si">%(levelname)s</span><span class="s2"> </span><span class="si">%(message)s</span><span class="s2">&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    <span class="p">)</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="c1"># TODO: 取得した情報の保存方法</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="k">def</span> <span class="nf">run_devices</span><span class="p">(</span><span class="n">device</span><span class="p">,</span> <span class="n">cmd</span><span class="p">,</span> <span class="n">result_list</span><span class="p">):</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>    <span class="n">ip</span> <span class="o">=</span> <span class="n">device</span><span class="p">[</span><span class="s1">&#39;ip&#39;</span><span class="p">]</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Connecting to device: </span><span class="si">{</span><span class="n">ip</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> 
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>    <span class="n">connection</span> <span class="o">=</span> <span class="n">ConnectHandler</span><span class="p">(</span><span class="o">**</span><span class="n">device</span><span class="p">)</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>    <span class="n">connection</span><span class="o">.</span><span class="n">enable</span><span class="p">()</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Executing command: </span><span class="si">{</span><span class="n">cmd</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>    <span class="n">output</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">send_command</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./ntc_templates/templates/cisco_xr_show_inventory.textfsm&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>        <span class="n">fsm</span> <span class="o">=</span> <span class="n">textfsm</span><span class="o">.</span><span class="n">TextFSM</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>    <span class="n">fsm</span><span class="o">.</span><span class="n">Reset</span><span class="p">()</span>
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">fsm</span><span class="o">.</span><span class="n">ParseText</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>    <span class="n">inventory</span> <span class="o">=</span> <span class="p">[[</span><span class="n">ip</span><span class="p">]</span> <span class="o">+</span> <span class="n">row</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">result</span><span class="p">]</span>
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>    <span class="n">result_list</span> <span class="o">+=</span> <span class="n">inventory</span>
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a><span class="k">def</span> <span class="nf">write_csv</span><span class="p">(</span><span class="n">inventories</span><span class="p">):</span> 
+<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;inventory.csv&quot;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>        <span class="n">w</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">lineterminator</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>        <span class="n">w</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s1">&#39;HOSTNAME&#39;</span><span class="p">,</span> <span class="s1">&#39;NAME&#39;</span><span class="p">,</span> <span class="s1">&#39;DESCR&#39;</span><span class="p">,</span> <span class="s1">&#39;PID&#39;</span><span class="p">,</span> <span class="s1">&#39;VID&#39;</span><span class="p">,</span> <span class="s1">&#39;SN&#39;</span><span class="p">])</span>
+<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>        <span class="n">w</span><span class="o">.</span><span class="n">writerows</span><span class="p">(</span><span class="n">inventories</span><span class="p">)</span>
+<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>
+<a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>
+<a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;devices.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>        <span class="n">info</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>        <span class="n">devices</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">info</span><span class="p">)</span>
+<a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a>
+<a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a>    <span class="n">device_list</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a>    <span class="k">for</span> <span class="n">device</span> <span class="ow">in</span> <span class="n">devices</span><span class="p">:</span>
+<a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a>        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a>            <span class="s1">&#39;device_type&#39;</span><span class="p">:</span>  <span class="n">device</span><span class="p">[</span><span class="s1">&#39;device_type&#39;</span><span class="p">],</span>
+<a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a>            <span class="s1">&#39;ip&#39;</span><span class="p">:</span>           <span class="n">device</span><span class="p">[</span><span class="s1">&#39;ip&#39;</span><span class="p">],</span>
+<a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a>            <span class="s1">&#39;username&#39;</span><span class="p">:</span>     <span class="n">device</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">],</span>
+<a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a>            <span class="s1">&#39;password&#39;</span><span class="p">:</span>     <span class="n">device</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">],</span>
+<a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a>            <span class="c1"># &#39;secret&#39;:       devie[&#39;secret&#39;],</span>
+<a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a>            <span class="p">}</span>
+<a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a>        <span class="n">device_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+<a id="__codelineno-4-58" name="__codelineno-4-58" href="#__codelineno-4-58"></a>
+<a id="__codelineno-4-59" name="__codelineno-4-59" href="#__codelineno-4-59"></a>
+<a id="__codelineno-4-60" name="__codelineno-4-60" href="#__codelineno-4-60"></a>    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<a id="__codelineno-4-61" name="__codelineno-4-61" href="#__codelineno-4-61"></a>
+<a id="__codelineno-4-62" name="__codelineno-4-62" href="#__codelineno-4-62"></a>    <span class="n">CMD</span><span class="o">=</span> <span class="s1">&#39;show inventory&#39;</span>
+<a id="__codelineno-4-63" name="__codelineno-4-63" href="#__codelineno-4-63"></a>    <span class="n">inventories</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-4-64" name="__codelineno-4-64" href="#__codelineno-4-64"></a>    <span class="n">processes</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-4-65" name="__codelineno-4-65" href="#__codelineno-4-65"></a>    <span class="k">for</span> <span class="n">device</span> <span class="ow">in</span> <span class="n">device_list</span><span class="p">:</span>
+<a id="__codelineno-4-66" name="__codelineno-4-66" href="#__codelineno-4-66"></a>        <span class="n">processes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mp</span><span class="o">.</span><span class="n">Process</span><span class="p">(</span>
+<a id="__codelineno-4-67" name="__codelineno-4-67" href="#__codelineno-4-67"></a>            <span class="n">target</span><span class="o">=</span><span class="n">run_devices</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">device</span><span class="p">,</span> <span class="n">CMD</span><span class="p">,</span> <span class="n">inventories</span><span class="p">)))</span>
+<a id="__codelineno-4-68" name="__codelineno-4-68" href="#__codelineno-4-68"></a>
+<a id="__codelineno-4-69" name="__codelineno-4-69" href="#__codelineno-4-69"></a>    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">processes</span><span class="p">:</span>
+<a id="__codelineno-4-70" name="__codelineno-4-70" href="#__codelineno-4-70"></a>        <span class="n">p</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+<a id="__codelineno-4-71" name="__codelineno-4-71" href="#__codelineno-4-71"></a>
+<a id="__codelineno-4-72" name="__codelineno-4-72" href="#__codelineno-4-72"></a>    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">processes</span><span class="p">:</span>
+<a id="__codelineno-4-73" name="__codelineno-4-73" href="#__codelineno-4-73"></a>        <span class="n">p</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+<a id="__codelineno-4-74" name="__codelineno-4-74" href="#__codelineno-4-74"></a>
+<a id="__codelineno-4-75" name="__codelineno-4-75" href="#__codelineno-4-75"></a>    <span class="c1"># csv 書き込み</span>
+<a id="__codelineno-4-76" name="__codelineno-4-76" href="#__codelineno-4-76"></a>    <span class="n">write_csv</span><span class="p">(</span><span class="n">inventories</span><span class="p">)</span>
+<a id="__codelineno-4-77" name="__codelineno-4-77" href="#__codelineno-4-77"></a>
+<a id="__codelineno-4-78" name="__codelineno-4-78" href="#__codelineno-4-78"></a>    <span class="c1"># script ending time</span>
+<a id="__codelineno-4-79" name="__codelineno-4-79" href="#__codelineno-4-79"></a>    <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<a id="__codelineno-4-80" name="__codelineno-4-80" href="#__codelineno-4-80"></a>
+<a id="__codelineno-4-81" name="__codelineno-4-81" href="#__codelineno-4-81"></a>    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Script execution time: </span><span class="si">{</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/06/19 23:22</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/06/19 23:21</span>
       
     
   </small>
@@ -2207,7 +2278,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../netmiko/" class="md-footer__link md-footer__link--prev" aria-label="Previous: netmiko" rel="prev">
+        <a href="../multiprocessing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: multiprocessing" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -2216,20 +2287,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              netmiko
+              multiprocessing
             </div>
           </div>
         </a>
       
       
         
-        <a href="../pathlib/" class="md-footer__link md-footer__link--next" aria-label="Next: pathlib" rel="next">
+        <a href="../os/" class="md-footer__link md-footer__link--next" aria-label="Next: os" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              pathlib
+              os
             </div>
           </div>
           <div class="md-footer__button md-icon">
