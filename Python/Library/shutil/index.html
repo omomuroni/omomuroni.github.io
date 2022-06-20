@@ -1406,6 +1406,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../tarfile/" class="md-nav__link">
+        tarfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../yaml/" class="md-nav__link">
         YAML ファイルの取り扱い
       </a>
@@ -1423,18 +1437,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3_19" type="checkbox" id="__nav_7_3_19" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3_20" type="checkbox" id="__nav_7_3_20" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_7_3_19">
+        <label class="md-nav__link" for="__nav_7_3_20">
           Openpyxl
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Openpyxl" data-md-level="3">
-        <label class="md-nav__title" for="__nav_7_3_19">
+        <label class="md-nav__title" for="__nav_7_3_20">
           <span class="md-nav__icon md-icon"></span>
           Openpyxl
         </label>
@@ -1526,18 +1540,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3_20" type="checkbox" id="__nav_7_3_20" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3_21" type="checkbox" id="__nav_7_3_21" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_7_3_20">
+        <label class="md-nav__link" for="__nav_7_3_21">
           Pytest
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Pytest" data-md-level="3">
-        <label class="md-nav__title" for="__nav_7_3_20">
+        <label class="md-nav__title" for="__nav_7_3_21">
           <span class="md-nav__icon md-icon"></span>
           Pytest
         </label>
@@ -2083,13 +2097,32 @@ srcからdstにファイルとパーミッション、その他のメタデー�
 user はシステムのユーザー名か uid です。 group も同じです。少なくともどちらかの引数を指定する必要があります。</li>
 </ul>
 <h2 id="_2">アーカイブ化操作</h2>
+<p>.ssh ディレクトリにあるすべてのファイルを含む、 gzip された tar ファイルアーカイブを作成
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>from shutil import make_archive
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>import os
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>archive_name = os.path.expanduser(os.path.join(&#39;~&#39;, &#39;myarchive&#39;))
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>root_dir = os.path.expanduser(os.path.join(&#39;~&#39;, &#39;.ssh&#39;))
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>make_archive(archive_name, &#39;gztar&#39;, root_dir)
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>from shutil import make_archive
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>import os
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>archive_name = os.path.expanduser(os.path.join(&#39;~&#39;, &#39;myarchive&#39;))
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>make_archive(
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    archive_name,
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    &#39;tar&#39;,
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    root_dir=&#39;tmp/root&#39;,
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    base_dir=&#39;structure/content&#39;,
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>)
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/06/19 23:22</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/06/21 00:54</span>
       
     
   </small>

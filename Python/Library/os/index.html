@@ -1307,6 +1307,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#oswalk" class="md-nav__link">
+    os.walk
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1406,6 +1413,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../tarfile/" class="md-nav__link">
+        tarfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../yaml/" class="md-nav__link">
         YAML ファイルの取り扱い
       </a>
@@ -1423,18 +1444,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3_19" type="checkbox" id="__nav_7_3_19" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3_20" type="checkbox" id="__nav_7_3_20" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_7_3_19">
+        <label class="md-nav__link" for="__nav_7_3_20">
           Openpyxl
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Openpyxl" data-md-level="3">
-        <label class="md-nav__title" for="__nav_7_3_19">
+        <label class="md-nav__title" for="__nav_7_3_20">
           <span class="md-nav__icon md-icon"></span>
           Openpyxl
         </label>
@@ -1526,18 +1547,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3_20" type="checkbox" id="__nav_7_3_20" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3_21" type="checkbox" id="__nav_7_3_21" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_7_3_20">
+        <label class="md-nav__link" for="__nav_7_3_21">
           Pytest
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Pytest" data-md-level="3">
-        <label class="md-nav__title" for="__nav_7_3_20">
+        <label class="md-nav__title" for="__nav_7_3_21">
           <span class="md-nav__icon md-icon"></span>
           Pytest
         </label>
@@ -2021,6 +2042,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#oswalk" class="md-nav__link">
+    os.walk
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2179,12 +2207,28 @@
     </tbody>
 </table>
 
+<h2 id="oswalk">os.walk</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span><span class="nn">re</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">target</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;対象ディレクトリ&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">ptrn</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;md&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">path_list</span> <span class="o">=</span> <span class="p">[</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dirPath</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">file</span><span class="p">)</span> 
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="k">for</span> <span class="n">dirPath</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">target</span><span class="p">)</span> 
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span> 
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="k">if</span> <span class="n">ptrn</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="p">]</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nb">print</span><span class="p">(</span><span class="n">path_list</span><span class="p">)</span>
+</code></pre></div>
+
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/06/19 23:22</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/06/21 00:54</span>
       
     
   </small>
