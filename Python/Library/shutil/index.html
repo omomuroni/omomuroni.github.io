@@ -2068,9 +2068,25 @@
 指定した<strong>ファイル</strong>(パーミッションも)をコピーし、コピー先のパス文字列を返す</p>
 </li>
 <li>
-<p><code>shutil.copytree(beforeパス,afterパス)</code>
-指定したパスをディレクトリごとコピーし、コピー先の文字列で返す</p>
+<p><code>shutil.copytree(src, dst)</code>
+指定したパスをディレクトリごとコピーし、コピー先の文字列で返す。</p>
 </li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>すでにdst で指定したパスが存在している場合は <code>FileExistsError</code> となります。
+ディレクトリ名を日付にするなど、可変にすればエラーは避けられます。</p>
+<div class="highlight"><span class="filename">日付を取得しコピー先のディレクトリ名に</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">shutil</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">_%H%M%S&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">src</span> <span class="o">=</span> <span class="s2">&quot;./src_dir/&quot;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">dst</span> <span class="o">=</span> <span class="s2">&quot;./dst_dir/&quot;</span> <span class="o">+</span> <span class="n">now</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">shutil</span><span class="o">.</span><span class="n">copytree</span><span class="p">(</span><span class="n">src</span><span class="p">,</span><span class="n">dst</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<ul>
 <li>
 <p>shutil.rmtree(パス)
 指定したパスの配下を含めてすべて削除</p>
@@ -2098,23 +2114,23 @@ user はシステムのユーザー名か uid です。 group も同じです。
 </ul>
 <h2 id="_2">アーカイブ化操作</h2>
 <p>.ssh ディレクトリにあるすべてのファイルを含む、 gzip された tar ファイルアーカイブを作成
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>from shutil import make_archive
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>import os
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>archive_name = os.path.expanduser(os.path.join(&#39;~&#39;, &#39;myarchive&#39;))
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>root_dir = os.path.expanduser(os.path.join(&#39;~&#39;, &#39;.ssh&#39;))
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>make_archive(archive_name, &#39;gztar&#39;, root_dir)
-</code></pre></div></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>from shutil import make_archive
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>import os
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>archive_name = os.path.expanduser(os.path.join(&#39;~&#39;, &#39;myarchive&#39;))
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>make_archive(
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    archive_name,
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    &#39;tar&#39;,
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    root_dir=&#39;tmp/root&#39;,
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    base_dir=&#39;structure/content&#39;,
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>)
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>root_dir = os.path.expanduser(os.path.join(&#39;~&#39;, &#39;.ssh&#39;))
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>make_archive(archive_name, &#39;gztar&#39;, root_dir)
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>from shutil import make_archive
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>import os
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>archive_name = os.path.expanduser(os.path.join(&#39;~&#39;, &#39;myarchive&#39;))
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>make_archive(
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    archive_name,
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    &#39;tar&#39;,
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    root_dir=&#39;tmp/root&#39;,
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    base_dir=&#39;structure/content&#39;,
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>)
 </code></pre></div>
 
   <hr>
@@ -2122,7 +2138,7 @@ user はシステムのユーザー名か uid です。 group も同じです。
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/06/21 00:54</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/06/21 14:18</span>
       
     
   </small>
