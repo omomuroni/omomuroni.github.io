@@ -111,6 +111,31 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://omomuroni.github.io/Network/IOS-XR/Basic/</loc>
+         <lastmod>2022-07-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Network/IOS-XR/OSPF/</loc>
+         <lastmod>2022-07-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Network/IOS-XR/Process/</loc>
+         <lastmod>2022-07-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Network/IOS-XR/create_config/</loc>
+         <lastmod>2022-07-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Network/IOS-XR/summary/</loc>
+         <lastmod>2022-07-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://omomuroni.github.io/Network/IXIA/IXIA_reference/</loc>
          <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
