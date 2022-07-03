@@ -2,387 +2,397 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://omomuroni.github.io/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Effective/00_index/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Effective/Anki/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Effective/draw.io/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Effective/marp/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Effective/powershell_useful/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Effective/sakura_editer/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Effective/slide_sample/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Effective/tool/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Git/00_index/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Git/git_cheat_sheet/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Git/git_knowledge/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Linux/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Linux/command1/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Linux/wsl/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Mkdocs/00_index/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Mkdocs/extended_markdown/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Mkdocs/markdown/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Mkdocs/memo/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Mkdocs/mkdocs_sample/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Network/00_index/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Network/ipaddress/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Network/IXIA/IXIA_reference/</loc>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Network/Setup/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Network/Setup/gns3setup_for_mac/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Basics/about_python/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Basics/py_character%20code/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Basics/py_control_syntax/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Basics/py_data_stracture/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Basics/py_function_adbanced/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Basics/py_function_basic/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Basics/py_operator/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Basics/py_variable/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Library/codecs/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Library/collections/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Library/csv/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Library/datetime_and_time/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Python/Library/difflib/</loc>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Library/glob/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Library/jinja/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Library/json/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Library/loggging/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Library/multiprocessing/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Library/netmiko/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Library/os/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Library/pathlib/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Library/py_decimal/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Library/re_module/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Library/regex/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Library/shutil/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Library/sys/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Library/tarfile/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Library/yaml/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Library/openpyxl/0_index/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Library/openpyxl/1_oepnpyxl_book/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Library/openpyxl/2_oepnpyxl_sheet/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Library/openpyxl/3_oepnpyxl_cell/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Library/openpyxl/4_oepnpyxl_/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Library/pytest/01_pytest_execute/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Library/pytest/02_pytest_test_function/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Recipe/list/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Setup/pip/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Setup/windows_dev_env/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Setup/xpresso/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/other/memo/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/other/tmp/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/other/useful/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/other/useful_word/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/pyATS/api/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/pyATS/genie_shell/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/pyATS/pyats_Blitz_effective/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/pyATS/pyats_Blitz_getting_started/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/pyATS/pyats_basic1/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/pyATS/pyats_basic2/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/pyATS/pyats_genie/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/pyATS/pyats_unicorn/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/pyATS/setup/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/docker/memo/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-07-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
