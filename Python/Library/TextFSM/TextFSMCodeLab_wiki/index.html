@@ -1,0 +1,3193 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://omomuroni.github.io/Python/Library/TextFSM/TextFSMCodeLab_wiki/">
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
+    
+    
+      
+        <title>TextFSMCodeLab.wiki - おもむろにメモ書き</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.e411adfe.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@9.0.0/dist/mermaid.css">
+    
+      <link rel="stylesheet" href="../../../../custom/custom_table.css">
+    
+      <link rel="stylesheet" href="../../../../custom/layout.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#textfsmcodelabwiki" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="おもむろにメモ書き" class="md-header__button md-logo" aria-label="おもむろにメモ書き" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            おもむろにメモ書き
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              TextFSMCodeLab.wiki
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/omomuroni/omomuroni.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../.." class="md-tabs__link">
+      index
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../Effective/00_index/" class="md-tabs__link">
+        Effective
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../Git/00_index/" class="md-tabs__link">
+        Git
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../Hobby/fitbit/" class="md-tabs__link">
+        Hobby
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../Linux/" class="md-tabs__link">
+        Linux
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../Mkdocs/00_index/" class="md-tabs__link">
+        Mkdocs
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../Network/00_index/" class="md-tabs__link">
+        Network
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../" class="md-tabs__link md-tabs__link--active">
+        Python
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../docker/memo/" class="md-tabs__link">
+        Docker
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="おもむろにメモ書き" class="md-nav__button md-logo" aria-label="おもむろにメモ書き" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    おもむろにメモ書き
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/omomuroni/omomuroni.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        index
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Effective
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Effective" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Effective
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Effective/00_index/" class="md-nav__link">
+        効率化 - 目次
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Effective/Anki/" class="md-nav__link">
+        Anki
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Effective/draw.io/" class="md-nav__link">
+        Draw.io をvscode で使う
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Effective/marp/" class="md-nav__link">
+        Marp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Effective/powershell_log/" class="md-nav__link">
+        Powershell でログ取得
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Effective/powershell_useful/" class="md-nav__link">
+        Powershell 便利技
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Effective/sakura_editer/" class="md-nav__link">
+        サクラエディタ設定
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Effective/slide_sample/" class="md-nav__link">
+        Marp で作成した slide サンプル
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Effective/tool/" class="md-nav__link">
+        便利なツール
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Git" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Git/00_index/" class="md-nav__link">
+        Git - 目次
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Git/git_cheat_sheet/" class="md-nav__link">
+        Git Cheat Sheet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Git/git_knowledge/" class="md-nav__link">
+        git 操作
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Hobby
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Hobby" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Hobby
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Hobby/fitbit/" class="md-nav__link">
+        Fitbit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Hobby/google_drive_api/" class="md-nav__link">
+        Google Drive API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Hobby/google_fit_api/" class="md-nav__link">
+        google fit API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Hobby/python_slack_sdk/" class="md-nav__link">
+        Python Slack SDK
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linux" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Linux/" class="md-nav__link">
+        index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Linux/command1/" class="md-nav__link">
+        Linux Command 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Linux/wsl/" class="md-nav__link">
+        wsl
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Mkdocs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mkdocs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Mkdocs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Mkdocs/00_index/" class="md-nav__link">
+        Mkdocs - 目次
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Mkdocs/extended_markdown/" class="md-nav__link">
+        HTML & CSS による拡張
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Mkdocs/markdown/" class="md-nav__link">
+        Markdown 記法まとめ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Mkdocs/memo/" class="md-nav__link">
+        Mkdocs memo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Mkdocs/mkdocs_sample/" class="md-nav__link">
+        Material 表現 sample
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Network
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Network" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Network
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Network/00_index/" class="md-nav__link">
+        Network - 目次
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Network/ipaddress/" class="md-nav__link">
+        Python で ipaddress 生成
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3" type="checkbox" id="__nav_7_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_3">
+          IOS XR
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="IOS XR" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          IOS XR
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Network/IOS-XR/Basic/" class="md-nav__link">
+        IOS - XR コマンド
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Network/IOS-XR/OSPF/" class="md-nav__link">
+        OSPF
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Network/IOS-XR/Process/" class="md-nav__link">
+        Process Restart
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Network/IOS-XR/create_config/" class="md-nav__link">
+        Stress Config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Network/IOS-XR/summary/" class="md-nav__link">
+        Command
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_4" type="checkbox" id="__nav_7_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_4">
+          IXIA
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="IXIA" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_4">
+          <span class="md-nav__icon md-icon"></span>
+          IXIA
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Network/IXIA/IXIA_reference/" class="md-nav__link">
+        IXIA reference
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_5" type="checkbox" id="__nav_7_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_5">
+          Setup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Setup" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_5">
+          <span class="md-nav__icon md-icon"></span>
+          Setup
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Network/Setup/" class="md-nav__link">
+        index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Network/Setup/gns3setup_for_mac/" class="md-nav__link">
+        Mac で GNS3 を使う
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_2" type="checkbox" id="__nav_8_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_2">
+          Basics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Basics" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_2">
+          <span class="md-nav__icon md-icon"></span>
+          Basics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Basics/about_python/" class="md-nav__link">
+        python 入門
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Basics/py_character%20code/" class="md-nav__link">
+        文字コード
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Basics/py_control_syntax/" class="md-nav__link">
+        制御構文
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Basics/py_data_stracture/" class="md-nav__link">
+        データ構造
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Basics/py_function_adbanced/" class="md-nav__link">
+        関数 応用
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Basics/py_function_basic/" class="md-nav__link">
+        関数 基礎
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Basics/py_operator/" class="md-nav__link">
+        Python 演算子
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Basics/py_variable/" class="md-nav__link">
+        Python 変数
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3" type="checkbox" id="__nav_8_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_3">
+          Library
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Library" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_3">
+          <span class="md-nav__icon md-icon"></span>
+          Library
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ast/" class="md-nav__link">
+        ast モジュール
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../codecs/" class="md-nav__link">
+        codecs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../collections/" class="md-nav__link">
+        collections
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../csv/" class="md-nav__link">
+        CSV
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datetime_and_time/" class="md-nav__link">
+        datetime & time
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../difflib/" class="md-nav__link">
+        difflib
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glob/" class="md-nav__link">
+        glob
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jinja/" class="md-nav__link">
+        jinja
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../json/" class="md-nav__link">
+        json
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../loggging/" class="md-nav__link">
+        logging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiprocessing/" class="md-nav__link">
+        multiprocessing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../netmiko/" class="md-nav__link">
+        netmiko
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../os/" class="md-nav__link">
+        os
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pathlib/" class="md-nav__link">
+        pathlib
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../py_decimal/" class="md-nav__link">
+        decimal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../re_module/" class="md-nav__link">
+        re
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../regex/" class="md-nav__link">
+        regex
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seaborn/" class="md-nav__link">
+        seaborn
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shutil/" class="md-nav__link">
+        shutil
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys/" class="md-nav__link">
+        sys
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tarfile/" class="md-nav__link">
+        tarfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../yaml/" class="md-nav__link">
+        YAML ファイルの取り扱い
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3_23" type="checkbox" id="__nav_8_3_23" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_3_23">
+          TextFSM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="TextFSM" data-md-level="3">
+        <label class="md-nav__title" for="__nav_8_3_23">
+          <span class="md-nav__icon md-icon"></span>
+          TextFSM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CliTableHowTo_wiki/" class="md-nav__link">
+        textfsm-CliTableHowTo.wiki
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Convert_TextFSM_nested_list_data_into_dictionary/" class="md-nav__link">
+        TextFSMネストリストデータを辞書に変換する
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          TextFSMCodeLab.wiki
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        TextFSMCodeLab.wiki
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    基本的なテキスト
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fsm-table" class="md-nav__link">
+    FSM Table:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    複数行
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    表形式データの解析
+  </a>
+  
+    <nav class="md-nav" aria-label="表形式データの解析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fpc" class="md-nav__link">
+    テンプレートは、すべてのオンラインFPCスロットを正常に解析し、正しい値を抽出しました。
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filldown" class="md-nav__link">
+    「Filldown'」の使用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required" class="md-nav__link">
+    「Required」の使用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    「List」の使用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pythontextfsm" class="md-nav__link">
+    PythonでのTextFSMの使用
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TextFSM_template_syntax/" class="md-nav__link">
+        TextFSM template syntax
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../netmiko_TextFSM/" class="md-nav__link">
+        netmikoとTextFSMの連携
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python_textfsm_part2/" class="md-nav__link">
+        python textfsm(part2) - ciscoルータのconfig解析例
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python_textfsm_part3/" class="md-nav__link">
+        python textfsm(part3) - ラッパー関数で整理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sample%20_template_bgp_neighbor/" class="md-nav__link">
+        sample template bgp neighbor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../summary/" class="md-nav__link">
+        概要
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3_24" type="checkbox" id="__nav_8_3_24" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_3_24">
+          Openpyxl
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Openpyxl" data-md-level="3">
+        <label class="md-nav__title" for="__nav_8_3_24">
+          <span class="md-nav__icon md-icon"></span>
+          Openpyxl
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openpyxl/0_index/" class="md-nav__link">
+        openpyxl 目次
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openpyxl/1_oepnpyxl_book/" class="md-nav__link">
+        Book の操作
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openpyxl/2_oepnpyxl_sheet/" class="md-nav__link">
+        sheet の操作
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openpyxl/3_oepnpyxl_cell/" class="md-nav__link">
+        セル の操作
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../openpyxl/4_oepnpyxl_/" class="md-nav__link">
+        4 oepnpyxl 
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3_25" type="checkbox" id="__nav_8_3_25" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_3_25">
+          Pytest
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pytest" data-md-level="3">
+        <label class="md-nav__title" for="__nav_8_3_25">
+          <span class="md-nav__icon md-icon"></span>
+          Pytest
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pytest/01_pytest_execute/" class="md-nav__link">
+        pytest の実行
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pytest/02_pytest_test_function/" class="md-nav__link">
+        pytest - テスト関数の作成
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_4" type="checkbox" id="__nav_8_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_4">
+          Recipe
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Recipe" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_4">
+          <span class="md-nav__icon md-icon"></span>
+          Recipe
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Recipe/file_operation/" class="md-nav__link">
+        ファイル操作
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Recipe/list/" class="md-nav__link">
+        list
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_5" type="checkbox" id="__nav_8_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_5">
+          Setup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Setup" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_5">
+          <span class="md-nav__icon md-icon"></span>
+          Setup
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Setup/pip/" class="md-nav__link">
+        pip 関連
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Setup/windows_dev_env/" class="md-nav__link">
+        windows 開発環境
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Setup/xpresso/" class="md-nav__link">
+        xpresso setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_6" type="checkbox" id="__nav_8_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_6">
+          Network
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Network" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_6">
+          <span class="md-nav__icon md-icon"></span>
+          Network
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../network/config_parse/" class="md-nav__link">
+        telnet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../network/telnet/" class="md-nav__link">
+        telnet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../network/ttp/" class="md-nav__link">
+        TTP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_7" type="checkbox" id="__nav_8_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_7">
+          Other
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Other" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_7">
+          <span class="md-nav__icon md-icon"></span>
+          Other
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/memo/" class="md-nav__link">
+        雑多なメモ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/tmp/" class="md-nav__link">
+        一時メモ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/useful/" class="md-nav__link">
+        Useful
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/useful_word/" class="md-nav__link">
+        変数でよく使う英単語
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_8" type="checkbox" id="__nav_8_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_8">
+          pyATS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="pyATS" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_8">
+          <span class="md-nav__icon md-icon"></span>
+          pyATS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyATS/api/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyATS/genie_shell/" class="md-nav__link">
+        genie shell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyATS/pyats_Blitz_effective/" class="md-nav__link">
+        Blitz 便利技
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyATS/pyats_Blitz_getting_started/" class="md-nav__link">
+        Blitz 入門
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyATS/pyats_basic1/" class="md-nav__link">
+        入門1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyATS/pyats_basic2/" class="md-nav__link">
+        入門2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyATS/pyats_genie/" class="md-nav__link">
+        Genie
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyATS/pyats_unicorn/" class="md-nav__link">
+        Unicon
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyATS/setup/" class="md-nav__link">
+        SetUp
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Docker
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Docker" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Docker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../docker/memo/" class="md-nav__link">
+        memo
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    基本的なテキスト
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fsm-table" class="md-nav__link">
+    FSM Table:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    複数行
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    表形式データの解析
+  </a>
+  
+    <nav class="md-nav" aria-label="表形式データの解析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fpc" class="md-nav__link">
+    テンプレートは、すべてのオンラインFPCスロットを正常に解析し、正しい値を抽出しました。
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filldown" class="md-nav__link">
+    「Filldown'」の使用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required" class="md-nav__link">
+    「Required」の使用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    「List」の使用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pythontextfsm" class="md-nav__link">
+    PythonでのTextFSMの使用
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/Python/Library/TextFSM/TextFSMCodeLab_wiki.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="textfsmcodelabwiki">TextFSMCodeLab.wiki</h1>
+<p>https://code.google.com/archive/p/textfsm/wikis/TextFSMCodeLab.wiki</p>
+<h3 id="overview">Overview</h3>
+<p>このコードラボは、TextFSMpythonモジュールのユーザーが新しいテンプレートを作成するのに役立つように設計されています。この柔軟な汎用テキストパーサーは、主にPythonでルーターCLIコマンドの出力を解析するために使用されます。比較的単純な正規表現ベースのテキストファイルを作成することにより、最小限のコードで多数のコマンド出力を解析できます。</p>
+<p>このコードラボは、単純なルーターコマンドの出力から始まり、テンプレートを正常に記述して単純なPythonスクリプトで使用するために必要な手順を説明します。</p>
+<p>Pythonの基本をすでに理解していて、TextTableFSMのハウツーページを読んで、参照用に開いておく必要があります。</p>
+<h3 id="_1">基本的なテキスト</h3>
+<p>最初の例では、単純な線形（行ベースではない）テキスト（Ciscoの「showclock」の出力）を解析します。
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>18:42:41.321 PST Sun Feb 8 2009
+</code></pre></div>
+実際の日付/時刻のみが解析されます。プロンプトは解析されません。ここで抽出したい情報は次のとおりです。
+* 年
+* 曜日
+* 月
+* タイムゾーン
+* 時間（秒まで）</p>
+<p>これらの情報の各ビットは、独自のFSM '値'に抽出され、それを使用するPythonスクリプトでそれぞれを個別に使用できるようになります。この例では、意図的に平日と一致させようとはしません。したがって、最初に行う必要があるのは、テンプレートに「値」の行を入力することです。</p>
+<p><code>cisco_clock_template</code> と呼ばれる新しいファイルを開き、次の行をそのファイルに挿入します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Value Year（\ d +）Value MonthDay（\ d +）Value Month（\ w +）Value Timezone（\ S +）Value Time（..：..：..）
+</code></pre></div>
+<p>これらはValueの定義です。各行の最初の単語はキーワード「Value」であり、その行が行の列を定義していることをtextFSMに通知します。次の単語は値の名前です。これは任意の英数字の単語にすることができます。最後に、少なくとも1つのパレンラップされた式を含む正規表現があります。これらは、必要な値に正確に一致する正規表現を含む部分式です。たとえば、は(\d+)年を表す数字のシーケンスと一致します。</p>
+<p><code>Time</code> 値の定義の後に空白行を挿入します。これは、「Value」の定義の終わりを示します。この後、textFSMの状態の定義を開始します。状態「開始」は常に必要であり、textFSMは最初にテキストを解析するときにここから開始します。したがって、textFSMの次の行には「Start」という1つの単語があります。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Value Year（\ d +）
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Value MonthDay（\ d +）
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Value Month（\ w +）
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Value Timezone（\ S +）
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>Value Time（..：..：..）
+</code></pre></div>
+<p><br></p>
+<ul>
+<li>Start</li>
+</ul>
+<p>状態ラベルに続いて、1つ以上のルールを挿入します。ステートマシンが新しい状態に入ると、現在の入力行を取得し、それを各ルールと順番に照合しようとします。一致すると、任意の「値」が置き換えられ、オプションのアクションが実行されます。このテンプレートにはルールが1つしかないため、次のようにテンプレートを完成させて、<code>cisco_clock_template</code> に次のように保存します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Value Year（\ d +）
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Value MonthDay（\ d +）
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Value Month（\ w +）
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Value Timezone（\ S +）
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>Value Time（..：..：..）
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>Start ^${Time}.* ${Timezone} \w+ ${Month} ${MonthDay} ${Year} -&gt; Record 
+</code></pre></div>
+<p>内部的には、値への参照が値で指定された正規表現に置き換えられるように、ルールが拡張されます。このテンプレートの単一のルールは、この正規表現に内部的に展開されます。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>^(..:..:..).* (\S+) \w+ (\w+) (\d+) (\d+)
+</code></pre></div>
+<p>1行の入力（18：42：41.321 PST Sun Feb 8 2009）が適用されると、正規表現が一致し、各正規表現一致グループには次の値が含まれます。</p>
+<p>| グループ | 値 |
+|：---------- |：---------- | 
+| 1  | 18:42:41 2 PST 3 2月 4 8 5 2009 |</p>
+<p>一致が成功したため、グループに関連付けられている各値に一致するテキストが割り当てられます。これにより、1つの（そして唯一の）行が埋められます。</p>
+<p>関連するアクションレコードもあります。これは、FSMに行をファイナルテーブルに挿入するように指示します。暗黙の「次へ」アクションもあります（FSMにテキストの次の行を読み取るように指示するTextTableFSMを参照してください。これ以上テキストがないため（1行しかない）、FSMは完了し、一致した1行だけを返します。</p>
+<p>いくつかの入力テキストでFSMを試します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$ cat &gt; router_output.txt 18:42:41.321 PST Sun Feb 8 2009 
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>$ ./textfsm.py cisco_clock_template router_output.txt 
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a># FSM Template: 
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>Value Year (\d+) 
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>Value MonthDay (\d+) 
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>Value Month (\w+) 
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>Value Timezone (\S+) 
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>Value Time (..:..:..)
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>Start ^${Time}.* ${Timezone} \w+ ${Month} ${MonthDay} ${Year} -&gt; Record 
+</code></pre></div>
+<h3 id="fsm-table">FSM Table:</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>[&#39;Year&#39;, &#39;MonthDay&#39;, &#39;Month&#39;, &#39;Timezone&#39;, &#39;Time&#39;] [&#39;2009&#39;, &#39;8&#39;, &#39;Feb&#39;, &#39;PST&#39;, &#39;18:42:41&#39;]
+</code></pre></div>
+<p>成功！出力の最初のセクションは解析されたFSMを示し、最後のセクションはファイナルテーブルを示します。このテーブルの最初の行はヘッダーであり、定義した列（または「値」）を示しています。次の行は、一致した値の行です。</p>
+<h3 id="_2">複数行</h3>
+<p>ここで、もう少し複雑なもの、つまり複数行のテキストからの値の一致について見ていきます。このために、Ciscoの「show version」コマンドの出力を解析しようとします。これは次のようになります。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Cisco IOS Software, Catalyst 4500 L3 Switch Software (cat4500-ENTSERVICESK9-M), Version 12.2(31)SGA1, RELEASE SOFTWARE (fc3) Technical Support: http://www.cisco.com/techsupport Copyright (c) 1986-2007 by Cisco Systems, Inc. Compiled Fri 26-Jan-07 14:28 by kellythw Image text-base: 0x10000000, data-base: 0x118AD800
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>ROM: 12.2(31r)SGA Pod Revision 0, Force Revision 34, Gill Revision 20
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>router.abc uptime is 11 weeks, 4 days, 20 hours, 26 minutes System returned to ROM by reload System restarted at 22:49:40 PST Tue Nov 18 2008 System image file is &quot;bootflash:cat4500-entservicesk9-mz.122-31.SGA1.bin&quot;
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>This product contains cryptographic features and is subject to United States and local country laws governing import, export, transfer and use. Delivery of Cisco cryptographic products does not imply third-party authority to import, export, distribute or use encryption. Importers, exporters, distributors and users are responsible for compliance with U.S. and local country laws. By using this product you agree to comply with applicable laws and regulations. If you are unable to comply with U.S. and local laws, return this product immediately.
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>A summary of U.S. laws governing Cisco cryptographic products may be found at: http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>If you require further assistance please contact us by sending email to export@cisco.com.
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>cisco WS-C4948-10GE (MPC8540) processor (revision 5) with 262144K bytes of memory. Processor board ID FOX111700ZN MPC8540 CPU at 667Mhz, Fixed Module Last reset from Reload 2 Virtual Ethernet interfaces 48 Gigabit Ethernet interfaces 2 Ten Gigabit Ethernet interfaces 511K bytes of non-volatile configuration memory.
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>Configuration register is 0x2102 
+</code></pre></div>
+<p>これからいくつかの情報を抽出します。
+* Software version
+* System uptime
+* Configuration register
+* Reset reason</p>
+<p>これにより、テーブルに4つの列が作成されます（最終的には1つの行になります）。まず、「Value」ステートメントを定義します。'cisco_version_template'という名前の新しいファイルから始めて、次のファイルをそのファイルに挿入します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Value Version ([^ ,]+) 
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Value Uptime (.) 
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>Value ConfigRegister (\w+) 
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>Value ResetReason (.)
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>Start ^Cisco IOS .*Version ${Version}, ^.*uptime is ${Uptime} ^Last reset from ${ResetReason} ^Configuration register is ${ConfigRegister} -&gt; Record 
+</code></pre></div>
+<p>これは、最初の例よりも少し複雑です。最も重要なことは、テンプレートが一部の入力行にのみ一致することです。入力の各行について、状態の各ルールがチェックされます。ルールに一致するものがない場合、FSMは単に次のルールに移動します。すべてのルールがチェックされると（この場合、「構成レジスタ」ルールの後）、入力の次の行がフェッチされ、ルールは状態の最初から再度チェックされます。</p>
+<p>したがって、ここでは次のことが起こります。
+入力の最初の行が一致し、「バージョン」の値に「12.2（31）SGA1」が割り当てられます。'uptime is'行まで、他のすべての行は一致せず、破棄されます。「uptime」行が一致し、「Uptime」に「11 weeks, 4 days, 20 hours, 26 minute」が割り当てられます。「Lastreset」行まで、行が一致しないため破棄されます。この時点で、一致し、「ResetReason」値が割り当てられます。「Reload」「ConfigRegister」が割り当てられるまで、さらに数行が渡されます。「0x2102」この行も「Record」アクションをトリガーし、行が保存されます。この行の後、EOFに到達し、FSMが終了します。テンプレートを保存し、ルーターの出力を「router_output.txt」にコピーした後、FSMに対​​して実行します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>$;./textfsm.py cisco_version_template router_output.txt 
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>FSM Template: 
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>Value Version ([^ ,]+) 
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>Value Uptime (.) 
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>Value ConfigRegister (\w+) 
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>Value ResetReason (.)   
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Start ^Cisco IOS .*Version ${Version}, ^.*uptime is ${Uptime} ^Last reset from ${ResetReason} ^Configuration register is ${ConfigRegister} -&gt; Record
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>FSM Table: 
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>[&#39;Version&#39;, &#39;Uptime&#39;, &#39;ConfigRegister&#39;, &#39;ResetReason&#39;]
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>[&#39;12.2(31)SGA1&#39;, &#39;11 weeks, 4 days, 20 hours, 26 minutes&#39;, &#39;0x2102&#39;, &#39;Reload&#39;] 
+</code></pre></div>
+<h3 id="_3">表形式データの解析</h3>
+<p>前の例は、FSMの最も単純なアプリケーションを示しました-繰り返されないデータを単一の行に解析します。この例では、より興味深い例を見ていきます。Juniperコマンドの出力showchassisfpcが解析されます。1つのデバイスからの生のルーター出力は次のようになります。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Temp CPU Utilization (%) Memory Utilization (%) Slot State (C) Total Interrupt DRAM (MB) Heap Buffer 0 Online 24 7 0 256 38 51 1 Online 25 7 0 256 38 51 2 Online 24 3 0 256 37 49 3 Online 23 3 0 256 37 49 4 Empty 5 Empty 6 Empty 7 Empty
+</code></pre></div>
+<p>このテキストは簡単に解析できます。その情報は別々の行にきちんと含まれており、FSMデータは常に行として表示されます。この互換性により、比較的簡単なテンプレート作成が保証されます。このアプリケーションでは、定義されたFPCごとに1行のデータを作成しますが、テキストはFPCスロットごとに1行で表示されるため、これは簡単です。
+抽出したい情報は次のとおりです。</p>
+<ul>
+<li>Slot number</li>
+<li>State</li>
+<li>Temperature</li>
+<li>DRAM</li>
+<li>Buffer utilisation</li>
+</ul>
+<p>これにより、5つの関心のある値が得られます。新しいファイルjuniper_fpc_templateを作成し、最初に次の値の定義をそのファイルに入力します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Value Slot (\d) Value State (\w+) Value Temperature (\d+) Value DRAM (\d+) Value Buffer (\d+)
+</code></pre></div>
+<p>次に、状態の定義と関連するルールを入力します。1つのルールで逃げることができるかもしれません。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Value Slot (\d) Value State (\w+) Value Temperature (\d+) Value DRAM (\d+) Value Buffer (\d+)
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>#貪欲なマッチングはそれを壊すので、未使用のプレースホルダーに。*を使用することはできません
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>State 
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>      ^\s+${Slot}\s+${State}\s+${Temperature}\s+\d+\s+\d+\s+${DRAM}\s+\d+\s+${Buffer} -&gt; Record
+</code></pre></div>
+<p>上記の生のルーター出力をrouter_output.txtにコピーし、テンプレートを保存して実行します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>$ ./textfsm.py juniper_fpc_template router_output.txt FSM 
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>Template: Value Slot (\d) Value State (\w+) Value Temperature (\d+) Value DRAM (\d+) Value Buffer (\d+)
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>Start ^\s+${Slot}\s+${State}\s+${Temperature}\s+\d+\s+\d+\s+${DRAM}\s+\d+\s+${Buffer} -&gt; Record
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>FSM Table: 
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>[&#39;Slot&#39;, &#39;State&#39;, &#39;Temperature&#39;, &#39;DRAM&#39;, &#39;Buffer&#39;] 
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>[&#39;0&#39;, &#39;Online&#39;, &#39;24&#39;, &#39;256&#39;, &#39;51&#39;] [&#39;1&#39;, &#39;Online&#39;, &#39;25&#39;, &#39;256&#39;, &#39;51&#39;] 
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>[&#39;2&#39;, &#39;Online&#39;, &#39;24&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;3&#39;, &#39;Online&#39;, &#39;23&#39;, &#39;256&#39;, &#39;49&#39;] 
+</code></pre></div>
+<h4 id="fpc">テンプレートは、すべてのオンラインFPCスロットを正常に解析し、正しい値を抽出しました。</h4>
+<p>しかし、空のスロットはどうですか？すべてのスロットに関する情報も抽出する必要がある場合、空のスロットにはSlot列とState列しかないため、ここには表示されません。これに対処する方法は、これらの行をキャッチするための2番目のルールを作成することです。
+次のように、既存のルールの後にもう1つのルールを追加します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Value Slot (\d) Value State (\w+) Value Temperature (\d+) Value DRAM (\d+) Value Buffer (\d+)
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a># 貪欲なマッチングはそれを壊すので、未使用のプレースホルダーに。*を使用することはできません。
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>State 
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>      ^\s+${Slot}\s+${State}\s+${Temperature}\s+\d+\s+\d+\s+${DRAM}\s+\d+\s+${Buffer} -&gt; Record ^\s+${Slot}\s+${State} -&gt; Record 
+</code></pre></div>
+<p>次にFSMを実行します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>$;./textfsm.py juniper_fpc_template router_output.txt 
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>FSM Template: Value Slot (\d) Value State (\w+) Value Temperature (\d+) Value DRAM (\d+) Value Buffer (\d+)
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>Start ^\s+${Slot}\s+${State}\s+${Temperature}\s+\d+\s+\d+\s+${DRAM}\s+\d+\s+${Buffer} -&gt; Record ^\s+${Slot}\s+${State} -&gt; Record
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>FSM Table: [&#39;Slot&#39;, &#39;State&#39;, &#39;Temperature&#39;, &#39;DRAM&#39;, &#39;Buffer&#39;] [&#39;0&#39;, &#39;Online&#39;, &#39;24&#39;, &#39;256&#39;, &#39;51&#39;] [&#39;1&#39;, &#39;Online&#39;, &#39;25&#39;, &#39;256&#39;, &#39;51&#39;] [&#39;2&#39;, &#39;Online&#39;, &#39;24&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;3&#39;, &#39;Online&#39;, &#39;23&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;4&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;5&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;6&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;7&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] 
+</code></pre></div>
+<p>成功！これで、埋められたスロットと空のスロットの両方に関する情報が抽​​出されました。</p>
+<h4 id="filldown">「Filldown'」の使用</h4>
+<p>showchassis fpcからテーブルを抽出できるようになったので、拡張を行う必要があります。上記の簡単な例では機能しますが、次のようなジュニパーTXマトリックスからのより複雑な出力には完全に効果的ではありません。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>lcc0-re0:
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>                 Temp  CPU Utilization (%)   Memory    Utilization (%)
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>Slot State (C) Total Interrupt DRAM (MB) Heap Buffer 0 Online 24 8 1 512 16 52 1 Online 23 7 1 256 36 53 2 Online 23 5 1 256 36 49 3 Online 21 7 1 256 36 49 4 Empty 5 Empty 6 Empty 7 Empty
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>lcc1-re1:
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>                 Temp  CPU Utilization (%)   Memory    Utilization (%)
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>Slot State (C) Total Interrupt DRAM (MB) Heap Buffer 0 Online 20 9 1 256 36 50 1 Online 20 13 0 256 36 49 2 Online 21 6 1 256 36 49 3 Online 20 6 0 256 36 49 4 Online 18 5 0 256 35 49 5 Empty 6 Empty 7 Empty 
+</code></pre></div>
+<p>このノードには2つの物理シャーシ（lcc0-re0とlcc1-re0）があり、各スロット番号が2つあり、シャーシごとに1つあります。</p>
+<p>この出力をFSMに対​​して実行すると、次のように表示されます。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>FSM Template: Value Slot (\d) Value State (\w+) Value Temperature (\d+) Value DRAM (\d+) Value Buffer (\d+)
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>Start 
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>      ^\s+${Slot}\s+${State}\s+${Temperature}\s+\d+\s+\d+\s+${DRAM}\s+\d+\s+${Buffer} -&gt; Record ^\s+${Slot}\s+${State} -&gt; Record
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>FSM Table: 
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>[&#39;Slot&#39;, &#39;State&#39;, &#39;Temperature&#39;, &#39;DRAM&#39;, &#39;Buffer&#39;] [&#39;0&#39;, &#39;Online&#39;, &#39;24&#39;, &#39;512&#39;, &#39;52&#39;] [&#39;1&#39;, &#39;Online&#39;, &#39;23&#39;, &#39;256&#39;, &#39;53&#39;] [&#39;2&#39;, &#39;Online&#39;, &#39;23&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;3&#39;, &#39;Online&#39;, &#39;21&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;4&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;5&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;6&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;7&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;0&#39;, &#39;Online&#39;, &#39;20&#39;, &#39;256&#39;, &#39;50&#39;] [&#39;1&#39;, &#39;Online&#39;, &#39;20&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;2&#39;, &#39;Online&#39;, &#39;21&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;3&#39;, &#39;Online&#39;, &#39;20&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;4&#39;, &#39;Online&#39;, &#39;18&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;5&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;6&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;7&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] 
+</code></pre></div>
+<p>残念ながら、512Mb FPCがlcc0またはlcc1にあるかどうかを確認する方法はありません。これは、シャーシ情報を保存していないためです。したがって、^  S +：に一致する別の値 'Chassis'を追加することでこれを行うことができます。新しい値とルールを追加して、テンプレートを更新します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Value Chassis (\S+) Value Slot (\d) Value State (\w+) Value Temperature (\d+) Value DRAM (\d+) Value Buffer (\d+)
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>Start ^${Chassis}: ^\s+${Slot}\s+${State}\s+${Temperature}\s+\d+\s+\d+\s+${DRAM}\s+\d+\s+${Buffer} -&gt; Record ^\s+${Slot}\s+${State} -&gt; Record 
+</code></pre></div>
+<p>しかし、これを実行すると、わずかな問題が発生します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>FSM Template: Value Chassis (\S+) Value Slot (\d) Value State (\w+) Value Temperature (\d+) Value DRAM (\d+) Value Buffer (\d+)
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>Start ^${Chassis}: ^\s+${Slot}\s+${State}\s+${Temperature}\s+\d+\s+\d+\s+${DRAM}\s+\d+\s+${Buffer} -&gt; Record ^\s+${Slot}\s+${State} -&gt; Record
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>FSM Table: [&#39;Chassis&#39;, &#39;Slot&#39;, &#39;State&#39;, &#39;Temperature&#39;, &#39;DRAM&#39;, &#39;Buffer&#39;] [&#39;lcc0-re0&#39;, &#39;0&#39;, &#39;Online&#39;, &#39;24&#39;, &#39;512&#39;, &#39;52&#39;] [&#39;&#39;, &#39;1&#39;, &#39;Online&#39;, &#39;23&#39;, &#39;256&#39;, &#39;53&#39;] [&#39;&#39;, &#39;2&#39;, &#39;Online&#39;, &#39;23&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;&#39;, &#39;3&#39;, &#39;Online&#39;, &#39;21&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;&#39;, &#39;4&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;&#39;, &#39;5&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;&#39;, &#39;6&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;&#39;, &#39;7&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;lcc1-re1&#39;, &#39;0&#39;, &#39;Online&#39;, &#39;20&#39;, &#39;256&#39;, &#39;50&#39;] [&#39;&#39;, &#39;1&#39;, &#39;Online&#39;, &#39;20&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;&#39;, &#39;2&#39;, &#39;Online&#39;, &#39;21&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;&#39;, &#39;3&#39;, &#39;Online&#39;, &#39;20&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;&#39;, &#39;4&#39;, &#39;Online&#39;, &#39;18&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;&#39;, &#39;5&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;&#39;, &#39;6&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;&#39;, &#39;7&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] 
+</code></pre></div>
+<p>「シャーシ」列は、各シャーシの最初のスロットにのみ入力されます。どうして？</p>
+<p>問題は、「レコード」アクションが実行されるたびに、行が保存されてから、各値がクリアされることです。したがって、対応する行が入力されて保存されると、「シャーシ」ルールに一致するものがなくなるため、ルーター出力の次のシャーシ仕様までこれが入力されることはありません。</p>
+<p>これを修正するために、Chassis値に「Filldown」オプションを追加します。このオプションは、各「レコード」の後に値を保持するようにFSMに指示するため、値はクリアされません。その値は、「Clearall」アクションがある場合、またはルールが値を上書きする場合にのみ変更されます。</p>
+<p>次のように、「Filldown」オプションを使用してChassisValue行を変更します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>Value Filldown Chassis (\S+)
+</code></pre></div>
+<p>次に、FSMを介してテキストを再度実行します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>$; /textfsm.py juniper_fpc_template router_output.txt FSM Template: Value Filldown Chassis (\S+) Value Slot (\d) Value State (\w+) Value Temperature (\d+) Value DRAM (\d+) Value Buffer (\d+)
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>Start ^${Chassis}: ^\s+${Slot}\s+${State}\s+${Temperature}\s+\d+\s+\d+\s+${DRAM}\s+\d+\s+${Buffer} -&gt; Record ^\s+${Slot}\s+${State} -&gt; Record
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>FSM Table: [&#39;Chassis&#39;, &#39;Slot&#39;, &#39;State&#39;, &#39;Temperature&#39;, &#39;DRAM&#39;, &#39;Buffer&#39;] [&#39;lcc0-re0&#39;, &#39;0&#39;, &#39;Online&#39;, &#39;24&#39;, &#39;512&#39;, &#39;52&#39;] [&#39;lcc0-re0&#39;, &#39;1&#39;, &#39;Online&#39;, &#39;23&#39;, &#39;256&#39;, &#39;53&#39;] [&#39;lcc0-re0&#39;, &#39;2&#39;, &#39;Online&#39;, &#39;23&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;lcc0-re0&#39;, &#39;3&#39;, &#39;Online&#39;, &#39;21&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;lcc0-re0&#39;, &#39;4&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;lcc0-re0&#39;, &#39;5&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;lcc0-re0&#39;, &#39;6&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;lcc0-re0&#39;, &#39;7&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;lcc1-re1&#39;, &#39;0&#39;, &#39;Online&#39;, &#39;20&#39;, &#39;256&#39;, &#39;50&#39;] [&#39;lcc1-re1&#39;, &#39;1&#39;, &#39;Online&#39;, &#39;20&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;lcc1-re1&#39;, &#39;2&#39;, &#39;Online&#39;, &#39;21&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;lcc1-re1&#39;, &#39;3&#39;, &#39;Online&#39;, &#39;20&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;lcc1-re1&#39;, &#39;4&#39;, &#39;Online&#39;, &#39;18&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;lcc1-re1&#39;, &#39;5&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;lcc1-re1&#39;, &#39;6&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;lcc1-re1&#39;, &#39;7&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;lcc1-re1&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] 
+</code></pre></div>
+<p>これで、シャーシの値がすべて「入力済み」になりました。1つの問題を除いてほぼ完璧です。テーブルの下部に、ほとんど空の奇妙な行があります。そこで何をしているのですか？</p>
+<h4 id="required">「Required」の使用</h4>
+<p>その行は、Filldownオプションが原因で発生します。最後の有効な行が保存されると（lcc-re1、スロット7）、FSMは値を入力する準備ができた新しい空の行を作成します。通常、FSMは終了時に空の行を破棄しますが、この場合は「Filldown」オプション'Chassis'列にデータが入力されているため、FSMはこの空でない行を保持し、FSMが終了したときに保存します。</p>
+<p>これを修正するために、別の値オプション（必須）を使用します。このオプションは、値が一致している必要があることを指定します。一致していない場合、行は保存されません。このテンプレートでは、「slot」と「state」の両方に値が含まれていることを確認するため、次のように変更します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>Value Required Slot (\d) Value Required State (\w+) Now we finally have a correct table:
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>FSM Template: Value Filldown Chassis (\S+) Value Required Slot (\d) Value Required State (\w+) Value Temperature (\d+) Value DRAM (\d+) Value Buffer (\d+)
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>Start ^${Chassis}: ^\s+${Slot}\s+${State}\s+${Temperature}\s+\d+\s+\d+\s+${DRAM}\s+\d+\s+${Buffer} -&gt; Record ^\s+${Slot}\s+${State} -&gt; Record
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>FSM Table: 
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>[&#39;Chassis&#39;, &#39;Slot&#39;, &#39;State&#39;, &#39;Temperature&#39;, &#39;DRAM&#39;, &#39;Buffer&#39;] [&#39;lcc0-re0&#39;, &#39;0&#39;, &#39;Online&#39;, &#39;24&#39;, &#39;512&#39;, &#39;52&#39;] [&#39;lcc0-re0&#39;, &#39;1&#39;, &#39;Online&#39;, &#39;23&#39;, &#39;256&#39;, &#39;53&#39;] [&#39;lcc0-re0&#39;, &#39;2&#39;, &#39;Online&#39;, &#39;23&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;lcc0-re0&#39;, &#39;3&#39;, &#39;Online&#39;, &#39;21&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;lcc0-re0&#39;, &#39;4&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;lcc0-re0&#39;, &#39;5&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;lcc0-re0&#39;, &#39;6&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;lcc0-re0&#39;, &#39;7&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;lcc1-re1&#39;, &#39;0&#39;, &#39;Online&#39;, &#39;20&#39;, &#39;256&#39;, &#39;50&#39;] [&#39;lcc1-re1&#39;, &#39;1&#39;, &#39;Online&#39;, &#39;20&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;lcc1-re1&#39;, &#39;2&#39;, &#39;Online&#39;, &#39;21&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;lcc1-re1&#39;, &#39;3&#39;, &#39;Online&#39;, &#39;20&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;lcc1-re1&#39;, &#39;4&#39;, &#39;Online&#39;, &#39;18&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;lcc1-re1&#39;, &#39;5&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;lcc1-re1&#39;, &#39;6&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;lcc1-re1&#39;, &#39;7&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] 
+</code></pre></div>
+<h4 id="list">「List」の使用</h4>
+<p>多くの場合、特定の列に値のリストを含める必要があります。たとえば、ルーティングテーブルを解析する場合、プレフィックスごとに複数のネクストホップが存在する可能性があります。以下の例は、この例の目的のために簡略化された、そのようなルーティングテーブルです。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>Destination Gateway Dist/Metric Last Change 
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>----------- ------- ----------- ----------- 
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>B EX 0.0.0.0/0 via 192.0.2.73 20/100 4w0d via 192.0.2.201 via 192.0.2.202 via 192.0.2.74 
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>B IN 192.0.2.76/30 via 203.0.113.183 200/100 4w2d 
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>B IN 192.0.2.204/30 via 203.0.113.183 200/100 4w2d 
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>B IN 192.0.2.80/30 via 203.0.113.183 200/100 4w2d 
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>B IN 192.0.2.208/30 via 203.0.113.183 200/100 4w2d
+</code></pre></div>
+<p>この例では、次の情報を抽出します。</p>
+<ul>
+<li>Protocol</li>
+<li>Type</li>
+<li>Destination prefix</li>
+<li>Gateway (for simplicity's sake we will assume all entries will be of the form "via a.b.c.d")</li>
+<li>Distance</li>
+<li>Metric</li>
+<li>Last Change</li>
+</ul>
+<p>上記のルーティングテーブルの出力を「routes.txt」というファイルにコピーします。
+データを抽出するための単純なFSMを構築します。以下のテキストを「routes.tmpl」というファイルに入れます。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>Value Protocol (\S) Value Type (\S\S) Value Required Prefix (\S+) Value Gateway (\S+) Value Distance (\d+) Value Metric (\d+) Value LastChange (\S+)
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>Start ^.*----- -&gt; Routes
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>Routes ^ ${Protocol} ${Type} ${Prefix}\s+via ${Gateway}\s+${Distance}/${Metric}\s+${LastChange} -&gt; Record 
+</code></pre></div>
+<p>上記の「開始」状態では、ダッシュの行に特別な一致があることに注意してください。これにより、ヘッダーが完了するまで入力テキストが暗黙的に破棄されます。これは実際には必要ないか、この場合ですが、ヘッダーデータが実際の行データと混同される可能性がある他の場合を示すのに役立ちます。</p>
+<p>次に、データに対してテンプレートを実行します。
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>$ ./textfsm.py route.tmpl routes.txt FSM Template: Value Protocol (\S) Value Type (\S\S) Value Prefix (\S+) Value Gateway (\S+) Value Distance (\d+) Value Metric (\d+) Value LastChange (\S+)
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>Start ^.*----- -&gt; Routes
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>Routes ^ ${Protocol} ${Type} ${Prefix}\s+via ${Gateway}\s+${Distance}/${Metric}\s+${LastChange} -&gt; Record
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>FSM Table: [&#39;Protocol&#39;, &#39;Type&#39;, &#39;Prefix&#39;, &#39;Gateway&#39;, &#39;Distance&#39;, &#39;Metric&#39;, &#39;LastChange&#39;] [&#39;B&#39;, &#39;EX&#39;, &#39;0.0.0.0/0&#39;, &#39;192.0.2.73&#39;, &#39;20&#39;, &#39;100&#39;, &#39;4w0d&#39;] [&#39;B&#39;, &#39;IN&#39;, &#39;192.0.2.76/30&#39;, &#39;203.0.113.183&#39;, &#39;200&#39;, &#39;100&#39;, &#39;4w2d&#39;] [&#39;B&#39;, &#39;IN&#39;, &#39;192.0.2.204/30&#39;, &#39;203.0.113.183&#39;, &#39;200&#39;, &#39;100&#39;, &#39;4w2d&#39;] [&#39;B&#39;, &#39;IN&#39;, &#39;192.0.2.80/30&#39;, &#39;203.0.113.183&#39;, &#39;200&#39;, &#39;100&#39;, &#39;4w2d&#39;] [&#39;B&#39;, &#39;IN&#39;, &#39;192.0.2.208/30&#39;, &#39;203.0.113.183&#39;, &#39;200&#39;, &#39;100&#39;, &#39;4w2d&#39;] 
+</code></pre></div></p>
+<p>テーブルはほとんどいっぱいです...デフォルトのプレフィックスの最初のゲートウェイしか表示されないことを除いて。テンプレートが他のゲートウェイを定義する行と一致しない理由は簡単にわかります。では、これを回避する方法は？</p>
+<p>オプション「リスト」は、単一の文字列ではなく文字列のリストとして列を指定するために使用できるため、ここで役立ちます。したがって、このオプションを「ゲートウェイ」値の定義に追加します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>Value Protocol (\S) Value Type (\S\S) Value Required Prefix (\S+) Value List Gateway (\S+) Value Distance (\d+) Value Metric (\d+) Value LastChange (\S+) Run it again, and we see that the Gateway columns are now a list, albeit with one entry:
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>FSM Table: [&#39;Protocol&#39;, &#39;Type&#39;, &#39;Prefix&#39;, &#39;Gateway&#39;, &#39;Distance&#39;, &#39;Metric&#39;, &#39;LastChange&#39;] [&#39;B&#39;, &#39;EX&#39;, &#39;0.0.0.0/0&#39;, [&#39;192.0.2.73&#39;], &#39;20&#39;, &#39;100&#39;, &#39;4w0d&#39;] [&#39;B&#39;, &#39;IN&#39;, &#39;192.0.2.76/30&#39;, [&#39;203.0.113.183&#39;], &#39;200&#39;, &#39;100&#39;, &#39;4w2d&#39;] [&#39;B&#39;, &#39;IN&#39;, &#39;192.0.2.204/30&#39;, [&#39;203.0.113.183&#39;], &#39;200&#39;, &#39;100&#39;, &#39;4w2d&#39;] [&#39;B&#39;, &#39;IN&#39;, &#39;192.0.2.80/30&#39;, [&#39;203.0.113.183&#39;], &#39;200&#39;, &#39;100&#39;, &#39;4w2d&#39;] [&#39;B&#39;, &#39;IN&#39;, &#39;192.0.2.208/30&#39;, [&#39;203.0.113.183&#39;], &#39;200&#39;, &#39;100&#39;, &#39;4w2d&#39;] 
+</code></pre></div>
+<p>他のゲートウェイエントリを抽出するには、次の2つの手順でこれを行う必要があります。</p>
+<p>次のプレフィックスエントリを開始するまで「記録」せず（追加のゲートウェイ回線の場合）、他のゲートウェイ回線を解析します。最初の処理を行うには、2つの変更を行う必要があります。まず、既存の「Record」ステートメントを削除します。次に、既存のプレフィックスエントリに一致すると、 'レコードが既存のエントリであるというステートメントを既存のステートメントの前に追加し、現在の入力行に進みます。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>Routes ^ \S \S\S -&gt; Continue.Record ^ ${Protocol} ${Type} ${Prefix}\s+via ${Gateway}\s+${Distance}/${Metric}\s+${LastChange}
+</code></pre></div>
+<p>以前のプレフィックスエントリレコードを上書きせずに保存する必要があるため、新しい行は値の置換を使用しません。'Continue'ステートメントは、現在の入力行を使用して、前のデータを 'Record'した後の次のルールで再開します。これを今実行すると、出力は以前と同じであることがわかります。</p>
+<p>ここでリストを機能させるためのステップ2は、追加のゲートウェイエントリに一致するルールを作成することです。これは最後に行きます。ここでは記録しないことに注意してください。これは、次のエントリが処理されたときにのみ発生します。EOFによって、現在のエントリが「記録」されることにも注意してください。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>Routes ^ \S \S\S -&gt; Continue.Record ^ ${Protocol} ${Type} ${Prefix}\s+via ${Gateway}\s+${Distance}/${Metric}\s+${LastChange} ^\s+via ${Gateway}
+</code></pre></div>
+<p>これを実行すると、デフォルトのプレフィックスのすべてのゲートウェイエントリのリストが表示されます。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>FSM Table: [&#39;Protocol&#39;, &#39;Type&#39;, &#39;Prefix&#39;, &#39;Gateway&#39;, &#39;Distance&#39;, &#39;Metric&#39;, &#39;LastChange&#39;] [&#39;B&#39;, &#39;EX&#39;, &#39;0.0.0.0/0&#39;, [&#39;192.0.2.73&#39;, &#39;192.0.2.201&#39;, &#39;192.0.2.202&#39;, &#39;192.0.2.74&#39;], &#39;20&#39;, &#39;100&#39;, &#39;4w0d&#39;] [&#39;B&#39;, &#39;IN&#39;, &#39;192.0.2.76/30&#39;, [&#39;203.0.113.183&#39;], &#39;200&#39;, &#39;100&#39;, &#39;4w2d&#39;] [&#39;B&#39;, &#39;IN&#39;, &#39;192.0.2.204/30&#39;, [&#39;203.0.113.183&#39;], &#39;200&#39;, &#39;100&#39;, &#39;4w2d&#39;] [&#39;B&#39;, &#39;IN&#39;, &#39;192.0.2.80/30&#39;, [&#39;203.0.113.183&#39;], &#39;200&#39;, &#39;100&#39;, &#39;4w2d&#39;] [&#39;B&#39;, &#39;IN&#39;, &#39;192.0.2.208/30&#39;, [&#39;203.0.113.183&#39;], &#39;200&#39;, &#39;100&#39;, &#39;4w2d&#39;]
+</code></pre></div>
+<p>この例は、平均的なリストの使用法よりもいくらか複雑でした。行間に明確な区切り文字がある場合は、ここで「前方一致」スタイルを実行する必要はなく、それをレコードに使用できます。</p>
+<h3 id="pythontextfsm">PythonでのTextFSMの使用</h3>
+<p>FSM自体が完全に役立つわけではありません。これは、Pythonプログラムがテキスト情報を解析するために使用することを目的としています。ここでは、Pythonスクリプト内でFSMを使用する簡単な例を紹介します。</p>
+<p>開始するには、「routes.py」という名前の新しいファイルを作成し、それに以下を追加します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="kn">import</span> <span class="nn">textfsm</span> <span class="kn">import</span> <span class="nn">sys</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="c1"># テンプレートファイルを開き、それを使用して新しいTextFSMオブジェクトを初期化します。</span>
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="n">template_file</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">fsm</span> <span class="o">=</span> <span class="n">textfsm</span><span class="o">.</span><span class="n">TextFSM</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">template_file</span><span class="p">))</span>
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>
+<a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a><span class="c1"># EOFまでstdinを読み取り、解析のためにこれをFSMに渡します。</span>
+<a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a><span class="n">input_data</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="n">fsm_results</span> <span class="o">=</span> <span class="n">fsm</span><span class="o">.</span><span class="n">ParseText</span><span class="p">(</span><span class="n">input_data</span><span class="p">)</span>
+<a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>
+<a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a><span class="nb">print</span> <span class="s1">&#39;Header:&#39;</span> <span class="nb">print</span> <span class="n">fsm</span><span class="o">.</span><span class="n">header</span>
+<a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a>
+<a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a><span class="nb">print</span> <span class="s1">&#39;Prefix | Gateway(s)&#39;</span> <span class="nb">print</span> <span class="s1">&#39;-------------------------------&#39;</span>
+<a id="__codelineno-32-12" name="__codelineno-32-12" href="#__codelineno-32-12"></a>
+<a id="__codelineno-32-13" name="__codelineno-32-13" href="#__codelineno-32-13"></a><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">fsm_results</span><span class="p">:</span> 
+<a id="__codelineno-32-14" name="__codelineno-32-14" href="#__codelineno-32-14"></a>    <span class="nb">print</span> <span class="s1">&#39;</span><span class="si">%-18.18s</span><span class="s1"> </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span> <span class="err">```</span>
+</code></pre></div>
+<p>実行可能にし、次のように実行します。
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>$ ./routes.py routes.tmpl &lt; routes.txt
+</code></pre></div></p>
+<p>出力を調べて、FSMで「レコード」された各行がfsm_resultsリストの単一のリストタイプエントリとしてどのように表されるかに注意してください。また、行の3番目のエントリはリストタイプであり、join（）で接続することに注意してください。値名のリストとしてのヘッダーも出力されます。</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/07/14 14:45</span>
+      
+    
+  </small>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../Convert_TextFSM_nested_list_data_into_dictionary/" class="md-footer__link md-footer__link--prev" aria-label="Previous: TextFSMネストリストデータを辞書に変換する" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              TextFSMネストリストデータを辞書に変換する
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../TextFSM_template_syntax/" class="md-footer__link md-footer__link--next" aria-label="Next: TextFSM template syntax" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              TextFSM template syntax
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2022 m.omuro
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "content.tabs.link", "navigation.tabs", "navigation.top", "search.highlight", "search.suggest", "search.share"], "search": "../../../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.ed9748b7.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@9.0.0/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
