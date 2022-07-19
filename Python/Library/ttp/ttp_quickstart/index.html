@@ -2136,6 +2136,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    テンプレート内にコメント方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group" class="md-nav__link">
+    group
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2733,6 +2747,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    テンプレート内にコメント方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group" class="md-nav__link">
+    group
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2813,13 +2841,38 @@
 <a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="c1"># Router-id-loopback,Loopback0,192.168.0.113,24,</span>
 <a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="c1"># CPE_Acces_Vlan,Vlan778,2002::fd37,124,CPE1</span>
 </code></pre></div>
+<h3 id="_1">テンプレート内にコメント方法</h3>
+<p>TTPグループ内に1行コメントを入れるには、ダブルハッシュタグ: <code>##</code> を使用</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&lt;group name=&quot;interfaces&quot;&gt;
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>## important comment
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>## another comment
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>interface {{ interface }}
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a> description {{ description }}
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>&lt;/group&gt;
+</code></pre></div>
+<h3 id="group">group</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>template = &quot;&quot;&quot;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>&lt;group name=&quot;interfaces&quot;&gt;
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>interface {{ interface }}
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a> switchport trunk allowed vlan add {{ trunk_vlans }}
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>&lt;/group&gt;
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>&quot;&quot;&quot;
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>data = &quot;&quot;&quot;
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>interface GigabitEthernet3/4
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a> switchport trunk allowed vlan add 771,893
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    !
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>interface GigabitEthernet3/5
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a> switchport trunk allowed vlan add 138,166-173
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>&quot;&quot;&quot;
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/07/19 08:24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/07/19 13:59</span>
       
     
   </small>
