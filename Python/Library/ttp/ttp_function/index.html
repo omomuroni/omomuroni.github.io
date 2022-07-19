@@ -2158,23 +2158,57 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#record" class="md-nav__link">
+    record
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#let" class="md-nav__link">
+    let
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    set
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#condition-functions" class="md-nav__link">
+    Condition functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Condition functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#exclude_re" class="md-nav__link">
     exclude_re
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#exclude" class="md-nav__link">
     exclude
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#equal" class="md-nav__link">
     equal
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2825,23 +2859,57 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#record" class="md-nav__link">
+    record
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#let" class="md-nav__link">
+    let
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    set
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#condition-functions" class="md-nav__link">
+    Condition functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Condition functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#exclude_re" class="md-nav__link">
     exclude_re
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#exclude" class="md-nav__link">
     exclude
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#equal" class="md-nav__link">
     equal
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2866,7 +2934,7 @@
 <h1 id="ttp-functions">ttp - Functions</h1>
 <blockquote>
 <ul>
-<li><a href="https://ttp.readthedocs.io/en/latest/Match%20Variables/Functions.html"></a></li>
+<li><a href="https://ttp.readthedocs.io/en/latest/Match%20Variables/Functions.html">Functions</a></li>
 </ul>
 </blockquote>
 <h3 id="python">Python 組み込み関数の使用</h3>
@@ -3031,6 +3099,168 @@
 <a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="s2">&lt;group&gt;</span>
 <a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="s2">&quot;&quot;&quot;</span>
 </code></pre></div>
+<h3 id="record">record</h3>
+<ul>
+<li><code>{ name | record(var_name) }}</code></li>
+<li>name: 一致結果を記録するために使用するテンプレート変数名</li>
+</ul>
+<p>【説明】</p>
+<ul>
+<li>レコードの一致結果は、指定された名前のテンプレート変数として記録される</li>
+<li>その記録された変数は、マクロ内の<code>_ttp_</code> ディクショナリから設定または取得するなどの他の関数内で参照できる</li>
+<li>変数は2つのスコープで記録されます。<ol>
+<li>入力ごとのスコープ<ul>
+<li>この特定の入力を解析するすべてのグループは、記録された変数にアクセスできます。</li>
+<li><code>_ttp_["parser_object"].vars</code> 辞書に保存されている変数</li>
+</ul>
+</li>
+<li>グローバルスコープ</li>
+<li>任意のテンプレートの任意のグループから利用可能な変数。</li>
+<li><code>_ttp_["global_vars"]</code> 辞書に保存されている変数</li>
+</ol>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>レコード結果は相互にオーバーライドします。
+つまり、複数の一致変数レコード結果が同じテンプレート変数にある場合、
+後で一致した一致変数は前の一致結果をオーバーライドします。</p>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="o">&lt;</span><span class="nb">input</span> <span class="n">load</span><span class="o">=</span><span class="s2">&quot;text&quot;</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;in1&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">myswitch1</span><span class="c1">#show run int</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">interface</span> <span class="n">Vlan778</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a> <span class="n">ip</span> <span class="n">vrf</span> <span class="n">forwarding</span> <span class="n">VRF_NAME_1</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a> <span class="n">ip</span> <span class="n">address</span> <span class="mi">2002</span><span class="p">:</span><span class="n">fd37</span><span class="p">::</span><span class="mi">91</span><span class="o">/</span><span class="mi">124</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="err">!</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="o">&lt;/</span><span class="nb">input</span><span class="o">&gt;</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="o">&lt;</span><span class="nb">input</span> <span class="n">load</span><span class="o">=</span><span class="s2">&quot;text&quot;</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;in2&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="n">myswitch2</span><span class="c1">#show run int</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="n">interface</span> <span class="n">Vlan779</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a> <span class="n">description</span> <span class="n">some</span> <span class="n">description</span> <span class="n">input2</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="err">!</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="n">interface</span> <span class="n">Vlan780</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a> <span class="n">switchport</span> <span class="n">port</span><span class="o">-</span><span class="n">security</span> <span class="n">mac</span> <span class="mi">4</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="err">!</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="o">&lt;/</span><span class="nb">input</span><span class="o">&gt;</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="o">&lt;</span><span class="n">group</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;interfaces&quot;</span> <span class="nb">input</span><span class="o">=</span><span class="s2">&quot;in1&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="n">interface</span> <span class="p">{{</span> <span class="n">interface</span> <span class="p">}}</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a> <span class="n">ip</span> <span class="n">address</span> <span class="p">{{</span> <span class="n">ip</span> <span class="p">}}</span><span class="o">/</span><span class="p">{{</span> <span class="n">mask</span> <span class="p">}}</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a> <span class="n">ip</span> <span class="n">vrf</span> <span class="n">forwarding</span> <span class="p">{{</span> <span class="n">vrf</span> <span class="o">|</span> <span class="n">record</span><span class="p">(</span><span class="s2">&quot;VRF&quot;</span><span class="p">)</span> <span class="p">}}</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a> <span class="n">switchport</span> <span class="n">port</span><span class="o">-</span><span class="n">security</span> <span class="n">mac</span> <span class="p">{{</span> <span class="n">sec_mac</span> <span class="p">}}</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="o">&lt;/</span><span class="n">group</span><span class="o">&gt;</span>
+<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>
+<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a><span class="o">&lt;</span><span class="n">group</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;interfaces&quot;</span> <span class="nb">input</span><span class="o">=</span><span class="s2">&quot;in2&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="n">interface</span> <span class="p">{{</span> <span class="n">interface</span> <span class="p">}}</span>
+<a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a> <span class="n">description</span> <span class="p">{{</span> <span class="n">description</span> <span class="o">|</span> <span class="n">ORPHRASE</span> <span class="o">|</span> <span class="n">record</span><span class="p">(</span><span class="s2">&quot;my_description&quot;</span><span class="p">)</span> <span class="p">}}</span>
+<a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a> <span class="n">switchport</span> <span class="n">port</span><span class="o">-</span><span class="n">security</span> <span class="n">mac</span> <span class="p">{{</span> <span class="n">sec_mac</span> <span class="p">}}</span>
+<a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a> <span class="p">{{</span> <span class="n">my_vrf</span> <span class="o">|</span> <span class="nb">set</span><span class="p">(</span><span class="s2">&quot;VRF&quot;</span><span class="p">)</span> <span class="p">}}</span>
+<a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a> <span class="p">{{</span> <span class="n">my_descript</span> <span class="o">|</span> <span class="nb">set</span><span class="p">(</span><span class="s2">&quot;my_description&quot;</span><span class="p">)</span> <span class="p">}}</span>
+<a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a><span class="o">&lt;/</span><span class="n">group</span><span class="o">&gt;</span>
+</code></pre></div>
+<h3 id="let">let</h3>
+<ul>
+<li><code>{{ variable | let(var_name, value) }}</code></li>
+<li><code>{{ variable | let(value) }}</code></li>
+<li>
+<p>value: 変数に割り当てられる値を含む文字列</p>
+</li>
+<li>
+<p>提供された値をvar_nameという名前の変数に静的に割り当てます。</p>
+</li>
+<li>単一の引数が指定された場合、その引数は値と見なされ、一致結果を置き換える変数に一致するように割り当てられます。</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="o">&lt;</span><span class="nb">input</span> <span class="n">load</span><span class="o">=</span><span class="s2">&quot;text&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">interface</span> <span class="n">Loopback0</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a> <span class="n">description</span> <span class="n">Management</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a> <span class="n">ip</span> <span class="n">address</span> <span class="mf">192.168.0.113</span><span class="o">/</span><span class="mi">24</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="err">!</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="o">&lt;/</span><span class="nb">input</span><span class="o">&gt;</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="o">&lt;</span><span class="n">group</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;interfaces&quot;</span><span class="o">&gt;</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="n">interface</span> <span class="p">{{</span> <span class="n">interface</span> <span class="p">}}</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a> <span class="n">description</span> <span class="p">{{</span> <span class="n">description</span> <span class="o">|</span> <span class="n">let</span><span class="p">(</span><span class="s2">&quot;description_undefined&quot;</span><span class="p">)</span> <span class="p">}}</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a> <span class="n">ip</span> <span class="n">address</span> <span class="p">{{</span> <span class="n">ip</span> <span class="o">|</span> <span class="n">contains</span><span class="p">(</span><span class="s2">&quot;24&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="n">let</span><span class="p">(</span><span class="s2">&quot;netmask&quot;</span><span class="p">,</span> <span class="s2">&quot;255.255.255.0&quot;</span><span class="p">)</span> <span class="p">}}</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="o">&lt;/</span><span class="n">group</span><span class="o">&gt;</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">結果</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">            </span><span class="nt">&quot;interfaces&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">                </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;description_undefined&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">                </span><span class="nt">&quot;interface&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Loopback0&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">                </span><span class="nt">&quot;ip&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;192.168.0.113/24&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">                </span><span class="nt">&quot;netmask&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;255.255.255.0&quot;</span><span class="w"></span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">    </span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+<h3 id="set">set</h3>
+<ul>
+<li><code>{{ name | set('var_set_value') }}</code></li>
+<li>var_set_value: 変数の値として設定する文字列。テンプレート変数の名前にすることができる</li>
+</ul>
+<p>「var_set_value」を変数の一致に割り当てることができます。
+「var_set_value」はテンプレート変数名への参照と見なされます。
+「var_set_value」のテンプレート変数が見つからない場合は、「var_set_value」自体が変数の一致に割り当てられます。</p>
+<p>set関数を使用して、前にテキストを付けずにset関数を使用すると、一致結果に任意のキーと値のペアを導入することもできます。</p>
+<div class="highlight"><span class="filename">例1</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="s2">interface GigabitEthernet3/4</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="s2"> switchport mode access</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="s2"> switchport trunk encapsulation dot1q</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="s2"> switchport mode trunk</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="s2"> switchport nonegotiate</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="s2"> shutdown</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="s2">!</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="s2">interface GigabitEthernet3/7</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="s2"> switchport mode access</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="s2"> switchport mode trunk</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="s2"> switchport nonegotiate</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="s2">!</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="n">template</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="s2">&lt;vars&gt;</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="s2">mys_set_var = &quot;my_set_value&quot;</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="s2">&lt;/vars&gt;</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="s2">&lt;group name=&quot;interfacesset&quot;&gt;</span>
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="s2">interface {{ interface }}</span>
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="s2"> switchport mode access {{ mode_access | set(&quot;True&quot;) }}</span>
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="s2"> switchport trunk encapsulation dot1q {{ encap | set(&quot;dot1q&quot;) }}</span>
+<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="s2"> switchport mode trunk {{ mode | set(&quot;Trunk&quot;) }} {{ vlans | set(&quot;all_vlans&quot;) }}</span>
+<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="s2"> shutdown {{ disabled | set(&quot;True&quot;) }} {{ test_var | set(&quot;mys_set_var&quot;) }}</span>
+<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="s2">!{{ _end_ }}</span>
+<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a><span class="s2">&lt;/group&gt;</span>
+<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="s2">&quot;&quot;&quot;</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">例1</span><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">data</span> <span class="o">=</span><span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="s2">interface Vlan777</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="s2">  description Management</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="s2">  ip address 192.168.0.1/24</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="s2">  vrf MGMT</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="s2">!</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="n">template</span> <span class="o">=</span><span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="s2">&lt;vars&gt;</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="s2">my_var = &quot;L2VC&quot;</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="s2">&lt;/vars&gt;</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="s2">&lt;group&gt;</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="s2">interface {{ interface }}</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="s2">  description {{ description }}</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="s2">  ip address {{ ip }}/{{ mask }}</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="s2">  vrf {{ vrf }}</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="s2">  {{ interface_role | set(&quot;Uplink&quot;) }}</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="s2">  {{ provider | set(&quot;my_var&quot;) }}</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="s2">!{{_end_}}</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="s2">&lt;/group&gt;</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="s2">&quot;&quot;&quot;</span>
+</code></pre></div>
+<h2 id="condition-functions">Condition functions</h2>
 <h3 id="exclude_re">exclude_re</h3>
 <ul>
 <li><code>{{ name | exclude_re('pattern') }}</code></li>
@@ -3054,7 +3284,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/07/19 13:59</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/07/19 14:23</span>
       
     
   </small>
