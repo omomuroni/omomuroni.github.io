@@ -715,7 +715,7 @@
   
     <li class="md-nav__item">
       <a href="../../../../Hobby/python_slack_sdk/" class="md-nav__link">
-        Python Slack SDK
+        Python Slack
       </a>
     </li>
   
@@ -1563,6 +1563,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../inspect/" class="md-nav__link">
+        inspect モジュール
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../jinja/" class="md-nav__link">
         jinja
       </a>
@@ -1776,18 +1790,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3_23" type="checkbox" id="__nav_8_3_23" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3_24" type="checkbox" id="__nav_8_3_24" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_8_3_23">
+        <label class="md-nav__link" for="__nav_8_3_24">
           TextFSM
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="TextFSM" data-md-level="3">
-        <label class="md-nav__title" for="__nav_8_3_23">
+        <label class="md-nav__title" for="__nav_8_3_24">
           <span class="md-nav__icon md-icon"></span>
           TextFSM
         </label>
@@ -1879,18 +1893,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3_24" type="checkbox" id="__nav_8_3_24" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3_25" type="checkbox" id="__nav_8_3_25" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_8_3_24">
+        <label class="md-nav__link" for="__nav_8_3_25">
           Openpyxl
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Openpyxl" data-md-level="3">
-        <label class="md-nav__title" for="__nav_8_3_24">
+        <label class="md-nav__title" for="__nav_8_3_25">
           <span class="md-nav__icon md-icon"></span>
           Openpyxl
         </label>
@@ -1982,18 +1996,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3_25" type="checkbox" id="__nav_8_3_25" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3_26" type="checkbox" id="__nav_8_3_26" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_8_3_25">
+        <label class="md-nav__link" for="__nav_8_3_26">
           Pytest
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Pytest" data-md-level="3">
-        <label class="md-nav__title" for="__nav_8_3_25">
+        <label class="md-nav__title" for="__nav_8_3_26">
           <span class="md-nav__icon md-icon"></span>
           Pytest
         </label>
@@ -2045,18 +2059,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3_26" type="checkbox" id="__nav_8_3_26" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3_27" type="checkbox" id="__nav_8_3_27" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_8_3_26">
+        <label class="md-nav__link" for="__nav_8_3_27">
           Ttp
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Ttp" data-md-level="3">
-        <label class="md-nav__title" for="__nav_8_3_26">
+        <label class="md-nav__title" for="__nav_8_3_27">
           <span class="md-nav__icon md-icon"></span>
           Ttp
         </label>
@@ -2229,6 +2243,20 @@
     <li class="md-nav__item">
       <a href="../ttp_quickstart/" class="md-nav__link">
         ttp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ttp_regex_pattern/" class="md-nav__link">
+        Regex pattern
       </a>
     </li>
   
@@ -3107,8 +3135,10 @@
 <p>【説明】</p>
 <ul>
 <li>レコードの一致結果は、指定された名前のテンプレート変数として記録される</li>
-<li>その記録された変数は、マクロ内の<code>_ttp_</code> ディクショナリから設定または取得するなどの他の関数内で参照できる</li>
-<li>変数は2つのスコープで記録されます。<ol>
+<li>その記録された変数は、マクロ内の <code>_ttp_</code> ディクショナリから設定または取得するなどの他の関数内で参照できる</li>
+<li>
+<p>変数は2つのスコープで記録されます。</p>
+<ol>
 <li>入力ごとのスコープ<ul>
 <li>この特定の入力を解析するすべてのグループは、記録された変数にアクセスできます。</li>
 <li><code>_ttp_["parser_object"].vars</code> 辞書に保存されている変数</li>
@@ -3167,7 +3197,7 @@
 <p>value: 変数に割り当てられる値を含む文字列</p>
 </li>
 <li>
-<p>提供された値をvar_nameという名前の変数に静的に割り当てます。</p>
+<p>提供された値を <code>var_name</code> という名前の変数に静的に割り当てます。</p>
 </li>
 <li>単一の引数が指定された場合、その引数は値と見なされ、一致結果を置き換える変数に一致するように割り当てられます。</li>
 </ul>
@@ -3284,7 +3314,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/07/19 14:23</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/08/03 01:58</span>
       
     
   </small>
