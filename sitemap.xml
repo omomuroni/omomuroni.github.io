@@ -171,11 +171,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://omomuroni.github.io/Network/JUNOS/Basic/</loc>
-         <lastmod>2022-08-27</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://omomuroni.github.io/Network/JUNOS/JUNOS_EX4650/</loc>
          <lastmod>2022-08-27</lastmod>
          <changefreq>daily</changefreq>
