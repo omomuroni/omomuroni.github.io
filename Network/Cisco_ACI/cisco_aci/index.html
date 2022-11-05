@@ -8,21 +8,21 @@
       
       
       
-        <link rel="canonical" href="https://omomuroni.github.io/Linux/wsl2/">
+        <link rel="canonical" href="https://omomuroni.github.io/Network/Cisco_ACI/cisco_aci/">
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
     
     
       
-        <title>wsl - おもむろにメモ書き</title>
+        <title>Cisco ACI の基本 - おもむろにメモ書き</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.e411adfe.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e411adfe.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cc9b2e1e.min.css">
         
       
     
@@ -39,11 +39,11 @@
     
       <link rel="stylesheet" href="https://unpkg.com/mermaid@9.0.0/dist/mermaid.css">
     
-      <link rel="stylesheet" href="../../custom/custom_table.css">
+      <link rel="stylesheet" href="../../../custom/custom_table.css">
     
-      <link rel="stylesheet" href="../../custom/layout.css">
+      <link rel="stylesheet" href="../../../custom/layout.css">
     
-    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#wsl" class="md-skip">
+        <a href="#cisco-aci" class="md-skip">
           Skip to content
         </a>
       
@@ -85,7 +85,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="おもむろにメモ書き" class="md-header__button md-logo" aria-label="おもむろにメモ書き" data-md-component="logo">
+    <a href="../../.." title="おもむろにメモ書き" class="md-header__button md-logo" aria-label="おもむろにメモ書き" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              wsl
+              Cisco ACI の基本
             
           </span>
         </div>
@@ -207,7 +207,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../.." class="md-tabs__link">
+    <a href="../../.." class="md-tabs__link">
       index
     </a>
   </li>
@@ -222,7 +222,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../Effective/00_index/" class="md-tabs__link">
+      <a href="../../../Effective/00_index/" class="md-tabs__link">
         Effective
       </a>
     </li>
@@ -238,7 +238,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../Git/00_index/" class="md-tabs__link">
+      <a href="../../../Git/00_index/" class="md-tabs__link">
         Git
       </a>
     </li>
@@ -254,8 +254,40 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../Hobby/fitbit/" class="md-tabs__link">
+      <a href="../../../Hobby/fitbit/" class="md-tabs__link">
         Hobby
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Linux/command1/" class="md-tabs__link">
+        Linux
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Mkdocs/00_index/" class="md-tabs__link">
+        Mkdocs
       </a>
     </li>
   
@@ -272,39 +304,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../command1/" class="md-tabs__link md-tabs__link--active">
-        Linux
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../Mkdocs/00_index/" class="md-tabs__link">
-        Mkdocs
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../Network/ipaddress/" class="md-tabs__link">
+      <a href="../../evpn/" class="md-tabs__link md-tabs__link--active">
         Network
       </a>
     </li>
@@ -320,7 +320,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../Python/" class="md-tabs__link">
+      <a href="../../../Python/" class="md-tabs__link">
         Python
       </a>
     </li>
@@ -336,7 +336,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../VScode/001_extension/" class="md-tabs__link">
+      <a href="../../../VScode/001_extension/" class="md-tabs__link">
         VScode
       </a>
     </li>
@@ -352,7 +352,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../docker/memo/" class="md-tabs__link">
+      <a href="../../../docker/memo/" class="md-tabs__link">
         Docker
       </a>
     </li>
@@ -380,7 +380,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="おもむろにメモ書き" class="md-nav__button md-logo" aria-label="おもむろにメモ書き" data-md-component="logo">
+    <a href="../../.." title="おもむろにメモ書き" class="md-nav__button md-logo" aria-label="おもむろにメモ書き" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -411,7 +411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         index
       </a>
     </li>
@@ -452,7 +452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Effective/00_index/" class="md-nav__link">
+      <a href="../../../Effective/00_index/" class="md-nav__link">
         効率化 - 目次
       </a>
     </li>
@@ -466,7 +466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Effective/Anki/" class="md-nav__link">
+      <a href="../../../Effective/Anki/" class="md-nav__link">
         Anki
       </a>
     </li>
@@ -480,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Effective/draw.io/" class="md-nav__link">
+      <a href="../../../Effective/draw.io/" class="md-nav__link">
         Draw.io をvscode で使う
       </a>
     </li>
@@ -494,7 +494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Effective/english/" class="md-nav__link">
+      <a href="../../../Effective/english/" class="md-nav__link">
         English
       </a>
     </li>
@@ -508,7 +508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Effective/marp/" class="md-nav__link">
+      <a href="../../../Effective/marp/" class="md-nav__link">
         Marp
       </a>
     </li>
@@ -522,7 +522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Effective/powershell_log/" class="md-nav__link">
+      <a href="../../../Effective/powershell_log/" class="md-nav__link">
         Powershell でログ取得
       </a>
     </li>
@@ -536,7 +536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Effective/powershell_useful/" class="md-nav__link">
+      <a href="../../../Effective/powershell_useful/" class="md-nav__link">
         Powershell 便利技
       </a>
     </li>
@@ -550,7 +550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Effective/sakura_editer/" class="md-nav__link">
+      <a href="../../../Effective/sakura_editer/" class="md-nav__link">
         サクラエディタ設定
       </a>
     </li>
@@ -564,7 +564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Effective/slide_sample/" class="md-nav__link">
+      <a href="../../../Effective/slide_sample/" class="md-nav__link">
         Marp で作成した slide サンプル
       </a>
     </li>
@@ -578,7 +578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Effective/tool/" class="md-nav__link">
+      <a href="../../../Effective/tool/" class="md-nav__link">
         便利なツール
       </a>
     </li>
@@ -626,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Git/00_index/" class="md-nav__link">
+      <a href="../../../Git/00_index/" class="md-nav__link">
         Git - 目次
       </a>
     </li>
@@ -640,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Git/git_cheat_sheet/" class="md-nav__link">
+      <a href="../../../Git/git_cheat_sheet/" class="md-nav__link">
         Git Cheat Sheet
       </a>
     </li>
@@ -654,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Git/git_knowledge/" class="md-nav__link">
+      <a href="../../../Git/git_knowledge/" class="md-nav__link">
         git 操作
       </a>
     </li>
@@ -702,7 +702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Hobby/fitbit/" class="md-nav__link">
+      <a href="../../../Hobby/fitbit/" class="md-nav__link">
         Fitbit
       </a>
     </li>
@@ -716,7 +716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Hobby/google_drive_api/" class="md-nav__link">
+      <a href="../../../Hobby/google_drive_api/" class="md-nav__link">
         Google Drive API
       </a>
     </li>
@@ -730,7 +730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Hobby/google_fit_api/" class="md-nav__link">
+      <a href="../../../Hobby/google_fit_api/" class="md-nav__link">
         google fit API
       </a>
     </li>
@@ -744,7 +744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Hobby/python_slack_sdk/" class="md-nav__link">
+      <a href="../../../Hobby/python_slack_sdk/" class="md-nav__link">
         Python Slack
       </a>
     </li>
@@ -758,7 +758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Hobby/slack/" class="md-nav__link">
+      <a href="../../../Hobby/slack/" class="md-nav__link">
         Slack API
       </a>
     </li>
@@ -778,14 +778,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       
       
@@ -808,7 +806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../command1/" class="md-nav__link">
+      <a href="../../../Linux/command1/" class="md-nav__link">
         Linux Command 1
       </a>
     </li>
@@ -820,121 +818,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          wsl
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../Linux/wsl2_setup/" class="md-nav__link">
         wsl
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#wsl-command" class="md-nav__link">
-    wsl command
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basic-setup" class="md-nav__link">
-    basic setup
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    ビープ音を消す
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    初期設定
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    設定関連
-  </a>
-  
-    <nav class="md-nav" aria-label="設定関連">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    出力をみやすく設定
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#font" class="md-nav__link">
-    font
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vmware" class="md-nav__link">
-    VMware との共存
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    ファイルシステムへのアクセス
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#wsl-vscode" class="md-nav__link">
-    wsl で vscode
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -980,7 +868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Mkdocs/00_index/" class="md-nav__link">
+      <a href="../../../Mkdocs/00_index/" class="md-nav__link">
         Mkdocs - 目次
       </a>
     </li>
@@ -994,7 +882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Mkdocs/extended_markdown/" class="md-nav__link">
+      <a href="../../../Mkdocs/extended_markdown/" class="md-nav__link">
         HTML & CSS による拡張
       </a>
     </li>
@@ -1008,7 +896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Mkdocs/markdown/" class="md-nav__link">
+      <a href="../../../Mkdocs/markdown/" class="md-nav__link">
         Markdown 記法まとめ
       </a>
     </li>
@@ -1022,7 +910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Mkdocs/memo/" class="md-nav__link">
+      <a href="../../../Mkdocs/memo/" class="md-nav__link">
         Mkdocs Material memo
       </a>
     </li>
@@ -1036,7 +924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Mkdocs/mkdocs_sample/" class="md-nav__link">
+      <a href="../../../Mkdocs/mkdocs_sample/" class="md-nav__link">
         Material 表現 sample
       </a>
     </li>
@@ -1056,12 +944,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
       
       
       
@@ -1084,70 +974,23 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Network/ipaddress/" class="md-nav__link">
+      <a href="../../evpn/" class="md-nav__link">
+        EVPN メモ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ipaddress/" class="md-nav__link">
         Python で ipaddress 生成
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_7_2">
-          Ansible
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Ansible" data-md-level="2">
-        <label class="md-nav__title" for="__nav_7_2">
-          <span class="md-nav__icon md-icon"></span>
-          Ansible
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Network/Ansible/installation/" class="md-nav__link">
-        Ansible install
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Network/Ansible/telnet/" class="md-nav__link">
-        Ansible - telnet
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -1168,14 +1011,14 @@
       
       
         <label class="md-nav__link" for="__nav_7_3">
-          IOS XR
+          Ansible
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="IOS XR" data-md-level="2">
+      <nav class="md-nav" aria-label="Ansible" data-md-level="2">
         <label class="md-nav__title" for="__nav_7_3">
           <span class="md-nav__icon md-icon"></span>
-          IOS XR
+          Ansible
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1185,8 +1028,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Network/IOS-XR/Basic/" class="md-nav__link">
-        IOS - XR コマンド
+      <a href="../../Ansible/installation/" class="md-nav__link">
+        Ansible install
       </a>
     </li>
   
@@ -1199,50 +1042,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Network/IOS-XR/OSPF/" class="md-nav__link">
-        OSPF
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Network/IOS-XR/Process/" class="md-nav__link">
-        Process Restart
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Network/IOS-XR/create_config/" class="md-nav__link">
-        Stress Config
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Network/IOS-XR/summary/" class="md-nav__link">
-        Command
+      <a href="../../Ansible/telnet/" class="md-nav__link">
+        Ansible - telnet
       </a>
     </li>
   
@@ -1260,25 +1061,27 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_4" type="checkbox" id="__nav_7_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_4" type="checkbox" id="__nav_7_4" checked>
       
       
       
       
         <label class="md-nav__link" for="__nav_7_4">
-          IXIA
+          Cisco ACI
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="IXIA" data-md-level="2">
+      <nav class="md-nav" aria-label="Cisco ACI" data-md-level="2">
         <label class="md-nav__title" for="__nav_7_4">
           <span class="md-nav__icon md-icon"></span>
-          IXIA
+          Cisco ACI
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1286,11 +1089,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Network/IXIA/IXIA_reference/" class="md-nav__link">
-        IXIA reference
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Cisco ACI の基本
       </a>
+      
     </li>
   
 
@@ -1318,14 +1131,14 @@
       
       
         <label class="md-nav__link" for="__nav_7_5">
-          JUNOS
+          IOS XR
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="JUNOS" data-md-level="2">
+      <nav class="md-nav" aria-label="IOS XR" data-md-level="2">
         <label class="md-nav__title" for="__nav_7_5">
           <span class="md-nav__icon md-icon"></span>
-          JUNOS
+          IOS XR
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1335,8 +1148,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Network/JUNOS/JUNOS_EX4650/" class="md-nav__link">
-        JUNOS EX4650
+      <a href="../../IOS-XR/Basic/" class="md-nav__link">
+        IOS - XR コマンド
       </a>
     </li>
   
@@ -1349,8 +1162,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Network/JUNOS/JUNOS_MPLS_config/" class="md-nav__link">
-        JUNOS MPLS 設定
+      <a href="../../IOS-XR/Process/" class="md-nav__link">
+        Process Restart
       </a>
     </li>
   
@@ -1363,8 +1176,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Network/JUNOS/junos_cmd_cheatsheet/" class="md-nav__link">
-        JUNOS Cmd cheat sheat
+      <a href="../../IOS-XR/create_config/" class="md-nav__link">
+        Stress Config
       </a>
     </li>
   
@@ -1377,8 +1190,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Network/JUNOS/junos_config_cheatsheet/" class="md-nav__link">
-        JUNOS config cheat sheat
+      <a href="../../IOS-XR/summary/" class="md-nav__link">
+        Command
       </a>
     </li>
   
@@ -1407,12 +1220,148 @@
       
       
         <label class="md-nav__link" for="__nav_7_6">
+          IXIA
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="IXIA" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_6">
+          <span class="md-nav__icon md-icon"></span>
+          IXIA
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IXIA/IXIA_reference/" class="md-nav__link">
+        IXIA reference
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_7" type="checkbox" id="__nav_7_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_7">
+          JUNOS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="JUNOS" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_7">
+          <span class="md-nav__icon md-icon"></span>
+          JUNOS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JUNOS/JUNOS_EX4650/" class="md-nav__link">
+        JUNOS EX4650
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JUNOS/JUNOS_MPLS_config/" class="md-nav__link">
+        JUNOS MPLS 設定
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JUNOS/junos_cmd_cheatsheet/" class="md-nav__link">
+        JUNOS Cmd cheat sheat
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JUNOS/junos_config_cheatsheet/" class="md-nav__link">
+        JUNOS config cheat sheat
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_8" type="checkbox" id="__nav_7_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_8">
           Setup
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Setup" data-md-level="2">
-        <label class="md-nav__title" for="__nav_7_6">
+        <label class="md-nav__title" for="__nav_7_8">
           <span class="md-nav__icon md-icon"></span>
           Setup
         </label>
@@ -1424,7 +1373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Network/Setup/" class="md-nav__link">
+      <a href="../../Setup/" class="md-nav__link">
         index
       </a>
     </li>
@@ -1438,7 +1387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Network/Setup/gns3setup_for_mac/" class="md-nav__link">
+      <a href="../../Setup/gns3setup_for_mac/" class="md-nav__link">
         Mac で GNS3 を使う
       </a>
     </li>
@@ -1493,7 +1442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/" class="md-nav__link">
+      <a href="../../../Python/" class="md-nav__link">
         Python
       </a>
     </li>
@@ -1533,7 +1482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Basics/about_python/" class="md-nav__link">
+      <a href="../../../Python/Basics/about_python/" class="md-nav__link">
         python 入門
       </a>
     </li>
@@ -1547,7 +1496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Basics/py_character%20code/" class="md-nav__link">
+      <a href="../../../Python/Basics/py_character%20code/" class="md-nav__link">
         文字コード
       </a>
     </li>
@@ -1561,7 +1510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Basics/py_control_syntax/" class="md-nav__link">
+      <a href="../../../Python/Basics/py_control_syntax/" class="md-nav__link">
         制御構文
       </a>
     </li>
@@ -1575,7 +1524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Basics/py_data_stracture/" class="md-nav__link">
+      <a href="../../../Python/Basics/py_data_stracture/" class="md-nav__link">
         データ構造
       </a>
     </li>
@@ -1589,7 +1538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Basics/py_function_adbanced/" class="md-nav__link">
+      <a href="../../../Python/Basics/py_function_adbanced/" class="md-nav__link">
         関数 応用
       </a>
     </li>
@@ -1603,7 +1552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Basics/py_function_basic/" class="md-nav__link">
+      <a href="../../../Python/Basics/py_function_basic/" class="md-nav__link">
         関数 基礎
       </a>
     </li>
@@ -1617,7 +1566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Basics/py_operator/" class="md-nav__link">
+      <a href="../../../Python/Basics/py_operator/" class="md-nav__link">
         Python 演算子
       </a>
     </li>
@@ -1631,7 +1580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Basics/py_variable/" class="md-nav__link">
+      <a href="../../../Python/Basics/py_variable/" class="md-nav__link">
         Python 変数
       </a>
     </li>
@@ -1645,7 +1594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Basics/summarize_proc/" class="md-nav__link">
+      <a href="../../../Python/Basics/summarize_proc/" class="md-nav__link">
         処理を集約する
       </a>
     </li>
@@ -1692,7 +1641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/ast/" class="md-nav__link">
+      <a href="../../../Python/Library/ast/" class="md-nav__link">
         ast モジュール
       </a>
     </li>
@@ -1706,7 +1655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/codecs/" class="md-nav__link">
+      <a href="../../../Python/Library/codecs/" class="md-nav__link">
         codecs
       </a>
     </li>
@@ -1720,7 +1669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/collections/" class="md-nav__link">
+      <a href="../../../Python/Library/collections/" class="md-nav__link">
         collections
       </a>
     </li>
@@ -1734,7 +1683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/csv/" class="md-nav__link">
+      <a href="../../../Python/Library/csv/" class="md-nav__link">
         CSV
       </a>
     </li>
@@ -1748,7 +1697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/datetime_and_time/" class="md-nav__link">
+      <a href="../../../Python/Library/datetime_and_time/" class="md-nav__link">
         datetime & time
       </a>
     </li>
@@ -1762,7 +1711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/difflib/" class="md-nav__link">
+      <a href="../../../Python/Library/difflib/" class="md-nav__link">
         difflib
       </a>
     </li>
@@ -1776,7 +1725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/glob/" class="md-nav__link">
+      <a href="../../../Python/Library/glob/" class="md-nav__link">
         glob
       </a>
     </li>
@@ -1790,7 +1739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/inspect/" class="md-nav__link">
+      <a href="../../../Python/Library/inspect/" class="md-nav__link">
         inspect モジュール
       </a>
     </li>
@@ -1804,7 +1753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/jinja/" class="md-nav__link">
+      <a href="../../../Python/Library/jinja/" class="md-nav__link">
         jinja
       </a>
     </li>
@@ -1818,7 +1767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/json/" class="md-nav__link">
+      <a href="../../../Python/Library/json/" class="md-nav__link">
         json
       </a>
     </li>
@@ -1832,7 +1781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/loggging/" class="md-nav__link">
+      <a href="../../../Python/Library/loggging/" class="md-nav__link">
         logging
       </a>
     </li>
@@ -1846,7 +1795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/multiprocessing/" class="md-nav__link">
+      <a href="../../../Python/Library/multiprocessing/" class="md-nav__link">
         multiprocessing
       </a>
     </li>
@@ -1860,7 +1809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/netmiko/" class="md-nav__link">
+      <a href="../../../Python/Library/netmiko/" class="md-nav__link">
         netmiko
       </a>
     </li>
@@ -1874,7 +1823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/os/" class="md-nav__link">
+      <a href="../../../Python/Library/os/" class="md-nav__link">
         os
       </a>
     </li>
@@ -1888,7 +1837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/pathlib/" class="md-nav__link">
+      <a href="../../../Python/Library/pathlib/" class="md-nav__link">
         pathlib
       </a>
     </li>
@@ -1902,7 +1851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/py_decimal/" class="md-nav__link">
+      <a href="../../../Python/Library/py_decimal/" class="md-nav__link">
         decimal
       </a>
     </li>
@@ -1916,7 +1865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/re_module/" class="md-nav__link">
+      <a href="../../../Python/Library/re_module/" class="md-nav__link">
         re
       </a>
     </li>
@@ -1930,7 +1879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/regex/" class="md-nav__link">
+      <a href="../../../Python/Library/regex/" class="md-nav__link">
         regex
       </a>
     </li>
@@ -1944,7 +1893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/seaborn/" class="md-nav__link">
+      <a href="../../../Python/Library/seaborn/" class="md-nav__link">
         seaborn
       </a>
     </li>
@@ -1958,7 +1907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/shutil/" class="md-nav__link">
+      <a href="../../../Python/Library/shutil/" class="md-nav__link">
         shutil
       </a>
     </li>
@@ -1972,7 +1921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/sys/" class="md-nav__link">
+      <a href="../../../Python/Library/sys/" class="md-nav__link">
         sys
       </a>
     </li>
@@ -1986,7 +1935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/tarfile/" class="md-nav__link">
+      <a href="../../../Python/Library/tarfile/" class="md-nav__link">
         tarfile
       </a>
     </li>
@@ -2000,7 +1949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/test/" class="md-nav__link">
+      <a href="../../../Python/Library/test/" class="md-nav__link">
         Test
       </a>
     </li>
@@ -2014,7 +1963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/timeit/" class="md-nav__link">
+      <a href="../../../Python/Library/timeit/" class="md-nav__link">
         timeit
       </a>
     </li>
@@ -2028,7 +1977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/yaml/" class="md-nav__link">
+      <a href="../../../Python/Library/yaml/" class="md-nav__link">
         YAML ファイルの取り扱い
       </a>
     </li>
@@ -2068,7 +2017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/Dash/reference/" class="md-nav__link">
+      <a href="../../../Python/Library/Dash/reference/" class="md-nav__link">
         reference
       </a>
     </li>
@@ -2082,7 +2031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/Dash/userful/" class="md-nav__link">
+      <a href="../../../Python/Library/Dash/userful/" class="md-nav__link">
         Userful
       </a>
     </li>
@@ -2129,7 +2078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/TextFSM/" class="md-nav__link">
+      <a href="../../../Python/Library/TextFSM/" class="md-nav__link">
         Index
       </a>
     </li>
@@ -2143,7 +2092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/TextFSM/TextFSMCodeLab_wiki/" class="md-nav__link">
+      <a href="../../../Python/Library/TextFSM/TextFSMCodeLab_wiki/" class="md-nav__link">
         TextFSMCodeLab.wiki
       </a>
     </li>
@@ -2157,7 +2106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/TextFSM/TextFSM_template_syntax/" class="md-nav__link">
+      <a href="../../../Python/Library/TextFSM/TextFSM_template_syntax/" class="md-nav__link">
         TextFSM template syntax
       </a>
     </li>
@@ -2171,7 +2120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/TextFSM/quickstart_summary/" class="md-nav__link">
+      <a href="../../../Python/Library/TextFSM/quickstart_summary/" class="md-nav__link">
         概要
       </a>
     </li>
@@ -2185,7 +2134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/TextFSM/sample%20_template_bgp_neighbor/" class="md-nav__link">
+      <a href="../../../Python/Library/TextFSM/sample%20_template_bgp_neighbor/" class="md-nav__link">
         sample template bgp neighbor
       </a>
     </li>
@@ -2232,7 +2181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/openpyxl/0_index/" class="md-nav__link">
+      <a href="../../../Python/Library/openpyxl/0_index/" class="md-nav__link">
         openpyxl 目次
       </a>
     </li>
@@ -2246,7 +2195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/openpyxl/1_oepnpyxl_book/" class="md-nav__link">
+      <a href="../../../Python/Library/openpyxl/1_oepnpyxl_book/" class="md-nav__link">
         Book の操作
       </a>
     </li>
@@ -2260,7 +2209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/openpyxl/2_oepnpyxl_sheet/" class="md-nav__link">
+      <a href="../../../Python/Library/openpyxl/2_oepnpyxl_sheet/" class="md-nav__link">
         sheet の操作
       </a>
     </li>
@@ -2274,7 +2223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/openpyxl/3_oepnpyxl_cell/" class="md-nav__link">
+      <a href="../../../Python/Library/openpyxl/3_oepnpyxl_cell/" class="md-nav__link">
         セル の操作
       </a>
     </li>
@@ -2288,7 +2237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/openpyxl/4_oepnpyxl_/" class="md-nav__link">
+      <a href="../../../Python/Library/openpyxl/4_oepnpyxl_/" class="md-nav__link">
         4 oepnpyxl 
       </a>
     </li>
@@ -2335,7 +2284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/pandas/reference/" class="md-nav__link">
+      <a href="../../../Python/Library/pandas/reference/" class="md-nav__link">
         Reference
       </a>
     </li>
@@ -2382,7 +2331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/pytest/01_pytest_execute/" class="md-nav__link">
+      <a href="../../../Python/Library/pytest/01_pytest_execute/" class="md-nav__link">
         pytest の実行
       </a>
     </li>
@@ -2396,7 +2345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/pytest/02_pytest_test_function/" class="md-nav__link">
+      <a href="../../../Python/Library/pytest/02_pytest_test_function/" class="md-nav__link">
         pytest - テスト関数の作成
       </a>
     </li>
@@ -2443,7 +2392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/ttp/ttp_Indicators/" class="md-nav__link">
+      <a href="../../../Python/Library/ttp/ttp_Indicators/" class="md-nav__link">
         ttp - Indicators
       </a>
     </li>
@@ -2457,7 +2406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/ttp/ttp_function/" class="md-nav__link">
+      <a href="../../../Python/Library/ttp/ttp_function/" class="md-nav__link">
         ttp - Functions
       </a>
     </li>
@@ -2471,7 +2420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/ttp/ttp_quickstart/" class="md-nav__link">
+      <a href="../../../Python/Library/ttp/ttp_quickstart/" class="md-nav__link">
         ttp
       </a>
     </li>
@@ -2485,7 +2434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Library/ttp/ttp_regex_pattern/" class="md-nav__link">
+      <a href="../../../Python/Library/ttp/ttp_regex_pattern/" class="md-nav__link">
         Regex pattern
       </a>
     </li>
@@ -2539,7 +2488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Recipe/file_operation/" class="md-nav__link">
+      <a href="../../../Python/Recipe/file_operation/" class="md-nav__link">
         ファイル操作
       </a>
     </li>
@@ -2553,7 +2502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Recipe/list/" class="md-nav__link">
+      <a href="../../../Python/Recipe/list/" class="md-nav__link">
         list
       </a>
     </li>
@@ -2567,7 +2516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Recipe/pywatchdog/" class="md-nav__link">
+      <a href="../../../Python/Recipe/pywatchdog/" class="md-nav__link">
         python でログ監視
       </a>
     </li>
@@ -2614,7 +2563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Setup/pip/" class="md-nav__link">
+      <a href="../../../Python/Setup/pip/" class="md-nav__link">
         pip 関連
       </a>
     </li>
@@ -2628,7 +2577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Setup/windows_dev_env/" class="md-nav__link">
+      <a href="../../../Python/Setup/windows_dev_env/" class="md-nav__link">
         windows 開発環境
       </a>
     </li>
@@ -2642,7 +2591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Setup/wsl2_pyenv/" class="md-nav__link">
+      <a href="../../../Python/Setup/wsl2_pyenv/" class="md-nav__link">
         wsl2 + pyenv で Linux python環境構築
       </a>
     </li>
@@ -2656,7 +2605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/Setup/xpresso/" class="md-nav__link">
+      <a href="../../../Python/Setup/xpresso/" class="md-nav__link">
         xpresso setup
       </a>
     </li>
@@ -2703,7 +2652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/network/netmiko_get_inventory/" class="md-nav__link">
+      <a href="../../../Python/network/netmiko_get_inventory/" class="md-nav__link">
         netmiko
       </a>
     </li>
@@ -2717,7 +2666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/network/pyats_login/" class="md-nav__link">
+      <a href="../../../Python/network/pyats_login/" class="md-nav__link">
         pyats login
       </a>
     </li>
@@ -2731,7 +2680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/network/telnet/" class="md-nav__link">
+      <a href="../../../Python/network/telnet/" class="md-nav__link">
         telnet
       </a>
     </li>
@@ -2745,7 +2694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/network/ttp/" class="md-nav__link">
+      <a href="../../../Python/network/ttp/" class="md-nav__link">
         TTP
       </a>
     </li>
@@ -2792,7 +2741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/other/memo/" class="md-nav__link">
+      <a href="../../../Python/other/memo/" class="md-nav__link">
         雑多なメモ
       </a>
     </li>
@@ -2806,7 +2755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/other/tmp/" class="md-nav__link">
+      <a href="../../../Python/other/tmp/" class="md-nav__link">
         一時メモ
       </a>
     </li>
@@ -2820,7 +2769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/other/useful/" class="md-nav__link">
+      <a href="../../../Python/other/useful/" class="md-nav__link">
         Useful
       </a>
     </li>
@@ -2834,7 +2783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/other/useful_word/" class="md-nav__link">
+      <a href="../../../Python/other/useful_word/" class="md-nav__link">
         変数でよく使う英単語
       </a>
     </li>
@@ -2881,7 +2830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/pyATS/genie_shell/" class="md-nav__link">
+      <a href="../../../Python/pyATS/genie_shell/" class="md-nav__link">
         genie shell
       </a>
     </li>
@@ -2895,7 +2844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/pyATS/pyats_Blitz_effective/" class="md-nav__link">
+      <a href="../../../Python/pyATS/pyats_Blitz_effective/" class="md-nav__link">
         Blitz 便利技
       </a>
     </li>
@@ -2909,7 +2858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/pyATS/pyats_Blitz_getting_started/" class="md-nav__link">
+      <a href="../../../Python/pyATS/pyats_Blitz_getting_started/" class="md-nav__link">
         Blitz 入門
       </a>
     </li>
@@ -2923,7 +2872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/pyATS/pyats_basic1/" class="md-nav__link">
+      <a href="../../../Python/pyATS/pyats_basic1/" class="md-nav__link">
         Getting Started
       </a>
     </li>
@@ -2937,7 +2886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/pyATS/pyats_basic2/" class="md-nav__link">
+      <a href="../../../Python/pyATS/pyats_basic2/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -2951,7 +2900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/pyATS/pyats_genie/" class="md-nav__link">
+      <a href="../../../Python/pyATS/pyats_genie/" class="md-nav__link">
         Genie
       </a>
     </li>
@@ -2965,7 +2914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/pyATS/pyats_instllation/" class="md-nav__link">
+      <a href="../../../Python/pyATS/pyats_instllation/" class="md-nav__link">
         pyATS instllation
       </a>
     </li>
@@ -2979,7 +2928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/pyATS/pyats_run_job/" class="md-nav__link">
+      <a href="../../../Python/pyATS/pyats_run_job/" class="md-nav__link">
         pyATS 実行方法
       </a>
     </li>
@@ -2993,7 +2942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/pyATS/pyats_unicorn/" class="md-nav__link">
+      <a href="../../../Python/pyATS/pyats_unicorn/" class="md-nav__link">
         Unicon
       </a>
     </li>
@@ -3007,7 +2956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/pyATS/reference/" class="md-nav__link">
+      <a href="../../../Python/pyATS/reference/" class="md-nav__link">
         API reference
       </a>
     </li>
@@ -3054,7 +3003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/readbooks/complete_py_index/" class="md-nav__link">
+      <a href="../../../Python/readbooks/complete_py_index/" class="md-nav__link">
         シリコンバレー一流プログラマーが教える　Pythonプロフェッショナル大全
       </a>
     </li>
@@ -3109,7 +3058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../VScode/001_extension/" class="md-nav__link">
+      <a href="../../../VScode/001_extension/" class="md-nav__link">
         拡張機能
       </a>
     </li>
@@ -3157,7 +3106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/memo/" class="md-nav__link">
+      <a href="../../../docker/memo/" class="md-nav__link">
         memo
       </a>
     </li>
@@ -3191,90 +3140,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#wsl-command" class="md-nav__link">
-    wsl command
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basic-setup" class="md-nav__link">
-    basic setup
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    ビープ音を消す
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    初期設定
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    設定関連
-  </a>
-  
-    <nav class="md-nav" aria-label="設定関連">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    出力をみやすく設定
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#font" class="md-nav__link">
-    font
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vmware" class="md-nav__link">
-    VMware との共存
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    ファイルシステムへのアクセス
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#wsl-vscode" class="md-nav__link">
-    wsl で vscode
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -3285,212 +3150,18 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/Linux/wsl2.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/Network/Cisco_ACI/cisco_aci.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="wsl">wsl</h1>
+<h1 id="cisco-aci">Cisco ACI の基本</h1>
 <ul>
-<li><a href="https://docs.microsoft.com/ja-jp/windows/wsl/">Windows Subsystem for Linux に関するドキュメント</a></li>
-</ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>wsl --list --online
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>wsl --install -d Ubuntu-20.04
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>wsl -l -v
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># アンインストール</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>wsl --shutdown 
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>wsl --unregister Ubuntu-20.04
-</code></pre></div>
-<h2 id="wsl-command">wsl command</h2>
-<table>
-<thead>
-<tr>
-<th align="left">コマンド</th>
-<th align="left">説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>wsl --install</code></td>
-<td align="left"><a href="https://docs.microsoft.com/ja-jp/windows/wsl/install">WSL のインストール</a></td>
-</tr>
-<tr>
-<td align="left"><code>wsl --list --verbose</code></td>
-<td align="left">インストールされているディストリビューションの一覧を確認</td>
-</tr>
-<tr>
-<td align="left"><code>wsl --set-default [name]</code></td>
-<td align="left">既定のディストリビューションを変更</td>
-</tr>
-</tbody>
-</table>
-<h2 id="basic-setup">basic setup</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo apt update <span class="o">&amp;&amp;</span> sudo apt upgrade -y
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sudo apt -y install language-pack-ja <span class="c1"># 日本語化</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>sudo update-locale <span class="nv">LANG</span><span class="o">=</span>ja_JP.UTF8 <span class="c1"># ロケールを日本語に設定</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>sudo apt -y install manpages-ja manpages-ja-dev <span class="c1"># 日本語マニュアルのインストール</span>
-</code></pre></div>
-<h2 id="_1">ビープ音を消す</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>vim /etc/inputrc
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1"># コメントアウトを外す</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">set</span> bell-style none
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>sudo vim /etc/vim/vimrc
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># ファイル最下部に書き込み</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="nb">set</span> visualbell <span class="nv">t_vb</span><span class="o">=</span>
-</code></pre></div>
-<h2 id="_2">初期設定</h2>
-<ul>
-<li><a href="https://www.kkaneko.jp/tools/wsl/wsl2.html">WSL2 のインストール，Ubuntu のインストールと利用（Windows 11 対応の記事）（Windows 上）</a></li>
-<li>[Ubuntu インストール後の設定]https://www.kkaneko.jp/tools/ubuntu/ubuntu_setup.html()</li>
-</ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># パスワード変更</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>sudo passwd root
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># ダウンロード元を日本に設定</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>sudo sed -i <span class="s1">&#39;s/\/\/archive.ubuntu.com/\/\/jp.archive.ubuntu.com/g&#39;</span> /etc/apt/sources.list
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>sudo sed -i <span class="s1">&#39;s/\/\/us.archive.ubuntu.com/\/\/jp.archive.ubuntu.com/g&#39;</span> /etc/apt/sources.list
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>sudo sed -i <span class="s1">&#39;s/\/\/fr.archive.ubuntu.com/\/\/jp.archive.ubuntu.com/g&#39;</span> /etc/apt/sources.list
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>sudo apt -y update
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="c1"># apt-transport-https のインストール</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>sudo apt -y update
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>sudo apt -y install apt-transport-https
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="c1"># システムの更新</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>sudo apt -y update
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>sudo apt -yV upgrade
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>sudo apt -yV dist-upgrade
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>sudo apt -yV autoremove
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>sudo apt autoclean
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>
-<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="c1"># タイムゾーンを Asia/Tokyo に、ロケールを ja_JP.UTF-8 に設定する.</span>
-<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>sudo timedatectl set-timezone Asia/Tokyo
-<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="nb">export</span> <span class="nv">LANG</span><span class="o">=</span>ja_JP.UTF-8 
-<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="nb">export</span> <span class="nv">LC_ALL</span><span class="o">=</span>ja_JP.UTF-8 
-<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="nb">export</span> <span class="nv">LANGUAGE</span><span class="o">=</span>ja_JP.UTF-8 
-<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>sudo sed -i <span class="s1">&#39;s/# ja_JP.UTF-8 UTF-8/ja_JP.UTF-8 UTF-8/g&#39;</span> /etc/locale.gen
-<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>sudo locale-gen
-<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>sudo update-locale <span class="nv">LANG</span><span class="o">=</span>ja_JP.UTF-8
-<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>sudo dpkg-reconfigure -f noninteractive locales 
-<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>sudo /usr/sbin/update-locale <span class="nv">LANG</span><span class="o">=</span><span class="nv">$LANG</span> <span class="nv">LC_ALL</span><span class="o">=</span><span class="nv">$LANG</span>
-<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>
-<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="c1"># NTPによる時刻合わせの有効化</span>
-<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>sudo apt -y update
-<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>sudo apt install -y ntp
-<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>sudo apt install -y ntpdate
-<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>sudo apt install -y tzdata
-<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>sudo service ntp stop
-<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>sudo /usr/sbin/ntpdate ntp.nict.jp
-<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>sudo /usr/sbin/service ntp start
-<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>sudo timedatectl set-ntp <span class="nb">true</span>
-<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>
-<a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a><span class="c1"># 日本語の言語サポートのインストール</span>
-<a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>sudo apt -y update
-<a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>sudo apt -y install language-selector-common
-<a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>sudo apt -y install <span class="k">$(</span>check-language-support<span class="k">)</span>
-<a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>
-<a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a><span class="c1"># 運用保守用ツール net-tools, pciutils のインストール</span>
-<a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>sudo apt -y update
-<a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>sudo apt -y install net-tools pciutils
-<a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>
-<a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a><span class="c1"># デスクトップのユーザディレクトリの言語を英語に変更</span>
-<a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>sudo apt -y update
-<a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>sudo apt -y install xdg-user-dirs-gtk 
-<a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a><span class="nv">LANG</span><span class="o">=</span>C xdg-user-dirs-gtk-update
-<a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>
-<a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a><span class="c1"># C/C++ コンパイラ，Python 3 ヘッダファイル・ライブラリ等のインストール</span>
-<a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>sudo apt -y update
-<a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>sudo apt -y install build-essential python3-dev python3-pip
-<a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a>sudo apt install git gcc make openssl libssl-dev libbz2-dev libreadline-dev libsqlite3-dev libffi-dev zlib1g-dev
-</code></pre></div>
-<h2 id="_3">設定関連</h2>
-<h3 id="_4">出力をみやすく設定</h3>
-<ul>
-<li>LS_COLORS設定を出力</li>
-</ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>dircolors -p &gt; ~/.dircolors
-</code></pre></div>
-<ul>
-<li>設定変更</li>
-</ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>cat ~/.dircolors
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>vi ~/.dircolors
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a># 以下の行を01;34 へ変更
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>OTHER_WRITABLE 01;34 # dir that is other-writable (o+w) and not sticky
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>eval $(dircolors -b ~/.dircolors)
-</code></pre></div>
-<h3 id="font">font</h3>
-<ul>
-<li><a href="https://github.com/yuru7/HackGen/releases/tag/v2.6.3">HackGen</a></li>
-<li><code>HackGenNerd_v2.6.3.zip</code> をダウンロードし解凍、以下をインストール<ul>
-<li>HackGenNerdConsole-Regular.ttf</li>
-<li>HackGenNerdConsole-Bold.ttf</li>
-</ul>
-</li>
-</ul>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>フォントのディレクトリは以下の場所です</p>
-<ul>
-<li><code>C:\Windows\Fonts</code></li>
-</ul>
-</div>
-<h3 id="vmware">VMware との共存</h3>
-<p>Windows ハイパーバイザー プラットフォーム を有効にすること</p>
-<ul>
-<li><a href="https://qiita.com/matarillo/items/ca1eecf8f9a3cd76f9ce">参考：WSL2とHyper-Vの関係</a></li>
-<li>GNS3との共存では以下の設定を行うこと（事前にIntel VT-Xはvm の設定でoff にしておくこと） </li>
-<li><a href="https://www.google.com/search?q=enable_hardware_acceleration+%3D+False&amp;rlz=1C1CHZN_jaJP974JP974&amp;oq=enable_hardware_acceleration+%3D+False&amp;aqs=chrome..69i57.447j0j4&amp;sourceid=chrome&amp;ie=UTF-8">参考：GNS3＋Virtual Box＋FortiGateでFortiGate検証環境を作成</a></li>
-</ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ssh gns3@xxx.xxx.xxx.xxx
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a># address は起動時のGUI表示で確認すること
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a># passwd は gns
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>cd /home/gns3/.config/GNS3/2.2/
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>cat gns3_server.conf
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>cp gns3_server.conf gns3_server_bkp.conf
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>echo [Qemu] &gt;&gt;  gns3_server.conf
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>echo &quot;enable_hardware_acceleration = False&quot; &gt;&gt;  gns3_server.conf
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>echo &quot;require_hardware_acceleration = False&quot;  &gt;&gt;  gns3_server.conf
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>cat gns3_server.conf
-</code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>VM で　VT-x/EPT を有効化していると起動に失敗...</p>
-</div>
-<h2 id="_5">ファイルシステムへのアクセス</h2>
-<ul>
-<li>windows ---&gt; wsl<ul>
-<li><code>\\wsl$</code></li>
-</ul>
-</li>
-<li>wsl ---&gt; windows<ul>
-<li><code>/mnt/c/Users</code></li>
-</ul>
-</li>
-</ul>
-<h2 id="wsl-vscode">wsl で vscode</h2>
-<ul>
-<li><a href="https://docs.microsoft.com/ja-jp/windows/wsl/tutorials/wsl-vscode">Linux 用 Windows サブシステムで Visual Studio Code の使用を開始する</a></li>
-</ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo apt-get update
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>sudo apt-get install wget ca-certificates
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>code .
-</code></pre></div>
-<ul>
-<li>VS Code からは</li>
-<li><code>CTRL + SHIFT + P</code> 押下</li>
-<li><code>Remote-WSL</code>　入力</li>
+<li><a href="https://www.sash.jp/cisco-aci-fundamentals">Cisco ACI Fundamentals</a></li>
+<li><a href="https://learningnetwork.cisco.com/s/article/x-aci-26318">なぜACIなのか？</a></li>
+<li><a href="https://learningnetwork.cisco.com/s/article/cli-x">CLI での確認方法</a></li>
+<li><a href="https://www.cisco.com/c/ja_jp/td/docs/switches/datacenter/aci/apic/sw/1-x/cli/nx/cfg/b_APIC_NXOS_CLI_User_Guide/b_APIC_NXOS_CLI_User_Guide_appendix_010011.html">Cisco APIC NX-OS スタイル コマンドライン インターフェイス コンフィギュレーション ガイド</a></li>
 </ul>
 
   <hr>
@@ -3498,7 +3169,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/09/10 14:43</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-custom">2022/11/06 08:31</span>
       
     
   </small>
@@ -3521,7 +3192,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../command1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Linux Command 1" rel="prev">
+        <a href="../../Ansible/telnet/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Ansible - telnet" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -3530,20 +3201,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Linux Command 1
+              Ansible - telnet
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../Mkdocs/00_index/" class="md-footer__link md-footer__link--next" aria-label="Next: Mkdocs - 目次" rel="next">
+        <a href="../../IOS-XR/Basic/" class="md-footer__link md-footer__link--next" aria-label="Next: IOS - XR コマンド" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Mkdocs - 目次
+              IOS - XR コマンド
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -3577,10 +3248,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "navigation.tabs", "navigation.top", "search.highlight", "search.suggest", "search.share"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "navigation.tabs", "navigation.top", "search.highlight", "search.suggest", "search.share"], "search": "../../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ed9748b7.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.ed9748b7.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@9.0.0/dist/mermaid.min.js"></script>
       
