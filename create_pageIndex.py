@@ -20,6 +20,8 @@ def create_index(target_file):
     with open(target_file,"r", encoding="utf-8") as f:
         textline = f.readlines()
     # 見出しを抽出
+    # TODO: 「## Page Index」の場合に無視するようにする
+    # TODO: 辞書型に変更？
     for text in textline:
         if "## " in text:
             indexList.append(text.replace("\n",""))
@@ -37,7 +39,9 @@ def create_index(target_file):
         elif index5_ptrn.match(index):
             indexText = index5_ptrn.sub("",index)
             result.append(f"      - [{indexText}](#{indexText})")
-            
+    
+    #確認用
+    print(result)
     return result
 
 
