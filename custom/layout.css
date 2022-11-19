@@ -3,6 +3,16 @@
 /* 見出し */
 h2 {
   border-bottom: 2px solid teal;
+  font-weight: bold;
+}
+h3 {
+  font-weight: bold;
+}
+h4 {
+  font-weight: bold;
+}
+h5 {
+  font-weight: bold;
 }
 
 /* 見出しに改行を追加して間隔を調整 */
@@ -25,3 +35,11 @@ h4::before {
   column-count: 2;
 }
 
+/* 本文中への記載方法 (html)
+<div id="columns">
+	<li>left 1</li>
+	<li>left 2</li>
+	<li>left 3</li>
+	<li>left 4</li>
+</div>
+*/
