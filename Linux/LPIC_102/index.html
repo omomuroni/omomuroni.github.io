@@ -1,0 +1,5079 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://omomuroni.github.io/Linux/LPIC_102/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
+    
+    
+      
+        <title>102 install / Pkg - おもむろにメモ書き</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e411adfe.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@9.0.0/dist/mermaid.css">
+    
+      <link rel="stylesheet" href="../../custom/custom_table.css">
+    
+      <link rel="stylesheet" href="../../custom/layout.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#102-install-pkg" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="おもむろにメモ書き" class="md-header__button md-logo" aria-label="おもむろにメモ書き" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            おもむろにメモ書き
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              102 install / Pkg
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/omomuroni/omomuroni.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      index
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Effective/00_index/" class="md-tabs__link">
+        Effective
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Git/00_index/" class="md-tabs__link">
+        Git
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../HTML%26CSS/" class="md-tabs__link">
+        HTML&CSS
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Hobby/fitbit/" class="md-tabs__link">
+        Hobby
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../LPIC101_CheatSheet/" class="md-tabs__link md-tabs__link--active">
+        Linux
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Mkdocs/00_index/" class="md-tabs__link">
+        Mkdocs
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Network/evpn/" class="md-tabs__link">
+        Network
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Python/" class="md-tabs__link">
+        Python
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../VScode/001_extension/" class="md-tabs__link">
+        VScode
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../docker/memo/" class="md-tabs__link">
+        Docker
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="おもむろにメモ書き" class="md-nav__button md-logo" aria-label="おもむろにメモ書き" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    おもむろにメモ書き
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/omomuroni/omomuroni.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        index
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Effective
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Effective" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Effective
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Effective/00_index/" class="md-nav__link">
+        効率化 - 目次
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Effective/Anki/" class="md-nav__link">
+        Anki
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Effective/draw.io/" class="md-nav__link">
+        Draw.io をvscode で使う
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Effective/english/" class="md-nav__link">
+        英語おすすめ勉強サイト
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Effective/marp/" class="md-nav__link">
+        Marp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Effective/powershell_log/" class="md-nav__link">
+        Powershell でログ取得
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Effective/powershell_useful/" class="md-nav__link">
+        Powershell 便利技
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Effective/sakura_editer/" class="md-nav__link">
+        サクラエディタ設定
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Effective/slide_sample/" class="md-nav__link">
+        Marp で作成した slide サンプル
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Effective/tool/" class="md-nav__link">
+        便利なツール
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Git" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/00_index/" class="md-nav__link">
+        Git - 目次
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/git_cheat_sheet/" class="md-nav__link">
+        Git Cheat Sheet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/git_knowledge/" class="md-nav__link">
+        git 操作
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/git_local_repository/" class="md-nav__link">
+        Git - local で管理
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          HTML&CSS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="HTML&CSS" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          HTML&CSS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML%26CSS/" class="md-nav__link">
+        index
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Hobby
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Hobby" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Hobby
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hobby/fitbit/" class="md-nav__link">
+        Fitbit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hobby/google_drive_api/" class="md-nav__link">
+        Google Drive API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hobby/google_fit_api/" class="md-nav__link">
+        google fit API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hobby/python_slack_sdk/" class="md-nav__link">
+        Python Slack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hobby/slack/" class="md-nav__link">
+        Slack API
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linux" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LPIC101_CheatSheet/" class="md-nav__link">
+        LPIC 101チートシート
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LPIC102_CheatSheet/" class="md-nav__link">
+        LPIC 102チートシート
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LPIC_101/" class="md-nav__link">
+        101 Sys archit.
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          102 install / Pkg
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        102 install / Pkg
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    ハードディスクのレイアウト設計
+  </a>
+  
+    <nav class="md-nav" aria-label="ハードディスクのレイアウト設計">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    論理ボリュームを作成するまでの手順
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    用語解説
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    ブートマネージャのインストール
+  </a>
+  
+    <nav class="md-nav" aria-label="ブートマネージャのインストール">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grub-legacy" class="md-nav__link">
+    GRUB Legacyの設定ファイル
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grub2" class="md-nav__link">
+    GRUB2の設定ファイル
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux カーネル
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    共有ライブラリの管理
+  </a>
+  
+    <nav class="md-nav" aria-label="共有ライブラリの管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ldconfig" class="md-nav__link">
+    ldconfig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ldd" class="md-nav__link">
+    ldd
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debian" class="md-nav__link">
+    Debianパッケージ管理
+  </a>
+  
+    <nav class="md-nav" aria-label="Debianパッケージ管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dpkg" class="md-nav__link">
+    dpkg
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dpkg-reconfigure" class="md-nav__link">
+    dpkg-reconfigure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt-get" class="md-nav__link">
+    apt-get
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt-cache" class="md-nav__link">
+    apt-cache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aptitude" class="md-nav__link">
+    aptitude
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rpmyum" class="md-nav__link">
+    RPMとYUMパッケージ管理
+  </a>
+  
+    <nav class="md-nav" aria-label="RPMとYUMパッケージ管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rpm" class="md-nav__link">
+    rpm
+  </a>
+  
+    <nav class="md-nav" aria-label="rpm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rpm-" class="md-nav__link">
+    RPMコマンド - インストール/アップグレードモード
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpm-_1" class="md-nav__link">
+    RPMコマンド - アンインストールモード
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpm-_2" class="md-nav__link">
+    RPMコマンド - 照会モード
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-q" class="md-nav__link">
+    よく使用する -q オプションの一覧
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-yum" class="md-nav__link">
+    パッケージの管理 - YUM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-dnf" class="md-nav__link">
+    パッケージの管理 - DNF
+  </a>
+  
+    <nav class="md-nav" aria-label="パッケージの管理 - DNF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yum" class="md-nav__link">
+    yum [ オプション ] サブコマンド
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yumdownloader" class="md-nav__link">
+    yumdownloader
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zypper" class="md-nav__link">
+    Zypper
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oslinux" class="md-nav__link">
+    仮想化のゲストOSとしてのLinux
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LPIC_Level1_CmdList/" class="md-nav__link">
+        Lpic Level 1 Cmd List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Speedmaster_101/" class="md-nav__link">
+        LPIC レベル1 スピードマスター 101
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Speedmaster_102/" class="md-nav__link">
+        LPIC レベル1 スピードマスター 102
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../command1/" class="md-nav__link">
+        Linux 頻出コマンド
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wsl2_setup/" class="md-nav__link">
+        wsl セットアップ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_10" type="checkbox" id="__nav_6_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_10">
+          tmp LPIC Lv.1 101
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="tmp LPIC Lv.1 101" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_10">
+          <span class="md-nav__icon md-icon"></span>
+          tmp LPIC Lv.1 101
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tmp_LPIC_Lv.1_101/LPIC_103/" class="md-nav__link">
+        103 GNU / Unix Cmd
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tmp_LPIC_Lv.1_101/LPIC_104/" class="md-nav__link">
+        104 Device / FHS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Mkdocs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mkdocs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Mkdocs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mkdocs/00_index/" class="md-nav__link">
+        Mkdocs - 目次
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mkdocs/extended_markdown/" class="md-nav__link">
+        HTML & CSS による拡張
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mkdocs/markdown/" class="md-nav__link">
+        Markdown 記法まとめ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mkdocs/memo/" class="md-nav__link">
+        Mkdocs Material memo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mkdocs/mkdocs_sample/" class="md-nav__link">
+        Material 表現 sample
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Network
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Network" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Network
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/evpn/" class="md-nav__link">
+        EVPN メモ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/ipaddress/" class="md-nav__link">
+        Python で ipaddress 生成
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3" type="checkbox" id="__nav_8_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_3">
+          Ansible
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ansible" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_3">
+          <span class="md-nav__icon md-icon"></span>
+          Ansible
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/Ansible/installation/" class="md-nav__link">
+        Ansible install
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/Ansible/telnet/" class="md-nav__link">
+        Ansible - telnet
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_4" type="checkbox" id="__nav_8_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_4">
+          Cisco ACI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cisco ACI" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_4">
+          <span class="md-nav__icon md-icon"></span>
+          Cisco ACI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/Cisco_ACI/cisco_aci/" class="md-nav__link">
+        Cisco ACI の基本
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_5" type="checkbox" id="__nav_8_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_5">
+          IOS XR
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="IOS XR" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_5">
+          <span class="md-nav__icon md-icon"></span>
+          IOS XR
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/IOS-XR/Basic/" class="md-nav__link">
+        IOS - XR コマンド
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/IOS-XR/Process/" class="md-nav__link">
+        Process Restart
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/IOS-XR/create_config/" class="md-nav__link">
+        Stress Config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/IOS-XR/summary/" class="md-nav__link">
+        Command
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_6" type="checkbox" id="__nav_8_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_6">
+          IXIA
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="IXIA" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_6">
+          <span class="md-nav__icon md-icon"></span>
+          IXIA
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/IXIA/IXIA_reference/" class="md-nav__link">
+        IXIA reference
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_7" type="checkbox" id="__nav_8_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_7">
+          JUNOS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="JUNOS" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_7">
+          <span class="md-nav__icon md-icon"></span>
+          JUNOS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/JUNOS/JUNOS_EX4650/" class="md-nav__link">
+        JUNOS EX4650
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/JUNOS/JUNOS_MPLS_config/" class="md-nav__link">
+        JUNOS MPLS 設定
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/JUNOS/junos_cmd_cheatsheet/" class="md-nav__link">
+        JUNOS Cmd cheat sheat
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/JUNOS/junos_config_cheatsheet/" class="md-nav__link">
+        JUNOS config cheat sheat
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_8" type="checkbox" id="__nav_8_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_8">
+          Setup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Setup" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_8">
+          <span class="md-nav__icon md-icon"></span>
+          Setup
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/Setup/" class="md-nav__link">
+        index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/Setup/gns3setup_for_mac/" class="md-nav__link">
+        Mac で GNS3 を使う
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_9" type="checkbox" id="__nav_8_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_9">
+          Telemetory
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Telemetory" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_9">
+          <span class="md-nav__icon md-icon"></span>
+          Telemetory
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/Telemetory/netconf/" class="md-nav__link">
+        NETCONF
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/Telemetory/pyang/" class="md-nav__link">
+        pyang
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/Telemetory/telemetory/" class="md-nav__link">
+        Telemetry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/Telemetory/telemetory_env/" class="md-nav__link">
+        OSSでTelemetory環境構築
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Network/Telemetory/yang/" class="md-nav__link">
+        YANG
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_2" type="checkbox" id="__nav_9_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_2">
+          Basics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Basics" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_2">
+          <span class="md-nav__icon md-icon"></span>
+          Basics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Basics/about_python/" class="md-nav__link">
+        python 入門
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Basics/py_character%20code/" class="md-nav__link">
+        文字コード
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Basics/py_control_syntax/" class="md-nav__link">
+        制御構文
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Basics/py_data_stracture/" class="md-nav__link">
+        データ構造
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Basics/py_function_adbanced/" class="md-nav__link">
+        関数 応用
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Basics/py_function_basic/" class="md-nav__link">
+        関数 基礎
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Basics/py_operator/" class="md-nav__link">
+        Python 演算子
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Basics/py_variable/" class="md-nav__link">
+        Python 変数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Basics/summarize_proc/" class="md-nav__link">
+        処理を集約する
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_3" type="checkbox" id="__nav_9_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_3">
+          Library
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Library" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_3">
+          <span class="md-nav__icon md-icon"></span>
+          Library
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/ast/" class="md-nav__link">
+        ast モジュール
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/beautifulsoup/" class="md-nav__link">
+        Beautiful Soup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/codecs/" class="md-nav__link">
+        codecs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/collections/" class="md-nav__link">
+        collections
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/csv/" class="md-nav__link">
+        CSV
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/datetime_and_time/" class="md-nav__link">
+        datetime & time
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/difflib/" class="md-nav__link">
+        difflib
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/glob/" class="md-nav__link">
+        glob
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/inspect/" class="md-nav__link">
+        inspect モジュール
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/itertools/" class="md-nav__link">
+        itertools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/jinja/" class="md-nav__link">
+        jinja
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/json/" class="md-nav__link">
+        json
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/loggging/" class="md-nav__link">
+        logging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/multiprocessing/" class="md-nav__link">
+        multiprocessing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/netmiko/" class="md-nav__link">
+        netmiko
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/os/" class="md-nav__link">
+        os
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/pathlib/" class="md-nav__link">
+        pathlib
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/py_decimal/" class="md-nav__link">
+        decimal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/re_module/" class="md-nav__link">
+        re
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/regex/" class="md-nav__link">
+        regex
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/seaborn/" class="md-nav__link">
+        seaborn
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/shutil/" class="md-nav__link">
+        shutil
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/sys/" class="md-nav__link">
+        sys
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/tarfile/" class="md-nav__link">
+        tarfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/timeit/" class="md-nav__link">
+        timeit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/yaml/" class="md-nav__link">
+        YAML ファイルの取り扱い
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_3_27" type="checkbox" id="__nav_9_3_27" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_3_27">
+          Dash
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Dash" data-md-level="3">
+        <label class="md-nav__title" for="__nav_9_3_27">
+          <span class="md-nav__icon md-icon"></span>
+          Dash
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/Dash/reference/" class="md-nav__link">
+        reference
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_3_28" type="checkbox" id="__nav_9_3_28" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_3_28">
+          TextFSM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="TextFSM" data-md-level="3">
+        <label class="md-nav__title" for="__nav_9_3_28">
+          <span class="md-nav__icon md-icon"></span>
+          TextFSM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/TextFSM/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/TextFSM/TextFSMCodeLab_wiki/" class="md-nav__link">
+        TextFSMCodeLab.wiki
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/TextFSM/TextFSM_template_syntax/" class="md-nav__link">
+        TextFSM template syntax
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/TextFSM/quickstart_summary/" class="md-nav__link">
+        概要
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/TextFSM/sample%20_template_bgp_neighbor/" class="md-nav__link">
+        sample template bgp neighbor
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_3_29" type="checkbox" id="__nav_9_3_29" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_3_29">
+          Openpyxl
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Openpyxl" data-md-level="3">
+        <label class="md-nav__title" for="__nav_9_3_29">
+          <span class="md-nav__icon md-icon"></span>
+          Openpyxl
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/openpyxl/0_index/" class="md-nav__link">
+        openpyxl 目次
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/openpyxl/1_oepnpyxl_book/" class="md-nav__link">
+        Book の操作
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/openpyxl/2_oepnpyxl_sheet/" class="md-nav__link">
+        sheet の操作
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/openpyxl/3_oepnpyxl_cell/" class="md-nav__link">
+        セル の操作
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/openpyxl/4_oepnpyxl_/" class="md-nav__link">
+        4 oepnpyxl 
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_3_30" type="checkbox" id="__nav_9_3_30" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_3_30">
+          Pandas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pandas" data-md-level="3">
+        <label class="md-nav__title" for="__nav_9_3_30">
+          <span class="md-nav__icon md-icon"></span>
+          Pandas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/pandas/reference/" class="md-nav__link">
+        Reference
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_3_31" type="checkbox" id="__nav_9_3_31" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_3_31">
+          Pytest
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pytest" data-md-level="3">
+        <label class="md-nav__title" for="__nav_9_3_31">
+          <span class="md-nav__icon md-icon"></span>
+          Pytest
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/pytest/01_pytest_execute/" class="md-nav__link">
+        pytest の実行
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/pytest/02_pytest_test_function/" class="md-nav__link">
+        pytest - テスト関数の作成
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_3_32" type="checkbox" id="__nav_9_3_32" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_3_32">
+          Ttp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ttp" data-md-level="3">
+        <label class="md-nav__title" for="__nav_9_3_32">
+          <span class="md-nav__icon md-icon"></span>
+          Ttp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/ttp/ttp_Indicators/" class="md-nav__link">
+        ttp - Indicators
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/ttp/ttp_function/" class="md-nav__link">
+        ttp - Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/ttp/ttp_quickstart/" class="md-nav__link">
+        ttp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Library/ttp/ttp_regex_pattern/" class="md-nav__link">
+        Regex pattern
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_4" type="checkbox" id="__nav_9_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_4">
+          Recipe
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Recipe" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_4">
+          <span class="md-nav__icon md-icon"></span>
+          Recipe
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Recipe/file_operation/" class="md-nav__link">
+        ファイル操作
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Recipe/list/" class="md-nav__link">
+        list
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Recipe/pywatchdog/" class="md-nav__link">
+        python でログ監視
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_5" type="checkbox" id="__nav_9_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_5">
+          Setup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Setup" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_5">
+          <span class="md-nav__icon md-icon"></span>
+          Setup
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Setup/pip/" class="md-nav__link">
+        pip 関連
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Setup/windows_dev_env/" class="md-nav__link">
+        windows 開発環境
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Setup/wsl2_pyenv/" class="md-nav__link">
+        wsl2 + pyenv で Linux python環境構築
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Setup/xpresso/" class="md-nav__link">
+        xpresso setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_6" type="checkbox" id="__nav_9_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_6">
+          Network
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Network" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_6">
+          <span class="md-nav__icon md-icon"></span>
+          Network
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/network/netmiko_get_inventory/" class="md-nav__link">
+        netmiko
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/network/pyats_login/" class="md-nav__link">
+        pyats login
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/network/telnet/" class="md-nav__link">
+        telnet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/network/ttp/" class="md-nav__link">
+        TTP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_7" type="checkbox" id="__nav_9_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_7">
+          Other
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Other" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_7">
+          <span class="md-nav__icon md-icon"></span>
+          Other
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/other/memo/" class="md-nav__link">
+        雑多なメモ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/other/tmp/" class="md-nav__link">
+        一時メモ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/other/useful_word/" class="md-nav__link">
+        変数でよく使う英単語
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_8" type="checkbox" id="__nav_9_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_8">
+          pyATS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="pyATS" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_8">
+          <span class="md-nav__icon md-icon"></span>
+          pyATS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/pyATS/genie_shell/" class="md-nav__link">
+        genie shell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/pyATS/pyats_Blitz_effective/" class="md-nav__link">
+        Blitz 便利技
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/pyATS/pyats_Blitz_getting_started/" class="md-nav__link">
+        Blitz 入門
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/pyATS/pyats_basic1/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/pyATS/pyats_basic2/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/pyATS/pyats_genie/" class="md-nav__link">
+        Genie
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/pyATS/pyats_instllation/" class="md-nav__link">
+        pyATS instllation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/pyATS/pyats_run_job/" class="md-nav__link">
+        pyATS 実行方法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/pyATS/pyats_unicorn/" class="md-nav__link">
+        Unicon
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/pyATS/reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_9" type="checkbox" id="__nav_9_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_9">
+          Readbooks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Readbooks" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_9">
+          <span class="md-nav__icon md-icon"></span>
+          Readbooks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/readbooks/complete_py_index/" class="md-nav__link">
+        シリコンバレー一流プログラマーが教える　Pythonプロフェッショナル大全
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          VScode
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="VScode" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          VScode
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VScode/001_extension/" class="md-nav__link">
+        拡張機能
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Docker
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Docker" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Docker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/memo/" class="md-nav__link">
+        memo
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    ハードディスクのレイアウト設計
+  </a>
+  
+    <nav class="md-nav" aria-label="ハードディスクのレイアウト設計">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    論理ボリュームを作成するまでの手順
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    用語解説
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    ブートマネージャのインストール
+  </a>
+  
+    <nav class="md-nav" aria-label="ブートマネージャのインストール">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grub-legacy" class="md-nav__link">
+    GRUB Legacyの設定ファイル
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grub2" class="md-nav__link">
+    GRUB2の設定ファイル
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux カーネル
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    共有ライブラリの管理
+  </a>
+  
+    <nav class="md-nav" aria-label="共有ライブラリの管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ldconfig" class="md-nav__link">
+    ldconfig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ldd" class="md-nav__link">
+    ldd
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debian" class="md-nav__link">
+    Debianパッケージ管理
+  </a>
+  
+    <nav class="md-nav" aria-label="Debianパッケージ管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dpkg" class="md-nav__link">
+    dpkg
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dpkg-reconfigure" class="md-nav__link">
+    dpkg-reconfigure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt-get" class="md-nav__link">
+    apt-get
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt-cache" class="md-nav__link">
+    apt-cache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aptitude" class="md-nav__link">
+    aptitude
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rpmyum" class="md-nav__link">
+    RPMとYUMパッケージ管理
+  </a>
+  
+    <nav class="md-nav" aria-label="RPMとYUMパッケージ管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rpm" class="md-nav__link">
+    rpm
+  </a>
+  
+    <nav class="md-nav" aria-label="rpm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rpm-" class="md-nav__link">
+    RPMコマンド - インストール/アップグレードモード
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpm-_1" class="md-nav__link">
+    RPMコマンド - アンインストールモード
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpm-_2" class="md-nav__link">
+    RPMコマンド - 照会モード
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-q" class="md-nav__link">
+    よく使用する -q オプションの一覧
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-yum" class="md-nav__link">
+    パッケージの管理 - YUM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-dnf" class="md-nav__link">
+    パッケージの管理 - DNF
+  </a>
+  
+    <nav class="md-nav" aria-label="パッケージの管理 - DNF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yum" class="md-nav__link">
+    yum [ オプション ] サブコマンド
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yumdownloader" class="md-nav__link">
+    yumdownloader
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zypper" class="md-nav__link">
+    Zypper
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oslinux" class="md-nav__link">
+    仮想化のゲストOSとしてのLinux
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/Linux/LPIC_102.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="102-install-pkg">102 install / Pkg</h1>
+<h2 id="_1">ハードディスクのレイアウト設計</h2>
+<ul>
+<li>Linuxをインストールする際、パーティションを設計する必要がある</li>
+<li>全てのディレクトリをルートパーティションに収めることも可能だが、通常はディレクトリの用途に応じて、特定のディレクトリを別のパーティションに割り当てる</li>
+<li>Linuxをインストールする際、ルートパーティションから分割できないディレクトリは以下のとおり  </li>
+<li>/bin</li>
+<li>/sbin</li>
+<li>/etc</li>
+<li>/lib</li>
+<li>/dev</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">ディレクトリ</th>
+<th align="left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">/home</td>
+<td align="left">一般ユーザーのホームディレクトリ</td>
+</tr>
+<tr>
+<td align="left">/usr</td>
+<td align="left">起動には不要なプログラムなどを格納</td>
+</tr>
+<tr>
+<td align="left">/var</td>
+<td align="left">ログファイルやメールなど可変ファイル群を格納</td>
+</tr>
+<tr>
+<td align="left">/opt</td>
+<td align="left">追加でインストールしたパッケージを格納</td>
+</tr>
+<tr>
+<td align="left">/boot</td>
+<td align="left">Linuxカーネルなど起動に必須のファイルを格納</td>
+</tr>
+<tr>
+<td align="left">/tmp</td>
+<td align="left">一時ファイルを格納</td>
+</tr>
+<tr>
+<td align="left">/bin</td>
+<td align="left">一般ユーザ用のコマンドを格納</td>
+</tr>
+<tr>
+<td align="left">/sbin</td>
+<td align="left">管理者用のコマンドを格納</td>
+</tr>
+<tr>
+<td align="left">/etc</td>
+<td align="left">システムの設定ファイルを格納</td>
+</tr>
+<tr>
+<td align="left">/lib</td>
+<td align="left">共有ライブラリを格納</td>
+</tr>
+<tr>
+<td align="left">/dev</td>
+<td align="left">デバイスファイルを格納</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>opt ：容量が大きくなる可能性がある場合は、ルートパーティションとは別のパーティションを割り当てた方がよい</p>
+</div>
+<h3 id="_2">論理ボリュームを作成するまでの手順</h3>
+<ol>
+<li>
+<p>物理ボリューム(PV)の作成<br />
+pvcreateコマンドを使用して作成します。</p>
+</li>
+<li>
+<p>ボリュームグループ(VG)の作成<br />
+vgcreateコマンドを使用して作成します。</p>
+</li>
+<li>
+<p>論理ボリューム(LV)の作成<br />
+lvcreateコマンドを使用して作成します。</p>
+</li>
+</ol>
+<h3 id="_3">用語解説</h3>
+<ul>
+<li>LVM</li>
+<li>LVM (Logical Volume Manager) は、物理的な記憶デバイスの領域（物理ボリューム：PV）を複数にまとめてひとつの大きな仮想的な領域（ボリュームグループ：VG）とし、そこから仮想的なパーティション領域（論理ボリューム：LV）を切り出すことで、従来の物理的なパーティションを用いた方法よりも柔軟に記憶領域を管理することができるようにする仕組みのこと</li>
+<li>具体的には、各論理ボリューム（LVM を利用しない場合のパーティションに相当）のサイズを後から変更したり、単体のハードディスク（LVM では物理ボリュームと呼ぶ）の容量を超えるサイズの論理ボリュームを作ったり、後から新たな物理ボリュームを追加してボリュームグループ全体のサイズを増やしたり、不要な特定の物理ボリュームだけをボリュームグループから削除したり、といったことが可能</li>
+<li>物理ボリューム (PV：Physical Volume)</li>
+<li>物理的なハードディスクやパーティション</li>
+<li>ボリュームグループ (VG：Volume Group)</li>
+<li>物理ボリュームを集めて作る、仮想的な領域（仮想的なハードディスクのようなもの）</li>
+<li>論理ボリューム (LV：Logical Volume)</li>
+<li>ボリュームグループの一部（または全部）を使って作る、仮想的なパーティション。従来のパーティションと同じように、この論理ボリューム上にファイルシステムを作って利用可能</li>
+<li>ESP（EFIシステムパーティション）</li>
+<li>ESP（EFIシステムパーティション）はUEFIシステムにおいて、物理的なマシンを起動し、ファームウエアが読み込まれた後、その後の起動シーケンスで最初にアクセスされる領域になります。</li>
+<li>ESPはFATでフォーマットされ、ブートローダなどの他、起動に必要なドライバやプログラムも置かれます。</li>
+<li>UEFIシステムではブートローダは必ずしも必要ではなく、UEFIブートマネージャから直接カーネルを起動することも可能</li>
+<li>RAID</li>
+<li>（Linux システム上のソフトウェア）RAID で作成されるのは仮想的なひとつの論理ドライブ（RAID アレイ）のこと</li>
+<li>RAID アレイを使うことで読み書きの高速化、データの安全性の確保などが可能</li>
+<li>PV：LVM における物理ボリューム (Physical Volume) の略称</li>
+<li>VG：LVM におけるボリュームグループ (Volume Group) の略称</li>
+<li>LV：LVM における論理ボリューム (Logical Volume) の略称  </li>
+</ul>
+<h2 id="_4">ブートマネージャのインストール</h2>
+<ul>
+<li>GRUBのバージョンが0.9x系のものを「GRUB Legacy」、1.9以降のものを「GRUB2」と呼ぶ</li>
+<li>どちらのバージョンもインストールは、grub-installコマンドを利用</li>
+<li>GRUBに代表されるブートローダはHDDの最初のセクタ（512バイト）にあるMBR（マスターブートレコード）に格納されている</li>
+<li>MBRは使用する領域が決まっており、ブートローダは先頭の446バイトの領域に格納されている</li>
+<li><code>dd</code>コマンドはデータをコピーするコマンド</li>
+<li>ddコマンドのbs（ブロックサイズ）オプションは一度に書き込むサイズを指定します。</li>
+<li>ブートローダ部分だけに書き込みを行う際には、446を指定する必要がある</li>
+<li><code>dd if=mbr_backup.img of=/dev/sda bs=[] count=1</code></li>
+<li>なお、MBRにインストールされるGRUBのプログラム（stage1）のサイズは440バイトのため、MBRにあるGRUBのstage1を読み書きする場合はbs=440と指定することもできる</li>
+<li>dd if=/dev/zero of=/dev/sda bs=446 count=1　(ブートローダのみがゼロクリアされる)</li>
+<li>dd if=バックアップファイル of=/dev/hda bs=446 count=1　(既存のパーティションテーブルを残してMBRが復元される)</li>
+<li>dd if=/dev/hda of=バックアップファイル bs=512 count=1　（MBRがバックアップされる）</li>
+</ul>
+<h3 id="grub-legacy">GRUB Legacyの設定ファイル</h3>
+<ul>
+<li>ブートローダであるGRUB Legacy（GRUB1）の設定ファイルは<code>/boot/grub/menu.lst</code></li>
+<li>ディストリビューションによっては<code>/boot/grub/grub.conf</code></li>
+<li>GRUB Legacyの設定ファイルでルートパーティションを指定するには、「root (hdディスク番号,パーティション番号)」と指定し、その際、番号はどちらも0から数える</li>
+<li>なお、GRUB Legacy（GRUB1）は設定ファイル<code>/boot/grub/menu.lst</code>を変更しても、実行するコマンドはない</li>
+<li>例）  <ul>
+<li>1番目のディスクの1番目のパーティション　→　root (hd0,0)  </li>
+<li>1番目のディスクの2番目のパーティション　→　root (hd0,1) </li>
+<li>2番目のディスクの2番目のパーティション　→　root (hd1,1)  </li>
+</ul>
+</li>
+<li>GRUB Legacyの設定ファイルにおいてメニューに表示するエントリ名を指定する項目は title</li>
+<li>GRUB Legacyの設定ファイルにおいてルートパーティションを指定する項目 root</li>
+</ul>
+<h3 id="grub2">GRUB2の設定ファイル</h3>
+<ul>
+<li>GRUB2の設定ファイルは<code>/boot/grub/grub.cfg</code></li>
+<li>/boot/grub/grub.cfgファイルを直接編集することはない</li>
+<li>設定内容は<code>/etc/default/gruba</code>ファイルおよび<code>/etc/grub.d</code>ディレクトリ内のファイルに記述し、<code>grub-mkconfig</code>コマンドで設定内容を<code>/boot/grub/grub.cfg</code>ファイルに反映させる</li>
+<li>GRUB2の設定ファイルにおいて、ロードするモジュールを指定する項目は<code>insmod</code></li>
+<li>GRUB2の設定ファイルにおいて、各項目の名前としてメニューに表示するエントリ名を指定する項目は<code>menuentry</code></li>
+<li>GRUB2の設定ファイルにおいて設定項目を指定するキーワードは<code>set</code></li>
+<li>
+<p>参考：<code>/boot/grub/grub.cfg</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>root@ubuntu:/# cat /boot/grub/grub.cfg
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>#
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a># DO NOT EDIT THIS FILE
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>#
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a># It is automatically generated by grub-mkconfig using templates
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a># from /etc/grub.d and settings from /etc/default/grub
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>#
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>### BEGIN /etc/grub.d/00_header ###
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>if [ -s $prefix/grubenv ]; then
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  set have_grubenv=true
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>  load_env
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>fi
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>if [ &quot;${initrdfail}&quot; = 2 ]; then
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>   set initrdfail=
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>elif [ &quot;${initrdfail}&quot; = 1 ]; then
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>   set next_entry=&quot;${prev_entry}&quot;
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>   set prev_entry=
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>   save_env prev_entry
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>   if [ &quot;${next_entry}&quot; ]; then
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>      set initrdfail=2
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>   fi
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>fi
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>... &lt;&lt;&lt; snip &gt;&gt;&gt; ...
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>### END /etc/grub.d/10_linux ###
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>### BEGIN /etc/grub.d/10_linux_zfs ###
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>### END /etc/grub.d/10_linux_zfs ###
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>### BEGIN /etc/grub.d/20_linux_xen ###
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>### END /etc/grub.d/20_linux_xen ###
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>### BEGIN /etc/grub.d/20_memtest86+ ###
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>menuentry &#39;Memory test (memtest86+)&#39; {
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>    insmod part_msdos
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>    insmod ext2
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>    set root=&#39;hd0,msdos5&#39;
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>    if [ x$feature_platform_search_hint = xy ]; then
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>      search --no-floppy --fs-uuid --set=root --hint-bios=hd0,msdos5 --hint-efi=hd0,msdos5 --hint-baremetal=ahci0,msdos5  743075e2-ad08-48a1-bf07-27166c8f69c6
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>    else
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>      search --no-floppy --fs-uuid --set=root 743075e2-ad08-48a1-bf07-27166c8f69c6
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>    fi
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>    knetbsd /boot/memtest86+.elf
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>}
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>menuentry &#39;Memory test (memtest86+, serial console 115200)&#39; {
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>    insmod part_msdos
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>    insmod ext2
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>    set root=&#39;hd0,msdos5&#39;
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>    if [ x$feature_platform_search_hint = xy ]; then
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>      search --no-floppy --fs-uuid --set=root --hint-bios=hd0,msdos5 --hint-efi=hd0,msdos5 --hint-baremetal=ahci0,msdos5  743075e2-ad08-48a1-bf07-27166c8f69c6
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>    else
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>      search --no-floppy --fs-uuid --set=root 743075e2-ad08-48a1-bf07-27166c8f69c6
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>    fi
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>    linux16 /boot/memtest86+.bin console=ttyS0,115200n8
+<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>}
+<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>### END /etc/grub.d/20_memtest86+ ###
+<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>
+<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>### BEGIN /etc/grub.d/30_os-prober ###
+<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>### END /etc/grub.d/30_os-prober ###
+<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>
+<a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>### BEGIN /etc/grub.d/30_uefi-firmware ###
+<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>### END /etc/grub.d/30_uefi-firmware ###
+<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>
+<a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>### BEGIN /etc/grub.d/40_custom ###
+<a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a># This file provides an easy way to add custom menu entries.  Simply type the
+<a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a># menu entries you want to add after this comment.  Be careful not to change
+<a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a># the &#39;exec tail&#39; line above.
+<a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a>### END /etc/grub.d/40_custom ###
+<a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a>
+<a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a>### BEGIN /etc/grub.d/41_custom ###
+<a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a>if [ -f  ${config_directory}/custom.cfg ]; then
+<a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a>  source ${config_directory}/custom.cfg
+<a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a>elif [ -z &quot;${config_directory}&quot; -a -f  $prefix/custom.cfg ]; then
+<a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a>  source $prefix/custom.cfg;
+<a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a>fi
+<a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a>### END /etc/grub.d/41_custom ###
+</code></pre></div></p>
+</li>
+<li>
+<p>参考：<code>/etc/default/grub</code>ファイル</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>root@ubuntu:/# cat /etc/default/grub
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a># If you change this file, run &#39;update-grub&#39; afterwards to update
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a># /boot/grub/grub.cfg.
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a># For full documentation of the options in this file, see:
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>#   info -f grub -n &#39;Simple configuration&#39;
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>GRUB_DEFAULT=0
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>GRUB_TIMEOUT_STYLE=hidden
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>GRUB_TIMEOUT=0
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>GRUB_DISTRIBUTOR=`lsb_release -i -s 2&gt; /dev/null || echo Debian`
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet&quot;
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>GRUB_CMDLINE_LINUX=&quot;find_preseed=/preseed.cfg auto noprompt priority=critical locale=en_US&quot;
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a># Uncomment to enable BadRAM filtering, modify to suit your needs
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a># This works with Linux (no patch required) and with any kernel that obtains
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a># the memory map information from GRUB (GNU Mach, kernel of FreeBSD ...)
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>#GRUB_BADRAM=&quot;0x01234567,0xfefefefe,0x89abcdef,0xefefefef&quot;
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a># Uncomment to disable graphical terminal (grub-pc only)
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>#GRUB_TERMINAL=console
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a># The resolution used on graphical terminal
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a># note that you can use only modes which your graphic card supports via VBE
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a># you can see them in real GRUB with the command `vbeinfo&#39;
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>#GRUB_GFXMODE=640x480
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a># Uncomment if you don&#39;t want GRUB to pass &quot;root=UUID=xxx&quot; parameter to Linux
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>#GRUB_DISABLE_LINUX_UUID=true
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a># Uncomment to disable generation of recovery mode menu entries
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>#GRUB_DISABLE_RECOVERY=&quot;true&quot;
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a># Uncomment to get a beep at grub start
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>#GRUB_INIT_TUNE=&quot;480 440 1&quot;
+</code></pre></div>
+<ul>
+<li>参考：<code>/etc/grub.d</code>ディレクトリ</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>root@ubuntu:/etc/grub.d# ls -l
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>total 132
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>-rwxr-xr-x 1 root root 10627 Jan 13  2021 00_header
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>-rwxr-xr-x 1 root root  6258 Jan 13  2021 05_debian_theme
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>-rwxr-xr-x 1 root root 18151 Aug 12 02:18 10_linux
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>-rwxr-xr-x 1 root root 42359 Jan 13  2021 10_linux_zfs
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>-rwxr-xr-x 1 root root 12894 Jan 13  2021 20_linux_xen
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>-rwxr-xr-x 1 root root  1992 Aug 18  2020 20_memtest86+
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>-rwxr-xr-x 1 root root 12059 Jan 13  2021 30_os-prober
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>-rwxr-xr-x 1 root root  1424 Jan 13  2021 30_uefi-firmware
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>-rwxr-xr-x 1 root root   214 Jan 13  2021 40_custom
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>-rwxr-xr-x 1 root root   216 Jan 13  2021 41_custom
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>-rw-r--r-- 1 root root   483 Jan 13  2021 README
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>root@ubuntu:/etc/grub.d#
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>root@ubuntu:/etc/grub.d#
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>root@ubuntu:/etc/grub.d# cat README 
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>All executable files in this directory are processed in shell expansion order.
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>  00_*: Reserved for 00_header.
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>  10_*: Native boot entries.
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>  20_*: Third party apps (e.g. memtest86+).
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>The number namespace in-between is configurable by system installer and/or
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>administrator.  For example, you can add an entry to boot another OS as
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>01_otheros, 11_otheros, etc, depending on the position you want it to occupy in
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>the menu; and then adjust the default setting via /etc/default/grub.
+</code></pre></div>
+<h3 id="linux">Linux カーネル</h3>
+<p>Linuxカーネルの主な起動オプションは以下のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th align="left">起動オプション</th>
+<th align="left">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">init=パス</td>
+<td align="left">initの代わりに指定コマンドを実行</td>
+</tr>
+<tr>
+<td align="left">root=デバイス名</td>
+<td align="left">ルートパーティションを設定</td>
+</tr>
+<tr>
+<td align="left">数字(0-6)</td>
+<td align="left">指定したランレベルで起動</td>
+</tr>
+<tr>
+<td align="left">quit</td>
+<td align="left">起動中有のカーネルからの情報出力を抑制する</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_5">共有ライブラリの管理</h2>
+<ul>
+<li>ライブラリとは、汎用性の高いプログラムを再利用可能な形にしてまとめたもの</li>
+<li>ライブラリそれ自体を単独で実行する事はなく、他のプログラムに組み込んで呼び出す事で、ライブラリの持つ機能を利用できるように</li>
+<li>複数のプログラムから参照して使えるようにしたものを「共有ライブラリ」という</li>
+<li>なお、プログラムの実行時に共有ライブラリを呼び出すことをダイナミックリンク(動的リンク)という。</li>
+<li>また、プログラムのコンパイル時にライブラリの機能を実行ファイル内に埋め込むことをスタティックリンク(静的リンク)といい、埋め込むライブラリを「静的ライブラリ」と呼ぶ。</li>
+<li>共有ライブラリを使用するプログラムは、実行時に以下の順で共有ライブラリの場所を検索</li>
+<li>環境変数<code>LD_LIBRARY_PATH</code></li>
+<li>共有ライブラリの検索パスを指定するための環境変数</li>
+<li><code>/etc/ld.so.cache</code>ファイル</li>
+<li>共有ライブラリを検索するためのバイナリファイルです。ldconfigコマンドを使用して作成します。</li>
+<li>ldconfigコマンドは共有ライブラリの検索パスが記述されている<code>/etc/ld.so.conf</code>ファイルを参照し</li>
+<li><code>/etc/ld.so.cache</code>ファイルを更新（作成）します。<code>/etc/ld.so.cache</code>ファイルはバイナリファイルであるため<code>/etc/ld.so.conf</code>ファイルより早く検索できます。</li>
+<li><code>/lib</code>と<code>/usr/lib</code>ディレクトリ</li>
+<li>一般的に使用される共有ライブラリは、<code>/lib</code>と<code>/usr/lib</code>ディレクトリに格納されている</li>
+<li>64ビット版は<code>/lib64</code>と<code>/usr/lib64</code>に格納されている</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>共有ライブラリを<code>/lib</code>や<code>/usr/lib</code>ディレクトリ以外に配置する場合は、以下のいずれかの方法で共有ライブラリの検索パスを設定する必要がある</li>
+<li>環境変数LD_LIBRARY_PATHに検索パスを追加する</li>
+<li><code>/etc/ld.so.conf</code>ファイルに検索パスを追記してldconfigコマンドで<code>/etc/ld.so.cache</code>ファイルを更新（作成）する</li>
+</ul>
+</div>
+<h3 id="ldconfig">ldconfig</h3>
+<p>共有ライブラリのキャッシュファイル<code>/etc/ld.so.cache</code>を更新するコマンド</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>/etc/ld.so.cache</code>は共有ライブラリを検索するためのバイナリファイルです。
+ldconfigコマンドは共有ライブラリの検索パスが記述されている<code>/etc/ld.so.conf</code>
+ファイルを参照し<code>/etc/ld.so.cache</code>ファイルを更新（作成）します。
+なお、ldconfigは管理者(rootユーザ)のみが使用できるコマンドです。</p>
+</div>
+<h3 id="ldd">ldd</h3>
+<p>あるプログラムが必要としている共有ライブラリを表示するコマンド</p>
+<ul>
+<li>
+<p>（例）「/bin/bash」を実行するときに必要となる共有ライブラリを調べる<br />
+<code>ldd /bin/bash</code></p>
+</li>
+<li>
+<p>表示例：
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>root@ubuntu:/# ldd /bin/bash
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    linux-vdso.so.1 (0x00007ffce55ea000)
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    libtinfo.so.6 =&gt; /lib/x86_64-linux-gnu/libtinfo.so.6 (0x00007fbac67a0000)
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    libdl.so.2 =&gt; /lib/x86_64-linux-gnu/libdl.so.2 (0x00007fbac679a000)
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    libc.so.6 =&gt; /lib/x86_64-linux-gnu/libc.so.6 (0x00007fbac65a8000)
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    /lib64/ld-linux-x86-64.so.2 (0x00007fbac6910000)
+</code></pre></div></p>
+</li>
+</ul>
+<h2 id="debian">Debianパッケージ管理</h2>
+<h3 id="dpkg">dpkg</h3>
+<ul>
+<li>dpkgはDebian形式のパッケージのインストール・アンインストールなど、基本的なパッケージ管理を行うコマンド</li>
+<li>dpkgコマンドの書式および主なオプション・アクションは以下のとおりです。</li>
+<li><code>dpkg [①オプション] ②アクション</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">①オプション</th>
+<th align="left">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">-E</td>
+<td align="left">同じバージョンがすでにインストールされている場合、インストールは行わない</td>
+</tr>
+<tr>
+<td align="left">-G</td>
+<td align="left">新バージョンがすでにインストールされている場合、インストールはしない</td>
+</tr>
+<tr>
+<td align="left">-R</td>
+<td align="left">ディレクトリ構造を再帰的に処理する</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left">②アクション</th>
+<th align="left">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">-i  (--install)</td>
+<td align="left">パッケージファイル名を指定して、パッケージをインストール</td>
+</tr>
+<tr>
+<td align="left">-I</td>
+<td align="left">パッケージファイル名を指定して、インストール済みの詳細情報を表示</td>
+</tr>
+<tr>
+<td align="left">-r  (--remove)</td>
+<td align="left">パッケージ名を指定して、パッケージをアンインストール (設定ファイルは残す)</td>
+</tr>
+<tr>
+<td align="left">-P  (--purge)</td>
+<td align="left">パッケージ名を指定して、パッケージをアンインストール (設定ファイルを含めて完全に削除）</td>
+</tr>
+<tr>
+<td align="left">-l  (--list)</td>
+<td align="left">インストール済みパッケージを検索して表示</td>
+</tr>
+<tr>
+<td align="left">-L  (--listfiles)</td>
+<td align="left">パッケージ名を指定して、パッケージからインストールされたファイルを一覧表示</td>
+</tr>
+<tr>
+<td align="left">-s  (--status)</td>
+<td align="left">パッケージ名を指定して、インストール済みのパッケージの詳細情報の表示</td>
+</tr>
+<tr>
+<td align="left">-S  (--search)</td>
+<td align="left">指定したファイルが、どのパッケージからインストールされたものかを調査</td>
+</tr>
+<tr>
+<td align="left">-c  (--audit)</td>
+<td align="left">パッケージファイル名を指定して、パッケージに含まれるファイルの一覧表示</td>
+</tr>
+<tr>
+<td align="left">-C</td>
+<td align="left">パッケージのインストール状態を検査</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dpkg-reconfigure">dpkg-reconfigure</h3>
+<p>dpkgツールにおいてインストール済みのパッケージを、インストールした時と同じように再設定するコマンド</p>
+<h3 id="apt-get">apt-get</h3>
+<ul>
+<li>apt-getコマンドは、APT（Advanced Packaging Tool）というパッケージ管理ツールに含まれるコマンド。</li>
+<li>apt-getコマンドはアプリケーションの依存関係を調整しながらパッケージのインストール、アップグレードを行う</li>
+<li>インターネットで最新パッケージを入手してインストールと依存関係の解決ができる</li>
+</ul>
+<p><code>apt-get [①オプション] ②サブコマンド</code></p>
+<table>
+<thead>
+<tr>
+<th align="left">①apt-getコマンドのオプション</th>
+<th align="left">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">-d</td>
+<td align="left">インストールせずに、ダウンロードのみ行う ( /var/cache/apt/archives に保存 )</td>
+</tr>
+<tr>
+<td align="left">-s</td>
+<td align="left">システムを変更せずに、動作をシミュレートする</td>
+</tr>
+<tr>
+<td align="left">--purge</td>
+<td align="left">設定ファイルを含めて、パッケージを削除する ( removeコマンドと一緒に指定する）</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left">②apt-getのサブコマンド</th>
+<th align="left">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">clean</td>
+<td align="left">ダウンロードしたパッケージファイルを削除する</td>
+</tr>
+<tr>
+<td align="left">dist-upgrade</td>
+<td align="left">Debianのシステムを最新にアップグレードする</td>
+</tr>
+<tr>
+<td align="left">install</td>
+<td align="left">指定したパッケージをインストール、またはアップグレードする</td>
+</tr>
+<tr>
+<td align="left">remove</td>
+<td align="left">指定したパッケージをアンインストール ( 設定ファイルは残す )</td>
+</tr>
+<tr>
+<td align="left">update</td>
+<td align="left">パッケージのリスト情報（データベース）を最新に更新する</td>
+</tr>
+<tr>
+<td align="left">upgrade</td>
+<td align="left">システムの全パッケージを最新版にアップグレードする</td>
+</tr>
+</tbody>
+</table>
+<h3 id="apt-cache">apt-cache</h3>
+<ul>
+<li>apt-cacheコマンドは、パッケージ情報の照会と検索が可能なコマンド</li>
+<li>照会や検索を行う際にそのパッケージがインストールされていなくても実行できる。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">apt-cacheのサブコマンド</th>
+<th align="left">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">search キーワード</td>
+<td align="left">指定したキーワードを含むパッケージの検索</td>
+</tr>
+<tr>
+<td align="left">show パッケージ名</td>
+<td align="left">指定したパッケージの詳細情報を表示</td>
+</tr>
+<tr>
+<td align="left">showpkg パッケージ名</td>
+<td align="left">指定したパッケージのバージョン、依存関係を表示</td>
+</tr>
+<tr>
+<td align="left">depends パッケージ名</td>
+<td align="left">指定したパッケージが依存するパッケージの一覧を表示</td>
+</tr>
+</tbody>
+</table>
+<h3 id="aptitude">aptitude</h3>
+<p>aptitudeコマンドは、apt-getやapt-cacheコマンドより高度なパッケージ管理機能を持っています。</p>
+<table>
+<thead>
+<tr>
+<th align="left">aptitudeのサブコマンド</th>
+<th align="left">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">update</td>
+<td align="left">パッケージのリスト情報（データベース）を最新に更新</td>
+</tr>
+<tr>
+<td align="left">show パッケージ名</td>
+<td align="left">指定したパッケージの詳細情報を表示</td>
+</tr>
+<tr>
+<td align="left">search パターン</td>
+<td align="left">指定したパターンでのパッケージ検索 ( 正規表現を使用可能 )</td>
+</tr>
+<tr>
+<td align="left">install パッケージ名</td>
+<td align="left">指定したパッケージをインストールまたはアップグレード</td>
+</tr>
+<tr>
+<td align="left">remove パッケージ名</td>
+<td align="left">設定ファイルを残して、パッケージをアンインストール</td>
+</tr>
+<tr>
+<td align="left">purge パッケージ名</td>
+<td align="left">設定ファイルも含めて、パッケージをアンインストール</td>
+</tr>
+<tr>
+<td align="left">download パッケージ名</td>
+<td align="left">指定したパッケージファイルをダウンロード ( カレントディレクトリに保存 )</td>
+</tr>
+<tr>
+<td align="left">dist-upgrade</td>
+<td align="left">Debianのシステム（ディストリビューション）を最新にアップデート</td>
+</tr>
+<tr>
+<td align="left">upgrade</td>
+<td align="left">システムの全パッケージをアップデート</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>aptコマンドはapt-getとapt-cacheの機能を統合したコマンド</p>
+</div>
+<h2 id="rpmyum">RPMとYUMパッケージ管理</h2>
+<ul>
+<li>RPMはRedHat社が開発したソフトウェアのパッケージ管理システム。</li>
+<li>現在はRedHat系のCentOS、Fedora等のディストリビューションにも採用されています。</li>
+<li>RPM形式のパッケージファイルの見方は以下のとおり。</li>
+<li>例として紹介している以下の「nmap」というパッケージは、ポートスキャンを行うアプリケーションです。</li>
+<li>nmap-5.51-2.el6.i686.rpm`</li>
+<li>【解説】区切りで順に  <ul>
+<li>パッケージの名称</li>
+<li>ソフトウェアのバージョン</li>
+<li>リリース番号</li>
+<li>アーキテクチャ</li>
+<li>拡張子</li>
+</ul>
+</li>
+</ul>
+<h3 id="rpm">rpm</h3>
+<p>構文 ： <code>rpm [ オプション ] パッケージ名</code></p>
+<h4 id="rpm-">RPMコマンド - インストール/アップグレードモード</h4>
+<table>
+<thead>
+<tr>
+<th align="left">インストール・アップグレードモード</th>
+<th align="left">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">-i　パッケージファイル名</td>
+<td align="left">指定したキーワードを含むパッケージをインストール</td>
+</tr>
+<tr>
+<td align="left">-U パッケージファイル名</td>
+<td align="left">指定したパッケージのアップグレード（存在しない場合はインストールする）</td>
+</tr>
+<tr>
+<td align="left">-F パッケージファイル名</td>
+<td align="left">指定したパッケージのアップグレード（存在しない場合はインストールしない）</td>
+</tr>
+<tr>
+<td align="left">-v (併用オプション)</td>
+<td align="left">詳細な情報を表示する</td>
+</tr>
+<tr>
+<td align="left">-h (併用オプション)</td>
+<td align="left">インストールの進行状況を # で表示する</td>
+</tr>
+<tr>
+<td align="left">--nodeps (併用オプション)</td>
+<td align="left">パッケージの依存関係を無視してインストール</td>
+</tr>
+<tr>
+<td align="left">--force (併用オプション)</td>
+<td align="left">既存のファイルを新しいものに置き換える</td>
+</tr>
+<tr>
+<td align="left">--prefix (併用オプション)</td>
+<td align="left">パッケージをインストールするディレクトリを指定</td>
+</tr>
+<tr>
+<td align="left">--test (併用オプション)</td>
+<td align="left">インストールはせずにテストを実施</td>
+</tr>
+</tbody>
+</table>
+<h4 id="rpm-_1">RPMコマンド - アンインストールモード</h4>
+<table>
+<thead>
+<tr>
+<th align="left">アンインストールモード</th>
+<th align="left">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">-e パッケージ名</td>
+<td align="left">パッケージをアンインストール</td>
+</tr>
+<tr>
+<td align="left">--nodeps (併用オプション)</td>
+<td align="left">依存関係を無視してアンインストール</td>
+</tr>
+</tbody>
+</table>
+<h4 id="rpm-_2">RPMコマンド - 照会モード</h4>
+<table>
+<thead>
+<tr>
+<th align="left">照会モード</th>
+<th align="left">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">-q パッケージ名</td>
+<td align="left">指定したパッケージがインストールされているか照会</td>
+</tr>
+<tr>
+<td align="left">-a (併用オプション)</td>
+<td align="left">インストール済みの全てのパッケージを表示</td>
+</tr>
+<tr>
+<td align="left">-c (併用オプション)</td>
+<td align="left">設定ファイルのみを表示</td>
+</tr>
+<tr>
+<td align="left">-d  (併用オプション)</td>
+<td align="left">ドキュメントのみを表示</td>
+</tr>
+<tr>
+<td align="left">-i  (併用オプション)</td>
+<td align="left">指定したパッケージの詳細情報を表示</td>
+</tr>
+<tr>
+<td align="left">-l  (併用オプション)</td>
+<td align="left">指定したパッケージに含まれるファイルを一覧表示</td>
+</tr>
+<tr>
+<td align="left">-R  (併用オプション)</td>
+<td align="left">指定したパッケージが依存しているファイルなどを表示</td>
+</tr>
+<tr>
+<td align="left">-f ファイル名  (併用オプション)</td>
+<td align="left">指定したファイルを含むパッケージ名を表示</td>
+</tr>
+<tr>
+<td align="left">-p パッケージファイル名  (併用オプション)</td>
+<td align="left">指定したパッケージファイルの情報を表示</td>
+</tr>
+<tr>
+<td align="left">-changelog  (併用オプション)</td>
+<td align="left">パッケージの変更履歴を表示</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-q">よく使用する -q オプションの一覧</h4>
+<table>
+<thead>
+<tr>
+<th align="left">オプション</th>
+<th align="left">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">-qa</td>
+<td align="left">インストール済みのパッケージ一覧の表示</td>
+</tr>
+<tr>
+<td align="left">-ql [パッケージ名]</td>
+<td align="left">インストール済みのパッケージに含まれるファイルの一覧表示</td>
+</tr>
+<tr>
+<td align="left">-qi [パッケージ名]</td>
+<td align="left">インストール済みのパッケージの詳細情報を表示</td>
+</tr>
+<tr>
+<td align="left">-qlp [ファイル名]</td>
+<td align="left">インストール前のパッケージに含まれるファイルの一覧表示</td>
+</tr>
+<tr>
+<td align="left">-qip [ファイル名]</td>
+<td align="left">インストール前のパッケージの詳細情報を表示</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-yum">パッケージの管理 - YUM</h3>
+<ul>
+<li>YUM（Yellowdog Updater Modified）ツールはAPTツール同様、パッケージ間の依存関係を解決しながらダウンロード、インストール、アップデート、アンインストールすることができるツール。</li>
+<li>YUMの設定は、<code>/etc/yum.conf</code> ファイルに記述</li>
+<li>パッケージのリポジトリ情報を設定するためには、<code>/etc/yum.conf</code> ファイルに設定を行うか、 <code>/etc/yum.repos.d</code>ディレクトにダウンロードサイトのURLを記載したファイルを格納する</li>
+<li><code>/etc/yum.conf</code>ファイルは基本的に変更の必要はない</li>
+<li>YUMツールの設定ファイルは<code>/etc/yum.conf</code>で、キャッシュやログの保存先などの基本設定を行います。</li>
+</ul>
+<h3 id="-dnf">パッケージの管理 - DNF</h3>
+<ul>
+<li>DNFはYUMの後継となるパッケージ管理ツール</li>
+<li>dnfコマンドでは、yumコマンドとほぼ同じオプションが使用できる</li>
+<li>また、リポジトリ(パッケージの取得元)もyumと同様に<code>/etc/yum.repos.d</code>ディレクトリを使用</li>
+</ul>
+<h4 id="yum">yum [ オプション ] サブコマンド</h4>
+<table>
+<thead>
+<tr>
+<th align="left">オプション</th>
+<th align="left">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">-y</td>
+<td align="left">すべての質問に yes と回答する</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left">サブコマンド</th>
+<th align="left">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">check-update</td>
+<td align="left">アップデート対象となるパッケージ一覧を表示</td>
+</tr>
+<tr>
+<td align="left">update パッケージ名</td>
+<td align="left">指定したパッケージのアップデート（パッケージ名を省略する全パッケージが対象）</td>
+</tr>
+<tr>
+<td align="left">install パッケージ名</td>
+<td align="left">指定したパッケージのインストール</td>
+</tr>
+<tr>
+<td align="left">remove パッケージ名</td>
+<td align="left">指定したパッケージのアンインストール</td>
+</tr>
+<tr>
+<td align="left">info パッケージ名</td>
+<td align="left">指定したパッケージの情報の表示</td>
+</tr>
+<tr>
+<td align="left">list</td>
+<td align="left">全パッケージ情報をリスト表示</td>
+</tr>
+<tr>
+<td align="left">repolist</td>
+<td align="left">リポジトリ一覧の表示</td>
+</tr>
+<tr>
+<td align="left">search キーワード</td>
+<td align="left">パッケージ情報をキーワードで検索</td>
+</tr>
+<tr>
+<td align="left">search all キーワード</td>
+<td align="left">パッケージ情報をキーワードで検索（パッケージ名、説明文）</td>
+</tr>
+<tr>
+<td align="left">grouplist</td>
+<td align="left">パッケージグループのリスト表示</td>
+</tr>
+<tr>
+<td align="left">groupinstall グループ</td>
+<td align="left">指定したグループのパッケージをインストール</td>
+</tr>
+</tbody>
+</table>
+<h4 id="yumdownloader">yumdownloader</h4>
+<ul>
+<li>パッケージファイルのダウンロードのみを行いたい場合は yumdownloaderコマンドを使用</li>
+<li>yumdownloaderコマンドを使用するために事前にyum-utilsパッケージをインストールする必要がある</li>
+<li>構文: <code>yumdownloader [ オプション ] パッケージ名</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">オプション</th>
+<th align="left">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">--source</td>
+<td align="left">RPMではなく、ソースファイル（SRPM）をダウンロード</td>
+</tr>
+</tbody>
+</table>
+<h3 id="zypper">Zypper</h3>
+<ul>
+<li>ZypperはopenSUSE（SUSE Linuxから改名）が採用しているコマンドラインのパッケージ管理ツール</li>
+<li>aptコマンドやyumコマンドのように、zypperコマンドでリポジトリやパッケージの操作を行えます。</li>
+<li><code>zypper [オプション] サブコマンド</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">サブコマンド (略)</th>
+<th align="left">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">install (in) パッケージ名</td>
+<td align="left">パッケージｍのインストr－ル</td>
+</tr>
+<tr>
+<td align="left">update (up)  パッケージ名</td>
+<td align="left">パッケージのアップデート</td>
+</tr>
+<tr>
+<td align="left">remove (rm)  パッケージ名</td>
+<td align="left">パッケージのアンインスト－ル</td>
+</tr>
+<tr>
+<td align="left">info パッケージ名</td>
+<td align="left">パッケージの詳細情報の表示</td>
+</tr>
+<tr>
+<td align="left">searce (se) キーワード</td>
+<td align="left">指定したキーワードでパッケージの検索</td>
+</tr>
+<tr>
+<td align="left">list-updates (lu) [オプション]</td>
+<td align="left">アップデート可能なパッケージの表示</td>
+</tr>
+<tr>
+<td align="left">repos (lr)</td>
+<td align="left">リポジトリの一覧表示</td>
+</tr>
+<tr>
+<td align="left">refresh</td>
+<td align="left">リポジトリの更新</td>
+</tr>
+</tbody>
+</table>
+<h2 id="oslinux">仮想化のゲストOSとしてのLinux</h2>
+<ul>
+<li>仮想化とは
+    仮想化（Virtualization）とは、コンピュータリソースを実際の物理的な構成にとらわれず、
+    論理的に分割・統合して提供する技術です。仮想化の対象となるコンピュータリソースには
+    サーバやOS、ストレージ、ネットワークなどがあります。</li>
+<li>仮想化の種類
+    現在、主に以下の2つの仮想化手法が使われています。</li>
+<li>
+<p>ハイパーバイザー型<br />
+    物理マシン上で動作するハイパーバイザー（仮想化のための専用のOS）上で直接仮想マシンを起動し、
+    ゲストOS（仮想マシンにインストールしたOS）を動作させる方式です。物理マシンのハードウェアを
+    エミュレー卜（模倣）する完全仮想化を実現できます。</p>
+<p>ゲストOSからは通常の物理マシン上で動作しているように見えるため、これまでのサーバにOSを
+インストールしているのと同様の環境を構築できます。ハイパーバイザーがサポートしている
+種類のゲストOSであれば、LinuxやWindows、macOSなども使用できます。
+ハイパーバイザー型の仮想化ソフトウェアには、Xenや、KVMなどがあります。</p>
+</li>
+<li>
+<p>コンテナ型<br />
+    OSのリソースを「コンテナ」という単位で隔離して共有する方式です。
+    OS上のアプリケーションと同レベルの扱いですので、オーバーヘッドが少なく、リソース・構築・管理の面で非常にシンプルになります。
+    コンテナ型仮想化では、Linuxカーネルの機能によってコンテナごとのユーザ管理やリソース制限を行います。
+    コンテナ型ソフトウェアには、LXC、Dockerなどがあります。</p>
+</li>
+<li>
+<p>クラウドコンピューティング<br />
+    クラウドコンピューティングとは、サーバ／ストレージ／アプリケーションなどのリソースをすべてクラウドに置き、
+    それらのリソースをサービスとして利用するコンピューティング環境です。（「クラウド」の名称は、構成図上
+    「どのように構築されているかはわからないが、確かにそこにあって利用可能なリソース（例：インターネット）」を
+    雲のアイコンで表していた事に由来します。）</p>
+</li>
+</ul>
+<p><img alt="" src="./img/cloud_services_models.jpg" /></p>
+<ul>
+<li>
+<p>SaaS（Software as a Service）
+    ソフトウエアをサービスとして提供します。ユーザはインフラも開発環境も意識することなく、単純にソフトウエアを利用する、
+    というサービスを受けることができます。</p>
+</li>
+<li>
+<p>PaaS（Platform as a Service）
+    ソフトウエアの開発、実行環境をサービスとして提供します。ユーザは環境構築や保守に気を遣わずに、開発に専念できます。
+    また、仮想化により、規模をあらかじめ把握できなくても柔軟に増減できるメリットがあります。</p>
+</li>
+<li>
+<p>IaaS（Infrastructure as a Service）
+    サーバ、ストレージ、ネットワーク等、仮想化されたインフラ環境をサービスとして提供する、サーバの仮想化技術と関連が深い
+    サービスモデルです。HaaS（Hardware as a Service）と呼ばれることもあります。
+    IaaSでは仮想マシンや仮想ネットワーク、ブロックストレージ（ハードディスク）などのリソースを、ユーザにサービスとして
+    提供しています。</p>
+<p>クラウドサービス側でハイパーバイザー型の仮想化環境を提供する場合、ユーザは「インスタンス」と呼ばれる仮想マシンにOSを
+インストールして使用します。OSのインストールは、あらかじめ用意されたテンプレート（OSイメージ）から行うのが一般的です。
+クラウドサービス側でコンテナ型の仮想化環境を提供する場合、ユーザは仮想環境上で動作する「コンテナ」を利用することになります。</p>
+<p>また、ユーザが利用するコンテナ環境を選択できる場合もあります。このようにアプリケーションとして利用可能なコンテナは
+「アプリケーションコンテナ」と呼ばれます。アプリケーションコンテナの例として、Webサーバやデータベースサーバが組み込まれた
+ブログサービス環境などがあります。</p>
+</li>
+<li>
+<p>仮想マシンの複製<br />
+    個々の仮想マシンの環境設定やハードディスクはファイルとして保存されます。それらのファイルをコピーすることで任意の仮想マシンをクローンとして複製できるため、
+    テンプレートとして使用したり、同様の仕様のシステム展開が容易にできるようになります。</p>
+<p>ただし、同一の仮想化ソフトウェア上で複製した仮想マシンのUUID
+（Universally Unique Identifier: 汎用一意識別子、全世界で重複が起きないように生成される一意な値）が重複していると正常に動作しませんので、注意が必要です。</p>
+<p>また、ホスト名やIPアドレス、SSH接続時に使用するSSHホスト鍵（公開鍵、秘密鍵）などサーバごとに一意でなければならないものも変更しなければなりません。</p>
+<p>上記に加えて、systemdのマシンはホストを識別するための32バイトのマシンIDを持っています。インストール時に、ランダムに生成されるUUIDがマシンIDとして
+設定されます。仮想マシンを複製するとマシンIDもコピーされるので、ネットワーク内で重複しないようにクローンのマシンIDを初期化する必要があります。</p>
+<p>マシンIDは「/etc/machine-id」ファイルに格納されています。</p>
+<ul>
+<li>（例）
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a># cat /etc/machine-id
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>d602b9b22ae94e7d871f403f2ab5eb46
+</code></pre></div></li>
+</ul>
+<p>なお、クラウド上のインスタンスはテンプレートから展開されるため、テンプレートから複製された環境を重複しないようにインスタンスごとに変更する必要があります。
+この作業をまとめて行う「cloud-init」というパッケージが用意されています。
+cloud-initパッケージはクラウド上でなくても、インストールして使うことができます。</p>
+<p>例：CentOSの場合<br />
+<code># yum install cloud-init</code></p>
+</li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../LPIC_101/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 101 Sys archit." rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              101 Sys archit.
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../LPIC_Level1_CmdList/" class="md-footer__link md-footer__link--next" aria-label="Next: Lpic Level 1 Cmd List" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Lpic Level 1 Cmd List
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2022 m.omuro
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "navigation.tabs", "navigation.top", "search.highlight", "search.suggest", "search.share"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ed9748b7.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@9.0.0/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
