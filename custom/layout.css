@@ -1,13 +1,12 @@
 /* mkdocs 基本的な装飾 */
 
 /* 見出し */
-
-
 h2 {
   border-bottom: 2px solid teal;
 }
 h3 {
   font-weight: bold;
+  border-bottom: 2px dotted	#000;
 }
 h4 {
   font-weight: bold;
@@ -35,7 +34,6 @@ h4::before {
 #columns {
   column-count: 2;
 }
-
 /* 本文中への記載方法 (html)
 <div id="columns">
 	<li>left 1</li>
