@@ -42,3 +42,19 @@ h4::before {
 	<li>left 4</li>
 </div>
 */
+
+
+/* 見出しの色変更 
+https://uigradients.com/#Passion
+*/
+.md-header {
+	background: #77A1D3;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #E684AE, #79CBCA, #77A1D3);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #E684AE, #79CBCA, #77A1D3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
+	}
+/* ナビゲーションタブは見出しの色と統一 */
+.md-tabs {
+	background: #77A1D3;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #E684AE, #79CBCA, #77A1D3);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #E684AE, #79CBCA, #77A1D3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
+	}
