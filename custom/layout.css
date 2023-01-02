@@ -58,3 +58,25 @@ https://uigradients.com/#Passion
 	background: -webkit-linear-gradient(to right, #E684AE, #79CBCA, #77A1D3);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to right, #E684AE, #79CBCA, #77A1D3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
 	}
+
+
+/* ナビゲーションタブに絵文字追加 */
+label.md-nav__link:before {
+	content: url(./icons/icons8-folder-16.png);
+	padding-right: 5px;
+  }
+label.md-nav__link{
+	font-weight: bold;
+	/* 左寄席 */
+	justify-content: flex-start;
+  }
+
+
+a.md-nav__link {
+	font-size: 0.6rem;
+	justify-content: flex-start;
+  }
+a.md-nav__link:before {
+	content: url(./icons/dot.svg);
+	padding-right: 1px;
+  }
