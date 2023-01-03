@@ -126,152 +126,107 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://omomuroni.github.io/Markdown/Markdown_CeatSheet/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Markdown/color_sample/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Markdown/markdown-cheat-sheet/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Markdown/markmap/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Markdown/Markmap/Sample_markmap/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Markdown/Mermaid/Class/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Markdown/Mermaid/Entity_Relationship_Diagrams/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Markdown/Mermaid/Flowchart/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Markdown/Mermaid/Gantt_diagrams/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Markdown/Mermaid/Index/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Markdown/Mermaid/OtherExample/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Markdown/Mermaid/Pie_chart_diagrams/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Markdown/Mermaid/Requirement_Diagram/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Markdown/Mermaid/Sequence_diagram/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Markdown/Mermaid/State_diagrams/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Markdown/Mermaid/Theme_Configuration/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Markdown/Mermaid/User_Journey_Diagram/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Markdown/Mkdocs/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Markdown/Mkdocs/How_to_use_mermaid/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Markdown/Mkdocs/Mkdocs_Quick-Start_Guide/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Markdown/Mkdocs/color_list/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Markdown/Mkdocs/sample_attention/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Markdown/Mkdocs/sample_yaml/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://omomuroni.github.io/Mkdocs/00_index/</loc>
          <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://omomuroni.github.io/Mkdocs/custom_css/</loc>
+         <loc>https://omomuroni.github.io/Mkdocs/01_material_sample/</loc>
          <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://omomuroni.github.io/Mkdocs/emoji/</loc>
+         <loc>https://omomuroni.github.io/Mkdocs/02_emoji/</loc>
          <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://omomuroni.github.io/Mkdocs/extended_markdown/</loc>
+         <loc>https://omomuroni.github.io/Mkdocs/03_extended_markdown/</loc>
          <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://omomuroni.github.io/Mkdocs/markdown/</loc>
+         <loc>https://omomuroni.github.io/Mkdocs/04_material_config/</loc>
          <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://omomuroni.github.io/Mkdocs/materia_memo/</loc>
+         <loc>https://omomuroni.github.io/Mkdocs/05_How_to_use_mermaid/</loc>
          <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://omomuroni.github.io/Mkdocs/material_sample/</loc>
+         <loc>https://omomuroni.github.io/Mkdocs/06_color_sample/</loc>
+         <lastmod>2023-01-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Mkdocs/07_markdown_cheat/</loc>
+         <lastmod>2023-01-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Mkdocs/08_sample_attention/</loc>
+         <lastmod>2023-01-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Mkdocs/Mermaid/Class/</loc>
+         <lastmod>2023-01-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Mkdocs/Mermaid/Entity_Relationship_Diagrams/</loc>
+         <lastmod>2023-01-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Mkdocs/Mermaid/Flowchart/</loc>
+         <lastmod>2023-01-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Mkdocs/Mermaid/Gantt_diagrams/</loc>
+         <lastmod>2023-01-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Mkdocs/Mermaid/Index/</loc>
+         <lastmod>2023-01-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Mkdocs/Mermaid/OtherExample/</loc>
+         <lastmod>2023-01-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Mkdocs/Mermaid/Pie_chart_diagrams/</loc>
+         <lastmod>2023-01-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Mkdocs/Mermaid/Requirement_Diagram/</loc>
+         <lastmod>2023-01-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Mkdocs/Mermaid/Sequence_diagram/</loc>
+         <lastmod>2023-01-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Mkdocs/Mermaid/State_diagrams/</loc>
+         <lastmod>2023-01-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Mkdocs/Mermaid/Theme_Configuration/</loc>
+         <lastmod>2023-01-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Mkdocs/Mermaid/User_Journey_Diagram/</loc>
          <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
