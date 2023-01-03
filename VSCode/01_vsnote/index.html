@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://omomuroni.github.io/VScode/01_vscode/">
+        <link rel="canonical" href="https://omomuroni.github.io/VSCode/01_vsnote/">
       
       <link rel="icon" href="../../custom/icons/pencil.svg">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
     
     
       
-        <title>VSCode メモ - おもむろにメモ書き</title>
+        <title>VSNotes - おもむろにメモ書き</title>
       
     
     
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vscode" class="md-skip">
+        <a href="#vsnotes" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              VSCode メモ
+              VSNotes
             
           </span>
         </div>
@@ -323,7 +323,7 @@
   
     <li class="md-tabs__item">
       <a href="../00_extension/" class="md-tabs__link md-tabs__link--active">
-        VScode
+        VSCode
       </a>
     </li>
   
@@ -3531,14 +3531,14 @@
       
       
         <label class="md-nav__link" for="__nav_8">
-          VScode
+          VSCode
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="VScode" data-md-level="1">
+      <nav class="md-nav" aria-label="VSCode" data-md-level="1">
         <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
-          VScode
+          VSCode
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -3550,6 +3550,20 @@
     <li class="md-nav__item">
       <a href="../00_extension/" class="md-nav__link">
         拡張機能一覧
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00_vscode/" class="md-nav__link">
+        VSCode メモ
       </a>
     </li>
   
@@ -3572,12 +3586,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          VSCode メモ
+          VSNotes
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        VSCode メモ
+        VSNotes
       </a>
       
         
@@ -3596,8 +3610,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#settingajson" class="md-nav__link">
-    settinga.json
+  <a href="#_1" class="md-nav__link">
+    使い方
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    設定
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    機能
+  </a>
+  
+    <nav class="md-nav" aria-label="機能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    タグでグループ分け
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    参考
   </a>
   
 </li>
@@ -3617,8 +3665,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../01_vsnote/" class="md-nav__link">
-        VSNotes
+      <a href="../03_vscode_for_git/" class="md-nav__link">
+        VSCode で Git を使う
       </a>
     </li>
   
@@ -3658,8 +3706,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#settingajson" class="md-nav__link">
-    settinga.json
+  <a href="#_1" class="md-nav__link">
+    使い方
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    設定
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    機能
+  </a>
+  
+    <nav class="md-nav" aria-label="機能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    タグでグループ分け
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    参考
   </a>
   
 </li>
@@ -3676,24 +3758,86 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/VScode/01_vscode.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/VSCode/01_vsnote.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="vscode">VSCode メモ</h1>
-<h2 id="settingajson">settinga.json</h2>
+<h1 id="vsnotes">VSNotes</h1>
+<h2 id="_1">使い方</h2>
+<ol>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-p">P</kbd></span> で<code>VSNotes: Run setup</code>を選択し、事前に保存する場所を指定しておく</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-p">P</kbd></span> で<code>VSNotes: Create a New Note</code>を選択</li>
+<li>タイトルを入力し、新規ノートを作成（例：2023-01-03_11-49_test.mdのように日付と時刻つきで保存される）</li>
+<li>markdown 記法で編集し、保存</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>保存できるフォルダは1つのため雑多なメモだけにするか、メモごとに細かく分けるなど工夫が必要。<br />
+後述のタグを付けてノートのグルーピングも効果的。</p>
+</div>
+<h2 id="_2">設定</h2>
+<p>settings.jsonに以下の設定を記載することで格納するフォルダやファイル名を指定可能。</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>ユーザー設定のsettings.jsonの場所は以下のとおり</p>
 <ul>
-<li>VS Code の設定画面は ++Ctrl+,++ で起動</li>
-<li>settings.json にはユーザー設定ファイルとワークスペース設定ファイルがあり、それぞれ適用範囲が異なる</li>
-<li>ユーザー設定ファイルは全体設定で、格納場所 (settings.json)はOSごとに異なる。それぞれ以下の通り</li>
+<li>Windows:  <code>%APPDATA%\Code\User\settings.json</code></li>
+<li>macOS:$HOME/Library/Application Support/Code/User/settings.json</li>
+<li>Linux: <code>$HOME/.config/Code/User/settings.json</code></li>
 </ul>
-<p>| OS    ユーザー設定ファイルのパス |
-| :---------------------------- | :---------------------------------------------------------- |
-| Windows                       | <code>%APPDATA%\Code\User\settings.json</code>                         |
-| macOS                         | <code>$HOME/Library/Application Support/Code/User/settings.json</code> |
-| Linux                         | <code>$HOME/.config/Code/User/settings.json</code>                     |</p>
+</div>
+<div class="highlight"><span class="filename">settings.json</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">  </span><span class="c1">// VSNote で指定したフォルダに年月ディレクトリを作成しファイルを格納</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;vsnotes.tokens&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;datetime&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">            </span><span class="nt">&quot;token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{year}&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">            </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;YYYY&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert formatted Year.&quot;</span><span class="w"></span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;datetime&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">            </span><span class="nt">&quot;token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{month}&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">            </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MM&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert formatted Month.&quot;</span><span class="w"></span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;datetime&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">            </span><span class="nt">&quot;token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{dt}&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">            </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;YYYY-MMDD-HHmm&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert formatted datetime.&quot;</span><span class="w"></span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">        </span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;title&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">            </span><span class="nt">&quot;token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{title}&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert note title from input box.&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">            </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Untitled&quot;</span><span class="w"></span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">        </span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;extension&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">            </span><span class="nt">&quot;token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{ext}&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Insert file vsnotes.&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">            </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;md&quot;</span><span class="w"></span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">    </span><span class="p">],</span><span class="w"></span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">    </span><span class="nt">&quot;vsnotes.defaultNoteTitle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{year}_{month}/{dt}_{title}.{ext}&quot;</span><span class="p">,</span><span class="w"></span>
+</code></pre></div>
+<h2 id="_3">機能</h2>
+<h3 id="_4">タグでグループ分け</h3>
+<p>作成したノートの先頭に以下ダグを付けておくと、vscode でタグごとに確認ができる。</p>
+<p><img alt="" src="../img/vsnote1.png" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>---
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>tags:
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  - &lt;タグの名前&gt;
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>---
+</code></pre></div>
+<h2 id="_5">参考</h2>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=patricklee.vsnotes">VSNotes</a></li>
+<li><a href="https://fereria.github.io/reincarnation_tech/10_Programming/50_VSCode/vscode_note/">Reincarnation+#Tech - VSCodeでノートをつける</a></li>
+<li><a href="https://www.karelie.net/vscode-notes/">karelie - VSCode(Visual Studio Code)をメモ帳として使える拡張機能「VSNotes」が便利そう</a></li>
+</ul>
 
               
             </article>
@@ -3712,7 +3856,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../00_extension/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 拡張機能一覧" rel="prev">
+        <a href="../00_vscode/" class="md-footer__link md-footer__link--prev" aria-label="Previous: VSCode メモ" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -3721,20 +3865,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              拡張機能一覧
+              VSCode メモ
             </div>
           </div>
         </a>
       
       
         
-        <a href="../01_vsnote/" class="md-footer__link md-footer__link--next" aria-label="Next: VSNotes" rel="next">
+        <a href="../03_vscode_for_git/" class="md-footer__link md-footer__link--next" aria-label="Next: VSCode で Git を使う" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              VSNotes
+              VSCode で Git を使う
             </div>
           </div>
           <div class="md-footer__button md-icon">
