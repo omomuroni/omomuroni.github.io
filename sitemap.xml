@@ -76,11 +76,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://omomuroni.github.io/HTML%26CSS/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://omomuroni.github.io/Linux/LPIC101_CheatSheet/</loc>
          <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
@@ -777,11 +772,6 @@
     </url>
     <url>
          <loc>https://omomuroni.github.io/VScode/001_extension/</loc>
-         <lastmod>2023-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/docker/memo/</loc>
          <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
