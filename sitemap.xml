@@ -766,7 +766,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://omomuroni.github.io/VScode/001_extension/</loc>
+         <loc>https://omomuroni.github.io/VScode/00_extension/</loc>
+         <lastmod>2023-01-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/VScode/01_vscode/</loc>
+         <lastmod>2023-01-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/VScode/01_vsnote/</loc>
          <lastmod>2023-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
