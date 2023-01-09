@@ -411,51 +411,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://omomuroni.github.io/Python/Data/collections/</loc>
-         <lastmod>2023-01-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Python/Data/csv/</loc>
-         <lastmod>2023-01-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Python/Data/itertools/</loc>
-         <lastmod>2023-01-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Python/Data/jinja/</loc>
-         <lastmod>2023-01-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Python/Data/json/</loc>
-         <lastmod>2023-01-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Python/Data/loggging/</loc>
-         <lastmod>2023-01-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Python/Data/re_module/</loc>
-         <lastmod>2023-01-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Python/Data/regex/</loc>
-         <lastmod>2023-01-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Python/Data/yaml/</loc>
-         <lastmod>2023-01-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://omomuroni.github.io/Python/Data/Dash/reference/</loc>
          <lastmod>2023-01-09</lastmod>
          <changefreq>daily</changefreq>
@@ -502,6 +457,51 @@
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Data/TextFSM/sample%20_template_bgp_neighbor/</loc>
+         <lastmod>2023-01-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Python/Data/Various/collections/</loc>
+         <lastmod>2023-01-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Python/Data/Various/csv/</loc>
+         <lastmod>2023-01-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Python/Data/Various/itertools/</loc>
+         <lastmod>2023-01-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Python/Data/Various/jinja/</loc>
+         <lastmod>2023-01-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Python/Data/Various/json/</loc>
+         <lastmod>2023-01-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Python/Data/Various/loggging/</loc>
+         <lastmod>2023-01-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Python/Data/Various/re_module/</loc>
+         <lastmod>2023-01-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Python/Data/Various/regex/</loc>
+         <lastmod>2023-01-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Python/Data/Various/yaml/</loc>
          <lastmod>2023-01-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -656,12 +656,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://omomuroni.github.io/Python/Recipe/pydoc/</loc>
+         <lastmod>2023-01-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://omomuroni.github.io/Python/Recipe/pywatchdog/</loc>
          <lastmod>2023-01-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Recipe/shutil/</loc>
+         <lastmod>2023-01-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Python/Recipe/sphinx/</loc>
          <lastmod>2023-01-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -726,16 +736,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://omomuroni.github.io/Python/Web/beautifulsoup/</loc>
-         <lastmod>2023-01-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Python/Web/requests/</loc>
-         <lastmod>2023-01-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://omomuroni.github.io/Python/Web/django/Django1/</loc>
          <lastmod>2023-01-09</lastmod>
          <changefreq>daily</changefreq>
@@ -782,6 +782,16 @@
     </url>
     <url>
          <loc>https://omomuroni.github.io/Python/Web/django/tutorial/08_Advanced/</loc>
+         <lastmod>2023-01-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Python/Web/module/beautifulsoup/</loc>
+         <lastmod>2023-01-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Python/Web/module/requests/</loc>
          <lastmod>2023-01-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
