@@ -4421,7 +4421,7 @@
 
 
 
-<h1 id="python">Python 演算子</h1>
+<h1 id="python">Python 演算子<a class="headerlink" href="#python" title="Permanent link">#</a></h1>
 <p>Python の演算子は大きく以下5つに分類される</p>
 <ol>
 <li><strong>算術演算子</strong></li>
@@ -4431,7 +4431,7 @@
 <li><strong>ビット演算子</strong></li>
 </ol>
 <p>また、関数形式、特殊メソッドでの演算子もサポートされています。</p>
-<h2 id="_1">算術演算子</h2>
+<h2 id="_1">算術演算子<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <table class="basic_table">
     <thead>
         <tr>
@@ -4495,7 +4495,7 @@
 <li>商と剰余をまとめて得るなら <strong>divmod</strong> 関数も利用できます。</li>
 </ul>
 </div>
-<h3 id="_2">浮動小数点数の演算</h3>
+<h3 id="_2">浮動小数点数の演算<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
 <ul>
 <li>浮動小数点数を含んだ演算では意図した結果が得られないことがある。</li>
 <li>例えば、<code>print(0.2 * 3)</code>の結果は<code>0.6000000000000001</code>となり、これは、Pytnonが内部的に数値を（10進数ではなく）2進数で演算しているため生じる誤差</li>
@@ -4521,7 +4521,7 @@
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">d1</span> <span class="o">=</span> <span class="n">decimal</span><span class="o">.</span><span class="n">Decimal</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
 </code></pre></div>
 </div>
-<h2 id="_3">代入演算子</h2>
+<h2 id="_3">代入演算子<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
 <p>代入演算子は、左辺で指定した変数に対して演算下結果を変数に格納します。
 代入演算子には、算術演算子やビット演算子などを合わせた機能を提供する複合代入演算子も含まれます。</p>
 <table class="basic_table">
@@ -4615,14 +4615,14 @@
 </tbody>
 </table>
 
-<h3 id="_4">数値のインクリメント / デクリメント</h3>
+<h3 id="_4">数値のインクリメント / デクリメント<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
 <p>他の言語での数値のインクリメント / デクリメント は <code>++</code> / <code>--</code> と記述しますが、
 Python では以下のように記述します。</p>
 <ul>
 <li>インクリメント<code>+=</code></li>
 <li>デクリメント<code>-=</code></li>
 </ul>
-<h3 id="python-38"><code>:=</code>(セイウチ)演算子（Python 3.8～）</h3>
+<h3 id="python-38"><code>:=</code>(セイウチ)演算子（Python 3.8～）<a class="headerlink" href="#python-38" title="Permanent link">#</a></h3>
 <ul>
 <li>変数への代入と変数の使用を同時に実行できる演算子です。</li>
 <li><a href="https://docs.python.org/ja/3.8/whatsnew/3.8.html#new-features">What's New In Python 3.8 - 代入式</a><blockquote>
@@ -4634,7 +4634,7 @@ Python では以下のように記述します。</p>
 </blockquote>
 </li>
 </ul>
-<h2 id="_5">比較演算子</h2>
+<h2 id="_5">比較演算子<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
 <table class="basic_table">
     <thead>
         <tr>
@@ -4696,7 +4696,7 @@ Python では以下のように記述します。</p>
     </tbody>
 </table>
 
-<h3 id="_6">異なる型での比較</h3>
+<h3 id="_6">異なる型での比較<a class="headerlink" href="#_6" title="Permanent link">#</a></h3>
 <p>異なる型同士では基本エラーだが、「==」「!=」演算子は異なる型同士でも比較できます。
 一般的にはFalseを返します。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">)</span>
@@ -4710,7 +4710,7 @@ Python では以下のように記述します。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">print</span><span class="p">(</span><span class="mi">15</span> <span class="o">&lt;</span> <span class="mi">131</span><span class="p">)</span> <span class="c1"># True</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;15&#39;</span> <span class="o">&lt;</span> <span class="s1">&#39;131&#39;</span><span class="p">)</span> <span class="c1"># False</span>
 </code></pre></div></p>
-<h3 id="_7">リストの比較</h3>
+<h3 id="_7">リストの比較<a class="headerlink" href="#_7" title="Permanent link">#</a></h3>
 <p>先頭から要素を比較していき、最初に異なる要素が見つかった場合に、その大小でリスト全体の大小を決定します。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">data1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">data2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
@@ -4719,7 +4719,7 @@ Python では以下のように記述します。</p>
 <a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">data1</span> <span class="o">&lt;</span> <span class="n">data2</span><span class="p">)</span> <span class="c1"># True</span>
 <a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">data1</span> <span class="o">&lt;</span> <span class="n">data3</span><span class="p">)</span> <span class="c1"># False</span>
 </code></pre></div>
-<h3 id="_8">浮動小数点数の比較</h3>
+<h3 id="_8">浮動小数点数の比較<a class="headerlink" href="#_8" title="Permanent link">#</a></h3>
 <p>浮動小数点数は内部的には2進数として扱われ、その比較式は Python では False となります。
 正確な判定には、浮動小数点数を比較するには以下の方法を用います。</p>
 <ol>
@@ -4748,7 +4748,7 @@ Python では以下のように記述します。</p>
 </blockquote>
 </li>
 </ul>
-<h3 id="_9">同一性と同値性</h3>
+<h3 id="_9">同一性と同値性<a class="headerlink" href="#_9" title="Permanent link">#</a></h3>
 <p>比較演算子を利用する上で、同一性（Identity）と同値性（Equivalence）を区別することは重要です。
 * <strong>同一性</strong> : 参照値が同じオブジェクトを参照していること （同じオブジェクトか =格納先が等しいか）
 * <strong>同値性</strong> : オブジェクトが同じ値を持っていること（値として等しいか =意味的な値の確認）</p>
@@ -4760,7 +4760,7 @@ Python では以下のように記述します。</p>
 <a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="c1"># is演算子はオブジェクトの同一性を確認する</span>
 <a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">price1</span> <span class="ow">is</span> <span class="n">price2</span><span class="p">)</span> <span class="c1"># False</span>
 </code></pre></div>
-<h3 id="_10">イミュータブル型の同一性</h3>
+<h3 id="_10">イミュータブル型の同一性<a class="headerlink" href="#_10" title="Permanent link">#</a></h3>
 <p>文字列はイミュータブルであり、Pythonではメモリを節約するため同じ値を利用しています。
 そのため、以下例の is 演算子の結果は False ではなく True となります。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">sushi1</span> <span class="o">=</span> <span class="s1">&#39;サーモン&#39;</span>
@@ -4768,15 +4768,15 @@ Python では以下のように記述します。</p>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">sushi1</span> <span class="o">==</span> <span class="n">sushi2</span><span class="p">)</span> <span class="c1"># True</span>
 <a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">sushi1</span> <span class="ow">is</span> <span class="n">sushi2</span><span class="p">)</span> <span class="c1"># True</span>
 </code></pre></div>
-<h3 id="none">None値の比較</h3>
+<h3 id="none">None値の比較<a class="headerlink" href="#none" title="Permanent link">#</a></h3>
 <p>ある式が <code>None</code> であるかを判定するには <code>==</code> 演算子ではなく、<code>is</code> 演算子を利用します。
 （<code>==</code> 演算子の挙動は左オペランドの型によって変化する可能性があるためです。）</p>
-<h3 id="_11">条件演算子</h3>
+<h3 id="_11">条件演算子<a class="headerlink" href="#_11" title="Permanent link">#</a></h3>
 <p>条件演算子は、指定された条件式の真偽に応じて、対応する式の値を返します。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">score</span> <span class="o">=</span> <span class="mi">60</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;合格&#39;</span> <span class="k">if</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">50</span> <span class="k">else</span> <span class="s1">&#39;不合格...&#39;</span><span class="p">)</span>
 </code></pre></div></p>
-<h3 id="_12">論理演算子</h3>
+<h3 id="_12">論理演算子<a class="headerlink" href="#_12" title="Permanent link">#</a></h3>
 <p>論理演算子は、複数の条件式（または真偽値）を論理的に結合し、その結果をTrue / Falseとして返します。
 なお、^演算子はビット演算子に分類されるべき演算子ですが、論理積・論理和と比較したほうが理解が容易なため、以下でまとめています。</p>
 <table class="basic_table">
@@ -4816,7 +4816,7 @@ Python では以下のように記述します。</p>
     </tbody>
 </table>
 
-<h3 id="_13">ショートカット演算（短絡演算）</h3>
+<h3 id="_13">ショートカット演算（短絡演算）<a class="headerlink" href="#_13" title="Permanent link">#</a></h3>
 <p>論理積 / 論理和演算では、ある条件のもとでは、左式だけが評価されて右式が評価されない場合がある。このような演算のことをショートカット演算、あるいは短絡演算といいます。</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -4829,7 +4829,7 @@ Python では以下のように記述します。</p>
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;実行されました。&#39;</span><span class="p">)</span>
 <a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">x</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">or</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;実行されました。&#39;</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="_14">ショートカット演算子の実例</h3>
+<h3 id="_14">ショートカット演算子の実例<a class="headerlink" href="#_14" title="Permanent link">#</a></h3>
 <p>Pythonの論理演算子は、左式/右式と最後に評価された値を返す、という性質があります。
 その性質とショートカット演算のルールによって、左式で評価を打ち切った場合には左式の値が、
 さもなければ右式の値が返されます。</p>
@@ -4852,18 +4852,18 @@ Python では以下のように記述します。</p>
 </code></pre></div>
 これによって、hoge関数の戻り値がない（None）場合にだけ、既定値が適用されます。</p>
 </div>
-<h3 id="_15">比較演算子の連結</h3>
+<h3 id="_15">比較演算子の連結<a class="headerlink" href="#_15" title="Permanent link">#</a></h3>
 <p>たとえば、x が50～100の範囲を<code>50 &lt;= x &lt;= 100</code>のように比較演算子を連結することで表現できる。式xが一度しか評価されないため、実行効率に優れる。</p>
-<h3 id="_16">ビット演算子</h3>
+<h3 id="_16">ビット演算子<a class="headerlink" href="#_16" title="Permanent link">#</a></h3>
 <p>ビット演算を行うための演算子です。<strong>ビット演算</strong>とは、整数を2進数で表したときの格桁（ビット単位）を論理計算する演算のこと。ビット演算では、与えられた整数を2進数に変換した上で、それぞれの桁について、論理演算を実施します。</p>
-<h3 id="_17">演算子の優先順位と結合則</h3>
-<h4 id="_18">優先順位</h4>
+<h3 id="_17">演算子の優先順位と結合則<a class="headerlink" href="#_17" title="Permanent link">#</a></h3>
+<h4 id="_18">優先順位<a class="headerlink" href="#_18" title="Permanent link">#</a></h4>
 <p>演算子には優先順位があります。異なる演算子の処理順序を決めるのが優先順位です。</p>
-<h4 id="_19">結合則</h4>
+<h4 id="_19">結合則<a class="headerlink" href="#_19" title="Permanent link">#</a></h4>
 <p>同じ優先順位の演算子を処理する順序を決めるのが結合則です。以下、基本ルール
 * 左から右への演算が基本
 * べき乗演算子（**）と代入演算子は右結合。例えば、<code>2 ** 2 ** 3</code>と<code>2 ** (2 ** 3)</code>の式は同じ意味です。</p>
-<h2 id="_20">関数形式の演算子</h2>
+<h2 id="_20">関数形式の演算子<a class="headerlink" href="#_20" title="Permanent link">#</a></h2>
 <ul>
 <li>
 <p><a href="https://docs.python.org/ja/3/library/operator.html">operator --- 関数形式の標準演算子</a></p>

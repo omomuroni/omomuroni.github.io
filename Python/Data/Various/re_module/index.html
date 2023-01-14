@@ -4137,12 +4137,12 @@
 
 
 
-<h1 id="re">re</h1>
+<h1 id="re">re<a class="headerlink" href="#re" title="Permanent link">#</a></h1>
 <ul>
 <li><a href="https://docs.python.org/ja/3/library/re.html">re --- 正規表現操作</a></li>
 <li><a href="https://pyneng.readthedocs.io/en/latest/book/15_module_re/index.html">Python for network engineers --- Module re</a></li>
 </ul>
-<h2 id="_1">メソッド</h2>
+<h2 id="_1">メソッド<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <ul>
 <li><code>match</code> 文字列の先頭で正規表現パターンにマッチした場合、対応するマッチオブジェクトを返す。</li>
 <li><code>search</code> 文字列を走査し、正規表現パターンがマッチする最初の場所を探し、対応するマッチオブジェクトを返します。</li>
@@ -4157,7 +4157,7 @@
 <p class="admonition-title">Info</p>
 <p>正規表現にマッチしなかった場合はNoneをかえします。</p>
 </div>
-<h2 id="_2">基本的なマッチ例</h2>
+<h2 id="_2">基本的なマッチ例<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">re</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">log</span> <span class="o">=</span> <span class="s2">&quot;RP/0/0/CPU0:Apr 22 15:49:42.020 JST: mpls_ldp[1181]: %ROUTING-LDP-5-NBR_CHANGE : VRF &#39;default&#39; (0x60000000), Neighbor 2.2.2.2:0 is UP (IPv4 connection)&quot;</span> 
@@ -4184,7 +4184,7 @@
 <a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="nb">print</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
 <a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="c1"># (&#39;Neighbor 2.2.2.2&#39;, &#39;2.2.2.2&#39;)</span>
 </code></pre></div>
-<h2 id="groupdict">groupdict()</h2>
+<h2 id="groupdict">groupdict()<a class="headerlink" href="#groupdict" title="Permanent link">#</a></h2>
 <p>正規表現で<code>(?P&lt;key&gt;pattern)</code>を用いて、マッチしたオブジェクトには groupdict()メソッドで辞書を取得できます。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">re</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
@@ -4205,7 +4205,7 @@
 <a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
 <a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="nb">print</span><span class="p">(</span><span class="n">static_match</span><span class="o">.</span><span class="n">groupdict</span><span class="p">())</span>
 </code></pre></div>
-<h2 id="recompile">re.compile</h2>
+<h2 id="recompile">re.compile<a class="headerlink" href="#recompile" title="Permanent link">#</a></h2>
 <p>複数行に分けて正規表現を記述する例1</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">static_match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="sa">r</span><span class="s1">&#39;router static address-family ipv(4|6) unicast &#39;</span>
@@ -4241,7 +4241,7 @@ re.X では空白、コメントアウトは無視されます。正規表現で
 一度に正規表現を少ししか使わな</p>
 </blockquote>
 </div>
-<h2 id="show-cdp-neighbor">show cdp neighbor の処理例</h2>
+<h2 id="show-cdp-neighbor">show cdp neighbor の処理例<a class="headerlink" href="#show-cdp-neighbor" title="Permanent link">#</a></h2>
 <p>for 文で読み込んだテキストを一行ずつ処理。
 startswithを条件分岐に用いている</p>
 <blockquote>

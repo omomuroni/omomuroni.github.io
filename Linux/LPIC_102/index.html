@@ -4539,8 +4539,8 @@
 
 
 
-<h1 id="102-install-pkg">102 install / Pkg</h1>
-<h2 id="_1">ハードディスクのレイアウト設計</h2>
+<h1 id="102-install-pkg">102 install / Pkg<a class="headerlink" href="#102-install-pkg" title="Permanent link">#</a></h1>
+<h2 id="_1">ハードディスクのレイアウト設計<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <ul>
 <li>Linuxをインストールする際、パーティションを設計する必要がある</li>
 <li>全てのディレクトリをルートパーティションに収めることも可能だが、通常はディレクトリの用途に応じて、特定のディレクトリを別のパーティションに割り当てる</li>
@@ -4609,7 +4609,7 @@
 <p class="admonition-title">Info</p>
 <p>opt ：容量が大きくなる可能性がある場合は、ルートパーティションとは別のパーティションを割り当てた方がよい</p>
 </div>
-<h3 id="_2">論理ボリュームを作成するまでの手順</h3>
+<h3 id="_2">論理ボリュームを作成するまでの手順<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
 <ol>
 <li>
 <p>物理ボリューム(PV)の作成<br />
@@ -4624,7 +4624,7 @@ vgcreateコマンドを使用して作成します。</p>
 lvcreateコマンドを使用して作成します。</p>
 </li>
 </ol>
-<h3 id="_3">用語解説</h3>
+<h3 id="_3">用語解説<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
 <ul>
 <li>LVM</li>
 <li>LVM (Logical Volume Manager) は、物理的な記憶デバイスの領域（物理ボリューム：PV）を複数にまとめてひとつの大きな仮想的な領域（ボリュームグループ：VG）とし、そこから仮想的なパーティション領域（論理ボリューム：LV）を切り出すことで、従来の物理的なパーティションを用いた方法よりも柔軟に記憶領域を管理することができるようにする仕組みのこと</li>
@@ -4646,7 +4646,7 @@ lvcreateコマンドを使用して作成します。</p>
 <li>VG：LVM におけるボリュームグループ (Volume Group) の略称</li>
 <li>LV：LVM における論理ボリューム (Logical Volume) の略称  </li>
 </ul>
-<h2 id="_4">ブートマネージャのインストール</h2>
+<h2 id="_4">ブートマネージャのインストール<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
 <ul>
 <li>GRUBのバージョンが0.9x系のものを「GRUB Legacy」、1.9以降のものを「GRUB2」と呼ぶ</li>
 <li>どちらのバージョンもインストールは、grub-installコマンドを利用</li>
@@ -4661,7 +4661,7 @@ lvcreateコマンドを使用して作成します。</p>
 <li>dd if=バックアップファイル of=/dev/hda bs=446 count=1　(既存のパーティションテーブルを残してMBRが復元される)</li>
 <li>dd if=/dev/hda of=バックアップファイル bs=512 count=1　（MBRがバックアップされる）</li>
 </ul>
-<h3 id="grub-legacy">GRUB Legacyの設定ファイル</h3>
+<h3 id="grub-legacy">GRUB Legacyの設定ファイル<a class="headerlink" href="#grub-legacy" title="Permanent link">#</a></h3>
 <ul>
 <li>ブートローダであるGRUB Legacy（GRUB1）の設定ファイルは<code>/boot/grub/menu.lst</code></li>
 <li>ディストリビューションによっては<code>/boot/grub/grub.conf</code></li>
@@ -4676,7 +4676,7 @@ lvcreateコマンドを使用して作成します。</p>
 <li>GRUB Legacyの設定ファイルにおいてメニューに表示するエントリ名を指定する項目は title</li>
 <li>GRUB Legacyの設定ファイルにおいてルートパーティションを指定する項目 root</li>
 </ul>
-<h3 id="grub2">GRUB2の設定ファイル</h3>
+<h3 id="grub2">GRUB2の設定ファイル<a class="headerlink" href="#grub2" title="Permanent link">#</a></h3>
 <ul>
 <li>GRUB2の設定ファイルは<code>/boot/grub/grub.cfg</code></li>
 <li>/boot/grub/grub.cfgファイルを直接編集することはない</li>
@@ -4838,7 +4838,7 @@ lvcreateコマンドを使用して作成します。</p>
 <a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>01_otheros, 11_otheros, etc, depending on the position you want it to occupy in
 <a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>the menu; and then adjust the default setting via /etc/default/grub.
 </code></pre></div>
-<h3 id="linux">Linux カーネル</h3>
+<h3 id="linux">Linux カーネル<a class="headerlink" href="#linux" title="Permanent link">#</a></h3>
 <p>Linuxカーネルの主な起動オプションは以下のとおりです。</p>
 <table>
 <thead>
@@ -4866,7 +4866,7 @@ lvcreateコマンドを使用して作成します。</p>
 </tr>
 </tbody>
 </table>
-<h2 id="_5">共有ライブラリの管理</h2>
+<h2 id="_5">共有ライブラリの管理<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
 <ul>
 <li>ライブラリとは、汎用性の高いプログラムを再利用可能な形にしてまとめたもの</li>
 <li>ライブラリそれ自体を単独で実行する事はなく、他のプログラムに組み込んで呼び出す事で、ライブラリの持つ機能を利用できるように</li>
@@ -4892,7 +4892,7 @@ lvcreateコマンドを使用して作成します。</p>
 <li><code>/etc/ld.so.conf</code>ファイルに検索パスを追記してldconfigコマンドで<code>/etc/ld.so.cache</code>ファイルを更新（作成）する</li>
 </ul>
 </div>
-<h3 id="ldconfig">ldconfig</h3>
+<h3 id="ldconfig">ldconfig<a class="headerlink" href="#ldconfig" title="Permanent link">#</a></h3>
 <p>共有ライブラリのキャッシュファイル<code>/etc/ld.so.cache</code>を更新するコマンド</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -4901,7 +4901,7 @@ ldconfigコマンドは共有ライブラリの検索パスが記述されてい
 ファイルを参照し<code>/etc/ld.so.cache</code>ファイルを更新（作成）します。
 なお、ldconfigは管理者(rootユーザ)のみが使用できるコマンドです。</p>
 </div>
-<h3 id="ldd">ldd</h3>
+<h3 id="ldd">ldd<a class="headerlink" href="#ldd" title="Permanent link">#</a></h3>
 <p>あるプログラムが必要としている共有ライブラリを表示するコマンド</p>
 <ul>
 <li>
@@ -4919,8 +4919,8 @@ ldconfigコマンドは共有ライブラリの検索パスが記述されてい
 </code></pre></div></p>
 </li>
 </ul>
-<h2 id="debian">Debianパッケージ管理</h2>
-<h3 id="dpkg">dpkg</h3>
+<h2 id="debian">Debianパッケージ管理<a class="headerlink" href="#debian" title="Permanent link">#</a></h2>
+<h3 id="dpkg">dpkg<a class="headerlink" href="#dpkg" title="Permanent link">#</a></h3>
 <ul>
 <li>dpkgはDebian形式のパッケージのインストール・アンインストールなど、基本的なパッケージ管理を行うコマンド</li>
 <li>dpkgコマンドの書式および主なオプション・アクションは以下のとおりです。</li>
@@ -4998,9 +4998,9 @@ ldconfigコマンドは共有ライブラリの検索パスが記述されてい
 </tr>
 </tbody>
 </table>
-<h3 id="dpkg-reconfigure">dpkg-reconfigure</h3>
+<h3 id="dpkg-reconfigure">dpkg-reconfigure<a class="headerlink" href="#dpkg-reconfigure" title="Permanent link">#</a></h3>
 <p>dpkgツールにおいてインストール済みのパッケージを、インストールした時と同じように再設定するコマンド</p>
-<h3 id="apt-get">apt-get</h3>
+<h3 id="apt-get">apt-get<a class="headerlink" href="#apt-get" title="Permanent link">#</a></h3>
 <ul>
 <li>apt-getコマンドは、APT（Advanced Packaging Tool）というパッケージ管理ツールに含まれるコマンド。</li>
 <li>apt-getコマンドはアプリケーションの依存関係を調整しながらパッケージのインストール、アップグレードを行う</li>
@@ -5063,7 +5063,7 @@ ldconfigコマンドは共有ライブラリの検索パスが記述されてい
 </tr>
 </tbody>
 </table>
-<h3 id="apt-cache">apt-cache</h3>
+<h3 id="apt-cache">apt-cache<a class="headerlink" href="#apt-cache" title="Permanent link">#</a></h3>
 <ul>
 <li>apt-cacheコマンドは、パッケージ情報の照会と検索が可能なコマンド</li>
 <li>照会や検索を行う際にそのパッケージがインストールされていなくても実行できる。</li>
@@ -5094,7 +5094,7 @@ ldconfigコマンドは共有ライブラリの検索パスが記述されてい
 </tr>
 </tbody>
 </table>
-<h3 id="aptitude">aptitude</h3>
+<h3 id="aptitude">aptitude<a class="headerlink" href="#aptitude" title="Permanent link">#</a></h3>
 <p>aptitudeコマンドは、apt-getやapt-cacheコマンドより高度なパッケージ管理機能を持っています。</p>
 <table>
 <thead>
@@ -5146,7 +5146,7 @@ ldconfigコマンドは共有ライブラリの検索パスが記述されてい
 <p class="admonition-title">Info</p>
 <p>aptコマンドはapt-getとapt-cacheの機能を統合したコマンド</p>
 </div>
-<h2 id="rpmyum">RPMとYUMパッケージ管理</h2>
+<h2 id="rpmyum">RPMとYUMパッケージ管理<a class="headerlink" href="#rpmyum" title="Permanent link">#</a></h2>
 <ul>
 <li>RPMはRedHat社が開発したソフトウェアのパッケージ管理システム。</li>
 <li>現在はRedHat系のCentOS、Fedora等のディストリビューションにも採用されています。</li>
@@ -5162,9 +5162,9 @@ ldconfigコマンドは共有ライブラリの検索パスが記述されてい
 </ul>
 </li>
 </ul>
-<h3 id="rpm">rpm</h3>
+<h3 id="rpm">rpm<a class="headerlink" href="#rpm" title="Permanent link">#</a></h3>
 <p>構文 ： <code>rpm [ オプション ] パッケージ名</code></p>
-<h4 id="rpm-">RPMコマンド - インストール/アップグレードモード</h4>
+<h4 id="rpm-">RPMコマンド - インストール/アップグレードモード<a class="headerlink" href="#rpm-" title="Permanent link">#</a></h4>
 <table>
 <thead>
 <tr>
@@ -5211,7 +5211,7 @@ ldconfigコマンドは共有ライブラリの検索パスが記述されてい
 </tr>
 </tbody>
 </table>
-<h4 id="rpm-_1">RPMコマンド - アンインストールモード</h4>
+<h4 id="rpm-_1">RPMコマンド - アンインストールモード<a class="headerlink" href="#rpm-_1" title="Permanent link">#</a></h4>
 <table>
 <thead>
 <tr>
@@ -5230,7 +5230,7 @@ ldconfigコマンドは共有ライブラリの検索パスが記述されてい
 </tr>
 </tbody>
 </table>
-<h4 id="rpm-_2">RPMコマンド - 照会モード</h4>
+<h4 id="rpm-_2">RPMコマンド - 照会モード<a class="headerlink" href="#rpm-_2" title="Permanent link">#</a></h4>
 <table>
 <thead>
 <tr>
@@ -5281,7 +5281,7 @@ ldconfigコマンドは共有ライブラリの検索パスが記述されてい
 </tr>
 </tbody>
 </table>
-<h4 id="-q">よく使用する -q オプションの一覧</h4>
+<h4 id="-q">よく使用する -q オプションの一覧<a class="headerlink" href="#-q" title="Permanent link">#</a></h4>
 <table>
 <thead>
 <tr>
@@ -5312,7 +5312,7 @@ ldconfigコマンドは共有ライブラリの検索パスが記述されてい
 </tr>
 </tbody>
 </table>
-<h3 id="-yum">パッケージの管理 - YUM</h3>
+<h3 id="-yum">パッケージの管理 - YUM<a class="headerlink" href="#-yum" title="Permanent link">#</a></h3>
 <ul>
 <li>YUM（Yellowdog Updater Modified）ツールはAPTツール同様、パッケージ間の依存関係を解決しながらダウンロード、インストール、アップデート、アンインストールすることができるツール。</li>
 <li>YUMの設定は、<code>/etc/yum.conf</code> ファイルに記述</li>
@@ -5320,13 +5320,13 @@ ldconfigコマンドは共有ライブラリの検索パスが記述されてい
 <li><code>/etc/yum.conf</code>ファイルは基本的に変更の必要はない</li>
 <li>YUMツールの設定ファイルは<code>/etc/yum.conf</code>で、キャッシュやログの保存先などの基本設定を行います。</li>
 </ul>
-<h3 id="-dnf">パッケージの管理 - DNF</h3>
+<h3 id="-dnf">パッケージの管理 - DNF<a class="headerlink" href="#-dnf" title="Permanent link">#</a></h3>
 <ul>
 <li>DNFはYUMの後継となるパッケージ管理ツール</li>
 <li>dnfコマンドでは、yumコマンドとほぼ同じオプションが使用できる</li>
 <li>また、リポジトリ(パッケージの取得元)もyumと同様に<code>/etc/yum.repos.d</code>ディレクトリを使用</li>
 </ul>
-<h4 id="yum">yum [ オプション ] サブコマンド</h4>
+<h4 id="yum">yum [ オプション ] サブコマンド<a class="headerlink" href="#yum" title="Permanent link">#</a></h4>
 <table>
 <thead>
 <tr>
@@ -5395,7 +5395,7 @@ ldconfigコマンドは共有ライブラリの検索パスが記述されてい
 </tr>
 </tbody>
 </table>
-<h4 id="yumdownloader">yumdownloader</h4>
+<h4 id="yumdownloader">yumdownloader<a class="headerlink" href="#yumdownloader" title="Permanent link">#</a></h4>
 <ul>
 <li>パッケージファイルのダウンロードのみを行いたい場合は yumdownloaderコマンドを使用</li>
 <li>yumdownloaderコマンドを使用するために事前にyum-utilsパッケージをインストールする必要がある</li>
@@ -5415,7 +5415,7 @@ ldconfigコマンドは共有ライブラリの検索パスが記述されてい
 </tr>
 </tbody>
 </table>
-<h3 id="zypper">Zypper</h3>
+<h3 id="zypper">Zypper<a class="headerlink" href="#zypper" title="Permanent link">#</a></h3>
 <ul>
 <li>ZypperはopenSUSE（SUSE Linuxから改名）が採用しているコマンドラインのパッケージ管理ツール</li>
 <li>aptコマンドやyumコマンドのように、zypperコマンドでリポジトリやパッケージの操作を行えます。</li>
@@ -5463,7 +5463,7 @@ ldconfigコマンドは共有ライブラリの検索パスが記述されてい
 </tr>
 </tbody>
 </table>
-<h2 id="oslinux">仮想化のゲストOSとしてのLinux</h2>
+<h2 id="oslinux">仮想化のゲストOSとしてのLinux<a class="headerlink" href="#oslinux" title="Permanent link">#</a></h2>
 <ul>
 <li>仮想化とは
     仮想化（Virtualization）とは、コンピュータリソースを実際の物理的な構成にとらわれず、

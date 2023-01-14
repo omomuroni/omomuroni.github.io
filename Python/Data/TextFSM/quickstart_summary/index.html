@@ -4257,9 +4257,9 @@
 
 
 
-<h1 id="_1">概要</h1>
+<h1 id="_1">概要<a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
 <p><a href="https://github.com/google/textfsm/wiki/TextFSM">https://github.com/google/textfsm/wiki/TextFSM</a></p>
-<h3 id="_2">クイックスタートの例：</h3>
+<h3 id="_2">クイックスタートの例：<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Run text through the FSM. </span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># The argument &#39;template&#39; is a file handle and &#39;raw_text_data&#39; is a string.</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">re_table</span> <span class="o">=</span> <span class="n">textfsm</span><span class="o">.</span><span class="n">TextFSM</span><span class="p">(</span><span class="n">template</span><span class="p">)</span>
@@ -4275,7 +4275,7 @@
 <p>ライブラリは直接実行可能であり、テンプレートの構文をチェックし、入力を期待される出力と比較するために使用できます。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>parser.py [--help] template [input_file [output_file]]
 </code></pre></div></p>
-<h3 id="_3">データ表現</h3>
+<h3 id="_3">データ表現<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
 <p>FSMの基本的な目的は、テキストデータから重要なデータを抽出し、それを表形式の表現に配置することです。</p>
 <p>以下、show コマンドの出力結果から必要な情報を取り出す
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Routing Engine status:
@@ -4348,7 +4348,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="_4">テンプレートファイル</h3>
+<h3 id="_4">テンプレートファイル<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
 <p>テンプレートファイルは、FSMがデータを解析する方法の説明です。テキスト入力のさまざまなパターンには、個別のテンプレートが必要です。たとえば、ルーターコマンドからの出力を解析するには、通常、コマンドごとに1つのテンプレートが必要です。<br />
 完全なサンプルテンプレートを次に示します。この場合、ルータから出力された上記の「showchassisrouting-engine」コマンドを処理するには次のようにします。  </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a># Chassis value will be null for single chassis routers.
@@ -4385,7 +4385,7 @@
 <li>データの解析中のエンジンのさまざまな状態を説明する1つ以上の「State」の定義。</li>
 </ul>
 <p><code>"^\s*#"</code> 行がオプションの空白で始まり、ハッシュが正規表現に一致する場合、その行はコメントと見なされます</p>
-<h4 id="value">「Value」の定義</h4>
+<h4 id="value">「Value」の定義<a class="headerlink" href="#value" title="Permanent link">#</a></h4>
 <p>結果のテーブルに含まれる各列を説明するために、1つ以上の「値」行が使用されます。これらの値の行はすべて、状態定義の前に表示する必要があり、コメントでのみ区切る連続した行である必要があります。  </p>
 <p>各「Value」の行の形式は次のとおりです。</p>
 <ul>
@@ -4426,7 +4426,7 @@
 </table>
 <!-- ここまで表です -->
 
-<h4 id="state">「State」の定義</h4>
+<h4 id="state">「State」の定義<a class="headerlink" href="#state" title="Permanent link">#</a></h4>
 <p>各「State」定義は空白行で区切られます。最初の行は「State」名で、英数字の単語の後に一連のルールが続きます。</p>
 <p>「State」定義
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>stateName
@@ -4436,7 +4436,7 @@
 </code></pre></div></p>
 <p>複数の状態定義は、少なくとも1つの空白行で区切る必要があります。ルールは、状態名の直後の連続する行に記述され、1つまたは2つの空白とカラット（ '^'）でインデントする必要があります。</p>
 <p>最初に、FSMは開始状態で開始します。入力は現在の状態とのみ比較されますが、一致した行が新しい状態への遷移をトリガーする可能性があります。EOFが検出されるか、現在の状態が終了状態に遷移するまで、評価は1行ずつ続行されます。</p>
-<h5 id="_5">予約済みの状態</h5>
+<h5 id="_5">予約済みの状態<a class="headerlink" href="#_5" title="Permanent link">#</a></h5>
 <p>FSMは状態Startで開始するため、このラベルは必須であり、ラベルがないとテンプレートは解析されません。
 入力でEOFに達した場合、EOF状態が実行されます。これは、次のような暗黙の状態です。</p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>EOF
@@ -4446,7 +4446,7 @@ EOFは、戻る前に現在の行を記録します。この動作をオーバ�
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>EOF
 </code></pre></div>
 終了状態が予約されており、終端は、入力ラインの処理と実行しないEOFの状態。</p>
-<h5 id="state_1">「State」の規則</h5>
+<h5 id="state_1">「State」の規則<a class="headerlink" href="#state_1" title="Permanent link">#</a></h5>
 <p>各状態定義は、1つ以上のルールのリストで構成されます。FSMは、入力バッファーから行を読み取り、現在の状態の先頭から順に、各ルールに対してそれをテストします。ルールが行に一致する場合、アクションが実行され、プロセスが次の行で（状態の先頭から）繰り返されます。</p>
 <p>ルールの形式は次のとおりです。  </p>
 <ul>
@@ -4468,11 +4468,11 @@ EOFは、戻る前に現在の行を記録します。この動作をオーバ�
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Interface GigabitEthernet1/10 is up.
 </code></pre></div></p>
 <p>複数の値の置換をルール正規表現に配置できます。値を割り当てるには、展開された正規表現全体が一致する必要があります。</p>
-<h5 id="_6">ルールアクション</h5>
+<h5 id="_6">ルールアクション<a class="headerlink" href="#_6" title="Permanent link">#</a></h5>
 <p>正規表現に続いて、アクションは「-&gt;」で区切られ、「ABC」の形式で記述される場合があります。</p>
 <p>アクションは、3つのオプション部分に分けられます。A）ラインアクション、入力ラインでのアクション。B）アクション、これまでに収集された値に対するアクションを記録します。C）状態遷移。</p>
 <p>アクションが記述されていない場合、つまり <strong>'-&gt;'</strong>がない場合、デフォルトの暗黙のアクションは<strong>Next.NoRecord</strong>です。</p>
-<h6 id="line-actions">Line Actions</h6>
+<h6 id="line-actions">Line Actions<a class="headerlink" href="#line-actions" title="Permanent link">#</a></h6>
 <table>
 <thead>
 <tr>
@@ -4491,7 +4491,7 @@ EOFは、戻る前に現在の行を記録します。この動作をオーバ�
 </tr>
 </tbody>
 </table>
-<h6 id="record-actions">Record Actions</h6>
+<h6 id="record-actions">Record Actions<a class="headerlink" href="#record-actions" title="Permanent link">#</a></h6>
 <p>行アクションがオプションのレコードアクションになった後、これらはピリオド「.」で区切られます。</p>
 <table>
 <thead>
@@ -4521,7 +4521,7 @@ EOFは、戻る前に現在の行を記録します。この動作をオーバ�
 </table>
 <p>ドット '.' セパレータは、行アクションとレコードアクションの両方が指定されている場合にのみ必要です。一方または両方が暗黙のデフォルトとして残されている場合、ドットは省略されます。つまり、Next、Next.NoRecord、およびNoRecordは同等です。</p>
 <p><br></p>
-<h4 id="new-state-transition">New State Transition</h4>
+<h4 id="new-state-transition">New State Transition<a class="headerlink" href="#new-state-transition" title="Permanent link">#</a></h4>
 <p>アクションの後には、オプションで空白と新しい状態を続けることができます。状態は、予約済み状態の1つ、またはテンプレートで定義された有効な状態である必要があります。一致すると、アクションが正常に実行された後、次の行が入力から読み取られ、現在の状態が新しい状態に変更され、この新しい状態で処理が続行されます。</p>
 <p>続行アクションは状態遷移を受け入れないことに注意してください。これにより、ステートマシンがループフリーになります。</p>
 <p>エラーアクション

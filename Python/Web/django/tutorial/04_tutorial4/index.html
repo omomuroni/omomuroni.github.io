@@ -4137,8 +4137,8 @@
 
 
 
-<h1 id="4">4.フォームと汎用ビュー</h1>
-<h2 id="_1">簡単なフォームを書く</h2>
+<h1 id="4">4.フォームと汎用ビュー<a class="headerlink" href="#4" title="Permanent link">#</a></h1>
+<h2 id="_1">簡単なフォームを書く<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <div class="highlight"><span class="filename">polls/templates/polls/detail.html</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;{% url &#39;polls:vote&#39; question.id %}&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span><span class="p">&gt;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>{% csrf_token %}
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">&lt;</span><span class="nt">fieldset</span><span class="p">&gt;</span>
@@ -4240,7 +4240,7 @@ request.POST の値は常に文字列。</p>
 votes の元の値が 42 だったとするとその時、両方のユーザーに対して新しい値として 43 が計算され保存される。
 しかし 44 が本来想定される値。この問題は、「競合状態」と呼ばれ、解決は<a href="https://docs.djangoproject.com/ja/4.1/ref/models/expressions/#avoiding-race-conditions-using-f"><code>Avoiding race conditions using F()</code></a>を参照。</p>
 </div>
-<h2 id="_2">汎用ビューを使う</h2>
+<h2 id="_2">汎用ビューを使う<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <p>汎用ビューとは、よくあるパターンを抽象化して、 Python コードすら書かずにアプリケーションを書き上げられる状態にしたもの。</p>
 <p>これまで作成してきた poll アプリを汎用ビューシステムに変換して、 コードを減らす。
 変換のステップは次のとおり。
@@ -4253,7 +4253,7 @@ votes の元の値が 42 だったとするとその時、両方のユーザー�
 最初から汎用ビューを使い、途中まで書き上げたコードをリファクタすることはない。
 ただ、このチュートリアルでは中核となるコンセプトに焦点を合わせるために、わざと「大変な」ビューの作成の手順が用意されている。</p>
 </div>
-<h3 id="urlconf">URLconf の修正</h3>
+<h3 id="urlconf">URLconf の修正<a class="headerlink" href="#urlconf" title="Permanent link">#</a></h3>
 <p>まず、 URLconf の <code>polls/urls.py</code> を開き、次のように変更</p>
 <div class="highlight"><span class="filename">polls/urls.py</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
@@ -4271,7 +4271,7 @@ votes の元の値が 42 だったとするとその時、両方のユーザー�
 <p class="admonition-title">Note</p>
 <p>2つ目と3つ目のパス文字列に一致するパターンの名前が <code>&lt;question_id&gt;</code> から <code>&lt;pk&gt;</code> に変更されたことに注意</p>
 </div>
-<h3 id="views">views の修正</h3>
+<h3 id="views">views の修正<a class="headerlink" href="#views" title="Permanent link">#</a></h3>
 <p>次に、古い index 、 detail 、と results のビューを削除し、代わりに Django の汎用ビューを使用します。これを行うには、 polls/views.py ファイルを開き、次のように変更します:</p>
 <div class="highlight"><span class="filename">polls/views.py</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">HttpResponseRedirect</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">get_object_or_404</span><span class="p">,</span> <span class="n">render</span>

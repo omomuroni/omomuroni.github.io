@@ -4123,9 +4123,9 @@
 
 
 
-<h1 id="netconf">NETCONF を使用してネットワークを自動化</h1>
+<h1 id="netconf">NETCONF を使用してネットワークを自動化<a class="headerlink" href="#netconf" title="Permanent link">#</a></h1>
 <p>このステップでは、NETCONF を使用してデバイスのネットワーク設定を管理する方法を、Python スクリプトの例を通して確認していきます。</p>
-<h2 id="_1">実習：現在の設定の詳細情報を取得</h2>
+<h2 id="_1">実習：現在の設定の詳細情報を取得<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <ol>
 <li>テキスト エディタでファイル get_interface_list.py を開きます。確認すべき主な内容を順に見ていきましょう。</li>
 <li>
@@ -4190,7 +4190,7 @@
 python get_interface_list.py</p>
 </li>
 </ol>
-<h2 id="_2">実習：設定の追加</h2>
+<h2 id="_2">実習：設定の追加<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <ol>
 <li>テキスト エディタでファイル add_loopback.py を開きます。 確認すべき新しい内容を順に見ていきましょう。</li>
 <li>
@@ -4251,7 +4251,7 @@ python get_interface_list.py</p>
 <p>スクリプトを閉じ、ターミナルから実行します。 新しいインターフェイスの情報を求められたら、<code>python add_loopback.py</code>入力します。</p>
 </li>
 </ol>
-<h2 id="_3">実習：設定の削除</h2>
+<h2 id="_3">実習：設定の削除<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
 <p>これで、ループバックの追加が完了しました。では、それを設定から削除したい場合はどうすればいいでしょうか。</p>
 <ol>
 <li>テキスト エディタでファイル delete_loopback.py を開きます。 確認すべき新しい内容を順に見ていきましょう。</li>
@@ -4276,7 +4276,7 @@ python get_interface_list.py</p>
 <p class="admonition-title">Warning</p>
 <p>存在しないインターフェイスを削除しようとすると、NETCONF のエラーが表示されます。 </p>
 </div>
-<h2 id="_4">実習：設定の保存</h2>
+<h2 id="_4">実習：設定の保存<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
 <p>変更後のネットワーク内容をスタートアップ コンフィギュレーションに保存しておいたほうがよい場合があります。 NETCONF では、各ベンダーのプラットフォームで独自のアクティビティが行えるように、ネイティブ RPC 操作をサポートしています。 IOS XE デバイスは、ネイティブ データ モデルの一部として、<save-config> 操作をサポートしています。 その仕組みを見てみましょう。</p>
 <ol>
 <li>テキスト エディタでファイル save_config.py を開きます。 確認すべき新しい内容を順に見ていきましょう。</li>

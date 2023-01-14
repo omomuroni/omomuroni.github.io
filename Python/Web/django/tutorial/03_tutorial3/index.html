@@ -4181,8 +4181,8 @@
 
 
 
-<h1 id="3">3.ビューとテンプレート</h1>
-<h2 id="_1">ビューを追加</h2>
+<h1 id="3">3.ビューとテンプレート<a class="headerlink" href="#3" title="Permanent link">#</a></h1>
+<h2 id="_1">ビューを追加<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <div class="highlight"><span class="filename">polls/views.py</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span> <span class="nf">detail</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">question_id</span><span class="p">):</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s2">&quot;You&#39;re looking at question </span><span class="si">%s</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="n">question_id</span><span class="p">)</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
@@ -4215,7 +4215,7 @@
 <p>誰かがWebサイトの 「/polls/34/」 をリクエストすると、 Django は ROOT_URLCONF に指定されている Python モジュール mysite.urls をロードする。
 そのモジュール内の urlpatterns という変数を探し、順番にパターンを検査していく。
 polls/ にマッチした箇所を見つけた後、一致した文字列 ("polls/") を取り除き、残りの文字列である "34/" を次の処理のために 『polls.urls』 の URLconf に渡す。これは <code>&lt;int：question_id&gt;/</code> に一致し、結果として下記のように<code>detail()</code>が呼び出される。</p>
-<h2 id="_2">実際に動作するビューを書く</h2>
+<h2 id="_2">実際に動作するビューを書く<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <p>各ビューには二つの役割がある
 1. リクエストされたページのコンテンツを含む<a href="https://docs.djangoproject.com/ja/4.1/ref/request-response/#django.http.HttpResponse">HttpResponse</a>オブジェクトを返すこと
 2. <a href="https://docs.djangoproject.com/ja/4.1/topics/http/views/#django.http.Http404">Http404</a> のような例外の送出</p>
@@ -4293,7 +4293,7 @@ polls/ にマッチした箇所を見つけた後、一致した文字列 ("poll
 <li>コンテキストは、テンプレート変数名を Python オブジェクトにマッピングする辞書。</li>
 <li><code>http://localhost:8000/polls/</code>を開くと「Whtat's up?」が箇条書きで表示される</li>
 </ul>
-<h2 id="render">ショートカット: render()</h2>
+<h2 id="render">ショートカット: render()<a class="headerlink" href="#render" title="Permanent link">#</a></h2>
 <p>テンプレートをロードしてコンテキストに値を入れ、テンプレートをレンダリングした結果を <code>HttpResponse</code> オブジェクトで返す、というイディオムは非常によく使われます。
  Django はこのためのショートカットを提供する。これを使って index() ビューを書き換える:</p>
 <div class="highlight"><span class="filename">polls/views.py</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
@@ -4307,7 +4307,7 @@ polls/ にマッチした箇所を見つけた後、一致した文字列 ("poll
 </code></pre></div>
 <p>全部の view をこのように書き換えてしまえば、 loader や HttpResponse を import する必要はなくなる (detail 、 results 、 vote を引き続きスタブメソッドにするなら、 HttpResponse はそのままにしておいたほうがいい)。
 render() 関数は、第1引数として request オブジェクトを、第2引数としてテンプレート名を、第3引数（任意）として辞書を受け取ります。この関数はテンプレートを指定のコンテキストでレンダリングし、その HttpResponse オブジェクトを返します。</p>
-<h2 id="404">404 エラーの送出</h2>
+<h2 id="404">404 エラーの送出<a class="headerlink" href="#404" title="Permanent link">#</a></h2>
 <p>このビューは、リクエストした ID を持つ質問が存在しないときに Http404 を送出する。</p>
 <div class="highlight"><span class="filename">polls/views.py</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">Http404</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
@@ -4324,7 +4324,7 @@ render() 関数は、第1引数として request オブジェクトを、第2引
 <p><code>polls/detail.html</code> テンプレートには以下のように記述する</p>
 <div class="highlight"><span class="filename">detail.html</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>{{ question }}
 </code></pre></div>
-<h2 id="get_object_or_404">get_object_or_404()</h2>
+<h2 id="get_object_or_404">get_object_or_404()<a class="headerlink" href="#get_object_or_404" title="Permanent link">#</a></h2>
 <p><a href="https://docs.djangoproject.com/ja/4.1/topics/http/shortcuts/#django.shortcuts.get_object_or_404"><code>get_object_or_404()</code></a>は<a href="https://docs.djangoproject.com/ja/4.1/ref/models/querysets/#django.db.models.query.QuerySet.get">get()</a>を実行し、
 オブジェクトが存在しない場合には<a href="https://docs.djangoproject.com/ja/4.1/topics/http/views/#django.http.Http404"><code>Http404</code></a>を送出することは非常によく使われるイディオム
 Django はこのためのショートカットを提供しています。ショートカットを使って、 detail() ビューを書き換える:</p>
@@ -4346,7 +4346,7 @@ Django はこのためのショートカットを提供しています。ショ�
 </blockquote>
 <p><a href="https://docs.djangoproject.com/ja/4.1/topics/http/shortcuts/#django.shortcuts.get_list_or_404">get_list_or_404()</a>という関数もある。
 この関数は get_object_or_404() と同じように動きますが、 get() ではなく、 filter() を使う。リストが空の場合は Http404 を送出する。</p>
-<h2 id="_3">テンプレートシステムを使う</h2>
+<h2 id="_3">テンプレートシステムを使う<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
 <p>コンテキスト変数を question とすると、 polls/detail.html テンプレートは次のようになる:</p>
 <div class="highlight"><span class="filename">polls/templates/polls/detail.html</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ question.question_text }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
@@ -4365,7 +4365,7 @@ Django はこのためのショートカットを提供しています。ショ�
 <li>その結果、Choice オブジェクトからなるイテレーション可能オブジェクトを返し、 <code>{% for %}</code> タグで使えるようになる。</li>
 <li>テンプレートの詳しい動作は<a href="https://docs.djangoproject.com/ja/4.1/topics/templates/">テンプレートガイド</a>を参照。</li>
 </ul>
-<h2 id="url">テンプレート内のハードコードされたURLを削除</h2>
+<h2 id="url">テンプレート内のハードコードされたURLを削除<a class="headerlink" href="#url" title="Permanent link">#</a></h2>
 <p>polls/index.html テンプレートで質問へのリンクを書いたとき、リンクの一部は次のようにハードコードされていた</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/polls/{{ question.id }}/&quot;</span><span class="p">&gt;</span>{{ question.question_text }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 </code></pre></div>
@@ -4380,7 +4380,7 @@ Django はこのためのショートカットを提供しています。ショ�
 <p>投票の詳細ビューの URL を何か他のものに変更したい場合、たとえば polls/specifics/12/ のように変更したいとき、対象となるテンプレートを変更する代わりに、 polls/urls.py を変更する:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">path</span><span class="p">(</span><span class="s1">&#39;specifics/&lt;int:question_id&gt;/&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">detail</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;detail&#39;</span><span class="p">),</span>
 </code></pre></div></p>
-<h2 id="url_1">URL 名の名前空間</h2>
+<h2 id="url_1">URL 名の名前空間<a class="headerlink" href="#url_1" title="Permanent link">#</a></h2>
 <p>このチュートリアルプロジェクトが持つアプリは polls アプリ1つだけ。
 実際の Django プロジェクトでは、5個、10個、20個、あるいはそれ以上のアプリがあるかもしれない。 
 Django はどうやってこれらの間の URL 名を区別するのか？ 例えば、 polls アプリは detail ビューを含むが、同じプロジェクトにブログのためのアプリがあり、そのアプリも同名のビューを含むかもしれない。 

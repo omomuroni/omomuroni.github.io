@@ -4177,7 +4177,7 @@
 
 
 
-<h1 id="sheet">sheet の操作</h1>
+<h1 id="sheet">sheet の操作<a class="headerlink" href="#sheet" title="Permanent link">#</a></h1>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">openpyxl</span> <span class="kn">import</span> <span class="n">load_workbook</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">openpyxl</span> <span class="kn">import</span> <span class="n">Workbook</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
@@ -4231,8 +4231,8 @@
 <a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>
 <a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>    <span class="n">wb</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;opration_sheet.xlsx&quot;</span><span class="p">)</span>
 </code></pre></div>
-<h2 id="_1">その他シートの操作</h2>
-<h3 id="_2">シートの取得</h3>
+<h2 id="_1">その他シートの操作<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<h3 id="_2">シートの取得<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
 <ul>
 <li>
 <p>ワークシートに名前を付けると、ワークブックのキーとして取得できます。
@@ -4245,7 +4245,7 @@
 </code></pre></div></p>
 </li>
 </ul>
-<h3 id="_3">新しいシートを作成</h3>
+<h3 id="_3">新しいシートを作成<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">wb</span> <span class="o">=</span> <span class="n">Workbook</span><span class="p">()</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">ws</span> <span class="o">=</span> <span class="n">wb</span><span class="o">.</span><span class="n">create_sheet</span><span class="p">(</span><span class="s2">&quot;add Sheet&quot;</span><span class="p">)</span>
 </code></pre></div>
@@ -4255,12 +4255,12 @@
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">ws</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;New Title&quot;</span>
 </code></pre></div>
-<h3 id="_4">シートの削除</h3>
+<h3 id="_4">シートの削除<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
 <ul>
 <li>シートの削除は<code>.remove</code>メソッド</li>
 </ul>
 <p>wb.remove(wb["Sheet"])</p>
-<h3 id="_5">シート名を取得する</h3>
+<h3 id="_5">シート名を取得する<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
 <ul>
 <li><code>Workbook.sheetname</code> 属性を持つワークブックのすべてのワークシートの名前を確認できる。</li>
 </ul>
@@ -4281,7 +4281,7 @@
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">wb</span><span class="o">.</span><span class="n">get_sheet_names</span><span class="p">()</span> 
 <a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">[</span><span class="s1">&#39;Sheet1&#39;</span><span class="p">,</span> <span class="s1">&#39;Sheet2&#39;</span><span class="p">,</span> <span class="s1">&#39;Sheet3&#39;</span><span class="p">]</span>
 </code></pre></div>
-<h3 id="_6">シートのコピー</h3>
+<h3 id="_6">シートのコピー<a class="headerlink" href="#_6" title="Permanent link">#</a></h3>
 <ul>
 <li>1つのワークブック内にワークシートのコピーを作成できます。</li>
 </ul>
@@ -4296,7 +4296,7 @@
 また、ワークブック間でワークシートをコピーすることもできません。ブックが読み取り専用 モードまたは
 書き込み専用モードで開いている場合、ワークシートをコピーすることはできません。</p>
 </div>
-<h3 id="_7">シートタブの色を変更する</h3>
+<h3 id="_7">シートタブの色を変更する<a class="headerlink" href="#_7" title="Permanent link">#</a></h3>
 <ul>
 <li>シートタブの背景色は、デフォルトで白。</li>
 <li>属性に <code>RRGGBB</code> カラーコードを指定し、 <em>Worksheet</em>.sheet_properties.tabColor 属性にてこれを変更できます。</li>

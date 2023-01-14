@@ -4121,7 +4121,7 @@
 
 
 
-<h1 id="requirement-diagram">Requirement Diagram</h1>
+<h1 id="requirement-diagram">Requirement Diagram<a class="headerlink" href="#requirement-diagram" title="Permanent link">#</a></h1>
 <p>要件図は、要件とその接続、相互の関係、およびその他の文書化された要素を視覚化したものです。モデリング仕様は、SysMLv1.6で定義されている仕様に従います。</p>
 <pre class="mermaid"><code>    requirementDiagram
 
@@ -4153,12 +4153,12 @@
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
 <a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    test_entity - satisfies -&gt; test_req
 </code></pre></div>
-<h4 id="syntax">Syntax</h4>
+<h4 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link">#</a></h4>
 <p>要件図には、要件、要素、関係の3種類のコンポーネントがあります。</p>
 <p>それぞれを定義するための文法を以下に定義します。のような角括弧で示された単語<word>は、表に詳細なオプションがある列挙されたキーワードです。user_defined_...ユーザー入力が期待されるあらゆる場所で使用されます。</p>
 <p>ユーザーテキストに関する重要な注意事項：すべての入力は引用符で囲むかどうかを指定できます。たとえば、Id: "here is an example"とId: here is an exampleは両方とも有効です。ただし、ユーザーは引用符で囲まれていない入力に注意する必要があります。別のキーワードが検出されると、パーサーは失敗します。</p>
 <p>要件</p>
-<h4 id="requirement">Requirement</h4>
+<h4 id="requirement">Requirement<a class="headerlink" href="#requirement" title="Permanent link">#</a></h4>
 <p>要件定義には、要件タイプ、名前、ID、テキスト、リスク、および検証方法が含まれています。構文は次のとおりです。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&lt;type&gt; user_defined_name {
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    id: user_defined_id
@@ -4190,14 +4190,14 @@
 </tr>
 </tbody>
 </table>
-<h4 id="element">Element</h4>
+<h4 id="element">Element<a class="headerlink" href="#element" title="Permanent link">#</a></h4>
 <p>要素定義には、要素名、タイプ、およびドキュメント参照が含まれます。これら3つはすべてユーザー定義です。要素機能は軽量化を目的としていますが、要件を他のドキュメントの一部に接続することができます。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>element user_defined_name {
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    type: user_defined_type
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    docref: user_defined_ref
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>}
 </code></pre></div></p>
-<h4 id="relationship">Relationship</h4>
+<h4 id="relationship">Relationship<a class="headerlink" href="#relationship" title="Permanent link">#</a></h4>
 <p>リレーションシップは、送信元ノード、宛先ノード、およびリレーションシップタイプで構成されます。</p>
 <p>それぞれが次の定義形式に従います。</p>
 <p>Each follows the definition format of

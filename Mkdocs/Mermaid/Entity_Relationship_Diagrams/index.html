@@ -4217,8 +4217,8 @@
 
 
 
-<h1 id="entity-relationship-diagrams">Entity Relationship Diagrams</h1>
-<h3 id="1-entity-relationship-diagrams">1. Entity Relationship Diagrams</h3>
+<h1 id="entity-relationship-diagrams">Entity Relationship Diagrams<a class="headerlink" href="#entity-relationship-diagrams" title="Permanent link">#</a></h1>
+<h3 id="1-entity-relationship-diagrams">1. Entity Relationship Diagrams<a class="headerlink" href="#1-entity-relationship-diagrams" title="Permanent link">#</a></h3>
 <p>実体関連モデル（またはERモデル）は、特定の知識領域で相互に関連する関心事を記述します。 基本的なERモデルは、エンティティタイプ（関心のあるものを分類する）で構成され、エンティティ（それらのエンティティタイプのインスタンス）間に存在できる関係を指定します。 ウィキペディア。</p>
 <p>ERモデリングの実践者は、ほとんどの場合、エンティティタイプを単にエンティティと呼んでいることに注意してください。 たとえば、CUSTOMERエンティティタイプは、単にCUSTOMERエンティティと呼ばれます。 これは非常に一般的であるため、他のことを行うことはお勧めできませんが、技術的には、エンティティはエンティティタイプの抽象インスタンスであり、これはER図が示すものです-抽象インスタンスとそれらの間の関係。 これが、エンティティが常に単数名詞を使用して命名される理由です。</p>
 <p>mermaidはER図をレンダリングできます</p>
@@ -4233,7 +4233,7 @@ erDiagram
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    ORDER ||--|{ LINE-ITEM : contains
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
 </code></pre></div>
-<h3 id="2-entity-relationship-diagrams">2. Entity Relationship Diagrams</h3>
+<h3 id="2-entity-relationship-diagrams">2. Entity Relationship Diagrams<a class="headerlink" href="#2-entity-relationship-diagrams" title="Permanent link">#</a></h3>
 <p>エンティティ名は大文字で表記されることがよくありますが、これに関する承認された標準はなく、Mermaidでは必須ではありません。</p>
 <p>エンティティ間の関係は、カーディナリティを表す終了マーカーの付いた線で表されます。 mermaidは最も人気のあるカラスの足の表記法を使用しています。 crow's foot は、それが接続するエンティティの多くのインスタンスの可能性を直感的に伝えます。</p>
 <p>ERダイアグラムは、実装の詳細がない抽象的な論理モデルから、リレーショナルデータベーステーブルの物理モデルまで、さまざまな目的に使用できます。 エンティティの目的と意味を理解しやすくするために、ER図に属性定義を含めると便利な場合があります。 これらは必ずしも網羅的である必要はありません。 多くの場合、属性の小さなサブセットで十分です。 mermaidは、タイプと名前の観点から定義することができます。</p>
@@ -4274,7 +4274,7 @@ erDiagram
 <a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    }
 </code></pre></div>
 <p>ERダイアグラムに属性を含める場合は、属性として外部キーを含めるかどうかを決定する必要があります。 これはおそらく、リレーショナルテーブル構造をどれだけ厳密に表現しようとしているかによって異なります。 ダイアグラムがリレーショナル実装を意味することを意図していない論理モデルである場合、関連関係はエンティティの関連付け方法をすでに伝えているため、これらを除外することをお勧めします。 たとえば、JSONデータ構造は、配列を使用して、外部キープロパティを必要とせずに1対多の関係を実装できます。 同様に、オブジェクト指向プログラミング言語は、コレクションへのポインターまたは参照を使用する場合があります。 リレーショナル実装を目的としたモデルの場合でも、外部キー属性を含めると、リレーションシップによってすでに示されている情報が複製され、エンティティに意味が追加されないと判断する場合があります。 最終的に、それはあなたの選択です。</p>
-<h3 id="3-syntax">3. Syntax</h3>
+<h3 id="3-syntax">3. Syntax<a class="headerlink" href="#3-syntax" title="Permanent link">#</a></h3>
 <p>Entities and Relationships
 ER図のマーメイド構文はPlantUMLと互換性があり、関係にラベルを付けるための拡張機能があります。 各ステートメントは、次の部分で構成されています。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>    &lt;first-entity&gt; [&lt;relationship&gt; &lt;second-entity&gt; : &lt;relationship-label&gt;]
@@ -4289,7 +4289,7 @@ ER図のマーメイド構文はPlantUMLと互換性があり、関係にラベ�
 </code></pre></div>
 このステートメントは、プロパティに1つ以上の部屋が含まれ、部屋が1つだけのプロパティの一部であると読むことができます。 ここでのラベルは、最初のエンティティの観点からのものであることがわかります。プロパティには部屋が含まれていますが、部屋にはプロパティが含まれていません。 2番目のエンティティの観点から検討すると、同等のラベルは通常、非常に簡単に推測できます。 （一部のERダイアグラムは、両方の観点から関係にラベルを付けますが、これはここではサポートされておらず、通常は不要です）。</p>
 <p>ステートメントの <code>&lt;font color='Pink'&gt;first-entity&lt;/font&gt;</code>の部分のみが必須です。 これにより、関係のないエンティティを表示できるようになります。これは、ダイアグラムを繰り返し作成するときに役立ちます。 ステートメントの他の部分が指定されている場合、すべての部分が必須です。 </p>
-<h3 id="4-relationship-syntax">4. Relationship Syntax</h3>
+<h3 id="4-relationship-syntax">4. Relationship Syntax<a class="headerlink" href="#4-relationship-syntax" title="Permanent link">#</a></h3>
 <p>各ステートメントの <code>&lt;font color='Pink'&gt;relationship&lt;/font&gt;</code> の部分は、次の3つのサブコンポーネントに分類できます。</p>
 <ul>
 <li>2番目のエンティティに対する最初のエンティティのcardinality</li>
@@ -4328,7 +4328,7 @@ ER図のマーメイド構文はPlantUMLと互換性があり、関係にラベ�
 </tr>
 </tbody>
 </table>
-<h3 id="5-identification">5. Identification</h3>
+<h3 id="5-identification">5. Identification<a class="headerlink" href="#5-identification" title="Permanent link">#</a></h3>
 <p>関係は、識別または非識別のいずれかに分類でき、これらはそれぞれ実線または破線で表示されます。
 これは、問題のエンティティの1つが他のエンティティなしでは独立して存在できない場合に関連します。 たとえば、人々に車の運転を保証する会社は、 <code>&lt;font color = 'Pink'&gt; NAMED-DRIVE &lt;/ font&gt;</code>にデータを保存する必要があるかもしれません。</p>
 <p>In modelling this we might start out by observing that a <code>&lt;font color='Pink'&gt;CAR&lt;/font&gt;</code> can be driven by many <code>&lt;font color='Pink'&gt;PERSON&lt;/font&gt;</code> instances, 
@@ -4339,7 +4339,7 @@ and a <code>&lt;font color='Pink'&gt;PERSON&lt;/font&gt;</code> can drive many <
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>    CAR ||--o{ NAMED-DRIVER : allows
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    PERSON ||--o{ NAMED-DRIVER : is
 </code></pre></div>
-<h3 id="6-1-attributes">6-1. Attributes</h3>
+<h3 id="6-1-attributes">6-1. Attributes<a class="headerlink" href="#6-1-attributes" title="Permanent link">#</a></h3>
 <p>エンティティ名の後に複数のタイプ名のペアを含むブロックを指定することにより、エンティティの属性を定義できます。ブロックは、開始{と終了}で区切られます。 例えば：</p>
 <pre class="mermaid"><code>erDiagram
     CAR ||--o{ NAMED-DRIVER : allows
@@ -4368,7 +4368,7 @@ and a <code>&lt;font color='Pink'&gt;PERSON&lt;/font&gt;</code> can drive many <
 <a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>        int age
 <a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>    }
 </code></pre></div>
-<h3 id="6-2-entity-relationship-diagrams-attributes">6-2. Entity Relationship Diagrams Attributes</h3>
+<h3 id="6-2-entity-relationship-diagrams-attributes">6-2. Entity Relationship Diagrams Attributes<a class="headerlink" href="#6-2-entity-relationship-diagrams-attributes" title="Permanent link">#</a></h3>
 <p>属性はエンティティボックス内にレンダリングされます。
 <pre class="mermaid"><code>erDiagram
     CAR ||--o{ NAMED-DRIVER : allows
@@ -4387,8 +4387,8 @@ and a <code>&lt;font color='Pink'&gt;PERSON&lt;/font&gt;</code> can drive many <
 <p>Other Things
 * 関係ラベルを複数の単語にする場合は、フレーズを二重引用符で囲む必要があります
 * リレーションシップにラベルがまったく必要ない場合は、空の二重引用符で囲まれた文字列を使用する必要があります</p>
-<h3 id="8styling">8Styling</h3>
-<h4 id="config-options">Config options</h4>
+<h3 id="8styling">8Styling<a class="headerlink" href="#8styling" title="Permanent link">#</a></h3>
+<h4 id="config-options">Config options<a class="headerlink" href="#config-options" title="Permanent link">#</a></h4>
 <p>簡単な色のカスタマイズの場合：</p>
 <table>
 <thead>
@@ -4408,7 +4408,7 @@ and a <code>&lt;font color='Pink'&gt;PERSON&lt;/font&gt;</code> can drive many <
 </tr>
 </tbody>
 </table>
-<h4 id="classes-used">Classes used</h4>
+<h4 id="classes-used">Classes used<a class="headerlink" href="#classes-used" title="Permanent link">#</a></h4>
 <p>次のCSSクラスセレクターは、よりリッチなスタイリングに使用できます。</p>
 <table>
 <thead>

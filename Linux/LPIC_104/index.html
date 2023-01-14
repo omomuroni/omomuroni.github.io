@@ -4669,8 +4669,8 @@
 
 
 
-<h1 id="104-device-fhs">104 Device / FHS</h1>
-<h2 id="_1">パーティションとファイルシステムの作成</h2>
+<h1 id="104-device-fhs">104 Device / FHS<a class="headerlink" href="#104-device-fhs" title="Permanent link">#</a></h1>
+<h2 id="_1">パーティションとファイルシステムの作成<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <p>以下はLinuxで主に使用されるファイルシステム</p>
 <table>
 <thead>
@@ -4719,7 +4719,7 @@ inodeを動的に割り当てるため、inodeの数に制限はありません�
 ディスクに空き容量があってもファイルを新規に作成することができなくなります。</p>
 </li>
 </ul>
-<h3 id="_2">ハードディスク</h3>
+<h3 id="_2">ハードディスク<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
 <p>ハードディスクは「パーティション」と呼ばれる部分に分割して利用します。
 ディスク全体をひとつの領域とする場合にも、全容量を割り当てたひとつのパーティションを作る必要があります。</p>
 <p>ハードディスク全体のパーティションの情報をパーティションテーブルと呼びます。
@@ -4781,7 +4781,7 @@ GPTでのパーティションに関する操作には gdisk というコマン�
     上記のSCSIハードディスクの場合ですと、「/dev/sda5」からです。</p>
 </li>
 </ul>
-<h3 id="ide-sata-scsi">IDE / SATA / SCSI</h3>
+<h3 id="ide-sata-scsi">IDE / SATA / SCSI<a class="headerlink" href="#ide-sata-scsi" title="Permanent link">#</a></h3>
 <p>IDEの接続インターフェースにはプライマリとセカンダリがあり、それぞれにマスターとスレーブのデバイスを接続できます。
 合計4台のIDEデバイスを接続できます。対応するデバイスファイル名は以下の通りです</p>
 <ul>
@@ -4806,7 +4806,7 @@ GPTでのパーティションに関する操作には gdisk というコマン�
 <li>/dev/sdd　4番目のディスク</li>
 </ul>
 <p>例えば、2番目のディスクの3番目のパーティションであれば「/dev/sdb3」となります。</p>
-<h3 id="exfat">exFAT</h3>
+<h3 id="exfat">exFAT<a class="headerlink" href="#exfat" title="Permanent link">#</a></h3>
 <p>exFAT（Extended FAT: イーエックスファット）は、USBメモリのようなフラッシュドライブ向けのファイルシステムです。
 exFATには以下の特徴があります。</p>
 <ul>
@@ -4838,7 +4838,7 @@ exFATには以下の特徴があります。</p>
     （ギビバイト）であるのに対して、exFATでは大容量のファイルを扱えるようになりました（理論上では16EiB: エクスビバイト）。
     最大ボリュームサイズも拡張されています。</li>
 </ul>
-<h3 id="btrfs">Btrfs</h3>
+<h3 id="btrfs">Btrfs<a class="headerlink" href="#btrfs" title="Permanent link">#</a></h3>
 <p>Btrfs（B-tree File System: バターエフエス、またはビーツリーエフエスと発音します）は
 比較的新しく高機能なLinuxのファイルシステムです。Btrfsは以下の機能を持っています。</p>
 <ul>
@@ -4872,7 +4872,7 @@ exFATには以下の特徴があります。</p>
     <code>btrfs subvolume snapshot /home /tmp/home_bak</code></p>
 </li>
 </ul>
-<h3 id="_3">スワップ</h3>
+<h3 id="_3">スワップ<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
 <p>スワップに関連するコマンドには mkswap, swapon, swapoff があります。
 実際にスワップを利用する流れとしては、</p>
 <ol>
@@ -4881,17 +4881,17 @@ exFATには以下の特徴があります。</p>
 <li>swapon コマンドでスワップ領域を有効化</li>
 <li>（不要になれば）swapoff コマンドでスワップ領域を無効化</li>
 </ol>
-<h3 id="swapon">swapon</h3>
+<h3 id="swapon">swapon<a class="headerlink" href="#swapon" title="Permanent link">#</a></h3>
 <p>スワップを有効にするコマンド</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>スワップ領域とは、物理メモリ（実メモリ）に収まらなかった情報を一時的に格納する為の、通常ハードディスク上に作成する領域です。</p>
 </div>
-<h3 id="swapoff">swapoff</h3>
+<h3 id="swapoff">swapoff<a class="headerlink" href="#swapoff" title="Permanent link">#</a></h3>
 <p>スワップ領域を無効にするコマンド</p>
-<h3 id="mkswap">mkswap</h3>
+<h3 id="mkswap">mkswap<a class="headerlink" href="#mkswap" title="Permanent link">#</a></h3>
 <p>スワップを作成するコマンド</p>
-<h3 id="parted">parted</h3>
+<h3 id="parted">parted<a class="headerlink" href="#parted" title="Permanent link">#</a></h3>
 <p>MBR形式、GPT形式のパーティションテーブルをサポートするパーティション操作コマンドはpartedです。
 partedは以下のパーティションテーブルをサポートしています。</p>
 <ol>
@@ -4970,7 +4970,7 @@ primary（基本）、extended（拡張）、logical（論理）
 以下の例ではハードディスクのパーティションテーブルをMBR形式とし、100MBの領域を2つ作成しています。</p>
 </li>
 </ol>
-<h3 id="fdisk">fdisk</h3>
+<h3 id="fdisk">fdisk<a class="headerlink" href="#fdisk" title="Permanent link">#</a></h3>
 <p>fdiskコマンドはMBR方式のハードディスクにおけるパーティションの作成、削除、変更および情報表示を行うコマンド</p>
 <p>fdiskコマンドの書式は以下のとおりです。</p>
 <p>fdisk [-l] デバイス名</p>
@@ -5019,7 +5019,7 @@ primary（基本）、extended（拡張）、logical（論理）
 </table>
 <p>なお、作成したパーティションを利用するには、「mkfs」や「mke2fs」コマンドを利用してパーティションにファイルシステムを作成する必要があります。
 また、作成したパーティションをスワップ領域として使用するには「mkswap」コマンドを利用します。</p>
-<h3 id="mkfs-mke2fs">mkfs / mke2fs</h3>
+<h3 id="mkfs-mke2fs">mkfs / mke2fs<a class="headerlink" href="#mkfs-mke2fs" title="Permanent link">#</a></h3>
 <p>各種ファイルシステムを作ることができるコマンド</p>
 <p>mke2fs [オプション] デバイス名</p>
 <table>
@@ -5074,8 +5074,8 @@ primary（基本）、extended（拡張）、logical（論理）
 <li>mke2fs -j /dev/sda2</li>
 <li>mke2fs -t ext3 /dev/sda2</li>
 </ul>
-<h2 id="_4">ファイルシステムの整合性の維持</h2>
-<h3 id="du">du</h3>
+<h2 id="_4">ファイルシステムの整合性の維持<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
+<h3 id="du">du<a class="headerlink" href="#du" title="Permanent link">#</a></h3>
 <p>ディレクトリ内のファイル容量を表示するコマンド
 duコマンドの書式および主なオプションは以下のとおりです。</p>
 <p>du [オプション] [ファイル名またはディレクトリ名]</p>
@@ -5117,7 +5117,7 @@ duコマンドの書式および主なオプションは以下のとおりです
 </tr>
 </tbody>
 </table>
-<h3 id="df">df</h3>
+<h3 id="df">df<a class="headerlink" href="#df" title="Permanent link">#</a></h3>
 <p>dfコマンドの書式と主なオプションは以下のとおりです。</p>
 <p>df [オプション] [デバイス名またはディレクトリ名]</p>
 <table>
@@ -5146,7 +5146,7 @@ duコマンドの書式および主なオプションは以下のとおりです
 </tr>
 </tbody>
 </table>
-<h3 id="tune2fs">tune2fs</h3>
+<h3 id="tune2fs">tune2fs<a class="headerlink" href="#tune2fs" title="Permanent link">#</a></h3>
 <p>ファイルシステムをext2からext3に変換するにはtune2fsコマンドを利用します。</p>
 <p>tune2fsコマンドの書式および主なオプションは以下のとおりです。</p>
 <table>
@@ -5179,7 +5179,7 @@ duコマンドの書式および主なオプションは以下のとおりです
 <li>(例)ファイルシステムをチェックせずに「/dev/sda2」がマウント出来る回数を10回に変更<br />
 <code>tune2fs -c 10 /dev/sda2</code></li>
 </ul>
-<h3 id="fsck">fsck</h3>
+<h3 id="fsck">fsck<a class="headerlink" href="#fsck" title="Permanent link">#</a></h3>
 <p>fsckコマンドはファイルシステムのチェック、および問題を修復することが出来ます。</p>
 <p>fsckコマンドの書式と主なオプションは以下のとおりです。</p>
 <p>fsck [オプション] デバイス名</p>
@@ -5213,7 +5213,7 @@ duコマンドの書式および主なオプションは以下のとおりです
 </tr>
 </tbody>
 </table>
-<h3 id="e2fsck">e2fsck</h3>
+<h3 id="e2fsck">e2fsck<a class="headerlink" href="#e2fsck" title="Permanent link">#</a></h3>
 <p>e2fsckコマンドは、ext2/ext3/ext4ファイルシステムのチェック、および問題を修復することができます。</p>
 <p>e2fsckコマンドの書式と主なオプションは以下のとおりです。</p>
 <p>e2fsck [オプション] デバイス名</p>
@@ -5239,7 +5239,7 @@ duコマンドの書式および主なオプションは以下のとおりです
 </tr>
 </tbody>
 </table>
-<h3 id="xfs">XFS</h3>
+<h3 id="xfs">XFS<a class="headerlink" href="#xfs" title="Permanent link">#</a></h3>
 <p>XFSは、シリコングラフィックス社（SGI）が開発したジャーナリングファイルシステムです。</p>
 <p>XFSファイルシステムを管理するために使用される主なコマンドは以下のとおりです。</p>
 <table>
@@ -5281,8 +5281,8 @@ duコマンドの書式および主なオプションは以下のとおりです
 <p>ext2/ext3/ext4ファイルシステムでは、デフォルトでファイルシステム全体の5%分の領域がrootユーザ用の
 予約領域として確保されます。</p>
 </div>
-<h2 id="_5">ファイルシステムのマウントとアンマウント</h2>
-<h3 id="etcfstab">「/etc/fstab」ファイル</h3>
+<h2 id="_5">ファイルシステムのマウントとアンマウント<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
+<h3 id="etcfstab">「/etc/fstab」ファイル<a class="headerlink" href="#etcfstab" title="Permanent link">#</a></h3>
 <p>「/etc/fstab」ファイルは、利用するファイルシステムのマウント設定を事前に行っておく設定ファイルです。</p>
 <p>mountコマンドはこのファイルの設定内容を参照して動作します</p>
 <p>デバイス名の設定は、「/dev/sda1」のようにデバイスファイルを書くか、ラベルやUUIDを使った指定を書きます。</p>
@@ -5348,7 +5348,7 @@ duコマンドの書式および主なオプションは以下のとおりです
 <p>デフォルトでは async, auto, exec, nouser, rw, suid （と、表には載っていないdev）が指定されたのと同じ状態で、
 オプションを記述するとこれが上書きされていきます。
 どのオプションも上書きせず、そのままで良いことを示す指定が「defaults」です。</p>
-<h3 id="mount">mount</h3>
+<h3 id="mount">mount<a class="headerlink" href="#mount" title="Permanent link">#</a></h3>
 <p>ファイルシステムにアクセスし、利用するためには、「マウント」を行う必要があります。
 マウントとは、デバイスとその上に構築されているファイルシステムを OS に認識させ、指定のディレクトリに割り当て、
 そのディレクトリ以下のパスでファイルシステム内にアクセスできるようにすることです。
@@ -5395,7 +5395,7 @@ duコマンドの書式および主なオプションは以下のとおりです
 <p><code>mount デバイス</code> または <code>mount マウント先</code></p>
 <p>また、「デバイス」と「マウント先」どちらも指定しなかった（mount のみ実行した）場合は、現在マウントされているファイルシステムの一覧が、
 「/etc/mtab」ファイルの情報を元に表示されます。（マウント中のファイルシステムについては、下記「※マウント中のファイルシステムについて」もご参照ください。）</p>
-<h3 id="umount">umount</h3>
+<h3 id="umount">umount<a class="headerlink" href="#umount" title="Permanent link">#</a></h3>
 <p>アンマウントを行うには、umountコマンドを使います。</p>
 <p><code>umount [オプション] [デバイスorマウント先]</code></p>
 <p>既にマウントされているファイルシステムについて、デバイスかマウント先のどちらかを指定すればアンマウントされます。
@@ -5419,7 +5419,7 @@ duコマンドの書式および主なオプションは以下のとおりです
 </tr>
 </tbody>
 </table>
-<h3 id="etcmtab">「/etc/mtab」ファイル</h3>
+<h3 id="etcmtab">「/etc/mtab」ファイル<a class="headerlink" href="#etcmtab" title="Permanent link">#</a></h3>
 <p>現在マウントされているファイルシステムの情報が格納されているファイル</p>
 <p>なお、mountコマンドを引数およびオプションを指定せずに実行した場合は、「/etc/mtab」ファイルを参照して、
 現在マウントされているファイルシステムの情報を表示します。
@@ -5432,8 +5432,8 @@ duコマンドの書式および主なオプションは以下のとおりです
 <li>cat /proc/self/mounts</li>
 <li>cat /proc/mounts</li>
 </ul>
-<h2 id="_6">ファイルのパーミッションと所有権の管理</h2>
-<h3 id="chmod">chmod</h3>
+<h2 id="_6">ファイルのパーミッションと所有権の管理<a class="headerlink" href="#_6" title="Permanent link">#</a></h2>
+<h3 id="chmod">chmod<a class="headerlink" href="#chmod" title="Permanent link">#</a></h3>
 <p>パーミッションとは、ファイルやディレクトリに対する権限です。権限には「読み取り権」「書き込み権」「実行権」の3種類が
 あります。これらの権限は、「所有ユーザ」（ファイルの所有ユーザ）、「所有グループ」（ファイルの所有グループ）、
 「その他のユーザ」（所有ユーザ、所有グループ以外のユーザ）のそれぞれに対して設定されます。</p>
@@ -5489,13 +5489,13 @@ duコマンドの書式および主なオプションは以下のとおりです
 </tr>
 </tbody>
 </table>
-<h3 id="chgrp">chgrp</h3>
+<h3 id="chgrp">chgrp<a class="headerlink" href="#chgrp" title="Permanent link">#</a></h3>
 <p>指定したファイルまたはディレクトリの所有グループのみを変更可能なコマンドはchgrpです。</p>
 <ul>
 <li>例）「file.txt」の所有グループをtestからstaffgroupに変更する場合<br />
 <code>chgrp staffgroup file.txt</code></li>
 </ul>
-<h3 id="umask">umask</h3>
+<h3 id="umask">umask<a class="headerlink" href="#umask" title="Permanent link">#</a></h3>
 <p>ファイルやディレクトリを新規作成した際の、デフォルトのパーミッションを設定するにはumaskコマンドを利用します。</p>
 <p>umaskコマンドの書式は以下のとおりです。  </p>
 <p><code>umask [マスク値]</code></p>
@@ -5555,7 +5555,7 @@ duコマンドの書式および主なオプションは以下のとおりです
 </tr>
 </tbody>
 </table>
-<h3 id="chown">chown</h3>
+<h3 id="chown">chown<a class="headerlink" href="#chown" title="Permanent link">#</a></h3>
 <p>指定したファイルまたはディレクトリの所有ユーザやグループを変更するにはchownコマンドを利用します。所有ユーザを変更できるのはrootユーザのみです。</p>
 <p>所有ユーザと所有グループを同時に変更する場合の書式は以下のとおりです。</p>
 <ul>
@@ -5575,7 +5575,7 @@ duコマンドの書式および主なオプションは以下のとおりです
 </ul>
 <p>「-R」オプションを使用すると、指定したディレクトリ、およびその配下にあるファイルの所有ユーザやグループを再帰的に変更できます。<br />
 なお、「:」の部分は「.」としても同じです。</p>
-<h3 id="_7">特殊なパーミッション</h3>
+<h3 id="_7">特殊なパーミッション<a class="headerlink" href="#_7" title="Permanent link">#</a></h3>
 <p>特殊なパーミッションとして、以下の3つがあります。</p>
 <ul>
 <li>
@@ -5597,7 +5597,7 @@ duコマンドの書式および主なオプションは以下のとおりです
 これが設定された代表的なディレクトリに「/tmp」ディレクトリがあります。</p>
 </li>
 </ul>
-<h2 id="_8">ハードリンクとシンボリックリンクの作成・変更</h2>
+<h2 id="_8">ハードリンクとシンボリックリンクの作成・変更<a class="headerlink" href="#_8" title="Permanent link">#</a></h2>
 <p>Linuxではファイル(ディレクトリはファイルの一種)を「ファイルの実体（データ本体）」と「inode」を使用して管理しています。inodeにはファイルの属性や、
 「ファイルの実体」にアクセスするためのアドレスなどのメタデータ（格納されているデータそのものに関する情報）が格納されています。
 Linuxには、同じ「ファイルの実体」に対して複数の名前でアクセスできる、リンクという仕組みが2種類あります。それが「ハードリンク」と「シンボリックリンク」です。</p>
@@ -5633,8 +5633,8 @@ File1を削除すると（他に同じinode番号を持つハードリンクが�
 <p>File1とFile2ではinode番号が違う事が分かります。
 また、File2にはシンボリックリンクを示す「l」がパーミッションの先頭に表示されています。
 ファイル名を示す欄では、File2はFile1のシンボリックであることが分かります。</p>
-<h2 id="_9">システムファイルの検索、適切なファイル配置</h2>
-<h3 id="find">find</h3>
+<h2 id="_9">システムファイルの検索、適切なファイル配置<a class="headerlink" href="#_9" title="Permanent link">#</a></h2>
+<h3 id="find">find<a class="headerlink" href="#find" title="Permanent link">#</a></h3>
 <p>指定したディレクトリ以下からファイルやディレクトリを検索するにはfindコマンドを利用します。</p>
 <p>findコマンドの書式と主な検索式・アクションは以下のとおりです。</p>
 <p>find [検索起点ディレクトリ] [検索式] [アクション]</p>
@@ -5706,17 +5706,17 @@ File1を削除すると（他に同じinode番号を持つハードリンクが�
 </tr>
 </tbody>
 </table>
-<h3 id="which">which</h3>
+<h3 id="which">which<a class="headerlink" href="#which" title="Permanent link">#</a></h3>
 <p>whichコマンドは指定したコマンドが格納されている場所を検索し、絶対パスで表示します。検索するディレクトリは環境変数PATHで設定されている（パスが通っている）ディレクトリです。</p>
-<h3 id="whereis">whereis</h3>
+<h3 id="whereis">whereis<a class="headerlink" href="#whereis" title="Permanent link">#</a></h3>
 <p>指定したコマンドと、そのマニュアル、ソースコードが置かれている場所を絶対パスで表示するコマンド</p>
-<h3 id="type">type</h3>
+<h3 id="type">type<a class="headerlink" href="#type" title="Permanent link">#</a></h3>
 <p>typeコマンドは、指定したコマンドが通常のコマンドか、シェルの組み込みコマンドか、エイリアスか、などの情報を表示します。通常のコマンドの場合、そのコマンドが格納された絶対パスを表示します。</p>
-<h3 id="locate">locate</h3>
+<h3 id="locate">locate<a class="headerlink" href="#locate" title="Permanent link">#</a></h3>
 <p>updatedbコマンドであらかじめ作成された検索用のデータベースに沿って、検索パターンに合致したファイルやディレクトリを高速に検索します。</p>
-<h3 id="updatedb">updatedb</h3>
+<h3 id="updatedb">updatedb<a class="headerlink" href="#updatedb" title="Permanent link">#</a></h3>
 <p>locateコマンドが利用する検索用のデータベースを更新するコマンド</p>
-<h3 id="usr">/usr</h3>
+<h3 id="usr">/usr<a class="headerlink" href="#usr" title="Permanent link">#</a></h3>
 <p>「/usr」ディレクトリには起動には不要なプログラムなどが格納されています。</p>
 <p>以下はFHSで規定されている「/usr」以下のディレクトリ配置をまとめたものです。</p>
 <table>

@@ -4147,7 +4147,7 @@
 
 
 
-<h1 id="multiprocessing">multiprocessing</h1>
+<h1 id="multiprocessing">multiprocessing<a class="headerlink" href="#multiprocessing" title="Permanent link">#</a></h1>
 <ul>
 <li><a href="https://docs.python.org/ja/3/library/multiprocessing.html">multiprocessing --- プロセスベースの並列処理</a></li>
 </ul>
@@ -4163,7 +4163,7 @@
 <p class="admonition-title">Warnig</p>
 <p><code>if name == 'main':</code>がないとエラーとなります。</p>
 </div>
-<h2 id="process">Process クラス</h2>
+<h2 id="process">Process クラス<a class="headerlink" href="#process" title="Permanent link">#</a></h2>
 <p>multiprocessing モジュールでは、はじめに Process のオブジェクトを作成し、続いて start() メソッドを呼び出します。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Process</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
@@ -4175,12 +4175,12 @@
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="n">p</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
 <a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="n">p</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
 </code></pre></div>
-<h2 id="_1">プロセス間での状態の共有</h2>
+<h2 id="_1">プロセス間での状態の共有<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://docs.python.org/ja/3/library/multiprocessing.html#sharing-state-between-processes">プロセス間での状態の共有</a></li>
 </ul>
 <p>プロセス間のデータ共有が必要な場合のために multiprocessing モジュールには2つの方法が用意されている。</p>
-<h3 id="shared-memory">共有メモリ (Shared memory)</h3>
+<h3 id="shared-memory">共有メモリ (Shared memory)<a class="headerlink" href="#shared-memory" title="Permanent link">#</a></h3>
 <p>データを共有メモリ上に保持するために Value クラス、もしくは Array クラスが用意されている。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Process</span><span class="p">,</span> <span class="n">Value</span><span class="p">,</span> <span class="n">Array</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
@@ -4203,7 +4203,7 @@
 <blockquote>
 <p>num と arr を生成するときに使用されている、引数 'd' と 'i' は array モジュールにより使用される種別の型コードです。ここで使用されている 'd' は倍精度浮動小数、 'i' は符号付整数を表します。これらの共有オブジェクトは、プロセスセーフでありスレッドセーフです。</p>
 </blockquote>
-<h3 id="server-process">サーバープロセス (Server process)</h3>
+<h3 id="server-process">サーバープロセス (Server process)<a class="headerlink" href="#server-process" title="Permanent link">#</a></h3>
 <p>Manager() 関数により生成されたマネージャーオブジェクトはサーバープロセスを管理します。マネージャーオブジェクトは Python のオブジェクトを保持して、他のプロセスがプロキシ経由でその Python オブジェクトを操作することができます。</p>
 <p>Manager() 関数が返すマネージャは list, dict, Namespace, Lock, RLock, Semaphore, BoundedSemaphore, Condition, Event, Barrier, Queue, Value, Array をサポートします。 以下にサンプルコードを示します。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Process</span><span class="p">,</span> <span class="n">Manager</span>
@@ -4226,7 +4226,7 @@
 <a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 <a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
 </code></pre></div>
-<h2 id="python-for">Python での並列 for ループ</h2>
+<h2 id="python-for">Python での並列 for ループ<a class="headerlink" href="#python-for" title="Permanent link">#</a></h2>
 <blockquote>
 <p><a href="https://www.delftstack.com/ja/howto/python/parallel-for-loops-python/">Python での並列 for ループ</a></p>
 </blockquote>

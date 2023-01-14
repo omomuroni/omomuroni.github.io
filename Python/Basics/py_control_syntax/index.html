@@ -4285,7 +4285,7 @@
 
 
 
-<h1 id="_1">制御構文</h1>
+<h1 id="_1">制御構文<a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
 <p>一般的にプログラムの構造は以下のように分類されます。</p>
 <ul>
 <li><strong>順次</strong> : 記述された順に処理を実行</li>
@@ -4294,7 +4294,7 @@
 </ul>
 <p>順次・選択・反復を組み合わせながらプログラムを組み立てていく手法のことを<strong>構造化プログラミング</strong>といいます。
 Python は上から順番にプログラムを実行していきます（順次）。選択・反復はそれぞれ if文、while または for文にて実現されています。</p>
-<h2 id="if">if文</h2>
+<h2 id="if">if文<a class="headerlink" href="#if" title="Permanent link">#</a></h2>
 <p>if文は条件分岐をおこなうための文法です。if / elif / else の後に続く条件式の結果が True もしくは False
 であるかを評価し、True の場合に以降の処理を実行します。言葉で示すと以下のとおりです。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">if</span> <span class="n">条件式1</span><span class="p">:</span>
@@ -4385,7 +4385,7 @@ Python は上から順番にプログラムを実行していきます（順次�
 </div>
 </div>
 </div>
-<h2 id="_2">三項演算子</h2>
+<h2 id="_2">三項演算子<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <p>Python の三項演算子は<code>if else</code>を使用して記述します。
 三項演算子を用いることで、条件により代入する値を変えたい場面で、
 代入式をすっきり記述することができます。</p>
@@ -4403,7 +4403,7 @@ Python は上から順番にプログラムを実行していきます（順次�
 </code></pre></div></p>
 </li>
 </ul>
-<h2 id="while">while 文</h2>
+<h2 id="while">while 文<a class="headerlink" href="#while" title="Permanent link">#</a></h2>
 <p>while 文は条件式がtrue の場合に繰り返し処理を行います。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">while</span> <span class="n">条件式</span><span class="p">:</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="n">処理</span>
@@ -4416,7 +4416,7 @@ Python は上から順番にプログラムを実行していきます（順次�
 <a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;成人おめでとう！&quot;</span><span class="p">)</span>
 <a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">age</span> <span class="o">+=</span> <span class="mi">1</span>
 </code></pre></div></p>
-<h2 id="for">for 文</h2>
+<h2 id="for">for 文<a class="headerlink" href="#for" title="Permanent link">#</a></h2>
 <p>リストや辞書などのデータ型はイテラブルなオブジェクトです。
 イテラブルなオブジェクトとは繰り返し可能なオブジェクトです。
 イテラブル名オブジェクトに対して繰り返し処理を行うには for 文を用います。</p>
@@ -4427,7 +4427,7 @@ print しています。</p>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">sample_list</span><span class="p">:</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="break">break</h3>
+<h3 id="break">break<a class="headerlink" href="#break" title="Permanent link">#</a></h3>
 <p>ループの際に特定の処理でループを抜けるには break 文を記述します。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">21</span><span class="p">):</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
@@ -4435,7 +4435,7 @@ print しています。</p>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="k">else</span><span class="p">:</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="continue">continue</h3>
+<h3 id="continue">continue<a class="headerlink" href="#continue" title="Permanent link">#</a></h3>
 <p>特定の条件の場合に処理をスキップするにはcontinue 文を記述します。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -4443,8 +4443,8 @@ print しています。</p>
 <a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="k">else</span><span class="p">:</span>
 <a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>        <span class="k">continue</span>
 </code></pre></div>
-<h2 id="for-list">for 文 - list</h2>
-<h3 id="enumerate">enumerate関数</h3>
+<h2 id="for-list">for 文 - list<a class="headerlink" href="#for-list" title="Permanent link">#</a></h2>
+<h3 id="enumerate">enumerate関数<a class="headerlink" href="#enumerate" title="Permanent link">#</a></h3>
 <p>for 文と enumerate()関数を組み合わせて使うと、ループの中でリストやタプルなどの
 イテラブルオブジェクトの要素と同時にインデックスを取得することができます。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sample_list = [&quot;apple&quot;, &quot;banana&quot;, &quot;Strawberry&quot;]
@@ -4452,7 +4452,7 @@ print しています。</p>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>for i,word in enumerate(sample_list):
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    print(i,word)
 </code></pre></div>
-<h3 id="_3">複数のリストを同時に処理</h3>
+<h3 id="_3">複数のリストを同時に処理<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
 <p>複数のリストを同時に処理するにはzip 関数を使用します。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">menu</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Shrimp&#39;</span><span class="p">,</span> <span class="s1">&#39;Crab&#39;</span><span class="p">,</span> <span class="s1">&#39;Squid&#39;</span><span class="p">,</span> <span class="s1">&#39;Tuna&#39;</span><span class="p">]</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">prices</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">200</span><span class="p">]</span>
@@ -4488,7 +4488,7 @@ print しています。</p>
 <a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a><span class="c1"># Tuna 200</span>
 </code></pre></div>
 </div>
-<h3 id="_4">リストを逆順に処理</h3>
+<h3 id="_4">リストを逆順に処理<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">menu</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Shrimp&#39;</span><span class="p">,</span> <span class="s1">&#39;Crab&#39;</span><span class="p">,</span> <span class="s1">&#39;Squid&#39;</span><span class="p">,</span> <span class="s1">&#39;Tuna&#39;</span><span class="p">]</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">for</span> <span class="n">sushi</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">menu</span><span class="p">):</span>
@@ -4498,7 +4498,7 @@ print しています。</p>
 <a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="c1"># Crab</span>
 <a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="c1"># Shrimp</span>
 </code></pre></div>
-<h3 id="_5">内包表記</h3>
+<h3 id="_5">内包表記<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
 <p>リスト内包表記とはリスト内の各要素に処理を行い、新たなリストを得る記述の方法です。</p>
 <p>例えば、テキストを読み込んでリストに格納したが、改行コードを消したい場合にすっきりとした記述で書けます。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">menu</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Shrimp</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;Crab</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;Squid</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;Tuna</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">]</span>
@@ -4509,7 +4509,7 @@ print しています。</p>
 <a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="c1"># [&#39;Shrimp\n&#39;, &#39;Crab\n&#39;, &#39;Squid\n&#39;, &#39;Tuna\n&#39;]</span>
 <a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="c1"># [&#39;Shrimp&#39;, &#39;Crab&#39;, &#39;Squid&#39;, &#39;Tuna&#39;]</span>
 </code></pre></div>
-<h3 id="if_1">if 文と組み合わせた内包表記</h3>
+<h3 id="if_1">if 文と組み合わせた内包表記<a class="headerlink" href="#if_1" title="Permanent link">#</a></h3>
 <p>内包表記にさらに、if 文を組み合わせることができます。
 以下の例ではprice_list内の200 以下の料金をif 文によって判別し、
 新たなリストでは含まれないようにしています。</p>
@@ -4519,8 +4519,8 @@ print しています。</p>
 <a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
 <a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="c1"># [300, 400, 500]</span>
 </code></pre></div>
-<h2 id="for-">for文 - 辞書</h2>
-<h2 id="for-_1">for文 - 集合</h2>
+<h2 id="for-">for文 - 辞書<a class="headerlink" href="#for-" title="Permanent link">#</a></h2>
+<h2 id="for-_1">for文 - 集合<a class="headerlink" href="#for-_1" title="Permanent link">#</a></h2>
 
               
             </article>

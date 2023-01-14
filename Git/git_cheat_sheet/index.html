@@ -4243,12 +4243,12 @@
 
 
 
-<h1 id="git-cheat-sheet">Git Cheat Sheet</h1>
+<h1 id="git-cheat-sheet">Git Cheat Sheet<a class="headerlink" href="#git-cheat-sheet" title="Permanent link">#</a></h1>
 <ul>
 <li><a href="https://git-scm.com/doc">Git doc - Reference</a></li>
 <li><a href="https://training.github.com/">Git Cheat Sheets</a></li>
 </ul>
-<h2 id="_1">基本設定</h2>
+<h2 id="_1">基本設定<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git config --global user.name &quot;[name]&quot;
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>git config --global user.email &quot;[your email address]&quot;
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>git config -global color.ui auto
@@ -4268,12 +4268,12 @@
 </li>
 </ul>
 </div>
-<h2 id="_2">コマンドのヘルプ確認</h2>
+<h2 id="_2">コマンドのヘルプ確認<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <ul>
 <li>git [command] -h</li>
 <li>git commit のヘルプを見る例：<code>git commit -h</code></li>
 </ul>
-<h2 id="_3">リポジトリの作成・複製</h2>
+<h2 id="_3">リポジトリの作成・複製<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
 <p>リポジトリの新規作成・既存のリポジトリから複製</p>
 <ul>
 <li><code>git init [プロジェクト名]</code><ul>
@@ -4285,7 +4285,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="_4">リモートリポジトリの作成</h3>
+<h3 id="_4">リモートリポジトリの作成<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
 <ol>
 <li>mkdir [リモートリポジトリ名].git</li>
 <li>cd [リモートリポジトリ名].git</li>
@@ -4301,7 +4301,7 @@
 <li><code>git remote -v</code> にて先ほどの設定を確認します</li>
 <li><code>git push [alias] [branch]</code> コマンドにてローカルリポジトリの変更内容をリモートリポジトリへ追加します。</li>
 </ul>
-<h2 id="_5">変更の作成</h2>
+<h2 id="_5">変更の作成<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
 <p>ファイルの変更履歴の管理</p>
 <ul>
 <li><code>git status</code><ul>
@@ -4329,7 +4329,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="_6">変更の整理</h2>
+<h2 id="_6">変更の整理<a class="headerlink" href="#_6" title="Permanent link">#</a></h2>
 <p>一連のコミット（変更履歴）に名前を付けブランチとして管理</p>
 <ul>
 <li><code>git branch</code><ul>
@@ -4353,7 +4353,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="_7">ファイル名の整理</h2>
+<h2 id="_7">ファイル名の整理<a class="headerlink" href="#_7" title="Permanent link">#</a></h2>
 <ul>
 <li><code>git rm [ファイル]</code><ul>
 <li>作業ディレクトリからファイルを削除し、削除をステージングに追加</li>
@@ -4375,7 +4375,7 @@
 <li>git mv を使用せずに直接ファイル名を変更すると、そのファイルの変更履歴は失われ、新規ファイルとして扱われます。</li>
 </ul>
 </div>
-<h2 id="_8">ファイルのトラッキング管理</h2>
+<h2 id="_8">ファイルのトラッキング管理<a class="headerlink" href="#_8" title="Permanent link">#</a></h2>
 <p>変更履歴管理から除外するファイルは<code>.gitignore</code>ファイルにて管理します。</p>
 <div class="highlight"><span class="filename">.gitignore</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>*.log
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>.vsdcoe/
@@ -4386,7 +4386,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="_9">途中の変更を保存</h2>
+<h2 id="_9">途中の変更を保存<a class="headerlink" href="#_9" title="Permanent link">#</a></h2>
 <ul>
 <li><code>git stash</code><ul>
 <li>すべての変更のあるトラックされているファイルを一時的に保存</li>
@@ -4417,7 +4417,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="_10">履歴の確認</h2>
+<h2 id="_10">履歴の確認<a class="headerlink" href="#_10" title="Permanent link">#</a></h2>
 <ul>
 <li><code>git log</code><ul>
 <li>現在のブランチのバージョン履歴を一覧で表示</li>
@@ -4436,7 +4436,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="_11">コミットの修正</h2>
+<h2 id="_11">コミットの修正<a class="headerlink" href="#_11" title="Permanent link">#</a></h2>
 <p>ミスの削除と履歴の置き換え</p>
 <ul>
 <li><code>git reset [commit]</code><ul>
@@ -4459,7 +4459,7 @@
 <li><code>--hard</code>：コミットの取り消し、変更内容も破棄</li>
 </ul>
 </div>
-<h2 id="_12">変更の同期</h2>
+<h2 id="_12">変更の同期<a class="headerlink" href="#_12" title="Permanent link">#</a></h2>
 <p>リポジトリのブックマークを登録し、バージョン履歴の交換</p>
 <ul>
 <li><code>git fetch [bookmark]</code><ul>

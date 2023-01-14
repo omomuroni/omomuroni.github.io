@@ -4337,9 +4337,9 @@
 
 
 
-<h1 id="linux">Linux 頻出コマンド</h1>
-<h2 id="_1">目次</h2>
-<h2 id="tar">tar</h2>
+<h1 id="linux">Linux 頻出コマンド<a class="headerlink" href="#linux" title="Permanent link">#</a></h1>
+<h2 id="_1">目次<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<h2 id="tar">tar<a class="headerlink" href="#tar" title="Permanent link">#</a></h2>
 <ul>
 <li>アーカイブファイルの作成（.tarファイルの作成）</li>
 <li><code>tar cvf ファイル名.tar アーカイブ対象ディレクトリ</code></li>
@@ -4350,7 +4350,7 @@
 <li>圧縮されたアーカイブファイルの展開(.tar.gz ファイルの解凍)</li>
 <li><code>tar xvzf ファイル名.tar.gz</code></li>
 </ul>
-<h3 id="_2">オプション説明</h3>
+<h3 id="_2">オプション説明<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
 <table class="basic_table">
 <thead>
 <tr>
@@ -4403,16 +4403,16 @@
 </tbody>
 </table>
 
-<h2 id="tee">tee</h2>
-<h2 id="devnull"><code>&gt;/dev/null</code></h2>
+<h2 id="tee">tee<a class="headerlink" href="#tee" title="Permanent link">#</a></h2>
+<h2 id="devnull"><code>&gt;/dev/null</code><a class="headerlink" href="#devnull" title="Permanent link">#</a></h2>
 <ul>
 <li>標準出力出力を破棄する</li>
 <li><code>&amp;&gt;/dev/null</code> で標準出力と標準エラー出力の両方共を破棄する</li>
 </ul>
-<h2 id="script">script</h2>
+<h2 id="script">script<a class="headerlink" href="#script" title="Permanent link">#</a></h2>
 <p>script コマンドは作業ログをファイルへ出力することができます。
 実行方法は <code>script [ファイル名]</code> で終了時にexit を入力します。</p>
-<h2 id="locate">locate</h2>
+<h2 id="locate">locate<a class="headerlink" href="#locate" title="Permanent link">#</a></h2>
 <p>locateコマンドは、ファイル名のリストが記録された「locateデータベース」と呼ばれるデータベースを参照してファイルを検索します。</p>
 <ul>
 <li><code>locate [ファイル名]</code>で指定したファイルを探す</li>
@@ -4420,7 +4420,7 @@
 </ul>
 <p>locateデータベースは<code>updatedb</code>コマンドで更新します。デフォルトで定期的に自動実行されるようになっていますが、
 手動で更新することも可能です。<em>*</em>*</p>
-<h2 id="find">find</h2>
+<h2 id="find">find<a class="headerlink" href="#find" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://eng-entrance.com/linux-command-find">ファイルなどを検索する！findコマンドの詳細まとめ【Linuxコマンド集】</a></li>
 </ul>
@@ -4439,7 +4439,7 @@
 <li><code>-type d</code> ディレクトリのみを検索対象とする</li>
 </ul>
 </div>
-<h3 id="_3">ファイル内に含まれる文字列を検索するコマンド</h3>
+<h3 id="_3">ファイル内に含まれる文字列を検索するコマンド<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
 <p>find <code>検索対象のディレクトリ</code> -name <code>検索対象のファイル</code> -type f -print0 | xargs -0 grep <code>検索したい文字列</code>
 <a href="https://reasonable-code.com/find-xargs-grep/">https://reasonable-code.com/find-xargs-grep/</a></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># 例. /var/log配下のファイル内に「reload」が含まれているものを検索する</span>
@@ -4449,7 +4449,7 @@
 <p class="admonition-title">Info</p>
 <p><code>find -print0 | xargs -0 grep</code> とすることで、空白文字が入ったファイル（例. hoge piyo.txt）も検索対象にできる。</p>
 </div>
-<h2 id="grep">grep</h2>
+<h2 id="grep">grep<a class="headerlink" href="#grep" title="Permanent link">#</a></h2>
 <ul>
 <li>ファイル名のみ表示<ul>
 <li><code>grep -ril [検索したい文字列] [検索対象フォルダのパス]</code></li>
@@ -4468,7 +4468,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="grep-option">grep option</h3>
+<h3 id="grep-option">grep option<a class="headerlink" href="#grep-option" title="Permanent link">#</a></h3>
 <table class="basic_table">
 <thead>
 <tr>
@@ -4524,7 +4524,7 @@
 </tbody>
 </table>
 
-<h2 id="sed">sed</h2>
+<h2 id="sed">sed<a class="headerlink" href="#sed" title="Permanent link">#</a></h2>
 <p>基本書式：<code>sed ［オプション] [スクリプトコマンド] [ファイル]</code></p>
 <table>
 <thead>
@@ -4566,21 +4566,21 @@
 </tr>
 </tbody>
 </table>
-<h2 id="ls">ls</h2>
+<h2 id="ls">ls<a class="headerlink" href="#ls" title="Permanent link">#</a></h2>
 <ul>
 <li><code>ls -al</code> 隠しファイルも含めて詳細表示</li>
 <li><code>ls -ltr</code>新しいファイルが一番下に来るように表示</li>
 </ul>
-<h2 id="mkdir">mkdir</h2>
+<h2 id="mkdir">mkdir<a class="headerlink" href="#mkdir" title="Permanent link">#</a></h2>
 <ul>
 <li><code>mkdir -p</code>中間ディレクトリも含めて作成</li>
 </ul>
-<h2 id="mv">mv</h2>
+<h2 id="mv">mv<a class="headerlink" href="#mv" title="Permanent link">#</a></h2>
 <ul>
 <li>ファイルの移動、ファイル名の変更</li>
 <li>mvした後に<code>cd !$</code>とするとファイルの移動先へ移動する</li>
 </ul>
-<h2 id="rm">rm</h2>
+<h2 id="rm">rm<a class="headerlink" href="#rm" title="Permanent link">#</a></h2>
 <ul>
 <li>ファイル、ディレクトリの削除</li>
 <li>option</li>
@@ -4588,7 +4588,7 @@
 <li><code>-f</code>: ファイル削除前に確認しない</li>
 <li><code>-r</code>: 再帰的に削除（ディレクトリ削除）</li>
 </ul>
-<h2 id="_4">参考</h2>
+<h2 id="_4">参考<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="http://hydrocul.github.io/wiki/commands/">hydroculのメモ &gt; コマンドの使い方(Linux)</a></li>
 </ul>

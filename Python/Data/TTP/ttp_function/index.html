@@ -4261,13 +4261,13 @@
 
 
 
-<h1 id="ttp-functions">ttp - Functions</h1>
+<h1 id="ttp-functions">ttp - Functions<a class="headerlink" href="#ttp-functions" title="Permanent link">#</a></h1>
 <blockquote>
 <ul>
 <li><a href="https://ttp.readthedocs.io/en/latest/Match%20Variables/Functions.html">Functions</a></li>
 </ul>
 </blockquote>
-<h3 id="python">Python 組み込み関数の使用</h3>
+<h3 id="python">Python 組み込み関数の使用<a class="headerlink" href="#python" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="s2">interface Tunnel2422</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="s2"> description cpe-1</span>
@@ -4283,7 +4283,7 @@
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="s2">&lt;/group&gt;</span>
 <a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="s2">&quot;&quot;&quot;</span>
 </code></pre></div>
-<h3 id="macro">macro</h3>
+<h3 id="macro">macro<a class="headerlink" href="#macro" title="Permanent link">#</a></h3>
 <ul>
 <li><code>{{ name | macro(macro_name) }}</code></li>
 <li>macro_name: 一致結果を渡すマクロ関数の名前</li>
@@ -4341,7 +4341,7 @@
 <a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="s2">&lt;/group&gt;</span>
 <a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="s2">&quot;&quot;&quot;</span>
 </code></pre></div>
-<h3 id="chain">chain</h3>
+<h3 id="chain">chain<a class="headerlink" href="#chain" title="Permanent link">#</a></h3>
 <ul>
 <li><code>{{ name | chain(variable_name) }}</code></li>
 <li>マッチした結果に複数の関数を適用したい場面で使用</li>
@@ -4363,7 +4363,7 @@
 <a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="s2">&lt;/group&gt;</span>
 <a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="s2">&quot;&quot;&quot;</span>
 </code></pre></div>
-<h3 id="unrange">unrange</h3>
+<h3 id="unrange">unrange<a class="headerlink" href="#unrange" title="Permanent link">#</a></h3>
 <ul>
 <li><code>{{ name | unrange('rangechar', 'joinchar') }}</code></li>
 <li>rangechar: 範囲を示す文字</li>
@@ -4381,7 +4381,7 @@
 <a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="s2"> switchport trunk allowed vlan add {{ trunk_vlans | unrange(rangechar=&#39;-&#39;, joinchar=&#39;,&#39;) }}</span>
 <a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="s2">&quot;&quot;&quot;</span>
 </code></pre></div>
-<h3 id="replaceall">replaceall</h3>
+<h3 id="replaceall">replaceall<a class="headerlink" href="#replaceall" title="Permanent link">#</a></h3>
 <ul>
 <li>構文: <code>{{ name | replaceall('value1', 'value2', ..., 'valueN') }}</code></li>
 <li>value: 一致して置き換える文字列。</li>
@@ -4406,7 +4406,7 @@
 <a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="s2">interface {{ interface | replaceall(&#39;Ge&#39;, &#39;GigabitEthernet&#39;, &#39;GigEth&#39;, &#39;Ethernet&#39;) }}</span>
 <a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="s2">&quot;&quot;&quot;</span>
 </code></pre></div>
-<h3 id="resuball">resuball</h3>
+<h3 id="resuball">resuball<a class="headerlink" href="#resuball" title="Permanent link">#</a></h3>
 <ul>
 <li><code>{{ name | resuball('value1', 'value2', ..., 'valueN') }}</code></li>
 <li>value: 一致して置き換える文字列。テンプレート変数名を参照できます。</li>
@@ -4429,7 +4429,7 @@
 <a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="s2">&lt;group&gt;</span>
 <a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="s2">&quot;&quot;&quot;</span>
 </code></pre></div>
-<h3 id="record">record</h3>
+<h3 id="record">record<a class="headerlink" href="#record" title="Permanent link">#</a></h3>
 <ul>
 <li><code>{ name | record(var_name) }}</code></li>
 <li>name: 一致結果を記録するために使用するテンプレート変数名</li>
@@ -4491,7 +4491,7 @@
 <a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a> <span class="p">{{</span> <span class="n">my_descript</span> <span class="o">|</span> <span class="nb">set</span><span class="p">(</span><span class="s2">&quot;my_description&quot;</span><span class="p">)</span> <span class="p">}}</span>
 <a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a><span class="o">&lt;/</span><span class="n">group</span><span class="o">&gt;</span>
 </code></pre></div>
-<h3 id="let">let</h3>
+<h3 id="let">let<a class="headerlink" href="#let" title="Permanent link">#</a></h3>
 <ul>
 <li><code>{{ variable | let(var_name, value) }}</code></li>
 <li><code>{{ variable | let(value) }}</code></li>
@@ -4529,7 +4529,7 @@
 <a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">    </span><span class="p">]</span>
 <a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="p">]</span>
 </code></pre></div>
-<h3 id="set">set</h3>
+<h3 id="set">set<a class="headerlink" href="#set" title="Permanent link">#</a></h3>
 <ul>
 <li><code>{{ name | set('var_set_value') }}</code></li>
 <li>var_set_value: 変数の値として設定する文字列。テンプレート変数の名前にすることができる</li>
@@ -4592,20 +4592,20 @@
 <a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="s2">&lt;/group&gt;</span>
 <a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="s2">&quot;&quot;&quot;</span>
 </code></pre></div>
-<h2 id="condition-functions">Condition functions</h2>
-<h3 id="exclude_re">exclude_re</h3>
+<h2 id="condition-functions">Condition functions<a class="headerlink" href="#condition-functions" title="Permanent link">#</a></h2>
+<h3 id="exclude_re">exclude_re<a class="headerlink" href="#exclude_re" title="Permanent link">#</a></h3>
 <ul>
 <li><code>{{ name | exclude_re('pattern') }}</code></li>
 <li>一致した値に特定の文字列パターンが含まれているかどうかを評価するために使用</li>
 <li>含まれている場合はFalseを返し、含まれていない場合はTrueを返す</li>
 </ul>
-<h3 id="exclude">exclude</h3>
+<h3 id="exclude">exclude<a class="headerlink" href="#exclude" title="Permanent link">#</a></h3>
 <ul>
 <li><code>{{ name | exclude('pattern') }}</code></li>
 <li>一致した値に指定された文字列パターンが含まれているかどうかを評価する</li>
 <li>含まれている場合はFalseを返し、含まれていない場合はTrueを返す</li>
 </ul>
-<h3 id="equal">equal</h3>
+<h3 id="equal">equal<a class="headerlink" href="#equal" title="Permanent link">#</a></h3>
 <ul>
 <li><code>{{ name | equal('value') }}</code></li>
 <li>一致した値が指定された値と等しいかどうかを評価し、等しい場合はTrueを返し、そうでない場合はFalseを返す。</li>

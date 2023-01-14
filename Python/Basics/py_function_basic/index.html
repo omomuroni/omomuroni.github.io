@@ -4391,7 +4391,7 @@
 
 
 
-<h1 id="_1">関数 基礎</h1>
+<h1 id="_1">関数 基礎<a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
 <p>関数の基本的な構文は以下の通りです。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>def 関数名(引数, ...):
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    ...処理...
@@ -4421,7 +4421,7 @@
 <li>1つの関数に1つの役割としたほうが何かと都合がよい。　</li>
 </ul>
 </div>
-<h2 id="_2">ラムダ式</h2>
+<h2 id="_2">ラムダ式<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <ul>
 <li>ラムダ式は名前のない関数です。</li>
 <li>１文程度の処理で関数を定義するほどでもない、簡潔な処理を書く場面などに使用します。</li>
@@ -4433,11 +4433,11 @@
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">include_taxPrice</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># 108</span>
 </code></pre></div>
-<h2 id="_3">変数のスコープ</h2>
+<h2 id="_3">変数のスコープ<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
 <p>スコープとはコードの中で変数を参照できる範囲の事を指します。
 Pythonのスコープはコード全体から参照できる<strong>グローバルスコープ</strong>と、関数の中でのみ参照できる<strong>ローカルスコープ</strong>があります。なお、スコープをまたいで参照する場合は、ローカルスコープからグローバルスコープは参照可能ですが、その逆は基本的に不可です。</p>
 <p>スコープ内の変数について、グローバルスコープの変数をグローバル変数、ローカルスコープの変数をローカル変数といいいます。グローバル変数の寿命については意識することはありませんが、ローカル変数の寿命（メモリでの保持期間）は、関数内での処理が終わるまでです。</p>
-<h3 id="_4">グローバル変数</h3>
+<h3 id="_4">グローバル変数<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
 <ul>
 <li>グローバル変数は関数の外で定義します。</li>
 <li>if 文と <code>globals()</code> メソッド を使用することで、その変数がグローバル変数に存在するか確認できます。</li>
@@ -4480,7 +4480,7 @@ Pythonのスコープはコード全体から参照できる<strong>グローバ
 <li>特にミュータブルな型（リストや辞書など）を引数として渡した際には意図しないところで値が書き換わってかよく確認すること。</li>
 </ul>
 </div>
-<h3 id="_5">ローカル変数</h3>
+<h3 id="_5">ローカル変数<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
 <ul>
 <li>ローカル変数は関数の内側で定義します。</li>
 <li>if 文と <code>locals() メソッド</code> を使用することで、その変数がローカル変数に存在するか確認できます。</li>
@@ -4497,10 +4497,10 @@ Pythonのスコープはコード全体から参照できる<strong>グローバ
 <a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">sushi</span><span class="p">)</span>
 <a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="c1"># NameError: name &#39;sushi&#39; is not defined</span>
 </code></pre></div>
-<h2 id="_6">ネストされた関数</h2>
+<h2 id="_6">ネストされた関数<a class="headerlink" href="#_6" title="Permanent link">#</a></h2>
 <p>関数の中に関数を定義する、いわゆる入れ子で（=ネストされた構造で）定義することができます。
 変数を探す際には、現在のスコープを基点に、存在しない場合は順位上位のスコープに遡って探索する動作となります（スコープチェーンといいます）。ここでも上位のスコープから下位のスコープを参照することはできません。</p>
-<h3 id="nonlocal">nonlocal 文</h3>
+<h3 id="nonlocal">nonlocal 文<a class="headerlink" href="#nonlocal" title="Permanent link">#</a></h3>
 <p>nonlocal 文は一つ外側のスコープで先に定義された変数を参照するようにします。
 以下の例では、nonlocal 文により、var 変数は inner 関数内で outer スコープの <code>var = 'outer'</code> を
 参照します。</p>
@@ -4550,8 +4550,8 @@ Pythonのスコープはコード全体から参照できる<strong>グローバ
 <a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="c1"># outer scope: outer</span>
 <a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="c1"># global scope: global</span>
 </code></pre></div>
-<h2 id="_7">引数</h2>
-<h3 id="_8">仮引数と実引数</h3>
+<h2 id="_7">引数<a class="headerlink" href="#_7" title="Permanent link">#</a></h2>
+<h3 id="_8">仮引数と実引数<a class="headerlink" href="#_8" title="Permanent link">#</a></h3>
 <ul>
 <li>引数とは、関数の中で参照可能な変数のことです。</li>
 <li>関数を呼び出す際、呼び出し側から関数に値を引き渡すために利用されます。</li>
@@ -4565,7 +4565,7 @@ Pythonのスコープはコード全体から参照できる<strong>グローバ
 実引数が<strong>argument</strong>、仮引数が<strong>parameter</strong>とまったく違う単語なので、両者は否応なく、
 はっきり区別されるが、日本語では「実」「仮」を省略して<strong>引数</strong>と呼び、両者を区別しないことも多い。</p>
 </blockquote>
-<h3 id="_9">位置引数</h3>
+<h3 id="_9">位置引数<a class="headerlink" href="#_9" title="Permanent link">#</a></h3>
 <p>関数定義時に順番に記述されている仮引数のことです。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">def</span> <span class="nf">morning_menu</span><span class="p">(</span><span class="n">food</span><span class="p">,</span> <span class="n">drink</span><span class="p">,</span> <span class="n">dessert</span><span class="p">):</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;朝食のメインは </span><span class="si">{}</span><span class="s2"> です。&quot;</span><span class="p">)</span>
@@ -4574,10 +4574,10 @@ Pythonのスコープはコード全体から参照できる<strong>グローバ
 <a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
 <a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="n">morning_menu</span><span class="p">(</span><span class="s2">&quot;eggs Benedict&quot;</span><span class="p">,</span> <span class="s2">&quot;Coffee&quot;</span><span class="p">,</span> <span class="s2">&quot;Pudding&quot;</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="_10">キーワード引数</h3>
+<h3 id="_10">キーワード引数<a class="headerlink" href="#_10" title="Permanent link">#</a></h3>
 <p>キーワード引数は関数呼び出し時に、<code>引数=値</code>のように、明示的に引数の名前を指定できる引数のことです。
 詳しくは以下のデフォルト引数を参照してください。</p>
-<h3 id="_11">デフォルト引数</h3>
+<h3 id="_11">デフォルト引数<a class="headerlink" href="#_11" title="Permanent link">#</a></h3>
 <p>関数を定義するタイミングで仮引数に既定値を設定しておくことです。
 関数呼び出し時に、実引数を渡さなかった場合、あらかじめ定義した仮引数が呼び出されます。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">def</span> <span class="nf">base_price</span><span class="p">(</span><span class="n">tuna</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">salmon</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span><span class="n">shrimp</span><span class="o">=</span><span class="mi">300</span><span class="p">):</span>
@@ -4611,9 +4611,9 @@ Pythonのスコープはコード全体から参照できる<strong>グローバ
 <a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    <span class="nb">list</span><span class="o">.</span><span class="n">appemd</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
 </code></pre></div>
 </div>
-<h3 id="_12">位置引数とキーワード引数の混在</h3>
+<h3 id="_12">位置引数とキーワード引数の混在<a class="headerlink" href="#_12" title="Permanent link">#</a></h3>
 <p>位置引数とキーワード引数を同時に宣言する際には、位置引数、キーワード引数の順に宣言する決まりです。</p>
-<h3 id="_13">位置引数 / キーワード引数の強制</h3>
+<h3 id="_13">位置引数 / キーワード引数の強制<a class="headerlink" href="#_13" title="Permanent link">#</a></h3>
 <p>仮引数に <code>/</code> を入れると <code>*</code> の前の引数を位置引数としてのみ扱うことを強制できます。
 <code>*</code> 以降はキーワード引数として渡さなければならない点に注意です。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">def</span> <span class="nf">positional_argument</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">arg2</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
@@ -4627,10 +4627,10 @@ Pythonのスコープはコード全体から参照できる<strong>グローバ
 <p class="admonition-title">Note</p>
 <p><code>/</code> のあとにも位置引数の記述は可能です。</p>
 </div>
-<h2 id="_14">可変長引数</h2>
+<h2 id="_14">可変長引数<a class="headerlink" href="#_14" title="Permanent link">#</a></h2>
 <p>関数定義にて 引数に<code>*</code>と<code>**</code>をつけると、任意の数の引数（可変長引数）を参照できます。
 <code>*</code>と<code>**</code> に続く文字列は何でもいいですが、慣例的に、<code>args</code>、<code>kwargs</code> が用いられます。</p>
-<h3 id="args">*args</h3>
+<h3 id="args">*args<a class="headerlink" href="#args" title="Permanent link">#</a></h3>
 <p><code>*args</code> は複数の引数をタプルとして受け取ります。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">def</span> <span class="nf">calc_pay</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    <span class="n">total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
@@ -4640,7 +4640,7 @@ Pythonのスコープはコード全体から参照できる<strong>グローバ
 <a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">price</span><span class="p">)</span>
 <a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="c1"># 600</span>
 </code></pre></div>
-<h3 id="kwargs">**kwargs</h3>
+<h3 id="kwargs">**kwargs<a class="headerlink" href="#kwargs" title="Permanent link">#</a></h3>
 <p><code>**kwargs</code> は複数のキーワード引数を辞書として受け取ります。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">def</span> <span class="nf">create_sushiMenu</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;shshi Menu: &quot;</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">)</span>
@@ -4648,7 +4648,7 @@ Pythonのスコープはコード全体から参照できる<strong>グローバ
 <a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="n">create_sushiMenu</span><span class="p">(</span><span class="n">tuna</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">mackerel</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span> <span class="n">salmon</span><span class="o">=</span><span class="mi">200</span><span class="p">,)</span>
 <a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="c1"># shshi Menu:  {&#39;tuna&#39;: 100, &#39;mackerel&#39;: 150, &#39;salmon&#39;: 200}</span>
 </code></pre></div>
-<h3 id="_15">可変長の実引数</h3>
+<h3 id="_15">可変長の実引数<a class="headerlink" href="#_15" title="Permanent link">#</a></h3>
 <p>先の例では仮引数にて可変長引数を宣言していましたが、その逆も可能です。</p>
 <p>以下の例では <code>*</code> を用いてアンパックしたリストを実引数で渡しています。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">def</span> <span class="nf">calc_pay</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">arg3</span><span class="p">):</span>
@@ -4669,9 +4669,9 @@ Pythonのスコープはコード全体から参照できる<strong>グローバ
 <a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="n">menu</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;tuna&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;mackerel&quot;</span><span class="p">:</span><span class="mi">150</span><span class="p">,</span> <span class="s2">&quot;salmon&quot;</span><span class="p">:</span><span class="mi">200</span><span class="p">}</span>
 <a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="n">create_sushiMenu</span><span class="p">(</span><span class="o">**</span><span class="n">menu</span><span class="p">)</span>
 </code></pre></div></p>
-<h2 id="_16">戻り値</h2>
+<h2 id="_16">戻り値<a class="headerlink" href="#_16" title="Permanent link">#</a></h2>
 <p>関数の戻り値は<code>retrun</code>にて受け取ることができます。</p>
-<h3 id="_17">複数の戻り値</h3>
+<h3 id="_17">複数の戻り値<a class="headerlink" href="#_17" title="Permanent link">#</a></h3>
 <p>戻り値が複数ある場合、タプルとして返すのが一般的です。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">def</span> <span class="nf">various_value</span><span class="p">():</span>
 <a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>    <span class="n">tuna</span> <span class="o">=</span> <span class="mi">1000</span>

@@ -4215,7 +4215,7 @@
 
 
 
-<h1 id="wsl">wsl セットアップ</h1>
+<h1 id="wsl">wsl セットアップ<a class="headerlink" href="#wsl" title="Permanent link">#</a></h1>
 <ul>
 <li><a href="https://docs.microsoft.com/ja-jp/windows/wsl/">Windows Subsystem for Linux に関するドキュメント</a></li>
 </ul>
@@ -4227,7 +4227,7 @@
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>wsl<span class="w"> </span>--shutdown<span class="w"> </span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>wsl<span class="w"> </span>--unregister<span class="w"> </span>Ubuntu-20.04
 </code></pre></div>
-<h2 id="wsl-command">wsl command</h2>
+<h2 id="wsl-command">wsl command<a class="headerlink" href="#wsl-command" title="Permanent link">#</a></h2>
 <table>
 <thead>
 <tr>
@@ -4250,13 +4250,13 @@
 </tr>
 </tbody>
 </table>
-<h2 id="basic-setup">basic setup</h2>
+<h2 id="basic-setup">basic setup<a class="headerlink" href="#basic-setup" title="Permanent link">#</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>language-pack-ja<span class="w"> </span><span class="c1"># 日本語化</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>sudo<span class="w"> </span>update-locale<span class="w"> </span><span class="nv">LANG</span><span class="o">=</span>ja_JP.UTF8<span class="w"> </span><span class="c1"># ロケールを日本語に設定</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>sudo<span class="w"> </span>apt<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>manpages-ja<span class="w"> </span>manpages-ja-dev<span class="w"> </span><span class="c1"># 日本語マニュアルのインストール</span>
 </code></pre></div>
-<h2 id="_1">ビープ音を消す</h2>
+<h2 id="_1">ビープ音を消す<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>vim<span class="w"> </span>/etc/inputrc
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1"># コメントアウトを外す</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">set</span><span class="w"> </span>bell-style<span class="w"> </span>none
@@ -4266,7 +4266,7 @@
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># ファイル最下部に書き込み</span>
 <a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="nb">set</span><span class="w"> </span>visualbell<span class="w"> </span><span class="nv">t_vb</span><span class="o">=</span>
 </code></pre></div>
-<h2 id="_2">初期設定</h2>
+<h2 id="_2">初期設定<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://www.kkaneko.jp/tools/wsl/wsl2.html">WSL2 のインストール，Ubuntu のインストールと利用（Windows 11 対応の記事）（Windows 上）</a></li>
 <li>[Ubuntu インストール後の設定]<a href="https://www.kkaneko.jp/tools/ubuntu/ubuntu_setup.html">https://www.kkaneko.jp/tools/ubuntu/ubuntu_setup.html</a>()</li>
@@ -4331,8 +4331,8 @@
 <a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>sudo<span class="w"> </span>apt<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>build-essential<span class="w"> </span>python3-dev<span class="w"> </span>python3-pip
 <a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>gcc<span class="w"> </span>make<span class="w"> </span>openssl<span class="w"> </span>libssl-dev<span class="w"> </span>libbz2-dev<span class="w"> </span>libreadline-dev<span class="w"> </span>libsqlite3-dev<span class="w"> </span>libffi-dev<span class="w"> </span>zlib1g-dev
 </code></pre></div>
-<h2 id="_3">設定関連</h2>
-<h3 id="_4">出力をみやすく設定</h3>
+<h2 id="_3">設定関連<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
+<h3 id="_4">出力をみやすく設定<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
 <ul>
 <li>LS_COLORS設定を出力</li>
 </ul>
@@ -4349,7 +4349,7 @@
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
 <a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>eval $(dircolors -b ~/.dircolors)
 </code></pre></div>
-<h3 id="font">font</h3>
+<h3 id="font">font<a class="headerlink" href="#font" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="https://github.com/yuru7/HackGen/releases/tag/v2.6.3">HackGen</a></li>
 <li><code>HackGenNerd_v2.6.3.zip</code> をダウンロードし解凍、以下をインストール<ul>
@@ -4365,7 +4365,7 @@
 <li><code>C:\Windows\Fonts</code></li>
 </ul>
 </div>
-<h3 id="vmware">VMware との共存</h3>
+<h3 id="vmware">VMware との共存<a class="headerlink" href="#vmware" title="Permanent link">#</a></h3>
 <p>Windows ハイパーバイザー プラットフォーム を有効にすること</p>
 <ul>
 <li><a href="https://qiita.com/matarillo/items/ca1eecf8f9a3cd76f9ce">参考：WSL2とHyper-Vの関係</a></li>
@@ -4391,7 +4391,7 @@
 <p class="admonition-title">Warning</p>
 <p>VM で　VT-x/EPT を有効化していると起動に失敗...</p>
 </div>
-<h2 id="_5">ファイルシステムへのアクセス</h2>
+<h2 id="_5">ファイルシステムへのアクセス<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
 <ul>
 <li>windows ---&gt; wsl<ul>
 <li><code>\\wsl$</code></li>
@@ -4402,7 +4402,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="wsl-vscode">wsl で vscode</h2>
+<h2 id="wsl-vscode">wsl で vscode<a class="headerlink" href="#wsl-vscode" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://docs.microsoft.com/ja-jp/windows/wsl/tutorials/wsl-vscode">Linux 用 Windows サブシステムで Visual Studio Code の使用を開始する</a></li>
 </ul>

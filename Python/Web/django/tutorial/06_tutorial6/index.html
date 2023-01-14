@@ -4097,14 +4097,14 @@
 
 
 
-<h1 id="6">6.静的ファイル</h1>
+<h1 id="6">6.静的ファイル<a class="headerlink" href="#6" title="Permanent link">#</a></h1>
 <p>サーバで生成するHTML以外に、Webアプリケーションは一般的に完全なWebページをレンダリングするために、画像、JavaScript、CSSなど必要なファイルを提供する必要がある。
 Djangoでは、これらのファイルを "静的 (static) ファイル" と呼ぶ。</p>
 <p>小さなプロジェクトではこのことは大きな問題にならない。（ウェブサーバが見つけられる場所で静的ファイルを単に管理することができるから。）
 しかし、もっと大きなプロジェクトで、特に複数のアプリケーションからなる場合は、各アプリケーションが 持っている静的ファイルの集まりを複数扱うことになり、管理も複雑になる。</p>
 <p><code>django.contrib.staticfiles</code> はこれをサポートするために用意されている。
 これは静的なファイルを各アプリケーションから (さらに指定した別の場所からも) 一つの場所に集め、運用環境で公開しやすくするもの。</p>
-<h2 id="_1">アプリ の構造をカスタマイズする</h2>
+<h2 id="_1">アプリ の構造をカスタマイズする<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <p>最初に、 polls ディレクトリの中に、 static ディレクトリを作成する。
 Django はそこから静的ファイルを探す。
 Django が <code>polls/templates/</code> からテンプレートを探す方法と同様。</p>
@@ -4133,7 +4133,7 @@ Django は最初に見つけた静的ファイルの中から名前が一致す�
 <p><code>{% static %}</code>テンプレートタグは、静的ファイルの完全 URL を生成する。</p>
 <p><code>python manage.py runserver</code>コマンドを実行して、サーバーを起動して変更を確認する。
 <code>http://localhost:8000/polls/</code> をリロードすると、質問のリンクが緑色 (Django のスタイルです！) になり、スタイルシートが適切に読み込まれたことが確認できる。</p>
-<h2 id="_2">背景画像を追加する</h2>
+<h2 id="_2">背景画像を追加する<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <p>次に、画像用のサブディレクトリを作成する。 <code>polls/static/polls/</code> ディレクトリに images サブディレクトリを作成する。 
 このディレクトリ内に、背景として使用する画像ファイルを追加する。 
 このチュートリアルでは、絶対パス <code>polls/static/polls/images/background.png</code> を持つ <code>background.png</code> という名前のファイルを使用。</p>

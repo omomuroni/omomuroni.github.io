@@ -4973,14 +4973,14 @@
 
 
 
-<h1 id="git">git 操作</h1>
-<h2 id="git_1">git について</h2>
+<h1 id="git">git 操作<a class="headerlink" href="#git" title="Permanent link">#</a></h1>
+<h2 id="git_1">git について<a class="headerlink" href="#git_1" title="Permanent link">#</a></h2>
 <p>Git は、プログラムのソースコードなどの変更履歴を記録・追跡するための分散型バージョン管理システムです。</p>
 <p>Git はスナップショットを記録します。（差分のあるファイルはデータをまるごと保存）
 なぜスナップショットで記録するのかというとブランチを切ったり、マージしたりする際に、
 差分で記録している場合に、差分を再計算が必要となる。スナップショットだと再計算の必要がなく、
 複数人による開発が早くなるため。</p>
-<h3 id="commit">commit (変更履歴の記録) 手順</h3>
+<h3 id="commit">commit (変更履歴の記録) 手順<a class="headerlink" href="#commit" title="Permanent link">#</a></h3>
 <pre class="mermaid"><code>
 graph LR
     ワークツリー --&gt; |git add| ステージ
@@ -4991,15 +4991,15 @@ graph LR
 <li>ステージ：コミットする変更を準備する場</li>
 <li>リポジトリ：スナップショットを記録する場</li>
 </ul>
-<h3 id="git_2">Git のデータ構造まとめ</h3>
+<h3 id="git_2">Git のデータ構造まとめ<a class="headerlink" href="#git_2" title="Permanent link">#</a></h3>
 <ul>
 <li>リポジトリに「<strong>圧縮ファイル</strong>」「<strong>ツリー</strong>」「<strong>コミット</strong>」ファイルを作成することでデータを保存している</li>
 <li>コミットが親子ミットを持つことで変更履歴を辿ることができる</li>
 <li>Gitの本質はデータを圧縮して、スナップショットで記録していること</li>
 <li>Git のコマンドは、そのデータに対していろいろな操作をしている</li>
 </ul>
-<h2 id="_1">リポジトリの作成</h2>
-<h3 id="_2">ローカルリポジトリの新規作成</h3>
+<h2 id="_1">リポジトリの作成<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<h3 id="_2">ローカルリポジトリの新規作成<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
 <ul>
 <li>
 <p><code>git init</code></p>
@@ -5011,8 +5011,8 @@ graph LR
 <div class="highlight"><span class="filename">.git/ の中身</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ ls .git/
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>HEAD  config  description  hooks/  info/  objects/  refs/
 </code></pre></div>
-<h2 id="commit_1">commit</h2>
-<h3 id="_3">コミットメッセージ</h3>
+<h2 id="commit_1">commit<a class="headerlink" href="#commit_1" title="Permanent link">#</a></h2>
+<h3 id="_3">コミットメッセージ<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
 <ul>
 <li>git commit -m "[commit message]" にて一行で記述できる</li>
 <li>-m オプションを付けない場合は、編集画面に移行する。</li>
@@ -5024,26 +5024,26 @@ graph LR
 </ul>
 </li>
 </ul>
-<h2 id="status-diff">status / diff</h2>
+<h2 id="status-diff">status / diff<a class="headerlink" href="#status-diff" title="Permanent link">#</a></h2>
 <ul>
 <li><code>git status</code>：ステージの状態を表示</li>
 <li><code>git diff</code>：ワークツリーとステージの間のdiff を表示</li>
 <li><code>git diff --staged</code>：ステージとコミットの間の変更差分を表示</li>
 </ul>
-<h2 id="_4">変更履歴を確認する</h2>
+<h2 id="_4">変更履歴を確認する<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
 <ul>
 <li><code>git log</code></li>
 <li><code>git log --online</code>：1行で表示する</li>
 <li><code>git log -p [ファイル名]</code>：ファイルの変更差分を表示する</li>
 <li><code>git log -n [コミット数]</code>：表示するコミット数を制限する</li>
 </ul>
-<h2 id="_5">ファイルの削除</h2>
+<h2 id="_5">ファイルの削除<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
 <ul>
 <li><code>git rm [ファイル名]</code></li>
 <li><code>git rm -r [ディレクトリ名]</code></li>
 <li><code>git rm --cached &lt;ファイル名&gt;</code>：（git の記録を削除）ファイル自体は残したいとき</li>
 </ul>
-<h2 id="_6">ファイルの移動（ファイル名の変更）を記録する</h2>
+<h2 id="_6">ファイルの移動（ファイル名の変更）を記録する<a class="headerlink" href="#_6" title="Permanent link">#</a></h2>
 <ul>
 <li><code>git mv [旧ファイル] [新ファイル]</code></li>
 </ul>
@@ -5054,7 +5054,7 @@ graph LR
 * git rm &lt;旧ファイル&gt;
 * git add &lt;新ファイル&gt; </p>
 </div>
-<h2 id="github">リモートリポジトリ（Github）を新規追加する</h2>
+<h2 id="github">リモートリポジトリ（Github）を新規追加する<a class="headerlink" href="#github" title="Permanent link">#</a></h2>
 <p><code>git remote add origin https://github.com/user/repo.git</code></p>
 <p>origin というエイリアスでurlのリモートリポジトリを登録。
 エイリアス指定で、2度目以降のremote リポジトリの指定がoriginで済む</p>
@@ -5062,19 +5062,19 @@ graph LR
 <p class="admonition-title">Tip</p>
 <p>github のリポジトリのことをoriginとつける慣習がある</p>
 </div>
-<h2 id="github_1">リモートリポジトリ（Github）へ送信する</h2>
+<h2 id="github_1">リモートリポジトリ（Github）へ送信する<a class="headerlink" href="#github_1" title="Permanent link">#</a></h2>
 <ul>
 <li>構文：<code>git push [リモート名] [ブランチ名&gt;]</code></li>
 <li>例：<code>git push origin master</code></li>
 </ul>
-<h2 id="alias">alias の作成</h2>
+<h2 id="alias">alias の作成<a class="headerlink" href="#alias" title="Permanent link">#</a></h2>
 <ul>
 <li>git config --global alias.ci commit</li>
 <li>git config --global alias.st status</li>
 <li>git config --global alias.br branch</li>
 <li>git config --global alias.co checkout</li>
 </ul>
-<h2 id="git_3">Gitの管理から外す</h2>
+<h2 id="git_3">Gitの管理から外す<a class="headerlink" href="#git_3" title="Permanent link">#</a></h2>
 <p>.gitignore ファイルを作成し、指定する</p>
 <p>書き方</p>
 <ul>
@@ -5100,7 +5100,7 @@ dir/</p>
 /</em>/.css</p>
 </li>
 </ul>
-<h3 id="_7">ワークツリーのファイルを元の状態に戻す</h3>
+<h3 id="_7">ワークツリーのファイルを元の状態に戻す<a class="headerlink" href="#_7" title="Permanent link">#</a></h3>
 <p>（ワークツリーでの編集を元に戻す）</p>
 <ul>
 <li>
@@ -5118,7 +5118,7 @@ dir/</p>
 <p>ワークツリーの状態をステージの状態へ戻している<br />
 -- をつけているのはブランチ名とファイル名が被ったときにわかるようにするため。</p>
 </div>
-<h3 id="_8">ステージした変更を取り消す</h3>
+<h3 id="_8">ステージした変更を取り消す<a class="headerlink" href="#_8" title="Permanent link">#</a></h3>
 <ul>
 <li>
 <p>直前にステージした変更を取り消す
@@ -5134,7 +5134,7 @@ dir/</p>
 <p class="admonition-title">Tip</p>
 <p>指定した変更をステージから取り消すだけなので、ワークツリーのファイルには影響を与えない</p>
 </div>
-<h3 id="remote-push">直前のコミットを取り消す（remote リポジトリにpushする前）</h3>
+<h3 id="remote-push">直前のコミットを取り消す（remote リポジトリにpushする前）<a class="headerlink" href="#remote-push" title="Permanent link">#</a></h3>
 <p>git commit --amend</p>
 <ul>
 <li>使用例
@@ -5151,13 +5151,13 @@ dir/</p>
 <p>リモートリポジトリにPushしたコミットをやり直すのはNG<br />
 リモートリポジトリの履歴の状態と他の人がcloneしたリポジトリの履歴に差分が生じ、他の人がPushすることができないため。</p>
 </div>
-<h3 id="_9">リモートの情報を確認する</h3>
+<h3 id="_9">リモートの情報を確認する<a class="headerlink" href="#_9" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git remote  
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>#対応するURLを表示  
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>git remote -v  
 </code></pre></div>
-<h3 id="_10">リモートリポジトリを登録する</h3>
+<h3 id="_10">リモートリポジトリを登録する<a class="headerlink" href="#_10" title="Permanent link">#</a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>リモートリポジトリは複数登録することができる</p>
@@ -5166,7 +5166,7 @@ dir/</p>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>(例)
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>git remote add tutorial https://github.com/user/repo.git
 </code></pre></div>
-<h3 id="_11">リモートから情報を取得する（フェッチ）</h3>
+<h3 id="_11">リモートから情報を取得する（フェッチ）<a class="headerlink" href="#_11" title="Permanent link">#</a></h3>
 <p>git fetch &lt;リモート名&gt;
 （例）
 git fetch origin<br />
@@ -5176,7 +5176,7 @@ git branch -a にて確認</p>
 <p>リモートリポジトリからローカルリポジトリへ情報を取得してくる
 手元のワークツリーへは反映されない。反映するには<code>git merge</code>コマンドを使用する</p>
 </div>
-<h3 id="_12">リモートから情報を取得する（プル）</h3>
+<h3 id="_12">リモートから情報を取得する（プル）<a class="headerlink" href="#_12" title="Permanent link">#</a></h3>
 <p>git pull &lt;リモート名&gt;　&lt;ブランチ名&gt;
 (例)
 git pull origin master</p>
@@ -5184,18 +5184,18 @@ git pull origin master</p>
 <p class="admonition-title">Tip</p>
 <p>git pull コマンドは git fetch した後に git merge しているのと同じことです</p>
 </div>
-<h3 id="fetch-pull">fetch と　pull の使い分け</h3>
+<h3 id="fetch-pull">fetch と　pull の使い分け<a class="headerlink" href="#fetch-pull" title="Permanent link">#</a></h3>
 <p>フェッチを基本的に使うことがおすすめ <br />
 master branch にいて何も変更がない場合にプルを使用するなどの運用方法がおすすめ。</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>プルは挙動が特殊。カレントディレクトリが取得して来るブランチと異なる場合、意図したブランチと異なるブランチにマージされるため危険。</p>
 </div>
-<h3 id="_13">リモートの詳細情報を表示する</h3>
+<h3 id="_13">リモートの詳細情報を表示する<a class="headerlink" href="#_13" title="Permanent link">#</a></h3>
 <p>git remote show &lt;リモート名&gt;
 （例）
 git remote show origin</p>
-<h3 id="_14">ブランチとマージ</h3>
+<h3 id="_14">ブランチとマージ<a class="headerlink" href="#_14" title="Permanent link">#</a></h3>
 <ul>
 <li>並行して複数機能を開発するためにあるのがブランチ</li>
 <li>コミットはスナップショット、それが時系列順に連なる</li>
@@ -5212,7 +5212,7 @@ git remote show origin</p>
   （スナップショットによる記録と相まって）</li>
 <li>Git はブランチの作成や切り替え、マージが他のバージョン管理ツールより高速</li>
 </ul>
-<h3 id="_15">ブランチを新規追加する</h3>
+<h3 id="_15">ブランチを新規追加する<a class="headerlink" href="#_15" title="Permanent link">#</a></h3>
 <ul>
 <li>git branch &lt;ブランチ名&gt;</li>
 </ul>
@@ -5232,7 +5232,7 @@ git remote show origin</p>
 <p class="admonition-title">Info</p>
 <p>git log --online --decorate</p>
 </div>
-<h3 id="_16">ブランチを切り替える</h3>
+<h3 id="_16">ブランチを切り替える<a class="headerlink" href="#_16" title="Permanent link">#</a></h3>
 <p>git checkout &lt;既存ブランチ名&gt;<br />
 （例）<br />
 git checkout faature  </p>
@@ -5241,7 +5241,7 @@ git checkout faature  </p>
 <p>ブランチを新規作成して切り替える
 git checkout -b &lt;新ブランチ名&gt;</p>
 </div>
-<h3 id="_17">変更履歴をマージする</h3>
+<h3 id="_17">変更履歴をマージする<a class="headerlink" href="#_17" title="Permanent link">#</a></h3>
 <p>他のブランチでの変更履歴を取り込む。 featureブランチの内容をmasterブランチに取り込みたいとき、HEADはmasterでgit mergeコマンドを実行する</p>
 <ul>
 <li>
@@ -5257,32 +5257,32 @@ git checkout -b &lt;新ブランチ名&gt;</p>
 git merge &lt;リモート名/ブランチ名&gt;<br />
 （例）<br />
 git merge origin/master  </p>
-<h3 id="_18">コンフリクト</h3>
+<h3 id="_18">コンフリクト<a class="headerlink" href="#_18" title="Permanent link">#</a></h3>
 <p>同じファイルの同じ行に対し異なる編集を行う（コンフリクト）</p>
-<h4 id="_19">コンフリクトの解決方法</h4>
-<h4 id="_20">コンフリクトの事故が起きにくいルール</h4>
+<h4 id="_19">コンフリクトの解決方法<a class="headerlink" href="#_19" title="Permanent link">#</a></h4>
+<h4 id="_20">コンフリクトの事故が起きにくいルール<a class="headerlink" href="#_20" title="Permanent link">#</a></h4>
 <ul>
 <li>複数人で同じファイルを変更しない</li>
 <li>pull やmerge する前に変更中の状態をなくしておく（commitやstashをしておく）</li>
 <li>pullするときは、pullするブランチに移動してからpull する</li>
 </ul>
-<h3 id="_21">ブランチ名を変更</h3>
+<h3 id="_21">ブランチ名を変更<a class="headerlink" href="#_21" title="Permanent link">#</a></h3>
 <p>git branch -m &lt;ブランチ名&gt;<br />
 (例)<br />
 git branch -m new_branch  </p>
 <p>自分が変更しているブランチの名前を変更（-m はmoveの略）  </p>
-<h3 id="_22">ブランチ名を削除</h3>
+<h3 id="_22">ブランチ名を削除<a class="headerlink" href="#_22" title="Permanent link">#</a></h3>
 <p>git branch -d &lt;ブランチ名&gt;
 (例) 
 git branch -d feature
 * -d はdelete の略。master にマージされていない変更が残っている場合削除しない仕組み<br />
 * 強制削除は  <code>git branch -D &lt;ブランチ名&gt;</code>  にて行う</p>
-<h3 id="_23">ブランチを利用した開発の流れ</h3>
+<h3 id="_23">ブランチを利用した開発の流れ<a class="headerlink" href="#_23" title="Permanent link">#</a></h3>
 <p>master ブランチをリリース用ブランチに、開発はトピックブランチを作成して進めるのが基本。</p>
-<h3 id="_24">リモートブランチ</h3>
+<h3 id="_24">リモートブランチ<a class="headerlink" href="#_24" title="Permanent link">#</a></h3>
 <p>リモートブランチとはリモートのブランチの状態へのポインタ</p>
-<h2 id="github_2">Githubを利用した開発手順</h2>
-<h3 id="_25">プルリクエスト</h3>
+<h2 id="github_2">Githubを利用した開発手順<a class="headerlink" href="#github_2" title="Permanent link">#</a></h2>
+<h3 id="_25">プルリクエスト<a class="headerlink" href="#_25" title="Permanent link">#</a></h3>
 <p>プルリクエストは自分の変更したコードをリポジトリに取り込んでもらえるよう依頼する機能
 （レビューによるコードの質の担保のため）</p>
 <ol>
@@ -5296,7 +5296,7 @@ git branch -d feature
 <li>プルリクエストをマージ </li>
 <li>ブランチを削除 </li>
 </ol>
-<h3 id="github-flow">Github Flow の流れ</h3>
+<h3 id="github-flow">Github Flow の流れ<a class="headerlink" href="#github-flow" title="Permanent link">#</a></h3>
 <p>Github FlowとはGithub社のワークフローのこと。</p>
 <ol>
 <li>master ブランチからブランチ作成</li>
@@ -5318,7 +5318,7 @@ git branch -d feature
 <li>master ブランチにマージしたらすぐにデプロイする（テストとデプロイ作業は自動化）</li>
 </ul>
 </div>
-<h3 id="_26">リベース</h3>
+<h3 id="_26">リベース<a class="headerlink" href="#_26" title="Permanent link">#</a></h3>
 <p>変更を統合する際に、履歴をきれいに整えるために使うのがリベース</p>
 <ul>
 <li>ブランチの基点となるコミットを別のコミットに移動する
@@ -5339,8 +5339,8 @@ git rebase &lt;ブランチ名&gt;  </li>
 リモートリポジトリとローカルリポジトリ間のコミット履歴が矛盾し、push できなくなるため　　
 （git push -f で強制的に可能だが、履歴が壊れるためこちらもNG）</p>
 </div>
-<h3 id="_27">マージとリベースの使い分け</h3>
-<h4 id="_28">マージ</h4>
+<h3 id="_27">マージとリベースの使い分け<a class="headerlink" href="#_27" title="Permanent link">#</a></h3>
+<h4 id="_28">マージ<a class="headerlink" href="#_28" title="Permanent link">#</a></h4>
 <ul>
 <li>コンフリクトの解決が比較的簡単</li>
 <li>マージコミットがたくさんあると履歴が複雑化する</li>
@@ -5349,7 +5349,7 @@ git rebase &lt;ブランチ名&gt;  </li>
 <p class="admonition-title">Tip</p>
 <p>作業履歴を残したい場合はマージ</p>
 </div>
-<h4 id="_29">リベース</h4>
+<h4 id="_29">リベース<a class="headerlink" href="#_29" title="Permanent link">#</a></h4>
 <ul>
 <li>履歴をきれいに保つことができる</li>
 <li>コンフリクトの解決が若干面倒</li>
@@ -5360,7 +5360,7 @@ git rebase &lt;ブランチ名&gt;  </li>
 </div>
 <p>プッシュしていないローカルの変更にはリベースを使い、プッシュした後はマージを使う。
 コンフリクトしそうならマージを使うルールがおすすめ。</p>
-<h3 id="_30">プルのマージ型</h3>
+<h3 id="_30">プルのマージ型<a class="headerlink" href="#_30" title="Permanent link">#</a></h3>
 <ul>
 <li>git pull &lt;リモート名&gt; &lt;ブランチ名&gt;</li>
 <li>（例）
@@ -5370,7 +5370,7 @@ git rebase &lt;ブランチ名&gt;  </li>
 <p class="admonition-title">Tip</p>
 <p>マージコミットが残るから、マージしたという記録を残したい場合に使う</p>
 </div>
-<h3 id="_31">プルのリベース型</h3>
+<h3 id="_31">プルのリベース型<a class="headerlink" href="#_31" title="Permanent link">#</a></h3>
 <ul>
 <li>git pull --rebase &lt;リモート名&gt; &lt;ブランチ名&gt;</li>
 <li>（例）
@@ -5380,13 +5380,13 @@ git rebase &lt;ブランチ名&gt;  </li>
 <p class="admonition-title">Tip</p>
 <p>マージコミットが残らないから、GitHubの内容を取得したいだけの時は--rebaseを使うのがおすすめ</p>
 </div>
-<h3 id="-rebasegit-pull">プルをリベース型に設定する（--rebaseを付けなくともgit pull の挙動がリベース型になる）</h3>
+<h3 id="-rebasegit-pull">プルをリベース型に設定する（--rebaseを付けなくともgit pull の挙動がリベース型になる）<a class="headerlink" href="#-rebasegit-pull" title="Permanent link">#</a></h3>
 <p>git config --global pull.rebase true</p>
 <div class="admonition master ブランチでgit pull するときだけにする場合">
 <p class="admonition-title">Master</p>
 <p>git config branch.master.rebase true</p>
 </div>
-<h3 id="_32">複数のコミットをやり直す</h3>
+<h3 id="_32">複数のコミットをやり直す<a class="headerlink" href="#_32" title="Permanent link">#</a></h3>
 <p>git rebase -i &lt;コミットID&gt;
 （例）
 1. git rebase -i HEAD~3</p>
@@ -5411,7 +5411,7 @@ git rebase &lt;ブランチ名&gt;  </li>
 <p>HEAD~ （１番目の親を指定する。HEADを基点にして数値分の親コミットまで指定する）<br />
 HEAD^ （マージした場合の２番目の親を指定する）  </p>
 </div>
-<h3 id="rebase-i">rebase -i コマンドの一連の流れ</h3>
+<h3 id="rebase-i">rebase -i コマンドの一連の流れ<a class="headerlink" href="#rebase-i" title="Permanent link">#</a></h3>
 <ol>
 <li>git rebase -i　コマンドで対話的リベースモードに入る</li>
 <li>修正したいコミットをedit にしてコミットエディタを終了する</li>
@@ -5420,11 +5420,11 @@ HEAD^ （マージした場合の２番目の親を指定する）  </p>
 <li>git rebase--continue で次のコミットへ行く</li>
 <li>pickだとそのままのコミット内容を適用して次へ行く</li>
 </ol>
-<h3 id="_33">コミットを並び替える、削除する</h3>
+<h3 id="_33">コミットを並び替える、削除する<a class="headerlink" href="#_33" title="Permanent link">#</a></h3>
 <p>git rebase -i &lt;コミットID&gt; 後に削除、順番を入れ替えればＯＫ</p>
-<h3 id="_34">コミットをまとめる</h3>
+<h3 id="_34">コミットをまとめる<a class="headerlink" href="#_34" title="Permanent link">#</a></h3>
 <p>git rebase -i &lt;コミットID&gt; 後に<code>pick</code>の部分を<code>squash</code>指定</p>
-<h3 id="_35">コミットを分割する</h3>
+<h3 id="_35">コミットを分割する<a class="headerlink" href="#_35" title="Permanent link">#</a></h3>
 <p>（例）
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git rebase -i HEAD~3
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
@@ -5443,13 +5443,13 @@ HEAD^ （マージした場合の２番目の親を指定する）  </p>
 <a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>$ git commit -m &#39;index.html修正&#39;
 <a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>$ git rebase --continue
 </code></pre></div></p>
-<h3 id="_36">タグ一覧を表示する</h3>
+<h3 id="_36">タグ一覧を表示する<a class="headerlink" href="#_36" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git tag
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>パターンを指定してタグを表示
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>git tag -l &quot;文字列&quot;
 </code></pre></div>
-<h3 id="_37">タグを作成する</h3>
+<h3 id="_37">タグを作成する<a class="headerlink" href="#_37" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>注釈付きタグ（anotated）
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>git tag -a [タグ名] -m &quot;メッセージ&quot;
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
@@ -5464,17 +5464,17 @@ HEAD^ （マージした場合の２番目の親を指定する）  </p>
 <p class="admonition-title">Note</p>
 <p>基本的には注釈つきタグで</p>
 </div>
-<h3 id="_38">タグのデータを表示する</h3>
+<h3 id="_38">タグのデータを表示する<a class="headerlink" href="#_38" title="Permanent link">#</a></h3>
 <p>git show [タグ名]</p>
-<h3 id="_39">タグをリモートリポジトリに送信する</h3>
+<h3 id="_39">タグをリモートリポジトリに送信する<a class="headerlink" href="#_39" title="Permanent link">#</a></h3>
 <p>git push [リモート名] [タグ名]</p>
-<h3 id="_40">タグを一斉に送信する</h3>
+<h3 id="_40">タグを一斉に送信する<a class="headerlink" href="#_40" title="Permanent link">#</a></h3>
 <p>git push [リモート名] --tags</p>
-<h3 id="_41">作業を一時避難する</h3>
+<h3 id="_41">作業を一時避難する<a class="headerlink" href="#_41" title="Permanent link">#</a></h3>
 <p>git stash</p>
-<h3 id="_42">避難させた作業を確認する</h3>
+<h3 id="_42">避難させた作業を確認する<a class="headerlink" href="#_42" title="Permanent link">#</a></h3>
 <p>git stash list</p>
-<h3 id="_43">避難させた作業を復元</h3>
+<h3 id="_43">避難させた作業を復元<a class="headerlink" href="#_43" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a># 最新の作業を復元する
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>git stash apply
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
@@ -5486,7 +5486,7 @@ HEAD^ （マージした場合の２番目の親を指定する）  </p>
 <a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>(例)
 <a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>git stash apply stash@{1}
 </code></pre></div>
-<h3 id="_44">一時避難した作業を削除する</h3>
+<h3 id="_44">一時避難した作業を削除する<a class="headerlink" href="#_44" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>最新の作業を削除する
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>git stash drop
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>

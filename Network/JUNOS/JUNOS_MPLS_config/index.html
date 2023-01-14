@@ -4177,7 +4177,7 @@
 
 
 
-<h1 id="junos-mpls">JUNOS MPLS 設定</h1>
+<h1 id="junos-mpls">JUNOS MPLS 設定<a class="headerlink" href="#junos-mpls" title="Permanent link">#</a></h1>
 <div class="highlight"><span class="filename">sample config</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># interface
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>set interfaces et-1/3/2 vlan-tagging
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>set interfaces et-1/3/2 unit 100 description sample_tunnel
@@ -4207,7 +4207,7 @@
 <a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>set protocols mpls path 3001-EPath_10 10.10.10.2 strict
 <a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>set protocols mpls path 3001-EPath_10 2.2.2.2 strict
 </code></pre></div>
-<h3 id="mpls">MPLS インターフェース設定の有効化</h3>
+<h3 id="mpls">MPLS インターフェース設定の有効化<a class="headerlink" href="#mpls" title="Permanent link">#</a></h3>
 <p>MPLS パケットを処理するようにインターフェースを設定</p>
 <ul>
 <li>インターフェースはデフォルトで IPv4 パケットのみ受け入れる</li>
@@ -4215,7 +4215,7 @@
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>set interfaces et-0/0/0 unit 0 family mpls
 </code></pre></div>
-<h3 id="igp-extension">IGP Extension の有効化</h3>
+<h3 id="igp-extension">IGP Extension の有効化<a class="headerlink" href="#igp-extension" title="Permanent link">#</a></h3>
 <p>OSPF
 * Extension はデフォルトで無効
 * 有効化する場合は以下のステートメントを全ての OSPF ルーターで設定する</p>
@@ -4231,7 +4231,7 @@
 <li>確認コマンド例
 show ospf database opaque-area lsa-id 1.0.0.4 detail</li>
 </ul>
-<h3 id="mpls_1">MPLS プロトコル設定の有効化</h3>
+<h3 id="mpls_1">MPLS プロトコル設定の有効化<a class="headerlink" href="#mpls_1" title="Permanent link">#</a></h3>
 <p>MPLS を動作させるインターフェースを設定</p>
 <ul>
 <li>protocols mpls 配下にインターフェース名を設定する</li>
@@ -4243,7 +4243,7 @@ show ospf database opaque-area lsa-id 1.0.0.4 detail</li>
 </li>
 <li><code>set protocols ldp interface all</code></li>
 </ul>
-<h3 id="rsvp">RSVP プロトコルの有効化</h3>
+<h3 id="rsvp">RSVP プロトコルの有効化<a class="headerlink" href="#rsvp" title="Permanent link">#</a></h3>
 <p>RSVP を動作させるインターフェースを設定</p>
 <ul>
 <li>protocols rsvp 配下にインターフェース名を設定</li>
@@ -4251,7 +4251,7 @@ show ospf database opaque-area lsa-id 1.0.0.4 detail</li>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>set protocols rsvp interface et-0/0/0.0 bandwidth 100g
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>set protocols rsvp interface et-0/0/0.0 link-protection optimize-timer 300
 </code></pre></div>
-<h3 id="signaled-lsp">Signaled LSP</h3>
+<h3 id="signaled-lsp">Signaled LSP<a class="headerlink" href="#signaled-lsp" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>set protocols mpls traffic-engineering
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>set protocols mpls no-propagate-ttl
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>set protocols mpls optimize-timer 300
@@ -4276,7 +4276,7 @@ show ospf database opaque-area lsa-id 1.0.0.4 detail</li>
 <a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>
 <a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>set protocols mpls interface et-0/2/0.0
 </code></pre></div>
-<h3 id="-hello">ネイバーの維持 ネイバーの維持 - Hello</h3>
+<h3 id="-hello">ネイバーの維持 ネイバーの維持 - Hello<a class="headerlink" href="#-hello" title="Permanent link">#</a></h3>
 <p>RSVP Extension にて規定</p>
 <ul>
 <li>ノード間の障害を検出</li>
@@ -4289,7 +4289,7 @@ show ospf database opaque-area lsa-id 1.0.0.4 detail</li>
 <p>IGP でネイバーダウンを検出した場合には、その状態が RSVP にも同期される</p>
 </li>
 </ul>
-<h3 id="mpls-rsvp">MPLS / RSVP  の動作確認コマンド</h3>
+<h3 id="mpls-rsvp">MPLS / RSVP  の動作確認コマンド<a class="headerlink" href="#mpls-rsvp" title="Permanent link">#</a></h3>
 <ul>
 <li>show mpls interface
   インターフェースの事前設定の確認  </li>
@@ -4319,7 +4319,7 @@ show ospf database opaque-area lsa-id 1.0.0.4 detail</li>
  LSP 名を指定しない場合は、そのルーターが Ingress の LSP を切断する</p>
 </li>
 </ul>
-<h3 id="ted-traffic-engineering-database">TED (Traffic Engineering Database)</h3>
+<h3 id="ted-traffic-engineering-database">TED (Traffic Engineering Database)<a class="headerlink" href="#ted-traffic-engineering-database" title="Permanent link">#</a></h3>
 <ul>
 <li>Extended IGP で学習した TE 情報を保持する</li>
 <li>物理トポロジー全体から LSP のパスを計算するために使用される</li>

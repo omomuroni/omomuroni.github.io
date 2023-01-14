@@ -4191,8 +4191,8 @@
 
 
 
-<h1 id="netconf-yang">NETCONF と YANG</h1>
-<h2 id="netconf">NETCONF</h2>
+<h1 id="netconf-yang">NETCONF と YANG<a class="headerlink" href="#netconf-yang" title="Permanent link">#</a></h1>
+<h2 id="netconf">NETCONF<a class="headerlink" href="#netconf" title="Permanent link">#</a></h2>
 <p>NETCONF（NETwork CONFiguration に由来）は YANG データ モデルと共に使用される現在の主要なトランスポート プロトコルです。
 これによって、マネージャ（クライアント）とエージェント（サーバ）間の標準的な通信方法が定義されます。</p>
 <p><img alt="" src="../img/7.jpg" /></p>
@@ -4202,11 +4202,11 @@
 - コンテンツの明示的な定義は行いません。それは YANG によって提供されるものです。</p>
 <p><img alt="" src="../img/8.jpg" /></p>
 <p>NETCONF にはトランスポート プロトコルとしての階層化アプローチがあります。これはマネージャ（クライアント）とエージェント（サーバ）が通信する方法を定義するものです。</p>
-<h3 id="ssh">SSH をベースとした通信</h3>
+<h3 id="ssh">SSH をベースとした通信<a class="headerlink" href="#ssh" title="Permanent link">#</a></h3>
 <p>NETCONF は、ネットワーク上での通信の基盤として SSH を利用します。
 NETCONF の認証オプションは SSH 通信と同じです。CLI 通信で SSH を使用する場合と同じように、ユーザ名とパスワードまたは証明書を使用できます。
 SSH クライアントを使用した NETCONF の例を次に示します。</p>
-<h3 id="ssh-netconf">SSH と NETCONF を使用して を出力させる</h3>
+<h3 id="ssh-netconf">SSH と NETCONF を使用して を出力させる<a class="headerlink" href="#ssh-netconf" title="Permanent link">#</a></h3>
 <p>ssh コマンド ライン ユーティリティを使用して、サンドボックスが常に動作している IOS-XE ルータへの基本的な NETCONF セッションを開始します。</p>
 <ol>
 <li>bash ターミナルを開きます。</li>
@@ -4245,13 +4245,13 @@ SSH クライアントを使用した NETCONF の例を次に示します。</p>
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w"> </span>]]&gt;]]&gt;
 </code></pre></div></li>
 </ol>
-<h3 id="netconf_1">通常の NETCONF の利用方法</h3>
+<h3 id="netconf_1">通常の NETCONF の利用方法<a class="headerlink" href="#netconf_1" title="Permanent link">#</a></h3>
 <p>上記の例のように、SSH チャネルで直接 NETCONF とやりとりを行うのは、最適な方法とは言えません。 
 XML や RPC を手動で作成すると、エラーが起こりやすい上、手間に見合うほどの成果が得られません。 
 代わりに、接続の処理をすべて行ってくれるツールやコード ライブラリを利用するほうが得策です。
  Python で ncclient を使用すれば、上記と同じ動作をはるかに簡単に実行することができます。
  その方法については後ほど説明します。</p>
-<h3 id="netconf_2">NETCONF の機能</h3>
+<h3 id="netconf_2">NETCONF の機能<a class="headerlink" href="#netconf_2" title="Permanent link">#</a></h3>
 <p>NETCONF はトランスポート プロトコルですが、基本的なプロトコルの一部としてデバイス情報の設定や取得を実行することはできません。
 NETCONF は、YANG（および非 YANG）データ モデルを利用し、デバイスがどの「capabilities」を提供するのかを詳述します。
 これらの「capabilities」のリストは、「hello」フェーズの一部として、マネージャとエージェント間における最初の通信中にやりとりされます。
@@ -4268,7 +4268,7 @@ NETCONF は、YANG（および非 YANG）データ モデルを利用し、デ�
 <a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>&lt;/capabilities&gt;
 <a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>&lt;session-id&gt;19150&lt;/session-id&gt;&lt;/hello&gt;]]&gt;]]&gt;
 </code></pre></div>
-<h3 id="rpc">リモート プロシージャ コール（RPC）</h3>
+<h3 id="rpc">リモート プロシージャ コール（RPC）<a class="headerlink" href="#rpc" title="Permanent link">#</a></h3>
 <p>NETCONF で送信されるメッセージには、リモート プロシージャ コール（RPC）が使用されます。
 RPC は、クライアントがサーバにリクエストを送信し、何らかのアクションを行って結果を取得するための標準的なフレームワークです。
 NETCONF の場合、マネージャが XML 形式のメッセージをサーバに送信し、<code>&lt;rpc&gt;</code> XML 要素内にリクエストを入れ込みます。サーバは、結果を <code>&lt;rpc-reply&gt;</code> 要素に入れて戻します。
@@ -4281,7 +4281,7 @@ NETCONF の場合、マネージャが XML 形式のメッセージをサーバ�
 <a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nt">&lt;/rpc-reply&gt;</span>
 </code></pre></div>
 <p>XML のペイロードを手動で作成する場合には、message-id などの RPC 情報を自ら追跡する必要が生じます。一方、ncclient やその他の類似の NETCONF クライアントを使用すれば、これらの RPC 要素はそれらのツールが処理してくれます。</p>
-<h3 id="_1">データ ストア</h3>
+<h3 id="_1">データ ストア<a class="headerlink" href="#_1" title="Permanent link">#</a></h3>
 <p><img alt="" src="../img/9.jpg" /></p>
 <p>SNMP に取って代わるものを IETF が検討する際に、主要な要件となっていたのは、次のような内容でした。
 - 統合的な設定検証方法
@@ -4299,7 +4299,7 @@ NETCONF の場合、マネージャが XML 形式のメッセージをサーバ�
 - すべてのデータ ストアが書き込み可能なわけではありません。
 - 「URL」のデータ ストアは <config-copy> を有効にするため IOS によってサポートされます。
 - すべての NETCONF のメッセージはデータ ストアをターゲットにする必要があります。</p>
-<h3 id="netconf-operations">NETCONF Operations</h3>
+<h3 id="netconf-operations">NETCONF Operations<a class="headerlink" href="#netconf-operations" title="Permanent link">#</a></h3>
 <p>NETCONF RPC リクエストは、次の XML 要素のいずれかを使用して、要求するアクションを指定します。</p>
 <table>
 <thead>

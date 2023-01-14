@@ -4317,8 +4317,8 @@
 
 
 
-<h1 id="junos-config-cheat-sheat">JUNOS config cheat sheat</h1>
-<h3 id="interface">interface</h3>
+<h1 id="junos-config-cheat-sheat">JUNOS config cheat sheat<a class="headerlink" href="#junos-config-cheat-sheat" title="Permanent link">#</a></h1>
+<h3 id="interface">interface<a class="headerlink" href="#interface" title="Permanent link">#</a></h3>
 <ul>
 <li>sub-if の作成には物理に <code>vlan-tagging</code> を付けること</li>
 <li>family mpls はLDP用設定</li>
@@ -4333,28 +4333,28 @@
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a># set interfaces et-1/1/1 unit 100 family mpls maximum-labels 16
 </code></pre></div>
-<h3 id="ospf">OSPF</h3>
+<h3 id="ospf">OSPF<a class="headerlink" href="#ospf" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>set protocols ospf area 0.0.0.0 interface et-1/1/1.100 interface-type p2p
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>set protocols ospf area 0.0.0.0 interface et-1/1/1.100 metric 60000
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>set protocols ospf area 0.0.0.0 interface et-1/1/1.100 bfd-liveness-detection minimum-interval 150
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>set protocols ospf area 0.0.0.0 interface et-1/1/1.100 bfd-liveness-detection multiplier 3
 </code></pre></div>
-<h3 id="rsvp">RSVP</h3>
+<h3 id="rsvp">RSVP<a class="headerlink" href="#rsvp" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>set protocols rsvp interface et-1/1/1.100
 </code></pre></div>
-<h3 id="static-v4">static v4</h3>
+<h3 id="static-v4">static v4<a class="headerlink" href="#static-v4" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>set routing-options static route 199.9.9.0/30 discard
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>set routing-options static route 199.9.9.0/30 tag 184
 </code></pre></div>
-<h3 id="static-v6">static v6</h3>
+<h3 id="static-v6">static v6<a class="headerlink" href="#static-v6" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>set routing-options rib inet6.0 static route dead:4:1::/64 discard
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>set routing-options rib inet6.0 static route dead:4:1::/64 tag 184
 </code></pre></div>
-<h3 id="explicit-path">Explicit-path</h3>
+<h3 id="explicit-path">Explicit-path<a class="headerlink" href="#explicit-path" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>set protocols mpls path Primary-Epath-head 10.10.10.2 strict
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>set protocols mpls path Primary-Epath-head 1.1.1.1 strict
 </code></pre></div>
-<h3 id="tunnel-if">Tunnel IF</h3>
+<h3 id="tunnel-if">Tunnel IF<a class="headerlink" href="#tunnel-if" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>set protocols mpls label-switched-path sample_tunnel_1 from 1.1.1.1
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>set protocols mpls label-switched-path sample_tunnel_1 to 2.2.2.2
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>set protocols mpls label-switched-path sample_tunnel_1 priority 7 7
@@ -4365,17 +4365,17 @@
 <a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>set protocols mpls label-switched-path sample_tunnel_1 track-igp-metric install-v4-prefixes
 <a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>set protocols mpls label-switched-path sample_tunnel_1 primary Stress-Epath-head
 </code></pre></div>
-<h3 id="vrf">VRF</h3>
+<h3 id="vrf">VRF<a class="headerlink" href="#vrf" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>set routing-instances sample_1 instance-type vrf
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>set routing-instances sample_1 route-distinguisher 65000:0
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>set routing-instances sample_1 vrf-target import target:65000:50
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>set routing-instances sample_1 vrf-target export target:65000:50
 </code></pre></div>
-<h3 id="explicit-target-ldp">Explicit target LDP</h3>
+<h3 id="explicit-target-ldp">Explicit target LDP<a class="headerlink" href="#explicit-target-ldp" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>set protocols mpls path sample_tLDP 10.10.10.2 strict
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>set protocols mpls path sample_tLDP 1.1.1.1 strict
 </code></pre></div>
-<h3 id="targeted-ldp-interface">Targeted LDP interface</h3>
+<h3 id="targeted-ldp-interface">Targeted LDP interface<a class="headerlink" href="#targeted-ldp-interface" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>set interfaces et-10/7/3 unit 100 description sample_tLDP
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>set interfaces et-10/7/3 unit 100 vlan-id 100
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>set interfaces et-10/7/3 unit 100 family inet no-redirects
@@ -4383,7 +4383,7 @@
 <a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>set interfaces et-10/7/3 unit 100 family inet6 address 10:10::1/64
 <a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>set interfaces et-10/7/3 unit 100 family mpls maximum-labels 16
 </code></pre></div>
-<h3 id="label-switched-path">label-switched-path</h3>
+<h3 id="label-switched-path">label-switched-path<a class="headerlink" href="#label-switched-path" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>set protocols mpls label-switched-path sample_tLDP from 2.2.2.2
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>set protocols mpls label-switched-path sample_tLDP to 1.1.1.1
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>set protocols mpls label-switched-path sample_tLDP ldp-tunneling
@@ -4394,13 +4394,13 @@
 <a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>set protocols mpls label-switched-path sample_tLDP track-igp-metric install-v4-prefixes
 <a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>set protocols mpls label-switched-path sample_tLDP primary Primary-Epath-head
 </code></pre></div>
-<h3 id="connected-ldp">connected ldp</h3>
+<h3 id="connected-ldp">connected ldp<a class="headerlink" href="#connected-ldp" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>set protocols ldp interface et-10/7/4.400
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>set protocols ldp interface et-10/7/4.401
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>set protocols ldp interface et-10/7/4.402
 <a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>set protocols ldp interface et-10/7/4.403
 </code></pre></div>
-<h3 id="stress-ddos">STRESS DDoS</h3>
+<h3 id="stress-ddos">STRESS DDoS<a class="headerlink" href="#stress-ddos" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>set interfaces et-10/7/4 unit 100 description IXIA_stress_vrf_DDoS
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>set interfaces et-10/7/4 unit 100 vlan-id 100
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>set interfaces et-10/7/4 unit 100 family inet address 219.52.1.1/30
@@ -4415,7 +4415,7 @@
 <a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>set routing-instances DDoS protocols bgp group DDoS_Stress neighbor 219.52.1.2 description IXIA_Stress_vrf_DDoS
 <a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>set routing-instances DDoS protocols bgp group DDoS_Stress neighbor 219:52:1::2 description IXIA_Stress_vrf_DDoS
 </code></pre></div>
-<h3 id="bgp-neibor-group">BGP neibor group</h3>
+<h3 id="bgp-neibor-group">BGP neibor group<a class="headerlink" href="#bgp-neibor-group" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>set protocols bgp group sample_iBGP type internal
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>set protocols bgp group sample_iBGP description stress_iBGP
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>set protocols bgp group sample_iBGP import PERMIT
@@ -4432,7 +4432,7 @@
 <a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>set protocols bgp group sample_iBGP family inet6 labeled-unicast
 <a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>set protocols bgp group sample_iBGP export DENY
 </code></pre></div>
-<h3 id="ibgpv4">iBGPv4</h3>
+<h3 id="ibgpv4">iBGPv4<a class="headerlink" href="#ibgpv4" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>set protocols bgp group sample_iBGP neighbor 160.52.0.1 local-address 10.90.133.221
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>set protocols bgp group sample_iBGP neighbor 160.52.0.1 peer-as 65000
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>set protocols bgp group sample_iBGP neighbor 160.52.0.2 local-address 10.90.133.221
@@ -4440,7 +4440,7 @@
 <a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>set protocols bgp group sample_iBGP neighbor 160.52.0.3 local-address 10.90.133.221
 <a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>set protocols bgp group sample_iBGP neighbor 160.52.0.3 peer-as 65000
 </code></pre></div>
-<h3 id="ibgpv6">iBGPv6</h3>
+<h3 id="ibgpv6">iBGPv6<a class="headerlink" href="#ibgpv6" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>set protocols bgp group sample_iBGP_IPv6 type internal
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>set protocols bgp group sample_iBGP_IPv6 import PERMIT
 <a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>set protocols bgp group sample_iBGP_IPv6 export Filter
@@ -4451,7 +4451,7 @@
 <a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>set protocols bgp group sample_iBGP_IPv6 neighbor 160:52::3 local-address 10:10:10:200::1005
 <a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>set protocols bgp group sample_iBGP_IPv6 neighbor 160:52::3 peer-as 65000
 </code></pre></div>
-<h3 id="ebgp-v4-v6">eBGP v4 v6</h3>
+<h3 id="ebgp-v4-v6">eBGP v4 v6<a class="headerlink" href="#ebgp-v4-v6" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>set protocols bgp group sample_eBGP type external
 <a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>set protocols bgp group sample_eBGP description sample_eBGP
 <a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>set protocols bgp group sample_eBGP import PERMIT
@@ -4464,7 +4464,7 @@
 <a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>set protocols bgp group sample_eBGP neighbor 170:52:0:2::2 peer-as 65100
 <a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>set protocols bgp group sample_eBGP neighbor 170:52:0:3::2 peer-as 65100
 </code></pre></div>
-<h3 id="flow">Flow</h3>
+<h3 id="flow">Flow<a class="headerlink" href="#flow" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>set chassis fpc 0 inline-services flow-table-size ipv4-flow-table-size 4
 <a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>set chassis fpc 0 inline-services flow-table-size ipv6-flow-table-size 4
 <a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>set chassis fpc 0 inline-services flow-table-size mpls-flow-table-size 4

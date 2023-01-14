@@ -4311,8 +4311,8 @@
 
 
 
-<h1 id="powershell">Powershell 便利技</h1>
-<h2 id="_1">頻出コマンドとエイリアス</h2>
+<h1 id="powershell">Powershell 便利技<a class="headerlink" href="#powershell" title="Permanent link">#</a></h1>
+<h2 id="_1">頻出コマンドとエイリアス<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <table class="basic_table">
     <thead>
         <tr>
@@ -4387,20 +4387,20 @@
 <p class="admonition-title">Info</p>
 <p>再帰的に実行する場合は <code>-Recurse</code> オプションを付けます。</p>
 </div>
-<h2 id="-select-string">検索 - Select-String</h2>
+<h2 id="-select-string">検索 - Select-String<a class="headerlink" href="#-select-string" title="Permanent link">#</a></h2>
 <ul>
 <li>エイリアス：<code>sls</code></li>
 <li>構文：<code>Select-String [ファイルパス] -Pattern [検索したいテキスト] [option]</code></li>
 <li>指定したテキストを含まないファイルを検索する: <code>-NotMatch</code></li>
 <li>大文字と小文字を区別して検索する: <code>-CaseSensitive</code></li>
 </ul>
-<h2 id="_2">表示結果を絞る</h2>
+<h2 id="_2">表示結果を絞る<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <ul>
 <li>テキスト内の文字は selsect-string にて 絞り込めるが、ls （Get-ChildItem）の結果は配列のため、使用できない。</li>
 <li>代わりに where (Where-Object)を使用。</li>
 <li>例: <code>ls | where Name -match test</code></li>
 </ul>
-<h2 id="find">find 的な</h2>
+<h2 id="find">find 的な<a class="headerlink" href="#find" title="Permanent link">#</a></h2>
 <p><code>dir -r -Filter "*.md" -Name</code></p>
 <ul>
 <li><code>-r</code>: 再帰的</li>
@@ -4414,7 +4414,7 @@
 <p><a href="https://docs.microsoft.com/ja-jp/powershell/module/microsoft.powershell.management/get-childitem?view=powershell-7.2&amp;viewFallbackFrom=powershell-6">Get-ChildItem</a></p>
 </li>
 </ul>
-<h3 id="_3">使用例</h3>
+<h3 id="_3">使用例<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
 <ul>
 <li>パイプで渡す例1：<code>Get-Command  | Select-String get</code></li>
 <li>パイプで渡す例2：<code>cat .\config.txt | Select-String snmp</code></li>
@@ -4425,8 +4425,8 @@
 <p>コマンドの結果内から文字列を検索する場合は以下のように記述
 * Get-ChildItem | Out-String -Stream | Select-String 2021<code>* エイリアスで記述する場合は以下の通り</code>ls | oss | sls 2021`</p>
 </div>
-<h2 id="-out-file">ファイル出力 - Out-File</h2>
-<h2 id="-get-filehash">ハッシュ値確認 - Get-Filehash</h2>
+<h2 id="-out-file">ファイル出力 - Out-File<a class="headerlink" href="#-out-file" title="Permanent link">#</a></h2>
+<h2 id="-get-filehash">ハッシュ値確認 - Get-Filehash<a class="headerlink" href="#-get-filehash" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://docs.microsoft.com/ja-jp/powershell/module/microsoft.powershell.utility/get-filehash?view=powershell-7.2">参照：Get-Filehash</a></li>
 <li>構文：</li>
@@ -4446,7 +4446,7 @@
 <p class="admonition-title">Tip</p>
 <p>default Algorithm : <code>SHA256</code></p>
 </div>
-<h2 id="-tree">ディレクトリ表示 - tree</h2>
+<h2 id="-tree">ディレクトリ表示 - tree<a class="headerlink" href="#-tree" title="Permanent link">#</a></h2>
 <blockquote>
 <p>パス、またはドライブ内のディスクのディレクトリ構造をグラフィカルに表示します。 このコマンドによって表示される構造は、
 コマンド プロンプトで指定するパラメーターによって異なります。 ドライブまたはパスを指定しない場合、このコマンドは、
@@ -4456,7 +4456,7 @@
 <ul>
 <li>ディレクトリとファイル名をツリー構造で表示：<code>tree /f</code></li>
 </ul>
-<h2 id="_4">ディレクトリの作成</h2>
+<h2 id="_4">ディレクトリの作成<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
 <p><code>New-Item ./abc -Type Directory</code></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -4467,11 +4467,11 @@
 <li>ちなみに New-Item は ni で省略可能</li>
 </ul>
 </div>
-<h2 id="script-commandline">Script &amp; CommandLine</h2>
-<h3 id="_5">日付を取得する（フォーマット済み）</h3>
+<h2 id="script-commandline">Script &amp; CommandLine<a class="headerlink" href="#script-commandline" title="Permanent link">#</a></h2>
+<h3 id="_5">日付を取得する（フォーマット済み）<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">$Date</span> <span class="p">=</span> <span class="nb">Get-Date</span> <span class="n">-UFormat</span> <span class="s2">&quot;%Y%m%d-%H%M%S&quot;</span>
 </code></pre></div>
-<h3 id="_6">ファイルのサイズを取得する</h3>
+<h3 id="_6">ファイルのサイズを取得する<a class="headerlink" href="#_6" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="https://stackoverflow.com/questions/42391237/powershell-folder-size-sort-with-auto-size-conversion">Powershell folder size sort with auto size conversion</a></li>
 </ul>
@@ -4500,7 +4500,7 @@
 <a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="p">}</span> <span class="p">|</span> <span class="nb">Sort-Object</span> <span class="n">-Property</span> <span class="n">Size</span> <span class="n">-Descending</span> <span class="p">|</span> <span class="nb">Select-Object</span> <span class="n">Path</span><span class="p">,</span> <span class="n">Time</span><span class="p">,</span> <span class="nv">$PrettySizeColumn</span>
 </code></pre></div>
 </blockquote>
-<h3 id="_7">ファイルパスの取得</h3>
+<h3 id="_7">ファイルパスの取得<a class="headerlink" href="#_7" title="Permanent link">#</a></h3>
 <ul>
 <li>
 <p><a href="https://docs.microsoft.com/ja-jp/powershell/module/microsoft.powershell.management/get-childitem?view=powershell-5.1&amp;WT.mc_id=ps-gethelp">Get-Help Get-ChildItem -Online</a></p>
@@ -4533,7 +4533,7 @@
 <ul>
 <li><a href="https://yanor.net/wiki/?PowerShell/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%93%8D%E4%BD%9C/%E7%B5%B6%E5%AF%BE%E3%83%91%E3%82%B9%E7%9B%B8%E5%AF%BE%E3%83%91%E3%82%B9%E3%81%AE%E5%A4%89%E6%8F%9B+-+Resolve-Path">参考：</a></li>
 </ul>
-<h3 id="_8">拡張子を一括変換</h3>
+<h3 id="_8">拡張子を一括変換<a class="headerlink" href="#_8" title="Permanent link">#</a></h3>
 <ul>
 <li>
 <p>構文：
@@ -4546,10 +4546,10 @@
 </code></pre></div></p>
 </li>
 </ul>
-<h3 id="_9">ファイル名を一括変換</h3>
+<h3 id="_9">ファイル名を一括変換<a class="headerlink" href="#_9" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">ls </span><span class="p">|</span> <span class="nb">Rename-Item</span> <span class="n">-NewName</span> <span class="p">{</span> <span class="nv">$_</span><span class="p">.</span><span class="n">Name</span> <span class="o">-replace</span> <span class="s2">&quot;置換対象文字列&quot;</span><span class="p">,</span><span class="s2">&quot;置換後文&quot;</span><span class="p">}</span>
 </code></pre></div>
-<h3 id="_10">ファイル内の特定の文字列を抽出</h3>
+<h3 id="_10">ファイル内の特定の文字列を抽出<a class="headerlink" href="#_10" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nv">$target</span> <span class="p">=</span> <span class="p">@(</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  <span class="s2">&quot;error&quot;</span><span class="p">,</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>  <span class="s2">&quot;warning&quot;</span><span class="p">,</span>
@@ -4562,7 +4562,7 @@
 <a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>  <span class="nb">sls </span><span class="nv">$dat</span> <span class="nv">$logfile</span> <span class="n">-Encoding</span> <span class="k">default</span> <span class="p">&gt;&gt;</span> <span class="n">log_</span><span class="nv">$date</span><span class="p">.</span><span class="n">txt</span>
 <a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="p">}</span> 
 </code></pre></div>
-<h1 id="_11">文字コード一括変換</h1>
+<h1 id="_11">文字コード一括変換<a class="headerlink" href="#_11" title="Permanent link">#</a></h1>
 <ul>
 <li><a href="https://atmarkit.itmedia.co.jp/ait/articles/0804/18/news155.html">参考：WindowsのPowerShellで複数のファイルの文字コードを一括変換する</a></li>
 </ul>
@@ -4596,7 +4596,7 @@
 <p class="admonition-title">Info</p>
 <p>Powershell でファイルの文字コード取得は<a href="https://www.oqiita.com/?p=2356">こちら</a>を参照</p>
 </div>
-<h3 id="start-process">Start-Process</h3>
+<h3 id="start-process">Start-Process<a class="headerlink" href="#start-process" title="Permanent link">#</a></h3>
 
               
             </article>

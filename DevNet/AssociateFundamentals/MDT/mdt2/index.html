@@ -4163,7 +4163,7 @@
 
 
 
-<h1 id="2">2. プログラムに関する基本的な概念</h1>
+<h1 id="2">2. プログラムに関する基本的な概念<a class="headerlink" href="#2" title="Permanent link">#</a></h1>
 <p>ここでは、YANG、NETCONF、RESTCONF の詳細な学習に先立ち、理解しておくべきプログラムに関する重要な概念について説明します。</p>
 <p><img alt="" src="../img/4.jpg" /></p>
 <p>クライアント とサーバという語は、文脈によって異なる意味合いを持ち得る用語です。たとえばプログラム インターフェイスと API 動作では、それぞれ意味が変わってきます。
@@ -4177,7 +4177,7 @@
 <p>アプリケーションがネットワーク上で通信する際には、関連するデータがネットワーク上でのトランスポート用にパッケージ化されます。この部分を、上記の画像に示しています。多くの場合、このような違いについて考えることはありません。HTTP、TELNET、SMTP などのアプリケーションで作業するため、幸いにも考える必要がないからです。しかし、NETCONF/YANG に関しては、このような違いを理解することが重要です。
 NETCONF、RESTCONF、gRPC は、ネットワーク管理データのトランスポート用のプロトコルとメソッドを記述します。
 YANG は、ネットワーク要素が利用するデータ モデルを記述します。内部的な場合にも、伝送用にパッケージ化された場合にも該当します。</p>
-<h2 id="_1">「データ モデル」の具体的な意味</h2>
+<h2 id="_1">「データ モデル」の具体的な意味<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <p>データ モデルとは、「何か」を表現するために取り決められた、誰もが理解できる手法です。次の例は、人を表現する簡単な「データ モデル」です。</p>
 <ul>
 <li>人</li>
@@ -4188,9 +4188,9 @@ YANG は、ネットワーク要素が利用するデータ モデルを記述�
 <li>目の色 - 茶色、青色、緑色、薄茶色、その他</li>
 </ul>
 <p>一般的なデータ モデルを使用することにより、他者が理解しやすい方法で個人を記述することができます。</p>
-<h2 id="_2">データ形式</h2>
+<h2 id="_2">データ形式<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <p>ネットワーク デバイス（またはプログラム要素）とやり取りする際には、データが送受信されます。これは、NETCONF などの API インターフェイスに限ったことではありません。CLI インターフェイスでも、使用データが返されます。</p>
-<h3 id="_3">クリア テキスト</h3>
+<h3 id="_3">クリア テキスト<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>switch# show the int bri
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>--------------------------------------------------------------------------------
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Ethernet      VLAN    Type Mode   Status  Reason                   Speed     Port
@@ -4201,7 +4201,7 @@ YANG は、ネットワーク要素が利用するデータ モデルを記述�
 <p>CLI の一般的な形式はクリア テキストで、人間にとっては読みやすく解釈しやすい形式です。
 しかし、コンピュータ プログラムにとっては解釈が困難です。なぜなら、「構造」が定まっていなかったり、空白や位置情報を使って意味が表されることが多かったりするためです。クリア テキストのデータに複数のプラットフォーム共通の一貫性を持たせることはほぼ不可能です。ましてや複数のベンダーにまたがっている場合はなおさらです。
 クリア テキストは、プログラムのユースケースには適していないデータ形式です。</p>
-<h3 id="xml">XML</h3>
+<h3 id="xml">XML<a class="headerlink" href="#xml" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">&lt;nf:rpc-reply</span><span class="w"> </span><span class="na">xmlns:nf=</span><span class="s">&quot;urn:ietf:params:xml:ns:netconf:base:1.0&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.cisco.com/nxos:1.0:if_manager&quot;</span><span class="nt">&gt;</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w"> </span><span class="nt">&lt;nf:data&gt;</span>
@@ -4237,7 +4237,7 @@ YANG は、ネットワーク要素が利用するデータ モデルを記述�
 <p>XML（Extensible Markup Language）は、1996 年に、人間とコンピュータの両方に判読しやすいデータ エンコード形式規則セットとして開発されました。
 XML の形式は高度に構造化されています。そのため、XML を利用するアプリケーションやスクリプトを作成する開発者は、探している情報を特定するために空白や位置を解析する必要はありません。XML では、「名前空間」（例の xmlns を参照）の概念とスキーマを利用します。スキーマでは、情報が使用するデータ モデルとフォーマットが指定されます。
 XML は、プログラムのデータ転送にとっては、まさに適した選択肢です。ただし、判読しにくくオーバーヘッドも大きいので、他の選択肢も存在しています。</p>
-<h3 id="json">JSON</h3>
+<h3 id="json">JSON<a class="headerlink" href="#json" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="nt">&quot;interfaces&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="p">{</span>
@@ -4255,7 +4255,7 @@ XML は、プログラムのデータ転送にとっては、まさに適した�
 </code></pre></div>
 <p>JavaScript Object Notation（JSON）は、プログラムのユースケースで多く利用されている代替データ形式です。
 JSON は XML よりもはるかに人間が読みやすいと考えられていますが、XML のような強力な構造とスキーマの検証は備えていません。</p>
-<h2 id="_4">ネットワーク管理との関連性</h2>
+<h2 id="_4">ネットワーク管理との関連性<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
 <p>多くの API では、開発者がデータ形式として XML または JSON を指定できます。
 そのため、個別のユースケースに最適なタイプを開発者やアプリケーションが選択できます。
 今回の使用方法では、NETCONF は XML を利用しますが、RESTCONF については XML または JSON を選択できます。</p>

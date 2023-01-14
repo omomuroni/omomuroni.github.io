@@ -4145,12 +4145,12 @@
 
 
 
-<h1 id="mkdocsuml">MKDocsでUMLを表示する方法</h1>
-<h3 id="_1">事前準備</h3>
+<h1 id="mkdocsuml">MKDocsでUMLを表示する方法<a class="headerlink" href="#mkdocsuml" title="Permanent link">#</a></h1>
+<h3 id="_1">事前準備<a class="headerlink" href="#_1" title="Permanent link">#</a></h3>
 <p>以下のパッケージをPyPIからインストールしておく
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip install pymdown-extensions
 </code></pre></div></p>
-<h3 id="mermaidjs">Mermaid.jsの設定方法</h3>
+<h3 id="mermaidjs">Mermaid.jsの設定方法<a class="headerlink" href="#mermaidjs" title="Permanent link">#</a></h3>
 <p>以下内容を <code>mkdocs.yml</code> ファイルに追記する。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">markdown_extensions</span><span class="p">:</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.superfences</span><span class="p">:</span>
@@ -4165,7 +4165,7 @@
 <a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="nt">extra_javascript</span><span class="p">:</span>
 <a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://unpkg.com/mermaid@8.6.4/dist/mermaid.min.js</span>
 </code></pre></div>
-<h4 id="sample-mermaid">sample mermaid</h4>
+<h4 id="sample-mermaid">sample mermaid<a class="headerlink" href="#sample-mermaid" title="Permanent link">#</a></h4>
 <p>mermaid 記法にて記述
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sequenceDiagram
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    Alice -&gt;&gt; Bob: Hello Bob, how are you?
@@ -4189,7 +4189,7 @@
 
     Bob--&gt;Alice: Checking with John...
     Alice-&gt;John: Yes... John, how are you?</code></pre>
-<h3 id="plantuml">補足：PlantUMLの設定方法</h3>
+<h3 id="plantuml">補足：PlantUMLの設定方法<a class="headerlink" href="#plantuml" title="Permanent link">#</a></h3>
 <p>PyPIよりplantuml-markdownをインストールする
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pip install plantuml-markdown
 </code></pre></div></p>
@@ -4202,7 +4202,7 @@
 設定する必要がある。サーバはローカルにも構築することができ、
 dockerコマンドで簡単に作成可能.
 <a href="https://hub.docker.com/r/plantuml/plantuml-server/">plantuml-server</a></p>
-<h3 id="_2">参考サイト</h3>
+<h3 id="_2">参考サイト<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
 <p><a href="https://squidfunk.github.io/mkdocs-material/reference/diagrams/">Official document Diagram</a><br />
 <a href="https://qiita.com/Taka710/items/3e4a01fcc1d907967cb2">MKDocsでUMLを表示する方法</a><br />
 <a href="https://github.com/squidfunk/mkdocs-material/issues/693">Support for mermaid diagrams #693</a><br />

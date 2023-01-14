@@ -4425,19 +4425,19 @@
 
 
 
-<h1 id="theme-configuration">Theme Configuration</h1>
-<h3 id="1-theme-configuration">1. Theme Configuration</h3>
+<h1 id="theme-configuration">Theme Configuration<a class="headerlink" href="#theme-configuration" title="Permanent link">#</a></h1>
+<h3 id="1-theme-configuration">1. Theme Configuration<a class="headerlink" href="#1-theme-configuration" title="Permanent link">#</a></h3>
 <p>バージョン8.7.0では、Mermaidには、ダイアグラムテーマの動的で統合された構成のためのシステムが付属しています。 これの目的は、%% init %%ディレクティブを介してテーマをカスタマイズし、呼び出しを初期化することで、マーメイドのカスタマイズ性とスタイリングの容易さを向上させることです。</p>
 <p>テーマは、バージョン8.6.0で導入されたように、構成レベルに従って構築され、ディレクティブを使用してカスタム構成を変更および作成します。</p>
 <p><strong>これらのテーマ設定は、ディレクティブと同様に、カスタマイズ性を最大化するためにLive-Editorでも適用可能になります。</strong></p>
-<h3 id="2-side-wide-thems">2. Side-wide Thems</h3>
+<h3 id="2-side-wide-thems">2. Side-wide Thems<a class="headerlink" href="#2-side-wide-thems" title="Permanent link">#</a></h3>
 <p>サイト全体のテーマは、サイト所有者による初期化によって宣言されます。</p>
 <p>通話設定テーマをベースに初期化する例：
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="nt">mermaidAPI</span><span class="p">.</span><span class="nc">initialize</span><span class="o">(</span><span class="p">{</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">        </span><span class="err">&#39;securityLevel&#39;:</span><span class="w"> </span><span class="err">&#39;loose&#39;,</span><span class="w"> </span><span class="err">&#39;theme&#39;:</span><span class="w"> </span><span class="err">&#39;base&#39;</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="p">}</span><span class="o">);</span>
 </code></pre></div></p>
-<h3 id="3-themes-at-the-local-or-current-level">3. Themes at the Local or Current Level</h3>
+<h3 id="3-themes-at-the-local-or-current-level">3. Themes at the Local or Current Level<a class="headerlink" href="#3-themes-at-the-local-or-current-level" title="Permanent link">#</a></h3>
 <p>mermaidをサポートするWebページでを使用して図を生成する場合。 安全な配列で禁止されていない限り、ディレクティブを使用して、特定の図のサイト全体のテーマ設定をローカルでオーバーライドすることもできます。</p>
 <pre class="mermaid"><code>%%{init: {'theme':'base'}}%%
   graph TD
@@ -4453,7 +4453,7 @@
 <li>forest</li>
 <li>neutral</li>
 </ul>
-<h3 id="4-making-a-custom-theme-with-themevariables">4. Making a Custom Theme with themeVariables</h3>
+<h3 id="4-making-a-custom-theme-with-themevariables">4. Making a Custom Theme with themeVariables<a class="headerlink" href="#4-making-a-custom-theme-with-themevariables" title="Permanent link">#</a></h3>
 <p>カスタムテーマを作成する最も簡単な方法は、基本テーマから始めて、%% init %%を介してthemeVariablesを介してテーマ変数を変更することです。</p>
 <table>
 <thead>
@@ -4510,11 +4510,11 @@
 <p class="admonition-title">Info</p>
 <p>空のままにすると、すべての変数値がデフォルトに設定されます。</p>
 </div>
-<h3 id="5-color-and-color-calculation">5. Color and Color Calculation</h3>
+<h3 id="5-color-and-color-calculation">5. Color and Color Calculation<a class="headerlink" href="#5-color-and-color-calculation" title="Permanent link">#</a></h3>
 <p>色の定義にはmarmaidの特定の相互作用があります。これは、図の可視性を確保するためです。mermaidは、読みやすさを補正して維持するために色が変更されると、いくつかの変数を自動的に調整します。</p>
 <p>[変数]列の右側にある[デフォルト値]列は、左側の変数とペアになっている/関連付けられている変数と、このペアまたは関連付けの性質を示します。たとえば、primaryColorと表示されている場合は、<code>primaryColor</code> をデフォルト値として取得することを意味します。「primaryColorに基づく」と表示されている場合は、primaryColorから計算/派生していることを意味します。この計算は、原色の反転、色相の変化、10％の暗さまたは明るさなどです。</p>
 <p>以下の変数のいずれかを変更することで、独自のテーマを作成できます。暗い背景を使用している場合は、ダークモードをtrueに設定して色を調整します。別のスタイルにしたい場合は、<code>%%init%%</code> の変数名を使用して計算をオーバーライドすることができます。</p>
-<h3 id="6-theme-variables-reference-table">6. Theme Variables Reference Table</h3>
+<h3 id="6-theme-variables-reference-table">6. Theme Variables Reference Table<a class="headerlink" href="#6-theme-variables-reference-table" title="Permanent link">#</a></h3>
 <p>一部の図に固有の変数は、テーマ変数の変更によって影響を受ける可能性があります</p>
 <table>
 <thead>
@@ -4654,8 +4654,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="7-specific-to-different-diagrams-and-charts">7. Specific to different diagrams and charts</h3>
-<h4 id="flowchart">Flowchart</h4>
+<h3 id="7-specific-to-different-diagrams-and-charts">7. Specific to different diagrams and charts<a class="headerlink" href="#7-specific-to-different-diagrams-and-charts" title="Permanent link">#</a></h3>
+<h4 id="flowchart">Flowchart<a class="headerlink" href="#flowchart" title="Permanent link">#</a></h4>
 <table>
 <thead>
 <tr>
@@ -4710,7 +4710,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="sequence-diagram">sequence diagram</h4>
+<h4 id="sequence-diagram">sequence diagram<a class="headerlink" href="#sequence-diagram" title="Permanent link">#</a></h4>
 <table>
 <thead>
 <tr>
@@ -4795,7 +4795,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="state-colors">state colors</h4>
+<h4 id="state-colors">state colors<a class="headerlink" href="#state-colors" title="Permanent link">#</a></h4>
 <table>
 <thead>
 <tr>
@@ -4820,7 +4820,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="class-colors">class colors</h4>
+<h4 id="class-colors">class colors<a class="headerlink" href="#class-colors" title="Permanent link">#</a></h4>
 <table>
 <thead>
 <tr>
@@ -4903,7 +4903,7 @@
 <p class="admonition-title">Info</p>
 <p>値は、交互の外観を作成することを目的としています</p>
 </div>
-<h4 id="primarycolor-overriding">primaryColor Overriding</h4>
+<h4 id="primarycolor-overriding">primaryColor Overriding<a class="headerlink" href="#primarycolor-overriding" title="Permanent link">#</a></h4>
 <p>これは、%% init %%を使用して、primaryColorをオーバーライドし、すべてに異なる外観を与える例です。</p>
 <pre class="mermaid"><code>%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ff0000'}}}%%
         graph TD
@@ -4936,7 +4936,7 @@
 <a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>            G
 <a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>          end
 </code></pre></div>
-<h3 id="8-example-of-overridding">8. example of overridding</h3>
+<h3 id="8-example-of-overridding">8. example of overridding<a class="headerlink" href="#8-example-of-overridding" title="Permanent link">#</a></h3>
 <ul>
 <li>primary color を少し明るくします</li>
 <li>tertiary color も赤みがかった色に設定します</li>
@@ -4975,12 +4975,12 @@
 <a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>            G
 <a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>          end
 </code></pre></div>
-<h3 id="9-common-theming-activities-flowchart">9. Common theming activities Flowchart</h3>
-<h4 id="how-to-change-the-color-of-the-arrows">How to change the color of the arrows</h4>
+<h3 id="9-common-theming-activities-flowchart">9. Common theming activities Flowchart<a class="headerlink" href="#9-common-theming-activities-flowchart" title="Permanent link">#</a></h3>
+<h4 id="how-to-change-the-color-of-the-arrows">How to change the color of the arrows<a class="headerlink" href="#how-to-change-the-color-of-the-arrows" title="Permanent link">#</a></h4>
 <p>矢印の色を変更する方法
 Examples:
 テーマを調整するときは、好みのテーマが図とどのように一致するかを調べて、すべてが表示され、見栄えがよいかどうかを評価すると役立つ場合があります。 次の例では、ディレクティブinitが使用され、テーマがベースとして宣言されています。 ディレクティブの使用の詳細については、バージョン8.6.0のドキュメントを参照してください。</p>
-<h4 id="example-flowchart">example Flowchart</h4>
+<h4 id="example-flowchart">example Flowchart<a class="headerlink" href="#example-flowchart" title="Permanent link">#</a></h4>
 <pre class="mermaid"><code>
 %%{init: {'securityLevel': 'loose', 'theme':'base'}}%%
         graph TD
@@ -5013,7 +5013,7 @@ Examples:
 <a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>            G
 <a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>          end 
 </code></pre></div>
-<h3 id="10-common-theming-activities-flowchart-beta">10. Common theming activities Flowchart beta</h3>
+<h3 id="10-common-theming-activities-flowchart-beta">10. Common theming activities Flowchart beta<a class="headerlink" href="#10-common-theming-activities-flowchart-beta" title="Permanent link">#</a></h3>
 <pre class="mermaid"><code>%%{init: {'securityLevel': 'loose', 'theme':'base'}}%%
         flowchart TD
           A[Christmas] --&gt;|Get money| B(Go shopping)
@@ -5045,7 +5045,7 @@ Examples:
 <a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>            G
 <a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>          end
 </code></pre></div>
-<h3 id="11-common-theming-activities-class-diagram">11. Common theming activities Class  diagram</h3>
+<h3 id="11-common-theming-activities-class-diagram">11. Common theming activities Class  diagram<a class="headerlink" href="#11-common-theming-activities-class-diagram" title="Permanent link">#</a></h3>
 <pre class="mermaid"><code>%%{init: {'securityLevel': 'loose', 'theme':'base'}}%%
 
 classDiagram
@@ -5094,7 +5094,7 @@ classDiagram
 <a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>        +run()
 <a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>    }
 </code></pre></div>
-<h3 id="12-common-theming-activities-gantt">12. Common theming activities Gantt</h3>
+<h3 id="12-common-theming-activities-gantt">12. Common theming activities Gantt<a class="headerlink" href="#12-common-theming-activities-gantt" title="Permanent link">#</a></h3>
 <pre class="mermaid"><code>gantt
        dateFormat                YYYY-MM-DD
        title                     Adding GANTT diagram functionality to mermaid
@@ -5151,7 +5151,7 @@ classDiagram
 <a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>       Add gantt diagram to demo page      :20h
 <a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>       Add another diagram to demo page    :48h
 </code></pre></div>
-<h3 id="13-common-theming-activities-sequence-diagram">13. Common theming activities Sequence diagram</h3>
+<h3 id="13-common-theming-activities-sequence-diagram">13. Common theming activities Sequence diagram<a class="headerlink" href="#13-common-theming-activities-sequence-diagram" title="Permanent link">#</a></h3>
 <p>Sequence diagram
 <pre class="mermaid"><code>%%{init: {'securityLevel': 'loose', 'theme':'base'}}%%
         sequenceDiagram
@@ -5186,7 +5186,7 @@ classDiagram
 <a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>                John--&gt;Alice: Great!
 <a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>            end
 </code></pre></div>
-<h3 id="14-common-theming-activities-state-diagram">14. Common theming activities State diagram</h3>
+<h3 id="14-common-theming-activities-state-diagram">14. Common theming activities State diagram<a class="headerlink" href="#14-common-theming-activities-state-diagram" title="Permanent link">#</a></h3>
 <pre class="mermaid"><code>%%{init: {'securityLevel': 'loose', 'theme':'base'}}%%
       stateDiagram
         [*] --&gt; Active
@@ -5240,7 +5240,7 @@ classDiagram
 <a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a>
 <a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a>        SomethingElse --&gt; [*]
 </code></pre></div>
-<h3 id="15-common-theming-activities-state-diagram-beta">15. Common theming activities State diagram beta</h3>
+<h3 id="15-common-theming-activities-state-diagram-beta">15. Common theming activities State diagram beta<a class="headerlink" href="#15-common-theming-activities-state-diagram-beta" title="Permanent link">#</a></h3>
 <pre class="mermaid"><code>%%{init: {'securityLevel': 'loose', 'theme':'base'}}%%
 stateDiagram-v2
         [*] --&gt; Active
@@ -5294,7 +5294,7 @@ stateDiagram-v2
 <a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>
 <a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a>        SomethingElse2 --&gt; [*]
 </code></pre></div>
-<h3 id="16-common-theming-activities-entity-relations-diagram">16. Common theming activities Entity Relations diagram</h3>
+<h3 id="16-common-theming-activities-entity-relations-diagram">16. Common theming activities Entity Relations diagram<a class="headerlink" href="#16-common-theming-activities-entity-relations-diagram" title="Permanent link">#</a></h3>
 <pre class="mermaid"><code> erDiagram
         CUSTOMER }|..|{ DELIVERY-ADDRESS : has
         CUSTOMER ||--o{ ORDER : places
@@ -5315,7 +5315,7 @@ stateDiagram-v2
 <a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>        PRODUCT-CATEGORY ||--|{ PRODUCT : contains
 <a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>        PRODUCT ||--o{ ORDER-ITEM : &quot;ordered in&quot;
 </code></pre></div>
-<h3 id="17-common-theming-activities-user-journey-diagra">17. Common theming activities User journey diagra</h3>
+<h3 id="17-common-theming-activities-user-journey-diagra">17. Common theming activities User journey diagra<a class="headerlink" href="#17-common-theming-activities-user-journey-diagra" title="Permanent link">#</a></h3>
 <pre class="mermaid"><code>journey
             title My working day
             section Go to work

@@ -4259,11 +4259,11 @@
 
 
 
-<h1 id="state-diagrams">State diagrams</h1>
-<h3 id="1-summary">1. summary</h3>
+<h1 id="state-diagrams">State diagrams<a class="headerlink" href="#state-diagrams" title="Permanent link">#</a></h1>
+<h3 id="1-summary">1. summary<a class="headerlink" href="#1-summary" title="Permanent link">#</a></h3>
 <p>「状態図は、コンピュータサイエンスや関連分野でシステムの動作を説明するために使用される図の一種です。状態図では、説明するシステムが有限数の状態で構成されている必要があります。実際にそうである場合もあれば、そうである場合もあります。 これは合理的な抽象化です。」 ウィキペディア</p>
 <p>マーメイドは状態図をレンダリングできます。 構文は、plantUmlで使用されている構文に準拠しようとします。これにより、ユーザーがマーメイドとplantUmlの間で図を共有しやすくなります。</p>
-<h4 id="sample">sample</h4>
+<h4 id="sample">sample<a class="headerlink" href="#sample" title="Permanent link">#</a></h4>
 <pre class="mermaid"><code>stateDiagram-v2
     [*] --&gt; Still
     Still --&gt; [*]
@@ -4272,7 +4272,7 @@
     Moving --&gt; Still
     Moving --&gt; Crash
     Crash --&gt; [*]</code></pre>
-<h4 id="code">code</h4>
+<h4 id="code">code<a class="headerlink" href="#code" title="Permanent link">#</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>stateDiagram-v2
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    [*] --&gt; Still
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    Still --&gt; [*]
@@ -4283,7 +4283,7 @@
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    Crash --&gt; [*]
 </code></pre></div>
 <p>状態図では、システムはその状態と、システムの状態が遷移を介して別の状態にどのように変化するかという観点から説明されています。 上の図の例は、Still、Moving、Crashの3つの状態を示しています。 静止状態から始めます。 Stillから状態をMovingに変更できます。 移動では、状態をStilに戻すことができます</p>
-<h3 id="2-srtates">2. Srtates</h3>
+<h3 id="2-srtates">2. Srtates<a class="headerlink" href="#2-srtates" title="Permanent link">#</a></h3>
 <p>状態は複数の方法で宣言できます。 最も簡単な方法は、状態IDを説明として定義することです。</p>
 <pre class="mermaid"><code>stateDiagram-v2
     s1
@@ -4298,7 +4298,7 @@
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>%% 説明を使用して状態を定義する別の方法は、状態IDの後にコロンと説明を続けることです。
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>%% s2 :これは状態の説明です
 </code></pre></div>
-<h3 id="3-transitions">3. Transitions</h3>
+<h3 id="3-transitions">3. Transitions<a class="headerlink" href="#3-transitions" title="Permanent link">#</a></h3>
 <p>遷移は、ある状態が別の状態に移行するときのパス/エッジです。 これは、テキスト矢印「-&gt;」を使用して表されます。<br />
 2つの状態間の遷移を定義し、状態がまだ定義されていない場合、未定義の状態は遷移からのIDで定義されます。 この方法で定義された状態に後で説明を追加できます。</p>
 <pre class="mermaid"><code>stateDiagram-v2
@@ -4311,7 +4311,7 @@
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>%% トランジションにテキストを追加することができます。 
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a> s3 --&gt; s4: A transition
 </code></pre></div>
-<h3 id="4-start-and-end">4. Start and End</h3>
+<h3 id="4-start-and-end">4. Start and End<a class="headerlink" href="#4-start-and-end" title="Permanent link">#</a></h3>
 <p>ダイアグラムの開始と停止を示す2つの特別な状態があります。 これらは[*]構文で記述されており、その構文への遷移の方向によって、開始状態または停止状態として定義されます。</p>
 <pre class="mermaid"><code>stateDiagram-v2
     [*] --&gt; s1
@@ -4320,7 +4320,7 @@
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    [*] --&gt; s1
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    s1 --&gt; [*]
 </code></pre></div>
-<h3 id="5-1-composite-states">5-1. Composite states</h3>
+<h3 id="5-1-composite-states">5-1. Composite states<a class="headerlink" href="#5-1-composite-states" title="Permanent link">#</a></h3>
 <p>状態図の実際の使用では、1つの状態が複数の内部状態を持つ可能性があるため、多くの場合、多次元の図になります。 この用語では、これらは複合状態と呼ばれます。<br />
 複合状態を定義するには、stateキーワードに続けて、IDと{}の間の複合状態の本体を使用する必要があります。 以下の例を参照してください。  </p>
 <pre class="mermaid"><code>stateDiagram-v2
@@ -4336,7 +4336,7 @@
 <a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>        second --&gt; [*]
 <a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    }
 </code></pre></div>
-<h3 id="5-2-composite-states">5-2. Composite states</h3>
+<h3 id="5-2-composite-states">5-2. Composite states<a class="headerlink" href="#5-2-composite-states" title="Permanent link">#</a></h3>
 <p>You can do this in several layers:</p>
 <pre class="mermaid"><code>stateDiagram-v2
     [*] --&gt; First
@@ -4371,7 +4371,7 @@
 <a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>        }
 <a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>    }
 </code></pre></div>
-<h3 id="5-3-composite-states">5-3. Composite states</h3>
+<h3 id="5-3-composite-states">5-3. Composite states<a class="headerlink" href="#5-3-composite-states" title="Permanent link">#</a></h3>
 <p>You can also define transitions also between composite states:</p>
 <pre class="mermaid"><code>stateDiagram-v2
     [*] --&gt; First
@@ -4412,7 +4412,7 @@
 <a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>        thi --&gt; [*]
 <a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>    }
 </code></pre></div>
-<h3 id="6-composite-choice">6. Composite Choice</h3>
+<h3 id="6-composite-choice">6. Composite Choice<a class="headerlink" href="#6-composite-choice" title="Permanent link">#</a></h3>
 <p>2つ以上のパスからの選択をモデル化する必要がある場合は、<code>choice</code> を使用してモデル化できます。 </p>
 <pre class="mermaid"><code>stateDiagram-v2
     state if_state &lt;&lt;choice&gt;&gt;
@@ -4427,7 +4427,7 @@
 <a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    if_state --&gt; False: if n &lt; 0
 <a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    if_state --&gt; True : if n &gt;= 0
 </code></pre></div>
-<h3 id="7-composite-forks">7. Composite Forks</h3>
+<h3 id="7-composite-forks">7. Composite Forks<a class="headerlink" href="#7-composite-forks" title="Permanent link">#</a></h3>
 <p><code>fork</code> , <code>join</code> を使用して、ダイアグラムでフォークを指定することができます。</p>
 <pre class="mermaid"><code>   stateDiagram-v2
     state fork_state &lt;&lt;fork&gt;&gt;
@@ -4452,7 +4452,7 @@
 <a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>      join_state --&gt; State4
 <a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>      State4 --&gt; [*]
 </code></pre></div>
-<h3 id="8-composite-notes">8. Composite Notes</h3>
+<h3 id="8-composite-notes">8. Composite Notes<a class="headerlink" href="#8-composite-notes" title="Permanent link">#</a></h3>
 <p>ノートをノードの右側または左側に配置することを選択できます。</p>
 <pre class="mermaid"><code>    stateDiagram-v2
         State1: The state with a note
@@ -4472,7 +4472,7 @@
 <a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>        State1 --&gt; State2
 <a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>        note left of State2 : This is the note to the left.
 </code></pre></div>
-<h3 id="9-composite-concurrency">9. Composite Concurrency</h3>
+<h3 id="9-composite-concurrency">9. Composite Concurrency<a class="headerlink" href="#9-composite-concurrency" title="Permanent link">#</a></h3>
 <p>plantUmlと同様に、「 - 」 記号を使用して並行性を指定できます。</p>
 <pre class="mermaid"><code>stateDiagram-v2
     [*] --&gt; Active

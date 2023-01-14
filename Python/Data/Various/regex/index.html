@@ -4137,13 +4137,13 @@
 
 
 
-<h1 id="regex">regex</h1>
+<h1 id="regex">regex<a class="headerlink" href="#regex" title="Permanent link">#</a></h1>
 <ul>
 <li><a href="https://pyneng.readthedocs.io/en/latest/book/14_regex/syntax.html">正規表現の構文</a></li>
 <li><a href="https://docs.python.org/3/library/re.html">re — Regular expression operations</a></li>
 <li><a href="https://regex101.com/">regex101.com</a></li>
 </ul>
-<h2 id="character-sets">Character sets</h2>
+<h2 id="character-sets">Character sets<a class="headerlink" href="#character-sets" title="Permanent link">#</a></h2>
 <ul>
 <li><code>\d</code> - 任意の数字</li>
 <li><code>\D</code> - 数値以外の値</li>
@@ -4152,7 +4152,7 @@
 <li><code>\w</code> - 任意の文字、数字、または下線文字</li>
 <li><code>\W</code> - 文字、数字、または下線文字を除くすべて</li>
 </ul>
-<h2 id="_1">取り出さないグループ</h2>
+<h2 id="_1">取り出さないグループ<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <p>正規表現の一部として使うが、取り出さないグループは<code>(?:...)</code>を使います。 ( <code>...</code> 部分は任意の正規表現です。)</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">m</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;([abc])+&quot;</span><span class="p">,</span> <span class="s2">&quot;abc&quot;</span><span class="p">)</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">m</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
@@ -4160,7 +4160,7 @@
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">m</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;(?:[abc])+&quot;</span><span class="p">,</span> <span class="s2">&quot;abc&quot;</span><span class="p">)</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">m</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
 </code></pre></div>
-<h2 id="_2">繰り返し文字</h2>
+<h2 id="_2">繰り返し文字<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <ul>
 <li>regex<code>+</code>  前の要素の1回以上の繰り返し</li>
 <li>regex <code>*</code>  前の要素の0回以上の繰り返し</li>
@@ -4169,7 +4169,7 @@
 <li>regex<code>{n,m}</code>  前の要素のnからm回の繰り返し</li>
 <li>regex<code>{n,}</code>  前の要素のn回以上の繰り返し</li>
 </ul>
-<h2 id="_3">特別な記号</h2>
+<h2 id="_3">特別な記号<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
 <ul>
 <li><code>.</code> -改行文字以外のすべての文字</li>
 <li><code>^</code> -行頭</li>
@@ -4179,7 +4179,7 @@
 <li><code>a|b-</code> 要素aまたはb</li>
 <li><code>(regex)</code> - 式は1つの要素として扱われます。また、式に一致する部分文字列が記憶されます</li>
 </ul>
-<h2 id="_4">正規表現サンプル</h2>
+<h2 id="_4">正規表現サンプル<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
 <ul>
 <li><code>\x1b\[.*?m\[?'</code>エスケープシーケンス</li>
 <li><code>\w+\.*\w+@\w+\.\w+</code> メールアドレス</li>

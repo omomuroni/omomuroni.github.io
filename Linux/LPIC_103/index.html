@@ -5059,8 +5059,8 @@
 
 
 
-<h1 id="103-gnu-unix-cmd">103 GNU / Unix Cmd</h1>
-<h2 id="_1">コマンドラインでの作業</h2>
+<h1 id="103-gnu-unix-cmd">103 GNU / Unix Cmd<a class="headerlink" href="#103-gnu-unix-cmd" title="Permanent link">#</a></h1>
+<h2 id="_1">コマンドラインでの作業<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <ul>
 <li>history (過去に入力したコマンドの履歴を表示)</li>
 <li>「!番号」と入力することで特定のコマンドを再実行できる</li>
@@ -5069,7 +5069,7 @@
 <li>uname (現在使用しているシステムの情報を表示する)</li>
 <li>システムの詳細な情報を表示するには「-a」オプションを使用</li>
 </ul>
-<h3 id="_2">代表的な環境変数</h3>
+<h3 id="_2">代表的な環境変数<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -5147,7 +5147,7 @@
 <li>環境変数HISTFILESIZEを0にすると、コマンド履歴保存ファイルにコマンド履歴が保存されなくなります。</li>
 </ul>
 </div>
-<h3 id="man">man コマンド</h3>
+<h3 id="man">man コマンド<a class="headerlink" href="#man" title="Permanent link">#</a></h3>
 <p><code>man [オプション] [セクション番号] キーワード</code></p>
 <table>
 <thead>
@@ -5220,13 +5220,13 @@
 <p class="admonition-title">Note</p>
 <p>shutdownコマンドのmanページセクションは8 </p>
 </div>
-<h3 id="makewhatis">makewhatis</h3>
+<h3 id="makewhatis">makewhatis<a class="headerlink" href="#makewhatis" title="Permanent link">#</a></h3>
 <ul>
 <li>whatisデータベースとは、オンラインマニュアルページ(manページ)に関する情報を蓄積するデータベースのこと</li>
 <li>makewhatisコマンドを実行することで作成、または更新される</li>
 </ul>
-<h2 id="_3">フィルターを使用してのテキストストリーム処理</h2>
-<h3 id="md5sum-sha256sum-sha512sum">md5sum / sha256sum / sha512sum</h3>
+<h2 id="_3">フィルターを使用してのテキストストリーム処理<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
+<h3 id="md5sum-sha256sum-sha512sum">md5sum / sha256sum / sha512sum<a class="headerlink" href="#md5sum-sha256sum-sha512sum" title="Permanent link">#</a></h3>
 <p>以下はLinuxでメッセージダイジェストを計算・チェックする主なコマンドです。</p>
 <table>
 <thead>
@@ -5254,7 +5254,7 @@
 <p class="admonition-title">Info</p>
 <p>-c (--check)オプションで読み込んだファイルの値と照合できる。</p>
 </div>
-<h3 id="cut">cut</h3>
+<h3 id="cut">cut<a class="headerlink" href="#cut" title="Permanent link">#</a></h3>
 <ul>
 <li>テキストファイルの各行から指定したフィールドを取り出して表示するにはcutコマンドを利用</li>
 <li>cutコマンドの書式と主なオプションは以下のとおり</li>
@@ -5286,7 +5286,7 @@
 <li>(例)「/etc/passwd」ファイルの各行の2番目の文字を取り出して表示
   <code>cut -c 2 /etc/passwd</code> </li>
 </ul>
-<h3 id="nl">nl</h3>
+<h3 id="nl">nl<a class="headerlink" href="#nl" title="Permanent link">#</a></h3>
 <p>nlコマンドの書式と主なオプションは以下のとおりです。</p>
 <p><code>nl [オプション] [ファイル名]</code></p>
 <table>
@@ -5329,7 +5329,7 @@
 <p class="admonition-title">Tip</p>
 <p><code>nl</code> コマンドは空白には番号をつけない、<code>cat -n</code> コマンドは空白にも番号を付ける</p>
 </div>
-<h3 id="cat">cat</h3>
+<h3 id="cat">cat<a class="headerlink" href="#cat" title="Permanent link">#</a></h3>
 <ul>
 <li>catコマンドはconCATenate（接続する）という意味のコマンド</li>
 <li>与えられた入力を標準出力へ接続して表示するコマンド</li>
@@ -5356,7 +5356,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="tr">tr</h3>
+<h3 id="tr">tr<a class="headerlink" href="#tr" title="Permanent link">#</a></h3>
 <ul>
 <li>trコマンドは指定した文字を変換・削除するコマンドです</li>
 <li>(標準入力であるキーボードから入力した文字を指定した文字に変換して、標準出力であるディスプレイに表示</li>
@@ -5429,7 +5429,7 @@
 <li>cat file.txt | tr PINGT ping t</li>
 <li>tr PINGT pingt &lt; file.txt</li>
 </ul>
-<h3 id="head">head</h3>
+<h3 id="head">head<a class="headerlink" href="#head" title="Permanent link">#</a></h3>
 <ul>
 <li>headはファイルの先頭部分を指定して表示するコマンド</li>
 <li>headコマンドの書式と主なオプションは以下のとおり</li>
@@ -5457,7 +5457,7 @@
 <li>(例)「httpd.conf」ファイルの先頭500バイトを表示<br />
 <code>head -c 500 httpd.conf</code></li>
 </ul>
-<h3 id="wc">wc</h3>
+<h3 id="wc">wc<a class="headerlink" href="#wc" title="Permanent link">#</a></h3>
 <ul>
 <li>wcコマンドはファイル内の文字数や行数を調べることができるコマンド</li>
 <li>wcコマンドの書式と主なオプションは以下のとおり</li>
@@ -5485,7 +5485,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="tail">tail</h3>
+<h3 id="tail">tail<a class="headerlink" href="#tail" title="Permanent link">#</a></h3>
 <ul>
 <li>tailはファイルの末尾部分を指定して表示するコマンド</li>
 <li>tailコマンドの書式と主なオプションは以下</li>
@@ -5514,7 +5514,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="split">split</h3>
+<h3 id="split">split<a class="headerlink" href="#split" title="Permanent link">#</a></h3>
 <ul>
 <li>splitコマンドは指定した行数でファイルを分割するコマンド</li>
 <li>splitコマンドの書式と主なオプションは以下。</li>
@@ -5524,11 +5524,11 @@
 <li>デフォルトは1000行</li>
 <li>出力されるファイル名には、「出力ファイル名」で指定したファイル名の末尾に「aa」、「ab」、「ac」などの文字列が順番に付きます。</li>
 </ul>
-<h3 id="paste">paste</h3>
+<h3 id="paste">paste<a class="headerlink" href="#paste" title="Permanent link">#</a></h3>
 <p>複数のファイルを行単位で結合するコマンドはpaste</p>
-<h3 id="fmt">fmt</h3>
+<h3 id="fmt">fmt<a class="headerlink" href="#fmt" title="Permanent link">#</a></h3>
 <p>1行あたりの最大文字数を指定してテキストを整形するコマンド</p>
-<h3 id="sort">sort</h3>
+<h3 id="sort">sort<a class="headerlink" href="#sort" title="Permanent link">#</a></h3>
 <ul>
 <li>行単位でファイルの内容をソートするにはsortコマンドを利用</li>
 <li>sortコマンドの書式と主なオプションは以下のとおり</li>
@@ -5569,7 +5569,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="od">od</h3>
+<h3 id="od">od<a class="headerlink" href="#od" title="Permanent link">#</a></h3>
 <ul>
 <li>ファイルの内容を8進数や16進数で表示するためにはodコマンドを使用</li>
 <li>odコマンドの書式と主なオプションは以下のとおりです。</li>
@@ -5624,7 +5624,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="uniq">uniq</h3>
+<h3 id="uniq">uniq<a class="headerlink" href="#uniq" title="Permanent link">#</a></h3>
 <ul>
 <li>ソートされているファイルにある連続した重複行のみを表示するにはuniqコマンドを利用</li>
 <li>uniqコマンドの書式と主なオプションは以下のとおり</li>
@@ -5649,9 +5649,9 @@
 </tr>
 </tbody>
 </table>
-<h3 id="pr">pr</h3>
+<h3 id="pr">pr<a class="headerlink" href="#pr" title="Permanent link">#</a></h3>
 <p>ファイルを印刷用に整形するコマンド</p>
-<h3 id="_4">改行コード</h3>
+<h3 id="_4">改行コード<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
 <p>多くのシステムではキャリッジリターン（Carriage Return: CR、\r（16進数で0D））と
 ラインフィード（Line feed: LF、\n（16進数で0A））を使って改行を表す</p>
 <ul>
@@ -5667,8 +5667,8 @@
 <li>tr -d '\r' &lt; crlf.txt &gt; linux.txt</li>
 <li>cat crlf.txt | tr -d '\r' &gt; linux.txt</li>
 </ul>
-<h2 id="_5">基本的なファイル管理</h2>
-<h3 id="ls">ls</h3>
+<h2 id="_5">基本的なファイル管理<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
+<h3 id="ls">ls<a class="headerlink" href="#ls" title="Permanent link">#</a></h3>
 <ul>
 <li>ディレクトリ内のファイルやディレクトリを表示するにはlsコマンドを利用します。</li>
 <li>lsコマンドの書式と主なオプションは以下のとおり</li>
@@ -5712,7 +5712,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="cp">cp</h3>
+<h3 id="cp">cp<a class="headerlink" href="#cp" title="Permanent link">#</a></h3>
 <ul>
 <li>cpコマンドはファイルやディレクトリのコピーを行うコマンドです。</li>
 <li>cpコマンドの書式と主なオプションは以下のとおりです。</li>
@@ -5745,7 +5745,7 @@
 </tbody>
 </table>
 <p><a href="https://xtech.nikkei.com/it/article/COLUMN/20060227/230734/">【 cp 】 ファイルやディレクトリをコピーする</a></p>
-<h3 id="rm">rm</h3>
+<h3 id="rm">rm<a class="headerlink" href="#rm" title="Permanent link">#</a></h3>
 <ul>
 <li>ファイルやディレクトリを削除するにはrmコマンドを利用します。</li>
 <li>rmコマンドの書式と主なオプションは以下のとおりです。</li>
@@ -5791,7 +5791,7 @@
 </tbody>
 </table>
 <p><a href="https://xtech.nikkei.com/it/article/COLUMN/20060227/230871/">【 rm 】 ファイルやディレクトリを削除する</a></p>
-<h3 id="mv">mv</h3>
+<h3 id="mv">mv<a class="headerlink" href="#mv" title="Permanent link">#</a></h3>
 <ul>
 <li>ファイルやディレクトリの移動・名前の変更をする</li>
 <li><code>mv [options] source dest</code></li>
@@ -5843,7 +5843,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="mkdir">mkdir</h3>
+<h3 id="mkdir">mkdir<a class="headerlink" href="#mkdir" title="Permanent link">#</a></h3>
 <ul>
 <li>mkdirは新規ディレクトリを作成するコマンドです。</li>
 <li>mkdirコマンドの書式と主なオプションは以下のとおりです。</li>
@@ -5867,14 +5867,14 @@
 </tr>
 </tbody>
 </table>
-<h3 id="rmdir">rmdir</h3>
+<h3 id="rmdir">rmdir<a class="headerlink" href="#rmdir" title="Permanent link">#</a></h3>
 <ul>
 <li>rmdirコマンドは空のディレクトリのみを削除することが出来るコマンドです。</li>
 <li>rmdirコマンドの書式と主なオプションは以下のとおりです。</li>
 <li><code>rmdir [-p] ディレクトリ名</code></li>
 <li>「-p」はディレクトリ名に階層を指定した場合、削除するディレクトリの親ディレクトリを同時に削除するオプションです。</li>
 </ul>
-<h3 id="dd">dd</h3>
+<h3 id="dd">dd<a class="headerlink" href="#dd" title="Permanent link">#</a></h3>
 <p>ファイルの変換とコピーを行う</p>
 <p>dd [if=file] [of=file] [ibs=bytes] [obs=bytes] [bs=bytes] [cbs=bytes] [skip=blocks] [seek=blocks] [count=blocks] [conv=code]</p>
 <table>
@@ -5985,18 +5985,18 @@
 </tbody>
 </table>
 <p><a href="https://xtech.nikkei.com/it/article/COLUMN/20060227/230741/">参照元：【 dd 】 ファイルの変換とコピーを行う</a></p>
-<h3 id="file">file</h3>
+<h3 id="file">file<a class="headerlink" href="#file" title="Permanent link">#</a></h3>
 <ul>
 <li>「file」コマンドではファイルの種類が表示</li>
 <li>fileコマンドを使用すると、ファイルの最終変更時刻（mtime、ctime）は更新されませんが、最終アクセス時刻（atime）は更新されます。</li>
 </ul>
-<h3 id="stat">stat</h3>
+<h3 id="stat">stat<a class="headerlink" href="#stat" title="Permanent link">#</a></h3>
 <ul>
 <li>statコマンドは、ファイルやファイルシステムのinode番号やタイムスタンプ（アクセス時刻や修正時刻）などの詳細情報を表示できます。</li>
 <li>inodeとは、Linuxファイルシステムにおいてファイルの属性（パーミッションや所有ユーザなどの情報）を格納するもの</li>
 <li>全てのファイルには対応するinode番号があります。</li>
 </ul>
-<h3 id="touch">touch</h3>
+<h3 id="touch">touch<a class="headerlink" href="#touch" title="Permanent link">#</a></h3>
 <ul>
 <li>touchコマンドは、空のファイルを作成したり、ファイルのタイムスタンプ（アクセス時刻や修正時刻）を変更する際に利用します。</li>
 <li>touchコマンドの書式と主なオプションは以下のとおりです。</li>
@@ -6025,7 +6025,7 @@
 </tbody>
 </table>
 <p><a href="https://xtech.nikkei.com/it/article/COLUMN/20060227/230905/">参照元：【 touch 】 ファイルのタイム・スタンプを変更する</a></p>
-<h3 id="xz">xz</h3>
+<h3 id="xz">xz<a class="headerlink" href="#xz" title="Permanent link">#</a></h3>
 <ul>
 <li>bzip2よりも圧縮率が高い圧縮形式として、LZMA2圧縮アルゴリズムを採用したxzフォーマットがあります</li>
 <li>xzはbzip2よりも多くのCPU／メモリを要求しますが、その分圧縮率が高く、また展開速度はbzip2より短い</li>
@@ -6056,7 +6056,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="xzcat">xzcat</h3>
+<h3 id="xzcat">xzcat<a class="headerlink" href="#xzcat" title="Permanent link">#</a></h3>
 <ul>
 <li>ファイルの内容を標準出力へ送信するコマンドは「cat」コマンド</li>
 <li>しかし圧縮されたファイルの場合もそのまま送信するため正しく表示されません。</li>
@@ -6064,7 +6064,7 @@
 <li>xzcatコマンドの書式は以下のとおりです。</li>
 <li><code>xzcat [ファイル名]</code></li>
 </ul>
-<h3 id="bzip2">bzip2</h3>
+<h3 id="bzip2">bzip2<a class="headerlink" href="#bzip2" title="Permanent link">#</a></h3>
 <ul>
 <li>bzip2形式でファイルを圧縮するにはbzip2コマンドを使用します。</li>
 <li>bzip2コマンドの書式および主なオプションは以下のとおりです。</li>
@@ -6089,7 +6089,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="tar">tar</h3>
+<h3 id="tar">tar<a class="headerlink" href="#tar" title="Permanent link">#</a></h3>
 <ul>
 <li>tarコマンドは複数のファイルをまとめて1つのファイル（アーカイブ）にする、またはアーカイブを展開する際に使用するコマンド</li>
 <li>tarコマンドの書式と主なオプションは以下のとおり</li>
@@ -6144,7 +6144,7 @@
 <li>オプションは順不同でも動作しますが、慣習的にはc, x, tのような動作オプションを先頭に指定します。</li>
 </ul>
 </div>
-<h3 id="cpio">cpio</h3>
+<h3 id="cpio">cpio<a class="headerlink" href="#cpio" title="Permanent link">#</a></h3>
 <ul>
 <li>cpioコマンドもtarコマンドと同じく、複数のファイルをまとめて1つのファイル（アーカイブ）にする、またはアーカイブを展開する際に使用するコマンド</li>
 <li>cpioコマンドはアーカイブを作成する際、標準入力からファイル名のリストを受け取り、標準出力でアーカイブを作成する</li>
@@ -6179,7 +6179,7 @@
 <li>例2）「backup.cpio」というアーカイブからファイルを展開する場合  </li>
 <li><code>$ cpio -i &lt; backup.cpio</code></li>
 </ul>
-<h3 id="gzip">gzip</h3>
+<h3 id="gzip">gzip<a class="headerlink" href="#gzip" title="Permanent link">#</a></h3>
 <ul>
 <li>gzip形式でファイルを圧縮するにはgzipコマンドを利用</li>
 <li>gzipコマンドの書式および主なオプションは以下のとおり</li>
@@ -6212,7 +6212,7 @@
 <p>gzipコマンドは複数のファイルを1つにまとめて圧縮することはできません。<br />
 複数のファイルを1つにまとめるにはtarコマンドを利用します。</p>
 </div>
-<h3 id="zcat">zcat</h3>
+<h3 id="zcat">zcat<a class="headerlink" href="#zcat" title="Permanent link">#</a></h3>
 <ul>
 <li>ファイルの内容を標準出力へ送信するコマンドは「cat」コマンド</li>
 <li>しかし圧縮されたファイルの場合もそのまま送信するため正しく表示されません。</li>
@@ -6220,7 +6220,7 @@
 <li>zcatコマンドの書式は以下のとおりです。</li>
 <li><code>zcat [ファイル名]</code></li>
 </ul>
-<h2 id="_6">ストリーム、パイプ、リダイレクトの使用</h2>
+<h2 id="_6">ストリーム、パイプ、リダイレクトの使用<a class="headerlink" href="#_6" title="Permanent link">#</a></h2>
 <ul>
 <li>シェルは標準入力、標準出力および標準エラー出力の3つのストリームを制御することができます。</li>
 <li>デフォルトで標準入力の入力元はキーボード、標準出力と標準エラー出力（エラーメッセージ）の出力先はディスプレイです。</li>
@@ -6307,8 +6307,8 @@
 </li>
 </ul>
 <p>また、「パイプ(|)」という機能を使用することによって、標準出力に出力されたコマンドの実行結果を、別のコマンドの標準入力に渡すことができます。</p>
-<h2 id="_7">プロセスの作成、監視、終了</h2>
-<h3 id="free">free</h3>
+<h2 id="_7">プロセスの作成、監視、終了<a class="headerlink" href="#_7" title="Permanent link">#</a></h2>
+<h3 id="free">free<a class="headerlink" href="#free" title="Permanent link">#</a></h3>
 <p>メモリやスワップ領域の使用状況を表示するコマンド</p>
 <ul>
 <li>表示例
@@ -6318,7 +6318,7 @@
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Swap:        945416           0      945416
 </code></pre></div></li>
 </ul>
-<h3 id="top">top</h3>
+<h3 id="top">top<a class="headerlink" href="#top" title="Permanent link">#</a></h3>
 <p>topコマンドはメモリやスワップ領域の使用状況を一定時間ごと(デフォルトは5秒)に更新して表示します。</p>
 <ul>
 <li>表示例：
@@ -6357,7 +6357,7 @@
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a> 16:22:11 up  1:18,  1 user,  load average: 0.05, 0.02, 0.00
 </code></pre></div></li>
 </ul>
-<h3 id="ps">ps</h3>
+<h3 id="ps">ps<a class="headerlink" href="#ps" title="Permanent link">#</a></h3>
 <p>現在実行中のプロセスを表示するコマンド</p>
 <table>
 <thead>
@@ -6499,20 +6499,20 @@
 <a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a>        └─wpa_supplicant
 </code></pre></div></p>
 </div>
-<h3 id="bg">bg</h3>
+<h3 id="bg">bg<a class="headerlink" href="#bg" title="Permanent link">#</a></h3>
 <p>一時停止中のジョブをバックグラウンド動作に切り替えるコマンド</p>
-<h3 id="fg">fg</h3>
+<h3 id="fg">fg<a class="headerlink" href="#fg" title="Permanent link">#</a></h3>
 <p>バックグラウンドで動作中または一時停止中のジョブを、フォアグラウンド動作に切り替えるコマンド</p>
-<h3 id="uptime">uptime</h3>
+<h3 id="uptime">uptime<a class="headerlink" href="#uptime" title="Permanent link">#</a></h3>
 <p>システムの稼働時間や負荷平均などを表示するコマンド</p>
-<h3 id="watch">watch</h3>
+<h3 id="watch">watch<a class="headerlink" href="#watch" title="Permanent link">#</a></h3>
 <p>指定したコマンドを一定時間ごとに繰り返し実行し、結果を表示するコマンド</p>
-<h3 id="jobs">jobs</h3>
+<h3 id="jobs">jobs<a class="headerlink" href="#jobs" title="Permanent link">#</a></h3>
 <ul>
 <li>現在バックグラウンドで動作しているジョブと一時停止中のジョブを表示するコマンド  </li>
 <li>「Running」はバックグラウンドで動作中、「Stopped」は一時停止中のジョブを表します。</li>
 </ul>
-<h3 id="pgrep">pgrep</h3>
+<h3 id="pgrep">pgrep<a class="headerlink" href="#pgrep" title="Permanent link">#</a></h3>
 <p>pgrepコマンドで実行中のプロセスから特定の名前を持つプロセスIDを検索することができます。</p>
 <p>-uオプションに実効ユーザー(実際の権限)名や実効ユーザー識別子(EUID)を指定すると、その権限で動作しているプロセスを検索できます。</p>
 <ul>
@@ -6522,7 +6522,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="kill">kill</h3>
+<h3 id="kill">kill<a class="headerlink" href="#kill" title="Permanent link">#</a></h3>
 <p>プロセスにシグナルを送ることでプロセスを終了させたり、再起動させることができます。
 プロセスID(PID)を使用してプロセスにシグナルを送るにはkillコマンドを利用します。</p>
 <p>killコマンドの書式と主なシグナル名およびシグナル番号は以下のとおりです。</p>
@@ -6589,7 +6589,7 @@
 <li>kill -s KILL 5884</li>
 <li>kill -s SIGKILL 5884</li>
 </ul>
-<h3 id="killall">killall</h3>
+<h3 id="killall">killall<a class="headerlink" href="#killall" title="Permanent link">#</a></h3>
 <p>killコマンドと同じく、killallもプロセスを終了させることができるコマンドです。<br />
 killはプロセスIDでプロセスを指定するのに対し、killallは「プロセスの名前」を指定することができます。
 この場合、該当する名前のプロセスが“全て殺される”ことになります。</p>
@@ -6665,15 +6665,15 @@ killはプロセスIDでプロセスを指定するのに対し、killallは「�
 </tr>
 </tbody>
 </table>
-<h3 id="pkill">pkill</h3>
+<h3 id="pkill">pkill<a class="headerlink" href="#pkill" title="Permanent link">#</a></h3>
 <p>指定したパターンにマッチする名前のプロセスにシグナルを送るコマンド</p>
-<h3 id="_8">「&amp;」(バックグラウンド実行)</h3>
+<h3 id="_8">「&amp;」(バックグラウンド実行)<a class="headerlink" href="#_8" title="Permanent link">#</a></h3>
 <p>コマンドをシェル上で実行すると、通常フォアグラウンドで実行されます。
 コマンドをバックグラウンドで実行するには、コマンドラインの末尾に「&amp;」を付けて実行します。</p>
 <p>なお、バックグラウンドで動作している、または一時停止中のジョブはjobsコマンドで確認することができます。</p>
 <p>(例)「ping localhost &gt; ping.txt」コマンドをログアウト後もバックグラウンドで実行し続ける<br />
 * nohup ping localhost &gt; ping.txt &amp;</p>
-<h3 id="screen-tmux">screen / tmux</h3>
+<h3 id="screen-tmux">screen / tmux<a class="headerlink" href="#screen-tmux" title="Permanent link">#</a></h3>
 <ul>
 <li>Linuxはマルチユーザー、マルチタスクのOSであり、複数人で同時に接続して操作できるよう制御されています。</li>
 <li>それぞれの入力（キーボードやマウス）、出力（ディスプレイ）環境のことを「端末（またはターミナル：Terminal）」と呼びます。</li>
@@ -6684,7 +6684,7 @@ killはプロセスIDでプロセスを指定するのに対し、killallは「�
 <li>また、仮想端末制御プログラムを使うことで、開いている仮想端末をサスペンド状態で切り離し（デタッチ）、再度別の環境から仮想端末に接続する（アタッチ）、端末画面を分割して複数の仮想端末画面を同時に表示する事ができるなどのメリットがあります。</li>
 <li>仮想端末制御プログラムとして、screenやtmuxがあります。</li>
 </ul>
-<h2 id="_9">プロセスの実行優先度の変更</h2>
+<h2 id="_9">プロセスの実行優先度の変更<a class="headerlink" href="#_9" title="Permanent link">#</a></h2>
 <ul>
 <li>プロセスにはnice値という実行優先度が設定されています。</li>
 <li>優先度の高いプロセスにはCPUの使用時間が多く割り当てられます。</li>
@@ -6722,7 +6722,7 @@ killはプロセスIDでプロセスを指定するのに対し、killallは「�
 * 他のユーザのプロセスのnice値を変更する
 * nice値を下げる（優先度を上げる）
 * nice値に0より小さい値を設定する</p>
-<h2 id="_10">正規表現を使用してのテキストファイル検索</h2>
+<h2 id="_10">正規表現を使用してのテキストファイル検索<a class="headerlink" href="#_10" title="Permanent link">#</a></h2>
 <p>正規表現とは、文字列の特定のパターンを認識する為に使用する表現方法です。文字列の検索や置換などを行う際に利用します。
 正規表現には基本正規表現（BRE: Basic Regular Expression）と拡張正規表現（ERE: Extended Regular Expression）があります。</p>
 <table>
@@ -6813,7 +6813,7 @@ killはプロセスIDでプロセスを指定するのに対し、killallは「�
 </tr>
 </tbody>
 </table>
-<h3 id="grep">grep</h3>
+<h3 id="grep">grep<a class="headerlink" href="#grep" title="Permanent link">#</a></h3>
 <p>grepコマンドの書式と主なオプションは以下のとおりです。</p>
 <p>grep [オプション] 検索パターン [ファイル名]</p>
 <table>
@@ -6854,7 +6854,7 @@ killはプロセスIDでプロセスを指定するのに対し、killallは「�
 </tr>
 </tbody>
 </table>
-<h3 id="sed">sed</h3>
+<h3 id="sed">sed<a class="headerlink" href="#sed" title="Permanent link">#</a></h3>
 <ul>
 <li>ファイルや標準入力の内容を編集して表示するにはsedコマンドを利用 </li>
 <li>
@@ -6918,13 +6918,13 @@ killはプロセスIDでプロセスを指定するのに対し、killallは「�
 <li>(例)「test.txt」ファイル内の全ての「pingt」という文字列を「hoge」に置換し、行頭が「#」の行を削除して表示<br />
 <code>sed -e s/pingt/hoge/g -e /^#/d test.txt</code></li>
 </ul>
-<h2 id="_11">ファイルの基本的な編集</h2>
+<h2 id="_11">ファイルの基本的な編集<a class="headerlink" href="#_11" title="Permanent link">#</a></h2>
 <p>環境変数EDITORに使用したいエディタの起動コマンドを設定することで、デフォルトのエディタを変更できます。</p>
 <ul>
 <li>例）Emacsをデフォルトのエディタに設定する<br />
 <code>$ export EDITOR=/usr/bin/emacs</code></li>
 </ul>
-<h3 id="vi">カーソルおよび画面操作に関する主なviコマンド</h3>
+<h3 id="vi">カーソルおよび画面操作に関する主なviコマンド<a class="headerlink" href="#vi" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -6991,7 +6991,7 @@ killはプロセスIDでプロセスを指定するのに対し、killallは「�
 </tr>
 </tbody>
 </table>
-<h3 id="vivi">viエディタの終了とファイルの保存に関する主なviコマンド</h3>
+<h3 id="vivi">viエディタの終了とファイルの保存に関する主なviコマンド<a class="headerlink" href="#vivi" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -7026,7 +7026,7 @@ killはプロセスIDでプロセスを指定するのに対し、killallは「�
 </tr>
 </tbody>
 </table>
-<h3 id="vi_1">コマンドモードから入力モードに移行する際に使用する主なviコマンド</h3>
+<h3 id="vi_1">コマンドモードから入力モードに移行する際に使用する主なviコマンド<a class="headerlink" href="#vi_1" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -7061,7 +7061,7 @@ killはプロセスIDでプロセスを指定するのに対し、killallは「�
 </tr>
 </tbody>
 </table>
-<h3 id="vi_2">ファイルの編集に関する主なviコマンド</h3>
+<h3 id="vi_2">ファイルの編集に関する主なviコマンド<a class="headerlink" href="#vi_2" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -7108,7 +7108,7 @@ killはプロセスIDでプロセスを指定するのに対し、killallは「�
 </tr>
 </tbody>
 </table>
-<h3 id="vi_3">文字列の検索に関する主なviコマンド</h3>
+<h3 id="vi_3">文字列の検索に関する主なviコマンド<a class="headerlink" href="#vi_3" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -7135,7 +7135,7 @@ killはプロセスIDでプロセスを指定するのに対し、killallは「�
 </tr>
 </tbody>
 </table>
-<h3 id="vivi_1">viの設定に関する主なviコマンド</h3>
+<h3 id="vivi_1">viの設定に関する主なviコマンド<a class="headerlink" href="#vivi_1" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>

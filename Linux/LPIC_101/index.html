@@ -4859,14 +4859,14 @@
 
 
 
-<h1 id="101-sys-archit">101 Sys archit.</h1>
-<h2 id="_1">ハードウェア設定の決定と設定</h2>
-<h3 id="d-bus">D-Bus</h3>
+<h1 id="101-sys-archit">101 Sys archit.<a class="headerlink" href="#101-sys-archit" title="Permanent link">#</a></h1>
+<h2 id="_1">ハードウェア設定の決定と設定<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<h3 id="d-bus">D-Bus<a class="headerlink" href="#d-bus" title="Permanent link">#</a></h3>
 <ul>
 <li><strong>D-Bus</strong>（Desktop Bus）は、プログラム同士が情報を伝達するプロセス間通信機構のひとつ。</li>
 <li>Linuxでは<strong>dbus-daemon</strong>などがプロセス間通信の中継を行う。</li>
 </ul>
-<h3 id="modprobe">modprobe</h3>
+<h3 id="modprobe">modprobe<a class="headerlink" href="#modprobe" title="Permanent link">#</a></h3>
 <ul>
 <li><strong>modprobe</strong> は依存関係を考慮してカーネルモジュールをロードまたはアンロードするコマンド。</li>
 <li><strong>modprobe</strong>の設定ファイルは「<strong>/etc/modprobe.d</strong>/」ディレクトリ配下の <strong>.conf</strong> の拡張子ファイル。</li>
@@ -4892,7 +4892,7 @@
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>-rw-r--r-- 1 root root  347 Mar 12  2020 iwlwifi.conf
 </code></pre></div></li>
 </ul>
-<h3 id="usb_device_class">USB_device_class</h3>
+<h3 id="usb_device_class">USB_device_class<a class="headerlink" href="#usb_device_class" title="Permanent link">#</a></h3>
 <ul>
 <li>USBデバイスはいくつかのデバイスクラス(種類)に分かれている</li>
 <li>それぞれのデバイスクラスにはクラスドライバという汎用ドライバが用意されている。</li>
@@ -4923,7 +4923,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="udevuserspace_device_management">udev(Userspace_DEVice_management)</h3>
+<h3 id="udevuserspace_device_management">udev(Userspace_DEVice_management)<a class="headerlink" href="#udevuserspace_device_management" title="Permanent link">#</a></h3>
 <ul>
 <li>ホットプラグデバイスの制御は<strong>udev</strong>によって行われる。</li>
 <li><strong>udev</strong>が使用するデバイス設定情報ファイルは「<strong>/etc/udev/rules.d</strong>」に配下に格納されている。</li>
@@ -4937,7 +4937,7 @@
 <li>システムが起動している状態でもデバイスの差し替えができるデバイスのことです。これらはプラグアンドプレイデバイスとも呼ばれます。</li>
 <li>ホットプラグデバイスにはUSBやPCカード(PCMCIA)、IEEE1394などがあります。</li>
 </ul>
-<h3 id="mass_storage_device">mass_storage_device</h3>
+<h3 id="mass_storage_device">mass_storage_device<a class="headerlink" href="#mass_storage_device" title="Permanent link">#</a></h3>
 <ul>
 <li>大量のデータのための記憶装置を「大容量記憶装置（mass storage device）」といいます。OSをインストールして起動ディスクとして使用したり、大容量のデータを保管するために使用</li>
 <li>大容量記憶装置の主な種類は以下</li>
@@ -4945,16 +4945,16 @@
 <li><strong>USBフラッシュドライブ</strong>（いわゆるUSBメモリ）</li>
 <li><strong>SSD</strong>（Solid State Drive）</li>
 </ul>
-<h2 id="_2">設定ファイル・ディレクトリ</h2>
-<h3 id="home">homeディレクトリ</h3>
+<h2 id="_2">設定ファイル・ディレクトリ<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<h3 id="home">homeディレクトリ<a class="headerlink" href="#home" title="Permanent link">#</a></h3>
 <p>一般ユーザのホームディレクトリが格納されるディレクト</p>
-<h3 id="dev">devディレクトリ</h3>
+<h3 id="dev">devディレクトリ<a class="headerlink" href="#dev" title="Permanent link">#</a></h3>
 <p>ハードウェアへのアクセスを抽象化したファイル「デバイスファイル」が格納されているディレクトリ</p>
-<h3 id="etc">etcディレクトリ</h3>
+<h3 id="etc">etcディレクトリ<a class="headerlink" href="#etc" title="Permanent link">#</a></h3>
 <p>システムの設定ファイルなどが格納されているディレクトリ</p>
-<h3 id="sbin">sbinディレクトリ</h3>
+<h3 id="sbin">sbinディレクトリ<a class="headerlink" href="#sbin" title="Permanent link">#</a></h3>
 <p>管理用コマンドが格納されているディレクトリ</p>
-<h3 id="proc">procディレクトリ</h3>
+<h3 id="proc">procディレクトリ<a class="headerlink" href="#proc" title="Permanent link">#</a></h3>
 <ul>
 <li>起動中のプロセスやカーネルが認識しているハードウェアおよびシステムリソースなどの情報が格納されているディレクトリ</li>
 <li>以下は「/proc」ディレクトリ配下にある主なファイル。</li>
@@ -5005,7 +5005,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="lspci">lspciコマンド</h3>
+<h3 id="lspci">lspciコマンド<a class="headerlink" href="#lspci" title="Permanent link">#</a></h3>
 <ul>
 <li>lspciコマンド は<strong>PCI</strong>デバイスに関する情報を表示します。</li>
 <li>PCI(Peripheral Components Interconnect)デバイスとはPCIバスに接続されたデバイスのことです。</li>
@@ -5149,7 +5149,7 @@
 </code></pre></div></p>
 </li>
 </ul>
-<h3 id="lsmod">lsmodコマンド</h3>
+<h3 id="lsmod">lsmodコマンド<a class="headerlink" href="#lsmod" title="Permanent link">#</a></h3>
 <p>ロードされているカーネルモジュールに関する情報を表示する。</p>
 <ul>
 <li>lsmod 表示例
@@ -5166,7 +5166,7 @@
 <a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>hid                   135168  2 usbhid,hid_generic
 </code></pre></div></li>
 </ul>
-<h3 id="lsusb">lsusb</h3>
+<h3 id="lsusb">lsusb<a class="headerlink" href="#lsusb" title="Permanent link">#</a></h3>
 <p>USBデバイスに関する情報を表示します。</p>
 <ul>
 <li>lsusb 表示例
@@ -5178,12 +5178,12 @@
 <a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>Bus 002 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
 </code></pre></div></li>
 </ul>
-<h3 id="procbususbdevices">/proc/bus/usb/devicesファイル</h3>
+<h3 id="procbususbdevices">/proc/bus/usb/devicesファイル<a class="headerlink" href="#procbususbdevices" title="Permanent link">#</a></h3>
 <ul>
 <li>接続されたUSBデバイスの情報は「/proc/bus/usb/devices」ファイルで確認できる</li>
 <li><strong>lsusb</strong>コマンドでも確認できる</li>
 </ul>
-<h3 id="procmeminfo">/proc/meminfoファイル</h3>
+<h3 id="procmeminfo">/proc/meminfoファイル<a class="headerlink" href="#procmeminfo" title="Permanent link">#</a></h3>
 <ul>
 <li>メモリの使用状況は「<strong>/proc/meminfo</strong>」ファイルで確認できる</li>
 <li>proc/meminfoファイル表示例
@@ -5241,7 +5241,7 @@
 <a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a>DirectMap1G:     2097152 kB
 </code></pre></div></li>
 </ul>
-<h3 id="procscsiscsi">/proc/scsi/scsiファイル</h3>
+<h3 id="procscsiscsi">/proc/scsi/scsiファイル<a class="headerlink" href="#procscsiscsi" title="Permanent link">#</a></h3>
 <ul>
 <li>SCSIデバイスに関する情報は「/proc/scsi/scsi」ファイルで確認できる</li>
 <li><code>/proc/scsi/scsi</code>ファイル表示例
@@ -5257,7 +5257,7 @@
 <a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>  Type:   CD-ROM                           ANSI  SCSI revision: 05
 </code></pre></div></li>
 </ul>
-<h3 id="procdma">/proc/dmaファイル</h3>
+<h3 id="procdma">/proc/dmaファイル<a class="headerlink" href="#procdma" title="Permanent link">#</a></h3>
 <ul>
 <li>デバイスが使用中のDMAチャネルに関する情報は「/proc/dma」ファイルで確認できる。</li>
 <li><strong>DMA</strong>とは、CPUを介することなくメインメモリと周辺機器の間で直接的に情報転送を行う方式のこと。</li>
@@ -5267,7 +5267,7 @@
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a> 4: cascade
 </code></pre></div></li>
 </ul>
-<h3 id="procioports">/proc/ioportsファイル</h3>
+<h3 id="procioports">/proc/ioportsファイル<a class="headerlink" href="#procioports" title="Permanent link">#</a></h3>
 <ul>
 <li>I/Oポートアドレスの情報は「/proc/ioports」ファイルで確認できる。</li>
 <li>I/Oポートアドレスとは周辺機器(デバイス)とCPUがデータをやり取りする際に使用する16ビットのアドレスのこと</li>
@@ -5340,7 +5340,7 @@
 <a id="__codelineno-7-65" name="__codelineno-7-65" href="#__codelineno-7-65"></a>  fce0-fcff : pnp 00:06
 </code></pre></div></li>
 </ul>
-<h3 id="procinterrupts">/proc/interruptsファイル</h3>
+<h3 id="procinterrupts">/proc/interruptsファイル<a class="headerlink" href="#procinterrupts" title="Permanent link">#</a></h3>
 <ul>
 <li><strong>IRQ</strong>に関する情報は「/proc/interrupts」ファイルで確認できます。</li>
 <li>IRQ(Interrupt ReQuest)とは、マウスやキーボードなどの周辺機器(デバイス)からCPUへの割り込み要求のこと。</li>
@@ -5415,7 +5415,7 @@
 <a id="__codelineno-8-68" name="__codelineno-8-68" href="#__codelineno-8-68"></a>root@ubuntu:/# 
 </code></pre></div></li>
 </ul>
-<h3 id="proccmdline">/proc/cmdlineファイル</h3>
+<h3 id="proccmdline">/proc/cmdlineファイル<a class="headerlink" href="#proccmdline" title="Permanent link">#</a></h3>
 <ul>
 <li>ブートローダからカーネルに渡されたパラメータは「/proc/cmdline」ファイルで確認できる  </li>
 <li>表示例
@@ -5423,8 +5423,8 @@
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>BOOT_IMAGE=/boot/vmlinuz-5.8.0-53-generic root=UUID=ff7068f8-21a9-4edc-85be-3e49311ec193 ro find_preseed=/preseed.cfg auto noprompt priority=critical locale=en_US quiet
 </code></pre></div></li>
 </ul>
-<h2 id="_3">システムの起動</h2>
-<h3 id="systemd">systemd</h3>
+<h2 id="_3">システムの起動<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
+<h3 id="systemd">systemd<a class="headerlink" href="#systemd" title="Permanent link">#</a></h3>
 <ul>
 <li><strong>systemd</strong>は<strong>SysVinit</strong>を置き換える新しいinitの仕組み。</li>
 <li>systemdでは以下のデーモンプロセスが連携して動作。</li>
@@ -5615,7 +5615,7 @@ systemd.unit パラメータの値に起動時のターゲットを指定しま�
 <a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>root@ubuntu:/etc/systemd# 
 </code></pre></div></li>
 </ul>
-<h3 id="systemctl">systemctlコマンド</h3>
+<h3 id="systemctl">systemctlコマンド<a class="headerlink" href="#systemctl" title="Permanent link">#</a></h3>
 <ul>
 <li>各サービスの稼働状況や起動設定を管理するにはsystemctlコマンドを使用</li>
 <li>systemctlコマンドの書式は以下のとおりです。</li>
@@ -5724,7 +5724,7 @@ systemd.unit パラメータの値に起動時のターゲットを指定しま�
 </ul>
 </li>
 </ul>
-<h4 id="systemctl_list-unit-files">systemctl_list-unit-files</h4>
+<h4 id="systemctl_list-unit-files">systemctl_list-unit-files<a class="headerlink" href="#systemctl_list-unit-files" title="Permanent link">#</a></h4>
 <p>利用可能なユニットの一覧を表示するには<strong>list-unit-files</strong>サブコマンドを使用</p>
 <ul>
 <li>表示例
@@ -5747,7 +5747,7 @@ systemd.unit パラメータの値に起動時のターゲットを指定しま�
 <a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>358 unit files listed.
 </code></pre></div></li>
 </ul>
-<h3 id="journalctl">journalctlコマンド</h3>
+<h3 id="journalctl">journalctlコマンド<a class="headerlink" href="#journalctl" title="Permanent link">#</a></h3>
 <ul>
 <li><strong>system</strong>dの動作するシステムでは<strong>systemd-journald</strong>デーモンを動作させ、ログの一元管理を行います。</li>
 <li><strong>systemd-journaldはsystemd</strong>から起動したプロセスの標準出力やsyslogへのログメッセージを<strong>バイナリ形式</strong>で記録します。</li>
@@ -5783,7 +5783,7 @@ systemd.unit パラメータの値に起動時のターゲットを指定しま�
 </code></pre></div></p>
 </li>
 </ul>
-<h3 id="dmesg">dmesgコマンド</h3>
+<h3 id="dmesg">dmesgコマンド<a class="headerlink" href="#dmesg" title="Permanent link">#</a></h3>
 <p>起動時にカーネルが出力したメッセージは、後から<strong>dmesg</strong>コマンドで確認できます。</p>
 <ul>
 <li>dmesg表示例
@@ -5805,7 +5805,7 @@ systemd.unit パラメータの値に起動時のターゲットを指定しま�
 <a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>[  110.666083] systemd-rc-local-generator[3025]: /etc/rc.local is not marked executable, skipping.
 </code></pre></div></li>
 </ul>
-<h3 id="dmesg-clear">dmesg --clear</h3>
+<h3 id="dmesg-clear">dmesg --clear<a class="headerlink" href="#dmesg-clear" title="Permanent link">#</a></h3>
 <p><strong>dmesg</strong>コマンドはカーネルが出力するメッセージが格納されるリングバッファの内容を出力します。
 リングバッファはマシンの再起動やシャットダウンによってリセットされますが、
 運用中に一杯になると古い情報から上書きされていきます。手動でリングバッファの内容をクリアするには、
@@ -5815,7 +5815,7 @@ rootユーザで「<strong>dmesg --clear</strong>」を実行します。</p>
 <a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>root@ubuntu:/home/omron# dmesg
 <a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>root@ubuntu:/home/omron#  # clear されたため表示されない
 </code></pre></div>
-<h3 id="sysvinit">SysVinit</h3>
+<h3 id="sysvinit">SysVinit<a class="headerlink" href="#sysvinit" title="Permanent link">#</a></h3>
 <ul>
 <li>SysVinitによる一般的な起動順序は以下の通り</li>
 <li>initが<strong>/etc/inittab</strong>ファイルを読み込む</li>
@@ -5865,7 +5865,7 @@ rootユーザで「<strong>dmesg --clear</strong>」を実行します。</p>
 </ul>
 </li>
 </ul>
-<h3 id="runlevel">runlevelコマンド</h3>
+<h3 id="runlevel">runlevelコマンド<a class="headerlink" href="#runlevel" title="Permanent link">#</a></h3>
 <ul>
 <li>現在および1つ前のランレベルを調べることができるコマンド</li>
 <li>表示例
@@ -5873,7 +5873,7 @@ rootユーザで「<strong>dmesg --clear</strong>」を実行します。</p>
 <a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>N 5
 </code></pre></div></li>
 </ul>
-<h3 id="upstart">Upstart</h3>
+<h3 id="upstart">Upstart<a class="headerlink" href="#upstart" title="Permanent link">#</a></h3>
 <ul>
 <li><strong>Upstart</strong>はSysVinitを改善した新しい仕組みです。Red Hat Enterprise Linux(RHEL)やUbuntuに採用されていましたが、現在は<strong>systemd</strong>への置き換えが進められています。</li>
 <li><strong>Upstart</strong>ではバックグラウンドで動作するデーモンプロセス（サービス）や、一度だけ実行させたい処理（タスク）を「<strong>ジョブ</strong>」と呼び、ジョブ単位で起動処理の管理を行います。</li>
@@ -5885,14 +5885,14 @@ rootユーザで「<strong>dmesg --clear</strong>」を実行します。</p>
 <li>ただし、UpstartはSysVinitと互換性があるため、「<strong>/etc/inittab</strong>」ファイルを新規に作成し、先述のSysVinitの場合と同じように記述することで
   デフォルトのランレベルを設定することもできます。その場合、<strong>「/etc/inittab」ファイルのランレベルが優先されます</strong>。</li>
 </ul>
-<h2 id="log">log</h2>
-<h3 id="varlogmessages">/var/log/messagesファイル</h3>
+<h2 id="log">log<a class="headerlink" href="#log" title="Permanent link">#</a></h2>
+<h3 id="varlogmessages">/var/log/messagesファイル<a class="headerlink" href="#varlogmessages" title="Permanent link">#</a></h3>
 <p>カーネルのログが記録されるなど、Linuxでメインで使用されるログファイル</p>
-<h3 id="varlogsecure">/var/log/secureファイル</h3>
+<h3 id="varlogsecure">/var/log/secureファイル<a class="headerlink" href="#varlogsecure" title="Permanent link">#</a></h3>
 <p>セキュリティに関するログが記録されるファイル</p>
-<h3 id="varlogmaillog">/var/log/maillogファイル</h3>
+<h3 id="varlogmaillog">/var/log/maillogファイル<a class="headerlink" href="#varlogmaillog" title="Permanent link">#</a></h3>
 <p>メールに関するログが記録される</p>
-<h2 id="linux">Linuxの起動順序</h2>
+<h2 id="linux">Linuxの起動順序<a class="headerlink" href="#linux" title="Permanent link">#</a></h2>
 <ol>
 <li>電源投入</li>
 <li>BIOS/UEFIの起動</li>
@@ -5902,8 +5902,8 @@ rootユーザで「<strong>dmesg --clear</strong>」を実行します。</p>
 <li>initramfs（初期RAMディスク）の実行</li>
 <li>initの実行（SysVinit,Systemd..）</li>
 </ol>
-<h3 id="_4">用語解説</h3>
-<h4 id="biosbasic_io_system">BIOS（Basic_I/O_System）</h4>
+<h3 id="_4">用語解説<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
+<h4 id="biosbasic_io_system">BIOS（Basic_I/O_System）<a class="headerlink" href="#biosbasic_io_system" title="Permanent link">#</a></h4>
 <div class="highlight"><pre><span></span><code>最もハードウェアに近い部分を司るシステムで、物理的なハードウェア（マザーボード）上に書き込まれています。
 コンピュータの電源を入れると、まずBIOSが起動し、記憶装置（HDD）等に関して最低限の認識をして起動デバイスの優先順位を決定します。
 その後、優先順位に従って各デバイスの先頭セクタにある**MBR**（ブート用の特殊領域。ブートローダが格納されている）を読み込み、
@@ -5915,14 +5915,14 @@ rootユーザで「<strong>dmesg --clear</strong>」を実行します。</p>
 BIOSが古い場合、大容量の記憶装置(HDD)を正常に認識できない(実際より少ない容量を認識するなど)場合があります。
 BIOSをアップデートすることで、この問題を解消できることがあります。
 </code></pre></div>
-<h4 id="_5">ブートローダ</h4>
+<h4 id="_5">ブートローダ<a class="headerlink" href="#_5" title="Permanent link">#</a></h4>
 <div class="highlight"><pre><span></span><code>Linuxシステムでは**GRUB**が該当します。
 MBRに格納されている第一段階部分と、記憶装置内の別の場所に格納されている第二段階部分があります。
 このように分かれている理由は、MBRには厳しいサイズ制限があるためです。
 ブートローダは記憶装置内のカーネルをロードし、カーネルに制御を移す役割を果たします。
 第一段階のブートローダはMBRの先頭**446**バイトの領域にインストールされます。
 </code></pre></div>
-<h4 id="init">init</h4>
+<h4 id="init">init<a class="headerlink" href="#init" title="Permanent link">#</a></h4>
 <div class="highlight"><pre><span></span><code>最初に起動されるプロセスで、PID（プロセス ID）は必ず&lt;font color=&#39;Red&#39;&gt;**1**です。
 「SysVinit」と呼ばれる従来のinitプログラムを採用しているシステムでは、「/sbin/init」が起動されます。
 initプロセスは設定ファイル「/etc/inittab」の記述に基づいて、自動起動するべきプロセスを立ちあげるなど、アプリケーションレベルの初期化を行います。
@@ -5930,7 +5930,7 @@ initプロセスは設定ファイル「/etc/inittab」の記述に基づいて�
 なお、最近のシステムではinitプログラムとして、初期化処理を高速化した**Upstart**やs**ystemd**を採用している場合があります。
 その場合は基本的に「**/etc/inittab**」ファイルは使用されません。
 </code></pre></div>
-<h4 id="uefi">UEFI</h4>
+<h4 id="uefi">UEFI<a class="headerlink" href="#uefi" title="Permanent link">#</a></h4>
 <div class="highlight"><pre><span></span><code>**UEFI**（Unified Extensible Firmware Interface）は、IntelがBIOS（Basic I/O System）を置き換えるために考案したEFIの統一仕様です。
 GUIでの操作をサポートしていたり、ファームウェアが使用可能なメモリ量の上限が緩和されているなど、BIOSよりも高機能化しています。  
 **ESP**（EFIシステムパーティション）はUEFIシステムにおいて、物理的なマシンを起動し、ファームウエアが読み込まれた後、
@@ -5942,7 +5942,7 @@ GPTを使用する必要があります。ただし、Linuxの場合GRUB2 ブー
 できればGPT形式のハードディスクからの起動は可能です。  
 ※ZB（ゼタバイト）とは、1GB（ギガバイト）x 1000（テラ） x 1000（ペタ）x 1000（エクサ）x 1000（ゼタ）のサイズのことです。
 </code></pre></div>
-<h4 id="_6">カーネル</h4>
+<h4 id="_6">カーネル<a class="headerlink" href="#_6" title="Permanent link">#</a></h4>
 <div class="highlight"><pre><span></span><code>カーネルは起動されると、高度にハードウェアを認識・制御し、ルートファイルシステムのマウントなど様々な初期化処理を行います。  
 ブートローダはカーネルと初期RAMディスク（**initramfs**）の内容をメモリ上に展開し、カーネルはメモリ上に展開された初期RAMディスク内の、
 </code></pre></div>
@@ -5950,7 +5950,7 @@ GPTを使用する必要があります。ただし、Linuxの場合GRUB2 ブー
     特別な最初のプロセスをルートファイルシステムから起動します。<br />
     「<strong>SysVinit</strong>」と呼ばれる従来のinitプログラムを採用しているシステムでは、initプロセスとして「<strong>/sbin/init</strong>」が起動されます。
     なお、カーネルはブートローダの次に起動されます。</p>
-<h4 id="ram">初期RAMディスク</h4>
+<h4 id="ram">初期RAMディスク<a class="headerlink" href="#ram" title="Permanent link">#</a></h4>
 <div class="highlight"><pre><span></span><code>ブートローダはカーネルと初期RAMディスク（**initramfs**）の内容をメモリ上に展開し、カーネルはメモリ上に展開された
 初期RAMディスク内の、ファイルシステムへアクセスするために必要なドライバやスクリプトを使用してルートファイルシステムを
 マウントします。その後、**init**という特別な最初のプロセスを**ルートファイルシステム**から起動します。
@@ -6028,15 +6028,15 @@ GPTを使用する必要があります。ただし、Linuxの場合GRUB2 ブー
             initrd  /boot/initrd.img-5.11.0-38-generic
     ```
 </code></pre></div>
-<h4 id="acpi">ACPI</h4>
+<h4 id="acpi">ACPI<a class="headerlink" href="#acpi" title="Permanent link">#</a></h4>
 <ul>
 <li>Advanced Configuration and Power Interface の略</li>
 <li>コンピュータの電源管理や構成に関する規格</li>
 <li>OS上でシャットダウンや再起動などを行う際の命令は、<strong>ACPIイベント</strong>として通知</li>
 <li><strong>acpid</strong>デーモンはACPIイベントを監視し、イベントに対応する処理を実行</li>
 </ul>
-<h2 id="_7">ランレベル/ブートターゲットの変更</h2>
-<h3 id="_8">ランレベル</h3>
+<h2 id="_7">ランレベル/ブートターゲットの変更<a class="headerlink" href="#_7" title="Permanent link">#</a></h2>
+<h3 id="_8">ランレベル<a class="headerlink" href="#_8" title="Permanent link">#</a></h3>
 <ul>
 <li>Linuxではランレベルと呼ばれるいくつかの動作モードがあります。</li>
 <li>ランレベル毎にどのようなサービスを起動するか、起動しないかを決定できる。</li>
@@ -6119,7 +6119,7 @@ GPTを使用する必要があります。ただし、Linuxの場合GRUB2 ブー
 <p class="admonition-title">Tip</p>
 <p>シンボリックリンクは上書きできないので、変更する際には事前に削除する必要があります。</p>
 </div>
-<h3 id="shutdown">shutdown</h3>
+<h3 id="shutdown">shutdown<a class="headerlink" href="#shutdown" title="Permanent link">#</a></h3>
 <ul>
 <li>shutdownコマンドの書式と主なオプションは以下のとおり</li>
 <li><code>shutdown [オプション] 時間 [メッセージ]</code></li>
@@ -6159,14 +6159,14 @@ GPTを使用する必要があります。ただし、Linuxの場合GRUB2 ブー
 <p>メッセージを指定する場合は以下のようにします。<br />
 例）メッセージを表示し、5分後にシステムを停止する場合<br />
 <code>shutdown -h +5 "Shutting down in 5 minutes"</code></p>
-<h3 id="_9">再起動関連コマンド</h3>
+<h3 id="_9">再起動関連コマンド<a class="headerlink" href="#_9" title="Permanent link">#</a></h3>
 <ol>
 <li><strong>telinit 6</strong></li>
 <li><strong>shutdown -r now</strong></li>
 <li><strong>systemctl reboot</strong></li>
 <li><strong>systemctl start reboot.target</strong></li>
 </ol>
-<h3 id="wall">wallコマンド</h3>
+<h3 id="wall">wallコマンド<a class="headerlink" href="#wall" title="Permanent link">#</a></h3>
 <p>ログイン中の全ユーザーにメッセージを送信するコマンド</p>
 
               

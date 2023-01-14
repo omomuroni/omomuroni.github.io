@@ -4391,7 +4391,7 @@
 
   <h1>Class</h1>
 
-<h3 id="class-diagrams">Class diagrams</h3>
+<h3 id="class-diagrams">Class diagrams<a class="headerlink" href="#class-diagrams" title="Permanent link">#</a></h3>
 <blockquote>
 <p>「ソフトウェアエンジニアリングでは、統一モデリング言語（UML）のクラス図は、システムのクラス、その属性、操作（またはメソッド）、およびそれらの間の関係を示すことによってシステムの構造を記述する一種の静的構造図です。 オブジェクト。」 ウィキペディア</p>
 </blockquote>
@@ -4440,7 +4440,7 @@
 <a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>          +run()
 <a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>      }
 </code></pre></div>
-<h3 id="syntax">Syntax</h3>
+<h3 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link">#</a></h3>
 <p>UMLは、属性やメソッドなどのクラスメンバー、およびそれらに関する追加情報を表すメカニズムを提供します。 図のクラスの1つのインスタンスには、次の3つのコンパートメントが含まれています。</p>
 <ul>
 <li>上部のコンパートメントには、クラスの名前が含まれています。 太字で中央に印刷され、最初の文字は大文字になります。 また、クラスの性質を説明するオプションの注釈テキストが含まれる場合もあります。</li>
@@ -4460,7 +4460,7 @@
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    BankAccount : +deposit(amount)
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    BankAccount : +withdrawl(amount)
 </code></pre></div>
-<h3 id="3-define-a-class">3. Define a class</h3>
+<h3 id="3-define-a-class">3. Define a class<a class="headerlink" href="#3-define-a-class" title="Permanent link">#</a></h3>
 <p>クラスを定義するには、次の2つの方法があります。</p>
 <ul>
 <li>クラスAnimalのようなキーワードクラスを使用してクラスを明示的に定義します。 これはAnimalクラスを定義します</li>
@@ -4474,14 +4474,14 @@
     class Animal
     Vehicle &lt;|-- Car</code></pre>
 <p>命名規則：クラス名は、英数字（Unicodeを使用可能）とアンダースコア文字で構成する必要があります。</p>
-<h3 id="4-1-defining-members-of-a-class">4-1. Defining Members of a class</h3>
+<h3 id="4-1-defining-members-of-a-class">4-1. Defining Members of a class<a class="headerlink" href="#4-1-defining-members-of-a-class" title="Permanent link">#</a></h3>
 <p>UMLは、属性やメソッドなどのクラスメンバー、およびそれらに関する追加情報を表すメカニズムを提供します。</p>
 <p>Mermaidは、括弧（）が存在するかどうかに基づいて、属性と関数/メソッドを区別します。 （）が付いているものは関数/メソッドとして扱われ、その他は属性として扱われます。  </p>
 <p>クラスのメンバーを定義する方法は2つあり、メンバーの定義に使用される構文に関係なく、出力は同じです。 2つの異なる方法は次のとおりです。  </p>
 <ul>
 <li>:(コロン）の後にメンバー名を使用してクラスのメンバーを関連付けます。これは、一度に1つのメンバーを定義するのに役立ちます。</li>
 </ul>
-<h4 id="example">example</h4>
+<h4 id="example">example<a class="headerlink" href="#example" title="Permanent link">#</a></h4>
 <pre class="mermaid"><code>classDiagram
 
     class BankAccount
@@ -4498,7 +4498,7 @@
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        BankAccount : +deposit(amount)
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        BankAccount : +withdrawal(amount)
 </code></pre></div>
-<h3 id="4-2-defining-members-of-a-class">4-2. Defining Members of a class</h3>
+<h3 id="4-2-defining-members-of-a-class">4-2. Defining Members of a class<a class="headerlink" href="#4-2-defining-members-of-a-class" title="Permanent link">#</a></h3>
 <p>Defining Members of a class<br />
 * {}角かっこを使用してクラスのメンバーを関連付けます。ここで、メンバーは中かっこでグループ化されます。 一度に複数のメンバーを定義するのに適しています。 </p>
 <pre class="mermaid"><code>classDiagram
@@ -4519,7 +4519,7 @@
 <a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    +withdrawl(amount)
 <a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>}
 </code></pre></div>
-<h3 id="4-3-defining-members-of-a-class-return-type">4-3. Defining Members of a class Return Type</h3>
+<h3 id="4-3-defining-members-of-a-class-return-type">4-3. Defining Members of a class Return Type<a class="headerlink" href="#4-3-defining-members-of-a-class-return-type" title="Permanent link">#</a></h3>
 <p>オプションで、メソッド定義と戻りタイプの例の返されるデータ型（注：最後の間にスペースが必要です）でメソッド/関数定義を終了できます。</p>
 <pre class="mermaid"><code>classDiagram
 
@@ -4539,7 +4539,7 @@ class BankAccount{
 <a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    +withdrawl(amount) int
 <a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>}
 </code></pre></div>
-<h3 id="4-4-defining-members-of-a-class-generic-types">4-4. Defining Members of a class Generic Types</h3>
+<h3 id="4-4-defining-members-of-a-class-generic-types">4-4. Defining Members of a class Generic Types<a class="headerlink" href="#4-4-defining-members-of-a-class-generic-types" title="Permanent link">#</a></h3>
 <p>メンバーは、フィールド、パラメーター、および戻り型のList <int>などのジェネリック型を使用して、型を〜（チルダ）で囲むことによって定義できます。 注：ネストされた型宣言（List <List \<int >>など）は現在サポートされていません</p>
 <p>これは、次のいずれかのクラス定義メソッドの一部として実行できます。</p>
 <pre class="mermaid"><code>classDiagram
@@ -4566,7 +4566,7 @@ Square : +getMessages() List~string~
 <a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>Square : +setMessages(List~string~ messages)
 <a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>Square : +getMessages() List~string~
 </code></pre></div>
-<h3 id="4-5-defining-members-of-a-class-generic-return-type">4-5. Defining Members of a class Generic Return Type</h3>
+<h3 id="4-5-defining-members-of-a-class-generic-return-type">4-5. Defining Members of a class Generic Return Type<a class="headerlink" href="#4-5-defining-members-of-a-class-generic-return-type" title="Permanent link">#</a></h3>
 <ul>
 <li>
 <p>Return Type
@@ -4590,7 +4590,7 @@ Square : +getMessages() List~string~
 <li>\$ Static e.g.: someStaticMethod()$</li>
 </ul>
 </blockquote>
-<h3 id="5-1-defining-relationship">5-1. Defining Relationship</h3>
+<h3 id="5-1-defining-relationship">5-1. Defining Relationship<a class="headerlink" href="#5-1-defining-relationship" title="Permanent link">#</a></h3>
 <p>Relationshipとは、クラス図とオブジェクト図に見られる特定のタイプの論理接続をカバーする一般的な用語です。</p>
 <blockquote>
 <p>[classA][Arrow][ClassB]:LabelText</p>
@@ -4658,7 +4658,7 @@ classO .. classP
 <a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>classM &lt;|.. classN
 <a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>classO .. classP
 </code></pre></div>
-<h3 id="5-2-defining-relationship">5-2. Defining Relationship</h3>
+<h3 id="5-2-defining-relationship">5-2. Defining Relationship<a class="headerlink" href="#5-2-defining-relationship" title="Permanent link">#</a></h3>
 <p>ラベルを使用して、2つのクラス間の関係の性質を説明できます。 また、矢印は反対方向にも使用できます。</p>
 <pre class="mermaid"><code>classDiagram
 classA --|&gt; classB : Inheritance
@@ -4677,7 +4677,7 @@ classM ..|&gt; classN : Realization</code></pre>
 <a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>classK ..&gt; classL : Dependency
 <a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>classM ..|&gt; classN : Realization
 </code></pre></div>
-<h3 id="6-labels-on-relations">6. Labels on Relations</h3>
+<h3 id="6-labels-on-relations">6. Labels on Relations<a class="headerlink" href="#6-labels-on-relations" title="Permanent link">#</a></h3>
 <p>リレーションにラベルテキストを追加することができます。</p>
 <ul>
 <li>syntax
@@ -4692,7 +4692,7 @@ classE o-- classF : association</code></pre>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>classC *-- classD : composition
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>classE o-- classF : association
 </code></pre></div>
-<h3 id="7-cardinality-multiplicity-on-relations">7. Cardinality Multiplicity on relations</h3>
+<h3 id="7-cardinality-multiplicity-on-relations">7. Cardinality Multiplicity on relations<a class="headerlink" href="#7-cardinality-multiplicity-on-relations" title="Permanent link">#</a></h3>
 <p>クラス図の多重度またはカーディナリティは、あるクラスのインスタンスが他のクラスの1つのインスタンスにリンクされている数を示します。 たとえば、1つの会社に1人以上の従業員がいますが、各従業員は1つの会社でしか働いていません。</p>
 <p>多重度表記は、関連付けの終わり近くに配置されます。</p>
 <p>さまざまなカーディナリティオプションは次のとおりです。</p>
@@ -4719,7 +4719,7 @@ classE o-- classF : association</code></pre>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    Student &quot;1&quot; --&gt; &quot;1..*&quot; Course
 <a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    Galaxy --&gt; &quot;many&quot; Star : Contains
 </code></pre></div>
-<h3 id="8-annotations-on-classes">8. Annotations on classes</h3>
+<h3 id="8-annotations-on-classes">8. Annotations on classes<a class="headerlink" href="#8-annotations-on-classes" title="Permanent link">#</a></h3>
 <p>Annotations on classes
 クラスのメタデータのような特定のマーカーテキストでクラスに注釈を付けて、その性質を明確に示すことができます。 一般的な注釈の例は次のとおりです。</p>
 <ul>
@@ -4729,7 +4729,7 @@ classE o-- classF : association</code></pre>
 <li>\&lt;\<enumeration>&gt; To represent an enum</li>
 </ul>
 <p>注釈は、開始&lt;&lt; and closing &gt;&gt;内で定義されます。 クラスに注釈を追加する方法は2つあり、使用される構文に関係なく、出力は同じになります。 2つの方法は次のとおりです。</p>
-<h4 id="1">1. クラスが定義された後の別の行。</h4>
+<h4 id="1">1. クラスが定義された後の別の行。<a class="headerlink" href="#1" title="Permanent link">#</a></h4>
 <p><pre class="mermaid"><code>classDiagram
 class Shape
 &lt;&lt;interface&gt;&gt; Shape
@@ -4739,7 +4739,7 @@ code
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>class Shape
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>&lt;&lt;interface&gt;&gt; Shape
 </code></pre></div></p>
-<h4 id="2">2.クラスの注釈</h4>
+<h4 id="2">2.クラスの注釈<a class="headerlink" href="#2" title="Permanent link">#</a></h4>
 <pre class="mermaid"><code>classDiagram
 class Shape{
     &lt;&lt;interface&gt;&gt;
@@ -4770,7 +4770,7 @@ class Color{
 <a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>    BLACK
 <a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>}
 </code></pre></div></p>
-<h3 id="9-interaction">9. Interaction</h3>
+<h3 id="9-interaction">9. Interaction<a class="headerlink" href="#9-interaction" title="Permanent link">#</a></h3>
 <p>クリックイベントをノードにバインドすることができます。クリックは、javascriptコールバック、または新しいブラウザタブで開かれるリンクのいずれかにつながる可能性があります。 注：この機能は、securityLevel = 'strict'を使用すると無効になり、securityLevel = 'loose'を使用すると有効になります。</p>
 <p>すべてのクラスが宣言された後、これらのアクションを別の行で定義します。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>action className &quot;reference&quot; &quot;tooltip&quot;
@@ -4784,7 +4784,7 @@ class Color{
 <li>（オプション）ツールチップは、要素にカーソルを合わせたときに表示される文字列です（注：ツールチップのスタイルは、クラス.jellyTooltipによって設定されます）。</li>
 <li>注：コールバック関数は、nodeIdをパラメーターとして使用して呼び出されます。</li>
 </ul>
-<h4 id="example_1">example</h4>
+<h4 id="example_1">example<a class="headerlink" href="#example_1" title="Permanent link">#</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>URL Link:
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>classDiagram
@@ -4807,7 +4807,7 @@ class Color{
 <a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>    }
 <a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a>&lt;script&gt;
 </code></pre></div>
-<h3 id="10-styling">10. Styling</h3>
+<h3 id="10-styling">10. Styling<a class="headerlink" href="#10-styling" title="Permanent link">#</a></h3>
 <p>太い境界線や異なる背景色などの特定のスタイルを個々のノードに適用することができます。 これは、以下の例のように、グラフ定義から適用できるcssスタイルのクラスを事前定義することによって行われます。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="o">&lt;</span><span class="nt">style</span><span class="o">&gt;</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="p">.</span><span class="nc">cssClass</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nt">rect</span><span class="p">{</span>
@@ -4835,7 +4835,7 @@ Or:
 </code></pre></div>
 cssClassesは、リレーションステートメントと同時にこの省略形メソッドを使用して追加することはできません。<br />
 クラス図の既存のマークアップには制限があるため、現在、図自体の中でcssクラスを定義することはできません。   </p>
-<h3 id="11-default-styles">11. Default Styles</h3>
+<h3 id="11-default-styles">11. Default Styles<a class="headerlink" href="#11-default-styles" title="Permanent link">#</a></h3>
 <p>クラス図の主なスタイル設定は、事前設定された数のcssクラスを使用して行われます。 レンダリング中に、これらのクラスはsrc / themes /class.scssにあるファイルから抽出されます。 ここで使用されるクラスについて、以下で説明します。 </p>
 <table>
 <thead>
@@ -4883,7 +4883,7 @@ cssClassesは、リレーションステートメントと同時にこの省略�
 </tr>
 </tbody>
 </table>
-<h3 id="12-default-sample-stylesheet">12. Default Sample stylesheet</h3>
+<h3 id="12-default-sample-stylesheet">12. Default Sample stylesheet<a class="headerlink" href="#12-default-sample-stylesheet" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
 <a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="p">}</span>

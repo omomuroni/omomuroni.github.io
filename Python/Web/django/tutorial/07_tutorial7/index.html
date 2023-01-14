@@ -4179,8 +4179,8 @@
 
 
 
-<h1 id="7">7.管理サイトのカスタマイズ</h1>
-<h2 id="admin">admin フォームのカスタマイズ</h2>
+<h1 id="7">7.管理サイトのカスタマイズ<a class="headerlink" href="#7" title="Permanent link">#</a></h1>
+<h2 id="admin">admin フォームのカスタマイズ<a class="headerlink" href="#admin" title="Permanent link">#</a></h2>
 <p><code>admin.site.register(Question)</code> の呼び出しによって Question モデルを登録したことで、Django はデフォルトの形式でオブジェクトを表示できた。
 admin フォームの表示方法や操作の仕方をデフォルトから変更したいこともよくあるが、それには、オブジェクトを登録する時にオプションを指定する。</p>
 <p>例として、編集フォームでのフィールドの並び順を並べ替えてみる。 
@@ -4218,7 +4218,7 @@ admin フォームの表示方法や操作の仕方をデフォルトから変�
 <p><a href="https://docs.djangoproject.com/ja/4.1/ref/contrib/admin/#django.contrib.admin.ModelAdmin.fieldsets">fieldsets</a>の各タプルの先頭の要素は
 フィールドセットのタイトルにあたる。 フォームは以下のように表示される。</p>
 <p><img alt="" src="../img/memo11.png" /></p>
-<h2 id="_1">リレーションを張ったオブジェクトの追加</h2>
+<h2 id="_1">リレーションを張ったオブジェクトの追加<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <p>Question は複数の Choice を持つのに、管理ページには表示されていない。これは表示するよう変更が可能。
 これには、2つの方法がある。1つ目は、 Question と同じようにadminに Choice を登録する方法:</p>
 <div class="highlight"><span class="filename">polls/admin.py</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
@@ -4272,7 +4272,7 @@ Choice モデルに対する register() を削除して、 Question の登録す
 <p>StackedInline に代わって TabularInline を使うと、 リレーション相手のオブジェクトはコンパクトなテーブル形式で表示されます:</p>
 <p><img alt="" src="../img/memo14.png" /></p>
 <p>追加の "Delete?" カラムがあることに注目。このカラムは、 "Added Another Choice" ボタンで追加された行や、すでに保存された行を削除するためにある。</p>
-<h2 id="_2">管理サイトのチェンジリストページをカスタマイズ</h2>
+<h2 id="_2">管理サイトのチェンジリストページをカスタマイズ<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <p>今度は「チェンジリスト」ページをすこしいじりましょう。チェンジリスト (change list) は、システム上の全ての Question を表示するページです。
 現時点では以下のように表示されています。</p>
 <p><img alt="" src="../img/memo15.png" /></p>
@@ -4321,10 +4321,10 @@ was_published_recently のカラムヘッダは、デフォルトではメソッ
 フィールドはいくらでも使えますが、舞台裏では LIKE クエリを使うのでデータベースに過剰な負荷をかけないために常識的な範囲にしましょう。</p>
 <p>さて、ここでお知らせしたいこととして、チェンジリストには最初からページ分割機能があります。
 デフォルトではページあたり 100 個の要素を表示します。ページ分割、検索ボックス、フィルタ、日付による階層化、カラムヘッダを使った並び替え の機能は、すべて協調して思いのままに動作します。</p>
-<h2 id="_3">管理サイトのルック &amp; フィールをカスタマイズ</h2>
+<h2 id="_3">管理サイトのルック &amp; フィールをカスタマイズ<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
 <p>管理サイトの上部には「Django 管理 (Django adminstration)」と表示されていますが、これはいささか滑稽ですね。これは単なるプレースホルダテキストにすぎません。</p>
 <p>ただし、Djangoのテンプレートシステムを使用して変更できます。 Django admin はDjango自体を利用しており、そのインターフェースはDjango独自のテンプレートシステムを使用しています。</p>
-<h3 id="_4">プロジェクト テンプレートをカスタム</h3>
+<h3 id="_4">プロジェクト テンプレートをカスタム<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
 <p>templates ディレクトリをプロジェクトディレクトリ (manage.py が置かれているディレクトリ) に作成してください。
 テンプレートは Django がアクセスできるファイルシステム内のどこに置いても構いません (アプリケーションサーバーを実行したユーザーでアクセスします)。
 しかし従うべき慣習として、テンプレートはプロジェクト内に置きましょう。</p>
@@ -4380,7 +4380,7 @@ admin/base_site.html というテンプレートを、新しく作ったディ�
 チュートリアル その3 で見たように、Djangoが admin/base_site.html をレンダリングする時に、このテンプレート言語が評価され、最終的なHTMLページが生成されます。</p>
 <p>Django のデフォルトのadminテンプレートはすべてオーバーライドできることに注意してください。
 テンプレートを上書きするには、base_site.html で行ったのと同じことをしてください -- デフォルトのディレクトリからカスタムディレクトリにコピーして変更してください。</p>
-<h2 id="_5">アプリケーション用の テンプレートをカスタマイズ</h2>
+<h2 id="_5">アプリケーション用の テンプレートをカスタマイズ<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
 <p>するどい読者はこう質問されるでしょう: DIRS はデフォルトで空っぽなのに、 Django はなぜデフォルトの admin テンプレートを見つけることができたのだろう? 
 その答えは APP_DIRS が True に設定されているため、 Django は自動的に各アプリケーションのパッケージのサブディレクトリからフォールバックとして templates/ を探すから
 (django.contrib.admin は一つのアプリケーションだということを忘れないでください)。</p>
@@ -4389,7 +4389,7 @@ admin/base_site.html というテンプレートを、新しく作ったディ�
 アプリケーションの テンプレートを編集するほうが、 プロジェクト のテンプレートを編集するより賢い選択になるでしょう。
 そうすれば、投票アプリケーションを他のどの新しいプロジェクトにも追加でき、投票アプリケーションが（自分自身に必要な）カスタムテンプレートを確実に見つけることができる。</p>
 <p>Django のテンプレートの検索方法に関する詳しい情報は、<a href="https://docs.djangoproject.com/ja/4.1/topics/templates/#template-loading">テンプレート読み込み ドキュメント</a>を参照。</p>
-<h2 id="admin-index">admin index ページをカスタム</h2>
+<h2 id="admin-index">admin index ページをカスタム<a class="headerlink" href="#admin-index" title="Permanent link">#</a></h2>
 <p>近い話題として、 Django の admin index ページのルックアンドフィールをカスタマイズもできます。</p>
 <p>デフォルトでは、 admin アプリケーションで登録された INSTALLED_APPS のすべてのアプリケーションが、アルファベット順に表示されます。
 レイアウトを大きく変更したい場合もあるでしょう。なんといっても、index ページは admin の中でおそらく最も重要なページなので、使いやすいほうがいいですからね。</p>

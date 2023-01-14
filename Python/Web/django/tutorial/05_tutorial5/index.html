@@ -4451,31 +4451,31 @@
 
 
 
-<h1 id="5">5. テスト</h1>
-<h2 id="_1">自動テストの導入</h2>
-<h3 id="_2">自動テストとは</h3>
+<h1 id="5">5. テスト<a class="headerlink" href="#5" title="Permanent link">#</a></h1>
+<h2 id="_1">自動テストの導入<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<h3 id="_2">自動テストとは<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
 <p>テストは、コードの動作をチェックするルーチン。
 テストは「ある特定のモデルのメソッドは期待通りの値を返すか？」、また「ソフトウェア全体の動作に対して」など異なるレベルで実行される。
 自動テストが他と異なる点は、テスト作業がシステムによって実行されること。
 一度テストセットを作成すると、それからはアプリに変更を加えるたびに、意図した通りにコードが動作するか確認できる</p>
-<h3 id="_3">なぜテストを作成するのか？</h3>
+<h3 id="_3">なぜテストを作成するのか？<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
 <p>Python や Django を学ぶのに手一杯で、さらに別のことを学ぶのは大変で不必要なことと思うが、それを上回るメリットは次のとおり。</p>
-<h4 id="_4">テストは時間の節約</h4>
+<h4 id="_4">テストは時間の節約<a class="headerlink" href="#_4" title="Permanent link">#</a></h4>
 <p>高機能なアプリケーションでは、コンポーネント間の複雑な相互作用が数多くあるかもしれない。
 それらのコンポーネントのどれかを変更した場合、予想外の振る舞いをアプリケーションがする可能性がある。
 '正しく動いているらしい' メソッドを使う場合、プログラムを壊していないことを確かめるためには、様々なテストデータを用いてプログラムを走らせる必要があるが、これは、良い方法ではない。
 自動テストを導入することによってプログラムが正しく動くことの確認を一瞬で終わらせることができ、またテストはプログラムのどこで予期せぬ動作が起きたかを見極めるのに役立つ。</p>
-<h4 id="_5">問題点の検出・防止</h4>
+<h4 id="_5">問題点の検出・防止<a class="headerlink" href="#_5" title="Permanent link">#</a></h4>
 <p>テストを単に開発の負の面と考えることは誤り。
 テストなくしては、アプリケーションの目的や意図した動作というものが曖昧になってしまうことがある。
 何か間違ったことをしてしまった時には、自分自身では間違っていると気づかなかった場合でさえ、間違いが起きた場所にスポットライトを当てる。</p>
-<h4 id="_6">信用</h4>
+<h4 id="_6">信用<a class="headerlink" href="#_6" title="Permanent link">#</a></h4>
 <p>テストがないというそれだけの理由で、多くの開発者は見ることさえしてくれない。テストのないソフトは信用されない。</p>
-<h4 id="_7">共同作業を行う上で役に立つ</h4>
+<h4 id="_7">共同作業を行う上で役に立つ<a class="headerlink" href="#_7" title="Permanent link">#</a></h4>
 <p>複雑なアプリケーションはチームでメンテナンスされるようになるもの
 テストは、自分が書いたコードを他人がうっかり壊してしまうことから守ってくれる (その逆も然り)。
 プログラマとして生きてゆくつもりなら、良いテストはマスト。</p>
-<h2 id="_8">基本的なテスト方針</h2>
+<h2 id="_8">基本的なテスト方針<a class="headerlink" href="#_8" title="Permanent link">#</a></h2>
 <p>テストを書くためのアプローチには、さまざまなものがある。
 その1つに、「テスト駆動開発」の原則がある。これは、実際にコードを書く前にテストを書く、という原則。
 この原則は直感に反するように感じるが、問題をきちんと言葉にしてから、その問題を解決するためのコードを書くという考え。
@@ -4484,8 +4484,8 @@
 <p>どこからテストを書き始めるべきか、把握が難しい場合もある。
 もしすでに数千行の Python コードがあったとしたら、テストすべき場所を選ぶのは簡単ではないかもしれない。
 そのような場合には、次に新しい機能の追加やバグの修正を行う時に、最初のテストを書いてみると役に立つ。</p>
-<h2 id="_9">初めてのテスト作成</h2>
-<h3 id="_10">バグを見つけたとき</h3>
+<h2 id="_9">初めてのテスト作成<a class="headerlink" href="#_9" title="Permanent link">#</a></h2>
+<h3 id="_10">バグを見つけたとき<a class="headerlink" href="#_10" title="Permanent link">#</a></h3>
 <p>polls のアプリケーションにはすぐに修正可能な小さなバグがあった。
 <code>Question.was_published_recently()</code> のメソッドは Question が昨日以降に作成された場合に True を返すが(適切な動作)、 
 Question の <code>pub_date</code> が未来の日付になっている場合にも True を返してしまう(不適切な動作)。</p>
@@ -4503,7 +4503,7 @@ Question の <code>pub_date</code> が未来の日付になっている場合に
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>&gt;&gt;&gt;
 </code></pre></div></p>
 <p>未来の日付は '最近' ではないため、この結果は明らかに間違っている。</p>
-<h2 id="_11">バグをあぶり出すためにテストを作成</h2>
+<h2 id="_11">バグをあぶり出すためにテストを作成<a class="headerlink" href="#_11" title="Permanent link">#</a></h2>
 <p>問題をテストするために先ほど shell で実行した内容を、自動テストでしたいところ。
 そこで、今やったことを自動テストに変換してみる。</p>
 <p>アプリケーションのテストを書く場所は、慣習として、アプリケーションの tests.py ファイル内ということになっている。
@@ -4530,7 +4530,7 @@ Question の <code>pub_date</code> が未来の日付になっている場合に
 </code></pre></div>
 <p>ここでは、未来の日付の pub_date を持つ Question のインスタンスを生成するメソッドを持つ <code>django.test.TestCase</code> を継承したサブクラスを作成。
 それから、<code>was_published_recently()</code> の出力をチェックしている。これは False になるはずです。</p>
-<h2 id="_12">テストの実行</h2>
+<h2 id="_12">テストの実行<a class="headerlink" href="#_12" title="Permanent link">#</a></h2>
 <p>ターミナルから、<code>python manage.py test polls</code>でテストが実行できる。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>(venv) C:\Users\omron\Documents\20_Python\dev\Django\mysite&gt;  python manage.py test polls
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Found 1 test(s).
@@ -4562,7 +4562,7 @@ Question の <code>pub_date</code> が未来の日付になっている場合に
 <li>最後に、 <code>assertIs()</code> メソッドを使うことで、本当に返してほしいのは False だったにもかかわらず、 <code>was_published_recently()</code> が True を返していることを発見する</li>
 </ol>
 <p>テストはテストの失敗を教えてくれるだけでなく、失敗が起こったコードの行数まで教えてくれている。</p>
-<h2 id="_13">バグを修正</h2>
+<h2 id="_13">バグを修正<a class="headerlink" href="#_13" title="Permanent link">#</a></h2>
 <p>先の手順で発見したバグを修正する
 <code>Question.was_published_recently()</code> は pub_date が未来の日付だった場合には False を返すようにするには。
 <code>models.py</code> にあるメソッドを修正して、日付が過去だった場合にのみ True を返すように修正。</p>
@@ -4584,7 +4584,7 @@ Question の <code>pub_date</code> が未来の日付になっている場合に
 <a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>(venv) C:\Users\omron\Documents\20_Python\dev\Django\mysite&gt; 
 </code></pre></div>
 <p>コード内のバグを直したので、テストは無事にパスされたことを確認できる。</p>
-<h2 id="_14">より包括的なテスト</h2>
+<h2 id="_14">より包括的なテスト<a class="headerlink" href="#_14" title="Permanent link">#</a></h2>
 <p>この段階で、<code>was_published_recently()</code> メソッドをさらにピン留めしておける。（一つのバグを直したことでほかのバグを作り出すことを防ぐため）
 このメソッドの振る舞いをより包括的にテストするために、同じクラスにさらに2つのテストを追加する。</p>
 <div class="highlight"><span class="filename">polls/tests.py</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">def</span> <span class="nf">test_was_published_recently_with_old_question</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -4608,16 +4608,16 @@ Question の <code>pub_date</code> が未来の日付になっている場合に
 <p>これで、<code>Question.was_published_recently()</code> が過去、現在、そして未来の質問に対して意味のある値を返すことを確認する3つのテストが揃った。</p>
 <p>polls は簡単なアプリケーションだが、メソッドに対してテストを書いたおかげで、将来このアプリケーションがどんなに複雑になっても、
 あるいは他のどんなコードと相互作用するようになっても、メソッドが期待どおりに動作することを保証できるようになった。</p>
-<h2 id="_15">ビューをテスト</h2>
+<h2 id="_15">ビューをテスト<a class="headerlink" href="#_15" title="Permanent link">#</a></h2>
 <p>この投票アプリケーションは、まだ質問をちゃんと見分けることができない。
 pub_date フィールドが未来の日付になっている質問を含め、どんな質問でも公開している。
 この点は改善するべき。pub_date を未来に設定するということは、その Question がその日付になった時に公開され、それまでは表示されないことを意味するはず。</p>
-<h3 id="_16">ビューに対するテスト</h3>
+<h3 id="_16">ビューに対するテスト<a class="headerlink" href="#_16" title="Permanent link">#</a></h3>
 <p>上でバグを修正した時には、初めにテストを書いてからコードを修正した。
 実は、テスト駆動開発の簡単な例であった。しかし、テストとコードを書く順番はどちらでも構わない。
 初めのテストでは、コード内部の細かい動作に焦点を当てたが、このテストでは、ユーザが Web ブラウザを通して経験する動作をチェックする。
 まずは何かを修正する前に、使用できるツールについて見ていく</p>
-<h2 id="django">Django テストクライアント</h2>
+<h2 id="django">Django テストクライアント<a class="headerlink" href="#django" title="Permanent link">#</a></h2>
 <p>Django は、ビューレベルでのユーザとのインタラクションをシミュレートすることができる Client が用意されている。
 これを tests.py の中や shell でも使うことができる。</p>
 <p>もう一度 shell から確認する。ここでテストクライアントを使う場合には、tests.py では必要がない2つの準備が必要になる。
@@ -4651,7 +4651,7 @@ pub_date フィールドが未来の日付になっている質問を含め、�
 <a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>&gt;&gt;&gt; response.context[&#39;latest_question_list&#39;]
 <a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>&lt;QuerySet [&lt;Question: What&#39;s up?&gt;]&gt;
 </code></pre></div>
-<h2 id="_17">ビューを改良</h2>
+<h2 id="_17">ビューを改良<a class="headerlink" href="#_17" title="Permanent link">#</a></h2>
 <p>現在の投票のリストは、まだ公開されていない (つまり pub_date の日付が未来になっている) 投票が表示される状態になっているため、これを修正する。</p>
 <p>Tutorial4 では、以下のような ListView: をベースにしたクラスベースビューを導入した。</p>
 <div class="highlight"><span class="filename">polls/views.py</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">class</span> <span class="nc">IndexView</span><span class="p">(</span><span class="n">generic</span><span class="o">.</span><span class="n">ListView</span><span class="p">):</span>
@@ -4677,7 +4677,7 @@ pub_date フィールドが未来の日付になっている質問を含め、�
 <a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>    <span class="p">)</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="s1">&#39;-pub_date&#39;</span><span class="p">)[:</span><span class="mi">5</span><span class="p">]</span>
 </code></pre></div></p>
 <p><code>Question.objects.filter(pub_date__lte=timezone.now())</code> は、pub_date が timezone.now 以前の Question を含んだクエリセットを返す。</p>
-<h2 id="_18">新しいビューをテスト</h2>
+<h2 id="_18">新しいビューをテスト<a class="headerlink" href="#_18" title="Permanent link">#</a></h2>
 <p>先の修正で期待通りの満足のいく動作をしてくれるかどうかを確かめる。
 まず、 runserver を実行して、ブラウザでサイトを読み込む。
 過去と未来、それぞれの日付を持つ Question を作成し、すでに公開されている質問だけがリストに表示されるかどうかを確認する。
@@ -4778,7 +4778,7 @@ pub_date フィールドが未来の日付になっている質問を含め、�
 <a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>OK
 <a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>Destroying test database for alias &#39;default&#39;...
 </code></pre></div>
-<h2 id="detailview">DetailView のテスト</h2>
+<h2 id="detailview">DetailView のテスト<a class="headerlink" href="#detailview" title="Permanent link">#</a></h2>
 <p>未来の質問は index に表示されないものの、正しいURL を知っていたり推測したりしたユーザは、まだページに到達できてしまう。
 そのため、同じような制約を DetailView にも追加する必要がある</p>
 <div class="highlight"><span class="filename">polls/views.py</span><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">class</span> <span class="nc">DetailView</span><span class="p">(</span><span class="n">generic</span><span class="o">.</span><span class="n">DetailView</span><span class="p">):</span>
@@ -4811,7 +4811,7 @@ pub_date フィールドが未来の日付になっている質問を含め、�
 <a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a>        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 <a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">assertContains</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">past_question</span><span class="o">.</span><span class="n">question_text</span><span class="p">)</span>
 </code></pre></div>
-<h2 id="_19">さらなるテストについて考える</h2>
+<h2 id="_19">さらなるテストについて考える<a class="headerlink" href="#_19" title="Permanent link">#</a></h2>
 <p>ResultsView にも同じように get_queryset メソッドを追加して、新しいテストクラスも作らなければならない。
 しかしこれは、今作ったばかりのものとそっくりになる。実際、テストは重複だらけになるはず。</p>
 <p>テストを追加することによって、同じように他の方法でアプリを改善できる。
@@ -4823,7 +4823,7 @@ Choices がない Question を作成し、それが公開されないことを�
 テストを先に書いてからそのテストを通るコードを書くのか、あるいはコードの中で先にロジックを試してからテストを書いてそれを検証するのか、いずれにしてもそうすべき。</p>
 <p>ある時点で、書いたテストが限界に達しているように見え、テストが膨らみすぎてコードが苦しくなってしまうのではないかという疑問が浮かぶ。
 こうなった場合にはどうすれば良いか？</p>
-<h3 id="_20">テストにおいて、多いことはいいこと</h3>
+<h3 id="_20">テストにおいて、多いことはいいこと<a class="headerlink" href="#_20" title="Permanent link">#</a></h3>
 <p>先に書いたテストは、手がつけられないほど成長してしまっているように見える。
 この割合で行けば、テストコードがアプリケーションのコードよりもすぐに大きくなってしまう。
 そして繰り返しは、残りの私たちのコードのエレガントな簡潔さに比べて、美しくありません。</p>
@@ -4844,7 +4844,7 @@ Choices がない Question を作成し、それが公開されないことを�
 <li>テストしたい条件の集まりのそれぞれに対して、異なるテストメソッドを作る</li>
 <li>テストメソッドの名前は、その機能を説明するようなものにする</li>
 </ul>
-<h2 id="_21">さらなるテスト</h2>
+<h2 id="_21">さらなるテスト<a class="headerlink" href="#_21" title="Permanent link">#</a></h2>
 <p>このチュートリアルでは、テストの基本の一部を紹介であり、他にもとても便利なツールが数多く用意されている。</p>
 <p>たとえば、ここでのテストでは、モデルの内部ロジックと、ビューの情報の公開の仕方をカバーしたが、ブラウザが HTML を実際にどのようにレンダリングのするのかを
 テストする Selenium のような "in-browser" のフレームワークを使うこともできる。

@@ -4421,8 +4421,8 @@
 
 
 
-<h1 id="sequence-diagrams">Sequence diagrams</h1>
-<h3 id="1-summary">1. summary</h3>
+<h1 id="sequence-diagrams">Sequence diagrams<a class="headerlink" href="#sequence-diagrams" title="Permanent link">#</a></h1>
+<h3 id="1-summary">1. summary<a class="headerlink" href="#1-summary" title="Permanent link">#</a></h3>
 <p>シーケンス図は、プロセスが相互にどのように動作し、どのような順序で動作するかを示す相互作用図です。<br />
 マーメイドはシーケンス図をレンダリングできます。  </p>
 <pre class="mermaid"><code>
@@ -4439,7 +4439,7 @@ sequenceDiagram
 </code></pre></div>
 <p>ノードに関する注意事項ですが、marmaidの言語のスクリプト方法が原因で、<strong>「end」</strong>という単語が図を壊す可能性があります。</p>
 <p>やむを得ない場合は、括弧（）、引用符 ""、または角かっこ{}、[]を使用して、単語「end」を囲む必要があります。 i.e：<strong>（end）、[end]、{end}。</strong></p>
-<h3 id="2-participants">2. participants</h3>
+<h3 id="2-participants">2. participants<a class="headerlink" href="#2-participants" title="Permanent link">#</a></h3>
 <p>参加者は、このページの最初の例のように暗黙的に定義できます。 参加者またはアクターは、ダイアグラムのソーステキストに表示される順序でレンダリングされます。 最初のメッセージに表示される順序とは異なる順序で参加者を表示したい場合があります。 次の手順を実行することで、アクターの出現順序を指定できます。</p>
 <pre class="mermaid"><code>
 sequenceDiagram
@@ -4454,7 +4454,7 @@ sequenceDiagram
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    Alice-&gt;&gt;John: Hello John, how are you?
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    John--&gt;&gt;Alice: Great!
 </code></pre></div>
-<h3 id="3-alias">3. Alias</h3>
+<h3 id="3-alias">3. Alias<a class="headerlink" href="#3-alias" title="Permanent link">#</a></h3>
 <p>アクターは、便利な識別子と説明ラベルを持つことができます。</p>
 <pre class="mermaid"><code>
 sequenceDiagram
@@ -4471,7 +4471,7 @@ sequenceDiagram
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    A-&gt;&gt;J: Hello John, how are you?
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    J-&gt;&gt;A: Great!
 </code></pre></div>
-<h3 id="4-messages">4. Messages</h3>
+<h3 id="4-messages">4. Messages<a class="headerlink" href="#4-messages" title="Permanent link">#</a></h3>
 <p>メッセージは、実線または点線で2つ表示できます。</p>
 <p><strong>[Actor][Arrow][Actor]:Message text</strong></p>
 <table>
@@ -4516,7 +4516,7 @@ sequenceDiagram
 </tr>
 </tbody>
 </table>
-<h3 id="5-activations-copy">5. Activations copy</h3>
+<h3 id="5-activations-copy">5. Activations copy<a class="headerlink" href="#5-activations-copy" title="Permanent link">#</a></h3>
 <p>アクターをアクティブ化および非アクティブ化することができます。 （非）アクティブ化は、専用の宣言にすることができます。</p>
 <pre class="mermaid"><code>
 sequenceDiagram
@@ -4555,11 +4555,11 @@ Alice-&gt;&gt;+John: Hello John, how are you?
 <a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    John--&gt;&gt;-Alice: Hi Alice, I can hear you!
 <a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    John--&gt;&gt;-Alice: I feel great!
 </code></pre></div>
-<h3 id="6-notes">6. Notes</h3>
+<h3 id="6-notes">6. Notes<a class="headerlink" href="#6-notes" title="Permanent link">#</a></h3>
 <p>シーケンス図にメモを追加することができます。 これは表記法によって行われます</p>
-<h4 id="syntax">syntax</h4>
+<h4 id="syntax">syntax<a class="headerlink" href="#syntax" title="Permanent link">#</a></h4>
 <p>** Note [ right of | left of | over ] [Actor]: Text in note content **</p>
-<h4 id="example">example</h4>
+<h4 id="example">example<a class="headerlink" href="#example" title="Permanent link">#</a></h4>
 <pre class="mermaid"><code>
 sequenceDiagram
     participant John
@@ -4576,7 +4576,7 @@ Alice-&gt;John: Hello John, how are you?
 <a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>Alice-&gt;John: Hello John, how are you?
 <a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    Note over Alice,John: A typical interaction
 </code></pre></div>
-<h3 id="7-1-loops">7-1. Loops</h3>
+<h3 id="7-1-loops">7-1. Loops<a class="headerlink" href="#7-1-loops" title="Permanent link">#</a></h3>
 <ul>
 <li>シーケンス図でループを表現することができます。 これは表記法によって行われます
   <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>loop Loop text
@@ -4584,14 +4584,14 @@ Alice-&gt;John: Hello John, how are you?
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>end
 </code></pre></div></li>
 </ul>
-<h4 id="example_1">example</h4>
+<h4 id="example_1">example<a class="headerlink" href="#example_1" title="Permanent link">#</a></h4>
 <pre class="mermaid"><code>
 sequenceDiagram
     Alice-&gt;John: Hello John, how are you?
     loop Every minute
         John--&gt;Alice: Great!
     end</code></pre>
-<h3 id="7-2-loops-alt">7-2. Loops Alt</h3>
+<h3 id="7-2-loops-alt">7-2. Loops Alt<a class="headerlink" href="#7-2-loops-alt" title="Permanent link">#</a></h3>
 <ul>
 <li>
 <p>シーケンス図で代替パスを表現することができます。 これは表記法によって行われます
@@ -4632,7 +4632,7 @@ sequenceDiagram
 <a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>        Bob-&gt;&gt;Alice: Thanks for asking
 <a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    end
 </code></pre></div>
-<h3 id="8-1-parallel">8-1. Parallel</h3>
+<h3 id="8-1-parallel">8-1. Parallel<a class="headerlink" href="#8-1-parallel" title="Permanent link">#</a></h3>
 <p>並行して発生しているアクションを表示することができます。これは表記法によって行われます</p>
 <pre class="mermaid"><code>sequenceDiagram
     par Alice to Bob
@@ -4652,7 +4652,7 @@ sequenceDiagram
 <a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    Bob--&gt;&gt;Alice: Hi Alice!
 <a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    John--&gt;&gt;Alice: Hi Alice!
 </code></pre></div>
-<h3 id="8-2-parallel-nest">8-2. Parallel nest</h3>
+<h3 id="8-2-parallel-nest">8-2. Parallel nest<a class="headerlink" href="#8-2-parallel-nest" title="Permanent link">#</a></h3>
 <p>並行して発生しているアクションを表示することができます。これは表記法によって行われます</p>
 <pre class="mermaid"><code>sequenceDiagram
     par Alice to Bob
@@ -4678,7 +4678,7 @@ sequenceDiagram
 <a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>        John-&gt;&gt;Diana: Can you help us today ?
 <a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>    end
 </code></pre></div>
-<h3 id="9-background-highlighting">9. Background Highlighting</h3>
+<h3 id="9-background-highlighting">9. Background Highlighting<a class="headerlink" href="#9-background-highlighting" title="Permanent link">#</a></h3>
 <p>色付きの背景長方形を提供することにより、フローを強調表示することができます。 これは表記法によって行われます
 色は、rgbおよびrgba構文を使用して定義されます。  </p>
 <p><a href="https://note.cman.jp/color/base_color.cgi">[参考]　rgb 色表現</a></p>
@@ -4707,7 +4707,7 @@ sequenceDiagram
 <a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>    John--&gt;&gt;Alice: Yeah! See you there.
 <a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>    end
 </code></pre></div>
-<h3 id="10-1-background-entity">10-1. Background Entity</h3>
+<h3 id="10-1-background-entity">10-1. Background Entity<a class="headerlink" href="#10-1-background-entity" title="Permanent link">#</a></h3>
 <p>Entity codes to escape characters
 ここに例示されている構文を使用して文字をエスケープすることができます。</p>
 <pre class="mermaid"><code>sequenceDiagram
@@ -4719,7 +4719,7 @@ sequenceDiagram
 </code></pre></div>
 <p>指定された数値は基数10であるため、＃は＃35;としてエンコードできます。 HTML文字名の使用もサポートされています。<br />
 マークアップを定義するために改行の代わりにセミコロンを使用できるため、＃59を使用する必要があります。 メッセージテキストにセミコロンを含める。</p>
-<h3 id="10-2-sequencenumbers">10-2. sequenceNumbers</h3>
+<h3 id="10-2-sequencenumbers">10-2. sequenceNumbers<a class="headerlink" href="#10-2-sequencenumbers" title="Permanent link">#</a></h3>
 <p>シーケンス図の各矢印に付けられたシーケンス番号を取得することができます。 これは、以下に示すように、mermaidをWebサイトに追加するときに構成できます。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">      </span><span class="nx">mermaid</span><span class="p">.</span><span class="nx">initialize</span><span class="p">({</span>
@@ -4749,9 +4749,9 @@ sequenceDiagram
 <a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>    John-&gt;&gt;Bob: How about you?
 <a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>    Bob--&gt;&gt;John: Jolly good!
 </code></pre></div>
-<h3 id="11-styling">11. Styling</h3>
+<h3 id="11-styling">11. Styling<a class="headerlink" href="#11-styling" title="Permanent link">#</a></h3>
 <p>シーケンス図のスタイリングは、いくつかのcssクラスを定義することによって行われます。 レンダリング中に、これらのクラスはsrc / themes /sequence.scssにあるファイルから抽出されます。</p>
-<h5 id="classes-used">Classes used</h5>
+<h5 id="classes-used">Classes used<a class="headerlink" href="#classes-used" title="Permanent link">#</a></h5>
 <table>
 <thead>
 <tr>
@@ -4810,7 +4810,7 @@ sequenceDiagram
 </tr>
 </tbody>
 </table>
-<h4 id="sample-stylesheet">Sample stylesheet</h4>
+<h4 id="sample-stylesheet">Sample stylesheet<a class="headerlink" href="#sample-stylesheet" title="Permanent link">#</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
 <a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">}</span>
@@ -4889,8 +4889,8 @@ sequenceDiagram
 <a id="__codelineno-15-76" name="__codelineno-15-76" href="#__codelineno-15-76"></a><span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="kt">px</span><span class="p">;</span>
 <a id="__codelineno-15-77" name="__codelineno-15-77" href="#__codelineno-15-77"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="12-configuration">12. Configuration</h3>
-<h3 id="configuration">Configuration</h3>
+<h3 id="12-configuration">12. Configuration<a class="headerlink" href="#12-configuration" title="Permanent link">#</a></h3>
+<h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">#</a></h3>
 <p>シーケンス図をレンダリングするためのマージンを調整することは可能ですか？</p>
 <p>これは、jelly.sequenceConfigを定義するか、CLIによって構成でjsonファイルを使用することによって行われます。 CLIの使用方法については[mermaidCLI]（<a href="https://mermaid-js.github.io/mermaid/#/mermaidCLI">https://mermaid-js.github.io/mermaid/#/mermaidCLI</a>）ページで説明されています。 jelly.sequenceConfigは、構成パラメーターまたは対応するオブジェクトを使用してJSON文字列に設定できます。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nt">mermaid</span><span class="p">.</span><span class="nc">sequenceConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -4902,7 +4902,7 @@ sequenceDiagram
 <a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">    </span><span class="n">mirrorActors</span><span class="o">:</span><span class="w"> </span><span class="n">true</span>
 <a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="p">}</span><span class="o">;</span>
 </code></pre></div>
-<h4 id="possible-configuration-parameters">Possible configuration parameters:</h4>
+<h4 id="possible-configuration-parameters">Possible configuration parameters:<a class="headerlink" href="#possible-configuration-parameters" title="Permanent link">#</a></h4>
 <table>
 <thead>
 <tr>

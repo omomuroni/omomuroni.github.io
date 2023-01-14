@@ -4137,12 +4137,12 @@
 
 
 
-<h1 id="json">json</h1>
+<h1 id="json">json<a class="headerlink" href="#json" title="Permanent link">#</a></h1>
 <p><a href="https://docs.python.org/ja/3/library/json.html">json --- JSON エンコーダおよびデコーダ</a></p>
 <p>python でjson ファイルを扱うには標準モジュールの <code>json</code> を使用</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">json</span>
 </code></pre></div>
-<h3 id="loads">loads()</h3>
+<h3 id="loads">loads()<a class="headerlink" href="#loads" title="Permanent link">#</a></h3>
 <p>JSON形式の文字列を辞書として読み込むにはjson.loads()関数を使用。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="s2">{</span>
@@ -4159,14 +4159,14 @@
 <a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
 </code></pre></div>
-<h3 id="load">load()</h3>
+<h3 id="load">load()<a class="headerlink" href="#load" title="Permanent link">#</a></h3>
 <p>JSONファイルを辞書として読み込むには<code>json.load()</code>を使用する。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
 </code></pre></div>
-<h3 id="dumps">dumps()</h3>
+<h3 id="dumps">dumps()<a class="headerlink" href="#dumps" title="Permanent link">#</a></h3>
 <p>辞書をJSON形式の文字列(str)として出力するにはjson.dumps()を使用。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span> <span class="nn">json</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
@@ -4190,7 +4190,7 @@
 <a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="n">json_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 <a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="nb">print</span><span class="p">(</span><span class="n">json_data</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="dump">dump()</h3>
+<h3 id="dump">dump()<a class="headerlink" href="#dump" title="Permanent link">#</a></h3>
 <p>辞書をJSONファイルとして保存するには json.dump() を使用。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span> <span class="nn">json</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
@@ -4219,7 +4219,7 @@
 <p class="admonition-title">memo</p>
 <p>json.dump() に引数indent (文字数) を渡すと要素数ごとに改行・インデントされる</p>
 </div>
-<h2 id="json_1">複雑なJSON</h2>
+<h2 id="json_1">複雑なJSON<a class="headerlink" href="#json_1" title="Permanent link">#</a></h2>
 <ul>
 <li><a href="https://qiita.com/saka2jp/items/3b138d3ebbdaa873eaa5">複雑なJSONから特定のデータを取り出す</a></li>
 </ul>

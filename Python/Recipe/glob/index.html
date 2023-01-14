@@ -4149,18 +4149,18 @@
 
 
 
-<h1 id="glob">glob</h1>
+<h1 id="glob">glob<a class="headerlink" href="#glob" title="Permanent link">#</a></h1>
 <ul>
 <li><a href="https://docs.python.org/ja/3/library/glob.html">glob --- Unix 形式のパス名のパターン展開</a></li>
 </ul>
-<h2 id="_1">基本的な使い方</h2>
+<h2 id="_1">基本的な使い方<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">glob</span> <span class="kn">import</span> <span class="n">glob</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">log</span> <span class="o">=</span> <span class="n">glob</span><span class="p">(</span><span class="s2">&quot;path/sub-dir/&quot;</span><span class="p">)</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># 戻り値はリスト型</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># 見つからない場合は空のリスト</span>
 </code></pre></div>
-<h2 id="_2">使用できる特殊文字</h2>
+<h2 id="_2">使用できる特殊文字<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <p>以下の特殊文字を使用して複数パターンの文字列マッチでパス取得可能。</p>
 <ul>
 <li>長さ0文字以上の任意の文字列にマッチ: <code>*</code><ul>
@@ -4183,7 +4183,7 @@
 <p>もしくは <code>glob.escape()</code> でも可能です
 例 : `glob.escape("path/<em>*</em>*.log")</p>
 </div>
-<h2 id="_3">再帰的に取得</h2>
+<h2 id="_3">再帰的に取得<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
 <blockquote>
 <p>バージョン 3.5 で変更: "**" を使った再帰的な glob がサポートされました。</p>
 </blockquote>
@@ -4195,7 +4195,7 @@
 <p>特定のディレクトリに含まれるすべてのファイル、ディレクトリの一覧を取得したい場合は以下のように記述。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;path/**&#39;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
 </code></pre></div>
-<h2 id="re">reモジュール併用</h2>
+<h2 id="re">reモジュール併用<a class="headerlink" href="#re" title="Permanent link">#</a></h2>
 <p>glob 自体で使える正規表現は少ないため、<code>glob()</code>で<code>**</code>と引数<code>recursive=True</code>を使ってすべてのファイル、
 ディレクトリを再帰的に集め、if 文<code>と</code>re`モジュールで抽出する方法で補う。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span> <span class="nn">re</span>
@@ -4203,7 +4203,7 @@
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1"># リスト内包表記も併用</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">glob</span><span class="p">(</span><span class="s1">&#39;temp/**&#39;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;Router\d+\.log&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)])</span>
 </code></pre></div>
-<h2 id="_4">ディレクトリ・ファイル名のみ</h2>
+<h2 id="_4">ディレクトリ・ファイル名のみ<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
 <p>ディレクトリ名のみ取得したい場合は、<code>**</code>の末尾にディレクトリの区切り文字をつける。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;path/**/&#39;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
 </code></pre></div>
@@ -4216,7 +4216,7 @@
 <p>OS に依存しない区切り文字は <code>os.sep</code> にて記述</p>
 <p>例：(glob(os.path.join('path', '**' + os.sep + 'test.log', recursive=True)))</p>
 </div>
-<h2 id="iglob">イテレータで一覧を取得: iglob()</h2>
+<h2 id="iglob">イテレータで一覧を取得: iglob()<a class="headerlink" href="#iglob" title="Permanent link">#</a></h2>
 <p><code>globf.iglob()</code> を使用するとイテレーターをかえします。<code>recursive=True</code> も指定可能です。</p>
 
               

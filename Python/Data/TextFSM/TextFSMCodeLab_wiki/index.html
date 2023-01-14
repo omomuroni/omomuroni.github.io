@@ -4219,13 +4219,13 @@
 
 
 
-<h1 id="textfsmcodelabwiki">TextFSMCodeLab.wiki</h1>
+<h1 id="textfsmcodelabwiki">TextFSMCodeLab.wiki<a class="headerlink" href="#textfsmcodelabwiki" title="Permanent link">#</a></h1>
 <p><a href="https://code.google.com/archive/p/textfsm/wikis/TextFSMCodeLab.wiki">https://code.google.com/archive/p/textfsm/wikis/TextFSMCodeLab.wiki</a></p>
-<h3 id="overview">Overview</h3>
+<h3 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h3>
 <p>このコードラボは、TextFSMpythonモジュールのユーザーが新しいテンプレートを作成するのに役立つように設計されています。この柔軟な汎用テキストパーサーは、主にPythonでルーターCLIコマンドの出力を解析するために使用されます。比較的単純な正規表現ベースのテキストファイルを作成することにより、最小限のコードで多数のコマンド出力を解析できます。</p>
 <p>このコードラボは、単純なルーターコマンドの出力から始まり、テンプレートを正常に記述して単純なPythonスクリプトで使用するために必要な手順を説明します。</p>
 <p>Pythonの基本をすでに理解していて、TextTableFSMのハウツーページを読んで、参照用に開いておく必要があります。</p>
-<h3 id="_1">基本的なテキスト</h3>
+<h3 id="_1">基本的なテキスト<a class="headerlink" href="#_1" title="Permanent link">#</a></h3>
 <p>最初の例では、単純な線形（行ベースではない）テキスト（Ciscoの「showclock」の出力）を解析します。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>18:42:41.321 PST Sun Feb 8 2009
 </code></pre></div>
@@ -4282,11 +4282,11 @@
 <a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
 <a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>Start ^${Time}.* ${Timezone} \w+ ${Month} ${MonthDay} ${Year} -&gt; Record 
 </code></pre></div>
-<h3 id="fsm-table">FSM Table:</h3>
+<h3 id="fsm-table">FSM Table:<a class="headerlink" href="#fsm-table" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>[&#39;Year&#39;, &#39;MonthDay&#39;, &#39;Month&#39;, &#39;Timezone&#39;, &#39;Time&#39;] [&#39;2009&#39;, &#39;8&#39;, &#39;Feb&#39;, &#39;PST&#39;, &#39;18:42:41&#39;]
 </code></pre></div>
 <p>成功！出力の最初のセクションは解析されたFSMを示し、最後のセクションはファイナルテーブルを示します。このテーブルの最初の行はヘッダーであり、定義した列（または「値」）を示しています。次の行は、一致した値の行です。</p>
-<h3 id="_2">複数行</h3>
+<h3 id="_2">複数行<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
 <p>ここで、もう少し複雑なもの、つまり複数行のテキストからの値の一致について見ていきます。このために、Ciscoの「show version」コマンドの出力を解析しようとします。これは次のようになります。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Cisco IOS Software, Catalyst 4500 L3 Switch Software (cat4500-ENTSERVICESK9-M), Version 12.2(31)SGA1, RELEASE SOFTWARE (fc3) Technical Support: http://www.cisco.com/techsupport Copyright (c) 1986-2007 by Cisco Systems, Inc. Compiled Fri 26-Jan-07 14:28 by kellythw Image text-base: 0x10000000, data-base: 0x118AD800
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
@@ -4333,7 +4333,7 @@
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>[&#39;Version&#39;, &#39;Uptime&#39;, &#39;ConfigRegister&#39;, &#39;ResetReason&#39;]
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>[&#39;12.2(31)SGA1&#39;, &#39;11 weeks, 4 days, 20 hours, 26 minutes&#39;, &#39;0x2102&#39;, &#39;Reload&#39;] 
 </code></pre></div>
-<h3 id="_3">表形式データの解析</h3>
+<h3 id="_3">表形式データの解析<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
 <p>前の例は、FSMの最も単純なアプリケーションを示しました-繰り返されないデータを単一の行に解析します。この例では、より興味深い例を見ていきます。Juniperコマンドの出力showchassisfpcが解析されます。1つのデバイスからの生のルーター出力は次のようになります。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Temp CPU Utilization (%) Memory Utilization (%) Slot State (C) Total Interrupt DRAM (MB) Heap Buffer 0 Online 24 7 0 256 38 51 1 Online 25 7 0 256 38 51 2 Online 24 3 0 256 37 49 3 Online 23 3 0 256 37 49 4 Empty 5 Empty 6 Empty 7 Empty
 </code></pre></div>
@@ -4367,7 +4367,7 @@
 <a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>[&#39;0&#39;, &#39;Online&#39;, &#39;24&#39;, &#39;256&#39;, &#39;51&#39;] [&#39;1&#39;, &#39;Online&#39;, &#39;25&#39;, &#39;256&#39;, &#39;51&#39;] 
 <a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>[&#39;2&#39;, &#39;Online&#39;, &#39;24&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;3&#39;, &#39;Online&#39;, &#39;23&#39;, &#39;256&#39;, &#39;49&#39;] 
 </code></pre></div>
-<h4 id="fpc">テンプレートは、すべてのオンラインFPCスロットを正常に解析し、正しい値を抽出しました。</h4>
+<h4 id="fpc">テンプレートは、すべてのオンラインFPCスロットを正常に解析し、正しい値を抽出しました。<a class="headerlink" href="#fpc" title="Permanent link">#</a></h4>
 <p>しかし、空のスロットはどうですか？すべてのスロットに関する情報も抽出する必要がある場合、空のスロットにはSlot列とState列しかないため、ここには表示されません。これに対処する方法は、これらの行をキャッチするための2番目のルールを作成することです。
 次のように、既存のルールの後にもう1つのルールを追加します。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Value Slot (\d) Value State (\w+) Value Temperature (\d+) Value DRAM (\d+) Value Buffer (\d+)
@@ -4384,7 +4384,7 @@
 <a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>FSM Table: [&#39;Slot&#39;, &#39;State&#39;, &#39;Temperature&#39;, &#39;DRAM&#39;, &#39;Buffer&#39;] [&#39;0&#39;, &#39;Online&#39;, &#39;24&#39;, &#39;256&#39;, &#39;51&#39;] [&#39;1&#39;, &#39;Online&#39;, &#39;25&#39;, &#39;256&#39;, &#39;51&#39;] [&#39;2&#39;, &#39;Online&#39;, &#39;24&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;3&#39;, &#39;Online&#39;, &#39;23&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;4&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;5&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;6&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;7&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] 
 </code></pre></div>
 <p>成功！これで、埋められたスロットと空のスロットの両方に関する情報が抽​​出されました。</p>
-<h4 id="filldown">「Filldown'」の使用</h4>
+<h4 id="filldown">「Filldown'」の使用<a class="headerlink" href="#filldown" title="Permanent link">#</a></h4>
 <p>showchassis fpcからテーブルを抽出できるようになったので、拡張を行う必要があります。上記の簡単な例では機能しますが、次のようなジュニパーTXマトリックスからのより複雑な出力には完全に効果的ではありません。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>lcc0-re0:
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>                 Temp  CPU Utilization (%)   Memory    Utilization (%)
@@ -4430,7 +4430,7 @@
 <a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>FSM Table: [&#39;Chassis&#39;, &#39;Slot&#39;, &#39;State&#39;, &#39;Temperature&#39;, &#39;DRAM&#39;, &#39;Buffer&#39;] [&#39;lcc0-re0&#39;, &#39;0&#39;, &#39;Online&#39;, &#39;24&#39;, &#39;512&#39;, &#39;52&#39;] [&#39;lcc0-re0&#39;, &#39;1&#39;, &#39;Online&#39;, &#39;23&#39;, &#39;256&#39;, &#39;53&#39;] [&#39;lcc0-re0&#39;, &#39;2&#39;, &#39;Online&#39;, &#39;23&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;lcc0-re0&#39;, &#39;3&#39;, &#39;Online&#39;, &#39;21&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;lcc0-re0&#39;, &#39;4&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;lcc0-re0&#39;, &#39;5&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;lcc0-re0&#39;, &#39;6&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;lcc0-re0&#39;, &#39;7&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;lcc1-re1&#39;, &#39;0&#39;, &#39;Online&#39;, &#39;20&#39;, &#39;256&#39;, &#39;50&#39;] [&#39;lcc1-re1&#39;, &#39;1&#39;, &#39;Online&#39;, &#39;20&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;lcc1-re1&#39;, &#39;2&#39;, &#39;Online&#39;, &#39;21&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;lcc1-re1&#39;, &#39;3&#39;, &#39;Online&#39;, &#39;20&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;lcc1-re1&#39;, &#39;4&#39;, &#39;Online&#39;, &#39;18&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;lcc1-re1&#39;, &#39;5&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;lcc1-re1&#39;, &#39;6&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;lcc1-re1&#39;, &#39;7&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;lcc1-re1&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] 
 </code></pre></div>
 <p>これで、シャーシの値がすべて「入力済み」になりました。1つの問題を除いてほぼ完璧です。テーブルの下部に、ほとんど空の奇妙な行があります。そこで何をしているのですか？</p>
-<h4 id="required">「Required」の使用</h4>
+<h4 id="required">「Required」の使用<a class="headerlink" href="#required" title="Permanent link">#</a></h4>
 <p>その行は、Filldownオプションが原因で発生します。最後の有効な行が保存されると（lcc-re1、スロット7）、FSMは値を入力する準備ができた新しい空の行を作成します。通常、FSMは終了時に空の行を破棄しますが、この場合は「Filldown」オプション'Chassis'列にデータが入力されているため、FSMはこの空でない行を保持し、FSMが終了したときに保存します。</p>
 <p>これを修正するために、別の値オプション（必須）を使用します。このオプションは、値が一致している必要があることを指定します。一致していない場合、行は保存されません。このテンプレートでは、「slot」と「state」の両方に値が含まれていることを確認するため、次のように変更します。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>Value Required Slot (\d) Value Required State (\w+) Now we finally have a correct table:
@@ -4442,7 +4442,7 @@
 <a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>FSM Table: 
 <a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>[&#39;Chassis&#39;, &#39;Slot&#39;, &#39;State&#39;, &#39;Temperature&#39;, &#39;DRAM&#39;, &#39;Buffer&#39;] [&#39;lcc0-re0&#39;, &#39;0&#39;, &#39;Online&#39;, &#39;24&#39;, &#39;512&#39;, &#39;52&#39;] [&#39;lcc0-re0&#39;, &#39;1&#39;, &#39;Online&#39;, &#39;23&#39;, &#39;256&#39;, &#39;53&#39;] [&#39;lcc0-re0&#39;, &#39;2&#39;, &#39;Online&#39;, &#39;23&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;lcc0-re0&#39;, &#39;3&#39;, &#39;Online&#39;, &#39;21&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;lcc0-re0&#39;, &#39;4&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;lcc0-re0&#39;, &#39;5&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;lcc0-re0&#39;, &#39;6&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;lcc0-re0&#39;, &#39;7&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;lcc1-re1&#39;, &#39;0&#39;, &#39;Online&#39;, &#39;20&#39;, &#39;256&#39;, &#39;50&#39;] [&#39;lcc1-re1&#39;, &#39;1&#39;, &#39;Online&#39;, &#39;20&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;lcc1-re1&#39;, &#39;2&#39;, &#39;Online&#39;, &#39;21&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;lcc1-re1&#39;, &#39;3&#39;, &#39;Online&#39;, &#39;20&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;lcc1-re1&#39;, &#39;4&#39;, &#39;Online&#39;, &#39;18&#39;, &#39;256&#39;, &#39;49&#39;] [&#39;lcc1-re1&#39;, &#39;5&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;lcc1-re1&#39;, &#39;6&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] [&#39;lcc1-re1&#39;, &#39;7&#39;, &#39;Empty&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;] 
 </code></pre></div>
-<h4 id="list">「List」の使用</h4>
+<h4 id="list">「List」の使用<a class="headerlink" href="#list" title="Permanent link">#</a></h4>
 <p>多くの場合、特定の列に値のリストを含める必要があります。たとえば、ルーティングテーブルを解析する場合、プレフィックスごとに複数のネクストホップが存在する可能性があります。以下の例は、この例の目的のために簡略化された、そのようなルーティングテーブルです。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>Destination Gateway Dist/Metric Last Change 
 <a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>----------- ------- ----------- ----------- 
@@ -4498,7 +4498,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>FSM Table: [&#39;Protocol&#39;, &#39;Type&#39;, &#39;Prefix&#39;, &#39;Gateway&#39;, &#39;Distance&#39;, &#39;Metric&#39;, &#39;LastChange&#39;] [&#39;B&#39;, &#39;EX&#39;, &#39;0.0.0.0/0&#39;, [&#39;192.0.2.73&#39;, &#39;192.0.2.201&#39;, &#39;192.0.2.202&#39;, &#39;192.0.2.74&#39;], &#39;20&#39;, &#39;100&#39;, &#39;4w0d&#39;] [&#39;B&#39;, &#39;IN&#39;, &#39;192.0.2.76/30&#39;, [&#39;203.0.113.183&#39;], &#39;200&#39;, &#39;100&#39;, &#39;4w2d&#39;] [&#39;B&#39;, &#39;IN&#39;, &#39;192.0.2.204/30&#39;, [&#39;203.0.113.183&#39;], &#39;200&#39;, &#39;100&#39;, &#39;4w2d&#39;] [&#39;B&#39;, &#39;IN&#39;, &#39;192.0.2.80/30&#39;, [&#39;203.0.113.183&#39;], &#39;200&#39;, &#39;100&#39;, &#39;4w2d&#39;] [&#39;B&#39;, &#39;IN&#39;, &#39;192.0.2.208/30&#39;, [&#39;203.0.113.183&#39;], &#39;200&#39;, &#39;100&#39;, &#39;4w2d&#39;]
 </code></pre></div>
 <p>この例は、平均的なリストの使用法よりもいくらか複雑でした。行間に明確な区切り文字がある場合は、ここで「前方一致」スタイルを実行する必要はなく、それをレコードに使用できます。</p>
-<h3 id="pythontextfsm">PythonでのTextFSMの使用</h3>
+<h3 id="pythontextfsm">PythonでのTextFSMの使用<a class="headerlink" href="#pythontextfsm" title="Permanent link">#</a></h3>
 <p>FSM自体が完全に役立つわけではありません。これは、Pythonプログラムがテキスト情報を解析するために使用することを目的としています。ここでは、Pythonスクリプト内でFSMを使用する簡単な例を紹介します。</p>
 <p>開始するには、「routes.py」という名前の新しいファイルを作成し、それに以下を追加します。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="kn">import</span> <span class="nn">textfsm</span> <span class="kn">import</span> <span class="nn">sys</span>

@@ -4245,12 +4245,12 @@
 
 
 
-<h1 id="_1">セル の操作</h1>
+<h1 id="_1">セル の操作<a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
 <ul>
 <li>row: 行</li>
 <li>column: 列</li>
 </ul>
-<h2 id="1">1つのセルへのアクセス</h2>
+<h2 id="1">1つのセルへのアクセス<a class="headerlink" href="#1" title="Permanent link">#</a></h2>
 <ul>
 <li>
 <p>セルには、ワークシートのキーとして直接アクセスできる。
@@ -4285,8 +4285,8 @@
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        <span class="n">ws</span><span class="o">.</span><span class="n">cell</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
 </code></pre></div>
 </div>
-<h2 id="_2">複数のセルへのアクセス</h2>
-<h3 id="_3">スライス</h3>
+<h2 id="_2">複数のセルへのアクセス<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<h3 id="_3">スライス<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">cell_range</span> <span class="o">=</span> <span class="n">ws</span><span class="p">[</span><span class="s1">&#39;A1&#39;</span><span class="p">:</span><span class="s1">&#39;C2&#39;</span><span class="p">]</span>
 </code></pre></div>
 <ul>
@@ -4297,7 +4297,7 @@
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">row_range</span> <span class="o">=</span> <span class="n">ws</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
 </code></pre></div></li>
 </ul>
-<h3 id="iter_rows"><code>.iter_rows()</code> メソッド</h3>
+<h3 id="iter_rows"><code>.iter_rows()</code> メソッド<a class="headerlink" href="#iter_rows" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">ws</span><span class="o">.</span><span class="n">iter_rows</span><span class="p">(</span><span class="n">min_row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_col</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">max_row</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>            <span class="nb">print</span><span class="p">(</span><span class="n">cell</span><span class="p">)</span>
@@ -4308,7 +4308,7 @@
 <a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="c1"># &lt;Cell Sheet1.B2&gt;</span>
 <a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="c1"># &lt;Cell Sheet1.C2&gt;</span>
 </code></pre></div>
-<h3 id="iter_cols">iter_cols() メソッド</h3>
+<h3 id="iter_cols">iter_cols() メソッド<a class="headerlink" href="#iter_cols" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">ws</span><span class="o">.</span><span class="n">iter_cols</span><span class="p">(</span><span class="n">min_row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_col</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">max_row</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="n">col</span><span class="p">:</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">cell</span><span class="p">)</span>
@@ -4317,7 +4317,7 @@
 <p class="admonition-title">Warnig</p>
 <p><code>.iter_cols()</code> / <code>.iter_rows()</code> メソッドは読み取り専用モードでは使用できません。</p>
 </div>
-<h3 id="1_1">1列にループで書き込む例</h3>
+<h3 id="1_1">1列にループで書き込む例<a class="headerlink" href="#1_1" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span> <span class="nn">openpyxl</span> <span class="kn">import</span> <span class="n">Workbook</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">wb</span> <span class="o">=</span> <span class="n">Workbook</span><span class="p">()</span>
@@ -4336,7 +4336,7 @@
 <a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>
 <a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="n">wb</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;result.xlsx&quot;</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="_4">行、列を取得してループする例</h3>
+<h3 id="_4">行、列を取得してループする例<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">from</span> <span class="nn">openpyxl</span> <span class="kn">import</span> <span class="n">load_workbook</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">wb</span> <span class="o">=</span> <span class="n">load_workbook</span><span class="p">(</span><span class="s2">&quot;result.xlsx&quot;</span><span class="p">)</span>
@@ -4349,13 +4349,13 @@
 <a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>            <span class="k">continue</span>
 <a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">cell</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="rows"><code>.rows</code> (すべての行)</h3>
+<h3 id="rows"><code>.rows</code> (すべての行)<a class="headerlink" href="#rows" title="Permanent link">#</a></h3>
 <p>すべての行を反復処理する場合は、 <code>.rows</code> プロパティを使用できます。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">ws</span> <span class="o">=</span> <span class="n">wb</span><span class="o">.</span><span class="n">active</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">ws</span><span class="p">[</span><span class="s1">&#39;C9&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;hello world&#39;</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nb">tuple</span><span class="p">(</span><span class="n">ws</span><span class="o">.</span><span class="n">rows</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="columns"><code>.columns</code> (すべての列)</h3>
+<h3 id="columns"><code>.columns</code> (すべての列)<a class="headerlink" href="#columns" title="Permanent link">#</a></h3>
 <p>すべての列を反復処理する場合は、 .columns プロパティを使用できます。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">tuple</span><span class="p">(</span><span class="n">ws</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="p">((</span><span class="o">&lt;</span><span class="n">Cell</span> <span class="n">Sheet</span><span class="o">.</span><span class="n">A1</span><span class="o">&gt;</span><span class="p">,</span>
@@ -4364,7 +4364,7 @@
 <p class="admonition-title">Note</p>
 <p><em>Worksheet</em>.columns プロパティは読み取り専用モードでは使用できません。</p>
 </div>
-<h2 id="_5">値</h2>
+<h2 id="_5">値<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
 <p>ワークシートの値だけが必要な場合は、<em>Worksheet</em>.valuesプロパティを使用します。
 これはワークシートのすべての行を繰り返しますが、<strong>セル値のみ</strong>を返します。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">ws</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
@@ -4380,7 +4380,7 @@
 <a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="c1"># (None, None, None)</span>
 </code></pre></div></li>
 </ul>
-<h3 id="value">値を取得(.value)</h3>
+<h3 id="value">値を取得(.value)<a class="headerlink" href="#value" title="Permanent link">#</a></h3>
 <p>Cellを取得したら、それに値を割り当てることができます。
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">c</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;hello, world&#39;</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>

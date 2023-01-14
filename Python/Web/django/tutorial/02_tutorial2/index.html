@@ -4235,9 +4235,9 @@
 
 
 
-<h1 id="2">2.モデルと管理サイト</h1>
+<h1 id="2">2.モデルと管理サイト<a class="headerlink" href="#2" title="Permanent link">#</a></h1>
 <p><a href="https://docs.djangoproject.com/ja/4.1/intro/tutorial02/">はじめての Django アプリ作成、その2</a></p>
-<h2 id="database">Database の設定</h2>
+<h2 id="database">Database の設定<a class="headerlink" href="#database" title="Permanent link">#</a></h2>
 <ul>
 <li>Django はデフォルトの設定で SQLite を使用する</li>
 <li>
@@ -4263,7 +4263,7 @@
 <li><code>CREATE DATABASE database_name;</code> とデータベースのインタラクティブプロンプトで実行する</li>
 <li>詳細については <a href="https://docs.djangoproject.com/ja/4.1/ref/settings/#std-setting-DATABASES">DATABASES</a>のリファレンスドキュメントを参照。</li>
 </ul>
-<h2 id="settingspy">settings.py</h2>
+<h2 id="settingspy">settings.py<a class="headerlink" href="#settingspy" title="Permanent link">#</a></h2>
 <p><code>mysite/settings.py</code> ファイル内の先頭に記述してある<a href="https://docs.djangoproject.com/ja/4.1/ref/settings/#std-setting-INSTALLED_APPS">INSTALLED_APPS</a>はDjangoインスタンスの中で有効化されているすべてのDjangoアプリケーションの名前が
 記述されている。デフォルトでは以下のアプリケーションが入っている。</p>
 <ul>
@@ -4300,7 +4300,7 @@
 <a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>  Applying sessions.0001_initial... OK
 <a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>(venv) C:\Users\omron\Documents\20_Python\dev\Django\mysite&gt; 
 </code></pre></div>
-<h2 id="_1">モデルの作成</h2>
+<h2 id="_1">モデルの作成<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <p>チュートリアルの poll アプリケーションでは、Question と Choice の2つのモデルを作成。
 Poll には question と publication date の情報があり、 Choice には選択肢のテキストと vote という2つのフィールドがある。各 Choice は1つの Question に関連づけられている。 <code>polls/models.py</code> ファイルを以下のように編集する。ｓｓ</p>
 <div class="highlight"><span class="filename">polls/models.py</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
@@ -4327,7 +4327,7 @@ Poll には question と publication date の情報があり、 Choice には選
 <li><code>DateTimeField</code>: 日時フィールド</li>
 <li><code>ForeignKey</code>:リレーションシップを定義。れぞれの Choice が一つの Question に関連付けられることを Django に伝える。</li>
 </ul>
-<h2 id="_2">モデルを有効にする</h2>
+<h2 id="_2">モデルを有効にする<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <ul>
 <li>アプリケーションをプロジェクトに含めるには、構成クラスへの参照を INSTALLED_APPS 設定に追加する</li>
 <li><code>PollsConfig</code> クラスは、 <code>polls/apps.py</code> にあるので、ドットつなぎのパスは <code>polls.apps.PollsConfig</code> となる。</li>
@@ -4385,7 +4385,7 @@ Poll には question と publication date の情報があり、 Choice には選
 <p class="admonition-title">Tip</p>
 <p>manage.py でできることは<a href="https://docs.djangoproject.com/ja/4.1/ref/django-admin/">「django-admin と manage.py」</a>を参照</p>
 </div>
-<h2 id="api">API をたたく</h2>
+<h2 id="api">API をたたく<a class="headerlink" href="#api" title="Permanent link">#</a></h2>
 <p><code>python manage.py shell</code>コマンドで Python シェルを起動</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -4501,12 +4501,12 @@ Poll には question と publication date の情報があり、 Choice には選
 <li>データーベース API の詳細は <a href="https://docs.djangoproject.com/ja/4.1/topics/db/queries/">クエリを作成する</a>を参照</li>
 </ul>
 </div>
-<h2 id="django-admin">Django Admin</h2>
+<h2 id="django-admin">Django Admin<a class="headerlink" href="#django-admin" title="Permanent link">#</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Djangoはモデルのための管理インタフェース群の生成の自動化が用意されている</p>
 </div>
-<h3 id="_3">管理ユーザーを作成する</h3>
+<h3 id="_3">管理ユーザーを作成する<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
 <p>adminサイトにログインできるユーザーを作成するには<code>python manage.py createsuperuser</code>を実行
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>(venv) C:\Users\omron\Documents\20_Python\dev\Django\mysite&gt; python manage.py createsuperuser
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>Username (leave blank to use &#39;omron&#39;): admin
@@ -4520,16 +4520,16 @@ Poll には question と publication date の情報があり、 Choice には選
 <a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>Superuser created successfully.
 <a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>(venv) C:\Users\omron\Documents\20_Python\dev\Django\mysite&gt; 
 </code></pre></div></p>
-<h3 id="_4">開発サーバーの起動</h3>
+<h3 id="_4">開発サーバーの起動<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
 <p>Django adminサイトはデフォルトで有効化される
 <code>python manage.py runserver</code>でサーバを起動し、ブラウザで<code>http://127.0.0.1:8000/admin/</code>と入力してadmin コンソールにアクセス。
 <img alt="" src="../img/memo1.png" /></p>
-<h3 id="admin">admin サイト</h3>
+<h3 id="admin">admin サイト<a class="headerlink" href="#admin" title="Permanent link">#</a></h3>
 <p>先ほど作成した管理ユーザでログインすると以下Django admin のインデックスページが表示される。
 <img alt="" src="../img/memo2.png" /></p>
 <p>いくつかのタイプの編集可能なコンテンツがある（groups と users）。
 これらは Django に含まれる認証フレームワーク <a href="https://docs.djangoproject.com/ja/4.1/topics/auth/#module-django.contrib.auth">django.contrib.auth</a>によって提供されます</p>
-<h3 id="poll-admin">Poll アプリを admin 上で編集できるようにする</h3>
+<h3 id="poll-admin">Poll アプリを admin 上で編集できるようにする<a class="headerlink" href="#poll-admin" title="Permanent link">#</a></h3>
 <p>Question オブジェクトがadmin インタフェースを持つということを、adminに伝える必要があり、
 これを行うために、ファイル polls/admin.py を開いて以下のように編集する</p>
 <div class="highlight"><span class="filename">polls/admin.py</span><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
@@ -4538,7 +4538,7 @@ Poll には question と publication date の情報があり、 Choice には選
 <a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
 <a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Question</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="admin_1">admin の機能</h3>
+<h3 id="admin_1">admin の機能<a class="headerlink" href="#admin_1" title="Permanent link">#</a></h3>
 <p>先の手順で Question を登録したので、 Django は admin インデックスページにこれを表示することを知っている。</p>
 <p><img alt="" src="../img/memo3.png" /></p>
 <p>"Questions" をクリックすると、questions のための "change list" ページが表示される

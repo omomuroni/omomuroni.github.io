@@ -4311,11 +4311,11 @@
 
 
 
-<h1 id="gantt-diagrams">Gantt diagrams</h1>
+<h1 id="gantt-diagrams">Gantt diagrams<a class="headerlink" href="#gantt-diagrams" title="Permanent link">#</a></h1>
 <blockquote>
 <p>ガントチャートは、1896年にKarol Adamieckiによって最初に開発され、1910年代にHenry Ganttによって独自に開発された棒グラフの一種であり、プロジェクトのスケジュールと1つのプロジェクトが完了するまでにかかる時間を示します。 ガントチャートは、プロジェクトの終了要素と要約要素の開始日と終了日の間の日数を示します。</p>
 </blockquote>
-<h3 id="a-note-to-users">A note to users</h3>
+<h3 id="a-note-to-users">A note to users<a class="headerlink" href="#a-note-to-users" title="Permanent link">#</a></h3>
 <p>ガントチャートは、スケジュールされた各タスクを、左から右に伸びる1本の連続したバーとして記録します。 x軸は時間を表し、yはさまざまなタスクとそれらが完了する順序を記録します。</p>
 <p>タスクに固有の日付、日、または日付のコレクションが「除外」されると、ガントチャートは、内部にギャップを作成するのではなく、右に向かって同じ日数を延長することによって、これらの変更に対応することを覚えておくことが重要です。タスク。ここに示すように</p>
 <p>ただし、除外された日付が連続して開始するように設定された2つのタスクの間にある場合、除外された日付はグラフィカルにスキップされて空白のままになり、次のタスクは除外された日付の終了後に開始されます。ここに示すように</p>
@@ -4340,7 +4340,7 @@
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    Task in sec      :2014-01-12  , 12d
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    another task      : 24d
 </code></pre></div>
-<h3 id="syntax">Syntax</h3>
+<h3 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link">#</a></h3>
 <pre class="mermaid"><code>gantt
     dateFormat  YYYY-MM-DD
     title       Adding GANTT diagram functionality to mermaid
@@ -4401,7 +4401,7 @@
 <a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>    Add gantt diagram to demo page      :20h
 <a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>    Add another diagram to demo page    :48h
 </code></pre></div>
-<h3 id="multiple-dependencies">multiple dependencies</h3>
+<h3 id="multiple-dependencies">multiple dependencies<a class="headerlink" href="#multiple-dependencies" title="Permanent link">#</a></h3>
 <ul>
 <li>スペースで区切って複数の依存関係を設定することができます。</li>
 </ul>
@@ -4416,15 +4416,15 @@
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        banana :crit, b, 2017-07-23, 1d
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        cherry :active, c, after b a, 1d
 </code></pre></div>
-<h3 id="description">Description</h3>
-<h4 id="_1">題名</h4>
+<h3 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h3>
+<h4 id="_1">題名<a class="headerlink" href="#_1" title="Permanent link">#</a></h4>
 <p>titleある任意全体としてグラフを記述するために、ガントチャートの上部に表示される文字列。</p>
-<h4 id="_2">セクションステートメント</h4>
+<h4 id="_2">セクションステートメント<a class="headerlink" href="#_2" title="Permanent link">#</a></h4>
 <p>チャートをさまざまなセクションに分割できます。たとえば、開発やドキュメントなど、プロジェクトのさまざまな部分を分離できます。</p>
 <p>これを行うには、sectionキーワードで行を開始し、名前を付けます。（チャート全体のタイトルとは異なり、この名前は必須であることに注意してください。</p>
-<h4 id="_3">日付の設定</h4>
+<h4 id="_3">日付の設定<a class="headerlink" href="#_3" title="Permanent link">#</a></h4>
 <p>dateFormatガント要素の日付入力の形式を定義します。レンダリングされたチャート出力でこれらの日付がどのように表されるかは、によって定義されaxisFormatます。</p>
-<h4 id="_4">入力日付形式</h4>
+<h4 id="_4">入力日付形式<a class="headerlink" href="#_4" title="Permanent link">#</a></h4>
 <p>デフォルトの入力日付形式はYYYY-MM-DDです。カスタムを定義できますdateFormat。</p>
 <p><strong>dateFormat YYYY-MM-DD</strong></p>
 <p>次のフォーマットオプションがサポートされています。  </p>
@@ -4647,7 +4647,7 @@
 </tbody>
 </table>
 <p><a href="https：//github.com/mbostock/d3/wiki/Time-Formatting">詳細情報はこちら</a></p>
-<h3 id="styling">Styling</h3>
+<h3 id="styling">Styling<a class="headerlink" href="#styling" title="Permanent link">#</a></h3>
 <p>ガントチャートのスタイリングは、いくつかのcssクラスを定義することによって行われます。レンダリング中に、これらのクラスはsrc / themes /gantt.scssにあるファイルから抽出されます</p>
 <p>使用されるクラス  </p>
 <table>
@@ -4684,7 +4684,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="_5">サンプルスタイルシート</h4>
+<h4 id="_5">サンプルスタイルシート<a class="headerlink" href="#_5" title="Permanent link">#</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">.</span><span class="nc">grid</span><span class="w"> </span><span class="p">.</span><span class="nc">tick</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">stroke</span><span class="p">:</span><span class="w"> </span><span class="kc">lightgrey</span><span class="p">;</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="k">opacity</span><span class="p">:</span><span class="w"> </span><span class="mf">0.3</span><span class="p">;</span>
@@ -4730,13 +4730,13 @@
 <a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a><span class="w">    </span><span class="n">text-anchor</span><span class="p">:</span><span class="kc">end</span><span class="p">;</span>
 <a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="others">Others</h3>
-<h4 id="_6">今日のマーカー</h4>
+<h3 id="others">Others<a class="headerlink" href="#others" title="Permanent link">#</a></h3>
+<h4 id="_6">今日のマーカー<a class="headerlink" href="#_6" title="Permanent link">#</a></h4>
 <p>現在の日付のマーカーをスタイル設定または非表示にすることができます。スタイルを設定するには、todayMarkerキーの値を追加します。</p>
 <p>todayMarker stroke-width:5px,stroke:#0f0,opacity:0.5
 マーカーを非表示にするには、に設定todayMarkerしoffます。</p>
 <p>todayMarker off</p>
-<h4 id="_7">構成</h4>
+<h4 id="_7">構成<a class="headerlink" href="#_7" title="Permanent link">#</a></h4>
 <p>ガントチャートをレンダリングするためのマージンを調整することが可能です。</p>
 <p>これは<strong>ganttConfig</strong>、構成オブジェクトの一部を定義することによって行われます。</p>
 <p>jelly.ganttConfigは、構成パラメーターまたは対応するオブジェクトを使用してJSON文字列に設定できます。</p>
@@ -4749,7 +4749,7 @@
 <a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>}
 </code></pre></div>
 <p><br></p>
-<h4 id="_8">可能な構成パラメータ</h4>
+<h4 id="_8">可能な構成パラメータ<a class="headerlink" href="#_8" title="Permanent link">#</a></h4>
 <table>
 <thead>
 <tr>
@@ -4771,7 +4771,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="_9">インタラクション</h4>
+<h4 id="_9">インタラクション<a class="headerlink" href="#_9" title="Permanent link">#</a></h4>
 <p>クリックイベントをタスクにバインドすることができます。クリックすると、javascriptコールバック、または現在のブラウザタブで開かれるリンクのいずれかにつながる可能性があります。注：この機能は、を使用するsecurityLevel='strict'と無効になり、を使用すると有効になりsecurityLevel='loose'ます。</p>
 <p>click taskId call callback(arguments)
 click taskId href URL

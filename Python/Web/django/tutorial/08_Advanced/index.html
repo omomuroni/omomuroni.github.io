@@ -4139,13 +4139,13 @@
 
 
 
-<h1 id="8">8.応用編: 再利用可能なアプリケーションの書き方</h1>
+<h1 id="8">8.応用編: 再利用可能なアプリケーションの書き方<a class="headerlink" href="#8" title="Permanent link">#</a></h1>
 <p><a href="https://docs.djangoproject.com/ja/4.1/intro/reusable-apps/">高度なチュートリアル: 再利用可能アプリの書き方</a></p>
-<h2 id="_1">再利用性の問題</h2>
+<h2 id="_1">再利用性の問題<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <p>Web アプリケーションの設計、開発、テスト、そしてメンテナンスには多大な労力が必要です。
 そして多くの Python プロジェクト、 Django プロジェクトは共通の問題を抱えています。この繰り返し作業を減らせたら良いと思うはずです。
 そんなときは、<a href="https://djangopackages.org/">Django Packages</a>から既存のPythonパッケージや Django アプリを選んで、自分の Web プロジェクトに組み込むことが可能。</p>
-<h2 id="_2">プロジェクトと再利用可能アプリ</h2>
+<h2 id="_2">プロジェクトと再利用可能アプリ<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <p>前のチュートリアルを終えると、プロジェクトはこのようになっているはずです:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mysite/
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    manage.py
@@ -4186,13 +4186,13 @@
 <p>今、 polls ディレクトリは新規の Django プロジェクトにコピーでき、すぐに再利用できる状態です。
 しかし公開するための準備が完璧というわけではありません。
 そのために、アプリをパッケージにして別の場所でインストールしやすいようにする必要があります。</p>
-<h2 id="_3">事前に必要な物をインストールする</h2>
+<h2 id="_3">事前に必要な物をインストールする<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
 <p>Python のパッケージングの現状は、複数のツールがあることで少しややこしいです。
 このチュートリアルでは setuptools をパッケージに使用します。
 これはおすすめのパッケージングツールです( forkされていた distribute はマージされました)。
 終わった後にアンインストールするために pip も使います。今はこの 2 つのパッケージをインストールしておいてください。分からなければ Django をpip でインストールする.を参照してください。
  setuptools も同じ方法でインストールできます。</p>
-<h2 id="_4">アプリケーションをパッケージングする</h2>
+<h2 id="_4">アプリケーションをパッケージングする<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
 <p>Python において パッケージング とは、特定のフォーマットでアプリを作っておくことです。このフォーマットは簡単にインストールして使えます。 
 Django 自体もこのようにパッケージ化されています。投票アプリのような小さなものでは、このプロセスはそれほど難しいものではありません。</p>
 <ol>
@@ -4306,7 +4306,7 @@ install_requires =
 <p class="admonition-title">Info</p>
 <p>パッケージングに関するより豊富な情報は <a href="https://packaging.python.org/en/latest/tutorials/packaging-projects/">プロジェクトのパッケージ化と配布に関するチュートリアル</a> にあります。</p>
 </div>
-<h2 id="_5">自分のパッケージを使ってみる</h2>
+<h2 id="_5">自分のパッケージを使ってみる<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
 <p>polls ディレクトリはプロジェクト外に移動したので、これはもう動きません。代わりにできたての django-polls パッケージを使ってみましょう。</p>
 <div class="admonition info">
 <p class="admonition-title">ユーザーライブラリとしてインストールする</p>
