@@ -2622,22 +2622,85 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    基本的な使い方
+  <a href="#1" class="md-nav__link">
+    基本的な使い方1
   </a>
   
-    <nav class="md-nav" aria-label="基本的な使い方">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    基本的な使い方2
+  </a>
+  
+    <nav class="md-nav" aria-label="基本的な使い方2">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#csv" class="md-nav__link">
-    csvとの組み合わせ
+  <a href="#_1" class="md-nav__link">
+    空白の扱い
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    特殊文字のエスケープ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    コメント
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    変数定義
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    演算子
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    条件文
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Pythonビルトインのメソッドを使う
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    ビルトインフィルター
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#csv" class="md-nav__link">
+    csvとの組み合わせ
+  </a>
   
 </li>
       
@@ -4154,22 +4217,85 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    基本的な使い方
+  <a href="#1" class="md-nav__link">
+    基本的な使い方1
   </a>
   
-    <nav class="md-nav" aria-label="基本的な使い方">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    基本的な使い方2
+  </a>
+  
+    <nav class="md-nav" aria-label="基本的な使い方2">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#csv" class="md-nav__link">
-    csvとの組み合わせ
+  <a href="#_1" class="md-nav__link">
+    空白の扱い
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    特殊文字のエスケープ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    コメント
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    変数定義
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    演算子
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    条件文
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Pythonビルトインのメソッドを使う
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    ビルトインフィルター
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#csv" class="md-nav__link">
+    csvとの組み合わせ
+  </a>
   
 </li>
       
@@ -4201,7 +4327,7 @@
 <li>テキストベースのファイルであれば、何でもレンダリングする事ができます。</li>
 <li>必ずしもテンプレートの拡張子は.j2である必要はないですが、.j2としておいた方が管理しやすいです。</li>
 </ul>
-<h2 id="_1">基本的な使い方<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<h2 id="1">基本的な使い方1<a class="headerlink" href="#1" title="Permanent link">#</a></h2>
 <div class="highlight"><span class="filename">sample_jinja.py</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">jinja2</span> <span class="kn">import</span> <span class="n">Environment</span><span class="p">,</span> <span class="n">FileSystemLoader</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
@@ -4216,24 +4342,112 @@
 </code></pre></div>
 <div class="highlight"><span class="filename">sample.j2</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="x">Hi </span><span class="cp">{{</span> <span class="nv">name</span> <span class="cp">}}</span><span class="x"> !</span>
 </code></pre></div>
-<h3 id="csv">csvとの組み合わせ<a class="headerlink" href="#csv" title="Permanent link">#</a></h3>
+<h2 id="2">基本的な使い方2<a class="headerlink" href="#2" title="Permanent link">#</a></h2>
+<p>NUM で数を指定してコンフィグを作成する
+Python 側で定義した変数は <code>{%  %}</code>文の中では <code>{{}}</code>で囲まずにそのまま記述すること</p>
+<div class="highlight"><span class="filename">Config 作成</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">jinja2</span> <span class="kn">import</span> <span class="n">Environment</span><span class="p">,</span> <span class="n">FileSystemLoader</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;NUM&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">}</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">env</span> <span class="o">=</span> <span class="n">Environment</span><span class="p">(</span><span class="n">loader</span><span class="o">=</span><span class="n">FileSystemLoader</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)))</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">template</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">get_template</span><span class="p">(</span><span class="s2">&quot;template/sample.j2&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">result</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;config/test.txt&#39;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">sample.j2</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">{%</span> <span class="k">for</span> <span class="nv">x</span> <span class="k">in</span> <span class="nv">range</span><span class="o">(</span><span class="nv">NUM</span><span class="o">)</span> <span class="cp">%}</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="x"> interface Te0/0/0/0.</span><span class="cp">{{</span><span class="nv">x</span><span class="cp">}}</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="x">  encapsuration dot1q </span><span class="cp">{{</span><span class="nv">x</span><span class="cp">}}</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+</code></pre></div>
+<h3 id="_1">空白の扱い<a class="headerlink" href="#_1" title="Permanent link">#</a></h3>
+<ul>
+<li><code>{%- xxx -%}</code>のように <code>-</code>を付与すると空白を削除してレンダリングする。</li>
+<li>または <code>trim_blocks=True</code>にて指定</li>
+</ul>
+<h3 id="_2">特殊文字のエスケープ<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<ul>
+<li>{%などを含んだ文字列等がある場合、エスケープしたい箇所をrawブロックで囲む</li>
+<li><code>'{{'</code>　のようにクォーテーション付きで文字列として記述すれば括弧としてレンダリングされる</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>{% raw %}
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>...
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>% endraw %}
+</code></pre></div>
+<h3 id="_3">コメント<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
+<p><code>{# コメント内容 #}</code>の形式で記述</p>
+<h3 id="_4">変数定義<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
+<ul>
+<li>str型はシングルクォーテーションもしくはダブルクォーテーションで囲むこと</li>
+<li>bool型・int型などはそのままでOK</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">jinja2</span> <span class="kn">import</span> <span class="n">Template</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">config</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="s2">&quot;{</span><span class="si">% s</span><span class="s2">et description = &#39;TEST&#39; %}&quot;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="s1">&#39;interface GigabitEthernet0/0/0/0</span><span class="se">\n</span><span class="s1">&#39;</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="s1">&#39; description {{ description }}</span><span class="se">\n</span><span class="s1">&#39;</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="p">)</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="n">template</span><span class="p">:</span> <span class="n">Template</span> <span class="o">=</span> <span class="n">Template</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="n">rendered_cfg</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="nb">print</span><span class="p">(</span><span class="n">rendered_cfg</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="_5">演算子<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
+<p><code>"{% set 変数名 = 式 %}"</code> にて演算子を記述する事が可能</p>
+<ul>
+<li>加算: <code>+</code></li>
+<li>減算: <code>-</code></li>
+<li>除算: <code>/</code></li>
+<li>除算（切り捨て）: <code>//</code></li>
+<li>剰余: <code>%</code></li>
+<li>乗算: <code>*</code></li>
+<li>累乗: <code>**</code></li>
+</ul>
+<h3 id="_6">条件文<a class="headerlink" href="#_6" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>&quot;{% if 条件式 %}&quot;
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>&quot;{% endif %}&quot;
+</code></pre></div>
+<p>以下の条件演算子が使用可能</p>
+<ul>
+<li>等値: <code>==</code></li>
+<li>非等値: <code>!=</code></li>
+<li>超過: <code>&gt;</code></li>
+<li>以上: <code>&gt;=</code></li>
+<li>未満: <code>&lt;</code></li>
+<li>以下: <code>&lt;=</code></li>
+<li>AND条件（複数の条件を全て満たした場合にTrue）: <code>and</code></li>
+<li>OR条件（いずれかの条件を満たした場合にTrue）: <code>or</code></li>
+<li>否定: <code>not</code></li>
+</ul>
+<h3 id="python">Pythonビルトインのメソッドを使う<a class="headerlink" href="#python" title="Permanent link">#</a></h3>
+<p><code>{{ 文字列.lower() }}</code>のようにpython ビルトインメソッドの記述が可能</p>
+<h3 id="_7">ビルトインフィルター<a class="headerlink" href="#_7" title="Permanent link">#</a></h3>
+<p><a href="https://jinja.palletsprojects.com/en/3.0.x/templates/#list-of-builtin-filters">Jinja2 - List of Builtin Filters</a>を参照</p>
+<h2 id="csv">csvとの組み合わせ<a class="headerlink" href="#csv" title="Permanent link">#</a></h2>
 <p>以下プログラムはcsvファイルでパラメータを管理し、jinja のテンプレートを基に書き込みを行う</p>
 <ul>
 <li>params.csv: パラメーターが記載されたファイル</li>
 <li>template.j2: 書き込む内容が記述されたテンプレートファイル</li>
 <li>sample.py: サンプルプログラム</li>
 </ul>
-<div class="highlight"><span class="filename">sample.py</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">csv</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span> <span class="nn">jinja2</span> <span class="kn">import</span> <span class="n">Environment</span><span class="p">,</span> <span class="n">FileSystemLoader</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">env</span> <span class="o">=</span> <span class="n">Environment</span><span class="p">(</span><span class="n">loader</span><span class="o">=</span><span class="n">FileSystemLoader</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span><span class="n">trim_blocks</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">template</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">get_template</span><span class="p">(</span><span class="s2">&quot;template.j2&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;params.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="n">csv_file</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">csv_file</span><span class="p">:</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>      <span class="n">result</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<div class="highlight"><span class="filename">sample.py</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">import</span> <span class="nn">csv</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kn">from</span> <span class="nn">jinja2</span> <span class="kn">import</span> <span class="n">Environment</span><span class="p">,</span> <span class="n">FileSystemLoader</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">env</span> <span class="o">=</span> <span class="n">Environment</span><span class="p">(</span><span class="n">loader</span><span class="o">=</span><span class="n">FileSystemLoader</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span><span class="n">trim_blocks</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="n">template</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">get_template</span><span class="p">(</span><span class="s2">&quot;template.j2&quot;</span><span class="p">)</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;params.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    <span class="n">csv_file</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">csv_file</span><span class="p">:</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>      <span class="n">result</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
