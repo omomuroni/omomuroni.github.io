@@ -2673,6 +2673,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../data_cheat_sheet/" class="md-nav__link">
+        よく使うデータ形式
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../itertools/" class="md-nav__link">
         itertools
       </a>
@@ -3421,6 +3435,20 @@
     <li class="md-nav__item">
       <a href="../../../Recipe/pywatchdog/" class="md-nav__link">
         python でログ監視
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Recipe/recursive_function/" class="md-nav__link">
+        再帰関数
       </a>
     </li>
   
@@ -4216,7 +4244,7 @@
 </blockquote>
 <div class="highlight"><span class="filename">読込み</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">csv</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;eggs.csv&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;sample.csv&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">spamreader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">csvfile</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">quotechar</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">)</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">spamreader</span><span class="p">:</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">row</span><span class="p">))</span>
@@ -4272,7 +4300,6 @@
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="n">writer</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
 <a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="n">writer</span><span class="o">.</span><span class="n">writerows</span><span class="p">([</span><span class="n">d1</span><span class="p">,</span> <span class="n">d2</span><span class="p">])</span> <span class="c1"># 辞書のリストとして渡す</span>
 </code></pre></div>
-<p>jsonファイルをCSVに変換・出力</p>
 
               
             </article>
@@ -4307,13 +4334,13 @@
       
       
         
-        <a href="../itertools/" class="md-footer__link md-footer__link--next" aria-label="Next: itertools" rel="next">
+        <a href="../data_cheat_sheet/" class="md-footer__link md-footer__link--next" aria-label="Next: よく使うデータ形式" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              itertools
+              よく使うデータ形式
             </div>
           </div>
           <div class="md-footer__button md-icon">
