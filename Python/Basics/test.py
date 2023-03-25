@@ -10,8 +10,8 @@ def parafunc (param):
     time.sleep (1)
     return param * param
 
-# if __name__ == '__main__':
-with multiprocessing.Pool() as pool:
-    results = pool.map(parafunc, range(21))
-
-print (results)
+if __name__ == '__main__':
+    with multiprocessing.Pool() as pool:
+        results = pool.map(parafunc, range(21))
+    
+    print (results)
