@@ -826,6 +826,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://omomuroni.github.io/Python/STC/stcclient/</loc>
+         <lastmod>2023-03-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://omomuroni.github.io/Python/Setup/Linux_python/</loc>
          <lastmod>2023-03-31</lastmod>
          <changefreq>daily</changefreq>
