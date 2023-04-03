@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://omomuroni.github.io/Python/Data/Various/itertools/">
+        <link rel="canonical" href="https://omomuroni.github.io/Python/Data/Recipe/json/">
       
       <link rel="icon" href="../../../../custom/icons/pencil.svg">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
     
     
       
-        <title>itertools - おもむろにメモ書き</title>
+        <title>json - おもむろにメモ書き</title>
       
     
     
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#itertools" class="md-skip">
+        <a href="#json" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              itertools
+              json
             
           </span>
         </div>
@@ -331,6 +331,22 @@
     <li class="md-tabs__item">
       <a href="../../../" class="md-tabs__link md-tabs__link--active">
         Python
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../SQL/basic_syntax/" class="md-tabs__link">
+        SQL
       </a>
     </li>
   
@@ -2408,23 +2424,281 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3_2" type="checkbox" id="__nav_8_3_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3_2" type="checkbox" id="__nav_8_3_2" checked>
       
       
       
       
         <label class="md-nav__link" for="__nav_8_3_2">
+          Recipe
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Recipe" data-md-level="3">
+        <label class="md-nav__title" for="__nav_8_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Recipe
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../collections/" class="md-nav__link">
+        collections
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../csv/" class="md-nav__link">
+        CSV
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data_cheat_sheet/" class="md-nav__link">
+        よく使うデータ形式
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../itertools/" class="md-nav__link">
+        itertools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jinja/" class="md-nav__link">
+        jinja
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          json
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        json
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#loads" class="md-nav__link">
+    loads()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load" class="md-nav__link">
+    load()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dumps" class="md-nav__link">
+    dumps()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dump" class="md-nav__link">
+    dump()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json_1" class="md-nav__link">
+    複雑なJSON
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../loggging/" class="md-nav__link">
+        logging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../re_module/" class="md-nav__link">
+        re
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../regex/" class="md-nav__link">
+        regex
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sqlite3/" class="md-nav__link">
+        sqlite3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../yaml/" class="md-nav__link">
+        YAML ファイルの取り扱い
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3_3" type="checkbox" id="__nav_8_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_3_3">
           TTP
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="TTP" data-md-level="3">
-        <label class="md-nav__title" for="__nav_8_3_2">
+        <label class="md-nav__title" for="__nav_8_3_3">
           <span class="md-nav__icon md-icon"></span>
           TTP
         </label>
@@ -2502,18 +2776,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3_3" type="checkbox" id="__nav_8_3_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3_4" type="checkbox" id="__nav_8_3_4" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_8_3_3">
+        <label class="md-nav__link" for="__nav_8_3_4">
           TextFSM
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="TextFSM" data-md-level="3">
-        <label class="md-nav__title" for="__nav_8_3_3">
+        <label class="md-nav__title" for="__nav_8_3_4">
           <span class="md-nav__icon md-icon"></span>
           TextFSM
         </label>
@@ -2583,236 +2857,6 @@
     <li class="md-nav__item">
       <a href="../../TextFSM/sample%20_template_bgp_neighbor/" class="md-nav__link">
         sample template bgp neighbor
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3_4" type="checkbox" id="__nav_8_3_4" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_8_3_4">
-          Various
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Various" data-md-level="3">
-        <label class="md-nav__title" for="__nav_8_3_4">
-          <span class="md-nav__icon md-icon"></span>
-          Various
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../collections/" class="md-nav__link">
-        collections
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../csv/" class="md-nav__link">
-        CSV
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data_cheat_sheet/" class="md-nav__link">
-        よく使うデータ形式
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          itertools
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        itertools
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#groupby" class="md-nav__link">
-    .groupby
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../jinja/" class="md-nav__link">
-        jinja
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../json/" class="md-nav__link">
-        json
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../loggging/" class="md-nav__link">
-        logging
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../re_module/" class="md-nav__link">
-        re
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../regex/" class="md-nav__link">
-        regex
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../sqlite3/" class="md-nav__link">
-        sqlite3
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../yaml/" class="md-nav__link">
-        YAML ファイルの取り扱い
       </a>
     </li>
   
@@ -4364,12 +4408,74 @@
       
       
         <label class="md-nav__link" for="__nav_9">
+          SQL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SQL" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          SQL
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../SQL/basic_syntax/" class="md-nav__link">
+        SQL 基本構文
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../SQL/reference/" class="md-nav__link">
+        参照サイト
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
           VSCode
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="VSCode" data-md-level="1">
-        <label class="md-nav__title" for="__nav_9">
+        <label class="md-nav__title" for="__nav_10">
           <span class="md-nav__icon md-icon"></span>
           VSCode
         </label>
@@ -4464,8 +4570,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#groupby" class="md-nav__link">
-    .groupby
+  <a href="#loads" class="md-nav__link">
+    loads()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#load" class="md-nav__link">
+    load()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dumps" class="md-nav__link">
+    dumps()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dump" class="md-nav__link">
+    dump()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json_1" class="md-nav__link">
+    複雑なJSON
   </a>
   
 </li>
@@ -4482,18 +4616,97 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/Python/Data/Various/itertools.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/Python/Data/Recipe/json.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="itertools">itertools<a class="headerlink" href="#itertools" title="Permanent link">#</a></h1>
-<h3 id="groupby">.groupby<a class="headerlink" href="#groupby" title="Permanent link">#</a></h3>
+<h1 id="json">json<a class="headerlink" href="#json" title="Permanent link">#</a></h1>
+<p><a href="https://docs.python.org/ja/3/library/json.html">json --- JSON エンコーダおよびデコーダ</a></p>
+<p>python でjson ファイルを扱うには標準モジュールの <code>json</code> を使用</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">json</span>
+</code></pre></div>
+<h3 id="loads">loads()<a class="headerlink" href="#loads" title="Permanent link">#</a></h3>
+<p>JSON形式の文字列を辞書として読み込むにはjson.loads()関数を使用。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="s2">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="s2">    &quot;hostnames&quot;:[&quot;Router1&quot;,&quot;Router2&quot;,&quot;Router3&quot;],</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="s2">    &quot;interfaces&quot;:[&quot;Gi0/0/0/0&quot;,&quot;Gi0/0/0/1&quot;,&quot;Gi0/0/0/2&quot;],</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="s2">    &quot;location&quot;:[</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="s2">        {&quot;Japan&quot;:&quot;Tokyo&quot;},</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="s2">        {&quot;USA&quot;:&quot;NewYork&quot;}</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="s2">    ]</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="s2">}</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+</code></pre></div>
+<h3 id="load">load()<a class="headerlink" href="#load" title="Permanent link">#</a></h3>
+<p>JSONファイルを辞書として読み込むには<code>json.load()</code>を使用する。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+</code></pre></div>
+<h3 id="dumps">dumps()<a class="headerlink" href="#dumps" title="Permanent link">#</a></h3>
+<p>辞書をJSON形式の文字列(str)として出力するにはjson.dumps()を使用。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span> <span class="nn">json</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="s2">&quot;hostnames&quot;</span><span class="p">:[</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        <span class="s2">&quot;Router1&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        <span class="s2">&quot;Router2&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        <span class="s2">&quot;Router3&quot;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>        <span class="p">],</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="s2">&quot;interfaces&quot;</span><span class="p">:[</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>        <span class="s2">&quot;Gi0/0/0/0&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        <span class="s2">&quot;Gi0/0/0/1&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        <span class="s2">&quot;Gi0/0/0/2&quot;</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        <span class="p">],</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    <span class="s2">&quot;location&quot;</span><span class="p">:[</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>        <span class="p">{</span><span class="s2">&quot;Japan&quot;</span><span class="p">:</span><span class="s2">&quot;Tokyo&quot;</span><span class="p">},</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>        <span class="p">{</span><span class="s2">&quot;USA&quot;</span><span class="p">:</span><span class="s2">&quot;Newyork&quot;</span><span class="p">}</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>        <span class="p">]</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    <span class="p">}</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="n">json_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="nb">print</span><span class="p">(</span><span class="n">json_data</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="dump">dump()<a class="headerlink" href="#dump" title="Permanent link">#</a></h3>
+<p>辞書をJSONファイルとして保存するには json.dump() を使用。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span> <span class="nn">json</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="s2">&quot;hostnames&quot;</span><span class="p">:[</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>        <span class="s2">&quot;Router1&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        <span class="s2">&quot;Router2&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>        <span class="s2">&quot;Router3&quot;</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        <span class="p">],</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="s2">&quot;interfaces&quot;</span><span class="p">:[</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>        <span class="s2">&quot;Gi0/0/0/0&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>        <span class="s2">&quot;Gi0/0/0/1&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>        <span class="s2">&quot;Gi0/0/0/2&quot;</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>        <span class="p">],</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    <span class="s2">&quot;location&quot;</span><span class="p">:[</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>        <span class="p">{</span><span class="s2">&quot;Japan&quot;</span><span class="p">:</span><span class="s2">&quot;Tokyo&quot;</span><span class="p">},</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>        <span class="p">{</span><span class="s2">&quot;USA&quot;</span><span class="p">:</span><span class="s2">&quot;Newyork&quot;</span><span class="p">}</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>        <span class="p">]</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>    <span class="p">}</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;sample.json&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">memo</p>
+<p>json.dump() に引数indent (文字数) を渡すと要素数ごとに改行・インデントされる</p>
+</div>
+<h2 id="json_1">複雑なJSON<a class="headerlink" href="#json_1" title="Permanent link">#</a></h2>
 <ul>
-<li><a href="https://note.nkmk.me/python-itertools-groupby/">note.nkmk.me - Pythonでリストの連続する同じ値の要素をグループ化（itertools.groupby）</a></li>
-<li><a href="https://docs.python.org/ja/3/library/itertools.html#itertools.groupby">Python - itertools.groupby</a></li>
-<li><a href="https://qiita.com/propella/items/a9a32b878c77222630ae"></a></li>
+<li><a href="https://qiita.com/saka2jp/items/3b138d3ebbdaa873eaa5">複雑なJSONから特定のデータを取り出す</a></li>
 </ul>
 
               
@@ -4513,7 +4726,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../data_cheat_sheet/" class="md-footer__link md-footer__link--prev" aria-label="Previous: よく使うデータ形式" rel="prev">
+        <a href="../jinja/" class="md-footer__link md-footer__link--prev" aria-label="Previous: jinja" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -4522,20 +4735,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              よく使うデータ形式
+              jinja
             </div>
           </div>
         </a>
       
       
         
-        <a href="../jinja/" class="md-footer__link md-footer__link--next" aria-label="Next: jinja" rel="next">
+        <a href="../loggging/" class="md-footer__link md-footer__link--next" aria-label="Next: logging" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              jinja
+              logging
             </div>
           </div>
           <div class="md-footer__button md-icon">

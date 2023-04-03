@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://omomuroni.github.io/Python/Data/Various/sqlite3/">
+        <link rel="canonical" href="https://omomuroni.github.io/Python/Data/Recipe/jinja/">
       
       <link rel="icon" href="../../../../custom/icons/pencil.svg">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
     
     
       
-        <title>sqlite3 - おもむろにメモ書き</title>
+        <title>jinja - おもむろにメモ書き</title>
       
     
     
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sqlite3" class="md-skip">
+        <a href="#jinja" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              sqlite3
+              jinja
             
           </span>
         </div>
@@ -331,6 +331,22 @@
     <li class="md-tabs__item">
       <a href="../../../" class="md-tabs__link md-tabs__link--active">
         Python
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../SQL/basic_syntax/" class="md-tabs__link">
+        SQL
       </a>
     </li>
   
@@ -2408,23 +2424,350 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3_2" type="checkbox" id="__nav_8_3_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3_2" type="checkbox" id="__nav_8_3_2" checked>
       
       
       
       
         <label class="md-nav__link" for="__nav_8_3_2">
+          Recipe
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Recipe" data-md-level="3">
+        <label class="md-nav__title" for="__nav_8_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Recipe
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../collections/" class="md-nav__link">
+        collections
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../csv/" class="md-nav__link">
+        CSV
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data_cheat_sheet/" class="md-nav__link">
+        よく使うデータ形式
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../itertools/" class="md-nav__link">
+        itertools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          jinja
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        jinja
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    基本的な使い方1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    基本的な使い方2
+  </a>
+  
+    <nav class="md-nav" aria-label="基本的な使い方2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    空白の扱い
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    特殊文字のエスケープ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    コメント
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    変数定義
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    演算子
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    変数のインクリメント
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    条件文
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Pythonビルトインのメソッドを使う
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    ビルトインフィルター
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    カスタムフィルター
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#csv" class="md-nav__link">
+    csvとの組み合わせ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other" class="md-nav__link">
+    Other
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../json/" class="md-nav__link">
+        json
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../loggging/" class="md-nav__link">
+        logging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../re_module/" class="md-nav__link">
+        re
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../regex/" class="md-nav__link">
+        regex
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sqlite3/" class="md-nav__link">
+        sqlite3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../yaml/" class="md-nav__link">
+        YAML ファイルの取り扱い
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3_3" type="checkbox" id="__nav_8_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_3_3">
           TTP
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="TTP" data-md-level="3">
-        <label class="md-nav__title" for="__nav_8_3_2">
+        <label class="md-nav__title" for="__nav_8_3_3">
           <span class="md-nav__icon md-icon"></span>
           TTP
         </label>
@@ -2502,18 +2845,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3_3" type="checkbox" id="__nav_8_3_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3_4" type="checkbox" id="__nav_8_3_4" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_8_3_3">
+        <label class="md-nav__link" for="__nav_8_3_4">
           TextFSM
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="TextFSM" data-md-level="3">
-        <label class="md-nav__title" for="__nav_8_3_3">
+        <label class="md-nav__title" for="__nav_8_3_4">
           <span class="md-nav__icon md-icon"></span>
           TextFSM
         </label>
@@ -2583,271 +2926,6 @@
     <li class="md-nav__item">
       <a href="../../TextFSM/sample%20_template_bgp_neighbor/" class="md-nav__link">
         sample template bgp neighbor
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3_4" type="checkbox" id="__nav_8_3_4" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_8_3_4">
-          Various
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Various" data-md-level="3">
-        <label class="md-nav__title" for="__nav_8_3_4">
-          <span class="md-nav__icon md-icon"></span>
-          Various
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../collections/" class="md-nav__link">
-        collections
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../csv/" class="md-nav__link">
-        CSV
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data_cheat_sheet/" class="md-nav__link">
-        よく使うデータ形式
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../itertools/" class="md-nav__link">
-        itertools
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../jinja/" class="md-nav__link">
-        jinja
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../json/" class="md-nav__link">
-        json
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../loggging/" class="md-nav__link">
-        logging
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../re_module/" class="md-nav__link">
-        re
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../regex/" class="md-nav__link">
-        regex
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          sqlite3
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        sqlite3
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    検索
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    追加
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    削除
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#csv" class="md-nav__link">
-    CSV ファイルを追加
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#json" class="md-nav__link">
-    JSON ファイルを追加
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    条件に応じてデータを追加
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../yaml/" class="md-nav__link">
-        YAML ファイルの取り扱い
       </a>
     </li>
   
@@ -4399,12 +4477,74 @@
       
       
         <label class="md-nav__link" for="__nav_9">
+          SQL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SQL" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          SQL
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../SQL/basic_syntax/" class="md-nav__link">
+        SQL 基本構文
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../SQL/reference/" class="md-nav__link">
+        参照サイト
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
           VSCode
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="VSCode" data-md-level="1">
-        <label class="md-nav__title" for="__nav_9">
+        <label class="md-nav__title" for="__nav_10">
           <span class="md-nav__icon md-icon"></span>
           VSCode
         </label>
@@ -4499,43 +4639,105 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    基本的な使い方1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    基本的な使い方2
+  </a>
+  
+    <nav class="md-nav" aria-label="基本的な使い方2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    検索
+    空白の扱い
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    追加
+    特殊文字のエスケープ
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    削除
+    コメント
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    変数定義
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    演算子
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    変数のインクリメント
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    条件文
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Pythonビルトインのメソッドを使う
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    ビルトインフィルター
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    カスタムフィルター
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#csv" class="md-nav__link">
-    CSV ファイルを追加
+    csvとの組み合わせ
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#json" class="md-nav__link">
-    JSON ファイルを追加
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    条件に応じてデータを追加
+  <a href="#other" class="md-nav__link">
+    Other
   </a>
   
 </li>
@@ -4552,252 +4754,168 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/Python/Data/Various/sqlite3.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/Python/Data/Recipe/jinja.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="sqlite3">sqlite3<a class="headerlink" href="#sqlite3" title="Permanent link">#</a></h1>
-<p>PythonでSQLiteを使用するには、まずsqlite3ライブラリをインポートする必要があります。以下は、PythonでSQLiteを使用する基本的な手順です。</p>
-<ol>
-<li>
-<p>SQLiteデータベースに接続する
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">sqlite3</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># データベースに接続</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;example.db&#39;</span><span class="p">)</span>
-</code></pre></div></p>
+<h1 id="jinja">jinja<a class="headerlink" href="#jinja" title="Permanent link">#</a></h1>
+<ul>
+<li><a href="https://jinja.palletsprojects.com/en/3.1.x/">Jinja2 公式サイト</a> には以下のように説明されています。<blockquote>
+<p>Jinjaは、高速で表現力豊かで拡張可能なテンプレートエンジンです。テンプレート内の特別なプレースホルダーを使用すると、Python構文に似たコードを記述できます。次に、テンプレートにデータが渡され、最終的なドキュメントがレンダリングされます。</p>
+</blockquote>
 </li>
-<li>
-<p>テーブルを作成する
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a># カーソルオブジェクトを取得
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>cur = conn.cursor()
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a># テーブルを作成するSQL文を作成
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>create_table = &#39;&#39;&#39;CREATE TABLE IF NOT EXISTS users
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>                  (id INTEGER PRIMARY KEY, name TEXT, age INTEGER)&#39;&#39;&#39;
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a># SQL文を実行
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>cur.execute(create_table)
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a># 変更を保存
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>conn.commit()
-</code></pre></div></p>
-</li>
-<li>
-<p>データを挿入する
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># データを挿入するSQL文を作成</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">insert_data</span> <span class="o">=</span> <span class="s2">&quot;INSERT INTO users(id, name, age) VALUES (?, ?, ?)&quot;</span>
+<li>要するに テンプレートファイル内の <code>{{ 変数 }}</code>  の箇所を変換するテンプレートエンジンのことです。</li>
+<li>テキストベースのファイルであれば、何でもレンダリングする事ができます。</li>
+<li>必ずしもテンプレートの拡張子は.j2である必要はないですが、.j2としておいた方が管理しやすいです。</li>
+</ul>
+<h2 id="1">基本的な使い方1<a class="headerlink" href="#1" title="Permanent link">#</a></h2>
+<div class="highlight"><span class="filename">sample_jinja.py</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">jinja2</span> <span class="kn">import</span> <span class="n">Environment</span><span class="p">,</span> <span class="n">FileSystemLoader</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Mike&quot;</span><span class="p">}</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">env</span> <span class="o">=</span> <span class="n">Environment</span><span class="p">(</span><span class="n">loader</span><span class="o">=</span><span class="n">FileSystemLoader</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span><span class="n">trim_blocks</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">template</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">get_template</span><span class="p">(</span><span class="s2">&quot;sample.j2&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">result</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">sample.j2</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="x">Hi </span><span class="cp">{{</span> <span class="nv">name</span> <span class="cp">}}</span><span class="x"> !</span>
+</code></pre></div>
+<h2 id="2">基本的な使い方2<a class="headerlink" href="#2" title="Permanent link">#</a></h2>
+<p>NUM で数を指定してコンフィグを作成する
+Python 側で定義した変数は <code>{%  %}</code>文の中では <code>{{}}</code>で囲まずにそのまま記述すること</p>
+<div class="highlight"><span class="filename">Config 作成</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">jinja2</span> <span class="kn">import</span> <span class="n">Environment</span><span class="p">,</span> <span class="n">FileSystemLoader</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># パラメータを指定してSQL文を実行</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">insert_data</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># 変更を保存</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>データを取得する
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># データを取得するSQL文を作成</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">select_data</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM users&quot;</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># SQL文を実行</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">select_data</span><span class="p">)</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># 取得したデータを表示</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">():</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>データベースを閉じる
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a># カーソルを閉じる
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>cur.close()
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a># データベースを閉じる
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>conn.close()
-</code></pre></div></p>
-</li>
-</ol>
-<h2 id="_1">検索<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
-<p>データベースからデータを検索するには、SQLのSELECT文を使用します。以下は、PythonでSQLiteを使用してデータベースからデータを検索する方法の例です。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span> <span class="nn">sqlite3</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;NUM&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">}</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">env</span> <span class="o">=</span> <span class="n">Environment</span><span class="p">(</span><span class="n">loader</span><span class="o">=</span><span class="n">FileSystemLoader</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)),</span><span class="n">trim_blocks</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">template</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">get_template</span><span class="p">(</span><span class="s2">&quot;template/sample.j2&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">result</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;config/test.txt&#39;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">sample.j2</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">{%</span> <span class="k">for</span> <span class="nv">x</span> <span class="k">in</span> <span class="nv">range</span><span class="o">(</span><span class="nv">NUM</span><span class="o">)</span> <span class="cp">%}</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="x"> interface Te0/0/0/0.</span><span class="cp">{{</span><span class="nv">x</span><span class="cp">}}</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="x">  encapsuration dot1q </span><span class="cp">{{</span><span class="nv">x</span><span class="cp">}}</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+</code></pre></div>
+<h3 id="_1">空白の扱い<a class="headerlink" href="#_1" title="Permanent link">#</a></h3>
+<ul>
+<li><code>{%- xxx -%}</code>のように <code>-</code>を付与すると空白を削除してレンダリングする。</li>
+<li>または <code>trim_blocks=True</code>,<code>lstrip_blocks=True</code>にて指定</li>
+</ul>
+<h3 id="_2">特殊文字のエスケープ<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<ul>
+<li>{%などを含んだ文字列等がある場合、エスケープしたい箇所をrawブロックで囲む</li>
+<li><code>'{{'</code>　のようにクォーテーション付きで文字列として記述すれば括弧としてレンダリングされる</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>{% raw %}
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>...
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>% endraw %}
+</code></pre></div>
+<h3 id="_3">コメント<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
+<p><code>{# コメント内容 #}</code>の形式で記述</p>
+<h3 id="_4">変数定義<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
+<ul>
+<li>str型はシングルクォーテーションもしくはダブルクォーテーションで囲むこと</li>
+<li>bool型・int型などはそのままでOK</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">jinja2</span> <span class="kn">import</span> <span class="n">Template</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1"># データベースに接続</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;example.db&#39;</span><span class="p">)</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c1"># カーソルオブジェクトを取得</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="c1"># SELECT文を作成する</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="n">select_data</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM users WHERE age &gt;= ?&quot;</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="c1"># パラメータを指定してSQL文を実行</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">select_data</span><span class="p">,</span> <span class="p">(</span><span class="mi">20</span><span class="p">,))</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="c1"># 取得したデータを表示</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">():</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>
-<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="c1"># カーソルを閉じる</span>
-<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="n">cur</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>
-<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="c1"># データベースを閉じる</span>
-<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">config</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="s2">&quot;{</span><span class="si">% s</span><span class="s2">et description = &#39;TEST&#39; %}&quot;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="s1">&#39;interface GigabitEthernet0/0/0/0</span><span class="se">\n</span><span class="s1">&#39;</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="s1">&#39; description {{ description }}</span><span class="se">\n</span><span class="s1">&#39;</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="p">)</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="n">template</span><span class="p">:</span> <span class="n">Template</span> <span class="o">=</span> <span class="n">Template</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="n">rendered_cfg</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="nb">print</span><span class="p">(</span><span class="n">rendered_cfg</span><span class="p">)</span>
 </code></pre></div>
-<p>上記の例では、年齢が20歳以上のユーザーを検索しています。SQLのWHERE句を使用して、検索条件を指定し、パラメータを指定してSQL文を実行します。
-SQL文の結果は、fetchall()メソッドを使用して取得し、ループを使用してデータを表示します。</p>
-<h2 id="_2">追加<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
-<p>データベースにデータを追加するには、SQLのINSERT文を使用します。以下は、PythonでSQLiteを使用してデータベースにデータを追加する方法の例です。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">import</span> <span class="nn">sqlite3</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;example.db&#39;</span><span class="p">)</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1"># INSERT文を作成する</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="n">insert_data</span> <span class="o">=</span> <span class="s2">&quot;INSERT INTO users (name, age) VALUES (?, ?)&quot;</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="c1"># パラメータを指定してSQL文を実行</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">insert_data</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="c1"># 変更を保存</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="n">cur</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<h3 id="_5">演算子<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
+<p><code>"{% set 変数名 = 式 %}"</code> にて演算子を記述する事が可能</p>
+<ul>
+<li>加算: <code>+</code></li>
+<li>減算: <code>-</code></li>
+<li>除算: <code>/</code></li>
+<li>除算（切り捨て）: <code>//</code></li>
+<li>剰余: <code>%</code></li>
+<li>乗算: <code>*</code></li>
+<li>累乗: <code>**</code></li>
+</ul>
+<h3 id="_6">変数のインクリメント<a class="headerlink" href="#_6" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>{% set ns = namespace(cnt=1) %}
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>{% for i in range(10) %}
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>{{ ns.cnt }}
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>{% set ns.cnt = ns.cnt + 1 %}
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>{% endfor %}
 </code></pre></div>
-<p>上記の例では、名前がJohnで年齢が30歳のユーザーをデータベースに追加しています。
-SQLのINSERT文を使用して、データを追加し、パラメータを指定してSQL文を実行します。変更を保存するために、commit()メソッドを使用します。</p>
-<h2 id="_3">削除<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
-<p>データベースからデータを削除するには、SQLのDELETE文を使用します。以下は、PythonでSQLiteを使用してデータベースからデータを削除する方法の例です。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">import</span> <span class="nn">sqlite3</span>
+<h3 id="_7">条件文<a class="headerlink" href="#_7" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>&quot;{% if 条件式 %}&quot;
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;example.db&#39;</span><span class="p">)</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1"># DELETE文を作成する</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="n">delete_data</span> <span class="o">=</span> <span class="s2">&quot;DELETE FROM users WHERE age &lt; ?&quot;</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="c1"># パラメータを指定してSQL文を実行</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">delete_data</span><span class="p">,</span> <span class="p">(</span><span class="mi">20</span><span class="p">,))</span>
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="c1"># 変更を保存</span>
-<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="n">cur</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>&quot;{% endif %}&quot;
 </code></pre></div>
-<h2 id="csv">CSV ファイルを追加<a class="headerlink" href="#csv" title="Permanent link">#</a></h2>
-<p>CSVファイルのデータをデータベースに追加するには、Pythonの標準ライブラリのcsvモジュールを使用してCSVファイルを読み込み、
-SQLiteを使用してデータベースにデータを追加します。以下は、PythonでCSVファイルのデータをデータベースに追加する方法の例です。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">import</span> <span class="nn">csv</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1"># CSVファイルを読み込む</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;example.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="n">data</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">reader</span><span class="p">)</span>
+<p>以下の条件演算子が使用可能</p>
+<ul>
+<li>等値: <code>==</code></li>
+<li>非等値: <code>!=</code></li>
+<li>超過: <code>&gt;</code></li>
+<li>以上: <code>&gt;=</code></li>
+<li>未満: <code>&lt;</code></li>
+<li>以下: <code>&lt;=</code></li>
+<li>AND条件（複数の条件を全て満たした場合にTrue）: <code>and</code></li>
+<li>OR条件（いずれかの条件を満たした場合にTrue）: <code>or</code></li>
+<li>否定: <code>not</code></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>None を使用する場合は　<code>none</code>と記述すること 
+例:"{% if var is none %}"</p>
+</div>
+<h3 id="python">Pythonビルトインのメソッドを使う<a class="headerlink" href="#python" title="Permanent link">#</a></h3>
+<p><code>{{ 文字列.lower() }}</code>のようにpython ビルトインメソッドの記述が可能</p>
+<h3 id="_8">ビルトインフィルター<a class="headerlink" href="#_8" title="Permanent link">#</a></h3>
+<p><a href="https://jinja.palletsprojects.com/en/3.0.x/templates/#list-of-builtin-filters">Jinja2 - List of Builtin Filters</a>を参照</p>
+<h3 id="_9">カスタムフィルター<a class="headerlink" href="#_9" title="Permanent link">#</a></h3>
+<p>フィルターをカスタマイズすることも可能</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>def add_int(target, number):
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    return target += number 
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>env.filters[&#39;add_int&#39;] = add_int
 </code></pre></div>
-<p>上記の例では、example.csvという名前のCSVファイルを読み込んでいます。csvモジュールのreader()関数を使用してCSVファイルを読み込み、
-list()関数を使用してリストに変換しています。data変数には、CSVファイルの内容がリスト形式で格納されます。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">import</span> <span class="nn">sqlite3</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;example.db&#39;</span><span class="p">)</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="c1"># データを追加するSQL文を作成する</span>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="n">insert_data</span> <span class="o">=</span> <span class="s2">&quot;INSERT INTO users (name, age) VALUES (?, ?)&quot;</span>
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="c1"># CSVファイルから取得したデータをデータベースに追加する</span>
-<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
-<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">insert_data</span><span class="p">,</span> <span class="n">row</span><span class="p">)</span>
-<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>
-<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="c1"># 変更を保存</span>
-<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="n">cur</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<h2 id="csv">csvとの組み合わせ<a class="headerlink" href="#csv" title="Permanent link">#</a></h2>
+<p>以下プログラムはcsvファイルでパラメータを管理し、jinja のテンプレートを基に書き込みを行う</p>
+<ul>
+<li>params.csv: パラメーターが記載されたファイル</li>
+<li>template.j2: 書き込む内容が記述されたテンプレートファイル</li>
+<li>sample.py: サンプルプログラム</li>
+</ul>
+<div class="highlight"><span class="filename">sample.py</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">import</span> <span class="nn">csv</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kn">from</span> <span class="nn">jinja2</span> <span class="kn">import</span> <span class="n">Environment</span><span class="p">,</span> <span class="n">FileSystemLoader</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="n">env</span> <span class="o">=</span> <span class="n">Environment</span><span class="p">(</span><span class="n">loader</span><span class="o">=</span><span class="n">FileSystemLoader</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span><span class="n">trim_blocks</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="n">template</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">get_template</span><span class="p">(</span><span class="s2">&quot;template.j2&quot;</span><span class="p">)</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;params.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    <span class="n">csv_file</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>    <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">csv_file</span><span class="p">:</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>      <span class="n">result</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </code></pre></div>
-<p>上記の例では、CSVファイルから取得したデータをデータベースに追加しています。
-SQLのINSERT文を使用して、データを追加し、パラメータを指定してSQL文を実行します。
-forループを使用して、CSVファイルから取得したデータを順次処理しています。</p>
-<h2 id="json">JSON ファイルを追加<a class="headerlink" href="#json" title="Permanent link">#</a></h2>
-<p>JSONファイルのデータをデータベースに追加するには、Pythonの標準ライブラリのjsonモジュールを使用してJSONファイルを読み込み、SQLiteを使用してデータベースにデータを追加します。
-以下は、PythonでJSONファイルのデータをデータベースに追加する方法の例です。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>import json
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a># JSONファイルを読み込む
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>with open(&#39;example.json&#39;, &#39;r&#39;) as f:
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    data = json.load(f)
-</code></pre></div>
-<p>上記の例では、example.jsonという名前のJSONファイルを読み込んでいます。jsonモジュールのload()関数を使用してJSONファイルを読み込み、data変数に格納しています。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">import</span> <span class="nn">sqlite3</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;example.db&#39;</span><span class="p">)</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="c1"># データを追加するSQL文を作成する</span>
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="n">insert_data</span> <span class="o">=</span> <span class="s2">&quot;INSERT INTO users (name, age) VALUES (?, ?)&quot;</span>
-<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
-<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="c1"># JSONファイルから取得したデータをデータベースに追加する</span>
-<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
-<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>    <span class="n">name</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
-<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>    <span class="n">age</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
-<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">insert_data</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">))</span>
-<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>
-<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="c1"># 変更を保存</span>
-<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="n">cur</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</code></pre></div>
-<p>上記の例では、JSONファイルから取得したデータをデータベースに追加しています。
-SQLのINSERT文を使用して、データを追加し、パラメータを指定してSQL文を実行します。forループを使用して、JSONファイルから取得したデータを順次処理しています。</p>
-<h2 id="_4">条件に応じてデータを追加<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
-<p>データベースに値が存在した場合には、新しいデータを追加する代わりに、既存のデータを更新することが一般的です。
-以下は、PythonでSQLiteを使用して、データベースに値が存在したらデータを更新し、存在しない場合にはデータを追加する方法の例です。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">import</span> <span class="nn">sqlite3</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="c1"># データベースに接続</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;example.db&#39;</span><span class="p">)</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="c1"># カーソルオブジェクトを取得</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
-<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="c1"># データベースにデータを追加または更新する</span>
-<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="k">def</span> <span class="nf">add_data</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
-<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>    <span class="c1"># データベースに値が存在するかチェックする</span>
-<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM users WHERE name=?&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,))</span>
-<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>    <span class="n">row</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
-<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>
-<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>    <span class="k">if</span> <span class="n">row</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>        <span class="c1"># データが存在しない場合は追加する</span>
-<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>        <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO users (name, age) VALUES (?, ?)&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">))</span>
-<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;新しいデータを追加しました。&quot;</span><span class="p">)</span>
-<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>    <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>        <span class="c1"># データが存在する場合は更新する</span>
-<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>        <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;UPDATE users SET age=? WHERE name=?&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">age</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span>
-<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;既存のデータを更新しました。&quot;</span><span class="p">)</span>
-<a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a>
-<a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a>    <span class="c1"># 変更を保存</span>
-<a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a>    <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-<a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a>
-<a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a><span class="c1"># データベースにデータを追加または更新する</span>
-<a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a><span class="n">add_data</span><span class="p">(</span><span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span> <span class="c1"># 新しいデータを追加しました。</span>
-<a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a><span class="n">add_data</span><span class="p">(</span><span class="s2">&quot;Mary&quot;</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span> <span class="c1"># 新しいデータを追加しました。</span>
-<a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a><span class="n">add_data</span><span class="p">(</span><span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="mi">35</span><span class="p">)</span> <span class="c1"># 既存のデータを更新しました。</span>
-<a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a>
-<a id="__codelineno-12-32" name="__codelineno-12-32" href="#__codelineno-12-32"></a><span class="c1"># カーソルを閉じる</span>
-<a id="__codelineno-12-33" name="__codelineno-12-33" href="#__codelineno-12-33"></a><span class="n">cur</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<a id="__codelineno-12-34" name="__codelineno-12-34" href="#__codelineno-12-34"></a>
-<a id="__codelineno-12-35" name="__codelineno-12-35" href="#__codelineno-12-35"></a><span class="c1"># データベースを閉じる</span>
-<a id="__codelineno-12-36" name="__codelineno-12-36" href="#__codelineno-12-36"></a><span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</code></pre></div>
-<p>上記の例では、add_data()関数を定義して、データベースにデータを追加または更新する方法を実装しています。
-まず、SELECT文を使用して、データベースに値が存在するかどうかをチェックし、fetchone()メソッドを使用して結果を取得しています。
-次に、結果がNoneである場合は、INSERT文を使用して新しいデータを追加し、そうでない場合は、UPDATE文を使用して既存のデータを更新します。
-最後に、変更を保存するためにcommit()メソッドを呼び出しています。</p>
+<h2 id="other">Other<a class="headerlink" href="#other" title="Permanent link">#</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><a href="https://pawamoy.github.io/posts/how-to-deal-with-jinja2-spacing/">Jinja2 テンプレートでスペースを処理する方法</a></p>
+</div>
 
               
             </article>
@@ -4816,7 +4934,7 @@ SQLのINSERT文を使用して、データを追加し、パラメータを指�
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../regex/" class="md-footer__link md-footer__link--prev" aria-label="Previous: regex" rel="prev">
+        <a href="../itertools/" class="md-footer__link md-footer__link--prev" aria-label="Previous: itertools" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -4825,20 +4943,20 @@ SQLのINSERT文を使用して、データを追加し、パラメータを指�
               <span class="md-footer__direction">
                 Previous
               </span>
-              regex
+              itertools
             </div>
           </div>
         </a>
       
       
         
-        <a href="../yaml/" class="md-footer__link md-footer__link--next" aria-label="Next: YAML ファイルの取り扱い" rel="next">
+        <a href="../json/" class="md-footer__link md-footer__link--next" aria-label="Next: json" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              YAML ファイルの取り扱い
+              json
             </div>
           </div>
           <div class="md-footer__button md-icon">
