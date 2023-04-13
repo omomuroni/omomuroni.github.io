@@ -5157,33 +5157,85 @@
 <a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>    <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 <a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Script execution time:&#39;</span><span class="p">,</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span>
 </code></pre></div>
+<div class="highlight"><span class="filename">sample.py</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">telnetlib</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">import</span> <span class="nn">multiprocessing</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">devices</span> <span class="o">=</span> <span class="p">[</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="p">{</span><span class="s1">&#39;host&#39;</span><span class="p">:</span> <span class="s1">&#39;device1&#39;</span><span class="p">,</span> <span class="s1">&#39;ip&#39;</span><span class="p">:</span> <span class="s1">&#39;192.168.126.132&#39;</span><span class="p">,</span> <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="s1">&#39;cisco&#39;</span><span class="p">,</span> <span class="s1">&#39;password&#39;</span><span class="p">:</span> <span class="s1">&#39;cisco123&#39;</span><span class="p">},</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="p">{</span><span class="s1">&#39;host&#39;</span><span class="p">:</span> <span class="s1">&#39;device1&#39;</span><span class="p">,</span> <span class="s1">&#39;ip&#39;</span><span class="p">:</span> <span class="s1">&#39;192.168.126.133&#39;</span><span class="p">,</span> <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="s1">&#39;cisco&#39;</span><span class="p">,</span> <span class="s1">&#39;password&#39;</span><span class="p">:</span> <span class="s1">&#39;cisco&#39;</span><span class="p">},</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="p">{</span><span class="s1">&#39;host&#39;</span><span class="p">:</span> <span class="s1">&#39;device1&#39;</span><span class="p">,</span> <span class="s1">&#39;ip&#39;</span><span class="p">:</span> <span class="s1">&#39;192.168.126.134&#39;</span><span class="p">,</span> <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="s1">&#39;cisco&#39;</span><span class="p">,</span> <span class="s1">&#39;password&#39;</span><span class="p">:</span> <span class="s1">&#39;cisco&#39;</span><span class="p">},</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">]</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="k">def</span> <span class="nf">get_config</span><span class="p">(</span><span class="n">device</span><span class="p">):</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    <span class="c1"># Telnet to device</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    <span class="n">ip</span> <span class="o">=</span> <span class="n">device</span><span class="p">[</span><span class="s1">&#39;ip&#39;</span><span class="p">]</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    <span class="n">username</span> <span class="o">=</span> <span class="n">device</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">]</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    <span class="n">password</span> <span class="o">=</span> <span class="n">device</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;try connect to </span><span class="si">{</span><span class="n">ip</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>    <span class="n">tn</span> <span class="o">=</span> <span class="n">telnetlib</span><span class="o">.</span><span class="n">Telnet</span><span class="p">(</span><span class="n">ip</span><span class="p">)</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>    <span class="c1"># Login</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">read_until</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;Username:&#39;</span><span class="p">)</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">username</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="sa">b</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">read_until</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;Password:&#39;</span><span class="p">)</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">password</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="sa">b</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">read_until</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;#&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">)</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Logged in  </span><span class="si">{</span><span class="n">ip</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>    <span class="c1"># tn.read_until(b&quot;#&quot;).decode(&#39;ascii&#39;)</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>    <span class="c1"># Get config</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>    <span class="c1"># tn.write(b&quot;show running-config\n&quot;)</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>    <span class="c1"># config = tn.read_until(b&quot;end\n&quot;).decode(&#39;ascii&#39;)</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>    <span class="c1"># print(config)</span>
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>    <span class="c1"># Save config to file</span>
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>    <span class="c1"># with open(device[&#39;host&#39;] + &#39;.txt&#39;, &#39;w&#39;) as f:</span>
+<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>    <span class="c1">#     f.write(config)</span>
+<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>
+<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>    <span class="c1"># Close telnet connection</span>
+<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>
+<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>    <span class="c1"># Create processes for each device</span>
+<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>    <span class="n">processes</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>    <span class="k">for</span> <span class="n">device</span> <span class="ow">in</span> <span class="n">devices</span><span class="p">:</span>
+<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>        <span class="n">p</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">get_config</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">device</span><span class="p">,))</span>
+<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a>        <span class="n">p</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>        <span class="n">processes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a>
+<a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a>    <span class="c1"># Wait for all processes to complete</span>
+<a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a>    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">processes</span><span class="p">:</span>
+<a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a>        <span class="n">p</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+</code></pre></div>
 <h2 id="multiprocess">multiprocess<a class="headerlink" href="#multiprocess" title="Permanent link">#</a></h2>
 <p>Pythonを使用してCisco機器にログインし、コンフィグを取得するには、パラメータ化されたTelnetlibモジュールを使用するのが一般的です。
 以下は、Python 3.xでマルチプロセスを使用してCisco機器から設定を取得する簡単な例です。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>import telnetlib
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>import multiprocessing
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>def get_config(ip):
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    tn = telnetlib.Telnet(ip)
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    tn.read_until(b&quot;Username: &quot;)
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    tn.write(b&quot;&lt;username&gt;\n&quot;)
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    tn.read_until(b&quot;Password: &quot;)
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    tn.write(b&quot;&lt;password&gt;\n&quot;)
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    tn.write(b&quot;enable\n&quot;)
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    tn.read_until(b&quot;Password: &quot;)
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    tn.write(b&quot;&lt;enable_password&gt;\n&quot;)
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    tn.write(b&quot;terminal length 0\n&quot;)
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    tn.write(b&quot;show running-config\n&quot;)
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    config = tn.read_until(b&quot;#&quot;).decode(&quot;ascii&quot;)
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    tn.write(b&quot;exit\n&quot;)
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    tn.close()
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>    with open(f&quot;{ip}.txt&quot;, &quot;w&quot;) as f:
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>        f.write(config)
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>if __name__ == &quot;__main__&quot;:
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>    ips = [&quot;192.168.1.1&quot;, &quot;192.168.1.2&quot;, &quot;192.168.1.3&quot;]
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>    with multiprocessing.Pool(processes=len(ips)) as pool:
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>        pool.map(get_config, ips)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>import telnetlib
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>import multiprocessing
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>def get_config(ip):
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    tn = telnetlib.Telnet(ip)
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    tn.read_until(b&quot;Username: &quot;)
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    tn.write(b&quot;&lt;username&gt;\n&quot;)
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    tn.read_until(b&quot;Password: &quot;)
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    tn.write(b&quot;&lt;password&gt;\n&quot;)
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    tn.write(b&quot;enable\n&quot;)
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    tn.read_until(b&quot;Password: &quot;)
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    tn.write(b&quot;&lt;enable_password&gt;\n&quot;)
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    tn.write(b&quot;terminal length 0\n&quot;)
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    tn.write(b&quot;show running-config\n&quot;)
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>    config = tn.read_until(b&quot;#&quot;).decode(&quot;ascii&quot;)
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    tn.write(b&quot;exit\n&quot;)
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    tn.close()
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    with open(f&quot;{ip}.txt&quot;, &quot;w&quot;) as f:
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>        f.write(config)
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>if __name__ == &quot;__main__&quot;:
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>    ips = [&quot;192.168.1.1&quot;, &quot;192.168.1.2&quot;, &quot;192.168.1.3&quot;]
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>    with multiprocessing.Pool(processes=len(ips)) as pool:
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>        pool.map(get_config, ips)
 </code></pre></div>
 <p>上記の例では、get_config関数が各IPアドレスごとに並列に呼び出され、Telnet接続が確立されます。telnetlibを使用して、
 認証情報を入力し、show running-configコマンドを実行して機器の設定を取得します。
@@ -5193,34 +5245,34 @@
 <h2 id="_1">データベースに保存<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <p>取得したCisco機器のコンフィグをデータベースに保存するには、Pythonの標準ライブラリであるsqlite3を使用することができます。
 以下は、先ほどの例にSQLite3を組み込んだコードの例です。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span> <span class="nn">telnetlib</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">import</span> <span class="nn">multiprocessing</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">import</span> <span class="nn">sqlite3</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">def</span> <span class="nf">get_config</span><span class="p">(</span><span class="n">ip</span><span class="p">):</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">tn</span> <span class="o">=</span> <span class="n">telnetlib</span><span class="o">.</span><span class="n">Telnet</span><span class="p">(</span><span class="n">ip</span><span class="p">)</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">read_until</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;Username: &quot;</span><span class="p">)</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;&lt;username&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">read_until</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;Password: &quot;</span><span class="p">)</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;&lt;password&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;enable</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">read_until</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;Password: &quot;</span><span class="p">)</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;&lt;enable_password&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;terminal length 0</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;show running-config</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    <span class="n">config</span> <span class="o">=</span> <span class="n">tn</span><span class="o">.</span><span class="n">read_until</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;#&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;ascii&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;exit</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    <span class="k">with</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;configs.db&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>        <span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>        <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE IF NOT EXISTS configs (id INTEGER PRIMARY KEY AUTOINCREMENT, ip TEXT, config TEXT)&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>        <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO configs (ip, config) VALUES (?, ?)&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">ip</span><span class="p">,</span> <span class="n">config</span><span class="p">))</span>
-<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>        <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>
-<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>    <span class="n">ips</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;192.168.1.1&quot;</span><span class="p">,</span> <span class="s2">&quot;192.168.1.2&quot;</span><span class="p">,</span> <span class="s2">&quot;192.168.1.3&quot;</span><span class="p">]</span>
-<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>    <span class="k">with</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Pool</span><span class="p">(</span><span class="n">processes</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">ips</span><span class="p">))</span> <span class="k">as</span> <span class="n">pool</span><span class="p">:</span>
-<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>        <span class="n">pool</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">get_config</span><span class="p">,</span> <span class="n">ips</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span> <span class="nn">telnetlib</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kn">import</span> <span class="nn">multiprocessing</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kn">import</span> <span class="nn">sqlite3</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">def</span> <span class="nf">get_config</span><span class="p">(</span><span class="n">ip</span><span class="p">):</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="n">tn</span> <span class="o">=</span> <span class="n">telnetlib</span><span class="o">.</span><span class="n">Telnet</span><span class="p">(</span><span class="n">ip</span><span class="p">)</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">read_until</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;Username: &quot;</span><span class="p">)</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;&lt;username&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">read_until</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;Password: &quot;</span><span class="p">)</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;&lt;password&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;enable</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">read_until</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;Password: &quot;</span><span class="p">)</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;&lt;enable_password&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;terminal length 0</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;show running-config</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>    <span class="n">config</span> <span class="o">=</span> <span class="n">tn</span><span class="o">.</span><span class="n">read_until</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;#&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;ascii&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;exit</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>    <span class="n">tn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>    <span class="k">with</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;configs.db&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>        <span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>        <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE IF NOT EXISTS configs (id INTEGER PRIMARY KEY AUTOINCREMENT, ip TEXT, config TEXT)&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>        <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO configs (ip, config) VALUES (?, ?)&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">ip</span><span class="p">,</span> <span class="n">config</span><span class="p">))</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>        <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>    <span class="n">ips</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;192.168.1.1&quot;</span><span class="p">,</span> <span class="s2">&quot;192.168.1.2&quot;</span><span class="p">,</span> <span class="s2">&quot;192.168.1.3&quot;</span><span class="p">]</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>    <span class="k">with</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Pool</span><span class="p">(</span><span class="n">processes</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">ips</span><span class="p">))</span> <span class="k">as</span> <span class="n">pool</span><span class="p">:</span>
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>        <span class="n">pool</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">get_config</span><span class="p">,</span> <span class="n">ips</span><span class="p">)</span>
 </code></pre></div>
 <p>上記の例では、SQLite3を使用してconfigs.dbという名前のデータベースを作成し、
 各IPアドレスのコンフィグをconfigsテーブルに挿入します。with文を使用してデータベース接続を確立し、
