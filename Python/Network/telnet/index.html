@@ -3647,6 +3647,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#junos-json" class="md-nav__link">
+    JUNOS json 形式を解析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     参考サイト
   </a>
@@ -5158,6 +5165,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#junos-json" class="md-nav__link">
+    JUNOS json 形式を解析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     参考サイト
   </a>
@@ -5478,6 +5492,58 @@ configsテーブルが存在しない場合は新しく作成されます。INSE
 <p>lambda x: x.startswith('PID:')は、引数xが"PID:"で始まるかどうかをチェックする無名関数を定義しています。</p>
 <p>最後に、next()関数を使用して、フィルターされた行の中で最初に見つかった行を取得しています。もし見つからなかった場合は、Noneを返します。</p>
 <p>つまり、このコードは、"PID:"で始まる行がある場合はその行を、ない場合はNoneを取得するために使われています。同様の方法で、"VID:"と"SN:"の情報を取得しています。</p>
+<p>!!! note ”改行の扱い"
+    Telnetプロトコルでは改行コードとして"\r\n"を使うため、Telnetセッション中にコマンドを送信する際、改行を表すために"\r\n"を使用する必要があります。
+    しかし、場合によっては、"\r\n"がコマンドの一部として解釈されてしまい、不正なコマンドとして扱われることがあります。</p>
+<div class="highlight"><pre><span></span><code>この問題を回避するには、以下の2つの方法があります。
+
+改行を表す文字列を&quot;\r\n&quot;ではなく、&quot;\n&quot;のみに変更する。
+例えば、以下のようにコマンドを送信する際に改行コードを&quot;\n&quot;に変更することができます。
+
+```
+tn.write(b&quot;show interfaces ge-0/0/0 | match input\n&quot;)
+```
+
+改行を表す文字列を&quot;\r\n&quot;にするが、コマンド末尾に空白文字列を付け足す。
+空白文字列は、&quot;\r\n&quot;の直後にスペースを追加することで表現することができます。例えば、以下のようにコマンドを送信することができます。
+
+
+```py
+tn.write(b&quot;show interfaces ge-0/0/0 | match input \r\n&quot;)
+```
+</code></pre></div>
+<h3 id="junos-json">JUNOS json 形式を解析<a class="headerlink" href="#junos-json" title="Permanent link">#</a></h3>
+<p>このコードでは、telnetlibを使用してJunosデバイスに接続し、show interfacesコマンドのJSON出力を取得します。
+次に、jsonモジュールを使用してJSON出力を解析し、各インタフェースの名前と速度を表示します。
+最後に、telnetセッションを終了します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">import</span> <span class="nn">telnetlib</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kn">import</span> <span class="nn">re</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="kn">import</span> <span class="nn">json</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c1"># Junosデバイスに接続する</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="n">tn</span> <span class="o">=</span> <span class="n">telnetlib</span><span class="o">.</span><span class="n">Telnet</span><span class="p">(</span><span class="s2">&quot;192.0.2.1&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="n">tn</span><span class="o">.</span><span class="n">read_until</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;login: &quot;</span><span class="p">)</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="n">tn</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;username</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="n">tn</span><span class="o">.</span><span class="n">read_until</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;Password: &quot;</span><span class="p">)</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="n">tn</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;password</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="c1"># show interfacesのJSON出力を取得する</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="n">tn</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;show interfaces | display json</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="n">output</span> <span class="o">=</span> <span class="n">tn</span><span class="o">.</span><span class="n">read_until</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;}&quot;</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="n">json_output</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">output</span> <span class="o">+</span> <span class="sa">b</span><span class="s2">&quot;}&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="c1"># JSON出力を解析する</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="n">interfaces</span> <span class="o">=</span> <span class="n">json_output</span><span class="p">[</span><span class="s1">&#39;interface-information&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;physical-interface&#39;</span><span class="p">]</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="k">for</span> <span class="n">interface</span> <span class="ow">in</span> <span class="n">interfaces</span><span class="p">:</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>    <span class="n">name</span> <span class="o">=</span> <span class="n">interface</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>    <span class="n">speed</span> <span class="o">=</span> <span class="n">interface</span><span class="p">[</span><span class="s1">&#39;speed&#39;</span><span class="p">]</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Interface </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1"> has speed </span><span class="si">{</span><span class="n">speed</span><span class="si">}</span><span class="s1">bps&#39;</span><span class="p">)</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>
+<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="c1"># Junosデバイスから切断する</span>
+<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="n">tn</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;exit</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="n">tn</span><span class="o">.</span><span class="n">read_all</span><span class="p">()</span>
+</code></pre></div>
 <h3 id="_4">参考サイト<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
 <blockquote>
 <ul>
