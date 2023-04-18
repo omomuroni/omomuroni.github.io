@@ -5474,7 +5474,8 @@ configsテーブルが存在しない場合は新しく作成されます。INSE
 <p><code>pid_line = next(filter(lambda x: x.startswith('PID:'), output.splitlines()), None)</code></p>
 <p>このコードは、出力された各行から、"PID:"で始まる行を取得するために使用されています。</p>
 <p>output.splitlines()は、出力文字列を改行コードで分割して、行のリストを作成します。</p>
-<p>filter(lambda x: x.startswith('PID:'), output.splitlines())は、上記の行のリストから、"PID:"で始まる行だけを抽出するフィルター関数を定義します。lambda x: x.startswith('PID:')は、引数xが"PID:"で始まるかどうかをチェックする無名関数を定義しています。</p>
+<p>filter(lambda x: x.startswith('PID:'), output.splitlines())は、上記の行のリストから、"PID:"で始まる行だけを抽出するフィルター関数を定義します。</p>
+<p>lambda x: x.startswith('PID:')は、引数xが"PID:"で始まるかどうかをチェックする無名関数を定義しています。</p>
 <p>最後に、next()関数を使用して、フィルターされた行の中で最初に見つかった行を取得しています。もし見つからなかった場合は、Noneを返します。</p>
 <p>つまり、このコードは、"PID:"で始まる行がある場合はその行を、ない場合はNoneを取得するために使われています。同様の方法で、"VID:"と"SN:"の情報を取得しています。</p>
 <h3 id="_4">参考サイト<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
