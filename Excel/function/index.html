@@ -1007,6 +1007,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    条件付き書式
+  </a>
+  
+    <nav class="md-nav" aria-label="条件付き書式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    その他便利な数式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5205,6 +5225,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    条件付き書式
+  </a>
+  
+    <nav class="md-nav" aria-label="条件付き書式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    その他便利な数式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5276,6 +5316,37 @@
 <p><a href="https://tech-vb.com/excel_function_unique_value_get_no_use_unique_func">【Excel関数】UNIQUE関数を使わずに重複しない一意の値を取り出す方法とは</a></p>
 </li>
 </ol>
+<h2 id="_2">条件付き書式<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<p>セルの値が列の中に含まれていない場合に色付けする条件付き書式の数式として、以下の式を使用することができます。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>=ISERROR(MATCH(A1, $B$1:$B$10, 0))
+</code></pre></div>
+<p>上記の式では、セルA1の値が、範囲B1:B10に含まれていない場合にTRUEを返します。
+この式を条件付き書式のルールに適用することで、セルの値が範囲に含まれていない場合に色を付けることができます。</p>
+<p>以下は、この式を使用した条件付き書式の設定方法です。</p>
+<p>条件付き書式を選択します。
+1. 「新しいルール」を選択します。
+2. 「使用する式を選択する」を選択します。
+3. 「書式する値を入力」に、上記の式を入力します。
+4. 「書式」を選択して、色を選択します。
+5. 「OK」をクリックして、条件付き書式を適用します。</p>
+<p>このようにすることで、セルの値が範囲に含まれていない場合に、条件付き書式によって色が付けられます。</p>
+<h3 id="_3">その他便利な数式<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
+<p>条件付き書式で使用すると便利な数式の例として、以下のようなものがあります。</p>
+<p>COUNTIF関数</p>
+<p>範囲内に指定した値がいくつ含まれているかを数える関数です。条件付き書式で、ある値の出現回数に応じてセルの色を変えたい場合に使えます。
+例: 「A1:A10」の範囲において、「B1」に入力された数値の出現回数に応じて色を変える場合、以下の式を使えます。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>=COUNTIF($A$1:$A$10,$B$1)&gt;0
+</code></pre></div>
+<p>IF関数</p>
+<p>条件分岐を行う関数です。ある条件を満たす場合にはAの色、満たさない場合にはBの色にするなど、条件に応じて異なる色を設定する場合に使えます。
+例: 「A1:A10」の範囲において、セルの値が100より大きい場合に赤色、それ以外の場合には黒色にしたい場合、以下の式を使えます。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>=IF(A1&gt;100,TRUE,FALSE)
+</code></pre></div>
+<p>SUM関数</p>
+<p>範囲内の数値の合計を計算する関数です。条件付き書式で、ある値が合計値の一定割合以上である場合にセルの色を変えたい場合に使えます。
+例: 「A1:A10」の範囲において、セルの値が合計値の30%以上である場合に赤色、それ以外の場合には黒色にしたい場合、以下の式を使えます。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>=A1/SUM($A$1:$A$10)&gt;=0.3
+</code></pre></div>
 
               
             </article>
