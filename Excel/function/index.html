@@ -1036,6 +1036,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/" class="md-nav__link">
+        参考サイト
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../useful_function/" class="md-nav__link">
+        よく使う関数
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -5309,13 +5337,20 @@
 <li>MATCH関数を使用して、COUNTIF関数で返される範囲の中で、最初に0に一致する行の位置を検索します。つまり、A2:A11の値のうち、まだ一意の値として表示されていない最初の値の位置を見つけます。</li>
 <li>INDEX関数を使用して、検索された位置にある一意の値を返します。つまり、重複を除いたA列の値の中で、最初に現れた値を返します。</li>
 <li>IFERROR関数を使用して、エラーが発生した場合に空白を返すようにします。これにより、一意の値がない場合に空白セルが表示されます。</li>
-<li>
-<p>注意点として、この式を新しいセルに入力する場合は、B1の範囲参照を適宜調整する必要があります。例えば、式をC2に入力する場合は、COUNTIF関数の範囲参照を$C$1:C1に変更する必要があります。また、式をコピーして他のセルに貼り付ける場合は、B1のセル参照の相対参照を使用して、自動的に範囲を更新するようになっています。</p>
-</li>
-<li>
-<p><a href="https://tech-vb.com/excel_function_unique_value_get_no_use_unique_func">【Excel関数】UNIQUE関数を使わずに重複しない一意の値を取り出す方法とは</a></p>
-</li>
+<li>注意点として、この式を新しいセルに入力する場合は、B1の範囲参照を適宜調整する必要があります。例えば、式をC2に入力する場合は、COUNTIF関数の範囲参照を$C$1:C1に変更する必要があります。また、式をコピーして他のセルに貼り付ける場合は、B1のセル参照の相対参照を使用して、自動的に範囲を更新するようになっています。</li>
 </ol>
+<div class="admonition info">
+<p class="admonition-title">MATCH関数</p>
+<p>MATCH 関数は、範囲 のセルの範囲で指定した項目を検索し、その範囲内の項目の相対的な位置を返します。 たとえば、範囲 A1:A3 に値 5、25、38 が含まれている場合、数式「=MATCH(25,A1:A3,0)」を入力すると、範囲内では 25 が 2 番目の項目であるため、数字 2 が返されます。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">INDEX関数</p>
+</div>
+<ul>
+<li><a href="https://tech-vb.com/excel_function_unique_value_get_no_use_unique_func">【Excel関数】UNIQUE関数を使わずに重複しない一意の値を取り出す方法とは</a></li>
+<li><a href="https://support.microsoft.com/ja-jp/office/match-%E9%96%A2%E6%95%B0-e8dffd45-c762-47d6-bf89-533f4a37673a#:~:text=MATCH%20%E9%96%A2%E6%95%B0%E3%81%AF%E3%80%81%E7%AF%84%E5%9B%B2%20%E3%81%AE,2%20%E3%81%8C%E8%BF%94%E3%81%95%E3%82%8C%E3%81%BE%E3%81%99%E3%80%82">MATCH</a></li>
+<li><a href="https://support.microsoft.com/ja-jp/office/index-%E9%96%A2%E6%95%B0-a5dcf0dd-996d-40a4-a822-b56b061328bd">INDEX 関数</a></li>
+</ul>
 <h2 id="_2">条件付き書式<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <p>セルの値が列の中に含まれていない場合に色付けする条件付き書式の数式として、以下の式を使用することができます。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>=ISERROR(MATCH(A1, $B$1:$B$10, 0))
@@ -5381,13 +5416,13 @@
       
       
         
-        <a href="../../Git/00_index/" class="md-footer__link md-footer__link--next" aria-label="Next: Git - 目次" rel="next">
+        <a href="../reference/" class="md-footer__link md-footer__link--next" aria-label="Next: 参考サイト" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Git - 目次
+              参考サイト
             </div>
           </div>
           <div class="md-footer__button md-icon">
