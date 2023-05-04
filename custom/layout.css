@@ -1,11 +1,8 @@
 /* mkdocs 基本的な装飾 */
 
-
-
-
-
 /* 見出し */
 h2 {
+  font-weight: bold;
   border-bottom: 2px solid teal;
 }
 h3 {
@@ -19,8 +16,6 @@ h5 {
   font-weight: bold;
 }
 
-
-
 /* 見出しに改行を追加して間隔を調整 */
 h2::before {
 	content: "\A" ;
@@ -33,6 +28,13 @@ h3::before {
 h4::before {
 	content: "\A" ;
 	white-space: pre ;
+}
+
+
+/* 本文設定 */
+body {
+  line-height: 1.6;
+  font-size: 18px;
 }
 
 
@@ -50,7 +52,7 @@ h4::before {
 */
 
 
-/* 見出しの色変更 
+/* 見出しの色変更: グラデーション
 https://uigradients.com/#Passion
 */
 .md-header {
@@ -66,14 +68,14 @@ https://uigradients.com/#Passion
 	}
 
 
-/* ナビゲーションタブに絵文字追加 */
+/* ナビゲーションタブにファイル絵文字追加 */
 label.md-nav__link:before {
 	content: url(./icons/icons8-folder-16.png);
 	padding-right: 5px;
   }
 label.md-nav__link{
 	font-weight: bold;
-	/* 左寄席 */
+	/* 左寄せ */
 	justify-content: flex-start;
   }
 
@@ -82,20 +84,20 @@ a.md-nav__link {
 	font-size: 0.6rem;
 	justify-content: flex-start;
   }
+/* ナビゲーションタブにドット絵文字で箇条書き風に */
 a.md-nav__link:before {
 	content: url(./icons/dot.svg);
 	padding-right: 1px;
   }
 
-
-/* Admonition  layout*/
-/* レイアウトが崩れるので保留
-基本的にはMarkdown 内に <br> で調整した方がよいかも*/
-/* div.admonition {
-	padding: 1em;
-}
-*/
-
+/* ナビゲーションタブの固定 */
+/* nav.md-header-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+} */
 
 
 /* img layout */
@@ -103,38 +105,66 @@ img {
 	padding: 1em;
 }
 
-
-
-/* https://fereria.github.io/reincarnation_tech/10_Programming/99_Documentation/00_mkdocs_setting/ 
-@media only screen and (max-width: 1024px) {
-    label.md-nav__link {
-        padding: 2px 2px 2px 10px;
-        font-size: 1.3rem;
-    }
-    a.md-nav__link {
-        font-size: 1.3rem;
-    }
-
-    .md-grid {
-        max-width: 142rem;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .md-content {
-        margin-left: 34.2rem;
-    }
-
-    .md-sidebar--secondary {
-        margin-left: 142rem;
-    }
-
-    .md-sidebar--primary {
-        width: 34.2rem;
-    }
-
-    .md-nav__title {
-        font-size: 1.7rem;
-    }
+/* コードブロックの調整 */
+pre code {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.4;
+  padding: 10px;
+  overflow: auto;
 }
-*/
+
+
+/* ボタンのスタイルを変更する */
+a.md-button {
+  background-color: #4caf50;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 0;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+
+/* https://fereria.github.io/reincarnation_tech/10_Programming/99_Documentation/00_mkdocs_setting/#_7 */
+
+@media only screen and (min-width: 100em) {
+  label.md-nav__link {
+      background-color: #20B2AA;
+      padding: 2px 2px 2px 9px;
+      font-size: 0.7rem;
+  }
+  a.md-nav__link {
+      font-size: 0.6rem;
+  }
+  .md-nav__title {
+    font-size: 0.7rem;
+  }
+  .md-content {
+    margin-left:0.8rem;
+  }
+  .md-grid {
+      max-width: 142rem;
+      margin-right: auto;
+      margin-left: auto;
+  }
+
+  .md-sidebar--primary {
+    margin-left: 2.0rem;
+    width: 15rem;
+  }
+  .md-sidebar--secondary {
+      margin-left: 0.5rem;
+
+  }
+
+}
