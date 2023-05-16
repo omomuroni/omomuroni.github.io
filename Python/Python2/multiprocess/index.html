@@ -4020,6 +4020,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    例3
+  </a>
+  
+    <nav class="md-nav" aria-label="例3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#staticmethod" class="md-nav__link">
+    @staticmethod
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5277,6 +5297,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    例3
+  </a>
+  
+    <nav class="md-nav" aria-label="例3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#staticmethod" class="md-nav__link">
+    @staticmethod
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5487,6 +5527,63 @@ getメソッドを使用して、非同期で実行された各タスクの結�
 <p>その後、各ファイルに対してprocess_file関数を実行するためのプロセスを作成します。</p>
 <p>各プロセスは並行して実行され、結果がoutputに追加されます。最後に、outputリストを通常のリストに変換して結果を表示します。</p>
 <p>同様に、root_dirsを適切なディレクトリパスのリストに変更し、target_stringを検索したい文字列に置き換えてください。</p>
+<h2 id="3">例3<a class="headerlink" href="#3" title="Permanent link">#</a></h2>
+<p>Python 2では、multiprocessingモジュールを使用してマルチプロセスを実装することができます。以下のコードは、Python 2でクラス内にマルチプロセスのクラスメソッドを実装する例です。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span> <span class="nn">multiprocessing</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">class</span> <span class="nc">MyClass</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="nd">@staticmethod</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="k">def</span> <span class="nf">my_method</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">):</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        <span class="c1"># マルチプロセスで実行されるメソッド</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>        <span class="c1"># ここに処理を記述します</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Process ID:&quot;</span><span class="p">,</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">current_process</span><span class="p">()</span><span class="o">.</span><span class="n">pid</span><span class="p">)</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Arguments:&quot;</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    <span class="k">def</span> <span class="nf">run_in_parallel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>        <span class="c1"># プロセスのリスト</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>        <span class="n">processes</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>        <span class="c1"># プロセスを生成して開始する</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>            <span class="n">p</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">my_method</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>            <span class="n">p</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>            <span class="n">processes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>        <span class="c1"># 全てのプロセスが終了するまで待つ</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">processes</span><span class="p">:</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>            <span class="n">p</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>    <span class="n">obj</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>    <span class="n">obj</span><span class="o">.</span><span class="n">run_in_parallel</span><span class="p">()</span>
+</code></pre></div>
+<p>上記のコードでは、MyClassというクラスを定義し、my_methodというメソッドをマルチプロセスで実行する方法を示しています。run_in_parallelメソッドは、my_methodを複数のプロセスで実行するためのものです。</p>
+<p>run_in_parallelメソッドでは、multiprocessing.Processを使用して複数のプロセスを生成し、my_methodを呼び出しています。各プロセスは、argsパラメーターを使用して引数を渡します。</p>
+<p>startメソッドでプロセスを開始し、joinメソッドで全てのプロセスが終了するまで待ちます。</p>
+<p>注意点として、Python 2ではmultiprocessingモジュールを使用する場合、クラスメソッドを直接実行することはできません。そのため、my_methodを通常のメソッドとして定義し、selfパラメーターを受け取るようにしています。</p>
+<h3 id="staticmethod">@staticmethod<a class="headerlink" href="#staticmethod" title="Permanent link">#</a></h3>
+<p>@staticmethodは、Pythonのデコレーター（Decorator）の一種です。クラス内でメソッドを定義する際に使用され、静的メソッド（Static Method）として振る舞うようにします。</p>
+<p>静的メソッドは、特定のインスタンスに依存しない一般的な操作を実行するために使用されます。インスタンス変数やインスタンスメソッドにアクセスする必要がなく、クラスレベルでの操作を実行します。</p>
+<p>静的メソッドは以下のように定義されます。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">class</span> <span class="nc">MyClass</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="nd">@staticmethod</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="k">def</span> <span class="nf">my_static_method</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">):</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>        <span class="c1"># 静的メソッドの処理</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>        <span class="k">pass</span>
+</code></pre></div>
+<p>上記の例では、my_static_methodが静的メソッドとして定義されています。静的メソッドは、@staticmethodデコレーターに続いてメソッドを定義することでマークされます。</p>
+<p>静的メソッドは、インスタンスを作成せずにクラス名を介して直接呼び出すことができます。インスタンスメソッドと異なり、selfパラメーターは持ちません。そのため、静的メソッド内ではクラス変数やインスタンス変数に直接アクセスすることはできません。</p>
+<p>以下は、静的メソッドを使用する例です。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">class</span> <span class="nc">MathUtils</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="nd">@staticmethod</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="k">def</span> <span class="nf">add_numbers</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>        <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="n">result</span> <span class="o">=</span> <span class="n">MathUtils</span><span class="o">.</span><span class="n">add_numbers</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># 結果: 8</span>
+</code></pre></div>
+<p>上記の例では、MathUtilsクラス内にadd_numbersという静的メソッドを定義しています。このメソッドは2つの引数を受け取り、それらを加算して結果を返します。静的メソッドはインスタンスを作成する必要がなく、クラス名を介して直接呼び出すことができます。したがって、MathUtils.add_numbers(3, 5)のように使用できます。</p>
+<p>静的メソッドは、クラスのユーティリティ関数や共有の処理を実装する際に便利です。インスタンスに関連しない操作を行う必要がある場合に使用すると良いでしょう。</p>
 
               
             </article>
