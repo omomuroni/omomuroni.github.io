@@ -1,0 +1,7070 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://omomuroni.github.io/AWS/SSA03_%E6%A8%A1%E6%93%AC%E8%A9%A6%E9%A8%93/mogi1/">
+      
+      <link rel="icon" href="../../../custom/icons/pencil.svg">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
+    
+    
+      
+        <title>模擬試験1 - おもむろにメモ書き</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e411adfe.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@9.0.0/dist/mermaid.css">
+    
+      <link rel="stylesheet" href="../../../custom/custom_table.css">
+    
+      <link rel="stylesheet" href="../../../custom/layout.css">
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="おもむろにメモ書き" class="md-header__button md-logo" aria-label="おもむろにメモ書き" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3H9m3 2 4 13 3-1-4-13-3 1M5 5v13h3V5H5M3 19v2h18v-2H3Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            おもむろにメモ書き
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              模擬試験1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/omomuroni/omomuroni.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      index
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../memo/" class="md-tabs__link md-tabs__link--active">
+        AWS
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Career/question/" class="md-tabs__link">
+        Career
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../DataPlatform/Elastic_stack_for_docker/" class="md-tabs__link">
+        DataPlatform
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../DataScience/SQL/" class="md-tabs__link">
+        DataScience
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../DevNet/AssociateFundamentals/test_coverage/" class="md-tabs__link">
+        DevNet
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Effective/00_index/" class="md-tabs__link">
+        Effective
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Excel/function/" class="md-tabs__link">
+        Excel
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Git/00_index/" class="md-tabs__link">
+        Git
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../HTML_CSS_JS/reference/" class="md-tabs__link">
+        HTML CSS JS
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Linux/LPIC101_CheatSheet/" class="md-tabs__link">
+        Linux
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Mananement/Toggle/" class="md-tabs__link">
+        Mananement
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Mkdocs/00_index/" class="md-tabs__link">
+        Mkdocs
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Network/evpn/" class="md-tabs__link">
+        Network
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Python/" class="md-tabs__link">
+        Python
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../SQL/basic_syntax/" class="md-tabs__link">
+        SQL
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../VSCode/00_extension/" class="md-tabs__link">
+        VSCode
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="おもむろにメモ書き" class="md-nav__button md-logo" aria-label="おもむろにメモ書き" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3H9m3 2 4 13 3-1-4-13-3 1M5 5v13h3V5H5M3 19v2h18v-2H3Z"/></svg>
+
+    </a>
+    おもむろにメモ書き
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/omomuroni/omomuroni.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        index
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          AWS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="AWS" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          AWS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../memo/" class="md-nav__link">
+        memo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          SSA03
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SSA03" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          SSA03
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SSA03/memo1/" class="md-nav__link">
+        AWS SS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          SSA03 模擬試験
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SSA03 模擬試験" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          SSA03 模擬試験
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          模擬試験1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        模擬試験1
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#q1" class="md-nav__link">
+    Q1 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q2" class="md-nav__link">
+    Q2 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q3" class="md-nav__link">
+    Q3 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q4" class="md-nav__link">
+    Q4 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q5" class="md-nav__link">
+    Q5 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q6" class="md-nav__link">
+    Q6 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q7" class="md-nav__link">
+    Q7 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q8" class="md-nav__link">
+    Q8 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q9" class="md-nav__link">
+    Q9 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q10" class="md-nav__link">
+    Q10 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q11" class="md-nav__link">
+    Q11 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q12" class="md-nav__link">
+    Q12 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q13" class="md-nav__link">
+    Q13 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q14" class="md-nav__link">
+    Q14 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    15 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    16 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    17 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    18 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19" class="md-nav__link">
+    19 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20" class="md-nav__link">
+    20 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    21 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    22 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    23 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    24 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    25 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    26 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27" class="md-nav__link">
+    27 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28" class="md-nav__link">
+    28 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29" class="md-nav__link">
+    29 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30" class="md-nav__link">
+    30 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    31 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    32 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    33 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    34 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    35 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    36 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#37" class="md-nav__link">
+    37 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38" class="md-nav__link">
+    38 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#39" class="md-nav__link">
+    39 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#40" class="md-nav__link">
+    40 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    41 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    42 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    43 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    44 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    45 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    46 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#47" class="md-nav__link">
+    47 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#48" class="md-nav__link">
+    48 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#49" class="md-nav__link">
+    49 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#50" class="md-nav__link">
+    50 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    51 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    52 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    53 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    54 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55" class="md-nav__link">
+    55 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#56" class="md-nav__link">
+    56 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#57" class="md-nav__link">
+    57 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#58" class="md-nav__link">
+    58 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#59" class="md-nav__link">
+    59 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#60" class="md-nav__link">
+    60 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    61 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    62 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    63 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    64 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65" class="md-nav__link">
+    65 解説
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mogi2/" class="md-nav__link">
+        模擬試験2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../skill_builder/" class="md-nav__link">
+        公式模擬試験
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Career
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Career" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Career
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Career/question/" class="md-nav__link">
+        面接対策質問
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          DataPlatform
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="DataPlatform" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          DataPlatform
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DataPlatform/Elastic_stack_for_docker/" class="md-nav__link">
+        Elastic Stack を使って Cisco ログを可視化する
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          DataScience
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="DataScience" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          DataScience
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DataScience/SQL/" class="md-nav__link">
+        SQL 基本的な知識
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          DevNet
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="DevNet" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          DevNet
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_1">
+          AssociateFundamentals
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="AssociateFundamentals" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          AssociateFundamentals
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DevNet/AssociateFundamentals/test_coverage/" class="md-nav__link">
+        DevNet Associate Exam v1.0（200-901）
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1_2" type="checkbox" id="__nav_6_1_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_1_2">
+          MDT
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="MDT" data-md-level="3">
+        <label class="md-nav__title" for="__nav_6_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          MDT
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DevNet/AssociateFundamentals/MDT/mdt1/" class="md-nav__link">
+        1. 概要
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DevNet/AssociateFundamentals/MDT/mdt2/" class="md-nav__link">
+        2. プログラムに関する基本的な概念
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DevNet/AssociateFundamentals/MDT/mdt3/" class="md-nav__link">
+        NETCONF と YANG
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DevNet/AssociateFundamentals/MDT/mdt4/" class="md-nav__link">
+        ncclient
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DevNet/AssociateFundamentals/MDT/mdt5/" class="md-nav__link">
+        NETCONF を使用してネットワークを自動化
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Effective
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Effective" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Effective
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Effective/00_index/" class="md-nav__link">
+        効率化 - 目次
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Effective/Anki/" class="md-nav__link">
+        Anki
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Effective/draw.io/" class="md-nav__link">
+        Draw.io をvscode で使う
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Effective/english/" class="md-nav__link">
+        英語おすすめ勉強サイト
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Effective/marp/" class="md-nav__link">
+        Marp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Effective/oura_ling/" class="md-nav__link">
+        Oura API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Effective/powershell_log/" class="md-nav__link">
+        Powershell でログ取得
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Effective/powershell_useful/" class="md-nav__link">
+        Powershell 便利技
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Effective/sakura_editer/" class="md-nav__link">
+        サクラエディタ設定
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Effective/slide_sample/" class="md-nav__link">
+        Marp で作成した slide サンプル
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Effective/softether/" class="md-nav__link">
+        SoftEther VPN セットアップ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Effective/tool/" class="md-nav__link">
+        便利なツール
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Excel
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Excel" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Excel
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Excel/function/" class="md-nav__link">
+        検索関数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Excel/reference/" class="md-nav__link">
+        参考サイト
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Excel/useful_function/" class="md-nav__link">
+        よく使う関数
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Git" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Git/00_index/" class="md-nav__link">
+        Git - 目次
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Git/git_cheat_sheet/" class="md-nav__link">
+        Git Cheat Sheet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Git/git_knowledge/" class="md-nav__link">
+        git 操作
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Git/git_local_repository/" class="md-nav__link">
+        Git - local で管理
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          HTML CSS JS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="HTML CSS JS" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          HTML CSS JS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../HTML_CSS_JS/reference/" class="md-nav__link">
+        HTML & CSS リファレンス
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linux" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/LPIC101_CheatSheet/" class="md-nav__link">
+        LPIC 101チートシート
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/LPIC102_CheatSheet/" class="md-nav__link">
+        LPIC 102チートシート
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/LPIC_101/" class="md-nav__link">
+        101 Sys archit.
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/LPIC_102/" class="md-nav__link">
+        102 install / Pkg
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/LPIC_103/" class="md-nav__link">
+        103 GNU / Unix Cmd
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/LPIC_104/" class="md-nav__link">
+        104 Device / FHS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/LPIC_Level1_CmdList/" class="md-nav__link">
+        Lpic Level 1 Cmd List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/bash/" class="md-nav__link">
+        bash 関連
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/todo/" class="md-nav__link">
+        TODO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_10" type="checkbox" id="__nav_11_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_10">
+          AlmaLinux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="AlmaLinux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_10">
+          <span class="md-nav__icon md-icon"></span>
+          AlmaLinux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/AlmaLinux/VBoxLinuxAdditions/" class="md-nav__link">
+        VBoxLinuxAdditions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/AlmaLinux/descktop/" class="md-nav__link">
+        Widows からリモートアクセスできるようにする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/AlmaLinux/docker/" class="md-nav__link">
+        Dokcer isntall
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/AlmaLinux/ftp/" class="md-nav__link">
+        FTP サーバ構築
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/AlmaLinux/python_setup/" class="md-nav__link">
+        CentOS 環境の python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/AlmaLinux/setup/" class="md-nav__link">
+        AlmaLinux Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/AlmaLinux/smaba_cifs/" class="md-nav__link">
+        Linux と Windows ファイル共有
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/AlmaLinux/smb/" class="md-nav__link">
+        snmp Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_11" type="checkbox" id="__nav_11_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_11">
+          Command
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Command" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_11">
+          <span class="md-nav__icon md-icon"></span>
+          Command
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/Command/command1/" class="md-nav__link">
+        Linux 頻出コマンド
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_12" type="checkbox" id="__nav_11_12" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_12">
+          WSL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="WSL" data-md-level="2">
+        <label class="md-nav__title" for="__nav_11_12">
+          <span class="md-nav__icon md-icon"></span>
+          WSL
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/WSL/systemctl_setup/" class="md-nav__link">
+        systemctl を使えるようにする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/WSL/windows_terminal/" class="md-nav__link">
+        Windows terminal 色見づらい
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Linux/WSL/wsl2_setup/" class="md-nav__link">
+        wsl セットアップ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12">
+          Mananement
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mananement" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          Mananement
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mananement/Toggle/" class="md-nav__link">
+        Toggle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mananement/asana/" class="md-nav__link">
+        Asana 活用方法
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_13">
+          Mkdocs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mkdocs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Mkdocs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/00_index/" class="md-nav__link">
+        Mkdocs - 目次
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/01_material_sample/" class="md-nav__link">
+        Material 表現 sample
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/02_emoji/" class="md-nav__link">
+        絵文字
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/03_extended_markdown/" class="md-nav__link">
+        HTML & CSS による拡張
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/04_material_config/" class="md-nav__link">
+        Material 設定サンプル
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/05_How_to_use_mermaid/" class="md-nav__link">
+        MKDocsでUMLを表示する方法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/06_color_sample/" class="md-nav__link">
+        Color sample
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/07_markdown_cheat/" class="md-nav__link">
+        Markdown 記法まとめ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/08_material_plugin/" class="md-nav__link">
+        MKdocs material プラグイン
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13_10" type="checkbox" id="__nav_13_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_13_10">
+          Mermaid
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mermaid" data-md-level="2">
+        <label class="md-nav__title" for="__nav_13_10">
+          <span class="md-nav__icon md-icon"></span>
+          Mermaid
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/Mermaid/Class/" class="md-nav__link">
+        Class
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/Mermaid/Entity_Relationship_Diagrams/" class="md-nav__link">
+        Entity Relationship Diagrams
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/Mermaid/Flowchart/" class="md-nav__link">
+        Flowchart
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/Mermaid/Gantt_diagrams/" class="md-nav__link">
+        Gantt diagrams
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/Mermaid/Index/" class="md-nav__link">
+        index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/Mermaid/OtherExample/" class="md-nav__link">
+        OtherExamples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/Mermaid/Pie_chart_diagrams/" class="md-nav__link">
+        Pie chart diagrams
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/Mermaid/Requirement_Diagram/" class="md-nav__link">
+        Requirement Diagram
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/Mermaid/Sequence_diagram/" class="md-nav__link">
+        Sequence diagrams
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/Mermaid/State_diagrams/" class="md-nav__link">
+        State diagrams
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/Mermaid/Theme_Configuration/" class="md-nav__link">
+        Theme Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/Mermaid/User_Journey_Diagram/" class="md-nav__link">
+        User Journey Diagram
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14">
+          Network
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Network" data-md-level="1">
+        <label class="md-nav__title" for="__nav_14">
+          <span class="md-nav__icon md-icon"></span>
+          Network
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Network/evpn/" class="md-nav__link">
+        EVPN メモ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Network/ipaddress/" class="md-nav__link">
+        Python で ipaddress 生成
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Network/lab/" class="md-nav__link">
+        検証用初期設定
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Network/multicast/" class="md-nav__link">
+        Multicast についての解説
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_5" type="checkbox" id="__nav_14_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14_5">
+          Ansible
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ansible" data-md-level="2">
+        <label class="md-nav__title" for="__nav_14_5">
+          <span class="md-nav__icon md-icon"></span>
+          Ansible
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Network/Ansible/installation/" class="md-nav__link">
+        Ansible install
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Network/Ansible/telnet/" class="md-nav__link">
+        Ansible - telnet
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_6" type="checkbox" id="__nav_14_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14_6">
+          Cisco ACI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cisco ACI" data-md-level="2">
+        <label class="md-nav__title" for="__nav_14_6">
+          <span class="md-nav__icon md-icon"></span>
+          Cisco ACI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Network/Cisco_ACI/cisco_aci/" class="md-nav__link">
+        Cisco ACI の基本
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_7" type="checkbox" id="__nav_14_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14_7">
+          IOS XR
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="IOS XR" data-md-level="2">
+        <label class="md-nav__title" for="__nav_14_7">
+          <span class="md-nav__icon md-icon"></span>
+          IOS XR
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Network/IOS-XR/Basic/" class="md-nav__link">
+        IOS - XR コマンド
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Network/IOS-XR/Process/" class="md-nav__link">
+        Process Restart
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Network/IOS-XR/bgp/" class="md-nav__link">
+        BGP memo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Network/IOS-XR/create_config/" class="md-nav__link">
+        Stress Config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Network/IOS-XR/l2_xconnect/" class="md-nav__link">
+        IOS-XR L2 接続
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Network/IOS-XR/summary/" class="md-nav__link">
+        Command
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Network/IOS-XR/xr-python/" class="md-nav__link">
+        IOS XR
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_8" type="checkbox" id="__nav_14_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14_8">
+          IXIA
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="IXIA" data-md-level="2">
+        <label class="md-nav__title" for="__nav_14_8">
+          <span class="md-nav__icon md-icon"></span>
+          IXIA
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Network/IXIA/IXIA_reference/" class="md-nav__link">
+        IXIA reference
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_9" type="checkbox" id="__nav_14_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14_9">
+          JUNOS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="JUNOS" data-md-level="2">
+        <label class="md-nav__title" for="__nav_14_9">
+          <span class="md-nav__icon md-icon"></span>
+          JUNOS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Network/JUNOS/JUNOS_EX4650/" class="md-nav__link">
+        JUNOS EX4650
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Network/JUNOS/JUNOS_MPLS_config/" class="md-nav__link">
+        JUNOS MPLS 設定
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Network/JUNOS/junos_cmd_cheatsheet/" class="md-nav__link">
+        JUNOS Cmd cheat sheat
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Network/JUNOS/junos_config_cheatsheet/" class="md-nav__link">
+        JUNOS config cheat sheat
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_10" type="checkbox" id="__nav_14_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14_10">
+          Setup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Setup" data-md-level="2">
+        <label class="md-nav__title" for="__nav_14_10">
+          <span class="md-nav__icon md-icon"></span>
+          Setup
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Network/Setup/" class="md-nav__link">
+        index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Network/Setup/gns3_setup/" class="md-nav__link">
+        GNS3 Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_11" type="checkbox" id="__nav_14_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_14_11">
+          Telemetory
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Telemetory" data-md-level="2">
+        <label class="md-nav__title" for="__nav_14_11">
+          <span class="md-nav__icon md-icon"></span>
+          Telemetory
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Network/Telemetory/netconf/" class="md-nav__link">
+        NETCONF
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Network/Telemetory/pyang/" class="md-nav__link">
+        pyang
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Network/Telemetory/telemetory/" class="md-nav__link">
+        Telemetry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Network/Telemetory/telemetory_env/" class="md-nav__link">
+        OSSでTelemetory環境構築
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Network/Telemetory/yang/" class="md-nav__link">
+        YANG
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15" type="checkbox" id="__nav_15" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python" data-md-level="1">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/" class="md-nav__link">
+        index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_2" type="checkbox" id="__nav_15_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15_2">
+          Basics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Basics" data-md-level="2">
+        <label class="md-nav__title" for="__nav_15_2">
+          <span class="md-nav__icon md-icon"></span>
+          Basics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Basics/about_python/" class="md-nav__link">
+        python 入門
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Basics/format_strings/" class="md-nav__link">
+        f文字列
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Basics/py_character%20code/" class="md-nav__link">
+        文字コード
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Basics/py_control_syntax/" class="md-nav__link">
+        制御構文
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Basics/py_data_stracture/" class="md-nav__link">
+        データ構造
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Basics/py_function_adbanced/" class="md-nav__link">
+        関数 応用
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Basics/py_function_basic/" class="md-nav__link">
+        関数 基礎
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Basics/py_operator/" class="md-nav__link">
+        Python 演算子
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Basics/py_variable/" class="md-nav__link">
+        Python 変数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Basics/read_sourceCode/" class="md-nav__link">
+        ソースコードの読み方
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Basics/summarize_proc/" class="md-nav__link">
+        処理を集約する
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_3" type="checkbox" id="__nav_15_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15_3">
+          Data
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Data" data-md-level="2">
+        <label class="md-nav__title" for="__nav_15_3">
+          <span class="md-nav__icon md-icon"></span>
+          Data
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_3_1" type="checkbox" id="__nav_15_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15_3_1">
+          Dash
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Dash" data-md-level="3">
+        <label class="md-nav__title" for="__nav_15_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Dash
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/Dash/reference/" class="md-nav__link">
+        reference
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_3_2" type="checkbox" id="__nav_15_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15_3_2">
+          Recipe
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Recipe" data-md-level="3">
+        <label class="md-nav__title" for="__nav_15_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Recipe
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/Recipe/collections/" class="md-nav__link">
+        collections
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/Recipe/csv/" class="md-nav__link">
+        CSV
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/Recipe/data_cheat_sheet/" class="md-nav__link">
+        よく使うデータ形式
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/Recipe/database_write/" class="md-nav__link">
+        マルチプロセスでパスを見つけデータベースへ書き込む
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/Recipe/itertools/" class="md-nav__link">
+        itertools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/Recipe/jinja/" class="md-nav__link">
+        jinja
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/Recipe/json/" class="md-nav__link">
+        json
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/Recipe/loggging/" class="md-nav__link">
+        logging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/Recipe/multiprocess/" class="md-nav__link">
+        マルチプロセスの実装
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/Recipe/re_module/" class="md-nav__link">
+        re
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/Recipe/regex/" class="md-nav__link">
+        regex
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/Recipe/sqlite3/" class="md-nav__link">
+        sqlite3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/Recipe/yaml/" class="md-nav__link">
+        YAML ファイルの取り扱い
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_3_3" type="checkbox" id="__nav_15_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15_3_3">
+          TTP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="TTP" data-md-level="3">
+        <label class="md-nav__title" for="__nav_15_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          TTP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/TTP/ttp_Indicators/" class="md-nav__link">
+        ttp - Indicators
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/TTP/ttp_function/" class="md-nav__link">
+        ttp - Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/TTP/ttp_quickstart/" class="md-nav__link">
+        ttp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/TTP/ttp_regex_pattern/" class="md-nav__link">
+        Regex pattern
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_3_4" type="checkbox" id="__nav_15_3_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15_3_4">
+          TextFSM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="TextFSM" data-md-level="3">
+        <label class="md-nav__title" for="__nav_15_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          TextFSM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/TextFSM/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/TextFSM/TextFSMCodeLab_wiki/" class="md-nav__link">
+        TextFSMCodeLab.wiki
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/TextFSM/TextFSM_template_syntax/" class="md-nav__link">
+        TextFSM template syntax
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/TextFSM/quickstart_summary/" class="md-nav__link">
+        概要
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/TextFSM/sample%20_template_bgp_neighbor/" class="md-nav__link">
+        sample template bgp neighbor
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_3_5" type="checkbox" id="__nav_15_3_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15_3_5">
+          Openpyxl
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Openpyxl" data-md-level="3">
+        <label class="md-nav__title" for="__nav_15_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Openpyxl
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/openpyxl/" class="md-nav__link">
+        index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/openpyxl/1_oepnpyxl_book/" class="md-nav__link">
+        Book の操作
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/openpyxl/2_oepnpyxl_sheet/" class="md-nav__link">
+        sheet の操作
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/openpyxl/3_oepnpyxl_cell%20copy/" class="md-nav__link">
+        セル の操作
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_3_6" type="checkbox" id="__nav_15_3_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15_3_6">
+          Pandas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pandas" data-md-level="3">
+        <label class="md-nav__title" for="__nav_15_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Pandas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/pandas/reference/" class="md-nav__link">
+        Reference
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_4" type="checkbox" id="__nav_15_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15_4">
+          Finance
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Finance" data-md-level="2">
+        <label class="md-nav__title" for="__nav_15_4">
+          <span class="md-nav__icon md-icon"></span>
+          Finance
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Finance/stock/" class="md-nav__link">
+        Python と株
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_5" type="checkbox" id="__nav_15_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15_5">
+          IXIA
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="IXIA" data-md-level="2">
+        <label class="md-nav__title" for="__nav_15_5">
+          <span class="md-nav__icon md-icon"></span>
+          IXIA
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/IXIA/ixia/" class="md-nav__link">
+        IXIA
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_6" type="checkbox" id="__nav_15_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15_6">
+          Network
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Network" data-md-level="2">
+        <label class="md-nav__title" for="__nav_15_6">
+          <span class="md-nav__icon md-icon"></span>
+          Network
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Network/JUNOS/" class="md-nav__link">
+        PyEZ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Network/ipv6address/" class="md-nav__link">
+        Python で ipv6 address 表現
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Network/netmiko/" class="md-nav__link">
+        netmiko
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Network/netmiko_get_inventory/" class="md-nav__link">
+        netmiko
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Network/parse/" class="md-nav__link">
+        CLIを解析
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Network/pyats_login/" class="md-nav__link">
+        pyats login
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Network/sdn/" class="md-nav__link">
+        Python for SDN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Network/telnet/" class="md-nav__link">
+        telnet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Network/ttp/" class="md-nav__link">
+        TTP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_6_10" type="checkbox" id="__nav_15_6_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15_6_10">
+          pyATS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="pyATS" data-md-level="3">
+        <label class="md-nav__title" for="__nav_15_6_10">
+          <span class="md-nav__icon md-icon"></span>
+          pyATS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Network/pyATS/IXIA/" class="md-nav__link">
+        Pyats Ixia
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Network/pyATS/genie_shell/" class="md-nav__link">
+        genie shell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Network/pyATS/install/" class="md-nav__link">
+        pyats install
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Network/pyATS/memo/" class="md-nav__link">
+        memo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Network/pyATS/pyats_Blitz_effective/" class="md-nav__link">
+        Blitz 便利技
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Network/pyATS/pyats_Blitz_getting_started/" class="md-nav__link">
+        Blitz 入門
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Network/pyATS/pyats_basic1/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Network/pyATS/pyats_basic2/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Network/pyATS/pyats_genie/" class="md-nav__link">
+        Genie
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Network/pyATS/pyats_instllation/" class="md-nav__link">
+        pyATS instllation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Network/pyATS/pyats_run_job/" class="md-nav__link">
+        pyATS 実行方法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Network/pyATS/pyats_unicorn/" class="md-nav__link">
+        Unicon
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Network/pyATS/reference/" class="md-nav__link">
+        API reference
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_7" type="checkbox" id="__nav_15_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15_7">
+          Python2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python2" data-md-level="2">
+        <label class="md-nav__title" for="__nav_15_7">
+          <span class="md-nav__icon md-icon"></span>
+          Python2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Python2/multiprocess/" class="md-nav__link">
+        python2 マルチプロセス
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Python2/save_shift-jis/" class="md-nav__link">
+        csv ファイル Shift-JISで保存する
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_8" type="checkbox" id="__nav_15_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15_8">
+          Recipe
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Recipe" data-md-level="2">
+        <label class="md-nav__title" for="__nav_15_8">
+          <span class="md-nav__icon md-icon"></span>
+          Recipe
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/ast/" class="md-nav__link">
+        ast モジュール
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/codecs/" class="md-nav__link">
+        codecs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/datetime_and_time/" class="md-nav__link">
+        datetime & time
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/difflib/" class="md-nav__link">
+        difflib
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/docstring/" class="md-nav__link">
+        GoogleスタイルのPython Docstring
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/file_operation/" class="md-nav__link">
+        ファイル操作
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/full-width%20half-width/" class="md-nav__link">
+        全角半角変換
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/glob/" class="md-nav__link">
+        glob
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/inspect/" class="md-nav__link">
+        inspect モジュール
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/list/" class="md-nav__link">
+        list
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/memo/" class="md-nav__link">
+        雑多なメモ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/mkdocs_plugin/" class="md-nav__link">
+        mkodcs plugin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/mkdocstrings/" class="md-nav__link">
+        mkdocstrings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/multiprocessing/" class="md-nav__link">
+        multiprocessing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/os/" class="md-nav__link">
+        os
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/pathlib/" class="md-nav__link">
+        pathlib
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/py_decimal/" class="md-nav__link">
+        decimal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/pydoc/" class="md-nav__link">
+        pydoc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/pysmb/" class="md-nav__link">
+        pysmb
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/pywatchdog/" class="md-nav__link">
+        python でログ監視
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/recursive_function1/" class="md-nav__link">
+        再帰関数1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/recursive_function2/" class="md-nav__link">
+        再帰関数2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/seaborn/" class="md-nav__link">
+        seaborn
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/shutil/" class="md-nav__link">
+        shutil
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/sphinx/" class="md-nav__link">
+        Sphinx
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/timeit/" class="md-nav__link">
+        timeit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/useful_word/" class="md-nav__link">
+        変数でよく使う英単語
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Recipe/with_object/" class="md-nav__link">
+        with文に対応するクラスの定義
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_9" type="checkbox" id="__nav_15_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15_9">
+          STC
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="STC" data-md-level="2">
+        <label class="md-nav__title" for="__nav_15_9">
+          <span class="md-nav__icon md-icon"></span>
+          STC
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/STC/stcclient/" class="md-nav__link">
+        Python で自動化
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_10" type="checkbox" id="__nav_15_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15_10">
+          Setup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Setup" data-md-level="2">
+        <label class="md-nav__title" for="__nav_15_10">
+          <span class="md-nav__icon md-icon"></span>
+          Setup
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Setup/Linux_python/" class="md-nav__link">
+        Linux 環境のPython
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Setup/pip/" class="md-nav__link">
+        pip 関連
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Setup/windows_dev_env/" class="md-nav__link">
+        windows 開発環境
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Setup/wsl2_pyenv/" class="md-nav__link">
+        wsl2 + pyenv で Linux python環境構築
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_11" type="checkbox" id="__nav_15_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15_11">
+          Test
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Test" data-md-level="2">
+        <label class="md-nav__title" for="__nav_15_11">
+          <span class="md-nav__icon md-icon"></span>
+          Test
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_11_1" type="checkbox" id="__nav_15_11_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15_11_1">
+          Pytest
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pytest" data-md-level="3">
+        <label class="md-nav__title" for="__nav_15_11_1">
+          <span class="md-nav__icon md-icon"></span>
+          Pytest
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Test/pytest/01_pytest_execute/" class="md-nav__link">
+        pytest の実行
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Test/pytest/02_pytest_test_function/" class="md-nav__link">
+        pytest - テスト関数の作成
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_12" type="checkbox" id="__nav_15_12" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15_12">
+          Web
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Web" data-md-level="2">
+        <label class="md-nav__title" for="__nav_15_12">
+          <span class="md-nav__icon md-icon"></span>
+          Web
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_12_1" type="checkbox" id="__nav_15_12_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15_12_1">
+          Design
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Design" data-md-level="3">
+        <label class="md-nav__title" for="__nav_15_12_1">
+          <span class="md-nav__icon md-icon"></span>
+          Design
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Web/Design/bootstrap_dashboard/" class="md-nav__link">
+        Bootstrap テンプレート
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_12_2" type="checkbox" id="__nav_15_12_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15_12_2">
+          Django
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Django" data-md-level="3">
+        <label class="md-nav__title" for="__nav_15_12_2">
+          <span class="md-nav__icon md-icon"></span>
+          Django
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Web/django/AdminLTE/" class="md-nav__link">
+        AdminLTE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Web/django/Django_Tutorial/" class="md-nav__link">
+        Django Tutorial
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Web/django/reference/" class="md-nav__link">
+        Django 参照サイト
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_12_2_4" type="checkbox" id="__nav_15_12_2_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15_12_2_4">
+          Tutorial
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tutorial" data-md-level="4">
+        <label class="md-nav__title" for="__nav_15_12_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Web/django/tutorial/00_isntall/" class="md-nav__link">
+        Install
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Web/django/tutorial/01_tutorial1/" class="md-nav__link">
+        1. リクエストとレスポンス
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Web/django/tutorial/02_tutorial2/" class="md-nav__link">
+        2.モデルと管理サイト
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Web/django/tutorial/03_tutorial3/" class="md-nav__link">
+        3.ビューとテンプレート
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Web/django/tutorial/04_tutorial4/" class="md-nav__link">
+        4.フォームと汎用ビュー
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Web/django/tutorial/05_tutorial5/" class="md-nav__link">
+        5. テスト
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Web/django/tutorial/06_tutorial6/" class="md-nav__link">
+        6.静的ファイル
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Web/django/tutorial/07_tutorial7/" class="md-nav__link">
+        7.管理サイトのカスタマイズ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Web/django/tutorial/08_Advanced/" class="md-nav__link">
+        8.応用編: 再利用可能なアプリケーションの書き方
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_12_3" type="checkbox" id="__nav_15_12_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15_12_3">
+          Module
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Module" data-md-level="3">
+        <label class="md-nav__title" for="__nav_15_12_3">
+          <span class="md-nav__icon md-icon"></span>
+          Module
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Web/module/beautifulsoup/" class="md-nav__link">
+        Beautiful Soup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Web/module/requests/" class="md-nav__link">
+        requests
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_16" type="checkbox" id="__nav_16" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_16">
+          SQL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SQL" data-md-level="1">
+        <label class="md-nav__title" for="__nav_16">
+          <span class="md-nav__icon md-icon"></span>
+          SQL
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SQL/basic_syntax/" class="md-nav__link">
+        SQL 基本構文
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SQL/reference/" class="md-nav__link">
+        参照サイト
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_17" type="checkbox" id="__nav_17" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_17">
+          VSCode
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="VSCode" data-md-level="1">
+        <label class="md-nav__title" for="__nav_17">
+          <span class="md-nav__icon md-icon"></span>
+          VSCode
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../VSCode/00_extension/" class="md-nav__link">
+        拡張機能一覧
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../VSCode/00_vscode_memo/" class="md-nav__link">
+        VSCode 便利メモ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../VSCode/01_vsnote/" class="md-nav__link">
+        VSNotes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../VSCode/03_vscode_for_git/" class="md-nav__link">
+        VSCode で Git を使う
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#q1" class="md-nav__link">
+    Q1 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q2" class="md-nav__link">
+    Q2 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q3" class="md-nav__link">
+    Q3 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q4" class="md-nav__link">
+    Q4 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q5" class="md-nav__link">
+    Q5 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q6" class="md-nav__link">
+    Q6 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q7" class="md-nav__link">
+    Q7 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q8" class="md-nav__link">
+    Q8 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q9" class="md-nav__link">
+    Q9 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q10" class="md-nav__link">
+    Q10 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q11" class="md-nav__link">
+    Q11 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q12" class="md-nav__link">
+    Q12 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q13" class="md-nav__link">
+    Q13 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q14" class="md-nav__link">
+    Q14 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    15 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    16 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    17 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    18 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19" class="md-nav__link">
+    19 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20" class="md-nav__link">
+    20 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    21 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    22 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    23 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    24 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    25 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    26 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27" class="md-nav__link">
+    27 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28" class="md-nav__link">
+    28 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29" class="md-nav__link">
+    29 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30" class="md-nav__link">
+    30 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    31 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    32 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    33 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    34 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    35 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    36 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#37" class="md-nav__link">
+    37 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38" class="md-nav__link">
+    38 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#39" class="md-nav__link">
+    39 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#40" class="md-nav__link">
+    40 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    41 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    42 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    43 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    44 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    45 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    46 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#47" class="md-nav__link">
+    47 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#48" class="md-nav__link">
+    48 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#49" class="md-nav__link">
+    49 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#50" class="md-nav__link">
+    50 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    51 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    52 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    53 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    54 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55" class="md-nav__link">
+    55 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#56" class="md-nav__link">
+    56 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#57" class="md-nav__link">
+    57 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#58" class="md-nav__link">
+    58 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#59" class="md-nav__link">
+    59 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#60" class="md-nav__link">
+    60 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    61 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    62 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    63 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    64 解説
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65" class="md-nav__link">
+    65 解説
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/AWS/SSA03_模擬試験/mogi1.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="1">模擬試験1<a class="headerlink" href="#1" title="Permanent link">#</a></h1>
+<h2 id="q1">Q1 解説<a class="headerlink" href="#q1" title="Permanent link">#</a></h2>
+<p>Redshiftはスナップショット用に無料ストレージを提供していますが、上限のストレージ容量を超過すると課金が発生します。
+つまり、スナップショット容量が上限に達すると課金されてしまいます。 
+そのため、自動スナップショットを保存し、保存期間日数を見直すことで、不要になった手動スナップショットを削除する必要があります。</p>
+<h2 id="q2">Q2 解説<a class="headerlink" href="#q2" title="Permanent link">#</a></h2>
+<p>AWS Elemental MediaConvertではトランスコードジョブがリクエストを受信した順に処理が開始されます。
+一時的な高負荷状態にはスポットインスタンスを利用します。</p>
+<h2 id="q3">Q3 解説<a class="headerlink" href="#q3" title="Permanent link">#</a></h2>
+<p>Auto Scalingのスケーリングがうまく実行されずに24時間以上たった場合は、自動的にAuto Scaling処理が停止するようになっています。</p>
+<h2 id="q4">Q4 解説<a class="headerlink" href="#q4" title="Permanent link">#</a></h2>
+<p>AWS Storage Gateway とはオンプレミス環境のストレージを Amazon S3 に接続して拡張するサービス
+ストレージゲートウェイのキャッシュ型ボリュームを使用すると、頻繁にアクセスされるデータをキャッシュとしてローカル環境に保持しながら、
+S3をプライマリデータストレージとして使用できます。</p>
+<p>Amazon S3への移転スケジュールが設定されたスナップショットを利用するキャッシュ型ボリュームをAWS上に構成して、
+ローカルストレージ容量の制約を回避するために、このレポジトリーをS3ストレージに拡張します。
+そして、キャッシュを取得する仕組みをオンプレミス環境に設定することで
+頻繁にアクセスされるデータへの最適な応答時間を維持することができます。</p>
+<p>作成できるストレージボリュームのサイズは最大 32TiBで、それを iSCSI デバイスとしてオンプレミスのアプリケーションサーバーにアタッチすることが可能です。</p>
+<h2 id="q5">Q5 解説<a class="headerlink" href="#q5" title="Permanent link">#</a></h2>
+<p>このシナリオでは、「コンテナを利用してマイクロサービスを作成すること。」「AWS上でコンテナ用コンピュートリソースを構成管理しないこと」の２つが要件となっています。
+Amazon ECS は、コンテナ化されたアプリケーションを簡単にデプロイ、管理、スケーリングすることができるフルマネージドコンテナオーケストレーションサービスです。</p>
+<p>Amazon ECS はコンテナ構成時に、EC2インスタンスをコンテナに利用するEC2起動モードと、サーバレスコンピューティングサービスであるFargate起動モードを選択することができます。
+AWS Fargateはインスタンスのタイプやサイズなどのプロビジョニング設定を自動で構成してくれるため、AWS 上でのDockerコンテナベースのコンピューティングの設定や運用管理が自動化できます。
+Fargate はコンテナを実行するために仮想マシンのクラスターをプロビジョニング、設定、スケールする必要がありません。
+これにより、ユーザー側でサーバータイプの選択、クラスターをスケールするタイミングの決定、クラスターのパッキングの最適化を行う必要がなくなります。</p>
+<h2 id="q6">Q6 解説<a class="headerlink" href="#q6" title="Permanent link">#</a></h2>
+<p>デフォルトでは、EC2インスタンスのパブリックIPアドレスはインスタンスの停止後に解放されます。
+これによって、ドメイン名にマッピングされていた以前のIPアドレスが無効になりアクセスができなくなります。
+こうしたケースを避けるためには、EC2インスタンスにElastic IPを設定することが必要です。</p>
+<h2 id="q7">Q7 解説<a class="headerlink" href="#q7" title="Permanent link">#</a></h2>
+<p>データベースへのインターネットアクセスを制限するには、プライベートサブネット内にDB用のEC2インスタンスを設置する必要があります。
+その上で、プライベートサブネットのルートテーブルに対してNATゲートウェイを通じたインターネットへの返信のみを許可するルートを設定します。
+これによって、プライベートサブネット内のDBインスタンスへのパッチ適用や更新が可能となります。</p>
+<h2 id="q8">Q8 解説<a class="headerlink" href="#q8" title="Permanent link">#</a></h2>
+<p>このシナリオでは、毎日1TB以上のクリックストリームデータを取得して、これらのデータを分析するワークロードを構築することが求められています。ストリームデータの処理にはAmazon Kinesis を利用します。</p>
+<p>Amazon Kinesis Data Streamsはストリームデータ処理に利用するサービスです。これを利用して、クリックストリームデータを取得するアプリケーションの仕組みを構築することができます。</p>
+<p>Amazon Kinesis Data Firehoseはストリームデータを変換したり、ストレージやDBに配信するサービスです。
+Amazon Kinesis Data Firehoseを利用して、データをAmazon S3データレイクに送信することができます。
+ストリームデータは非常に膨大な量となるため、S3バケットなどを利用した保存と分析の仕組みが必要となります。</p>
+<p>Amazon Redshift Spectrumを使うことで、S3バケット上に保存されたファイルをRedshiftにロードするための特殊な準備なし、S3バケットに直接に高度なクエリ処理を実行することが可能になります。
+クエリー実行の背後ではSpectrumが数千台までスケールするインスタンスが用意されており、データセットがエクサバイトを超えても、高速なデータ取り出しと一貫したパフォーマンスを実現します。</p>
+<ul>
+<li>ストリームデータ処理：Amazon Kinesis Data Streams</li>
+<li>データの送信処理：Amazon Kinesis Data Firehose</li>
+<li>データの解析：Amazon Redshift Spectrum</li>
+</ul>
+<h2 id="q9">Q9 解説<a class="headerlink" href="#q9" title="Permanent link">#</a></h2>
+<p>位置情報ルーティングを使用すると、ユーザーの地理的位置に基づいてトラフィックを処理するリソースが選択されます。
+それにより、言語表示やトラフィック処理が位置情報におうじて変更することが可能となります。</p>
+<p>Route53 においてレコードを作成するときは、以下のようなルーティングポリシーから選択します。</p>
+<ul>
+<li>シンプルルーティングポリシー – ドメインで特定の機能を実行する単一のリソースがある場合に使用します。たとえば、example.com ウェブサイトにコンテンツを提供する 1 つのウェブサーバーなどです。</li>
+<li>フェイルオーバールーティングポリシー – アクティブ/パッシブフェイルオーバーを構成する場合に使用します。</li>
+<li>位置情報ルーティングポリシー – ユーザーの位置に基づいてトラフィックをルーティングする場合に使用します。</li>
+<li>地理的近接性ルーティングポリシー – リソースの場所に基づいてトラフィックをルーティングし、必要に応じてトラフィックをある場所のリソースから別の場所のリソースに移動する場合に使用します。</li>
+<li>レイテンシールーティングポリシー – 複数の AWS リージョンにリソースがあり、レイテンシーの最も小さいリージョンにトラフィックをルーティングする場合に使用します。</li>
+<li>複数値回答ルーティングポリシー – ランダムに選ばれた最大 8 つの正常なレコードを使用して Route 53 が DNS クエリに応答する場合に使用します。</li>
+<li>加重ルーティングポリシー – 指定した比率で複数のリソースにトラフィックをルーティングする場合に使用します。</li>
+</ul>
+<h2 id="q10">Q10 解説<a class="headerlink" href="#q10" title="Permanent link">#</a></h2>
+<p>Amazon S3では事前署名付きURLによって特定の画像を一時的に共有するための特別なURLを発行することができます。
+特定のオブジェクトへのアクセス許可がある場合、付与されたユーザーがその事前署名付き URL を使用して対象オブジェクトにアクセスすることができます。
+この機能を利用することで、アプリケーションが対象イメージへの期限付きのアクセス許可を特定のユーザーに付与することが可能となります。</p>
+<h2 id="q11">Q11 解説<a class="headerlink" href="#q11" title="Permanent link">#</a></h2>
+<p>CloudFormationのテンプレートを利用して、AWSリソース設定を定義したJSON/YAMLファイルからプロビジョニングすることができます。 
+これによって、テスト環境などのAWSリソース環境をテンプレート化して、自動で展開することが可能です。</p>
+<h2 id="q12">Q12 解説<a class="headerlink" href="#q12" title="Permanent link">#</a></h2>
+<p>自社でOS設定などのデータベースのインフラ環境を管理するためには、EC2インスタンスを使用してDBを構築することが必要です。
+EC2インスタンスを利用することでゲストサーバーのOSなどの基盤を完全に制御することができます。</p>
+<h2 id="q13">Q13 解説<a class="headerlink" href="#q13" title="Permanent link">#</a></h2>
+<p>このシナリオでは、Amazon SQSキュー内のメッセージには重複はないものの、RDS内の保存データには重複レコードが発生していることが問題となっています。
+原因としては、コンシューマーがキューからメッセージを2重に取得している可能性が高いです。
+SQSキューのメッセージがコンシューマーに受信された直後は、メッセージはキューに残ったままとなっています。
+したがって、他のコンシューマーが同じメッセージを再処理しないように、Amazon SQSでは可視性タイムアウトを設定することが必要です。</p>
+<p>可視性タイムアウトを設定するには、ChangeMessageVisibility API使用して、適切な可視性タイムアウト値を設定することになります。
+これを利用して、他のコンシューマーがメッセージを二重に取得しない待機時間を設定して、RDSに重複メッセージが保存されないようにします。</p>
+<p>可視性タイムアウトは処理担当のインスタンス以外からは一定時間（30秒～12時間）キューが見えなくなる機能</p>
+<h2 id="q14">Q14 解説<a class="headerlink" href="#q14" title="Permanent link">#</a></h2>
+<p>このシナリオでは、毎日17時～17時半の間にアプリケーションのパフォーマンスが低下する事象が発生しており、タイムリーなスケーリングが必要です。
+しかしながら、Auto Scalingグループが設定されているにも関わらず、負荷上昇が短期間のためスケーリングが間に合っておらず、AutoScalingの設定変更が求められています。
+特定期間に対するAuto Scalingのスケーリング設定には、スケジューリングに基づいたスケールアウトを設定する必要があります。</p>
+<h2 id="15">15 解説<a class="headerlink" href="#15" title="Permanent link">#</a></h2>
+<p>このシナリオではデータセンターに障害が発生しても、別のデータベースを利用できるようにすることで、Auroraデータベースのダウンタイムを抑えることが求められています。
+データセンターはアヴェイラビリティゾーンを構成しているため、アヴェイラビリティゾーンに依存しないデータベースの冗長化が必要です。
+したがって、AuroraデータベースのAuroraレプリカを複数アヴェイラビリティゾーンに展開して、プライマリDBに障害が発生した場合は、レプリカの１つをプライマリDBに昇格させることで、
+ダウンタイムを最小限にしてデータベース処理を継続させることができます。</p>
+<p>Aurora DB クラスターは、最大で 15個の Aurora レプリカを配置することができます。
+Aurora レプリカは、AWS リージョン内で DB クラスターが使用している、複数のアベイラビリティーゾーン間に分散できます。
+このレプリカは複数リージョンにも展開可能であり、プライマリインスタンスに障害が発生した場合は、Aurora レプリカがプライマリインスタンスに昇格することができます。</p>
+<h2 id="16">16 解説<a class="headerlink" href="#16" title="Permanent link">#</a></h2>
+<p>他のAWSリソースと連携するLambdaファンクションを作成する際は、IAMによる実行ロールをLambdaファンクションに設定してアクセス権限を付与することが必要です。 
+このIAMロールに付与されたアクセス権限によって、Lambdaファンクションが操作できるAWSリソースの範囲が決まります。</p>
+<h2 id="17">17 解説<a class="headerlink" href="#17" title="Permanent link">#</a></h2>
+<p>このシナリオでは、AWS上で静的ウェブサイトをできるだけ迅速に世界中のユーザーが閲覧できるように構成することが必要です。
+そのためには、Amazon S3バケットとCloudFrontディストリビューションを利用することが最適なアーキテクチャとなります。</p>
+<p>Amazon S3バケットを利用して静的WEBホスティングを利用することができます。S3バケットで静的ウェブホスティング機能を有効化して、次にIndex.htmlを設定して、WEBサイトとして公開することができます。
+その際は、インターネットからのアクセスが許可されるアクセス管理設定が必要となります。
+したがって、パブリックアクセスブロックの無効化して、バケットポリシーの設定により、インターネットからのバケットへのs3:GetObject を設定する必要があります。</p>
+<p>この静的WEBホスティングを設定したS3バケットをオリジンサーバーとしてCloudFrontを構成することで、グローバルなコンテンツ配信を高速にすることができます。
+Cloudfrontはコンテンツ配信サービスで世界中にエッジロケーションが存在するサービスであり、グローバルに低いレイテンシーで配信が可能になります。</p>
+<h2 id="18">18 解説<a class="headerlink" href="#18" title="Permanent link">#</a></h2>
+<p>このシナリオでは、アプリケーションは頻繁に使用され、高いスループット性能が必要であること。その上で、最も費用対効果が高いストレージタイプを選択することが求められています。
+高いスループット性能が必要という時点で、プロビジョンドIOPSまたはスループット最適化HDDを選択することになります。
+さらに、このケースのように、コスト最適を達成するためには、スループット最適化HDDを利用することが必要です。</p>
+<p>プロビジョンドIOPS SSDボリュームは、I / O負荷の高いワークロード、特にストレージパフォーマンスと一貫性に左右されるデータベースワークロードのニーズを満たすように設計されています。
+スループット最適HDDは高いスループット性能がありますが、プロビジョンドIOPS SSDに比較して性能は劣ります。しかしながら、コスト最適を優先させる場合はこちらを選択します。
+したがって、スループット最適化HDDが正解となります。</p>
+<p>スループット最適化HDDはコスト効率の良いHDDを利用してビッグデータやログデータ処理向けの高いスループットを安定的に発揮するEBSです。
+コスト最適とスループット性能の両方を保持することが可能です。</p>
+<h2 id="19">19 解説<a class="headerlink" href="#19" title="Permanent link">#</a></h2>
+<p>AWSストレージゲートウェイをISCSIデバイスとして利用して、オンプレミス環境のストレージとAmazon S3を連携させることができます。
+その際にストレージゲートウェイのキャッシュ型ボリュームを使用すると、頻繁にアクセスされるデータをローカルに保持しながら、Amazon S3をプライマリデータストレージとして使用できます。 
+キャッシュされたボリュームは頻繁にアクセスされるデータへの低レイテンシーなアクセスを提供します。 
+最大32TiBのサイズのストレージボリュームを作成し、それらをオンプレミスアプリケーションサーバーからiSCSIデバイスを介してアタッチすることができます。
+キャッシュ型ボリュームはAWS側をプライマリーとして利用する際に利用します。</p>
+<p>AWS Storage Gateway では、iSCSI イニシエータは iSCSI ターゲットとしてボリュームに接続します。 
+Storage Gateway は、チャレンジハンドシェイク認証プロトコル (CHAP) によってiSCSI とイニシエータの接続を認証します。
+ゲートウェイを管理するには、Internet Small Computer System Interface (iSCSI) ターゲットとして公開されているボリュームまたは仮想テープライブラリ (VTL) デバイスを使用します。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>オンプレ環境との接続にはAWS Storage Gatewayを用いる</p>
+</div>
+<h2 id="20">20 解説<a class="headerlink" href="#20" title="Permanent link">#</a></h2>
+<p>このシナリオで求められる処理は、ステートレスであり、途中で停止したり、再開したりすることが可能となっており、
+かつ完了するまでに1時間程度ほどの短い処理になっています。こうした処理にはスポットインスタンスを適用できます。</p>
+<p>スポットインスタンスはオンデマンド価格より低価格で利用できるAWS管理用に保持されている未使用の EC2 インスタンスの領域です。
+スポットインスタンス は最大９０％割引で利用できるため、Amazon EC2 のコストを大幅に削減できます｡</p>
+<p>スポットインスタンスはAWSから一時的に借りる予備のインスタンスであるために、突如停止する可能性がありますが、
+今回のケースでは途中で停止することが可能な処理となっています。</p>
+<h2 id="21">21 解説<a class="headerlink" href="#21" title="Permanent link">#</a></h2>
+<p>WEBアプリケーションが必要な権限のみに限定したアクセス権限を付与したIAMポリシーを設定して、それによってクロスアカウントアクセスが可能となるIAMロールを作成し、該当WEBアプリケーションに設定します。
+これにより、第三者に資格情報を漏洩することなく、IAMロールの管理によって第三者の情報もコントロールすることができるようになります。</p>
+<p>WEBアプリケーションが必要な権限のみに限定したアクセス権限を付与したIAMポリシーを設定して、それによってクロスアカウントアクセスが可能となるIAMロールを作成し、該当WEBアプリケーションに設定します。
+これにより、第三者に資格情報を漏洩することなく、IAMロールの管理によって第三者の情報もコントロールすることができるようになります。</p>
+<h2 id="22">22 解説<a class="headerlink" href="#22" title="Permanent link">#</a></h2>
+<p>Amazon S3 は、プレフィックスを利用して日付ベースでアップロードを分散することで少なくとも 3,500 リクエスト/秒、データの取得で 
+5,500 リクエスト /秒をサポートできるようにパフォーマンスを自動的に向上させることができます。
+以前はS3がこの性能を発揮するために、ハッシュを利用したランダムな プレフィックスによるパフォーマンス向上が必要不可欠でしたが、
+現在はS3の既存のプレフィックスを用いて、リクエストレートをサポートできるようになりました。</p>
+<p>Amazon S3 は、高いリクエストレートに自動的にスケールされます。例えば、アプリケーションでバケット内のプレフィックスごとに 1 秒あたり 
+3,500 回以上の PUT/COPY/POST/DELETE リクエストまたは 5,500 回以上の GET/HEAD リクエストを達成できます。バケット内のプレフィックスの数に制限はありません。
+並列化を使用することによって、読み取りまたは書き込みのパフォーマンスを向上させることができます。
+例えば、Amazon S3 バケットに 10 個のプレフィックスを作成して読み取りを並列化すると、読み取りパフォーマンスを 1 秒あたり 55,000 回の読み取りリクエストにスケールできます。
+同様に、複数のプレフィックスに書き込むことで、書き込みオペレーションをスケールできます。</p>
+<h2 id="23">23 解説<a class="headerlink" href="#23" title="Permanent link">#</a></h2>
+<p>本シナリオではドキュメント管理にAWSを利用し、初期段階では頻繁に利用し、4ヶ月後には利用機会が激減する状況です。</p>
+<p>S3 Standardにデータを蓄積して、4カ月後にGlacier Deep Archiveに移行するライフサイクルルールを設定することで要件を実現できます。
+データが保存された段階では、このデータには頻繁にアクセスが発生するため、アクセスしやすい標準的なストレージクラスであるS3 Standardを利用します。
+4カ月後にはアーカイブ用のストレージであるGlacierの中で、最も価格が安いGlacier Deep Archiveに保存することで、コスト最適を達成することができます。</p>
+<p>S3ライフサイクルルールを設定することで、S3バケットに保存されたオブジェクトがライフサイクルを通じてコスト効率よく保存されるように管理することができます。
+ライフサイクル設定とはAmazon S3 がオブジェクトのグループに適用するアクションを定義するルールのセットです。</p>
+<p>ライフサイクル管理とは、時間に応じてオブジェクトのストレージクラスの変更や削除を自動的に行うルールを設定できる。</p>
+<h2 id="24">24 解説<a class="headerlink" href="#24" title="Permanent link">#</a></h2>
+<p>このシナリオでは、開発者、IT管理者、およびユーザーに適切なレベルのAPIに対するアクセス許可を与えることが必要であり、そのためのAPI Gatewayに対するアクセス権限の設定方法が問われています。</p>
+<p>Amazon API GatewayはAmazon API Gateway APIへのアクセスを IAM アクセス権限によって制御することができます。
+そのためには、API の呼び出し等を API コール元にアクセスを許可する IAM ポリシーを作成して設定することが必要です。</p>
+<h2 id="25">25 解説<a class="headerlink" href="#25" title="Permanent link">#</a></h2>
+<p>このシナリオでは、DynamoDBテーブルのデータ処理のキャパシティの増減が激しいため、その予測が困難になっています。
+このようなケースでは、オンデマンドモードのDynamoDBテーブルを作成して、オンデマンドでキャパシティを自動で調整できるようにします。</p>
+<p>DynamoDB にはテーブルで読み込みおよび書き込みを処理するための読み込み/書き込みキャパシティーモードが 2 つあります。
+1. DynamoDBの基本的な設定方針として、利用負荷があらかじめ予測できる場合はプロビジョンドスループットモードを選択します。
+2. 逆に、予測できない場合はオンデマンドモードを設定します。</p>
+<h2 id="26">26 解説<a class="headerlink" href="#26" title="Permanent link">#</a></h2>
+<p>このシナリオでは、１つのAZがダウンした場合でもアプリケーションが決して停止しないことが要件であるため、
+AZが１つ停止した直後でも（Auto Scalingが実行される前の段階でも）100％の可用性を維持する必要があります。
+したがって、オプションの中で、1つのAZが利用できなくなった場合でもEC2インスタンスのピークロードが、 １００％の処理を維持できる設定を選ぶことになります。
+3つのAZ毎に50％のピークロードを処理できるEC2インスタンスを展開すれば、1つのAZが停止しても100％を維持することができます。
+したがって、3つのAZに対して、AZ毎に50%のピークロードを処理できるAuto Scaling 設定を行ったEC2インスタンスを展開する が正解となります。</p>
+<h2 id="27">27 解説<a class="headerlink" href="#27" title="Permanent link">#</a></h2>
+<p>Amazon RDS リードレプリカによって、データベース (DB) インスタンスの読み込み処理のパフォーマンスと耐久性が向上します。
+この機能によって、1 つの DB インスタンスのキャパシティーを伸縮自在にスケールし、読み取り頻度の高いデータベースのワークロードを緩和できます。
+RDSはレプリカを最大5台作成し、アプリケーションの大容量読み取りトラフィックを提供して、全体の読み込みスループットを向上させることができます。</p>
+<h2 id="28">28 解説<a class="headerlink" href="#28" title="Permanent link">#</a></h2>
+<p>このシナリオでは、暗号化されたAMIを、別のAWSアカウントと共有する方法が求められています。AMIを共有するには、AMIを別のアカウントと共有するための許可設定が必要とります。
+そのためには、AMIを第三者のAWSアカウントとのみ共有できるようにAMIのLaunchPermissionプロパティを変更することが必要です。</p>
+<p>また、このAMIは暗号化されているため、ただ共有するだけでは第三者のAWSアカウントではAMIを利用することができません。
+AWS KMSのCMKを利用して暗号化されたAMIを利用するには、その暗号化に利用したCMK自体を共有することが必要です。
+したがって、KMSのキーポリシーを変更して、第三者のAWSアカウントが、暗号化に利用したKMSキーを使用できるようにすることが必要です。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>KMSのキーポリシーを変更して、第三者の所有する新しいKMSキーを信頼して、このAMIに適用しても、すでの暗号化されているAMIを復号することはできません。</p>
+</div>
+<h2 id="29">29 解説<a class="headerlink" href="#29" title="Permanent link">#</a></h2>
+<p>長時間のDDoS攻撃を受けてしまうと、リクエスト数に応じたコストが発生するため、余計なコスト増となってしまいます。
+したがって、このシナリオでは、DDoS攻撃によってリクエストの発生コストが増加したことが問題となっています。</p>
+<p>AWS Shield Advanced は保護されたリソースに対する DDoS 攻撃によって生じた可能性のある AWS 請求額の急増に対して、コスト保護を提供します。
+これによって、このようなコストをユーザーが負担する必要がなくなります。</p>
+<h2 id="30">30 解説<a class="headerlink" href="#30" title="Permanent link">#</a></h2>
+<p>リードレプリカは非同期的にレプリケートされる個別のデータベースインスタンスであるため、 レプリケーションデータが遅れることがあり、最新のトランザクションのいくつかが表示できない可能性があります。
+これをレプリケーションラグといいます。これによって、データ変更直後には古いデータが参照されてしまう可能性があります。
+したがって、レプリケーションラグによって古いデータが表示される事がある、が正解です。</p>
+<h2 id="31">31 解説<a class="headerlink" href="#31" title="Permanent link">#</a></h2>
+<p>権限設定の問題。詳細は問題文を見ること。</p>
+<h2 id="32">32 解説<a class="headerlink" href="#32" title="Permanent link">#</a></h2>
+<p>このシナリオでは、「ジョブの負荷に応じてインスタンスを増減すること。」「このジョブはステートレス処理であり、かつ疎結合に構成すること。」が要件となっています。</p>
+<p>「このジョブはステートレス処理であり、疎結合に構成すること。」に対応するには、Amazon SQSを利用したキューイング処理構成を実現します。
+Amazon SQSキューを作成してジョブを処理インスタンスに送信するように構成して、EC2インスタンスによるバックエンド処理を並列処理することができます。
+これによって、インスタンス側で状態を維持しない＝ストートレスでジョブの並行処理を実行します。</p>
+<p>「ジョブの負荷に応じてインスタンスを増減すること。」に対応するには、Amazon SQSキューサイズに応じて、EC2インスタンスを増減するようなAuto Scaling構成を実現することです。
+まずはAuto Scalingで利用するインスタンス構成を準備するために、処理用に設定されたEC2インスタンスのAMIを使用した起動テンプレートを作成します。
+次に、この起動テンプレートを使用して、CPU使用率にインスタンス数を増減するスケーリングポリシーを設定したAuto Scalingグループを構成することができます。</p>
+<p>Amazon SQS キューのアクティビティに応じたスケーリングを検討するシナリオはいくつかあります。今回のケースでは、ジョブの処理メッセージを 
+Amazon SQS キューに格納して、そのキューからメッセージを取得したEC2インスタンスによってジョブが処理されます。</p>
+<p>したがって、SQSキューサイズの増加に応じたAutoScalingを設定することで、ジョブ処理がひっ迫しないようにスケールすることができます。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Auto Scalingグループを設定する際に利用するインスタンスは起動設定または起動テンプレートを利用します。
+しかしながら、起動設定の利用は現在推奨されておらず、起動テンプレートを利用する必要があります。</p>
+</div>
+<h2 id="33">33 解説<a class="headerlink" href="#33" title="Permanent link">#</a></h2>
+<p>権限設定の問題。詳細は問題文を見ること。</p>
+<h2 id="34">34 解説<a class="headerlink" href="#34" title="Permanent link">#</a></h2>
+<p>このシナリオでは、
+「アプリケーションのトランザクション結果を複数の経理関連のアプリケーションと共有すること。」
+「この共有方式は、スケーラブルでほぼリアルタイムに実現すること。」
+「トランザクション処理結果をドキュメントデータベースに保存する前に、機密性の高いデータを削除する前処理を実施すること。」
+の3つの要件を実現するソリューションが求められています。</p>
+<p>「トランザクション処理結果をドキュメントデータベースに保存する前に、機密性の高いデータを削除する前処理を実施すること。」に対応するためには、
+トランザクションデータを直接にDynamoDBテーブルに保存して、DynamoDBトランザクション機能を利用して、DynamoDBテーブルに書き込み時に機密性の高いデータを削除するアクションを設定することで、機密データを削除します。</p>
+<p>DynamoDB トランザクション機能は、DynamoDBテーブルに対する1 つのオペレーションとして複数の項目の追加、更新、または削除が必要となる複雑なビジネスワークフローを管理できます。
+それによって、機密データの項目を指定して削除するワークフローを設定できます。トランザクションを有効化して、以下のようにアクションを実施することができます。</p>
+<ul>
+<li>Put — PutItem オペレーションを開始し、条件付きで、または条件をまったく指定せずに、新しい項目を作成するか、古い項目を新しい項目に置き換えます。</li>
+<li>Update — UpdateItem オペレーションを開始し、既存の項目の属性を編集するか、まだ存在しない場合は新しい項目をテーブルに追加します。条件付きまたは条件なしで既存の項目で属性を追加、削除、更新するには、このアクションを使用します。</li>
+<li>Delete — DeleteItem オペレーションを開始し、プライマリキーにより識別される 1 つの項目をテーブルで削除します。</li>
+<li>ConditionCheck — 項目が存在することを確認するか、項目の特定の属性の条件を確認します。</li>
+</ul>
+<p>「アプリケーションのトランザクション結果を複数の経理関連のアプリケーションと共有すること。」に対応するため、DynamoDBストリームを利用して、他のアプリケーションとトランザクションデータを共有します。</p>
+<p>DynamoDBストリーム はDynamoDB テーブル内の項目レベルの変更に関するシーケンスを時間順にキャプチャし、その情報を最大 24 時間ログに保存する機能です。
+アプリケーションは、このログにアクセスし、データ項目の変更前および変更後の内容をほぼリアルタイムで参照できます。</p>
+<p>DynamoDBテーブルにデータが保存されたストリーム情報をトリガーとして、他のアプリケーションにデータを共有する仕組みをリアルタイムに実現します。
+したがって、DynamoDBストリームによって、「この共有方式は、スケーラブルでほぼリアルタイムに実現すること。」にも対応できます。</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>DynamoDBストリームは DynamoDBテーブルに保存された項目の追加・変更・削除の発生時の履歴をキャプチャできる機能</p>
+</div>
+<h2 id="35">35 解説<a class="headerlink" href="#35" title="Permanent link">#</a></h2>
+<p>Lambda関数が他のAWSリソースにアクセスする場合は、そのサービスに対するアクセス権限を付与するIAMロールがLambda関数に設定されている必要があります。
+今回はシナリオでは、Lambda関数にはAmazon SQSへのアクセス権限が必要です。</p>
+<p>Lambdaのアクセス権限にはIAMロールを使用します。その際はLambda リソースを使用する他のアカウント、または AWS サービスへのアクセス許可を付与するには、リソース自体に適用するポリシーをIAMロールに設定します。</p>
+<p>IAM ユーザーを使用する場合、Amazon SQS ロールに以下のアクセス許可が含まれている必要があります。</p>
+<ul>
+<li>lambda:CreateEventSourceMapping</li>
+<li>lambda:ListEventSourceMappings</li>
+<li>lambda:ListFunctions</li>
+</ul>
+<p>実行ロールには、次のアクセス許可が含まれている必要があります。Lambda</p>
+<ul>
+<li>sqs:DeleteMessage</li>
+<li>sqs:GetQueueAttributes</li>
+<li>sqs:ReceiveMessage</li>
+</ul>
+<p>暗号化されたキューを Lambda 関数に関連付ける場合は、kms:Decrypt アクセス許可を Lambda 実行ロールに追加します。</p>
+<h2 id="36">36 解説<a class="headerlink" href="#36" title="Permanent link">#</a></h2>
+<p>Amazon S3は強い整合性モデルを利用しているため、データ更新の反映に誤差が生じることはありません。2020年12月まで、S3は結果整合性モデルを利用していました。 
+したがって、オブジェクトの更新が同じキーに対して行われると、更新直後の読み取りリクエストには更新内容が反映されていない可能性がありました。
+しかしながら、現在はすべてのリクエスト処理において、<strong>強い整合性モデル</strong>が利用されているため、こうした齟齬が発生することはなくなりました。</p>
+<h2 id="37">37 解説<a class="headerlink" href="#37" title="Permanent link">#</a></h2>
+<p>AWS Secrets Managerはデータベースやその他のサービスの認証情報を安全に暗号化してシークレットとして保存・取得する仕組みを提供します。
+Secrets Manager を利用することで、ユ―ザー認証情報を頻繁にローテーションしながら、WEBサーバーがデータベースに接続するためのセキュアに保存することができます。</p>
+<p>他のAWSリソースがSecrets Manager内の情報にアクセスするためには、IAMポリシーによる許可設定が必要となります。
+したがって、IAMロールによってEC2インスタンスによるAWS Secrets Managerへのアクセスを許可することが必要です。
+これによって、EC2インスタンスにホストされたアプリケーションは Secrets Manager への API コールによって、シークレットをプログラムから取得できるようになります。
+アプリケーション内で利用される認証情報をセキュアな方法で保存して、取得する機能を実装できます。</p>
+<h2 id="38">38 解説<a class="headerlink" href="#38" title="Permanent link">#</a></h2>
+<p>Amazon VPC で起動するサービスは、デフォルトではオンプレミスネットワークと交信できません。
+したがって、データセンターやオフィスのネットワークを AWS サイト間 VPN (Site-to-Site VPN) 接続によってAWSと接続することが必要です。
+その際に、インターネットプロトコルセキュリティ (IPsec) 通信を使用して 2 点間に暗号化された VPN トンネルを作成することができます。</p>
+<p>このシナリオでは、移行データ量と移行スケジュールから移行方式を選択することが必要です。要件としては、現在が火曜日であり、週末にデータ転送を実施するという短期間の準備が条件となっています。
+また、現在はインターネットを介して接続されているだけであり、物理的な接続やデバイスの取得が必要となるDirect ConnectやSnowballアプライアンスを発注して移行を実施することは困難です。</p>
+<p>なぜならば、これらの設定にはAWS側との調整する時間が必要となり、この時点からAWSにこれらの機器を発注しても間に合いません。唯一即時に実施できる手段がVPN接続設定です。
+また、10TBほどのデータ転送はVPN接続による転送によって72時間で完了させることができます。</p>
+<h2 id="39">39 解説<a class="headerlink" href="#39" title="Permanent link">#</a></h2>
+<p>すぐ活用するデータを蓄積する場合はS3バケットのStandard（標準）ストレージクラスを利用することが最適です。
+その上で、バージョニングを設定することで、オブジェクトの以前のバージョンを容易に復元することができるため、データが誤って削除されても即座に復元することができます。</p>
+<p>バージョニングとは、同じバケット内でオブジェクトの複数のバリアントを保持する手段です。
+バージョニングを使用して、Amazon S3 バケットに格納されたあらゆるオブジェクトのあらゆるバージョンを、格納、取得、復元することができます。
+バージョニングを使用すれば、意図しないユーザーアクションやアプリケーション障害から簡単にデータを復旧できます。</p>
+<h2 id="40">40 解説<a class="headerlink" href="#40" title="Permanent link">#</a></h2>
+<p>このシナリオでは、AWS Certificate Manager（ACM）の各証明書の有効期限の10日前に通知されるように設定することが求められています。
+ACM証明書の有効期限をチェックするAmazon EventBridgeルールを作成して、10日以内に有効期限切れになる証明書がある場合は、Amazon SNS通知を実施することが可能です。</p>
+<p>Amazon EventBridgeはアプリケーションの可用性の問題やリソースの変更などのシステムイベントに自動的に応答する機能を作成する機能です。
+Amazon EventBridgeを利用することで、AWS Certificate Manager（ACM）に対して、更新の対象となる ACM 証明書に対して AWS ヘルスイベントを生成することができます。
+その際は、AWS_ACM_RENEWAL_STATE_CHANGEを利用して、証明書が更新された、有効期限が切れている、または有効期限が切れる予定を利用したルールを設定できます。
+これによって、Amazon EventBridge が有効期限が切れる予定の証明書を検出して、Amazon SNSと連携したアラーム通知を実施することが可能です。</p>
+<h2 id="41">41 解説<a class="headerlink" href="#41" title="Permanent link">#</a></h2>
+<p>インスタンス間のトラフィックを制御するためには、セキュリティグループを利用することが適切です。
+その際は、DBインスタンスのセキュリティグループのインバウンド通信のルールにWEBサーバーインスタンスのセキュリティグループIDを設定します。
+こうすることで、Auto Scalingグループで起動されるインスタンスにも同じセキュルティグループを設定するように起動テンプレートを設定して、
+べてのインスタンスがDBインスタンスに接続するための通信許可が設定されるようになります。</p>
+<h2 id="42">42 解説<a class="headerlink" href="#42" title="Permanent link">#</a></h2>
+<p>Amazon S3バケットにCloudFrontディストリビューションによるコンテンツ配信を構成することで、AWS WAF を利用してReferer制限を実装することができます。
+AWS WAF は、CloudFront に転送される HTTP および HTTPS リクエストをモニタリングして、コンテンツへのアクセスを制御可能にするウェブアプリケーションファイアウォールです。
+AWS WAFのReferer制限によって直接にURLリンクを参照することを制限することができます。したがって、オプション２が正解となります。</p>
+<p>AWS WAF はウェブアプリケーションのファイアウォールであり、CloudFront に転送される HTTP および HTTPS リクエストのモニタリングや、コンテンツへのアクセスのコントロールを可能にします。
+指定された条件 (クエリ文字列の値や、リクエストの送信元 IP アドレスなど) に基づき、CloudFront はリクエストされたコンテンツまたは HTTP ステータスコード 403 (Forbidden) でリクエストに対応します。</p>
+<h2 id="43">43 解説<a class="headerlink" href="#43" title="Permanent link">#</a></h2>
+<p>このシナリオでは、アプリケーションはWEBサーバーとMySQLデータベースの冗長性と可用性を高めるソリューションを必要としています。
+特に、現在のレガシーシステムでは、エクスポート/インポートを利用した別地域のスタンバイ構成の展開方法がマニュアルで実行されており、
+システム利用状況を圧迫していることが問態となっています。これを改善して、自動化とパフォーマンスを担保することが必要です。</p>
+<p>Amazon Aurora クラスターを構成してリードレプリカをマルチAZに展開します。これによって、Aurora グローバルデータベースを設定して、スタンバイ用DBを作成することができます。
+これによって、複数地域に跨ったデータベースのプライマリ/セカンダリ構成の運用を自動化することができ、マニュアルのエクスポート/インポートを利用したスタンバイ構成を廃止することが可能となります。</p>
+<p>Aurora はデフォルト構成で単一の AWS リージョン 内の複数のアベイラビリティーゾーンにまたがる DB クラスターを構成します。データがプライマリ DB インスタンスに書き込まれると、
+Aurora によりアベイラビリティーゾーン全体で、クラスターボリュームに関連付けられた 6 つのストレージノードにデータが同期的に複製されます。</p>
+<p>さらに最大 15 個の読み取り専用 Aurora レプリカを作成できます。Aurora レプリカはリーダーインスタンスとも呼ばれます。
+日常的な操作で、読み取りを多用するアプリケーションの作業の一部をオフロードすることができます。</p>
+<p>Amazon Aurora Global Database によって、複数の AWS リージョン で高可用性を実現するために、Aurora グローバルデータベースを設定できます。
+各 Aurora グローバルデータベースは複数の AWS リージョン にまたがっているため、低レイテンシーでのグローバル読み取りが実現し、AWS リージョン 全体の停止からの災害対策を可能とします。</p>
+<h2 id="44">44 解説<a class="headerlink" href="#44" title="Permanent link">#</a></h2>
+<p>このシナリオでは、Amazon Aurora MySQLデータベースのアップグレード時にLambda関数とデータベース間の接続ができなくなり、その間に発生したデータは記録されないことが問題となっています。
+これを解決するには、Lambda関数が取得した顧客データをAmazon SQSキューに保存して、別のLambda関数がこのキューをポーリングして、顧客データをAuroraデータベースに保存する構成とすることで、
+処理中のデータ喪失を防ぐことができます。</p>
+<p>Amazon RDSやAmazon Aurora MySQLデータベースでは、アップグレードなどの一部のメンテナンス実行時にはダウンタイムが発生する可能性があります。
+通常はメンテナンスウィンドウの設定によって、夜中などにメンテナンス時間を設定して、通常稼働に影響がないようにメンテナンスを実施しますが、
+24時間動作するようなデータベースの場合は不具合が発生する可能性があります。</p>
+<p>今回はこのダウンタイムが発生しても、データベースへのデータ登録に欠損が発生しないように構成を検討することが求められています。</p>
+<p>Lambda関数はAmazon SQSキューと連携して処理を実行することができます。Amazon SQSキューはメッセージ内にデータを保存して、
+後続処理用のコンシューマーによってデータが取得されるまでデータを保持しておくことができます。これを利用して、
+Lambda関数の処理を分割して、Amazon Aurora MySQLデータベースのアップグレード時にLambda関数とデータベースの間の接続が
+できなくなり、その間に発生したデータは記録されない問題を避けることが可能です。</p>
+<h2 id="45">45 解説<a class="headerlink" href="#45" title="Permanent link">#</a></h2>
+<p>FIFOキューはメッセージ順序を保証し、少なくとも1回のメッセージ配信をサポートしています。
+SQSはアプリケーションコンポーネント間で転送されるメッセージを生成・管理する信頼性が高く拡張性の高いマネージドメッセージキューサービスです。
+FIFOキューを利用することで高スループット、ベストエフォート型の順序付け、少なくとも1回の配信を可能にします。</p>
+<p>また、Amazon SQSはメッセージ重複排除 IDを利用することで重複メッセージを防ぐことが可能です。 
+メッセージ重複排除 IDは 送信されたメッセージの重複排除に使用するトークンです。</p>
+<p>特定のメッセージ重複排除 ID を持つメッセージが正常に送信された場合に、5 分間の重複排除間隔の間、同じ ID を持つ送信メッセージは配信されません。</p>
+<h2 id="46">46 解説<a class="headerlink" href="#46" title="Permanent link">#</a></h2>
+<p>S3オブジェクトロックを有効にしたS3バケットを作成して、その中にドキュメントを保存することで、
+Amazon S3バケットに保存される新しいドキュメントは保存後に変更も削除もできなくなります。
+S3 オブジェクトロックは、Write Once Read Many (WORM) モデルを使用してオブジェクトを保存できます。
+オブジェクトロックにより、オブジェクトが削除または上書きもできないように一定期間または無期限に防止できます。</p>
+<h2 id="47">47 解説<a class="headerlink" href="#47" title="Permanent link">#</a></h2>
+<p>oute53ではフェイルオーバールーティングを使用して、アクティブ/パッシブフェールオーバー構成を作成できます。
+Route53のレコード設定において、同じ名前と種類のプライマリとセカンダリのフェールオーバーレコードを作成して、
+それぞれにヘルスチェックを関連付けてリージョン間のフェールオーバー構成を実現することができます。</p>
+<p>Amazon Route 53 ヘルスチェックでは、ウェブアプリケーション、ウェブサーバー、その他のリソースの正常性とパフォーマンスを監視します。
+次の方法のいずれかでRoute53がパフォーマンスをモニタリングします。</p>
+<ol>
+<li>ウェブサーバーなどの指定するリソースのヘルスチェック</li>
+<li>ELBなどの他のヘルスチェックのステータス</li>
+<li>Amazon CloudWatch アラームのステータス</li>
+</ol>
+<h2 id="48">48 解説<a class="headerlink" href="#48" title="Permanent link">#</a></h2>
+<p>今回のシナリオでは、5年間にわたって中長期的にデータを保存しつつ、24時間以内にデータを抽出でき、かつコスト効率が良いことがストレージ要件となっています。
+したがって、最も値段が安く、データ取り出しが24時間以内に可能なストレージが必要です。Glacier Deep Archive ストレージクラスは、耐久性があり、セキュアな
+大量データ向けのストレージを、AWSで最も低価格で提供しています。データは 3 つ以上の AWS アベイラビリティゾーンにまたがって保存され、
+アーカイブデータは12 時間以内に取りだすことができます。</p>
+<h2 id="49">49 解説<a class="headerlink" href="#49" title="Permanent link">#</a></h2>
+<p>AWSにおける柔軟でスケーラブルなサーバー処理を実施するには、EC2インスタンスに対してAuto ScalingとELBを設定することで達成することができます。
+ELBがトラフィックを複数インスタンスに分散することで冗長性を高め、かつAutoScalingが高負荷時のスケーリングを自動で実行してくれます。</p>
+<p>Auto Scaling とは インスタンスへのアクセスが高まったときに、新しいインスガンスを増設して、パフォーマンスを向上させる機能。</p>
+<h2 id="50">50 解説<a class="headerlink" href="#50" title="Permanent link">#</a></h2>
+<p>必要に応じて管理者の指示に従って10時間以内にデータを取得するという要件から、Amazon Glacier Flexible Retrievalの標準取り出しが最適な設定となります。 
+標準取り出しでは、 3〜5 時間以内にすべてのアーカイブにアクセスできます。</p>
+<h2 id="51">51 解説<a class="headerlink" href="#51" title="Permanent link">#</a></h2>
+<p>APIゲートウェイは、APIを介してバックエンドサービスへのHTTPからのアクセスを提供します。
+APIゲートウェイはLambdaと一体となって利用できるサービスであり、APIゲートウェイをLambdaファンクションと統合する設定を実施することで、
+HTTP形式のAPIからLambdaファンクションへのアクセスが可能となります。</p>
+<p>これまではHTTP経由で Lambda関数を実行するためには、API Gateway を経由する必要がありました。
+しかしながら、 関数 URL(Function URLs) という新機能が実装されたため、API Gatewayを省略したパブリックに公開するAPIや、
+簡易な認証実装でも差し支えの無いAPIを AWSLambdaで実装することができます。</p>
+<h2 id="52">52 解説<a class="headerlink" href="#52" title="Permanent link">#</a></h2>
+<p>個々のユーザ設定データのサイズは約10KBとなる予定です。また、その処理には高速処理が必要です。このような小規模データを保存・処理するためにはNoSQLデータベースを利用することが最適です。
+DynamoDBはセッションデータやユーザー設定、メタデータなどを格納するための理想的なデータベースサービスとなります。
+このモバイルアプリケーションを使用する顧客はリリース段階で数万人になると予測されています。このユーザー設定を利用した高速処理が必要となることもあり、DynamoDBでのNoSQL型の高速処理が最適です。</p>
+<h2 id="53">53 解説<a class="headerlink" href="#53" title="Permanent link">#</a></h2>
+<p>ALIASレコードを作成してCloudFrontを構成することで、Route53にCloudFrontを設定してドメインを関連付けることができます。
+その際に、<strong>IPv4に基づいたドメイン設定の場合はレコードタイプはAにすることが必要です</strong>。これはRoute53のコンソール画面で、
+レコードを作成において [エイリアス] をオンにしてレコードタイプはAにして、CloudFrontディストリビューションのドメインを指定することで設定ができます。</p>
+<p>通常のRoute 53レコードは標準のDNSレコードを使用しますが、CloudFrontなどのAWSリソースを構成する場合はALIASレコードを利用することが必要です。
+ALIASレコードはDNS機能に対するRoute 53固有の拡張機能を提供します。 IPアドレスまたはドメイン名の代わりに、ALIASレコードにはCloudFront、
+Elastic Beanstalk環境、ELB 、静的Webサイトとして設定されているAmazon S3バケットへのポインタ、または 同じホストゾーン内の別のRoute 53レコードを設定することができます。</p>
+<h2 id="54">54 解説<a class="headerlink" href="#54" title="Permanent link">#</a></h2>
+<p>セキュリティグループの変更と新規設定は全てのEC2インスタンスに即座に反映されます。   </p>
+<h2 id="55">55 解説<a class="headerlink" href="#55" title="Permanent link">#</a></h2>
+<p>Amazon SQSはキューによってシステム処理を分散させて負荷分散を可能にするキューイングサービスです。これはAWSリソースの水平方向のスケーリングに役立ちます。
+SQSキューによって複数EC2インスタンスによる並行処理が可能となり、負荷分散や処理プロセスの最適化を達成することができます。</p>
+<h2 id="56">56 解説<a class="headerlink" href="#56" title="Permanent link">#</a></h2>
+<p>S3バケットに対してMFA deleteを有効化することで、ユーザーは削除処理を実施しようとすると毎回MFA認証が求められるため、操作ミスによる削除を防ぐことができます。
+さらにバージョニング機能を有効化することで削除されたファイルを戻すことが出来ます。</p>
+<h2 id="57">57 解説<a class="headerlink" href="#57" title="Permanent link">#</a></h2>
+<p>このシステムでは、SQSのコンシューマーがメッセージ処理に失敗すると、他のコンシューマーがメッセージを処理するまでに5分以上のタイムラグがあります。
+これは5分以上の可視性タイムアウトが設定されていることが理由です。</p>
+<p>SQSキューのメッセージがコンシューマーに受信された直後は、メッセージはキューに残ったままとなっています。
+したがって、他のコンシューマーが同じメッセージを再処理しないように、Amazon SQS は可視性タイムアウトを設定することが必要です。</p>
+<p>この可視性タイムアウト時間内では、他のコンシューマーが同じメッセージを受信して処理することはできません。
+デフォルトの可視性タイムアウトは 30 秒で、最小値は 0 秒、最大スケールは 12 時間です。分散コンシューマの1つがメッセージを受信すると、
+その特定のメッセージの可視性タイムアウトが期限切れになるまで、メッセージを再度読み取ることはできません。</p>
+<p>したがって、可視性タイムアウトの設定時間を減少させることで、他のコンシューマーがメッセージを処理するための待ち時間を短縮することができます。</p>
+<h2 id="58">58 解説<a class="headerlink" href="#58" title="Permanent link">#</a></h2>
+<p>Amazon EventBridgeでは、スケジュールに基づいて AWS Lambda 関数を実行するルールを設定できます。
+その際は、lambda:InvokeFunctionをアクションに設定し、EventBridge サービスプリンシパル (events.amazonaws.com) の
+アクセス許可を使用してルールを実行するには、add-permission コマンドを使用します。</p>
+<div class="highlight"><span class="filename">アクセス許可設定の例</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>aws lambda add-permission \
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>--function-name LogScheduledEvent \
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>--statement-id my-scheduled-event \
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>--action &#39;lambda:InvokeFunction&#39; \
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>--principal events.amazonaws.com \
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>--source-arn arn:aws:events:us-east-1:123456789012:rule/my-scheduled-rule
+</code></pre></div>
+<h2 id="59">59 解説<a class="headerlink" href="#59" title="Permanent link">#</a></h2>
+<p>最もセキュリティが強化される構成はWebサーバーとデータベースサーバーのどちらもプライベートサブネットに移行して、NATゲートウェイをパブリックサブネットに設置する構成です。
+パブリックサブネットの踏み台サーバーもしくはELBを介して、またはプライベートサブネットへのVPN接続を介して、外部PCからプライベートサブネット内のWEBサーバーへのアクセスが可能です。</p>
+<p>インターネットからの不特定なアクセスがWEBサーバーに必要な場合は、このWEBサーバーはパブリックサブネットに置く必要があります。
+しかしながら、今回のケースでは、社内ネットワークから社内ユーザーのみがWebサーバーにアクセスするため、このWEBサーバーは社内アクセスに限られることがわかります。
+そのため、WEBサーバーをプライベートサブネットに設置する方式がセキュリティ上は望ましいです。</p>
+<h2 id="60">60 解説<a class="headerlink" href="#60" title="Permanent link">#</a></h2>
+<p>CloudWatchのパフォーマンスデータに基づくと、割り当てられたシャードは十分に活用されていないということは、シャードあたりの処理量が少ないということです。
+したがって、コールドシャードをマージして、Kinesis Data Streamに要する容量とコストを削減することが最適な対応となります。</p>
+<p>Amazon Kinesis Data Streams ではパフォーマンス調整としてリシャーディングが実行できます。リシャーディングはシャードの分割と結合という 2 種類のオペレーションがあります。</p>
+<ul>
+<li>シャードの分割では、1 つのシャードを 2 つシャードに分けます。分割によりストリーム内のシャードの数が増えるため、ストリームのデータ容量は増えます。
+  一方で、Amazon Kinesis Data Streamsはシャード単位で請求されるため、分割によりストリームのコストが増えます。</li>
+<li>シャードの結合では、2 つシャードを 1 つのシャードに組み合わせます。結合によりストリーム内のシャードの数が減るため、ストリームのデータ容量 とコストは減ります。</li>
+</ul>
+<p>Kinesisの1つのシャードは、1MB /秒のデータ入力と2MB /秒のデータ出力の容量を提供しています。 
+1つのシャードは、1秒あたり最大1000のPUTレコードをサポートしています。ストリームの総容量はシャード容量の合計です。
+複数のコンシューマーアプリケーションの合計読み取り数がシャードごとの制限を超えている場合は、Kinesisデータストリーム内のシャードの数を増やす必要があります。
+これをリシャーディングと呼びます。</p>
+<h2 id="61">61 解説<a class="headerlink" href="#61" title="Permanent link">#</a></h2>
+<p>このシナリオでは、書き込み操作がどのような状況でも失われないようにするために、書き込みリクエストが適切にデータベースに送信される仕組みを構築することが求められています。
+その際は、「保留中のデータベースへの書き込みリクエスト」を、SQSキューに格納して非同期に処理して解決することが可能です。</p>
+<p>DynamoDBのデータ処理実行にはLambdaと連携しつつ、キューによるDB処理を実行することが可能です。
+メッセージをキューに格納することによって、書き込み処理のキューメッセージが喪失しないように設定することができます。
+そのうえで、Lambda関数がSQSキューメッセージに基づいて書き込み処理を実行します。</p>
+<p>さらにLambda関数にはデッドレターキューを追加することで、Lambda関数の実行に失敗したメッセージをAmazon SQSのキューに蓄積することができます。
+デッドレターキューによってリクエストメッセージが失われることはないため、書き込み処理がどのような状況下でも失われないようにする要件に合致しています。</p>
+<h2 id="62">62 解説<a class="headerlink" href="#62" title="Permanent link">#</a></h2>
+<p>SQSではキューに対して優先度を設定することができます。それによって、優先的に処理されるキューとそうではないキューとに振り分けることが可能です。 
+各キューが別々にポーリングされる際に、 優先順位の高いキューが最初にポーリングされます。</p>
+<p>このSQS設定により、有料ユーザーには優先的に処理するキューを設定し、無料ユーザーにはデフォルトのキューを利用することが可能です。</p>
+<p>優先付けには次のような設定を行います。</p>
+<ol>
+<li>SQSを用いて優先順位ごとに複数のキューを用意する。</li>
+<li>処理を急ぐリクエストは優先順位の高いキューに入れる。</li>
+<li>優先順位に応じてキューを処理するサーバー台数を用意する。</li>
+<li>キューの「メッセージの遅延送信」機能を利用することで、処理開始時間を遅延させることも可能である。</li>
+</ol>
+<h2 id="63">63 解説<a class="headerlink" href="#63" title="Permanent link">#</a></h2>
+<p>このEC2インスタンスがインターネットからアクセス可能にするためには、セキュリティグループとネットワークACLが適切な通信設定にされていること、
+および設置されているサブネットのルートテーブルにインターネットゲートウェイへのエントリがあることを確認する必要があります。</p>
+<p>そして、ネットワークACLはステートレスであるため、アウトバウンド通信の許可設定も必要となります。
+その場合は、PC側の広範囲なポート番号が必要となるため、エフェメラルポートへのSSH通信設定が必要となります。
+これは1024-65535のポート番号範囲でSSHを許可する設定となります。
+これによって、ホームネットワークのパブリック IPv4 アドレスの範囲からのアウトバウンド SSH トラフィックを許可します。</p>
+<p>インターネットを介してSSHによってLinux EC2インスタンスに接続するためには、EC2インスタンスが配置されているVPC環境に以下のような設定が必要です。</p>
+<ul>
+<li>EC2インスタンスはパブリックIPアドレスまたはElastic IPアドレスが付与されていること</li>
+<li>これをパブリックインターネットへのアクセスに利用できる</li>
+<li>セキュリティグループにはSSHのインバウンドアクセスが許可されていること。</li>
+<li>セキュリティグループはステートフルであるため、SSHのインバウンドアクセスが許可されていればアウトバウンドの許可は必要はありません。</li>
+<li>サブネットのネットワークACLにはSSHのインバウンドアクセスに加えて、アウトバウンド通信設定にエファメルポートへのアウトバウンド通信の許可ルールを設定する。</li>
+<li>ネットワークACLはステートレスであるため、アウトバウンド通信の許可設定も必要となります。
+    その場合は、PC側の広範囲なポート番号が必要となるため、エフェメラルポートの設定が必要となります。これは1024-65535のポート番号範囲でSSHを許可する設定です。
+    これによって、ホームネットワークのパブリック IPv4 アドレスの範囲からのアウトバウンド SSH トラフィックを許可します。</li>
+<li>パブリックサブネットにはインターネットゲートウェイへのルートが設定されている。</li>
+<li>これによって、パブリックサブネットはインターネットへの通信が可能となります。</li>
+</ul>
+<h2 id="64">64 解説<a class="headerlink" href="#64" title="Permanent link">#</a></h2>
+<p>AWS Shield はマネージド型の分散サービス妨害 (DDoS) に対する保護サービスです。AWS Shield Standard はウェブサイトやアプリケーションを標的にした、
+最も一般的で頻繁に発生するネットワークおよびトランスポートレイヤーの DDoS 攻撃を防御します。</p>
+<p>AWS Shield Standard はAmazon CloudFront にRoute53を利用すると自動的に適用されています。</p>
+<p>AWS Shield Advanced は、保護された Elastic IP アドレス、ELB、Amazon CloudFront、Global Accelerator、
+または Route 53 リソースへのトラフィックパターンに基づいてカスタマイズされた検出を提供する高度なDDoS 攻撃保護を提供します。
+大規模で高度な DDoS 攻撃に対する追加の検出および緩和策と、ほぼリアルタイムの可視性を提供します。</p>
+<p>AWS Shield はELBやAmazon CloudFront にRoute53と連携して利用されるサービスとなっています。
+Amazon CloudFront にAWS Shieldを組み合わせて、Web アプリケーションへの DDoS 攻撃に対して
+最適な防御壁を設定することができます。</p>
+<h2 id="65">65 解説<a class="headerlink" href="#65" title="Permanent link">#</a></h2>
+<p>EC2インスタンスはVPC内のサービスですが、S3はリージョンに設置するためVPC外のサービスとなります。
+したがって、EC2インスタンスとS3バケット間で通信すると、インターネットを介して通信を行うことになりデータ転送コストが発生してしまいます。</p>
+<p><img alt="" src="../img/mogi1/Q65.png" /></p>
+<p>VPCエンドポイントを使用すると、インターネットを介さずに、VPC内のサービスからVPC外のAWSサービスに接続することができます。
+これにより、インターネットを通さずにEC2インスタンスからS3バケットへの通信を実施することができます。
+同一リージョン内の通信料金は無料であるため、通信料金が発生しなくなります。</p>
+<p>Amazon S3 へのアクセスには、ゲートウェイエンドポイントとインターフェイスエンドポイント (AWS PrivateLink を使用) の 2 つのタイプの VPC エンドポイントを使用できます。
+ゲートウェイエンドポイントは、AWS ネットワーク経由で VPC から Amazon S3 にアクセスするために、ルートテーブルで指定するゲートウェイです。
+インターフェースエンドポイントは、プライベート IP アドレスを使用して、VPC 内、オンプレミス、または VPC ピアリングや AWS リージョン を使用する
+別の AWS Transit Gateway にある VPC から Amazon S3 にリクエストをルーティングします。</p>
+<p>ゲートウェイエンドポイントは、VPC にインターネットゲートウェイや NAT デバイスを必要とせずに、Amazon S3 および DynamoDB への信頼性の高い接続を提供します。 
+S3 や DynamoDB へ接続したいリソースが配置されている VPC に VPC エンドポイントを割り当て、ルートテーブルに ターゲットが VPC エンドポイントのルーティングを設定します。</p>
+<p>Amazon S3はインターフェースエンドポイントに対応していませんでしたが、2021年よりAWS PrivateLink for Amazon S3 が追加されました。
+AWS PrivateLink for Amazon S3 ではインターフェイスエンドポイントを利用して、VPN および AWS Direct Connect 経由でオンプレミスにあるアプリケーション、
+または VPC ピアリング経由で別の AWS リージョン にあるアプリケーションからAmazon S3バケットにアクセスができるようになります。</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../SSA03/memo1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: AWS SS" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              AWS SS
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../mogi2/" class="md-footer__link md-footer__link--next" aria-label="Next: 模擬試験2" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              模擬試験2
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2022 m.omuro
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "navigation.tabs", "navigation.top", "search.highlight", "search.suggest", "search.share"], "search": "../../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.ed9748b7.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@9.0.0/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
