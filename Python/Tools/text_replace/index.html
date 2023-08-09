@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://omomuroni.github.io/Python/Recipe/multiprocessing/">
+        <link rel="canonical" href="https://omomuroni.github.io/Python/Tools/text_replace/">
       
       
-        <link rel="prev" href="../mkdocstrings/">
+        <link rel="prev" href="../filediff/">
       
       
-        <link rel="next" href="../os/">
+        <link rel="next" href="../../Web/Design/bootstrap_dashboard/">
       
       <link rel="icon" href="../../../custom/icons/pencil.svg">
       <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
-        <title>multiprocessing - おもむろにメモ書き</title>
+        <title>複数ファイル内の文字列置換 - おもむろにメモ書き</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#multiprocessing" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              multiprocessing
+              複数ファイル内の文字列置換
             
           </span>
         </div>
@@ -4226,16 +4226,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_8" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_8" >
       
       
       
@@ -4244,7 +4242,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_8_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_8_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_14_8">
           <span class="md-nav__icon md-icon"></span>
           Recipe
@@ -4257,7 +4255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ast/" class="md-nav__link">
+      <a href="../../Recipe/ast/" class="md-nav__link">
         ast モジュール
       </a>
     </li>
@@ -4271,7 +4269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../codecs/" class="md-nav__link">
+      <a href="../../Recipe/codecs/" class="md-nav__link">
         codecs
       </a>
     </li>
@@ -4285,7 +4283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datetime_and_time/" class="md-nav__link">
+      <a href="../../Recipe/datetime_and_time/" class="md-nav__link">
         datetime & time
       </a>
     </li>
@@ -4299,7 +4297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../difflib/" class="md-nav__link">
+      <a href="../../Recipe/difflib/" class="md-nav__link">
         difflib
       </a>
     </li>
@@ -4313,7 +4311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docstring/" class="md-nav__link">
+      <a href="../../Recipe/docstring/" class="md-nav__link">
         GoogleスタイルのPython Docstring
       </a>
     </li>
@@ -4327,7 +4325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../file_operation/" class="md-nav__link">
+      <a href="../../Recipe/file_operation/" class="md-nav__link">
         ファイル操作
       </a>
     </li>
@@ -4341,7 +4339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../full-width%20half-width/" class="md-nav__link">
+      <a href="../../Recipe/full-width%20half-width/" class="md-nav__link">
         全角半角変換
       </a>
     </li>
@@ -4355,7 +4353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../glob/" class="md-nav__link">
+      <a href="../../Recipe/glob/" class="md-nav__link">
         glob
       </a>
     </li>
@@ -4369,7 +4367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../inspect/" class="md-nav__link">
+      <a href="../../Recipe/inspect/" class="md-nav__link">
         inspect モジュール
       </a>
     </li>
@@ -4383,7 +4381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../list/" class="md-nav__link">
+      <a href="../../Recipe/list/" class="md-nav__link">
         list
       </a>
     </li>
@@ -4397,7 +4395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../memo/" class="md-nav__link">
+      <a href="../../Recipe/memo/" class="md-nav__link">
         雑多なメモ
       </a>
     </li>
@@ -4411,7 +4409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mkdocs_plugin/" class="md-nav__link">
+      <a href="../../Recipe/mkdocs_plugin/" class="md-nav__link">
         mkodcs plugin
       </a>
     </li>
@@ -4425,7 +4423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mkdocstrings/" class="md-nav__link">
+      <a href="../../Recipe/mkdocstrings/" class="md-nav__link">
         mkdocstrings
       </a>
     </li>
@@ -4437,86 +4435,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          multiprocessing
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Recipe/multiprocessing/" class="md-nav__link">
         multiprocessing
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#process" class="md-nav__link">
-    Process クラス
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    プロセス間での状態の共有
-  </a>
-  
-    <nav class="md-nav" aria-label="プロセス間での状態の共有">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#shared-memory" class="md-nav__link">
-    共有メモリ (Shared memory)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#server-process" class="md-nav__link">
-    サーバープロセス (Server process)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    戻り値
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -4528,7 +4451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../os/" class="md-nav__link">
+      <a href="../../Recipe/os/" class="md-nav__link">
         os
       </a>
     </li>
@@ -4542,7 +4465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pathlib/" class="md-nav__link">
+      <a href="../../Recipe/pathlib/" class="md-nav__link">
         pathlib
       </a>
     </li>
@@ -4556,7 +4479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../py_decimal/" class="md-nav__link">
+      <a href="../../Recipe/py_decimal/" class="md-nav__link">
         decimal
       </a>
     </li>
@@ -4570,7 +4493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pydoc/" class="md-nav__link">
+      <a href="../../Recipe/pydoc/" class="md-nav__link">
         pydoc
       </a>
     </li>
@@ -4584,7 +4507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pysmb/" class="md-nav__link">
+      <a href="../../Recipe/pysmb/" class="md-nav__link">
         pysmb
       </a>
     </li>
@@ -4598,7 +4521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pywatchdog/" class="md-nav__link">
+      <a href="../../Recipe/pywatchdog/" class="md-nav__link">
         python でログ監視
       </a>
     </li>
@@ -4612,7 +4535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../recursive_function1/" class="md-nav__link">
+      <a href="../../Recipe/recursive_function1/" class="md-nav__link">
         再帰関数1
       </a>
     </li>
@@ -4626,7 +4549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../recursive_function2/" class="md-nav__link">
+      <a href="../../Recipe/recursive_function2/" class="md-nav__link">
         再帰関数2
       </a>
     </li>
@@ -4640,7 +4563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../seaborn/" class="md-nav__link">
+      <a href="../../Recipe/seaborn/" class="md-nav__link">
         seaborn
       </a>
     </li>
@@ -4654,7 +4577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../shutil/" class="md-nav__link">
+      <a href="../../Recipe/shutil/" class="md-nav__link">
         shutil
       </a>
     </li>
@@ -4668,7 +4591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sphinx/" class="md-nav__link">
+      <a href="../../Recipe/sphinx/" class="md-nav__link">
         Sphinx
       </a>
     </li>
@@ -4682,7 +4605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../timeit/" class="md-nav__link">
+      <a href="../../Recipe/timeit/" class="md-nav__link">
         timeit
       </a>
     </li>
@@ -4696,7 +4619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../useful_word/" class="md-nav__link">
+      <a href="../../Recipe/useful_word/" class="md-nav__link">
         変数でよく使う英単語
       </a>
     </li>
@@ -4710,7 +4633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../with_object/" class="md-nav__link">
+      <a href="../../Recipe/with_object/" class="md-nav__link">
         with文に対応するクラスの定義
       </a>
     </li>
@@ -4963,14 +4886,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_12" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_12" checked>
       
       
       
@@ -4979,7 +4904,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_12_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_12_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_14_12">
           <span class="md-nav__icon md-icon"></span>
           Tools
@@ -4992,7 +4917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tools/filediff/" class="md-nav__link">
+      <a href="../filediff/" class="md-nav__link">
         2つのディレクトリ内のファイル差分を比較するツール
       </a>
     </li>
@@ -5004,11 +4929,72 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Tools/text_replace/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          複数ファイル内の文字列置換
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         複数ファイル内の文字列置換
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1
+  </a>
+  
+    <nav class="md-nav" aria-label="1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yaml" class="md-nav__link">
+    yaml ファイルの場合
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -5588,43 +5574,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#process" class="md-nav__link">
-    Process クラス
+  <a href="#1" class="md-nav__link">
+    1
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    プロセス間での状態の共有
-  </a>
-  
-    <nav class="md-nav" aria-label="プロセス間での状態の共有">
+    <nav class="md-nav" aria-label="1">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#shared-memory" class="md-nav__link">
-    共有メモリ (Shared memory)
+  <a href="#2" class="md-nav__link">
+    2
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#server-process" class="md-nav__link">
-    サーバープロセス (Server process)
+  <a href="#yaml" class="md-nav__link">
+    yaml ファイルの場合
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    戻り値
-  </a>
   
 </li>
       
@@ -5643,7 +5615,7 @@
                   
 
   
-    <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/Python/Recipe/multiprocessing.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/Python/Tools/text_replace.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -5652,120 +5624,98 @@
     
       
     
-    <a href="https://github.com/omomuroni/omomuroni.github.io/raw/master/docs/Python/Recipe/multiprocessing.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/omomuroni/omomuroni.github.io/raw/master/docs/Python/Tools/text_replace.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="multiprocessing">multiprocessing<a class="headerlink" href="#multiprocessing" title="Permanent link">#</a></h1>
-<ul>
-<li><a href="https://docs.python.org/ja/3/library/multiprocessing.html">multiprocessing --- プロセスベースの並列処理</a></li>
-</ul>
-<blockquote>
-<p>multiprocessing パッケージは、ローカルとリモート両方の並行処理を提供します。また、このパッケージはスレッドの代わりにサブプロセスを使用することにより、<a href="https://docs.python.org/ja/3/glossary.html#term-global-interpreter-lock">グローバルインタープリタロック</a> の問題を避ける工夫が行われています。</p>
-</blockquote>
-<div class="highlight"><span class="filename">構文</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Process</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>　　　　<span class="n">p1</span> <span class="o">=</span> <span class="n">Process</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;プロセス名&quot;</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="n">実行する関数</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">関数の引数</span><span class="p">,))</span>
+<h1 id="_1">複数ファイル内の文字列置換<a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
+<h2 id="1">1<a class="headerlink" href="#1" title="Permanent link">#</a></h2>
+<p>以下に、指定されたディレクトリ内のすべてのテキストファイルのパスを取得し、特定の文字列が含まれている場合に置換するPythonスクリプトの例を示します。このスクリプトは、osモジュールとfileinputモジュールを使用しています。</p>
+<p>まず、osモジュールを使用してディレクトリ内のファイルを見つけ、fileinputモジュールを使用してテキストファイル内の特定の文字列を置換します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">os</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span> <span class="nn">fileinput</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">def</span> <span class="nf">replace_string_in_files</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">target_string</span><span class="p">,</span> <span class="n">replacement_string</span><span class="p">):</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>            <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.txt&quot;</span><span class="p">):</span>  <span class="c1"># テキストファイルを処理</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>                <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>                <span class="k">with</span> <span class="n">fileinput</span><span class="o">.</span><span class="n">FileInput</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">backup</span><span class="o">=</span><span class="s2">&quot;.bak&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>                    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>                        <span class="n">new_line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">target_string</span><span class="p">,</span> <span class="n">replacement_string</span><span class="p">)</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>                        <span class="nb">print</span><span class="p">(</span><span class="n">new_line</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>  <span class="c1"># 標準出力に新しい行を出力</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="n">target_directory</span> <span class="o">=</span> <span class="s2">&quot;/path/to/your/directory&quot;</span>  <span class="c1"># 対象のディレクトリのパス</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="n">target_string</span> <span class="o">=</span> <span class="s2">&quot;置換したい文字列&quot;</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    <span class="n">replacement_string</span> <span class="o">=</span> <span class="s2">&quot;新しい文字列&quot;</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="n">replace_string_in_files</span><span class="p">(</span><span class="n">target_directory</span><span class="p">,</span> <span class="n">target_string</span><span class="p">,</span> <span class="n">replacement_string</span><span class="p">)</span>
 </code></pre></div>
-<div class="admonition warnig">
-<p class="admonition-title">Warnig</p>
-<p><code>if name == 'main':</code>がないとエラーとなります。</p>
-</div>
-<h2 id="process">Process クラス<a class="headerlink" href="#process" title="Permanent link">#</a></h2>
-<p>multiprocessing モジュールでは、はじめに Process のオブジェクトを作成し、続いて start() メソッドを呼び出します。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Process</span>
+<p>このスクリプトでは、指定したディレクトリ内のすべてのテキストファイルを再帰的に処理し、特定の文字列を新しい文字列で置換します。また、元のファイルは.bakの拡張子でバックアップされます。必要に応じて、変数を適切に調整してください。</p>
+<h3 id="2">2<a class="headerlink" href="#2" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">os</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">p</span> <span class="o">=</span> <span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">f</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;bob&#39;</span><span class="p">,))</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="n">p</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="n">p</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">def</span> <span class="nf">replace_string_in_files</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">target_string</span><span class="p">,</span> <span class="n">replacement_string</span><span class="p">):</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>            <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.txt&quot;</span><span class="p">):</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>                <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>                    <span class="n">lines</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>                    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>                        <span class="n">new_line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">target_string</span><span class="p">,</span> <span class="n">replacement_string</span><span class="p">)</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>                        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">new_line</span><span class="p">)</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    <span class="n">target_directory</span> <span class="o">=</span> <span class="s2">&quot;/path/to/your/directory&quot;</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    <span class="n">target_string</span> <span class="o">=</span> <span class="s2">&quot;置換したい文字列&quot;</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>    <span class="n">replacement_string</span> <span class="o">=</span> <span class="s2">&quot;新しい文字列&quot;</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    <span class="n">replace_string_in_files</span><span class="p">(</span><span class="n">target_directory</span><span class="p">,</span> <span class="n">target_string</span><span class="p">,</span> <span class="n">replacement_string</span><span class="p">)</span>
 </code></pre></div>
-<h2 id="_1">プロセス間での状態の共有<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
-<ul>
-<li><a href="https://docs.python.org/ja/3/library/multiprocessing.html#sharing-state-between-processes">プロセス間での状態の共有</a></li>
-</ul>
-<p>プロセス間のデータ共有が必要な場合のために multiprocessing モジュールには2つの方法が用意されている。</p>
-<h3 id="shared-memory">共有メモリ (Shared memory)<a class="headerlink" href="#shared-memory" title="Permanent link">#</a></h3>
-<p>データを共有メモリ上に保持するために Value クラス、もしくは Array クラスが用意されている。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Process</span><span class="p">,</span> <span class="n">Value</span><span class="p">,</span> <span class="n">Array</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">n</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="mf">3.1415927</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)):</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="n">num</span> <span class="o">=</span> <span class="n">Value</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="n">arr</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<p>このスクリプトは、指定したディレクトリ内のテキストファイルを読み取り、特定の文字列を新しい文字列で置換して元のファイルに上書きします。バックアップは作成されません。必要に応じて、変数を適切に設定して使用してください。</p>
+<h3 id="yaml">yaml ファイルの場合<a class="headerlink" href="#yaml" title="Permanent link">#</a></h3>
+<p>再帰関数を使用して、文字列を置換</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">os</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">import</span> <span class="nn">yaml</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">def</span> <span class="nf">replace_string_in_yaml_files</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">target_string</span><span class="p">,</span> <span class="n">replacement_string</span><span class="p">):</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>            <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.yaml&quot;</span><span class="p">):</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>                <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>                    <span class="n">yaml_data</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 <a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    <span class="n">p</span> <span class="o">=</span> <span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">f</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">arr</span><span class="p">))</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    <span class="n">p</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    <span class="n">p</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> 
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    <span class="c1"># 3.1415927</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="p">[:])</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    <span class="c1"># [0, -1, -2, -3, -4, -5, -6, -7, -8, -9]</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>                <span class="k">if</span> <span class="n">yaml_data</span><span class="p">:</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>                    <span class="n">updated_yaml_data</span> <span class="o">=</span> <span class="n">replace_string_recursive</span><span class="p">(</span><span class="n">yaml_data</span><span class="p">,</span> <span class="n">target_string</span><span class="p">,</span> <span class="n">replacement_string</span><span class="p">)</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>                    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>                        <span class="n">yaml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">updated_yaml_data</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">default_flow_style</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">allow_unicode</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="k">def</span> <span class="nf">replace_string_recursive</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">target_string</span><span class="p">,</span> <span class="n">replacement_string</span><span class="p">):</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>        <span class="k">return</span> <span class="n">data</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">target_string</span><span class="p">,</span> <span class="n">replacement_string</span><span class="p">)</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>        <span class="k">return</span> <span class="p">[</span><span class="n">replace_string_recursive</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">target_string</span><span class="p">,</span> <span class="n">replacement_string</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>        <span class="k">return</span> <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">replace_string_recursive</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">target_string</span><span class="p">,</span> <span class="n">replacement_string</span><span class="p">)</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>        <span class="k">return</span> <span class="n">data</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>    <span class="n">target_directory</span> <span class="o">=</span> <span class="s2">&quot;/path/to/your/directory&quot;</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>    <span class="n">target_string</span> <span class="o">=</span> <span class="s2">&quot;置換したい文字列&quot;</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>    <span class="n">replacement_string</span> <span class="o">=</span> <span class="s2">&quot;新しい文字列&quot;</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>    <span class="n">replace_string_in_yaml_files</span><span class="p">(</span><span class="n">target_directory</span><span class="p">,</span> <span class="n">target_string</span><span class="p">,</span> <span class="n">replacement_string</span><span class="p">)</span>
 </code></pre></div>
-<blockquote>
-<p>num と arr を生成するときに使用されている、引数 'd' と 'i' は array モジュールにより使用される種別の型コードです。
-ここで使用されている 'd' は倍精度浮動小数、 'i' は符号付整数を表します。これらの共有オブジェクトは、プロセスセーフでありスレッドセーフです。</p>
-</blockquote>
-<h3 id="server-process">サーバープロセス (Server process)<a class="headerlink" href="#server-process" title="Permanent link">#</a></h3>
-<p>Manager() 関数により生成されたマネージャーオブジェクトはサーバープロセスを管理します。
-マネージャーオブジェクトは Python のオブジェクトを保持して、
-他のプロセスがプロキシ経由でその Python オブジェクトを操作することができます。</p>
-<p>Manager() 関数が返すマネージャは list, dict, Namespace, Lock, RLock, Semaphore, BoundedSemaphore, Condition, Event, Barrier, Queue, Value, Array を
-サポートします。 以下にサンプルコードを示します。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Process</span><span class="p">,</span> <span class="n">Manager</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">l</span><span class="p">):</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">d</span><span class="p">[</span><span class="s1">&#39;2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">d</span><span class="p">[</span><span class="mf">0.25</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="n">l</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="k">with</span> <span class="n">Manager</span><span class="p">()</span> <span class="k">as</span> <span class="n">manager</span><span class="p">:</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        <span class="n">d</span> <span class="o">=</span> <span class="n">manager</span><span class="o">.</span><span class="n">dict</span><span class="p">()</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        <span class="n">l</span> <span class="o">=</span> <span class="n">manager</span><span class="o">.</span><span class="n">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>        <span class="n">p</span> <span class="o">=</span> <span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">f</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">l</span><span class="p">))</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>        <span class="n">p</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>        <span class="n">p</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="_2">戻り値<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
-<p>Python 3では、multiprocessingモジュールを使用してマルチプロセス処理を実行することができます。マルチプロセス処理によって、並列処理による高速化が可能になります。</p>
-<p>マルチプロセスで戻り値を取得するには、multiprocessingモジュールのProcessクラスを使用します。以下は、戻り値を取得するための簡単な例です。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span> <span class="nn">multiprocessing</span> <span class="kn">import</span> <span class="n">Process</span><span class="p">,</span> <span class="n">Queue</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">def</span> <span class="nf">worker</span><span class="p">(</span><span class="n">queue</span><span class="p">):</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;This is the result&quot;</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="n">queue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    <span class="n">queue</span> <span class="o">=</span> <span class="n">Queue</span><span class="p">()</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="n">p</span> <span class="o">=</span> <span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">worker</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">queue</span><span class="p">,))</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="n">p</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="n">p</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-</code></pre></div>
-<p>この例では、worker関数が新しいプロセスで実行されます。worker関数は、Queueオブジェクトを受け取り、結果をQueueに入れます。
-親プロセスは、子プロセスを開始し、終了するまで待機し、Queueから結果を取得して表示します。</p>
-<p>注意すべき重要な点として、上記のコードはif name == 'main':以下に置かれています。
-これは、マルチプロセス処理を行う場合に必要なもので、Windowsなどの環境で実行する場合は必要になることがあります。</p>
 
 
 
@@ -5794,7 +5744,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../mkdocstrings/" class="md-footer__link md-footer__link--prev" aria-label="Previous: mkdocstrings" rel="prev">
+          <a href="../filediff/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2つのディレクトリ内のファイル差分を比較するツール" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -5803,20 +5753,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                mkdocstrings
+                2つのディレクトリ内のファイル差分を比較するツール
               </div>
             </div>
           </a>
         
         
           
-          <a href="../os/" class="md-footer__link md-footer__link--next" aria-label="Next: os" rel="next">
+          <a href="../../Web/Design/bootstrap_dashboard/" class="md-footer__link md-footer__link--next" aria-label="Next: Bootstrap テンプレート" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                os
+                Bootstrap テンプレート
               </div>
             </div>
             <div class="md-footer__button md-icon">
