@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://omomuroni.github.io/Linux/LPIC102_CheatSheet/">
+        <link rel="canonical" href="https://omomuroni.github.io/Linux/make_command/">
       
       
-        <link rel="prev" href="../LPIC101_CheatSheet/">
+        <link rel="prev" href="../bash/">
       
       
-        <link rel="next" href="../LPIC_101/">
+        <link rel="next" href="../recipe_replace_strings/">
       
       <link rel="icon" href="../../custom/icons/pencil.svg">
       <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
-        <title>LPIC 102チートシート - おもむろにメモ書き</title>
+        <title>Linux のコマンドを python で作成する - おもむろにメモ書き</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lpic-102" class="md-skip">
+        <a href="#linux-python" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              LPIC 102チートシート
+              Linux のコマンドを python で作成する
             
           </span>
         </div>
@@ -373,7 +373,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../LPIC101_CheatSheet/" class="md-tabs__link md-tabs__link--active">
+      <a href="../bash/" class="md-tabs__link md-tabs__link--active">
         Linux
       </a>
     </li>
@@ -1163,6 +1163,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Excel/recipe1/" class="md-nav__link">
+        Excel 関数レシピ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Excel/reference/" class="md-nav__link">
         参考サイト
       </a>
@@ -1368,8 +1382,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../LPIC101_CheatSheet/" class="md-nav__link">
-        LPIC 101チートシート
+      <a href="../bash/" class="md-nav__link">
+        bash 関連
       </a>
     </li>
   
@@ -1391,9 +1405,40 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Linux のコマンドを python で作成する
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        LPIC 102チートシート
+        Linux のコマンドを python で作成する
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1406,8 +1451,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../LPIC_101/" class="md-nav__link">
-        101 Sys archit.
+      <a href="../recipe_replace_strings/" class="md-nav__link">
+        Linux レシピ：文字列置換
       </a>
     </li>
   
@@ -1420,8 +1465,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../LPIC_102/" class="md-nav__link">
-        102 install / Pkg
+      <a href="../recipe_search_strings/" class="md-nav__link">
+        Linux レシピ：文字列の検索
       </a>
     </li>
   
@@ -1434,63 +1479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LPIC_103/" class="md-nav__link">
-        103 GNU / Unix Cmd
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../LPIC_104/" class="md-nav__link">
-        104 Device / FHS
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../LPIC_Level1_CmdList/" class="md-nav__link">
-        Lpic Level 1 Cmd List
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../bash/" class="md-nav__link">
-        bash 関連
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../todo/" class="md-nav__link">
+      <a href="../reference/" class="md-nav__link">
         TODO
       </a>
     </li>
@@ -1509,17 +1498,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_10" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_6" >
       
       
       
-        <label class="md-nav__link" for="__nav_10_10" id="__nav_10_10_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_10_6" id="__nav_10_6_label" tabindex="0">
           AlmaLinux
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_10_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_10_10">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10_6">
           <span class="md-nav__icon md-icon"></span>
           AlmaLinux
         </label>
@@ -1655,17 +1644,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_11" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_7" >
       
       
       
-        <label class="md-nav__link" for="__nav_10_11" id="__nav_10_11_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_10_7" id="__nav_10_7_label" tabindex="0">
           Command
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_11_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_10_11">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10_7">
           <span class="md-nav__icon md-icon"></span>
           Command
         </label>
@@ -1703,17 +1692,149 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_12" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_8" >
       
       
       
-        <label class="md-nav__link" for="__nav_10_12" id="__nav_10_12_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_10_8" id="__nav_10_8_label" tabindex="0">
+          LPIC
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10_8">
+          <span class="md-nav__icon md-icon"></span>
+          LPIC
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LPIC/LPIC101_CheatSheet/" class="md-nav__link">
+        LPIC 101チートシート
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LPIC/LPIC102_CheatSheet/" class="md-nav__link">
+        LPIC 102チートシート
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LPIC/LPIC_101/" class="md-nav__link">
+        101 Sys archit.
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LPIC/LPIC_102/" class="md-nav__link">
+        102 install / Pkg
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LPIC/LPIC_103/" class="md-nav__link">
+        103 GNU / Unix Cmd
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LPIC/LPIC_104/" class="md-nav__link">
+        104 Device / FHS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LPIC/LPIC_Level1_CmdList/" class="md-nav__link">
+        Lpic Level 1 Cmd List
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_9" id="__nav_10_9_label" tabindex="0">
           WSL
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_12_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_10_12">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10_9">
           <span class="md-nav__icon md-icon"></span>
           WSL
         </label>
@@ -2885,23 +3006,37 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../Python/recipe_search_file/" class="md-nav__link">
+        pythonファイルを検索
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_2" id="__nav_14_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_3" id="__nav_14_3_label" tabindex="0">
           Basics
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_3">
           <span class="md-nav__icon md-icon"></span>
           Basics
         </label>
@@ -3079,17 +3214,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_4" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_3" id="__nav_14_3_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_4" id="__nav_14_4_label" tabindex="0">
           Data
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_3">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_4">
           <span class="md-nav__icon md-icon"></span>
           Data
         </label>
@@ -3106,17 +3241,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_3_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_4_1" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_3_1" id="__nav_14_3_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_4_1" id="__nav_14_4_1_label" tabindex="0">
           Dash
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_3_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_3_1">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_4_1">
           <span class="md-nav__icon md-icon"></span>
           Dash
         </label>
@@ -3154,17 +3289,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_3_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_4_2" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_3_2" id="__nav_14_3_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_4_2" id="__nav_14_4_2_label" tabindex="0">
           Recipe
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_3_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_3_2">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_4_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_4_2">
           <span class="md-nav__icon md-icon"></span>
           Recipe
         </label>
@@ -3370,17 +3505,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_3_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_4_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_3_3" id="__nav_14_3_3_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_4_3" id="__nav_14_4_3_label" tabindex="0">
           TTP
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_3_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_3_3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_4_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_4_3">
           <span class="md-nav__icon md-icon"></span>
           TTP
         </label>
@@ -3460,17 +3595,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_3_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_4_4" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_3_4" id="__nav_14_3_4_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_4_4" id="__nav_14_4_4_label" tabindex="0">
           TextFSM
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_3_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_3_4">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_4_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_4_4">
           <span class="md-nav__icon md-icon"></span>
           TextFSM
         </label>
@@ -3564,17 +3699,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_3_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_4_5" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_3_5" id="__nav_14_3_5_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_4_5" id="__nav_14_4_5_label" tabindex="0">
           Openpyxl
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_3_5_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_3_5">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_4_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_4_5">
           <span class="md-nav__icon md-icon"></span>
           Openpyxl
         </label>
@@ -3654,17 +3789,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_3_6" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_4_6" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_3_6" id="__nav_14_3_6_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_4_6" id="__nav_14_4_6_label" tabindex="0">
           Pandas
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_3_6_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_3_6">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_4_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_4_6">
           <span class="md-nav__icon md-icon"></span>
           Pandas
         </label>
@@ -3709,17 +3844,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_5" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_4" id="__nav_14_4_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_5" id="__nav_14_5_label" tabindex="0">
           Finance
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_4">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_5">
           <span class="md-nav__icon md-icon"></span>
           Finance
         </label>
@@ -3757,17 +3892,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_6" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_5" id="__nav_14_5_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_6" id="__nav_14_6_label" tabindex="0">
           IXIA
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_5_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_5">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_6">
           <span class="md-nav__icon md-icon"></span>
           IXIA
         </label>
@@ -3805,17 +3940,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_6" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_7" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_6" id="__nav_14_6_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_7" id="__nav_14_7_label" tabindex="0">
           Network
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_6_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_6">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_7">
           <span class="md-nav__icon md-icon"></span>
           Network
         </label>
@@ -3958,17 +4093,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_6_10" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_7_10" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_6_10" id="__nav_14_6_10_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_7_10" id="__nav_14_7_10_label" tabindex="0">
           pyATS
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_6_10_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_6_10">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_7_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_7_10">
           <span class="md-nav__icon md-icon"></span>
           pyATS
         </label>
@@ -4181,17 +4316,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_7" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_8" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_7" id="__nav_14_7_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_8" id="__nav_14_8_label" tabindex="0">
           Python2
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_7_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_7">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_8">
           <span class="md-nav__icon md-icon"></span>
           Python2
         </label>
@@ -4243,17 +4378,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_8" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_9" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_8" id="__nav_14_8_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_9" id="__nav_14_9_label" tabindex="0">
           Recipe
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_8_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_8">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_9">
           <span class="md-nav__icon md-icon"></span>
           Recipe
         </label>
@@ -4669,17 +4804,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_9" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_10" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_9" id="__nav_14_9_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_10" id="__nav_14_10_label" tabindex="0">
           STC
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_9_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_9">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_10">
           <span class="md-nav__icon md-icon"></span>
           STC
         </label>
@@ -4717,17 +4852,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_10" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_11" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_10" id="__nav_14_10_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_11" id="__nav_14_11_label" tabindex="0">
           Setup
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_10_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_10">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_11">
           <span class="md-nav__icon md-icon"></span>
           Setup
         </label>
@@ -4807,17 +4942,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_11" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_12" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_11" id="__nav_14_11_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_12" id="__nav_14_12_label" tabindex="0">
           Test
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_11_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_11">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_12_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_12">
           <span class="md-nav__icon md-icon"></span>
           Test
         </label>
@@ -4834,17 +4969,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_11_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_12_1" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_11_1" id="__nav_14_11_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_12_1" id="__nav_14_12_1_label" tabindex="0">
           Pytest
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_11_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_11_1">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_12_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_12_1">
           <span class="md-nav__icon md-icon"></span>
           Pytest
         </label>
@@ -4903,17 +5038,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_12" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_13" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_12" id="__nav_14_12_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_13" id="__nav_14_13_label" tabindex="0">
           Tools
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_12_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_12">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_13_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_13">
           <span class="md-nav__icon md-icon"></span>
           Tools
         </label>
@@ -4965,17 +5100,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_13" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_14" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_13" id="__nav_14_13_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_14" id="__nav_14_14_label" tabindex="0">
           Web
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_13_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_13">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_14_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_14">
           <span class="md-nav__icon md-icon"></span>
           Web
         </label>
@@ -4992,17 +5127,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_13_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_14_1" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_13_1" id="__nav_14_13_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_14_1" id="__nav_14_14_1_label" tabindex="0">
           Design
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_13_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_13_1">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_14_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_14_1">
           <span class="md-nav__icon md-icon"></span>
           Design
         </label>
@@ -5040,17 +5175,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_13_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_14_2" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_13_2" id="__nav_14_13_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_14_2" id="__nav_14_14_2_label" tabindex="0">
           Django
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_13_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_13_2">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_14_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_14_2">
           <span class="md-nav__icon md-icon"></span>
           Django
         </label>
@@ -5109,17 +5244,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_13_2_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_14_2_4" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_13_2_4" id="__nav_14_13_2_4_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_14_2_4" id="__nav_14_14_2_4_label" tabindex="0">
           Tutorial
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_14_13_2_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_13_2_4">
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_14_14_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_14_2_4">
           <span class="md-nav__icon md-icon"></span>
           Tutorial
         </label>
@@ -5276,17 +5411,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_13_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_14_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_13_3" id="__nav_14_13_3_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_14_3" id="__nav_14_14_3_label" tabindex="0">
           Module
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_13_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_13_3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_14_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_14_3">
           <span class="md-nav__icon md-icon"></span>
           Module
         </label>
@@ -5514,6 +5649,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -5527,7 +5677,7 @@
                   
 
   
-    <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/Linux/LPIC102_CheatSheet.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/Linux/make_command.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -5536,17 +5686,44 @@
     
       
     
-    <a href="https://github.com/omomuroni/omomuroni.github.io/raw/master/docs/Linux/LPIC102_CheatSheet.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/omomuroni/omomuroni.github.io/raw/master/docs/Linux/make_command.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="lpic-102">LPIC 102チートシート<a class="headerlink" href="#lpic-102" title="Permanent link">#</a></h1>
-<ul>
-<li><a href="https://qiita.com/kyohmizu/items/d5d6fedc527efa9f649c">参照：LPIC 102チートシート</a></li>
-</ul>
+<h1 id="linux-python">Linux のコマンドを python で作成する<a class="headerlink" href="#linux-python" title="Permanent link">#</a></h1>
+<p>任意のディレクトリにpythonファイルを作成する
+この例ではホームディレクトリに「pycommands」ディレクトリを作成</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdir ~/pycommands
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>cd ~/pycommands
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>vi filelist
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="ch">#!/usr/bin/env python</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">import</span> <span class="nn">os</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">PATH</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1"># ユーザーが現在いるディレクトリ（os.getcwd()）の情報を取得</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">current_dir</span> <span class="o">=</span> <span class="n">PATH</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1"># glob(&quot;*&quot;)でユーザーが現在いるディレクトリのファイル一覧を取得</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">current_dir</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">):</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+</code></pre></div>
+<p>ファイルに実行権限を付与
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>chmod u+x ~/pycommands/filelist
+</code></pre></div></p>
+<p>環境変数のPATHを設定</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>export PATH=&#39;$PATH:$HOME/pycommands/&#39;
+</code></pre></div>
+<p>いつも使えるようにするためには、
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>echo export PATH=&#39;$PATH:$HOME/pycommands/&#39; &gt;&gt; ~/.bashrc
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>source ~/.bashrc
+</code></pre></div></p>
+<h3 id="_1">参考<a class="headerlink" href="#_1" title="Permanent link">#</a></h3>
+<p><a href="https://qiita.com/toshid1997/items/1699331e526cb90615df">LinuxのコマンドをPythonで自作する</a></p>
 
 
 
@@ -5575,7 +5752,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../LPIC101_CheatSheet/" class="md-footer__link md-footer__link--prev" aria-label="Previous: LPIC 101チートシート" rel="prev">
+          <a href="../bash/" class="md-footer__link md-footer__link--prev" aria-label="Previous: bash 関連" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -5584,20 +5761,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                LPIC 101チートシート
+                bash 関連
               </div>
             </div>
           </a>
         
         
           
-          <a href="../LPIC_101/" class="md-footer__link md-footer__link--next" aria-label="Next: 101 Sys archit." rel="next">
+          <a href="../recipe_replace_strings/" class="md-footer__link md-footer__link--next" aria-label="Next: Linux レシピ：文字列置換" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                101 Sys archit.
+                Linux レシピ：文字列置換
               </div>
             </div>
             <div class="md-footer__button md-icon">

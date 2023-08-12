@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://omomuroni.github.io/Linux/LPIC_104/">
+        <link rel="canonical" href="https://omomuroni.github.io/Linux/recipe_replace_strings/">
       
       
-        <link rel="prev" href="../LPIC_103/">
+        <link rel="prev" href="../make_command/">
       
       
-        <link rel="next" href="../LPIC_Level1_CmdList/">
+        <link rel="next" href="../recipe_search_strings/">
       
       <link rel="icon" href="../../custom/icons/pencil.svg">
       <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
-        <title>104 Device / FHS - おもむろにメモ書き</title>
+        <title>Linux レシピ：文字列置換 - おもむろにメモ書き</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#104-device-fhs" class="md-skip">
+        <a href="#linux" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              104 Device / FHS
+              Linux レシピ：文字列置換
             
           </span>
         </div>
@@ -373,7 +373,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../LPIC101_CheatSheet/" class="md-tabs__link md-tabs__link--active">
+      <a href="../bash/" class="md-tabs__link md-tabs__link--active">
         Linux
       </a>
     </li>
@@ -1163,6 +1163,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Excel/recipe1/" class="md-nav__link">
+        Excel 関数レシピ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Excel/reference/" class="md-nav__link">
         参考サイト
       </a>
@@ -1368,8 +1382,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../LPIC101_CheatSheet/" class="md-nav__link">
-        LPIC 101チートシート
+      <a href="../bash/" class="md-nav__link">
+        bash 関連
       </a>
     </li>
   
@@ -1382,50 +1396,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../LPIC102_CheatSheet/" class="md-nav__link">
-        LPIC 102チートシート
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../LPIC_101/" class="md-nav__link">
-        101 Sys archit.
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../LPIC_102/" class="md-nav__link">
-        102 install / Pkg
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../LPIC_103/" class="md-nav__link">
-        103 GNU / Unix Cmd
+      <a href="../make_command/" class="md-nav__link">
+        Linux のコマンドを python で作成する
       </a>
     </li>
   
@@ -1448,12 +1420,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          104 Device / FHS
+          Linux レシピ：文字列置換
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        104 Device / FHS
+        Linux レシピ：文字列置換
       </a>
       
         
@@ -1473,298 +1445,29 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    パーティションとファイルシステムの作成
+    ファイル内の文字列を置換する処理
   </a>
   
-    <nav class="md-nav" aria-label="パーティションとファイルシステムの作成">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    ハードディスク
+    フォルダ内のすべてのファイルに対し、文字列置換処理
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ide-sata-scsi" class="md-nav__link">
-    IDE / SATA / SCSI
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exfat" class="md-nav__link">
-    exFAT
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#btrfs" class="md-nav__link">
-    Btrfs
-  </a>
-  
-</li>
+    <nav class="md-nav" aria-label="フォルダ内のすべてのファイルに対し、文字列置換処理">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    スワップ
+    特定の拡張子がつくファイルに対する処理
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#swapon" class="md-nav__link">
-    swapon
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#swapoff" class="md-nav__link">
-    swapoff
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mkswap" class="md-nav__link">
-    mkswap
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parted" class="md-nav__link">
-    parted
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fdisk" class="md-nav__link">
-    fdisk
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mkfs-mke2fs" class="md-nav__link">
-    mkfs / mke2fs
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    ファイルシステムの整合性の維持
-  </a>
-  
-    <nav class="md-nav" aria-label="ファイルシステムの整合性の維持">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#du" class="md-nav__link">
-    du
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#df" class="md-nav__link">
-    df
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tune2fs" class="md-nav__link">
-    tune2fs
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fsck" class="md-nav__link">
-    fsck
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#e2fsck" class="md-nav__link">
-    e2fsck
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#xfs" class="md-nav__link">
-    XFS
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    ファイルシステムのマウントとアンマウント
-  </a>
-  
-    <nav class="md-nav" aria-label="ファイルシステムのマウントとアンマウント">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#etcfstab" class="md-nav__link">
-    「/etc/fstab」ファイル
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mount" class="md-nav__link">
-    mount
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#umount" class="md-nav__link">
-    umount
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#etcmtab" class="md-nav__link">
-    「/etc/mtab」ファイル
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    ファイルのパーミッションと所有権の管理
-  </a>
-  
-    <nav class="md-nav" aria-label="ファイルのパーミッションと所有権の管理">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#chmod" class="md-nav__link">
-    chmod
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chgrp" class="md-nav__link">
-    chgrp
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#umask" class="md-nav__link">
-    umask
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chown" class="md-nav__link">
-    chown
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    特殊なパーミッション
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    ハードリンクとシンボリックリンクの作成・変更
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    システムファイルの検索、適切なファイル配置
-  </a>
-  
-    <nav class="md-nav" aria-label="システムファイルの検索、適切なファイル配置">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#find" class="md-nav__link">
-    find
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#which" class="md-nav__link">
-    which
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#whereis" class="md-nav__link">
-    whereis
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#type" class="md-nav__link">
-    type
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#locate" class="md-nav__link">
-    locate
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#updatedb" class="md-nav__link">
-    updatedb
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#usr" class="md-nav__link">
-    /usr
+  <a href="#1" class="md-nav__link">
+    例1
   </a>
   
 </li>
@@ -1789,8 +1492,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../LPIC_Level1_CmdList/" class="md-nav__link">
-        Lpic Level 1 Cmd List
+      <a href="../recipe_search_strings/" class="md-nav__link">
+        Linux レシピ：文字列の検索
       </a>
     </li>
   
@@ -1803,21 +1506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bash/" class="md-nav__link">
-        bash 関連
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../todo/" class="md-nav__link">
+      <a href="../reference/" class="md-nav__link">
         TODO
       </a>
     </li>
@@ -1836,17 +1525,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_10" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_6" >
       
       
       
-        <label class="md-nav__link" for="__nav_10_10" id="__nav_10_10_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_10_6" id="__nav_10_6_label" tabindex="0">
           AlmaLinux
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_10_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_10_10">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10_6">
           <span class="md-nav__icon md-icon"></span>
           AlmaLinux
         </label>
@@ -1982,17 +1671,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_11" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_7" >
       
       
       
-        <label class="md-nav__link" for="__nav_10_11" id="__nav_10_11_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_10_7" id="__nav_10_7_label" tabindex="0">
           Command
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_11_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_10_11">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10_7">
           <span class="md-nav__icon md-icon"></span>
           Command
         </label>
@@ -2030,17 +1719,149 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_12" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_8" >
       
       
       
-        <label class="md-nav__link" for="__nav_10_12" id="__nav_10_12_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_10_8" id="__nav_10_8_label" tabindex="0">
+          LPIC
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10_8">
+          <span class="md-nav__icon md-icon"></span>
+          LPIC
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LPIC/LPIC101_CheatSheet/" class="md-nav__link">
+        LPIC 101チートシート
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LPIC/LPIC102_CheatSheet/" class="md-nav__link">
+        LPIC 102チートシート
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LPIC/LPIC_101/" class="md-nav__link">
+        101 Sys archit.
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LPIC/LPIC_102/" class="md-nav__link">
+        102 install / Pkg
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LPIC/LPIC_103/" class="md-nav__link">
+        103 GNU / Unix Cmd
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LPIC/LPIC_104/" class="md-nav__link">
+        104 Device / FHS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LPIC/LPIC_Level1_CmdList/" class="md-nav__link">
+        Lpic Level 1 Cmd List
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_9" id="__nav_10_9_label" tabindex="0">
           WSL
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_12_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_10_12">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10_9">
           <span class="md-nav__icon md-icon"></span>
           WSL
         </label>
@@ -3212,23 +3033,37 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../Python/recipe_search_file/" class="md-nav__link">
+        pythonファイルを検索
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_2" id="__nav_14_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_3" id="__nav_14_3_label" tabindex="0">
           Basics
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_3">
           <span class="md-nav__icon md-icon"></span>
           Basics
         </label>
@@ -3406,17 +3241,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_4" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_3" id="__nav_14_3_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_4" id="__nav_14_4_label" tabindex="0">
           Data
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_3">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_4">
           <span class="md-nav__icon md-icon"></span>
           Data
         </label>
@@ -3433,17 +3268,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_3_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_4_1" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_3_1" id="__nav_14_3_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_4_1" id="__nav_14_4_1_label" tabindex="0">
           Dash
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_3_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_3_1">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_4_1">
           <span class="md-nav__icon md-icon"></span>
           Dash
         </label>
@@ -3481,17 +3316,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_3_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_4_2" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_3_2" id="__nav_14_3_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_4_2" id="__nav_14_4_2_label" tabindex="0">
           Recipe
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_3_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_3_2">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_4_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_4_2">
           <span class="md-nav__icon md-icon"></span>
           Recipe
         </label>
@@ -3697,17 +3532,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_3_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_4_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_3_3" id="__nav_14_3_3_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_4_3" id="__nav_14_4_3_label" tabindex="0">
           TTP
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_3_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_3_3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_4_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_4_3">
           <span class="md-nav__icon md-icon"></span>
           TTP
         </label>
@@ -3787,17 +3622,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_3_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_4_4" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_3_4" id="__nav_14_3_4_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_4_4" id="__nav_14_4_4_label" tabindex="0">
           TextFSM
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_3_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_3_4">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_4_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_4_4">
           <span class="md-nav__icon md-icon"></span>
           TextFSM
         </label>
@@ -3891,17 +3726,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_3_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_4_5" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_3_5" id="__nav_14_3_5_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_4_5" id="__nav_14_4_5_label" tabindex="0">
           Openpyxl
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_3_5_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_3_5">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_4_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_4_5">
           <span class="md-nav__icon md-icon"></span>
           Openpyxl
         </label>
@@ -3981,17 +3816,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_3_6" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_4_6" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_3_6" id="__nav_14_3_6_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_4_6" id="__nav_14_4_6_label" tabindex="0">
           Pandas
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_3_6_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_3_6">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_4_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_4_6">
           <span class="md-nav__icon md-icon"></span>
           Pandas
         </label>
@@ -4036,17 +3871,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_5" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_4" id="__nav_14_4_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_5" id="__nav_14_5_label" tabindex="0">
           Finance
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_4">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_5">
           <span class="md-nav__icon md-icon"></span>
           Finance
         </label>
@@ -4084,17 +3919,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_6" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_5" id="__nav_14_5_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_6" id="__nav_14_6_label" tabindex="0">
           IXIA
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_5_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_5">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_6">
           <span class="md-nav__icon md-icon"></span>
           IXIA
         </label>
@@ -4132,17 +3967,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_6" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_7" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_6" id="__nav_14_6_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_7" id="__nav_14_7_label" tabindex="0">
           Network
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_6_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_6">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_7">
           <span class="md-nav__icon md-icon"></span>
           Network
         </label>
@@ -4285,17 +4120,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_6_10" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_7_10" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_6_10" id="__nav_14_6_10_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_7_10" id="__nav_14_7_10_label" tabindex="0">
           pyATS
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_6_10_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_6_10">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_7_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_7_10">
           <span class="md-nav__icon md-icon"></span>
           pyATS
         </label>
@@ -4508,17 +4343,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_7" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_8" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_7" id="__nav_14_7_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_8" id="__nav_14_8_label" tabindex="0">
           Python2
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_7_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_7">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_8">
           <span class="md-nav__icon md-icon"></span>
           Python2
         </label>
@@ -4570,17 +4405,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_8" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_9" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_8" id="__nav_14_8_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_9" id="__nav_14_9_label" tabindex="0">
           Recipe
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_8_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_8">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_9">
           <span class="md-nav__icon md-icon"></span>
           Recipe
         </label>
@@ -4996,17 +4831,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_9" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_10" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_9" id="__nav_14_9_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_10" id="__nav_14_10_label" tabindex="0">
           STC
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_9_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_9">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_10">
           <span class="md-nav__icon md-icon"></span>
           STC
         </label>
@@ -5044,17 +4879,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_10" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_11" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_10" id="__nav_14_10_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_11" id="__nav_14_11_label" tabindex="0">
           Setup
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_10_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_10">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_11">
           <span class="md-nav__icon md-icon"></span>
           Setup
         </label>
@@ -5134,17 +4969,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_11" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_12" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_11" id="__nav_14_11_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_12" id="__nav_14_12_label" tabindex="0">
           Test
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_11_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_11">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_12_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_12">
           <span class="md-nav__icon md-icon"></span>
           Test
         </label>
@@ -5161,17 +4996,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_11_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_12_1" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_11_1" id="__nav_14_11_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_12_1" id="__nav_14_12_1_label" tabindex="0">
           Pytest
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_11_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_11_1">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_12_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_12_1">
           <span class="md-nav__icon md-icon"></span>
           Pytest
         </label>
@@ -5230,17 +5065,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_12" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_13" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_12" id="__nav_14_12_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_13" id="__nav_14_13_label" tabindex="0">
           Tools
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_12_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_12">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_13_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_13">
           <span class="md-nav__icon md-icon"></span>
           Tools
         </label>
@@ -5292,17 +5127,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_13" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_14" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_13" id="__nav_14_13_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_14" id="__nav_14_14_label" tabindex="0">
           Web
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_13_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_13">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_14_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_14">
           <span class="md-nav__icon md-icon"></span>
           Web
         </label>
@@ -5319,17 +5154,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_13_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_14_1" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_13_1" id="__nav_14_13_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_14_1" id="__nav_14_14_1_label" tabindex="0">
           Design
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_13_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_13_1">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_14_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_14_1">
           <span class="md-nav__icon md-icon"></span>
           Design
         </label>
@@ -5367,17 +5202,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_13_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_14_2" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_13_2" id="__nav_14_13_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_14_2" id="__nav_14_14_2_label" tabindex="0">
           Django
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_13_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_13_2">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_14_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_14_2">
           <span class="md-nav__icon md-icon"></span>
           Django
         </label>
@@ -5436,17 +5271,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_13_2_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_14_2_4" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_13_2_4" id="__nav_14_13_2_4_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_14_2_4" id="__nav_14_14_2_4_label" tabindex="0">
           Tutorial
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_14_13_2_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_13_2_4">
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_14_14_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_14_2_4">
           <span class="md-nav__icon md-icon"></span>
           Tutorial
         </label>
@@ -5603,17 +5438,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_13_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_14_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_13_3" id="__nav_14_13_3_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_14_3" id="__nav_14_14_3_label" tabindex="0">
           Module
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_13_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_13_3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_14_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_14_3">
           <span class="md-nav__icon md-icon"></span>
           Module
         </label>
@@ -5849,298 +5684,29 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    パーティションとファイルシステムの作成
+    ファイル内の文字列を置換する処理
   </a>
   
-    <nav class="md-nav" aria-label="パーティションとファイルシステムの作成">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    ハードディスク
+    フォルダ内のすべてのファイルに対し、文字列置換処理
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ide-sata-scsi" class="md-nav__link">
-    IDE / SATA / SCSI
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exfat" class="md-nav__link">
-    exFAT
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#btrfs" class="md-nav__link">
-    Btrfs
-  </a>
-  
-</li>
+    <nav class="md-nav" aria-label="フォルダ内のすべてのファイルに対し、文字列置換処理">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    スワップ
+    特定の拡張子がつくファイルに対する処理
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#swapon" class="md-nav__link">
-    swapon
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#swapoff" class="md-nav__link">
-    swapoff
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mkswap" class="md-nav__link">
-    mkswap
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parted" class="md-nav__link">
-    parted
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fdisk" class="md-nav__link">
-    fdisk
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mkfs-mke2fs" class="md-nav__link">
-    mkfs / mke2fs
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    ファイルシステムの整合性の維持
-  </a>
-  
-    <nav class="md-nav" aria-label="ファイルシステムの整合性の維持">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#du" class="md-nav__link">
-    du
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#df" class="md-nav__link">
-    df
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tune2fs" class="md-nav__link">
-    tune2fs
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fsck" class="md-nav__link">
-    fsck
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#e2fsck" class="md-nav__link">
-    e2fsck
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#xfs" class="md-nav__link">
-    XFS
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    ファイルシステムのマウントとアンマウント
-  </a>
-  
-    <nav class="md-nav" aria-label="ファイルシステムのマウントとアンマウント">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#etcfstab" class="md-nav__link">
-    「/etc/fstab」ファイル
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mount" class="md-nav__link">
-    mount
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#umount" class="md-nav__link">
-    umount
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#etcmtab" class="md-nav__link">
-    「/etc/mtab」ファイル
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    ファイルのパーミッションと所有権の管理
-  </a>
-  
-    <nav class="md-nav" aria-label="ファイルのパーミッションと所有権の管理">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#chmod" class="md-nav__link">
-    chmod
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chgrp" class="md-nav__link">
-    chgrp
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#umask" class="md-nav__link">
-    umask
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chown" class="md-nav__link">
-    chown
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    特殊なパーミッション
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    ハードリンクとシンボリックリンクの作成・変更
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    システムファイルの検索、適切なファイル配置
-  </a>
-  
-    <nav class="md-nav" aria-label="システムファイルの検索、適切なファイル配置">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#find" class="md-nav__link">
-    find
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#which" class="md-nav__link">
-    which
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#whereis" class="md-nav__link">
-    whereis
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#type" class="md-nav__link">
-    type
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#locate" class="md-nav__link">
-    locate
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#updatedb" class="md-nav__link">
-    updatedb
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#usr" class="md-nav__link">
-    /usr
+  <a href="#1" class="md-nav__link">
+    例1
   </a>
   
 </li>
@@ -6165,7 +5731,7 @@
                   
 
   
-    <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/Linux/LPIC_104.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/Linux/recipe_replace_strings.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -6174,1093 +5740,104 @@
     
       
     
-    <a href="https://github.com/omomuroni/omomuroni.github.io/raw/master/docs/Linux/LPIC_104.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/omomuroni/omomuroni.github.io/raw/master/docs/Linux/recipe_replace_strings.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="104-device-fhs">104 Device / FHS<a class="headerlink" href="#104-device-fhs" title="Permanent link">#</a></h1>
-<h2 id="_1">パーティションとファイルシステムの作成<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
-<p>以下はLinuxで主に使用されるファイルシステム</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">ファイルシステム</th>
-<th style="text-align: left;">説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">ext2</td>
-<td style="text-align: left;">以前のLinuxで標準的に使用されていた規格</td>
-</tr>
-<tr>
-<td style="text-align: left;">ext3</td>
-<td style="text-align: left;">* ext2の後継 <br> * ジャーナリングファイルシステム</td>
-</tr>
-<tr>
-<td style="text-align: left;">ext4</td>
-<td style="text-align: left;">* ext3の後継 <br> * ジャーナリングファイルシステム</td>
-</tr>
-<tr>
-<td style="text-align: left;">XFS</td>
-<td style="text-align: left;">* シリコングラフィックス社（SGI）が開発 <br> * ジャーナリングファイルシステム <br> * 動的innode</td>
-</tr>
-<tr>
-<td style="text-align: left;">JFS</td>
-<td style="text-align: left;">* IBMが開発 <br> * ジャーナリングファイルシステム <br> * 動的innode</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>
-<p>ジャーナリングファイルシステム（Journaling file system）<br />
-  書き換え処理要求（トランザクション）単位で内包するファイル構成情報を含むメタデータを管理および保持できる機能を持ったファイルシステムのこと。
-  ジャーナルファイルシステムともいう。端的に言うと、更新履歴をジャーナル（ログ）に記録しておく機能をもったファイルシステム。</p>
-</li>
-<li>
-<p>innode<br />
-    inodeとは、Linuxファイルシステムにおいてファイルの属性（パーミッションや所有ユーザなどの情報）を格納するものです。
-    全てのファイルには対応するinode番号があります。</p>
-<p>動的inodeの機能とは、ファイル作成時にinode番号を動的に割り当てる機能のことです。
-inodeを動的に割り当てるため、inodeの数に制限はありません。
-動的inodeの機能がないファイルシステムでは、inodeはファイルシステム作成時に作成され、増やすことはできません。
-そのため、ファイルの数が増えるなどして使用可能なinodeがなくなると、
-ディスクに空き容量があってもファイルを新規に作成することができなくなります。</p>
-</li>
-</ul>
-<h3 id="_2">ハードディスク<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
-<p>ハードディスクは「パーティション」と呼ばれる部分に分割して利用します。
-ディスク全体をひとつの領域とする場合にも、全容量を割り当てたひとつのパーティションを作る必要があります。</p>
-<p>ハードディスク全体のパーティションの情報をパーティションテーブルと呼びます。
-パーティションテーブルの管理方式は従来のMBR（Master Boot Record）と新しいGPT（GUID Partition Table）の2種類があります。</p>
-<p>MBRでは、パーティションには基本（Primary）パーティションと拡張（Extended）パーティションがあり、
-基本パーティションは 4 個までしか作成することができません。それ以上の数に分割するためには、
-基本パーティションのひとつを拡張パーティションとして割り当て、そのパーティションを
-さらに論理（Logical）パーティションに分割します。
-これらパーティションに関する操作には fdisk というコマンドを使用します。</p>
-<p>GPTでは基本パーティションが128個作成できるようになっています。
-そのため拡張パーティション、論理パーティションという考え方はなくなりました。
-また、MBRにあったハードディスク容量が2.2TB（2TiB: テビバイト）までしか管理できないという制約がなくなり、
-理論上9.4ZB（8ZiB: ゼビバイト）までの容量のハードディスクを管理することができるようになっています。
-こういった大幅な変更のため、GPT方式のハードディスクでは fdisk は使用できません。
-GPTでのパーティションに関する操作には gdisk というコマンドを使用します。</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>ZB（ゼタバイト）とは、1GB（ギガバイト）x 1000（テラ:T） x 1000（ペタ:P）x 1000（エクサ:E）x 1000（ゼタ:Z）のサイズのことです。</p>
-</div>
-<p>各パーティションはただの領域であり、それだけではデータの読み書きに利用することができません。
-パーティションをファイルシステムで「フォーマット」することで、ファイルを単位としたデータの管理が行えるようになります。
-この操作には mkfs などのファイルシステムを作成するコマンドを使用します。</p>
-<p>そして実際にファイルの読み書きを行うためには、さらにそのファイルシステムを現在のルートファイルシステム上の
-どこかにマウントし、ルート (/) からのパスを使ってアクセス可能にしなければなりません。
-この操作には mount コマンドを使用します。</p>
-<p>したがって、新しいハードディスクを Linux システム上で利用するためには</p>
-<ol>
-<li>パーティションを切る（基本パーティション、拡張パーティション、論理パーティションを作成）</li>
-<li>各パーティションをフォーマットし、ファイルシステムを作る</li>
-<li>作ったファイルシステムをマウントする</li>
-</ol>
-<p>という手順を踏む必要があります。</p>
-<p>以下ではパーティションの種類について解説します。</p>
-<p>・基本パーティション
-基本パーティションは1つのハードディスクにMBRだと最大4個、GPTだと最大128個作成することができます。
-また、それぞれのパーティションにはファイルシステムを作成することができます。
-ファイルシステムを作成することで、パーティション内でファイルやディレクトリのようなデータを扱うことができるようになります。</p>
-<p>1番目のSCSIハードディスクの基本パーティションは以下のように表します。</p>
-<ul>
-<li>/dev/sda1　1番目のパーティション</li>
-<li>/dev/sda2　2番目のパーティション</li>
-<li>/dev/sda3　3番目のパーティション</li>
-<li>/dev/sda4　4番目のパーティション</li>
-</ul>
-<p>なお、MBRでは基本パーティションのうち1つを拡張パーティションにすることができます。</p>
-<ul>
-<li>
-<p>拡張パーティション<br />
-    論理パーティションを作成するためのパーティションです。拡張パーティションにファイルシステムを作成することはできません。
-    拡張パーティションは基本パーティションの1つに割り当てますので、上記のSCSIハードディスクの場合、表記は「/dev/sda1」から
-    「/dev/sda4」のどれかになります。</p>
-</li>
-<li>
-<p>論理パーティション<br />
-    論理パーティションは拡張パーティション内に作成します。MBRで管理するハードディスクにおいて、
-    基本パーティションのみでは足りない場合(パーティションが5つ以上必要な場合)に論理パーティションを
-    利用します。それぞれのパーティションにはファイルシステムを作成することができます。
-    なお、論理パーティションは作成された基本パーティションの数に関わらず、5番目のパーティションからの表記となります。
-    上記のSCSIハードディスクの場合ですと、「/dev/sda5」からです。</p>
-</li>
-</ul>
-<h3 id="ide-sata-scsi">IDE / SATA / SCSI<a class="headerlink" href="#ide-sata-scsi" title="Permanent link">#</a></h3>
-<p>IDEの接続インターフェースにはプライマリとセカンダリがあり、それぞれにマスターとスレーブのデバイスを接続できます。
-合計4台のIDEデバイスを接続できます。対応するデバイスファイル名は以下の通りです</p>
-<ul>
-<li>/dev/hda　プライマリのマスター（1番目のディスク）</li>
-<li>/dev/hdb　プライマリのスレーブ（2番目のディスク）</li>
-<li>/dev/hdc　セカンダリのマスター（3番目のディスク）</li>
-<li>/dev/hdd　セカンダリのスレーブ（4番目のディスク）</li>
-</ul>
-<p>また、各ディスクのパーティションの番号は、ファイル名の末尾の数字で表します。</p>
-<p>例）「/dev/hda」ディスクのパーティションの場合</p>
-<ul>
-<li>/dev/hda1　1番目のパーティション</li>
-<li>/dev/hda2　2番目のパーティション</li>
-<li>/dev/hda3　3番目のパーティション</li>
-</ul>
-<p>SCSI接続のハードディスクではデバイスファイル名は以下のようになります。
-また、IDE接続のハードディスクでも、カーネル2.6.18以降では、こちらの表記に統一されました。</p>
-<ul>
-<li>/dev/sda　1番目のディスク</li>
-<li>/dev/sdb　2番目のディスク</li>
-<li>/dev/sdc　3番目のディスク</li>
-<li>/dev/sdd　4番目のディスク</li>
-</ul>
-<p>例えば、2番目のディスクの3番目のパーティションであれば「/dev/sdb3」となります。</p>
-<h3 id="exfat">exFAT<a class="headerlink" href="#exfat" title="Permanent link">#</a></h3>
-<p>exFAT（Extended FAT: イーエックスファット）は、USBメモリのようなフラッシュドライブ向けのファイルシステムです。
-exFATには以下の特徴があります。</p>
-<ul>
-<li>マイクロソフトが開発したプロプライエタリなファイルシステム<br />
-    ソフトウェアにおける「プロプライエタリ（私有の）」とは、「開発者によりプログラムやソースコードの利用に際して、
-    秘密保持契約や利用料の支払いが必要などの制限がかけられている」ことを意味します。exFATはマイクロソフトにより
-    仕様やソースコードが開示されておらず、そのためLinuxカーネルでは直接サポートしていません。（※1）</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>（※1）2019年8月に、マイクロソフトによってexFATの仕様が公開されました。</p>
-</div>
-<ul>
-<li>LinuxでのexFATの利用にはFUSE（Filesystem in Userspace）が必要<br />
-    上述の制限を回避するため、LinuxでexFATを使用するにはFUSEが必要になります。FUSEは、Linuxカーネルでサポートしていない
-    ファイルシステムをユーザ空間（ユーザプログラムが直接アクセスできるリソース）からアクセスできるようにするための
-    インターフェースです。有志が作成したexFAT用のFUSEモジュールを組み込むことで、Linux上でexFATを扱えるようになります。
-    LinuxでexFATファイルシステムをマウントして使用するには、exfat-utilsやfuse-exfatなどのパッケージをインストールする
-    必要があります。（※2）</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>（※2）exFATの仕様公開後、カーネル5.4からUbuntuなど一部のディストリビューションにおいてexFATがサポートされました。</p>
-</div>
-<ul>
-<li>フラッシュドライブ向けのファイルシステム<br />
-    Windows/Linux/macOSで使用できるため、異なるOS間でのデータ共有に使いやすいです。
-    従来のフラッシュドライブ向けのFATファイルシステムとの互換性はありません。FAT32ファイルシステムで扱えるファイルの最大サイズが4GiB
-    （ギビバイト）であるのに対して、exFATでは大容量のファイルを扱えるようになりました（理論上では16EiB: エクスビバイト）。
-    最大ボリュームサイズも拡張されています。</li>
-</ul>
-<h3 id="btrfs">Btrfs<a class="headerlink" href="#btrfs" title="Permanent link">#</a></h3>
-<p>Btrfs（B-tree File System: バターエフエス、またはビーツリーエフエスと発音します）は
-比較的新しく高機能なLinuxのファイルシステムです。Btrfsは以下の機能を持っています。</p>
-<ul>
-<li>
-<p>マルチデバイスへの対応<br />
-    これまでのext2/ext3/ext4は、単一デバイスの単一パーティションにしかファイルシステムを作成できませんでした。
-    その後「論理ボリュームマネージャ（LVM: Logical Volume Manager）」によって複数デバイスを論理的に1つの
-    デバイスとして扱うことで、複数のデバイスにまたがってファイルシステムを作成することができるようになりました。
-    しかし、Btrfsはファイルシステム自身が複数のデバイス（マルチデバイス）を直接扱えるようになっています。</p>
-</li>
-<li>
-<p>サブボリューム<br />
-   Btrfsは、ディレクトリの一部を「サブボリューム」として個別のファイルシステムのように扱えます。
-   サブボリュームを使うことで、ある時点のファイルシステムの状態を「スナップショット」として取得
-   することができるようになります。</p>
-</li>
-<li>
-<p>圧縮<br />
-   Btrfsは、ファイルシステムが自動でデータを圧縮できるようになっています。圧縮用の特別な操作を必要とせず、
-   マウント時に自動圧縮を有効にするオプションを指定するだけで動作します。</p>
-</li>
-</ul>
-<p>以下はBtrfsの操作例です。</p>
-<ul>
-<li>
-<p>例）複数のデバイス「/dev/sda1」と「/dev/sdb1」にBtrfsファイルシステムを作成する
-    <code>mkfs.btrfs /dev/sda1 /dev/sdb1</code></p>
-</li>
-<li>
-<p>例）「/home」のスナップショットを「/tmp/home_bak」という名前で取得する
-    <code>btrfs subvolume snapshot /home /tmp/home_bak</code></p>
-</li>
-</ul>
-<h3 id="_3">スワップ<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
-<p>スワップに関連するコマンドには mkswap, swapon, swapoff があります。
-実際にスワップを利用する流れとしては、</p>
-<ol>
-<li>スワップ用のパーティション（またはファイル）を用意する</li>
-<li>mkswap コマンドでスワップ領域を作成</li>
-<li>swapon コマンドでスワップ領域を有効化</li>
-<li>（不要になれば）swapoff コマンドでスワップ領域を無効化</li>
-</ol>
-<h3 id="swapon">swapon<a class="headerlink" href="#swapon" title="Permanent link">#</a></h3>
-<p>スワップを有効にするコマンド</p>
+<h1 id="linux">Linux レシピ：文字列置換<a class="headerlink" href="#linux" title="Permanent link">#</a></h1>
+<h2 id="_1">ファイル内の文字列を置換する処理<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<p><code>sed -i 's/古い文字列/新しい文字列/g' ファイル名</code></p>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>スワップ領域とは、物理メモリ（実メモリ）に収まらなかった情報を一時的に格納する為の、通常ハードディスク上に作成する領域です。</p>
+<p class="admonition-title">同じ処理を poershell で実行する方法</p>
+<p><code>(Get-Content -Path 'ファイル名') -replace '古い文字列', '新しい文字列' | Set-Content -Path 'ファイル名'</code></p>
 </div>
-<h3 id="swapoff">swapoff<a class="headerlink" href="#swapoff" title="Permanent link">#</a></h3>
-<p>スワップ領域を無効にするコマンド</p>
-<h3 id="mkswap">mkswap<a class="headerlink" href="#mkswap" title="Permanent link">#</a></h3>
-<p>スワップを作成するコマンド</p>
-<h3 id="parted">parted<a class="headerlink" href="#parted" title="Permanent link">#</a></h3>
-<p>MBR形式、GPT形式のパーティションテーブルをサポートするパーティション操作コマンドはpartedです。
-partedは以下のパーティションテーブルをサポートしています。</p>
-<ol>
-<li>bsd</li>
-<li>loop (raw disk access)</li>
-<li>gpt</li>
-<li>mac</li>
-<li>msdos</li>
-<li>pc98</li>
-<li>sun</li>
-</ol>
-<p>partedコマンドの書式は以下のとおりです。
-parted [ -l ] デバイスファイル名</p>
-<p>「-l」オプションはすべてのデバイスのパーティションテーブルを表示します。パーティションテーブルにはパーティションの情報が格納されています。</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>partedコマンドの呼び出しは、以下の点でfdiskと異なりますので注意が必要です。
-* デバイスファイル名を指定しない場合、fdiskは処理を行わずコマンドヘルプを表示しますが、partedでは検出した最初のブロックデバイスを自動で選択します。
-* 「-l」オプションは、fdiskは表示するデバイスを指定できますが、partedでは指定は無視され、すべてのハードディスクの情報を表示します。</p>
-</div>
-<p>主なサブコマンド：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">サブコマンド</th>
-<th style="text-align: left;">機能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">mklabel, mktable</td>
-<td style="text-align: left;">新しいパーティションテーブルを作成する</td>
-</tr>
-<tr>
-<td style="text-align: left;">mkpart</td>
-<td style="text-align: left;">新しいパーティションを作成する</td>
-</tr>
-<tr>
-<td style="text-align: left;">rm</td>
-<td style="text-align: left;">パーティションを削除する</td>
-</tr>
-<tr>
-<td style="text-align: left;">print(省略形：p)</td>
-<td style="text-align: left;">パーティションテーブルの情報を表示する</td>
-</tr>
-<tr>
-<td style="text-align: left;">quit(省略形：q)</td>
-<td style="text-align: left;">partedでの作業を終了する</td>
-</tr>
-</tbody>
-</table>
-<p>partedコマンドで新しいハードディスクにパーティションを作成するには、以下の順に作業を行います。</p>
-<ol>
-<li>
-<p>パーティションテーブルの指定<br />
-    mklabel サブコマンドで、パーティションテーブルの方式を指定します。未指定の場合MBR形式として動作します。<br />
-    mklabel サブコマンドの書式は以下のとおりです。  </p>
-<p>(parted) mklabel [ パーティションテーブル ]</p>
 <ul>
-<li>MBR形式を明示的に指定するには、msdosを指定します。</li>
-<li>GPT形式とする場合はgptを指定します。</li>
+<li>実行前に test 要にファイルをコピーして、まずは試してみること</li>
+<li>また、本番用のファイルはバックアップを取得しておくこと</li>
+</ul>
+</div>
+<h2 id="_2">フォルダ内のすべてのファイルに対し、文字列置換処理<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<p>特定のフォルダ内にあるすべてのファイルの中から特定の文字列を置換するには、find コマンドとsed コマンドを組み合わせて使用することができます。
+以下のような形でコマンドを実行します。</p>
+<div class="highlight"><span class="filename">構文</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>find<span class="w"> </span>/path/to/folder<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/古い文字列/新しい文字列/g&#39;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
+</code></pre></div>
+<ul>
+<li>説明:<ul>
+<li><code>/path/to/folder</code>: 置換を行いたい特定のフォルダのパスを指定します。</li>
+<li><code>古い文字列</code>: 置換したい文字列を指定します。</li>
+<li><code>新しい文字列</code>: 置換後の文字列を指定します。</li>
 </ul>
 </li>
-<li>
-<p>パーティションの作成
-    mkpartサブコマンドで、パーティションを作成します。
-    mkpartサブコマンドの書式は以下の通りです。</p>
-<p><code>(parted) mkpart [ パーティションタイプ ファイルシステム種別 パーティション名 ] 開始位置 終了位置</code></p>
-<p>パーティションタイプはMBR形式で指定可能で、
-primary（基本）、extended（拡張）、logical（論理）
-を指定します。</p>
-<p>作成されたパーティションの情報は、printサブコマンドで確認します。</p>
-<p>partedでの編集結果は即時反映されます。そのため、特に書き込み指示などなしで quit で終了させます。</p>
-<p>このあとは従来通り、作成したパーティション上にmkfsコマンドによるファイルシステムの作成を行います。</p>
-<p>なお、partedコマンドは対話形式ではなくサブコマンド指定で直接パーティション編集を行うことも可能です。
-以下の例ではハードディスクのパーティションテーブルをMBR形式とし、100MBの領域を2つ作成しています。</p>
-</li>
-</ol>
-<h3 id="fdisk">fdisk<a class="headerlink" href="#fdisk" title="Permanent link">#</a></h3>
-<p>fdiskコマンドはMBR方式のハードディスクにおけるパーティションの作成、削除、変更および情報表示を行うコマンド</p>
-<p>fdiskコマンドの書式は以下のとおりです。</p>
-<p>fdisk [-l] デバイス名</p>
-<p>fdiskコマンドの主なサブコマンドは以下のとおりです。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">サブコマンド</th>
-<th style="text-align: left;">説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">m</td>
-<td style="text-align: left;">サブコマンドのメニューの表示</td>
-</tr>
-<tr>
-<td style="text-align: left;">l</td>
-<td style="text-align: left;">パーティションタイプの一覧表示</td>
-</tr>
-<tr>
-<td style="text-align: left;">n</td>
-<td style="text-align: left;">パーティンションの作成</td>
-</tr>
-<tr>
-<td style="text-align: left;">d</td>
-<td style="text-align: left;">パーティションの削除</td>
-</tr>
-<tr>
-<td style="text-align: left;">p</td>
-<td style="text-align: left;">パーティションテーブルの表示</td>
-</tr>
-<tr>
-<td style="text-align: left;">t</td>
-<td style="text-align: left;">パーティションタイプ（システムID）の変更</td>
-</tr>
-<tr>
-<td style="text-align: left;">w</td>
-<td style="text-align: left;">パーティションテーブルの変更を保存して終了</td>
-</tr>
-<tr>
-<td style="text-align: left;">q</td>
-<td style="text-align: left;">パーティションテーブルの変更を保存せずに終了</td>
-</tr>
-</tbody>
-</table>
-<p>なお、作成したパーティションを利用するには、「mkfs」や「mke2fs」コマンドを利用してパーティションにファイルシステムを作成する必要があります。
-また、作成したパーティションをスワップ領域として使用するには「mkswap」コマンドを利用します。</p>
-<h3 id="mkfs-mke2fs">mkfs / mke2fs<a class="headerlink" href="#mkfs-mke2fs" title="Permanent link">#</a></h3>
-<p>各種ファイルシステムを作ることができるコマンド</p>
-<p>mke2fs [オプション] デバイス名</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">オプション</th>
-<th style="text-align: left;">説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">-j</td>
-<td style="text-align: left;">ext3 ファイルシステムを作成</td>
-</tr>
-<tr>
-<td style="text-align: left;">-t [ファイルシステムの種類]</td>
-<td style="text-align: left;">ファイルシステムの種類を指定</td>
-</tr>
-<tr>
-<td style="text-align: left;">b</td>
-<td style="text-align: left;">ファイルシステムを作成する前に不良ブロックを検査</td>
-</tr>
-</tbody>
-</table>
-<p>mkfs [オプション] デバイス名</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">オプション</th>
-<th style="text-align: left;">説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">-t [ファイルシステムの種類]</td>
-<td style="text-align: left;">ファイルシステムの種類を指定</td>
-</tr>
-<tr>
-<td style="text-align: left;">-c</td>
-<td style="text-align: left;">ファイルシステムを作成する前に不良ブロックを検査</td>
-</tr>
-</tbody>
-</table>
-<p>ext3ファイルシステムを「/dev/sda2」に作成</p>
+</ul>
+<p>このコマンドは、指定されたフォルダ内にある全てのファイルを探し、sed コマンドを使って古い文字列を新しい文字列に置換します。
+<code>-i</code> オプションは <code>sed</code> コマンドをインプレースモードで実行するために使用され、ファイル内容を直接変更します。</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>スワップは特別な領域で、厳密にはファイルシステムではないため、mkfs で作ることはできません。</p>
+<p>作業前には 対象のディレクトリファイルを <code>cp -r</code>　コマンドでバックアップを取っておくこと
+置換前に正確にどのファイルが影響を受けるかを確認するために、まずは -i オプションを省略してコマンドを実行して、出力を確認することをおすすめします。
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>find /path/to/folder -type f -exec sed &#39;s/古い文字列/新しい文字列/g&#39; {} +
+</code></pre></div>
+上記のコマンドは、フォルダ内の全てのファイルに対して置換を行います。フォルダ内の特定のファイルだけに対して置換を行いたい場合は、
+find コマンドの適切なオプションを使用して対象を絞ることができます。</p>
 </div>
-<p>(例)ext3ファイルシステムを「/dev/sda2」に作成</p>
+<h3 id="_3">特定の拡張子がつくファイルに対する処理<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
+<p>指定されたコマンドを特定の拡張子を持つファイルに適用するために、find コマンドを修正します。以下は、特定の拡張子（例: .txt）を持つファイルに対して sed コマンドを実行する例です。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>find<span class="w"> </span>/path/to/folder<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.txt&quot;</span><span class="w"> </span>-exec<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/古い文字列/新しい文字列/g&#39;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
+</code></pre></div>
+<p>上記の例では、-name "*.txt" の部分を適切な拡張子に変更してください。また、複数の拡張子を指定する場合は、-name オプションを複数回使用するか、
+ワイルドカード * を使って一般的なパターンで指定することができます。</p>
+<p>例えば、.txt と .csv 拡張子を持つファイルに対して処理する場合：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>find<span class="w"> </span>/path/to/folder<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span><span class="se">\(</span><span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.txt&quot;</span><span class="w"> </span>-o<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.csv&quot;</span><span class="w"> </span><span class="se">\)</span><span class="w"> </span>-exec<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/古い文字列/新しい文字列/g&#39;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
+</code></pre></div>
+<h3 id="1">例1<a class="headerlink" href="#1" title="Permanent link">#</a></h3>
+<p>pyATS で指定した ディレクトリ名を置換</p>
 <ul>
-<li>mkfs -t ext3 /dev/sda2</li>
-<li>mke2fs -j /dev/sda2</li>
-<li>mke2fs -t ext3 /dev/sda2</li>
-</ul>
-<h2 id="_4">ファイルシステムの整合性の維持<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
-<h3 id="du">du<a class="headerlink" href="#du" title="Permanent link">#</a></h3>
-<p>ディレクトリ内のファイル容量を表示するコマンド
-duコマンドの書式および主なオプションは以下のとおりです。</p>
-<p>du [オプション] [ファイル名またはディレクトリ名]</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">オプション</th>
-<th style="text-align: left;">説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">-a</td>
-<td style="text-align: left;">ディレクトリ以外にファイルについても表示</td>
-</tr>
-<tr>
-<td style="text-align: left;">-h</td>
-<td style="text-align: left;">分かりやすい単位（メガはM、ギガはGなど）を付加して表示</td>
-</tr>
-<tr>
-<td style="text-align: left;">-c</td>
-<td style="text-align: left;">合計容量も同時に表示</td>
-</tr>
-<tr>
-<td style="text-align: left;">-s</td>
-<td style="text-align: left;">指定したファイルやディレクトリの合計容量のみを表示</td>
-</tr>
-<tr>
-<td style="text-align: left;">-S</td>
-<td style="text-align: left;">ディレクトリの容量にサブディレクトリの容量を含めずに表示</td>
-</tr>
-<tr>
-<td style="text-align: left;">-k</td>
-<td style="text-align: left;">キロバイト単位で表示</td>
-</tr>
-<tr>
-<td style="text-align: left;">-m</td>
-<td style="text-align: left;">メガバイト単位で表示</td>
-</tr>
-</tbody>
-</table>
-<h3 id="df">df<a class="headerlink" href="#df" title="Permanent link">#</a></h3>
-<p>dfコマンドの書式と主なオプションは以下のとおりです。</p>
-<p>df [オプション] [デバイス名またはディレクトリ名]</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">オプション</th>
-<th style="text-align: left;">説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">-h</td>
-<td style="text-align: left;">分かりやすい単位（メガはM、ギガはGなど）を付加して表示</td>
-</tr>
-<tr>
-<td style="text-align: left;">-k</td>
-<td style="text-align: left;">キロバイト単位で表示</td>
-</tr>
-<tr>
-<td style="text-align: left;">-m</td>
-<td style="text-align: left;">メガバイト単位で表示</td>
-</tr>
-<tr>
-<td style="text-align: left;">-i</td>
-<td style="text-align: left;">inodeの使用状況を表示</td>
-</tr>
-</tbody>
-</table>
-<h3 id="tune2fs">tune2fs<a class="headerlink" href="#tune2fs" title="Permanent link">#</a></h3>
-<p>ファイルシステムをext2からext3に変換するにはtune2fsコマンドを利用します。</p>
-<p>tune2fsコマンドの書式および主なオプションは以下のとおりです。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">オプション</th>
-<th style="text-align: left;">説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">-c 回数</td>
-<td style="text-align: left;">e2fsckコマンドでファイルシステムのチェックを行うまでの最大マウント回数を指定</td>
-</tr>
-<tr>
-<td style="text-align: left;">-i 時間 [d|m|w]</td>
-<td style="text-align: left;">e2fsckコマンドでファイルシステムのチェックを行うまでの最大時間間隔を指定 <br> * 時間のみ・またはdをつけると「日」 <br> * mを付けると「月」 <br> * wを付けと「週」</td>
-</tr>
-<tr>
-<td style="text-align: left;">-j</td>
-<td style="text-align: left;">ext2 をext3ファイルシステムに変換</td>
-</tr>
-<tr>
-<td style="text-align: left;">-L ラベル名</td>
-<td style="text-align: left;">ファイルシステムのボリュームラベルを設定</td>
-</tr>
-</tbody>
-</table>
+<li>
+<p>対象箇所：
+<code>templates_dir: '%CALLABLE{Protocol_test.testcases.OSPF.001.config.template_dir()}'</code></p>
+</li>
+<li>
+<p>対象文字列:
+<code>%CALLABLE{Protocol_test.testcases</code></p>
+</li>
+<li>
+<p>置換後文字列：
+<code>%CALLABLE{Basic_function_test.testcases</code></p>
+</li>
+<li>
+<p>置換コマンド：
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>find ./ -type f -exec sed &#39;s/%CALLABLE{Protocol_test.testcases/%CALLABLE{Basic_function_test.testcases/g&#39; {} +　
+</code></pre></div></p>
+</li>
+<li>
+<p>解説：</p>
 <ul>
-<li>(例)ファイルシステムをチェックせずに「/dev/sda2」がマウント出来る回数を10回に変更<br />
-<code>tune2fs -c 10 /dev/sda2</code></li>
+<li>find ./ -type f: カレントディレクトリから下にある、ファイル（ディレクトリではないもの）を対象とする条件を指定しています。</li>
+<li>-exec: find コマンドで見つかったファイルに対して実行するコマンドを指定するオプションです。</li>
+<li><code>'s/古い文字列/新しい文字列/g' {} +</code>: </li>
+<li>find が見つけた各ファイルに対して実行する sed コマンドです。sed コマンドは、テキスト処理を行うためのユーティリティです。</li>
+<li><code>s</code> は置換を意味し、古い文字列 を 新しい文字列 に置換することを指定しています。g は置換を行う際に行内の全ての一致を対象とすることを示します。</li>
+<li><code>{}</code>: find が見つけたファイルのパスがこの部分に挿入されます。</li>
+<li><code>+</code>: 複数のファイルを 1 回のコマンドで処理することを示します。sed コマンドが複数のファイルを同時に処理する際に効率的です。</li>
 </ul>
-<h3 id="fsck">fsck<a class="headerlink" href="#fsck" title="Permanent link">#</a></h3>
-<p>fsckコマンドはファイルシステムのチェック、および問題を修復することが出来ます。</p>
-<p>fsckコマンドの書式と主なオプションは以下のとおりです。</p>
-<p>fsck [オプション] デバイス名</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">オプション</th>
-<th style="text-align: left;">説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">-t ファイルシステムの種類</td>
-<td style="text-align: left;">ファイルシステムの種類を指定</td>
-</tr>
-<tr>
-<td style="text-align: left;">-A</td>
-<td style="text-align: left;">「/etc/fstab」に記述されている全ファイルに対して実行</td>
-</tr>
-<tr>
-<td style="text-align: left;">-N</td>
-<td style="text-align: left;">実際には実行せず、実行する内容を表示</td>
-</tr>
-<tr>
-<td style="text-align: left;">-a</td>
-<td style="text-align: left;">問題を自動的に修復</td>
-</tr>
-<tr>
-<td style="text-align: left;">-r</td>
-<td style="text-align: left;">問題を対話的に修復</td>
-</tr>
-</tbody>
-</table>
-<h3 id="e2fsck">e2fsck<a class="headerlink" href="#e2fsck" title="Permanent link">#</a></h3>
-<p>e2fsckコマンドは、ext2/ext3/ext4ファイルシステムのチェック、および問題を修復することができます。</p>
-<p>e2fsckコマンドの書式と主なオプションは以下のとおりです。</p>
-<p>e2fsck [オプション] デバイス名</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">オプション</th>
-<th style="text-align: left;">説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">-y</td>
-<td style="text-align: left;">全ての問合せに対し、自動的に「yes」と回答</td>
-</tr>
-<tr>
-<td style="text-align: left;">-n</td>
-<td style="text-align: left;">全ての問合せに対し、自動的に「no」と回答</td>
-</tr>
-<tr>
-<td style="text-align: left;">-p</td>
-<td style="text-align: left;">全ての問題を自動的に修復</td>
-</tr>
-</tbody>
-</table>
-<h3 id="xfs">XFS<a class="headerlink" href="#xfs" title="Permanent link">#</a></h3>
-<p>XFSは、シリコングラフィックス社（SGI）が開発したジャーナリングファイルシステムです。</p>
-<p>XFSファイルシステムを管理するために使用される主なコマンドは以下のとおりです。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">コマンド</th>
-<th style="text-align: left;">説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">mkfs.xfs</td>
-<td style="text-align: left;">XFSファイルシステムを作成する「mkfs -t xfs」で呼び出されるコマンド</td>
-</tr>
-<tr>
-<td style="text-align: left;">xfs_info</td>
-<td style="text-align: left;">ファイルシステムの情報を表示する</td>
-</tr>
-<tr>
-<td style="text-align: left;">xfs_db</td>
-<td style="text-align: left;">ファイルシステムのデバッグを行う</td>
-</tr>
-<tr>
-<td style="text-align: left;">xfs_check</td>
-<td style="text-align: left;">ファイルシステムをチェックする</td>
-</tr>
-<tr>
-<td style="text-align: left;">xfs_fsr</td>
-<td style="text-align: left;">ファイルシステムのデフラグを行う</td>
-</tr>
-<tr>
-<td style="text-align: left;">xfs_repair</td>
-<td style="text-align: left;">ファイルシステムを検査・修復する</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>ext2/ext3/ext4ファイルシステムでは、デフォルトでファイルシステム全体の5%分の領域がrootユーザ用の
-予約領域として確保されます。</p>
+</li>
+</ul>
+<p>このコマンドは、指定されたパス以下にある全てのファイルを検索し、そのファイル内で指定された文字列の置換を行います。
+ただし、注意が必要で、実行前にバックアップを取るなどしてデータの損失を防ぐようにしてください。
+また、実際に実行する前に、sed コマンドが正しく動作するか確認するために、テスト用のファイルで試してみることをおすすめします。</p>
+<div class="admonition tip">
+<p class="admonition-title">同じ処理を poershell で実行する方法</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">Get-ChildItem</span> <span class="o">-File</span> <span class="n">-Recurse</span> <span class="p">|</span> <span class="k">ForEach</span><span class="n">-Object</span> <span class="p">{(</span><span class="nb">Get-Content</span> <span class="nv">$_</span><span class="p">.</span><span class="n">FullName</span><span class="p">)</span> <span class="o">-replace</span> <span class="s1">&#39;古い文字列&#39;</span><span class="p">,</span> <span class="s1">&#39;新しい文字列&#39;</span> <span class="p">|</span> <span class="nb">Set-Content</span> <span class="nv">$_</span><span class="p">.</span><span class="n">FullName</span><span class="p">}</span>
+</code></pre></div>
+特定の拡張子がつくファイルに対する処理
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$targetExtension = &#39;.txt&#39;; Get-ChildItem -File -Recurse -Filter *$targetExtension | ForEach-Object { (Get-Content $_.FullName) -replace &#39;古い文字列&#39;, &#39;新しい文字列&#39; | Set-Content $_.FullName }
+</code></pre></div></p>
 </div>
-<h2 id="_5">ファイルシステムのマウントとアンマウント<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
-<h3 id="etcfstab">「/etc/fstab」ファイル<a class="headerlink" href="#etcfstab" title="Permanent link">#</a></h3>
-<p>「/etc/fstab」ファイルは、利用するファイルシステムのマウント設定を事前に行っておく設定ファイルです。</p>
-<p>mountコマンドはこのファイルの設定内容を参照して動作します</p>
-<p>デバイス名の設定は、「/dev/sda1」のようにデバイスファイルを書くか、ラベルやUUIDを使った指定を書きます。</p>
-<p>以下は主なマウントオプションをまとめたものです。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">オプション</th>
-<th style="text-align: left;">説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">async</td>
-<td style="text-align: left;">非同期で入出力を行う</td>
-</tr>
-<tr>
-<td style="text-align: left;">auto</td>
-<td style="text-align: left;">「mount -a」コマンド実行時にマウント</td>
-</tr>
-<tr>
-<td style="text-align: left;">noauto</td>
-<td style="text-align: left;">「mount -a」コマンド実行時にマウントしない</td>
-</tr>
-<tr>
-<td style="text-align: left;">defaults</td>
-<td style="text-align: left;">デフォルト指定 <br> (async, auto, dev, exec, nouser, rw, suid)</td>
-</tr>
-<tr>
-<td style="text-align: left;">exec</td>
-<td style="text-align: left;">バイナリの実行を許可</td>
-</tr>
-<tr>
-<td style="text-align: left;">noexec</td>
-<td style="text-align: left;">バイナリの実行を禁止</td>
-</tr>
-<tr>
-<td style="text-align: left;">ro</td>
-<td style="text-align: left;">読み取り専用</td>
-</tr>
-<tr>
-<td style="text-align: left;">rw</td>
-<td style="text-align: left;">読み書きを許可</td>
-</tr>
-<tr>
-<td style="text-align: left;">suid</td>
-<td style="text-align: left;">SUID と SGIDを 有効化</td>
-</tr>
-<tr>
-<td style="text-align: left;">user</td>
-<td style="text-align: left;">一般ユーザでマウント可、本人のみアンマウント可</td>
-</tr>
-<tr>
-<td style="text-align: left;">users</td>
-<td style="text-align: left;">一般ユーザでマウント可、誰でもアンマウント可</td>
-</tr>
-<tr>
-<td style="text-align: left;">nousers</td>
-<td style="text-align: left;">一般ユーザーによるマウントを禁止</td>
-</tr>
-</tbody>
-</table>
-<p>デフォルトでは async, auto, exec, nouser, rw, suid （と、表には載っていないdev）が指定されたのと同じ状態で、
-オプションを記述するとこれが上書きされていきます。
-どのオプションも上書きせず、そのままで良いことを示す指定が「defaults」です。</p>
-<h3 id="mount">mount<a class="headerlink" href="#mount" title="Permanent link">#</a></h3>
-<p>ファイルシステムにアクセスし、利用するためには、「マウント」を行う必要があります。
-マウントとは、デバイスとその上に構築されているファイルシステムを OS に認識させ、指定のディレクトリに割り当て、
-そのディレクトリ以下のパスでファイルシステム内にアクセスできるようにすることです。
-逆に、マウントされているファイルシステムを切り離し、マウント前の状態に戻すことを「アンマウント」といいます。</p>
-<p>Linuxでマウントを行うには mountコマンドを使います。</p>
-<p><code>mount [オプション] [デバイス]　[マウント先]</code></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">オプション</th>
-<th style="text-align: left;">説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">-a</td>
-<td style="text-align: left;">「/etc/fstab」ファイルに記載されているファイルシステムをすべてマウント<br>（noautoマウントオプションが指定されているものは除く）</td>
-</tr>
-<tr>
-<td style="text-align: left;">-o</td>
-<td style="text-align: left;">続けてマウントオプションを指定</td>
-</tr>
-<tr>
-<td style="text-align: left;">-t</td>
-<td style="text-align: left;">続けてファイルシステムの種類を指定<br>（指定しない場合は自動で種類を推測）</td>
-</tr>
-<tr>
-<td style="text-align: left;">--bind</td>
-<td style="text-align: left;">書式：mount --bind \<dir1> \<dir2>　（ディレクトリ「dir1」をディレクトリ「dir2」にマウントする）</td>
-</tr>
-</tbody>
-</table>
-<p>o に続けて指定するマウントオプションとしては、「/etc/fstab」に記述するものと同じマウントオプションが利用できます。
-ファイルシステムの種類によって利用できるオプションが異なります。
-以下の例では、-o ro と指定することで読み取り専用でマウントを行うよう指定しています。</p>
-<ul>
-<li>例）ext3ファイルシステムの「/dev/sda2」を「/mnt/mydata」に読み取り専用(ro)でマウントする場合<br />
-<code>mount -t ext3 -o ro /dev/sda2 /mnt/mydata</code></li>
-</ul>
-<p>「デバイス」にはデバイスファイルを指定します。（/dev/cdrom、/dev/sda1 など）
-「マウント先」（「マウントポイント」とも呼ばれる）には、そのファイルシステムをどのディレクトリに割り当てるかを指定します。</p>
-<p>なお、マウントの設定ファイル「/etc/fstab」に設定が存在する場合は、「デバイス」か「マウント先」のどちらか片方だけ指定すれば、もう片方は 「/etc/fstab」が参照され自動的に決定されます。
-以下は「/etc/fstab」に設定が存在する場合のmountコマンドの書式です。オプションもファイルの設定が参照されますので、省略できます。</p>
-<p><code>mount デバイス</code> または <code>mount マウント先</code></p>
-<p>また、「デバイス」と「マウント先」どちらも指定しなかった（mount のみ実行した）場合は、現在マウントされているファイルシステムの一覧が、
-「/etc/mtab」ファイルの情報を元に表示されます。（マウント中のファイルシステムについては、下記「※マウント中のファイルシステムについて」もご参照ください。）</p>
-<h3 id="umount">umount<a class="headerlink" href="#umount" title="Permanent link">#</a></h3>
-<p>アンマウントを行うには、umountコマンドを使います。</p>
-<p><code>umount [オプション] [デバイスorマウント先]</code></p>
-<p>既にマウントされているファイルシステムについて、デバイスかマウント先のどちらかを指定すればアンマウントされます。
-片方だけ指定すればよいことに注意します。</p>
-<p>umountコマンドの主なオプションは以下の通りです。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">オプション</th>
-<th style="text-align: left;">説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">-a</td>
-<td style="text-align: left;">「/etc/mtab」ファイルに記載されているファイルシステムをすべてアンマウント</td>
-</tr>
-<tr>
-<td style="text-align: left;">-t</td>
-<td style="text-align: left;">指定した種類のファイルシステムのみをアンマウント</td>
-</tr>
-</tbody>
-</table>
-<h3 id="etcmtab">「/etc/mtab」ファイル<a class="headerlink" href="#etcmtab" title="Permanent link">#</a></h3>
-<p>現在マウントされているファイルシステムの情報が格納されているファイル</p>
-<p>なお、mountコマンドを引数およびオプションを指定せずに実行した場合は、「/etc/mtab」ファイルを参照して、
-現在マウントされているファイルシステムの情報を表示します。
-/etc/mtabやmountコマンドのほかに、Linuxにおいて各種リソース情報を格納している「/proc」ディレクトリ
-配下でもマウント情報を確認することができます。</p>
-<p>以下は、現在マウントされているファイルシステムを確認できるコマンドとです</p>
-<ul>
-<li>mount</li>
-<li>cat /etc/mtab</li>
-<li>cat /proc/self/mounts</li>
-<li>cat /proc/mounts</li>
-</ul>
-<h2 id="_6">ファイルのパーミッションと所有権の管理<a class="headerlink" href="#_6" title="Permanent link">#</a></h2>
-<h3 id="chmod">chmod<a class="headerlink" href="#chmod" title="Permanent link">#</a></h3>
-<p>パーミッションとは、ファイルやディレクトリに対する権限です。権限には「読み取り権」「書き込み権」「実行権」の3種類が
-あります。これらの権限は、「所有ユーザ」（ファイルの所有ユーザ）、「所有グループ」（ファイルの所有グループ）、
-「その他のユーザ」（所有ユーザ、所有グループ以外のユーザ）のそれぞれに対して設定されます。</p>
-<p>誰がどのような権限を持つのか、パーミッションの表現方法には「記号表現」と「数値表現」の2つがあります。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">記号表記</th>
-<th style="text-align: left;">2進数</th>
-<th style="text-align: left;">8進数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">---</td>
-<td style="text-align: left;">000</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr>
-<td style="text-align: left;">--x</td>
-<td style="text-align: left;">001</td>
-<td style="text-align: left;">1</td>
-</tr>
-<tr>
-<td style="text-align: left;">-w-</td>
-<td style="text-align: left;">010</td>
-<td style="text-align: left;">2</td>
-</tr>
-<tr>
-<td style="text-align: left;">-wx</td>
-<td style="text-align: left;">011</td>
-<td style="text-align: left;">3</td>
-</tr>
-<tr>
-<td style="text-align: left;">r--</td>
-<td style="text-align: left;">100</td>
-<td style="text-align: left;">4</td>
-</tr>
-<tr>
-<td style="text-align: left;">r-x</td>
-<td style="text-align: left;">101</td>
-<td style="text-align: left;">5</td>
-</tr>
-<tr>
-<td style="text-align: left;">rw-</td>
-<td style="text-align: left;">110</td>
-<td style="text-align: left;">6</td>
-</tr>
-<tr>
-<td style="text-align: left;">rwx</td>
-<td style="text-align: left;">111</td>
-<td style="text-align: left;">7</td>
-</tr>
-</tbody>
-</table>
-<h3 id="chgrp">chgrp<a class="headerlink" href="#chgrp" title="Permanent link">#</a></h3>
-<p>指定したファイルまたはディレクトリの所有グループのみを変更可能なコマンドはchgrpです。</p>
-<ul>
-<li>例）「file.txt」の所有グループをtestからstaffgroupに変更する場合<br />
-<code>chgrp staffgroup file.txt</code></li>
-</ul>
-<h3 id="umask">umask<a class="headerlink" href="#umask" title="Permanent link">#</a></h3>
-<p>ファイルやディレクトリを新規作成した際の、デフォルトのパーミッションを設定するにはumaskコマンドを利用します。</p>
-<p>umaskコマンドの書式は以下のとおりです。  </p>
-<p><code>umask [マスク値]</code></p>
-<p>umaskコマンドではマスク値というものを設定して、新規に作成するファイルとディレクトリのデフォルトのパーミッションを決定します。マスク値はユーザ毎に指定できます。通常「/etc/bashrc」などに設定されており、シェルの起動時にシステムのデフォルト値に戻ります。</p>
-<p>マスク値が0の場合に使用されるデフォルトのパーミッションは、ファイルが「666」、ディレクトリが「777」です。これらの値から、指定したマスク値を引いた値が新たなデフォルトのパーミッションとして設定されます。</p>
-<p>666 - マスク値 = ファイルのデフォルトのパーミッション
-777 - マスク値 = ディレクトリのデフォルトのパーミッション</p>
-<p>パーミッションの表記は各桁が独立して、左から所有ユーザ、所有グループ、その他のユーザを表します。ですのでumask値を引く際も各桁ごとに引きます。
-なお、ファイルのデフォルトのパーミッションは「666」で実行権が無いので、umask値に関わらず実行権は設定されません。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;"></th>
-<th style="text-align: left;">ファイル</th>
-<th style="text-align: left;">所有ユーザ</th>
-<th style="text-align: left;">所有グループ</th>
-<th style="text-align: left;">その他</th>
-<th style="text-align: left;">ディレクトリ</th>
-<th style="text-align: left;">所有ユーザ</th>
-<th style="text-align: left;">所有グループ</th>
-<th style="text-align: left;">その他</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">umask値が0の場合のパーミッション</td>
-<td style="text-align: left;">666</td>
-<td style="text-align: left;">rw-</td>
-<td style="text-align: left;">rw-</td>
-<td style="text-align: left;">rw-</td>
-<td style="text-align: left;">777</td>
-<td style="text-align: left;">rwx</td>
-<td style="text-align: left;">rwx</td>
-<td style="text-align: left;">rwx</td>
-</tr>
-<tr>
-<td style="text-align: left;">umask値</td>
-<td style="text-align: left;">027</td>
-<td style="text-align: left;">---</td>
-<td style="text-align: left;">-w-</td>
-<td style="text-align: left;">rwx</td>
-<td style="text-align: left;">027</td>
-<td style="text-align: left;">---</td>
-<td style="text-align: left;">-w-</td>
-<td style="text-align: left;">rwx</td>
-</tr>
-<tr>
-<td style="text-align: left;">デフォルトのパーミッション</td>
-<td style="text-align: left;">640</td>
-<td style="text-align: left;">rw-</td>
-<td style="text-align: left;">r--</td>
-<td style="text-align: left;">---</td>
-<td style="text-align: left;">750</td>
-<td style="text-align: left;">rwx</td>
-<td style="text-align: left;">r-x</td>
-<td style="text-align: left;">---</td>
-</tr>
-</tbody>
-</table>
-<h3 id="chown">chown<a class="headerlink" href="#chown" title="Permanent link">#</a></h3>
-<p>指定したファイルまたはディレクトリの所有ユーザやグループを変更するにはchownコマンドを利用します。所有ユーザを変更できるのはrootユーザのみです。</p>
-<p>所有ユーザと所有グループを同時に変更する場合の書式は以下のとおりです。</p>
-<ul>
-<li>
-<p>所有ユーザのみを変更する場合<br />
-<code>chown [-R] ユーザ名 ファイルまたはディレクトリ</code></p>
-</li>
-<li>
-<p>所有ユーザと所有グループを同時に変更する場合<br />
-<code>chown [-R] ユーザ名:グループ名 ファイルまたはディレクトリ</code></p>
-</li>
-<li>
-<p>所有グループのみを変更する場合<br />
-<code>chown [-R] :グループ名 ファイルまたはディレクトリ</code><br />
-<code>chgrp [-R] グループ名 ファイルまたはディレクトリ</code></p>
-</li>
-</ul>
-<p>「-R」オプションを使用すると、指定したディレクトリ、およびその配下にあるファイルの所有ユーザやグループを再帰的に変更できます。<br />
-なお、「:」の部分は「.」としても同じです。</p>
-<h3 id="_7">特殊なパーミッション<a class="headerlink" href="#_7" title="Permanent link">#</a></h3>
-<p>特殊なパーミッションとして、以下の3つがあります。</p>
-<ul>
-<li>
-<p>SUID<br />
-実行ファイルに設定する事で、そのプログラムをどのユーザが実行しても、プログラムの所有ユーザの権限で実行されます。
-設定はchmodコマンドで、通常のパーミッションの値に4000を加えた値を設定するか、所有ユーザに「s」という権限を追加します(u+s)。
-これが設定された代表的なプログラムに「passwd」コマンドがあります。</p>
-</li>
-<li>
-<p>SGID  <br />
-実行ファイルに設定する事で、そのプログラムをどのユーザが実行しても、プログラムの所有グループの権限で実行されます。
-また、ディレクトリに設定する事で、そのディレクトリ配下に作成したファイルやディレクトリの所有グループは親ディレクトリと同じになります。
-設定はchmodコマンドで、通常のパーミッションの値に2000を加えた値を設定するか、所有グループに「s」という権限を追加します(g+s)。</p>
-</li>
-<li>
-<p>スティッキービット <br />
-ディレクトリに設定する事で、そのディレクトリに対して書き込み権限を持つユーザでも、自分が所有する以外のファイルを削除できなくなります。
-設定方法はchmodコマンドで、通常のパーミッションの値に1000を加えた値を設定するか、その他ユーザに「t」という権限を追加します(o+t)。
-これが設定された代表的なディレクトリに「/tmp」ディレクトリがあります。</p>
-</li>
-</ul>
-<h2 id="_8">ハードリンクとシンボリックリンクの作成・変更<a class="headerlink" href="#_8" title="Permanent link">#</a></h2>
-<p>Linuxではファイル(ディレクトリはファイルの一種)を「ファイルの実体（データ本体）」と「inode」を使用して管理しています。inodeにはファイルの属性や、
-「ファイルの実体」にアクセスするためのアドレスなどのメタデータ（格納されているデータそのものに関する情報）が格納されています。
-Linuxには、同じ「ファイルの実体」に対して複数の名前でアクセスできる、リンクという仕組みが2種類あります。それが「ハードリンク」と「シンボリックリンク」です。</p>
-<p>上図のFile1とFile2は同じ実体を参照しています。ですのでFile1の中身を編集すると、File2の中身も同じく変更されます。</p>
-<p>ハードリンクの数とinode番号は「ls -il」コマンドで確認することが出来ます。</p>
-<p>ハードリンクを作成するにはlnコマンド（書式：ln 元ファイル リンクファイル）を利用します。</p>
-<ul>
-<li>例）File1のハードリンクをFile2として作成する場合<br />
-<code>ln File1 File2</code></li>
-</ul>
-<p>ile2はFile1のハードリンクのため、inode番号が同じです。ただこの時点で、どちらがリンクファイルであるかの区別は無くなります。
-この状態でFile1を削除しても、File2が実体にリンクしているため実体は残ります（削除されません）。File2も削除し、ハードリンクが0になると、実体がはじめて削除されます。</p>
-<p>ハードリンクの制限として以下の2点があります。
-1. ディレクトリのハードリンクは作成できない
-2. 異なるファイルシステム（パーティション）にハードリンクを作成できない</p>
-<p>1の制限は循環ディレクトリの作成を防ぐためです。例えば、testという1ユーザーしか利用しない環境で「/home」を
-「/home/test」にハードリンクしてしまうと、「/home/test」の「/home」が「/home/test」に置き換えられるため、
-「/home/test/test/test/...」と無限に続く循環ディレクトリができてしまうことになります。</p>
-<p>2の制限はinode番号が各ファイルシステム毎に別々に管理されているためです。異なるファイルシステムではinodeの
-利用状況が異なるため、全く同じinodeを割り当てて正しく参照できる保証がありません。</p>
-<p>これらの制限はシンボリックリンクを使う事で解決できます。</p>
-<p>【シンボリックリンク】<br />
-シンボリックリンクとは、Windowsでのショートカットのようなもので、元ファイルの場所を指し示すリンクの事です。<br />
-シンボリックリンクが持っている情報は「元ファイル（ディレクトリ）がどこにあるのか」というパス情報のみです。  </p>
-<p>上図のFile2はFile1への単なるショートカットです。
-File1を削除すると（他に同じinode番号を持つハードリンクが無ければ）、ファイルの実体は削除されますが、File2は残ります。
-ただその場合、File2にアクセスすると、リンクしているFile1が無いためエラーになります。</p>
-<p>シンボリックリンクを作成するにはlnコマンドに「-s」オプションを付加して作成します。（書式：ln -s 元ファイル リンクファイル）</p>
-<ul>
-<li>例）File1のシンボリックリンクをFile2として作成する場合
-  <code>ln -s File1 File2</code></li>
-</ul>
-<p>File1とFile2ではinode番号が違う事が分かります。
-また、File2にはシンボリックリンクを示す「l」がパーミッションの先頭に表示されています。
-ファイル名を示す欄では、File2はFile1のシンボリックであることが分かります。</p>
-<h2 id="_9">システムファイルの検索、適切なファイル配置<a class="headerlink" href="#_9" title="Permanent link">#</a></h2>
-<h3 id="find">find<a class="headerlink" href="#find" title="Permanent link">#</a></h3>
-<p>指定したディレクトリ以下からファイルやディレクトリを検索するにはfindコマンドを利用します。</p>
-<p>findコマンドの書式と主な検索式・アクションは以下のとおりです。</p>
-<p>find [検索起点ディレクトリ] [検索式] [アクション]</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">検索式</th>
-<th style="text-align: left;">説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">-name ファイル名</td>
-<td style="text-align: left;">ファイル名で検索</td>
-</tr>
-<tr>
-<td style="text-align: left;">-atime 日数</td>
-<td style="text-align: left;">最終アクセス日で検索</td>
-</tr>
-<tr>
-<td style="text-align: left;">-mtime 日数</td>
-<td style="text-align: left;">最終更新日で検索</td>
-</tr>
-<tr>
-<td style="text-align: left;">-perm アクセス権</td>
-<td style="text-align: left;">アクセス権で検索</td>
-</tr>
-<tr>
-<td style="text-align: left;">-size サイズ</td>
-<td style="text-align: left;">ファイルサイズで検索</td>
-</tr>
-<tr>
-<td style="text-align: left;">-type ファイルの種類</td>
-<td style="text-align: left;">ファイルの種類で検索（f : ファイル、d : ディレクトリ、l : シンボリックリンク）</td>
-</tr>
-<tr>
-<td style="text-align: left;">-user ユーザ名</td>
-<td style="text-align: left;">ファイルの所有者で検索</td>
-</tr>
-<tr>
-<td style="text-align: left;">- maxdepth 階層数</td>
-<td style="text-align: left;">指定した階層まで検索</td>
-</tr>
-<tr>
-<td style="text-align: left;">- mindepth 階層数</td>
-<td style="text-align: left;">指定した階層から下を検索</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">アクション</th>
-<th style="text-align: left;">説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">- print</td>
-<td style="text-align: left;">検索結果を改行で区切って表示（省略可能）</td>
-</tr>
-<tr>
-<td style="text-align: left;">- print0</td>
-<td style="text-align: left;">検索結果をNULL文字(\0)で区切って表示</td>
-</tr>
-<tr>
-<td style="text-align: left;">- exec コマンド名 {}\;</td>
-<td style="text-align: left;">検索結果のファイルに大してコマンドを実行</td>
-</tr>
-</tbody>
-</table>
-<h3 id="which">which<a class="headerlink" href="#which" title="Permanent link">#</a></h3>
-<p>whichコマンドは指定したコマンドが格納されている場所を検索し、絶対パスで表示します。検索するディレクトリは環境変数PATHで設定されている（パスが通っている）ディレクトリです。</p>
-<h3 id="whereis">whereis<a class="headerlink" href="#whereis" title="Permanent link">#</a></h3>
-<p>指定したコマンドと、そのマニュアル、ソースコードが置かれている場所を絶対パスで表示するコマンド</p>
-<h3 id="type">type<a class="headerlink" href="#type" title="Permanent link">#</a></h3>
-<p>typeコマンドは、指定したコマンドが通常のコマンドか、シェルの組み込みコマンドか、エイリアスか、などの情報を表示します。通常のコマンドの場合、そのコマンドが格納された絶対パスを表示します。</p>
-<h3 id="locate">locate<a class="headerlink" href="#locate" title="Permanent link">#</a></h3>
-<p>updatedbコマンドであらかじめ作成された検索用のデータベースに沿って、検索パターンに合致したファイルやディレクトリを高速に検索します。</p>
-<h3 id="updatedb">updatedb<a class="headerlink" href="#updatedb" title="Permanent link">#</a></h3>
-<p>locateコマンドが利用する検索用のデータベースを更新するコマンド</p>
-<h3 id="usr">/usr<a class="headerlink" href="#usr" title="Permanent link">#</a></h3>
-<p>「/usr」ディレクトリには起動には不要なプログラムなどが格納されています。</p>
-<p>以下はFHSで規定されている「/usr」以下のディレクトリ配置をまとめたものです。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">ディレクトリ</th>
-<th style="text-align: left;">格納物</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">/usr/bin</td>
-<td style="text-align: left;">システムの起動には必須ではない、一般ユーザ用のコマンド</td>
-</tr>
-<tr>
-<td style="text-align: left;">/usr/sbin</td>
-<td style="text-align: left;">システムの起動には必須ではない、システム管理用のコマンド</td>
-</tr>
-<tr>
-<td style="text-align: left;">/usr/lib</td>
-<td style="text-align: left;">/usr/lib、/usr/sbinに格納されるコマンドが必要とする共有ライブラリ</td>
-</tr>
-<tr>
-<td style="text-align: left;">/usr/local</td>
-<td style="text-align: left;">ホスト固有で使用するプログラムや設定ファイル（個人作成など）<br>配下にプログラムを格納するbin、設定ファイルを格納するetcなどのディレクトリなどがある</td>
-</tr>
-<tr>
-<td style="text-align: left;">/usr/share/man</td>
-<td style="text-align: left;">マニュアル</td>
-</tr>
-</tbody>
-</table>
 
 
 
@@ -7289,7 +5866,7 @@ File1を削除すると（他に同じinode番号を持つハードリンクが�
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../LPIC_103/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 103 GNU / Unix Cmd" rel="prev">
+          <a href="../make_command/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Linux のコマンドを python で作成する" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -7298,20 +5875,20 @@ File1を削除すると（他に同じinode番号を持つハードリンクが�
                 Previous
               </span>
               <div class="md-ellipsis">
-                103 GNU / Unix Cmd
+                Linux のコマンドを python で作成する
               </div>
             </div>
           </a>
         
         
           
-          <a href="../LPIC_Level1_CmdList/" class="md-footer__link md-footer__link--next" aria-label="Next: Lpic Level 1 Cmd List" rel="next">
+          <a href="../recipe_search_strings/" class="md-footer__link md-footer__link--next" aria-label="Next: Linux レシピ：文字列の検索" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Lpic Level 1 Cmd List
+                Linux レシピ：文字列の検索
               </div>
             </div>
             <div class="md-footer__button md-icon">
