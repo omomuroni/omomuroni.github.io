@@ -21,7 +21,7 @@
     
     
       
-        <title>Linux レシピ：文字列の検索 - おもむろにメモ書き</title>
+        <title>Linux レシピ：ファイルの検索 - おもむろにメモ書き</title>
       
     
     
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Linux レシピ：文字列の検索
+              Linux レシピ：ファイルの検索
             
           </span>
         </div>
@@ -1434,12 +1434,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Linux レシピ：文字列の検索
+          Linux レシピ：ファイルの検索
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Linux レシピ：文字列の検索
+        Linux レシピ：ファイルの検索
       </a>
       
         
@@ -1459,7 +1459,7 @@
       
         <li class="md-nav__item">
   <a href="#find" class="md-nav__link">
-    find こまんど
+    find コマンド
   </a>
   
 </li>
@@ -1467,6 +1467,13 @@
         <li class="md-nav__item">
   <a href="#egrep" class="md-nav__link">
     egrep
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find-x-grep" class="md-nav__link">
+    find x grep
   </a>
   
 </li>
@@ -3027,23 +3034,37 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../Python/tmp/" class="md-nav__link">
+        辞書型を解析
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_4" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_3" id="__nav_14_3_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_4" id="__nav_14_4_label" tabindex="0">
           Basics
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_3">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_4">
           <span class="md-nav__icon md-icon"></span>
           Basics
         </label>
@@ -3221,17 +3242,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_5" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_4" id="__nav_14_4_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_5" id="__nav_14_5_label" tabindex="0">
           Data
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_4">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_5">
           <span class="md-nav__icon md-icon"></span>
           Data
         </label>
@@ -3248,17 +3269,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_4_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_5_1" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_4_1" id="__nav_14_4_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_5_1" id="__nav_14_5_1_label" tabindex="0">
           Dash
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_4_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_4_1">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_5_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_5_1">
           <span class="md-nav__icon md-icon"></span>
           Dash
         </label>
@@ -3296,17 +3317,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_4_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_5_2" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_4_2" id="__nav_14_4_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_5_2" id="__nav_14_5_2_label" tabindex="0">
           Recipe
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_4_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_4_2">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_5_2">
           <span class="md-nav__icon md-icon"></span>
           Recipe
         </label>
@@ -3512,17 +3533,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_4_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_5_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_4_3" id="__nav_14_4_3_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_5_3" id="__nav_14_5_3_label" tabindex="0">
           TTP
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_4_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_4_3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_5_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_5_3">
           <span class="md-nav__icon md-icon"></span>
           TTP
         </label>
@@ -3602,17 +3623,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_4_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_5_4" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_4_4" id="__nav_14_4_4_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_5_4" id="__nav_14_5_4_label" tabindex="0">
           TextFSM
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_4_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_4_4">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_5_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_5_4">
           <span class="md-nav__icon md-icon"></span>
           TextFSM
         </label>
@@ -3706,17 +3727,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_4_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_5_5" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_4_5" id="__nav_14_4_5_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_5_5" id="__nav_14_5_5_label" tabindex="0">
           Openpyxl
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_4_5_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_4_5">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_5_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_5_5">
           <span class="md-nav__icon md-icon"></span>
           Openpyxl
         </label>
@@ -3796,17 +3817,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_4_6" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_5_6" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_4_6" id="__nav_14_4_6_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_5_6" id="__nav_14_5_6_label" tabindex="0">
           Pandas
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_4_6_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_4_6">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_5_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_5_6">
           <span class="md-nav__icon md-icon"></span>
           Pandas
         </label>
@@ -3851,17 +3872,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_6" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_5" id="__nav_14_5_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_6" id="__nav_14_6_label" tabindex="0">
           Finance
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_5_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_5">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_6">
           <span class="md-nav__icon md-icon"></span>
           Finance
         </label>
@@ -3899,17 +3920,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_6" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_7" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_6" id="__nav_14_6_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_7" id="__nav_14_7_label" tabindex="0">
           IXIA
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_6_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_6">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_7">
           <span class="md-nav__icon md-icon"></span>
           IXIA
         </label>
@@ -3947,17 +3968,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_7" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_8" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_7" id="__nav_14_7_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_8" id="__nav_14_8_label" tabindex="0">
           Network
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_7_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_7">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_8">
           <span class="md-nav__icon md-icon"></span>
           Network
         </label>
@@ -4100,17 +4121,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_7_10" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_8_10" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_7_10" id="__nav_14_7_10_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_8_10" id="__nav_14_8_10_label" tabindex="0">
           pyATS
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_7_10_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_7_10">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_8_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_8_10">
           <span class="md-nav__icon md-icon"></span>
           pyATS
         </label>
@@ -4323,17 +4344,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_8" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_9" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_8" id="__nav_14_8_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_9" id="__nav_14_9_label" tabindex="0">
           Python2
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_8_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_8">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_9">
           <span class="md-nav__icon md-icon"></span>
           Python2
         </label>
@@ -4385,17 +4406,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_9" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_10" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_9" id="__nav_14_9_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_10" id="__nav_14_10_label" tabindex="0">
           Recipe
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_9_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_9">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_10">
           <span class="md-nav__icon md-icon"></span>
           Recipe
         </label>
@@ -4811,17 +4832,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_10" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_11" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_10" id="__nav_14_10_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_11" id="__nav_14_11_label" tabindex="0">
           STC
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_10_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_10">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_11">
           <span class="md-nav__icon md-icon"></span>
           STC
         </label>
@@ -4859,17 +4880,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_11" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_12" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_11" id="__nav_14_11_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_12" id="__nav_14_12_label" tabindex="0">
           Setup
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_11_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_11">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_12_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_12">
           <span class="md-nav__icon md-icon"></span>
           Setup
         </label>
@@ -4949,17 +4970,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_12" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_13" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_12" id="__nav_14_12_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_13" id="__nav_14_13_label" tabindex="0">
           Test
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_12_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_12">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_13_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_13">
           <span class="md-nav__icon md-icon"></span>
           Test
         </label>
@@ -4976,17 +4997,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_12_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_13_1" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_12_1" id="__nav_14_12_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_13_1" id="__nav_14_13_1_label" tabindex="0">
           Pytest
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_12_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_12_1">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_13_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_13_1">
           <span class="md-nav__icon md-icon"></span>
           Pytest
         </label>
@@ -5045,17 +5066,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_13" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_14" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_13" id="__nav_14_13_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_14" id="__nav_14_14_label" tabindex="0">
           Tools
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_13_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_13">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_14_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_14">
           <span class="md-nav__icon md-icon"></span>
           Tools
         </label>
@@ -5107,17 +5128,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_14" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_15" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_14" id="__nav_14_14_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_15" id="__nav_14_15_label" tabindex="0">
           Web
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_14_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_14">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_14_15_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_15">
           <span class="md-nav__icon md-icon"></span>
           Web
         </label>
@@ -5134,17 +5155,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_14_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_15_1" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_14_1" id="__nav_14_14_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_15_1" id="__nav_14_15_1_label" tabindex="0">
           Design
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_14_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_14_1">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_15_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_15_1">
           <span class="md-nav__icon md-icon"></span>
           Design
         </label>
@@ -5182,17 +5203,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_14_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_15_2" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_14_2" id="__nav_14_14_2_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_15_2" id="__nav_14_15_2_label" tabindex="0">
           Django
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_14_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_14_2">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_15_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_15_2">
           <span class="md-nav__icon md-icon"></span>
           Django
         </label>
@@ -5251,17 +5272,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_14_2_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_15_2_4" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_14_2_4" id="__nav_14_14_2_4_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_15_2_4" id="__nav_14_15_2_4_label" tabindex="0">
           Tutorial
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_14_14_2_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_14_2_4">
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_14_15_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_15_2_4">
           <span class="md-nav__icon md-icon"></span>
           Tutorial
         </label>
@@ -5418,17 +5439,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_14_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14_15_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_14_14_3" id="__nav_14_14_3_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_14_15_3" id="__nav_14_15_3_label" tabindex="0">
           Module
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_14_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_14_14_3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_14_15_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_14_15_3">
           <span class="md-nav__icon md-icon"></span>
           Module
         </label>
@@ -5664,7 +5685,7 @@
       
         <li class="md-nav__item">
   <a href="#find" class="md-nav__link">
-    find こまんど
+    find コマンド
   </a>
   
 </li>
@@ -5672,6 +5693,13 @@
         <li class="md-nav__item">
   <a href="#egrep" class="md-nav__link">
     egrep
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find-x-grep" class="md-nav__link">
+    find x grep
   </a>
   
 </li>
@@ -5707,8 +5735,8 @@
   
 
 
-<h1 id="linux">Linux レシピ：文字列の検索<a class="headerlink" href="#linux" title="Permanent link">#</a></h1>
-<h3 id="find">find こまんど<a class="headerlink" href="#find" title="Permanent link">#</a></h3>
+<h1 id="linux">Linux レシピ：ファイルの検索<a class="headerlink" href="#linux" title="Permanent link">#</a></h1>
+<h3 id="find">find コマンド<a class="headerlink" href="#find" title="Permanent link">#</a></h3>
 <p>Linuxで特定の文字列がファイル名に存在するファイルを検索するには、findコマンドを使用することができます。
 以下は、特定のディレクトリから特定の文字列がファイル名に存在するファイルを検索する基本的なコマンドです。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>find<span class="w"> </span>/path/to/directory<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*文字列*&quot;</span>
@@ -5726,6 +5754,10 @@
 <p>さらに、検索結果をファイル名のみ表示したい場合は、-printf オプションを使って以下のようにフォーマット指定できます。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>find<span class="w"> </span>/path/to/directory<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*文字列*&quot;</span><span class="w"> </span>-printf<span class="w"> </span><span class="s2">&quot;%f\n&quot;</span>
 </code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>find コマンド自体は、ファイルの中身を直接検索する機能を持っていません。find コマンドは主にファイルシステム内をファイルやディレクトリの名前や属性などで検索するために使用されます。</p>
+</div>
 <h3 id="egrep">egrep<a class="headerlink" href="#egrep" title="Permanent link">#</a></h3>
 <p>egrepコマンドを使用してもファイル名に特定の文字列が含まれるファイルを検索できます。以下は、egrepコマンドを使用した方法です。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>egrep<span class="w"> </span>-rl<span class="w"> </span><span class="s2">&quot;文字列&quot;</span><span class="w"> </span>/path/to/directory
@@ -5739,6 +5771,22 @@
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>egrep -rl &quot;文字列&quot; /path/to/directory | xargs -I {} basename {}
 </code></pre></div>
 ここで、xargsコマンドを使用してファイル名だけを表示しています。このコマンドは、指定されたディレクトリ内のファイルを検索し、ファイル名に指定した文字列が含まれるファイルの名前だけを表示します。</p>
+<h3 id="find-x-grep">find x grep<a class="headerlink" href="#find-x-grep" title="Permanent link">#</a></h3>
+<p>ファイルの中身を検索する場合、通常は grep コマンドを使用します。find コマンドと grep コマンドを組み合わせることで、特定のディレクトリ内のファイルを検索して、その中身に対しても検索を行うことができます。</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>find<span class="w"> </span>/path/to/directory<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>grep<span class="w"> </span>-l<span class="w"> </span><span class="s1">&#39;検索文字列&#39;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
+</code></pre></div>
+上記のコマンドは、指定したディレクトリ内のすべてのファイルに対して、"検索文字列" を検索し、含まれているファイルの名前を表示します。</p>
+<p>egrep コマンドを使用して正規表現で検索する場合、基本的な構文は次のようになります。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>find<span class="w"> </span>/path/to/directory<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>egrep<span class="w"> </span>-l<span class="w"> </span><span class="s1">&#39;正規表現パターン&#39;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
+</code></pre></div>
+<p>ここで、-exec オプションを使用して、指定したディレクトリ内のすべてのファイルに対してコマンドを実行します。egrep コマンドは、拡張正規表現を使用してパターンを検索するためのものです。</p>
+<p>例えば、ファイル内で数字が含まれる行を検索する正規表現パターン '[0-9]' を使用する場合：
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>find<span class="w"> </span>/path/to/directory<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>egrep<span class="w"> </span>-l<span class="w"> </span><span class="s1">&#39;[0-9]&#39;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
+</code></pre></div></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><code>egrep</code> コマンドは g<code>rep -E</code> のエイリアス</p>
+</div>
 
 
 
