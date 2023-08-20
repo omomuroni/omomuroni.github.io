@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://omomuroni.github.io/Linux/Knowledge/shell_script2_array/">
+        <link rel="canonical" href="https://omomuroni.github.io/Linux/Shell_Script/shell_script3_loop/">
       
       
-        <link rel="prev" href="../shell_script1_basic/">
+        <link rel="prev" href="../shell_script2_array/">
       
       
-        <link rel="next" href="../shell_script3_iteration/">
+        <link rel="next" href="../shell_script4_conditional-branch/">
       
       <link rel="icon" href="../../../custom/icons/pencil.svg">
       <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
-        <title>配列 - おもむろにメモ書き</title>
+        <title>繰り返し処理 - おもむろにメモ書き</title>
       
     
     
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              配列
+              繰り返し処理
             
           </span>
         </div>
@@ -355,7 +355,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../HTML_CSS_JS/reference/" class="md-tabs__link">
+      <a href="../../../HTML_CSS_JS/auto_adjustment_table/" class="md-tabs__link">
         HTML CSS JS
       </a>
     </li>
@@ -1373,6 +1373,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../HTML_CSS_JS/auto_adjustment_table/" class="md-nav__link">
+        表の幅自動調整
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../HTML_CSS_JS/reference/" class="md-nav__link">
         HTML & CSS リファレンス
       </a>
@@ -1798,16 +1812,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_8" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_8" >
       
       
       
@@ -1816,7 +1828,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_8_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_8_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_10_8">
           <span class="md-nav__icon md-icon"></span>
           Knowledge
@@ -1829,7 +1841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../permission/" class="md-nav__link">
+      <a href="../../Knowledge/permission/" class="md-nav__link">
         Permission
       </a>
     </li>
@@ -1843,104 +1855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../shell_script1_basic/" class="md-nav__link">
-        基本的な作成方法
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          配列
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        配列
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    詳細
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../shell_script3_iteration/" class="md-nav__link">
-        繰り返し処理
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../shell_script4_conditional-branch/" class="md-nav__link">
-        条件分岐
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../special_variable/" class="md-nav__link">
+      <a href="../../Knowledge/special_variable/" class="md-nav__link">
         特殊変数
       </a>
     </li>
@@ -2091,6 +2006,122 @@
               
   
   
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_10" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_10" id="__nav_10_10_label" tabindex="0">
+          Shell Script
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_10_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_10_10">
+          <span class="md-nav__icon md-icon"></span>
+          Shell Script
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shell_script1_basic/" class="md-nav__link">
+        基本的な作成方法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shell_script2_array/" class="md-nav__link">
+        配列
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        繰り返し処理
+      </a>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shell_script4_conditional-branch/" class="md-nav__link">
+        条件分岐
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shell_script5_debug/" class="md-nav__link">
+        debug
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
   
     
     <li class="md-nav__item md-nav__item--nested">
@@ -2098,17 +2129,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_10" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_11" >
       
       
       
-        <label class="md-nav__link" for="__nav_10_10" id="__nav_10_10_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_10_11" id="__nav_10_11_label" tabindex="0">
           WSL
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_10_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_10_10">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10_11">
           <span class="md-nav__icon md-icon"></span>
           WSL
         </label>
@@ -5937,21 +5968,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    詳細
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -5965,7 +5981,7 @@
                   
 
   
-    <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/Linux/Knowledge/shell_script2_array.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/Linux/Shell_Script/shell_script3_loop.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -5974,113 +5990,56 @@
     
       
     
-    <a href="https://github.com/omomuroni/omomuroni.github.io/raw/master/docs/Linux/Knowledge/shell_script2_array.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/omomuroni/omomuroni.github.io/raw/master/docs/Linux/Shell_Script/shell_script3_loop.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="_1">配列<a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
-<p><code>shell script</code>、特に<code>bash</code>における配列について説明します。</p>
-<p><strong>配列の宣言</strong></p>
-<p>bashでの配列は以下のように宣言します：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">array</span><span class="o">=(</span><span class="s2">&quot;value1&quot;</span><span class="w"> </span><span class="s2">&quot;value2&quot;</span><span class="w"> </span><span class="s2">&quot;value3&quot;</span><span class="o">)</span>
-</code></pre></div>
-<p><strong>値の取得</strong></p>
-<p>配列の要素にアクセスするには、次のようにインデックスを使用します：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[0]</span><span class="si">}</span><span class="s2">&quot;</span><span class="w">  </span><span class="c1"># value1</span>
-</code></pre></div>
-<p><strong>全要素の取得</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="w">  </span><span class="c1"># value1 value2 value3</span>
-</code></pre></div>
-<p><strong>配列の長さの取得</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">length</span><span class="o">=</span><span class="si">${#</span><span class="nv">array</span><span class="p">[@]</span><span class="si">}</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$length</span><span class="s2">&quot;</span><span class="w">  </span><span class="c1"># 3</span>
-</code></pre></div>
-<p><strong>要素の追加</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nv">array</span><span class="o">+=(</span><span class="s2">&quot;value4&quot;</span><span class="o">)</span>
-</code></pre></div>
-<p><strong>要素の削除</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">unset</span><span class="w"> </span>array<span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w">  </span><span class="c1"># value2を削除</span>
-</code></pre></div>
-<p><strong>配列のスライス</strong></p>
-<p>指定した範囲の要素を取得するには：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[@]:</span><span class="nv">1</span><span class="p">:</span><span class="nv">2</span><span class="si">}</span><span class="s2">&quot;</span><span class="w">  </span><span class="c1"># value2 value3</span>
-</code></pre></div>
-<p>この例では、インデックス1から2つの要素を取得します。</p>
-<p><strong>ループ処理</strong></p>
-<p>配列のすべての要素に対してループ処理を行うには、次のようにします：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">for</span><span class="w"> </span>val<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$val</span><span class="s2">&quot;</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">done</span>
-</code></pre></div>
-<p>これが<code>bash</code>の配列に関する基本的な説明です。</p>
-<h2 id="_2">詳細<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
-<p>了解しました。bashにおける配列について、もう少し詳しく説明いたします。</p>
+<h1 id="_1">繰り返し処理<a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
+<p>シェルスクリプトでの繰り返し処理は主に<code>for</code>ループや<code>while</code>ループを使用して実現します。</p>
 <ol>
 <li>
-<p><strong>連想配列</strong><br />
-bash 4以降では、連想配列もサポートしています。これはキーと値のペアを持つ配列です。
-    宣言：
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">declare</span><span class="w"> </span>-A<span class="w"> </span>assoc_array
+<p><strong><code>for</code>ループ</strong></p>
+<p>a. シーケンスを使った繰り返し:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..5<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Number: </span><span class="nv">$i</span><span class="s2">&quot;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">done</span>
 </code></pre></div>
-    要素の追加：
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>assoc_array<span class="o">[</span><span class="s2">&quot;key1&quot;</span><span class="o">]=</span><span class="s2">&quot;value1&quot;</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>assoc_array<span class="o">[</span><span class="s2">&quot;key2&quot;</span><span class="o">]=</span><span class="s2">&quot;value2&quot;</span>
+<p>上のコードは1から5までの数字を順に表示します。</p>
+<p>b. 配列を使った繰り返し:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">arr</span><span class="o">=(</span><span class="s2">&quot;apple&quot;</span><span class="w"> </span><span class="s2">&quot;banana&quot;</span><span class="w"> </span><span class="s2">&quot;cherry&quot;</span><span class="o">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">for</span><span class="w"> </span>fruit<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">arr</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$fruit</span><span class="s2">&quot;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">done</span>
 </code></pre></div>
-    値の取得：
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">assoc_array</span><span class="p">[</span><span class="s2">&quot;key1&quot;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="w">  </span><span class="c1"># value1</span>
+<p>上のコードは配列の要素を順に表示します。</p>
+</li>
+<li>
+<p><strong><code>while</code>ループ</strong></p>
+<p>a. 基本的な<code>while</code>ループの使用方法:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nv">count</span><span class="o">=</span><span class="m">1</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">while</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$count</span><span class="w"> </span>-le<span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Count: </span><span class="nv">$count</span><span class="s2">&quot;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nv">count</span><span class="o">=</span><span class="k">$((</span><span class="nv">count</span><span class="o">+</span><span class="m">1</span><span class="k">))</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">done</span>
 </code></pre></div>
-    すべてのキーの取得：
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="p">!assoc_array[@]</span><span class="si">}</span><span class="s2">&quot;</span>
-</code></pre></div></p>
+<p>上のコードは変数<code>count</code>が5以下である間、変数の値を表示し続けます。</p>
 </li>
 <li>
-<p><strong>配列の要素の操作</strong>  </p>
-<ul>
-<li>
-<p>要素の置換
-  <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nv">array</span><span class="o">=(</span><span class="s2">&quot;apple&quot;</span><span class="w"> </span><span class="s2">&quot;banana&quot;</span><span class="w"> </span><span class="s2">&quot;cherry&quot;</span><span class="o">)</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>array<span class="o">[</span><span class="m">1</span><span class="o">]=</span><span class="s2">&quot;blueberry&quot;</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="w">  </span><span class="c1"># apple blueberry cherry</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>末尾から要素を取得
-  <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[@]: -1</span><span class="si">}</span><span class="s2">&quot;</span><span class="w">  </span><span class="c1"># cherry</span>
-</code></pre></div></p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>文字列を配列に分割</strong><br />
-以下のコマンドは、スペースを区切り文字として文字列を配列に変換します。
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nv">string</span><span class="o">=</span><span class="s2">&quot;a b c d&quot;</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nv">array</span><span class="o">=(</span><span class="nv">$string</span><span class="o">)</span>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[2]</span><span class="si">}</span><span class="s2">&quot;</span><span class="w">  </span><span class="c1"># c</span>
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>配列要素の検索</strong><br />
-配列の中で特定の文字列を含む要素を検索することもできます。
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nv">array</span><span class="o">=(</span><span class="s2">&quot;apple&quot;</span><span class="w"> </span><span class="s2">&quot;banana&quot;</span><span class="w"> </span><span class="s2">&quot;cherry&quot;</span><span class="o">)</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="k">for</span><span class="w"> </span>fruit<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$fruit</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>*<span class="s2">&quot;a&quot;</span>*<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$fruit</span><span class="s2"> contains an &#39;a&#39;&quot;</span>
-<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="k">fi</span>
-<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="k">done</span>
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>配列の要素の順序を逆にする</strong>
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nv">array</span><span class="o">=(</span><span class="s2">&quot;a&quot;</span><span class="w"> </span><span class="s2">&quot;b&quot;</span><span class="w"> </span><span class="s2">&quot;c&quot;</span><span class="w"> </span><span class="s2">&quot;d&quot;</span><span class="o">)</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="nv">reversed_array</span><span class="o">=(</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tac<span class="w"> </span>-s<span class="w"> </span><span class="s1">&#39; &#39;</span><span class="o">)</span>
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">reversed_array</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="w">  </span><span class="c1"># d c b a</span>
-</code></pre></div></p>
+<p><strong><code>until</code>ループ</strong></p>
+<p><code>while</code>とは逆に、指定した条件が偽である間繰り返します。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">count</span><span class="o">=</span><span class="m">1</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">until</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$count</span><span class="w"> </span>-gt<span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Count: </span><span class="nv">$count</span><span class="s2">&quot;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="nv">count</span><span class="o">=</span><span class="k">$((</span><span class="nv">count</span><span class="o">+</span><span class="m">1</span><span class="k">))</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">done</span>
+</code></pre></div>
 </li>
 </ol>
-<p>bashにおける配列は非常に柔軟で、多様な操作が可能です。もちろん、上記に挙げたものは一部の例に過ぎません。</p>
+<p>上記の基本的な概念を理解しておけば、シェルスクリプトにおける繰り返し処理の多くのケースに対応できるでしょう。
+具体的なニーズや要件に応じて、これらの基本的なループを組み合わせたり、カスタマイズしたりすることができます。</p>
 
 
 
@@ -6109,7 +6068,7 @@ bash 4以降では、連想配列もサポートしています。これはキ�
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../shell_script1_basic/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 基本的な作成方法" rel="prev">
+          <a href="../shell_script2_array/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 配列" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -6118,20 +6077,20 @@ bash 4以降では、連想配列もサポートしています。これはキ�
                 Previous
               </span>
               <div class="md-ellipsis">
-                基本的な作成方法
+                配列
               </div>
             </div>
           </a>
         
         
           
-          <a href="../shell_script3_iteration/" class="md-footer__link md-footer__link--next" aria-label="Next: 繰り返し処理" rel="next">
+          <a href="../shell_script4_conditional-branch/" class="md-footer__link md-footer__link--next" aria-label="Next: 条件分岐" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                繰り返し処理
+                条件分岐
               </div>
             </div>
             <div class="md-footer__button md-icon">

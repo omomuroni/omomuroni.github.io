@@ -181,6 +181,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://omomuroni.github.io/HTML_CSS_JS/auto_adjustment_table/</loc>
+         <lastmod>2023-08-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://omomuroni.github.io/HTML_CSS_JS/reference/</loc>
          <lastmod>2023-08-20</lastmod>
          <changefreq>daily</changefreq>
@@ -301,26 +306,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://omomuroni.github.io/Linux/Knowledge/shell_script1_basic/</loc>
-         <lastmod>2023-08-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Linux/Knowledge/shell_script2_array/</loc>
-         <lastmod>2023-08-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Linux/Knowledge/shell_script3_iteration/</loc>
-         <lastmod>2023-08-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://omomuroni.github.io/Linux/Knowledge/shell_script4_conditional-branch/</loc>
-         <lastmod>2023-08-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://omomuroni.github.io/Linux/Knowledge/special_variable/</loc>
          <lastmod>2023-08-20</lastmod>
          <changefreq>daily</changefreq>
@@ -357,6 +342,31 @@
     </url>
     <url>
          <loc>https://omomuroni.github.io/Linux/LPIC/LPIC_Level1_CmdList/</loc>
+         <lastmod>2023-08-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Linux/Shell_Script/shell_script1_basic/</loc>
+         <lastmod>2023-08-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Linux/Shell_Script/shell_script2_array/</loc>
+         <lastmod>2023-08-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Linux/Shell_Script/shell_script3_loop/</loc>
+         <lastmod>2023-08-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Linux/Shell_Script/shell_script4_conditional-branch/</loc>
+         <lastmod>2023-08-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://omomuroni.github.io/Linux/Shell_Script/shell_script5_debug/</loc>
          <lastmod>2023-08-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
