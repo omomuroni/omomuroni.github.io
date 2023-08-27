@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://omomuroni.github.io/Linux/Command/find/">
       
       
-        <link rel="prev" href="../command1/">
+        <link rel="prev" href="../egrep/">
       
       
         <link rel="next" href="../grep/">
@@ -1725,8 +1725,36 @@
   
   
     <li class="md-nav__item">
-      <a href="../command1/" class="md-nav__link">
-        Linux 頻出コマンド
+      <a href="../cron/" class="md-nav__link">
+        Cron
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../curl/" class="md-nav__link">
+        curl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../egrep/" class="md-nav__link">
+        egrep
       </a>
     </li>
   
@@ -1773,6 +1801,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    オプション
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#recipe" class="md-nav__link">
     recipe
   </a>
@@ -1780,7 +1815,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     正規表現
   </a>
   
@@ -1795,7 +1830,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     文字列がふくまれていないファイルを検索
   </a>
   
@@ -1835,6 +1870,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../gzip/" class="md-nav__link">
+        gzip
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kill/" class="md-nav__link">
+        kill
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../locate/" class="md-nav__link">
+        locate
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ps/" class="md-nav__link">
+        ps コマンド
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../sed/" class="md-nav__link">
         sed
       </a>
@@ -1851,6 +1942,20 @@
     <li class="md-nav__item">
       <a href="../tar/" class="md-nav__link">
         tar コマンド
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uniq/" class="md-nav__link">
+        uniq
       </a>
     </li>
   
@@ -1904,6 +2009,20 @@
           Knowledge
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Knowledge/mount/" class="md-nav__link">
+        Mount
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -2098,6 +2217,20 @@
           Shell Script
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Shell_Script/execute_python/" class="md-nav__link">
+        python scsript を実行する
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -6033,6 +6166,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    オプション
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#recipe" class="md-nav__link">
     recipe
   </a>
@@ -6040,7 +6180,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     正規表現
   </a>
   
@@ -6055,7 +6195,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     文字列がふくまれていないファイルを検索
   </a>
   
@@ -6138,6 +6278,64 @@
 </ol>
 <p>上記は <code>find</code> コマンドの非常に基本的な使用法の一部に過ぎません。<code>find</code> は多くのオプションやテストを持っているので、
 マニュアルページ（<code>man find</code>）を参照して詳細な情報や例を確認することをおすすめします。</p>
+<h2 id="_1">オプション<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<p><code>find</code> コマンドは、UNIXやLinuxのファイルシステムでファイルやディレクトリを検索するためのコマンドです。
+多くのオプションがあり、非常に強力なコマンドとして知られています。</p>
+<p>以下は <code>find</code> コマンドの主なオプションの一部です：</p>
+<ol>
+<li>
+<p><strong>名前とパスに関するオプション</strong>:</p>
+<ul>
+<li><code>-name パターン</code> : ファイル名がパターンに一致するファイルを検索します。</li>
+<li><code>-iname パターン</code> : 大文字・小文字を区別せずに <code>-name</code> と同様に検索します。</li>
+<li><code>-path パターン</code> : パスがパターンに一致するものを検索します。</li>
+<li><code>-ipath パターン</code> : 大文字・小文字を区別せずに <code>-path</code> と同様に検索します。</li>
+</ul>
+</li>
+<li>
+<p><strong>タイプオプション</strong>:</p>
+<ul>
+<li><code>-type f</code> : 通常のファイルを検索します。</li>
+<li><code>-type d</code> : ディレクトリを検索します。</li>
+<li><code>-type l</code> : シンボリックリンクを検索します。</li>
+</ul>
+</li>
+<li>
+<p><strong>タイムスタンプに関するオプション</strong>:</p>
+<ul>
+<li><code>-atime n</code> : n日前にアクセスされたファイルを検索します。</li>
+<li><code>-mtime n</code> : n日前に変更されたファイルを検索します。</li>
+<li><code>-ctime n</code> : n日前にファイルのステータスが変更されたファイルを検索します。</li>
+<li><code>-amin n</code> : n分前にアクセスされたファイルを検索します。</li>
+<li><code>-mmin n</code> : n分前に変更されたファイルを検索します。</li>
+<li><code>-cmin n</code> : n分前にファイルのステータスが変更されたファイルを検索します。</li>
+</ul>
+</li>
+<li>
+<p><strong>サイズに関するオプション</strong>:</p>
+<ul>
+<li><code>-size n</code> : サイズが n のファイルを検索します。nの後にc, k, M, Gなどの単位をつけることで、バイト数、キロバイト、メガバイト、ギガバイトなどの単位でサイズを指定できます。</li>
+</ul>
+</li>
+<li>
+<p><strong>アクションオプション</strong>:</p>
+<ul>
+<li><code>-print</code> : 検索結果のパスを表示します。</li>
+<li><code>-exec コマンド {} \;</code> : 検索結果の各ファイルに対してコマンドを実行します。</li>
+<li><code>-delete</code> : 検索結果のファイルを削除します。</li>
+</ul>
+</li>
+<li>
+<p><strong>その他のオプション</strong>:</p>
+<ul>
+<li><code>-maxdepth n</code> : n レベル以下のディレクトリのみを検索します。</li>
+<li><code>-mindepth n</code> : n レベル以上のディレクトリを検索します。</li>
+<li><code>-empty</code> : 空のファイルやディレクトリを検索します。</li>
+<li><code>-user ユーザー名</code> : 指定したユーザーが所有するファイルを検索します。</li>
+<li><code>-group グループ名</code> : 指定したグループが所有するファイルを検索します。</li>
+</ul>
+</li>
+</ol>
 <h2 id="recipe">recipe<a class="headerlink" href="#recipe" title="Permanent link">#</a></h2>
 <p><code>find</code> コマンドは非常に強力で、さまざまな状況で役立つ使い方があります。以下は、<code>find</code> コマンドのいくつかの便利な使用例を示しています：</p>
 <ol>
@@ -6203,26 +6401,35 @@
 <a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>find<span class="w"> </span>/path/to/start<span class="w"> </span>-atime<span class="w"> </span>-10
 </code></pre></div></p>
 </li>
+<li>
+<p>ファイル内に含まれる文字列を検索するコマンド
+    find <code>検索対象のディレクトリ</code> -name <code>検索対象のファイル</code> -type f -print0 | xargs -0 grep <code>検索したい文字列</code>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># 例. /var/log配下のファイル内に「reload」が含まれているものを検索する</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>$<span class="w"> </span>find<span class="w"> </span>/var/log<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-print0<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>-0<span class="w"> </span>grep<span class="w"> </span>reload
+</code></pre></div>
+    !!! INFO
+        <code>find -print0 | xargs -0 grep</code> とすることで、空白文字が入ったファイル（例. hoge piyo.txt）も検索対象にできる。</p>
+</li>
 </ol>
 <p>これらは <code>find</code> コマンドの一部の使い方にすぎません。実際の状況やニーズに合わせて、さまざまなオプションやテストを組み合わせて使用することができます。</p>
-<h2 id="_1">正規表現<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<h2 id="_2">正規表現<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <p><code>find</code> コマンドで正規表現を使用する場合、<code>-regex</code> オプションや <code>-iregex</code> オプション（大文字・小文字を区別しないバージョン）を使用します。これにより、より複雑なパターンマッチングが可能になります。</p>
 <p>ここに、<code>find</code> コマンドで正規表現を使用する方法の基本的な例をいくつか示します：</p>
 <ol>
 <li>
 <p><strong>特定の拡張子（.txt または .md）のファイルを検索する</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>find<span class="w"> </span>/path/to/start<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-regex<span class="w"> </span><span class="s2">&quot;.*\.\(txt\|md\)</span>$<span class="s2">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>find<span class="w"> </span>/path/to/start<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-regex<span class="w"> </span><span class="s2">&quot;.*\.\(txt\|md\)</span>$<span class="s2">&quot;</span>
 </code></pre></div></p>
 </li>
 <li>
 <p><strong><code>file</code> という名前の後に 1 から 3 の数字が続くファイルを検索する</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>find<span class="w"> </span>/path/to/start<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-regex<span class="w"> </span><span class="s2">&quot;.*file[1-3]</span>$<span class="s2">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>find<span class="w"> </span>/path/to/start<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-regex<span class="w"> </span><span class="s2">&quot;.*file[1-3]</span>$<span class="s2">&quot;</span>
 </code></pre></div></p>
 </li>
 <li>
 <p><strong>大文字・小文字を区別しないマッチング</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1"># .TXT または .txt のファイルを検索</span>
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>find<span class="w"> </span>/path/to/start<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-iregex<span class="w"> </span><span class="s2">&quot;.*\.txt</span>$<span class="s2">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1"># .TXT または .txt のファイルを検索</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>find<span class="w"> </span>/path/to/start<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-iregex<span class="w"> </span><span class="s2">&quot;.*\.txt</span>$<span class="s2">&quot;</span>
 </code></pre></div></p>
 </li>
 </ol>
@@ -6236,7 +6443,7 @@
 <p>ファイルの内容に基づいてファイルを検索する場合、<code>grep</code> コマンドが非常に便利です。
 <code>find</code> コマンドと組み合わせることで、特定のディレクトリの中で内容に特定の文字列が含まれるファイルを検索することができます。</p>
 <p>以下は、<code>find</code> と <code>grep</code> を組み合わせて、特定の文字列 "TARGET_STRING" を含むファイルを検索する基本的な方法です：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>find<span class="w"> </span>/path/to/start<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>grep<span class="w"> </span>-l<span class="w"> </span><span class="s2">&quot;TARGET_STRING&quot;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>find<span class="w"> </span>/path/to/start<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>grep<span class="w"> </span>-l<span class="w"> </span><span class="s2">&quot;TARGET_STRING&quot;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
 </code></pre></div>
 <p>説明:</p>
 <ul>
@@ -6256,7 +6463,7 @@
 <li><strong>基本的な正規表現を使用する場合</strong></li>
 <li>
 <p>"TARGET_STRING1" または "TARGET_STRING2" を含むファイルを検索:
-     <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>find<span class="w"> </span>/path/to/start<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>grep<span class="w"> </span>-l<span class="w"> </span><span class="s2">&quot;TARGET_STRING1\|TARGET_STRING2&quot;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>find<span class="w"> </span>/path/to/start<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>grep<span class="w"> </span>-l<span class="w"> </span><span class="s2">&quot;TARGET_STRING1\|TARGET_STRING2&quot;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
 </code></pre></div></p>
 </li>
 <li>
@@ -6264,19 +6471,19 @@
 </li>
 <li>
 <p>"TARGET_STRING1" または "TARGET_STRING2" を含むファイルを検索:
-     <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>find<span class="w"> </span>/path/to/start<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>grep<span class="w"> </span>-El<span class="w"> </span><span class="s2">&quot;TARGET_STRING1|TARGET_STRING2&quot;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>find<span class="w"> </span>/path/to/start<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>grep<span class="w"> </span>-El<span class="w"> </span><span class="s2">&quot;TARGET_STRING1|TARGET_STRING2&quot;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
 </code></pre></div></p>
 </li>
 <li>
 <p>数字3回続くパターン (例: 123, 456) を含むファイルを検索:
-     <div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>find<span class="w"> </span>/path/to/start<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>grep<span class="w"> </span>-El<span class="w"> </span><span class="s2">&quot;[0-9]{3}&quot;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>find<span class="w"> </span>/path/to/start<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>grep<span class="w"> </span>-El<span class="w"> </span><span class="s2">&quot;[0-9]{3}&quot;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
 </code></pre></div></p>
 </li>
 </ol>
 <p><code>grep</code> の <code>-E</code> オプションは、拡張正規表現の使用を可能にします。このオプションを使用すると、括弧やパイプなどの特殊文字をエスケープする必要がなくなります。</p>
 <p>注意: 正規表現の内容や形式は、具体的な目的やニーズに応じて変更する必要があります。
 また、使用する正規表現には注意が必要です。正規表現が複雑になると、パフォーマンスの低下や意図しないマッチが発生する可能性があります。</p>
-<h3 id="_2">文字列がふくまれていないファイルを検索<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<h3 id="_3">文字列がふくまれていないファイルを検索<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
 <p>特定の文字列が含まれていないファイルを検索するために、<code>grep</code> の <code>-v</code> (inverse) オプションを使用できます。ただし、この方法だけでは完全な答えを得ることはできません。なぜなら、<code>grep</code> はマッチしない行を返すため、1つのマッチしない行があるだけでファイルが出力される可能性があるからです。</p>
 <p>以下の手順で、特定の文字列を含まないファイルを検索できます：</p>
 <ol>
@@ -6284,7 +6491,7 @@
 <li>そのリストを除外して、残りのファイルを検索します。</li>
 </ol>
 <p>これを実現するコマンドは次のとおりです：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>find<span class="w"> </span>/path/to/start<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>!<span class="w"> </span>-exec<span class="w"> </span>grep<span class="w"> </span>-q<span class="w"> </span><span class="s2">&quot;TARGET_STRING&quot;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span><span class="w"> </span>-print
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>find<span class="w"> </span>/path/to/start<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>!<span class="w"> </span>-exec<span class="w"> </span>grep<span class="w"> </span>-q<span class="w"> </span><span class="s2">&quot;TARGET_STRING&quot;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span><span class="w"> </span>-print
 </code></pre></div>
 <p>説明:</p>
 <ul>
@@ -6321,7 +6528,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../command1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Linux 頻出コマンド" rel="prev">
+          <a href="../egrep/" class="md-footer__link md-footer__link--prev" aria-label="Previous: egrep" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -6330,7 +6537,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Linux 頻出コマンド
+                egrep
               </div>
             </div>
           </a>

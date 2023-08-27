@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://omomuroni.github.io/Linux/Command/command1/">
+        <link rel="canonical" href="https://omomuroni.github.io/Linux/Command/uniq/">
       
       
-        <link rel="prev" href="../awk/">
+        <link rel="prev" href="../tar/">
       
       
-        <link rel="next" href="../find/">
+        <link rel="next" href="../vi/">
       
       <link rel="icon" href="../../../custom/icons/pencil.svg">
       <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
-        <title>Linux 頻出コマンド - おもむろにメモ書き</title>
+        <title>uniq - おもむろにメモ書き</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#linux" class="md-skip">
+        <a href="#uniq" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Linux 頻出コマンド
+              uniq
             
           </span>
         </div>
@@ -1723,250 +1723,39 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Linux 頻出コマンド
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Linux 頻出コマンド
+    <li class="md-nav__item">
+      <a href="../cron/" class="md-nav__link">
+        Cron
       </a>
-      
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+            
+          
+            
+              
   
   
   
-    
+    <li class="md-nav__item">
+      <a href="../curl/" class="md-nav__link">
+        curl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    目次
-  </a>
   
-    <nav class="md-nav" aria-label="目次">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tar" class="md-nav__link">
-    tar
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gzip" class="md-nav__link">
-    gzip
-  </a>
-  
-    <nav class="md-nav" aria-label="gzip">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    オプション説明
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tee" class="md-nav__link">
-    tee
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#devnull" class="md-nav__link">
-    &gt;/dev/null
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#script" class="md-nav__link">
-    script
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#locate" class="md-nav__link">
-    locate
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#find" class="md-nav__link">
-    find
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    ファイル内に含まれる文字列を検索するコマンド
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#egrep" class="md-nav__link">
-    egrep
-  </a>
-  
-    <nav class="md-nav" aria-label="egrep">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#option" class="md-nav__link">
-    option
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#awk" class="md-nav__link">
-    awk
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    使用例
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#grep" class="md-nav__link">
-    grep
-  </a>
-  
-    <nav class="md-nav" aria-label="grep">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    基本
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#grep-option" class="md-nav__link">
-    grep option
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sed" class="md-nav__link">
-    sed
-  </a>
-  
-    <nav class="md-nav" aria-label="sed">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ls" class="md-nav__link">
-    ls
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mkdir" class="md-nav__link">
-    mkdir
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mv" class="md-nav__link">
-    mv
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rm" class="md-nav__link">
-    rm
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cp" class="md-nav__link">
-    cp: ファイルやディレクトリのコピー
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ps" class="md-nav__link">
-    ps: プロセスの一覧表示
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    参考
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
+    <li class="md-nav__item">
+      <a href="../egrep/" class="md-nav__link">
+        egrep
+      </a>
     </li>
   
 
@@ -2006,6 +1795,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../gzip/" class="md-nav__link">
+        gzip
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kill/" class="md-nav__link">
+        kill
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../locate/" class="md-nav__link">
+        locate
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ps/" class="md-nav__link">
+        ps コマンド
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../sed/" class="md-nav__link">
         sed
       </a>
@@ -2023,6 +1868,68 @@
       <a href="../tar/" class="md-nav__link">
         tar コマンド
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          uniq
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        uniq
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    オプション
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    オプション(使用例)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2075,6 +1982,20 @@
           Knowledge
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Knowledge/mount/" class="md-nav__link">
+        Mount
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -2269,6 +2190,20 @@
           Shell Script
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Shell_Script/execute_python/" class="md-nav__link">
+        python scsript を実行する
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -6205,205 +6140,14 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    目次
-  </a>
-  
-    <nav class="md-nav" aria-label="目次">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tar" class="md-nav__link">
-    tar
+    オプション
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#gzip" class="md-nav__link">
-    gzip
-  </a>
-  
-    <nav class="md-nav" aria-label="gzip">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    オプション説明
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tee" class="md-nav__link">
-    tee
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#devnull" class="md-nav__link">
-    &gt;/dev/null
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#script" class="md-nav__link">
-    script
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#locate" class="md-nav__link">
-    locate
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#find" class="md-nav__link">
-    find
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    ファイル内に含まれる文字列を検索するコマンド
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#egrep" class="md-nav__link">
-    egrep
-  </a>
-  
-    <nav class="md-nav" aria-label="egrep">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#option" class="md-nav__link">
-    option
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#awk" class="md-nav__link">
-    awk
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    使用例
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#grep" class="md-nav__link">
-    grep
-  </a>
-  
-    <nav class="md-nav" aria-label="grep">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    基本
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#grep-option" class="md-nav__link">
-    grep option
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sed" class="md-nav__link">
-    sed
-  </a>
-  
-    <nav class="md-nav" aria-label="sed">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ls" class="md-nav__link">
-    ls
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mkdir" class="md-nav__link">
-    mkdir
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mv" class="md-nav__link">
-    mv
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rm" class="md-nav__link">
-    rm
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cp" class="md-nav__link">
-    cp: ファイルやディレクトリのコピー
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ps" class="md-nav__link">
-    ps: プロセスの一覧表示
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    参考
+    オプション(使用例)
   </a>
   
 </li>
@@ -6423,7 +6167,7 @@
                   
 
   
-    <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/Linux/Command/command1.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/omomuroni/omomuroni.github.io/edit/master/docs/Linux/Command/uniq.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -6432,402 +6176,158 @@
     
       
     
-    <a href="https://github.com/omomuroni/omomuroni.github.io/raw/master/docs/Linux/Command/command1.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/omomuroni/omomuroni.github.io/raw/master/docs/Linux/Command/uniq.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="linux">Linux 頻出コマンド<a class="headerlink" href="#linux" title="Permanent link">#</a></h1>
-<h2 id="_1">目次<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
-<h3 id="tar">tar<a class="headerlink" href="#tar" title="Permanent link">#</a></h3>
-<ul>
-<li>アーカイブファイルの作成（.tarファイルの作成）</li>
-<li><code>tar cvf ファイル名.tar アーカイブ対象ディレクトリ</code></li>
-<li>アーカイブファイルの展開</li>
-<li><code>tar xvf tarファイル名.tar</code></li>
-<li>アーカイブし、gzipで圧縮する(.tar.gz ファイルの作成)</li>
-<li><code>tar cvzf ファイル名 圧縮対象ディレクトリ</code></li>
-<li>圧縮されたアーカイブファイルの展開(.tar.gz ファイルの解凍)</li>
+<h1 id="uniq">uniq<a class="headerlink" href="#uniq" title="Permanent link">#</a></h1>
+<p><code>uniq</code> は、テキストファイルやテキストストリームの重複する行をフィルタリングするための UNIX および UNIX ライクなオペレーティングシステムのコマンドラインツールです。
+具体的には、連続する重複行を単一の行にまとめます。</p>
+<p>以下は <code>uniq</code> の基本的な使い方とオプションの一部です：</p>
+<ol>
 <li>
-<p><code>tar xvzf ファイル名.tar.gz</code></p>
-</li>
-<li>
-<p>.gzファイルを解凍</p>
-</li>
-<li><code>tar -xzf file.gz</code></li>
-</ul>
-<h3 id="gzip">gzip<a class="headerlink" href="#gzip" title="Permanent link">#</a></h3>
-<p>gzipコマンドを使用して<code>.gz</code>ファイルを解凍する方法は以下の通り
-- <code>gzip -d file.gz</code> </p>
-<h4 id="_2">オプション説明<a class="headerlink" href="#_2" title="Permanent link">#</a></h4>
-<table class="basic_table">
-<thead>
-<tr>
-  <th align="left">オプション(省略)</th>
-  <th align="left">オプション(長い)</th>
-  <th align="left">説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td align="left"><strong>-c</strong></td>
-  <td align="left">--create</td>
-  <td align="left"><strong>アーカイブを作成する</strong></td>
-</tr>
-<tr>
-  <td align="left"><strong>-x</strong></td>
-  <td align="left">--extract</td>
-  <td align="left"><strong>アーカイブを展開する</strong></td>
-</tr>
-<tr>
-  <td align="left">-t</td>
-  <td align="left">--list</td>
-  <td align="left">一覧表示する</td>
-</tr>
-<tr>
-  <td align="left"><strong>-v</strong></td>
-  <td align="left">--verbose</td>
-  <td align="left">処理したファイルを詳しく出力する</td>
-</tr>
-<tr>
-  <td align="left"><strong>-f</strong></td>
-  <td align="left">--file</td>
-  <td align="left">アーカイブファイル名を指定する</td>
-</tr>
-<tr>
-  <td align="left"><strong>-z</strong></td>
-  <td align="left">--gzip</td>
-  <td align="left">gzip形式</td>
-</tr>
-<tr>
-  <td align="left">-j</td>
-  <td align="left">--bzip2</td>
-  <td align="left">bzip2形式</td>
-</tr>
-<tr>
-  <td align="left">-J</td>
-  <td align="left">--xz</td>
-  <td align="left">xz形式</td>
-</tr>
-</tbody>
-</table>
-
-<h3 id="tee">tee<a class="headerlink" href="#tee" title="Permanent link">#</a></h3>
-<h3 id="devnull"><code>&gt;/dev/null</code><a class="headerlink" href="#devnull" title="Permanent link">#</a></h3>
-<ul>
-<li>標準出力出力を破棄する</li>
-<li><code>&amp;&gt;/dev/null</code> で標準出力と標準エラー出力の両方共を破棄する</li>
-</ul>
-<h3 id="script">script<a class="headerlink" href="#script" title="Permanent link">#</a></h3>
-<p>script コマンドは作業ログをファイルへ出力することができます。
-実行方法は <code>script [ファイル名]</code> で終了時にexit を入力します。</p>
-<h3 id="locate">locate<a class="headerlink" href="#locate" title="Permanent link">#</a></h3>
-<p>locateコマンドは、ファイル名のリストが記録された「locateデータベース」と呼ばれるデータベースを参照してファイルを検索します。</p>
-<ul>
-<li><code>locate [ファイル名]</code>で指定したファイルを探す</li>
-<li><code>locate /[ファイル名]</code> で指定したファイルを除外して検索</li>
-</ul>
-<p>locateデータベースは<code>updatedb</code>コマンドで更新します。デフォルトで定期的に自動実行されるようになっていますが、
-手動で更新することも可能です。<em>*</em>*</p>
-<h3 id="find">find<a class="headerlink" href="#find" title="Permanent link">#</a></h3>
-<ul>
-<li><a href="https://eng-entrance.com/linux-command-find">ファイルなどを検索する！findコマンドの詳細まとめ【Linuxコマンド集】</a></li>
-</ul>
-<p>ファイルやディレクトリを検索するコマンド</p>
-<ul>
-<li><code>find ファイル名もしくはディレクトリ</code></li>
-<li><code>find Documents -name \*.log</code></li>
-</ul>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<ul>
-<li><code>-name</code> ファイルやディレクトリ名の一部のみ指定した検索。オプションでワイルドカードを使用できる。<code>\</code>でエスケープすること。</li>
-<li><code>find ./Documents/ *.log</code>　でも同じ。</li>
-<li><code>-newer</code> で任意のファイルの更新日時よりも後に変更したファイルやディレクトリを検索する。</li>
-<li><code>-type f</code>ファイルのみを検索対象とする</li>
-<li><code>-type d</code> ディレクトリのみを検索対象とする</li>
-</ul>
-</div>
-<h3 id="_3">ファイル内に含まれる文字列を検索するコマンド<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
-<p>find <code>検索対象のディレクトリ</code> -name <code>検索対象のファイル</code> -type f -print0 | xargs -0 grep <code>検索したい文字列</code>
-<a href="https://reasonable-code.com/find-xargs-grep/">https://reasonable-code.com/find-xargs-grep/</a></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># 例. /var/log配下のファイル内に「reload」が含まれているものを検索する</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$<span class="w"> </span>find<span class="w"> </span>/var/log<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-print0<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>-0<span class="w"> </span>grep<span class="w"> </span>reload
+<p><strong>基本的な使用方法</strong>:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>uniq<span class="w"> </span>file.txt
 </code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p><code>find -print0 | xargs -0 grep</code> とすることで、空白文字が入ったファイル（例. hoge piyo.txt）も検索対象にできる。</p>
-</div>
-<h3 id="egrep">egrep<a class="headerlink" href="#egrep" title="Permanent link">#</a></h3>
-<p>egrep（またはextended grep）は、検索パターンを使用してテキストファイルからマッチする行を検索するために使用されるUnixコマンドの1つです。
-以下は、egrepの基本的な使い方です。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>egrep [OPTIONS] PATTERN [FILE]
+   これにより、<code>file.txt</code> の連続する重複行が除去されます。</p>
+</li>
+<li>
+<p><strong>重複した行の数を表示</strong>:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>uniq<span class="w"> </span>-c<span class="w"> </span>file.txt
 </code></pre></div>
-<ul>
-<li>OPTIONS: egrepにはいくつかのオプションがあります。</li>
-<li><code>-i</code>オプションを使用すると、検索に大文字小文字の区別をしなくなります。</li>
-<li>
-<p><code>-v</code>オプションを使用すると、パターンに一致しない行を表示します。</p>
+   このコマンドは、各行の出現回数とともにその行を出力します。</p>
 </li>
 <li>
-<p>PATTERN: 検索する文字列、正規表現、またはパターンです。</p>
-</li>
-<li>FILE: 検索するファイルの名前です。複数のファイルを検索する場合は、ファイル名をスペースで区切って指定します。FILEを指定しない場合は、標準入力からテキストを読み込みます。</li>
-</ul>
-<p>例えば、以下のコマンドは、"file.txt"というファイルから"apple"という単語を検索し、マッチする行を表示します。</p>
-<ul>
-<li><code>egrep 'apple' file.txt</code></li>
-</ul>
-<h4 id="option">option<a class="headerlink" href="#option" title="Permanent link">#</a></h4>
-<p>以下は、egrepコマンドで使用できる主要なオプションです。</p>
-<ul>
-<li><code>-i</code>：大文字小文字を区別せずに検索します。</li>
-<li><code>-v</code>：パターンにマッチしない行を表示します。</li>
-<li><code>-w</code>：単語単位で検索します。</li>
-<li><code>-c</code>：マッチする行数をカウントします。</li>
-<li><code>-l</code>：マッチする行を含むファイル名を表示します。</li>
-<li><code>-n</code>：マッチする行の前に行番号を表示します。</li>
-<li><code>-E</code>：拡張正規表現を使用します。</li>
-</ul>
-<p>これらのオプションを使用して、egrepコマンドをより効果的に使用することができます。
-例えば、以下のコマンドは、大文字小文字を区別せずに、単語"hello"を含む行をファイルfile.txtから検索し、その行の行番号とともに表示します。</p>
-<ul>
-<li><code>egrep -iwn "hello" file.txt</code></li>
-</ul>
-<p>また、-rオプションを使用することで、ディレクトリ内のファイルを再帰的に検索することができます。例えば、以下のコマンドは、ディレクトリ/home/user内のすべてのファイルから"hello"という単語を検索します。</p>
-<ul>
-<li><code>egrep -r "hello" /home/user</code></li>
-</ul>
-<p>以下は、egrepコマンドで使用できるその他のオプションです。</p>
-<ul>
-<li><code>-A NUM</code>：マッチする行の後に、指定した行数(NUM)のコンテキストを表示します。</li>
-<li><code>-B NUM</code>：マッチする行の前に、指定した行数(NUM)のコンテキストを表示します。</li>
-<li><code>-C NUM</code>：マッチする行の前後に、指定した行数(NUM)のコンテキストを表示します。</li>
-<li><code>-f FILE</code>：指定されたファイルに含まれる正規表現パターンを使用して検索を実行します。</li>
-<li><code>-o</code>：マッチした文字列のみを表示します。</li>
-<li><code>-q</code>：出力を抑制します。検索にマッチする行がある場合は、終了コード0を返します。マッチしない場合は、終了コード1を返します。</li>
-</ul>
-<p>これらのオプションを使用することで、検索結果の精度を調整し、必要に応じて出力を制御することができます。例えば、以下のコマンドは、"hello"という単語を含む行とその前後の3行を表示します。</p>
-<p><code>egrep -A 3 -B 3 "hello" file.txt</code></p>
-<p>また、以下のコマンドは、正規表現パターンをファイルpattern.txtから読み取り、そのパターンに一致する行をファイルfile.txtから検索します。</p>
-<p><code>egrep -f pattern.txt file.txt</code></p>
-<h3 id="awk">awk<a class="headerlink" href="#awk" title="Permanent link">#</a></h3>
-<p>awkは、テキストファイルの処理に特化したプログラムです。テキストファイルを行単位で読み込み、パターンマッチングやフィールド単位での処理などを行い、処理結果を出力することができます。</p>
-<p>awkコマンドは、以下のような基本的な構文を持ちます。</p>
-<p><code>awk 'pattern {action}' file</code></p>
-<p>ここで、patternは、検索パターンを表し、actionは、パターンに一致した行に対する処理を表します。fileは、入力ファイルを指定します。
-patternは省略可能であり、省略した場合はすべての行が処理の対象となります。</p>
-<p>actionは、中括弧で囲まれた処理のリストであり、複数のコマンドをセミコロンで区切ることができます。
-actionを省略した場合、デフォルトの処理として、パターンに一致した行を出力します。</p>
-<p>以下は、awkコマンドで使用される一般的な機能の例です。</p>
-<ul>
-<li>フィールド指定：デフォルトでは、awkは空白文字を区切り文字として使用します。$1、$2などを使用して、特定のフィールドにアクセスすることができます。</li>
-<li>条件式：if文を使用して、条件式に基づいた処理を実行することができます。</li>
-<li>変数：変数を定義して、処理の中で使用することができます。変数には、文字列や数値など、さまざまな型を使用することができます。</li>
-<li>出力：print文を使用して、処理結果を出力することができます。出力先は、標準出力やファイルなど、複数のオプションがあります。</li>
-</ul>
-<p>以下は、awkコマンドの例です。例えば、ファイルfile.txtから、フィールド2が10以上の行を抽出し、フィールド1とフィールド2をタブ区切りで出力する場合は、以下のようなコマンドを実行します。</p>
-<p><code>awk '$2 &gt;= 10 {print $1 "\t" $2}' file.txt</code></p>
-<p><code>$1</code>と<code>$2</code>は、フィールド1とフィールド2を表します。<code>"\t"</code>は、タブ文字を表します。<code>$2 &gt;= 10</code> は、フィールド2が10以上の行を抽出する条件式です。</p>
-<h3 id="_4">使用例<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
-<p>以下に、awkコマンドを使用した例をいくつか示します。</p>
-<p>テキストファイルからフィールドの抽出
-以下の例は、sample.txtというファイルから、3番目のフィールドを抽出する例</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$ cat sample.txt
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>apple orange grape
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>banana strawberry cherry
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>$ awk &#39;{print $3}&#39; sample.txt
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>grape
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>cherry
+<p><strong>重複していない行のみを表示</strong>:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>uniq<span class="w"> </span>-u<span class="w"> </span>file.txt
 </code></pre></div>
-<p>テキストファイルから条件に一致する行の抽出</p>
-<p>以下の例は、sample.txtというファイルから、"apple"が含まれる行を抽出する例。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$ cat sample.txt
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>apple orange grape
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>banana strawberry cherry
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>$ awk &#39;/apple/ {print}&#39; sample.txt
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>apple orange grape
+   このコマンドは、ファイル内で一度しか出現しない行のみを出力します。</p>
+</li>
+<li>
+<p><strong>すべての重複する行を表示</strong>:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>uniq<span class="w"> </span>-d<span class="w"> </span>file.txt
 </code></pre></div>
-<p>テキストファイルから複数のフィールドを抽出</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$ cat sample.txt
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>apple orange grape
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>banana strawberry cherry
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>$ awk &#39;{print $2 &quot;\t&quot; $3}&#39; sample.txt
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>orange  grape
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>strawberry  cherry
+   このコマンドは、ファイル内で複数回出現する行を一度だけ出力します。</p>
+</li>
+<li>
+<p><strong>特定のフィールドや文字での比較</strong>:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>uniq<span class="w"> </span>-f<span class="w"> </span><span class="m">1</span><span class="w"> </span>file.txt
 </code></pre></div>
-<p>ファイルの内容を変数に格納して処理する例</p>
-<p>以下の例は、sample.txtというファイルの内容をtextという変数に格納して、awkで処理する例です。ここでは、各行の長さを出力しています。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$ cat sample.txt
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>apple orange grape
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>banana strawberry cherry
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>$ text=$(cat sample.txt)
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>$ echo &quot;${text}&quot; | awk &#39;{print length}&#39;
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>16
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>22
+   または
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>uniq<span class="w"> </span>-s<span class="w"> </span><span class="m">2</span><span class="w"> </span>file.txt
 </code></pre></div>
-<p>以上のように、awkは、テキストファイルを処理する際に非常に便利なツールです。awkの機能を使いこなすことで、効率的なデータ処理を実現することができます。</p>
-<h3 id="grep">grep<a class="headerlink" href="#grep" title="Permanent link">#</a></h3>
-<h4 id="_5">基本<a class="headerlink" href="#_5" title="Permanent link">#</a></h4>
-<ul>
-<li><code>grep 検索文字列 ファイル名</code></li>
-<li>例: shareディレクトリ内のファイルすべての中からaという文字を検索 <code>grep a share/*</code></li>
+   <code>-f</code> オプションは、先頭から指定した数のフィールドを無視して比較します。 <code>-s</code> オプションは、先頭から指定した数の文字を無視して比較します。</p>
+</li>
+</ol>
+<p><code>uniq</code> は、<code>sort</code> コマンドと組み合わせて使用されることがよくあります。<code>sort</code> でデータをソートした後、<code>uniq</code> で重複を削除するという手順です。例：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sort<span class="w"> </span>file.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq
+</code></pre></div>
+<p>これは、ファイルの内容をソートし、その後に重複する行を削除します。</p>
+<p>以上が <code>uniq</code> の基本的な概要と使い方です。</p>
+<h3 id="_1">オプション<a class="headerlink" href="#_1" title="Permanent link">#</a></h3>
+<p>もちろん、<code>uniq</code> コマンドの主なオプションについて詳しく説明します：</p>
+<ol>
 <li>
-<p>例: text.txt ファイル内から aの文字列を検索 <code>grep a text.txt</code></p>
+<p><strong><code>-c</code></strong> または <strong><code>--count</code></strong>: 
+   連続する重複行の出現回数とともに、その行を出力します。</p>
 </li>
 <li>
-<p>ファイル名のみ表示</p>
-<ul>
-<li><code>grep -ril [検索したい文字列] [検索対象フォルダのパス]</code></li>
-</ul>
+<p><strong><code>-d</code></strong> または <strong><code>--repeated</code></strong>: 
+   ファイル内で複数回出現する行を一度だけ出力します。</p>
 </li>
 <li>
-<p>or 検索(パイプをエスケープ)</p>
-<ul>
-<li><code>grep "\month|day" sample.txt</code></li>
-</ul>
+<p><strong><code>-D</code></strong>: 
+   すべての重複する行を出力します。</p>
 </li>
 <li>
-<p>ファイル名と該当行を表示</p>
-<ul>
-<li><code>grep -rin [検索したい文字列] [検索対象フォルダのパス]</code></li>
-</ul>
+<p><strong><code>-f N</code></strong> または <strong><code>--skip-fields=N</code></strong>: 
+   先頭から <code>N</code> 個のフィールドを無視して比較します。フィールドは空白文字（スペースやタブ）で区切られます。</p>
 </li>
-</ul>
-<h3 id="grep-option">grep option<a class="headerlink" href="#grep-option" title="Permanent link">#</a></h3>
-<table class="basic_table">
-<thead>
-<tr>
-  <th align="left">オプション</th>
-  <th align="left">説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td align="left"><code>`-i`</code></td>
-  <td align="left">大文字と小文字を区別せず検索する</td>
-</tr>
-<tr>
-  <td align="left"><code>`-E`</code></td>
-  <td align="left">拡張正規表現で検索を行う</td>
-</tr>
-<tr>
-  <td align="left"><code>`-e`</code></td>
-  <td align="left">一致処理に指定した正規表現を使う</td>
-</tr>
-<tr>
-  <td align="left"><code>`-v`</code></td>
-  <td align="left">一致しないものを検索する</td>
-</tr>
-<tr>
-  <td align="left"><code>`-n`</code></td>
-  <td align="left">検索結果に行番号を表示する</td>
-</tr>
-<tr>
-  <td align="left"><code>`-l`</code></td>
-  <td align="left">検索結果にファイル名のみ表示する</td>
-</tr>
-<tr>
-  <td align="left"><code>`-h`</code></td>
-  <td align="left">検索結果にファイル名を表示しない</td>
-</tr>
-<tr>
-  <td align="left"><code>`-o`</code></td>
-  <td align="left">検索結果に一致した文字を表示する</td>
-</tr>
-<tr>
-  <td align="left"><code>-C</code></td>
-  <td align="left">検索結果に一致した箇所から前後に指定した行数表示する</td>
-</tr>
-<tr>
-  <td align="left"><code>`-r`</code></td>
-  <td align="left">ディレクトリ内も検索対象とする</td>
-</tr>
-<tr>
-  <td align="left"><code>`-L`</code></td>
-  <td align="left">検索した結果、該当しなったファイルを表示する</td>
-</tr>
-</tbody>
-</table>
-
-<h2 id="sed">sed<a class="headerlink" href="#sed" title="Permanent link">#</a></h2>
-<p>基本書式：<code>sed ［オプション] [スクリプトコマンド] [ファイル]</code></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">オプション</th>
-<th style="text-align: left;">説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>-i</code></td>
-<td style="text-align: left;">結果を出力せずに直接ファイルを編集</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>-E</code></td>
-<td style="text-align: left;">拡張正規表現を使用</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">処理</th>
-<th style="text-align: left;">例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">置換</td>
-<td style="text-align: left;">sed  "s/[pattern1]/[pattern2]/g" [ファイル]</td>
-</tr>
-<tr>
-<td style="text-align: left;">削除</td>
-<td style="text-align: left;">sed  "/[pattern]/d" [ファイル]</td>
-</tr>
-<tr>
-<td style="text-align: left;">空白を削除</td>
-<td style="text-align: left;">sed 's/　//g' [ファイル]</td>
-</tr>
-</tbody>
-</table>
-<h3 id="ls">ls<a class="headerlink" href="#ls" title="Permanent link">#</a></h3>
-<ul>
-<li><code>ls -al</code> 隠しファイルも含めて、詳細表示</li>
-<li><code>ls -ltr</code>新しいファイルが一番下に来るように表示</li>
-</ul>
-<h3 id="mkdir">mkdir<a class="headerlink" href="#mkdir" title="Permanent link">#</a></h3>
-<ul>
-<li><code>mkdir -p</code>中間ディレクトリも含めて作成</li>
-</ul>
-<h3 id="mv">mv<a class="headerlink" href="#mv" title="Permanent link">#</a></h3>
-<ul>
-<li>ファイルの移動、ファイル名の変更</li>
-<li>mvした後に<code>cd !$</code>とするとファイルの移動先へ移動する</li>
-</ul>
-<h3 id="rm">rm<a class="headerlink" href="#rm" title="Permanent link">#</a></h3>
-<ul>
-<li>ファイル、ディレクトリの削除</li>
-<li>option</li>
-<li><code>-i</code>: ファイル削除前に確認</li>
-<li><code>-f</code>: ファイル削除前に確認しない</li>
-<li><code>-r</code>: 再帰的に削除（ディレクトリ削除）</li>
-</ul>
-<h3 id="cp">cp: ファイルやディレクトリのコピー<a class="headerlink" href="#cp" title="Permanent link">#</a></h3>
-<p><code>-r</code> : ディレクトリを再帰的にコピー</p>
-<h3 id="ps">ps: プロセスの一覧表示<a class="headerlink" href="#ps" title="Permanent link">#</a></h3>
-<p><code>-aux</code>: 全てのプロセスを詳細表示</p>
-<h2 id="_6">参考<a class="headerlink" href="#_6" title="Permanent link">#</a></h2>
-<ul>
-<li><a href="http://hydrocul.github.io/wiki/commands/">hydroculのメモ &gt; コマンドの使い方(Linux)</a></li>
-</ul>
+<li>
+<p><strong><code>-i</code></strong> または <strong><code>--ignore-case</code></strong>: 
+   大文字と小文字の違いを無視して比較します。</p>
+</li>
+<li>
+<p><strong><code>-s N</code></strong> または <strong><code>--skip-chars=N</code></strong>: 
+   先頭から <code>N</code> 文字を無視して比較します。</p>
+</li>
+<li>
+<p><strong><code>-u</code></strong> または <strong><code>--unique</code></strong>: 
+   重複していない行のみを出力します。</p>
+</li>
+<li>
+<p><strong><code>-w N</code></strong> または <strong><code>--check-chars=N</code></strong>: 
+   各行の先頭から <code>N</code> 文字のみを比較に使用します。これを超える部分は無視されます。</p>
+</li>
+<li>
+<p><strong><code>-z</code></strong> または <strong><code>--zero-terminated</code></strong>: 
+   行の終わりを示すために改行文字の代わりに NULL 文字を使用します。これは、特定のシナリオでバイナリデータを扱う場合や、ファイル名に改行が含まれる場合などに役立ちます。</p>
+</li>
+</ol>
+<p>これらのオプションを組み合わせることで、さまざまな条件での重複のチェックやフィルタリングが可能になります。</p>
+<h3 id="_2">オプション(使用例)<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<p><code>uniq</code> コマンドのオプションを使った具体的な使用例をいくつか紹介します。</p>
+<ol>
+<li>
+<p><strong>重複行の出現回数とともに表示</strong>:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>echo -e &quot;a\na\nb\nc\nc\nc&quot; | uniq -c
+</code></pre></div>
+   出力:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>2 a
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>1 b
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>3 c
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>大文字小文字を無視して重複を削除</strong>:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>echo -e &quot;A\na\nB\nb&quot; | uniq -i
+</code></pre></div>
+   出力:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>A
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>B
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>最初のフィールドを無視して重複をチェック</strong>:
+   以下の例では、最初の数字を無視して重複をチェックします。
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>echo -e &quot;1 apple\n2 apple\n3 banana&quot; | uniq -f 1
+</code></pre></div>
+   出力:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>1 apple
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>3 banana
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>最初の2文字を無視して重複をチェック</strong>:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>echo -e &quot;ab1\nab2\nac1&quot; | uniq -s 2
+</code></pre></div>
+   出力:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>ab1
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>ac1
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>各行の最初の3文字だけで重複をチェック</strong>:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>echo -e &quot;abc123\nabc456\ndef789&quot; | uniq -w 3
+</code></pre></div>
+   出力:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>abc123
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>def789
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>重複していない行のみを表示</strong>:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>echo -e &quot;a\na\nb\nc\nc\nc&quot; | uniq -u
+</code></pre></div>
+   出力:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>b
+</code></pre></div></p>
+</li>
+</ol>
+<p>これらの例を参考に、<code>uniq</code> コマンドのオプションを組み合わせてさまざまな条件での重複チェックやフィルタリングを行うことができます。</p>
 
 
 
@@ -6856,7 +6356,7 @@ actionを省略した場合、デフォルトの処理として、パターン�
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../awk/" class="md-footer__link md-footer__link--prev" aria-label="Previous: awk コマンド" rel="prev">
+          <a href="../tar/" class="md-footer__link md-footer__link--prev" aria-label="Previous: tar コマンド" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -6865,20 +6365,20 @@ actionを省略した場合、デフォルトの処理として、パターン�
                 Previous
               </span>
               <div class="md-ellipsis">
-                awk コマンド
+                tar コマンド
               </div>
             </div>
           </a>
         
         
           
-          <a href="../find/" class="md-footer__link md-footer__link--next" aria-label="Next: find" rel="next">
+          <a href="../vi/" class="md-footer__link md-footer__link--next" aria-label="Next: vi コマンド" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                find
+                vi コマンド
               </div>
             </div>
             <div class="md-footer__button md-icon">
